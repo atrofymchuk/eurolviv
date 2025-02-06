@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import viber from "../assets/icons/viber.svg";
 import telegram from "../assets/icons/telegram.svg";
 import whatsup from "../assets/icons/whatsup.svg";
@@ -10,26 +10,37 @@ import { CiGlobe } from "react-icons/ci";
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-black text-white py-4 px-6 flex justify-around items-center font-cofo border-b-1 border-[black] relative">
+    <header className={`fixed top-0 left-0 w-full py-4 px-6 flex justify-around items-center font-cofo border-b-1 border-[black] transition-colors duration-300 z-50 ${scrolled ? "bg-white text-black" : "bg-black text-white"}`}>
       <div className="flex items-center space-x-8 font-cofo font-normal">
         <button
-          className="md:hidden text-white text-2xl"
+          className="xl:hidden text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <div className="flex items-center gap-2">
-            <img src={burgerMenu} alt="Закрити меню" />
-            <span className="font-cofo text-sm">МЕНЮ</span>
+            <img src={burgerMenu} alt="Закрити меню" className={`${scrolled ? 'filter-invert-gray' :''}`} />
+            <span className={`font-cofo text-sm ${scrolled ? 'text-black' : 'text-[#FFFFFF]'}`}>МЕНЮ</span>
           </div>
         </button>
         <div className="flex ">
 
          <div className="flex justify-end w-full ">
-          <img src={logo} alt="logo" className="w-[68px] h-[40px] md:w-[153px] md:h-[84px]" />
+         <img src={logo} alt="logo" className={`w-[68px] h-[40px] md:w-[153px] md:h-[84px]  duration-300 ${scrolled ? "filter invert "  : ""}`} />
+         </div>
         </div>
-        </div>
-        <nav className={`hidden md:flex space-x-6 text-sm text-[#FFFFFF9E]`}>
+        <nav className={`hidden xl:flex space-x-6 text-sm text-[${scrolled ? '#2525269E': '#FFFFFF9E'}]`}>
           <Link to="/about" className="hover:text-gray-400">
             ПРО ГОТЕЛЬ
           </Link>
@@ -51,7 +62,7 @@ export function Header() {
         </nav>
       </div>
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black text-white flex flex-col font-cofo items-center py-4 space-y-2 z-50 md:hidden">
+        <nav className={`absolute top-full left-0 w-full bg-black  flex flex-col font-cofo items-center py-4 space-y-2 z-50 xl:hidden text-[${scrolled ? '#2525269E': '#FFFFFF9E'}]`}>
           <Link to="/about" className="hover:text-gray-400">
             ПРО ГОТЕЛЬ
           </Link>
@@ -70,10 +81,10 @@ export function Header() {
           <Link to="" className="hover:text-gray-400">
             КОНТАКТИ
           </Link>
-        </div>
+        </nav>
       )}
       <div className="flex items-center space-x-4">
-        <div className="text-sm items-center hidden md:inline-flex">
+        <div className="text-sm items-center hidden xl:inline-flex">
           <span className="me-1">
             <CiGlobe className="w-4 h-4" />
           </span>
@@ -83,7 +94,7 @@ export function Header() {
         <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-sm hover:text-gray-400 font-cofo font-bold hover:cursor-pointer hidden md:inline-flex"
+            className="text-sm hover:text-gray-400 font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex"
           >
             ЗАТЕЛЕФОНУВАТИ ▾
           </button>
@@ -101,15 +112,15 @@ export function Header() {
             </div>
           )}
         </div>
-        <div className="space-x-2 items-center hidden md:flex">
-          <span className="bg-white p-1.5 rounded-full hover:cursor-pointer">
-            <img src={telegram} alt="tg" />
+        <div className="space-x-2 items-center hidden xl:flex">
+          <span className={`${scrolled ? 'bg-[#252526]': 'bg-[#FFFFFF]'} p-1.5 rounded-full hover:cursor-pointer`}>
+            <img src={telegram} alt="tg" className={`${scrolled ? 'filter-invert-white':'filter-invert-brown'}`}/>
           </span>
-          <span className="bg-white p-1.5 rounded-3xl hover:cursor-pointer">
-            <img src={whatsup} alt="whatsup" />
+          <span className={`${scrolled ? 'bg-[#252526]': 'bg-[#FFFFFF]'} p-1.5 rounded-3xl hover:cursor-pointer`}>
+            <img src={whatsup} alt="whatsup" className={`${scrolled ? 'filter-invert-white':'filter-invert-brown'}`} />
           </span>
-          <span className="bg-white p-1.5 rounded-3xl hover:cursor-pointer">
-            <img src={viber} alt="viber" />
+          <span className={`${scrolled ? 'bg-[#252526]': 'bg-[#FFFFFF]'} p-1.5 rounded-3xl hover:cursor-pointer`}>
+              <img src={viber} alt="viber" className={`${scrolled ? 'filter-invert-white':'filter-invert-brown'}`}/>
           </span>
         </div>
         <button className="bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ">
