@@ -8,7 +8,7 @@ export const AboutHeader = ()=>{
         <div className="relative w-full h-screen flex items-center justify-center flex-col">
         <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-10"></div>
         <div className="absolute inset-0 bg-[#25252659] z-10"></div>
-  
+      
         <img
           src={headerImg}
           alt="headerImg"
@@ -29,6 +29,7 @@ export const AboutHeader = ()=>{
             Євроготель — ваша особлива історія львівських вражень
           </span>
         </h4>
+        <button className=" font-cofo font-extrabold uppercase z-20 bg-[#EDE8E5] hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md">забронювати</button>
         
       </div>
     )
