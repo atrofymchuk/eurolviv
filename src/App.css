@@ -9,3 +9,13 @@
 .filter-invert-gray{
     filter: invert(21%) sepia(0%) saturate(30%) hue-rotate(254deg) brightness(91%) contrast(88%);
 }
+
+.header-about {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(180deg, #252526 0%, rgba(37, 37, 38, 0) 49.56%, #252526 100%),
+                linear-gradient(0deg, rgba(37, 37, 38, 0.35), rgba(37, 37, 38, 0.35));
+    z-index: 10;
+            }
+

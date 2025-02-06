@@ -23,7 +23,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full py-4 px-6 flex justify-around items-center font-cofo border-b-1 border-[black] transition-colors duration-300 z-50 ${scrolled ? "bg-white text-black" : "bg-black text-white"}`}>
+    <header className={`fixed top-0 left-0 w-full py-4 px-6 flex justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-50 ${scrolled ? "bg-white text-black" : " text-white"}`}>
       <div className="flex items-center space-x-8 font-cofo font-normal">
         <button
           className="xl:hidden text-white text-2xl"
