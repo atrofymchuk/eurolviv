@@ -1,4 +1,5 @@
 import { Advantages } from "../components/About/Advantages";
+import { Concepts } from "../components/About/Concepts";
 import { AboutHeader } from "../components/About/Header";
 import { Mission } from "../components/About/Mission";
 // import ImageSlider from "../components/About/Slider";
@@ -12,7 +13,7 @@ export const About = () => {
       <Advantages />
       <Mission />
       {/* <ImageSlider/> */}
-
+      <Concepts />
     </div>
   );
 };
