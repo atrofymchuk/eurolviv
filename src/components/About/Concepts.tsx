@@ -5,9 +5,9 @@ import bar from '../../assets/About/bar.png';
 
 export const Concepts = () => {
   return (
-    <section className="flex justify-center px-6 bg-white ">
-      <div className="grid md:grid-cols-4 max-w-[1720px] w-full px-6 box-border">
-        <div className="md:col-span-4 pt-[52px] md:pt-[109px] text-center border-x border-[#C7C7C7] xl:pb-13.5 pb-6">
+    <section className="flex justify-center  bg-white  ">
+      <div className="grid md:grid-cols-4 max-w-[1720px] w-full box-border">
+        <div className="md:col-span-4 pt-[52px] md:pt-[159px] text-center border-x border-[#C7C7C7] xl:pb-13.5 pb-6">
           <h1 className="xl:text-[100px] text-[32px] xl:leading-[94px] uppercase leading-[20px] font-cofo">досконалість</h1>
           <h1 className="xl:text-[100px] text-[32px]  xl:leading-[94px] uppercase leading-[35px] font-cofo">у кожній деталі</h1>
           <p className="xl:mt-6 mt-2.25 uppercase text-[#8C331B] font-semibold font-cofo">наші концепції</p>
@@ -51,13 +51,13 @@ export const Concepts = () => {
           </h1>
           <img src={img} alt={alt} className="w-[200px] h-[191px] object-cover my-4" />
           
-          <p className="text-sm md:text-base flex-grow font-cofo font-normal xl:font-semibold px-1 xl:px-5 xl:text-[18px]">
+          <p className="text-sm md:text-base flex-grow font-cofo font-normal  px-1 xl:px-5 xl:text-[18px]">
             {text}
           </p>
           
           <div className="mt-auto">
-            <button className="border border-[#8C331B] text-[#8C331B] px-4 py-2 rounded-full uppercase text-sm md:text-base hover:cursor-pointer font-cofo">
-              детальніше
+            <button className="font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm md:text-base hover:cursor-pointer hover:bg-[#8C331B] hover:text-white font-cofo">
+              детальніше 
             </button>
           </div>
         </div>

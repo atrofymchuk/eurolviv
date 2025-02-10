@@ -12,7 +12,6 @@ export const About = () => {
       <StorySection />
       <Advantages />
       <Mission />
-      {/* <ImageSlider/> */}
       <Concepts />
     </div>
   );
