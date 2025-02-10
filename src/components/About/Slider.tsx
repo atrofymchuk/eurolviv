@@ -22,7 +22,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-screen grid place-items-center">
-      <div className="w-full md:max-w-[1720px] border-x border-[#C7C7C7] box-border border-collapse md:h-[60vh] h-[313px] z-0"  />
+      <div className="md:w-[1720px] w-[326px]  border-x border-[#C7C7C7] box-border border-collapse md:h-[60vh] h-[313px] z-0"  />
 
       <div className="absolute inset-0 grid place-items-center z-10">
         
