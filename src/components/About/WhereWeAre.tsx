@@ -22,7 +22,7 @@ export const WhereWeAre = () => {
               <p className="uppercase text-[#8F8F8F] font-cofo w-[270px] md:w-[512px] leading-[14.4px] md:leading-[22px] text-[12px] md:text-[18px] pt-10 md:pt-14 text-center md:text-start">
                 <span className="text-[#8C331B] font-semibold">
                   Серце міста
-                </span>{" "}
+                </span>
                 - історичний центр Львова знаходиться на відстані всього лиш
                 кроку від нашого готелю.
               </p>
@@ -113,7 +113,7 @@ export const WhereWeAre = () => {
             />
           </div>
           <h1 className="uppercase text-[24px] md:text-[40px] text-[#8C331B] text-center  md:text-start font-cofo tracking-[-0.05em] p-0 md:ps-9.75 pt-[42px] md:pt-15 leading-[24px] md:leading-[40px]">
-            головні <br className="hidden md:block" /> визначні{" "}
+            головні <br className="hidden md:block" /> визначні
             <br className="block md:hidden" /> місця
           </h1>
           <ul className="grid gap-3 pt-[26px] md:pt-14.75  px-4 text-start md:px-10 md:mb-0 mb-[30px]">
