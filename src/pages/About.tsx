@@ -2,8 +2,8 @@ import { Advantages } from "../components/About/Advantages";
 import { Concepts } from "../components/About/Concepts";
 import { AboutHeader } from "../components/About/Header";
 import { Mission } from "../components/About/Mission";
-// import ImageSlider from "../components/About/Slider";
 import { StorySection } from "../components/About/StorySection";
+import { WhereWeAre } from "../components/About/WhereWeAre";
 
 export const About = () => {
   return (
@@ -13,6 +13,7 @@ export const About = () => {
       <Advantages />
       <Mission />
       <Concepts />
+      <WhereWeAre />
     </div>
   );
 };

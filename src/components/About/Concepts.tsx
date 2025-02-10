@@ -71,7 +71,7 @@ export const Concepts = () => {
             </div>
           </div>
         ))}
-        <div className="md:col-span-4 h-[165px] md:w-[1720px] w-[326px] md:border-x border-x border-[#C7C7C7]"></div>
+        <div className="md:col-span-4 h-[165px] md:w-[1720px] md:block hidden w-[326px] md:border-x border-x border-b border-[#C7C7C7]"></div>
       </div>
     </section>
   );
