@@ -22,7 +22,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-screen grid place-items-center">
-      <div className="md:w-[1720px] w-[326px]  border-x border-[#C7C7C7] box-border border-collapse md:h-[60vh] h-[313px] z-0"  />
+      <div className="xl:w-[1720px] w-[326px]  border-x border-[#C7C7C7] box-border border-collapse xl:h-[60vh] h-[313px] z-0"  />
 
       <div className="absolute inset-0 grid place-items-center z-10">
         
@@ -48,7 +48,7 @@ const ImageSlider = () => {
             768: { slidesPerView: 'auto' },
           }}
           modules={[EffectCoverflow, Navigation]}
-          className="w-full md:h-[60vh] h-[353px]"
+          className="w-full xl:h-[60vh] h-[353px]"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
         >
@@ -61,7 +61,7 @@ const ImageSlider = () => {
               <SwiperSlide
                 key={index}
                 className={`flex justify-center items-center h-full w-full max-w-fit transition-all duration-300 
-                ${isActive ? "scale-110 md:p-10" : ""}
+                ${isActive ? "scale-110 xl:p-10" : ""}
                 ${isSide ? "p-4" : ""}
                 ${isEdge ? "p-4" : ""}
                 `}
@@ -71,9 +71,9 @@ const ImageSlider = () => {
                     src={image}
                     alt={`slide_${index + 1}`}
                     className={`z-10 transition-all duration-500 ease-in-out
-                    ${isSide ?"md:w-[530px] md:h-[353px] w-[231px] h-[154px]" : ""}
-                    ${isEdge ? "md:w-[514px] md:h-[316px] w-[231px] h-[154px]" : ""}
-                    ${isActive ? "md:w-[500px] md:h-[400px] w-[290px] h-[193px]" : ""}
+                    ${isSide ?"xl:w-[530px] xl:h-[353px] w-[231px] h-[154px]" : ""}
+                    ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
+                    ${isActive ? "xl:w-[500px] xl:h-[400px] w-[290px] h-[193px]" : ""}
                     `}
                   />
                 </div>
@@ -83,13 +83,13 @@ const ImageSlider = () => {
         </Swiper>
 
         <button
-          className="md:absolute left-40 top-125   -translate-y-1/2 md:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute left-40 top-125   -translate-y-1/2 xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slidePrev()}
         >
           ←
         </button>
         <button
-          className="md:absolute right-40 top-125 -translate-y-1/2 md:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute right-40 top-125 -translate-y-1/2 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slideNext()}
         >
           →

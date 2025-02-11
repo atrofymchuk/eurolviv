@@ -4,11 +4,13 @@
     filter: invert(19%) sepia(20%) saturate(7470%) hue-rotate(355deg) brightness(93%) contrast(83%);
 }
 .filter-invert-white{
-    filter: invert(100%) sepia(0%) saturate(5927%) hue-rotate(231deg) brightness(113%) contrast(103%);
-}
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(71deg) brightness(106%) contrast(102%);}
 .filter-invert-gray{
     filter: invert(21%) sepia(0%) saturate(30%) hue-rotate(254deg) brightness(91%) contrast(88%);
 }
+
+  
+
 
 .header-about {
     position: relative;
@@ -37,5 +39,7 @@
     }
   }
   
-
+  svg {
+    fill: currentColor;
+  }
 

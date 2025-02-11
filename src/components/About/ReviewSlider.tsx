@@ -18,7 +18,7 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
 
   return (
     <div className="relative flex justify-center items-center z-20">
-      <div className="absolute md:w-[1720px] h-full w-[299px]  " />
+      <div className="absolute xl:w-[1720px] h-full w-[299px]  " />
       <Swiper
         slidesPerView={1}
         loop
@@ -36,12 +36,12 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
         {mixedReviews.map((review) => (
           <SwiperSlide
             key={review.id}
-            className="bg-[#EDE8E5] md:min-w-[533px] md:min-h-[329px] w-[299px] min-h-[210px]"
+            className="bg-[#EDE8E5] xl:min-w-[533px] xl:min-h-[329px] w-[299px] min-h-[210px]"
           >
             <ReviewCard review={review} />
           </SwiperSlide>
         ))}
-        <div className="hidden md:flex justify-between w-full mt-6 pb-[72px]">
+        <div className="hidden xl:flex justify-between w-full mt-6 pb-[72px]">
           <button
             className="border-white w-[62px] h-[62px]  rounded-full border hover:bg-white text-white hover:text-[#A47762] transition"
             onClick={() => swiperInstance?.slidePrev()}

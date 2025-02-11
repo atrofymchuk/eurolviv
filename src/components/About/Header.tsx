@@ -12,19 +12,19 @@ export const AboutHeader = () => {
         className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-0"
       />
 
-      <h4 className="font-cofo z-20 text-[#FFFFFF]  leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center md:mb-4">
+      <h4 className="font-cofo z-20 text-[#FFFFFF]  leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
         CТВОРЕНИЙ ЩОБ ЗАКОХУВАТИ У
-        <span className="font-blessed md:font-extrabold block text-center text-[13px] md:text-3xl ml-2 md:inline ">
+        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline ">
           Львів
         </span>
       </h4>
 
-      <h1 className="font-cofo md:text-[198px]  text-[64px] font-normal z-20 text-[#FFFFFF] md:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+      <h1 className="font-cofo xl:text-[198px]  text-[64px] font-normal z-20 text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
         EUROHOTEL
       </h1>
-      <h4 className="font-cofo text-[18px] font-medium z-20 w-[300px] lg:w-fit  text-white leading-[22.68px] text-center underline-offset-[from-font] md:mt-4 mt-7.5">
+      <h4 className="font-cofo text-[18px] font-medium z-20 w-[300px] lg:w-fit  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">
         ПРОСТІР, ЩО ОГОРТАЄ ТЕПЛОМ. МІСТО, ЯКЕ НАДИХАЄ.
-        <span className="md:block font-extrabold text-[18px]  leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
+        <span className="xl:block font-extrabold text-[18px]  leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
           Євроготель — ваша особлива історія львівських вражень
         </span>
       </h4>

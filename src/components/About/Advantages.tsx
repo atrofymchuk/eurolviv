@@ -21,13 +21,13 @@ import AdvantagesImg from '../../assets/About/advantages.png'
 export const Advantages = () => {
   return (
     <section className=" px-6 bg-[#A47762] h-auto   *:font-cofo">
-    <div className=" md:grid md:grid-cols-3 items-center md:h-[684px] max-w-[1720px] xl:w-full mx-auto box-border border-collapse gap-0 ">
+    <div className=" xl:grid xl:grid-cols-3 items-center xl:h-[684px] max-w-[1720px] xl:w-full mx-auto box-border border-collapse gap-0 ">
       <div className="border-x border-[#C7C7C7] w-[334px] h-full p-4 xl:w-full">
-        <div className="flex flex-col   md:ps-7.5 ">
-          <h1 className="uppercase text-3xl md:text-5xl text-[#FFFFFF] pt-[18px] md:pt-[86px] md:text-left">
-            інформація <br className="hidden md:block" /> про готель
+        <div className="flex flex-col   xl:ps-7.5 ">
+          <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[86px] xl:text-left">
+            інформація <br className="hidden xl:block" /> про готель
           </h1>
-          <ul className="uppercase pt-[29px] md:pt-[52px] *:font-cofo text-[#FFFFFF] text-[14px] md:text-[20px] tracking-tighter md:text-xl *:flex *:items-center *:gap-1.5">
+          <ul className="uppercase pt-[29px] xl:pt-[52px] *:font-cofo text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl *:flex *:items-center *:gap-1.5">
             <li><img className="icon" src={door} alt="100rooms" /> номерів: 100</li>
             <li><img className="icon" src={wheelChair} alt="disabled person" /> номери для гостей з інвалідністю</li>
             <li><img className="icon" src={pet} alt="pet-friendly" /> pet-friendly</li>
@@ -40,16 +40,16 @@ export const Advantages = () => {
         </div>
       </div>
   
-      <div className="md:hidden flex justify-center py-6 border-x w-full border-[#C7C7C7]">
+      <div className="xl:hidden flex justify-center py-6 border-x w-full border-[#C7C7C7]">
         <img src={AdvantagesImg} alt="advantages" className="w-[250px] h-[250px]" />
       </div>
   
-      <div className="border-x md:border-x-0 border-[#C7C7C7] h-full p-4 w-full">
-        <div className="flex flex-col ps-0 md:ps-7.5">
-          <h1 className="uppercase text-3xl md:text-5xl text-[#FFFFFF] pt-[40px] md:pt-[86px] md:text-left">
+      <div className="border-x xl:border-x-0 border-[#C7C7C7] h-full p-4 w-full">
+        <div className="flex flex-col ps-0 xl:ps-7.5">
+          <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[40px] xl:pt-[86px] xl:text-left">
             послуги та зручності
           </h1>
-          <ul className="uppercase pt-[30px] md:pt-[52px] text-[#FFFFFF] text-[14px] md:text-xl *:flex *:items-center *:gap-1.5 *:">
+          <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-xl *:flex *:items-center *:gap-1.5 *:">
             <li><img className="icon" src={reception} alt="reception" /> цілодобова стійка рецепції</li>
             <li><img className="icon" src={roomService} alt="roomservice" /> цілодобовий рум-сервіс</li>
             <li><img className="icon" src={car} alt="car" /> трансфер</li>
@@ -59,13 +59,13 @@ export const Advantages = () => {
             <li><img className="icon" src={washingMachine} alt="washing machine" /> прання</li>
             <li><img className="icon" src={ironingChlothes} alt="ironing clothes" /> прасування</li>
           </ul>
-          <button className="uppercase bg-[#EDE8E5] text-[#A47762] w-full md:w-fit self-center md:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 md:mt-6.5 hover:cursor-pointer">
+          <button className="uppercase bg-[#EDE8E5] text-[#A47762] w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
             забронювати номер
           </button>
         </div>
       </div>
   
-      <div className="hidden md:flex border border-[#C7C7C7] h-full justify-center items-center">
+      <div className="hidden xl:flex border border-[#C7C7C7] h-full justify-center items-center">
         <img src={AdvantagesImg} alt="advantages" className="w-[496px] h-[509px]" />
       </div>
     </div>
