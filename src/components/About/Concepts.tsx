@@ -6,7 +6,7 @@ import bar from "../../assets/About/bar.png";
 export const Concepts = () => {
   return (
     <section className="flex justify-center  bg-white  ">
-      <div className="grid xl:grid-cols-4 xl:w-[1720px] w-[326px] box-border">
+      <div className="grid xl:grid-cols-4 xl:w-[1720px] w-[332px] box-border">
         <div className="xl:col-span-4 pt-[112px] xl:pt-[159px] text-center  border-x border-[#C7C7C7] xl:pb-13.5 pb-6">
           <h1 className="xl:text-[100px] text-[32px] xl:leading-[94px] uppercase leading-[20px] font-cofo">
             досконалість
@@ -45,21 +45,27 @@ export const Concepts = () => {
             text: "Стильний караоке-лаунж – місце, де кожен вечір вирує життям, пульсує енергією вечірнього міста, запрошуючи розділити радість моменту. Тут музика об’єднує, а спогади стають особливими",
           },
         ].map(({ title, img, alt, text }, index) => (
-          <div className="even:border-e-0 " key={index}>
-            <div className="xl:col-span-1 text-center flex flex-col items-center px-4 py-6 border border-l  border-[#C7C7C7] xl:h-[579px] h-[460px]">
-              <h1 className="uppercase xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
+          <div
+            className={`border border-[#C7C7C7] ${
+              index === 0 ? "xl:border-l" : "xl:border-l-0 xl:border-t border-t-0"
+            }
+            `}
+            key={index}
+          >
+            <div className="xl:col-span-1 text-center flex flex-col items-center px-4 py-6 xl:h-[579px] h-[469px]">
+              <h1 className="uppercase xl:text-[30px] text-[20px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
                 {title[0]}
               </h1>
-              <h1 className="uppercase xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
+              <h1 className="uppercase xl:text-[30px] text-[20px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
                 {title[1]}
               </h1>
               <img
                 src={img}
                 alt={alt}
-                className="w-[200px] h-[191px] object-cover my-4"
+                className="w-[200px] h-[191px] object-cover xl:my-6.25 my-3.75"
               />
 
-              <p className="text-sm xl:text-base flex-grow font-cofo font-normal  px-1 xl:px-5 xl:text-[18px]">
+              <p className="text-sm xl:text-base flex-grow font-cofo font-normal px-1 xl:px-5 xl:text-[18px]">
                 {text}
               </p>
 

@@ -5,7 +5,7 @@ export const StorySection = () => {
     <section className="flex justify-center px-6">
     <div className="grid grid-cols-1 xl:grid-cols-3 items-center xl:max-w-[1720px] w-[334px] xl:w-full box-border border-collapse">
       <div className="xl:col-span-2 border-l border-r border-b xl:border-b-0 w-[334px] xl:w-full border-[#C7C7C7] -me-[0.1%] xl:h-[384px] p-4">
-        <h1 className="xl:text-[100px] text-[32px] font-normal xl:leading-[81px] leading-[25px] tracking-[-0.07em] xl:text-left text-center font-cofo uppercase text-[#242425]">
+        <h1 className="xl:text-[100px] text-[32px] font-normal xl:leading-[81px] xl:pt-[120px] pt-[50px] leading-[25px] tracking-[-0.07em] xl:text-left text-center font-cofo uppercase text-[#242425]">
           Євроготель -
         </h1>
         <h1 className="xl:text-[100px] text-[32px] text-center font-normal xl:leading-[81px] leading-[25px] tracking-[-0.07em] xl:text-right font-cofo uppercase text-[#242425]">
@@ -16,13 +16,13 @@ export const StorySection = () => {
           <span>
             Розташований в самому серці Львова, Євроготель поєднує традиції
           </span>
-          <span className="xl:pr-[49.6%] xl:text-end text-center">
+          <span className="xl:pr-[51%] xl:text-end text-center">
             з сучасною вишуканістю
           </span>
         </div>
       </div>
 
-      <div className="xl:col-span-1 border-r border-[#C7C7C7] h-full"></div>
+      <div className="xl:col-span-1 border-r border-[#C7C7C7] h-full  "></div>
       <div className="xl:col-span-3 xl:border-t border-l border-[#C7C7C7]"></div>
 
       <div className="xl:col-span-2 w-[334px] row-span-1 border-r border-l xl:border-r-0 flex justify-center items xl:w-full border-[#C7C7C7] border-b p-0">

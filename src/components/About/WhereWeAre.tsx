@@ -1,12 +1,12 @@
 import navigateIco from "../../assets/icons/About/navigation.svg";
-import map from "../../assets/About/place.png";
 import hotel from "../../assets/About/hotel.png";
+import MapComponent from "./Map";
 
 export const WhereWeAre = () => {
   return (
     <section className="flex flex-col items-center bg-white *:font-cofo">
-      <div className="grid xl:grid-cols-2 items-center  xl:w-[1720px] w-[334px] xl:px-0 px-1 box-border border-collapse">
-        <div className="xl:col-span-1 border border-t-0 xl:border-b-0 xl:border-r-0 border-[#C7C7C7]  h-full justify-center items-center flex">
+      <div className="grid xl:grid-cols-2 items-center  xl:w-[1720px] w-[340px] xl:px-0 px-1 box-border border-collapse">
+        <div className="xl:col-span-1 border border-t-0 border-b-0 xl:border-r-0  border-[#C7C7C7]  h-[672px] justify-center items-center flex">
           <div className="flex-col  text-center xl:text-start pt-[61px] xl:pt-0">
             <p className="uppercase flex ">
               <img src={navigateIco} alt="navigateico" className="pe-1 " />
@@ -42,12 +42,16 @@ export const WhereWeAre = () => {
             </a>
           </div>
         </div>
-        <div className="flex xl:block border-s xl:border-s-0 border-r h-full justify-center items-center border-[#C7C7C7] m-0 xl:pt-7.5 xl:pe-6.75">
-          <img
+        <div className=" block border-s xl:border-s-0 border-r h-full justify-center items-center border-t xl:border-t-0 border-[#C7C7C7] m-0 xl:px-7.5 xl:py-6.75 p-5">
+          {/* <img
             src={map}
             alt="map"
             className="xl:w-[862px] xl:h-[541px] xl:mb-[101px] w-[303px] h-[290px] py-4.25 mx-auto"
-          />
+          /> */}
+<div className="flex justify-center items-center w-full h-[300px] xl:h-auto border-s xl:border-s-0 border-r border-[#C7C7C7]">
+  <MapComponent />
+</div>
+            
         </div>
 
         <div className="xl:grid-cols-1 border-e h-full justify-start border-[#C7C7C7] pt-11  border ">

@@ -23,12 +23,11 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
         slidesPerView={1}
         loop
         spaceBetween={17}
-        grid={{fill:'row', rows:2}}
+        grid={{ fill: "row", rows: 2 }}
         modules={[Grid, Pagination]}
         breakpoints={{
-          640: { grid: { rows: 2 }, width:299, height:210, slidesPerView:2 },
-          1000: { grid: { rows: 1 }, width: 533, slidesPerGroup:2},
-          
+          640: { grid: { rows: 2 }, width: 299, height: 210, slidesPerView: 1 },
+          1000: { grid: { rows: 1 }, width: 533, slidesPerGroup: 1 },
         }}
         onSwiper={(swiper) => setSwiperInstance(swiper)}
         className="mt-10 z-20"
@@ -36,21 +35,21 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
         {mixedReviews.map((review) => (
           <SwiperSlide
             key={review.id}
-            className="bg-[#EDE8E5] xl:min-w-[533px] xl:min-h-[329px] w-[299px] min-h-[210px]"
+            className="bg-[#EDE8E5] xl:w-[533px] xl:min-h-[329px] xl:max-w-[533px] max-w-[299px] min-h-[210px]"
           >
             <ReviewCard review={review} />
           </SwiperSlide>
         ))}
-        <div className="hidden xl:flex justify-between w-full mt-6 pb-[72px]">
+        <div className="flex justify-between w-full mt-6 pb-[72px]">
           <button
-            className="border-white w-[62px] h-[62px]  rounded-full border hover:bg-white text-white hover:text-[#A47762] transition"
+            className="flex items-center justify-center border-white xl:w-[62px] xl:h-[62px] w-[32px] h-[32px] rounded-full border hover:bg-white text-white hover:text-[#A47762] transition"
             onClick={() => swiperInstance?.slidePrev()}
           >
             ←
           </button>
 
           <button
-            className="border-white w-[62px] h-[62px] p-3 rounded-full border hover:bg-white text-white hover:text-[#A47762] transition me-40"
+            className="flex items-center justify-center border-white xl:w-[62px] xl:h-[62px] w-[32px] h-[32px] rounded-full border hover:bg-white text-white hover:text-[#A47762] transition me-20 xl:me-40"
             onClick={() => swiperInstance?.slideNext()}
           >
             →
@@ -60,3 +59,4 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
     </div>
   );
 }
+  

@@ -13,7 +13,7 @@ import rating from "../assets/icons/rating.svg";
 
 export const Footer = () => {
   return (
-    <footer className="relative text-white py-[67px] px-6 xl:px-20 overflow-hidden xl:h-[800px] h-[1600px]">
+    <footer className="relative text-white py-[67px] px-6 xl:px-20 overflow-hidden xl:h-[800px] h-[1600px] z-20">
       <div className="absolute inset-0  bg-gradient-to-b from-[rgba(36, 36, 37, 1)] via-[rgba(22,22,23,0.25)] to-transparent z-10"></div>
       <div className="absolute inset-0 bg-[#25252659] z-10"></div>
 

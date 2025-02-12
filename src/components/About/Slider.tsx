@@ -22,7 +22,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-screen grid place-items-center">
-      <div className="xl:w-[1720px] w-[326px]  border-x border-[#C7C7C7] box-border border-collapse xl:h-[60vh] h-[313px] z-0"  />
+      <div className="xl:w-[1720px] w-[332px]  border-x border-[#C7C7C7] box-border border-collapse xl:h-[700px] h-[313px] z-0"  />
 
       <div className="absolute inset-0 grid place-items-center z-10">
         
@@ -83,13 +83,13 @@ const ImageSlider = () => {
         </Swiper>
 
         <button
-          className="xl:absolute left-40 top-125   -translate-y-1/2 xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute left-40 top-145   -translate-y-1/2 xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slidePrev()}
         >
           ←
         </button>
         <button
-          className="xl:absolute right-40 top-125 -translate-y-1/2 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute right-40 top-145 -translate-y-1/2 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slideNext()}
         >
           →

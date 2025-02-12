@@ -3,7 +3,7 @@ import ImageSlider from "./Slider";
 export const Mission = () => {
   return (
     <section className="flex flex-col items-center bg-white *:font-cofo">
-      <div className="grid xl:grid-cols-3 items-center  xl:w-[1720px] w-[334px] xl:px-0 px-1 box-border border-collapse">
+      <div className="grid xl:grid-cols-3 items-center  xl:w-[1720px] w-[340px] xl:px-0 px-1 box-border border-collapse">
         <div className="xl:col-span-3 border-x border-[#C7C7C7] pt-[52px] xl:pt-[109px] h-full justify-center items-center flex">
           <div className="flex-col text-center">
             <h1 className="uppercase text-[#8C331B] font-semibold text-sm xl:text-2xl leading-[30px] px-2" >
@@ -19,7 +19,7 @@ export const Mission = () => {
               У Євроготелі ми створили простір, де діловий ритм сучасності
               переплітається з неквапливою грацією старого Львова
             </p>
-            <p className="uppercase max-w-[801px] mx-auto xl:text-[18px] xl:px-0 px-[5px] text-[12px] pt-7">
+            <p className="uppercase max-w-[801px] mx-auto xl:text-[18px] xl:px-0  text-[12px] pt-7 px-4">
               Ми віримо в гостинність, яка промовляє просто до серця та в
               бездоганний сервіс, що передбачає ваші потреби
             </p>
@@ -27,11 +27,11 @@ export const Mission = () => {
         </div>
       </div>
 
-      <div className="w-full  ">
+      <div className="w-full xl:h-[600px] h-fit">
         <ImageSlider />
       </div>
 
-      <div className="grid xl:grid-cols-3 items-center xl:w-[1720px]  w-[326px] box-border border-collapse">
+      <div className="grid xl:grid-cols-3 items-center xl:w-[1720px]  w-[332px] box-border border-collapse">
         <div className="xl:col-span-3 border-x border-[#C7C7C7]  h-full justify-center items-center flex">
           <div className="flex-col text-center">
             <p
