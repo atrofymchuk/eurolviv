@@ -9,7 +9,7 @@ export const Contacts = () => {
     <div className="flex  flex-col relative">
       <Header />
       <div className=" flex lg:flex-row flex-col  items-center mb-4 ">
-        <div className="grid  lg:grid-cols-[694px_1126px] grid-cols-[334px] lg:border-b border-[#C7C7C7] border-[#C7C7C7] lg:border-e border-s xl:border-s-0 ">
+        <div className="grid  lg:grid-cols-[694px_1126px] grid-cols-[334px] lg:border-b border-[#C7C7C7]  lg:border-e border-s xl:border-s-0 ">
           <div className="lg:ps-[95px] border-e border-[#C7C7C7] lg:w-[694px] lg:pt-[68px] lg:h-[540px] border-b lg:text-start">
             <h1 className="font-cofo uppercase xl:pt-0 pt-[48px] text-center lg:text-start text-[32px] tracking-[0.07em] leading-[25px] lg:text-[100px] lg:leading-[81px] lg:tracking-[-0.04em]">
               як нас знайти?
