@@ -56,7 +56,7 @@
             <Link to="" className="hover:text-gray-400">
               СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
             </Link>
-            <Link to="" className="hover:text-gray-400">
+            <Link to="/contacts" className="hover:text-gray-400">
               КОНТАКТИ
             </Link>
           </nav>
