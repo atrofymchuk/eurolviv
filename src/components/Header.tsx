@@ -18,6 +18,7 @@ export function Header() {
   let styles;
   let iconLogo;
   let link
+  
   switch (location.pathname) {
     case "/contacts":
       styles = `${
@@ -47,7 +48,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-4 px-6 flex justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full py-4 px-6 flex lg:justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-50 ${
         scrolled ? "bg-white text-black" : " text-white"
       }`}
     >
@@ -60,7 +61,7 @@ export function Header() {
             <img
               src={burgerMenu}
               alt="Закрити меню"
-              className={`${scrolled ? "filter-invert-gray" : ""}`}
+              className={` ${scrolled ? "filter-invert-gray " : ""}`}
             />
             <span
               className={`font-cofo text-sm ${
@@ -71,12 +72,12 @@ export function Header() {
             </span>
           </div>
         </button>
-        <div className="flex ">
-          <div className="flex justify-end w-full ">
+        <div className="flex">
+          <div className={`flex justify-end  md:w-[153px] md:h-[84px] ${!scrolled ? 'w-[68px] h-[40px]':'w-[82px] h-[48px]'}`}>
             <img
               src={logo}
               alt="logo"
-              className={`w-[68px] h-[40px] md:w-[153px] md:h-[84px]  duration-300 ${iconLogo} `}
+              className={`${!scrolled ? 'w-[68px] h-[40px]':'w-[82px] h-[48px]'} md:w-[153px] md:h-[84px]  duration-300 ${iconLogo} `}
             />
           </div>
         </div>
@@ -107,28 +108,28 @@ export function Header() {
         <nav
           className={`absolute top-full left-0 w-full bg-black  flex flex-col font-cofo items-center py-4 space-y-2 z-50 xl:hidden text-[]`}
         >
-          <Link to="/about" className="hover:text-gray-400">
+          <Link to="/about" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             ПРО ГОТЕЛЬ
           </Link>
-          <Link to="" className="hover:text-gray-400">
+          <Link to="/rooms" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             НОМЕРИ
           </Link>
-          <Link to="" className="hover:text-gray-400">
+          <Link to="" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             КОНФЕРЕНЦ-СЕРВІС
           </Link>
-          <Link to="" className="hover:text-gray-400">
+          <Link to="" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             РЕСТОРАН
           </Link>
-          <Link to="" className="hover:text-gray-400">
+          <Link to="" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
           </Link>
-          <Link to="" className="hover:text-gray-400">
+          <Link to="/contacts" onClick={()=>setMenuOpen(false)} className="hover:text-gray-400">
             КОНТАКТИ
           </Link>
         </nav>
       )}
       <div className="flex items-center space-x-4">
-        <div className={` ${link} text-sm items-center hidden xl:inline-flex`}>
+        <div className={`${link} text-sm items-center hidden xl:inline-flex`}>
           <span className="me-1">
             <CiGlobe className="w-4 h-4" />
           </span>
