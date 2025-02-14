@@ -16,3 +16,9 @@ export interface Review {
     reviews: Reviews;
   }
   
+
+  export type ModalStore = {
+    isOpen: boolean;
+    openModal: () => void;
+    closeModal: () => void;
+  };

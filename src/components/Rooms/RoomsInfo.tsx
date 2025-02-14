@@ -2,6 +2,7 @@ import standartSingle from "../../assets/Rooms/standart_single.jpg";
 import square from "../../assets/icons/Rooms/square.svg";
 import guests from "../../assets/icons/Rooms/guests.svg";
 import { Link } from "react-router-dom";
+import { useModalStore } from "../../store/useModalStore";
 
 const rooms = [
   {
@@ -79,6 +80,9 @@ const rooms = [
 ];
 
 export const RoomsInfo = () => {
+
+  const {openModal} = useModalStore()
+
   return (
     <div className="w-full flex-col flex items-center">
       <div className="grid lg:grid-cols-[1720px]  grid-cols-[334px] ">
@@ -103,7 +107,9 @@ export const RoomsInfo = () => {
                       гарантовано отримайте найкращу ціну <br />
                       прямо зараз.
                     </p>
-                    <button className=" font-cofo font-extrabold uppercase  ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[38px]  h-fit py-[13px] rounded-full text-[14px]">
+                    <button 
+                    onClick={openModal}
+                    className=" font-cofo font-extrabold uppercase  ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[38px]  h-fit py-[13px] rounded-full text-[14px]">
                       забронювати
                     </button>
                   </div>
@@ -124,7 +130,9 @@ export const RoomsInfo = () => {
                   отримайте найкращу ціну <br />
                   прямо зараз.
                 </p>
-                <button className=" font-cofo font-extrabold  uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px]  h-fit py-[12px] rounded-full text-[12px] ">
+                <button 
+                onClick={openModal}
+                className=" font-cofo font-extrabold  uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px]  h-fit py-[12px] rounded-full text-[12px] ">
                   забронювати
                 </button>
               </div>

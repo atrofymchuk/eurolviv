@@ -7,12 +7,14 @@ import logo from "../assets/logo.svg";
 import { CiGlobe } from "react-icons/ci";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa6";
+import { useModalStore } from "../store/useModalStore";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  
+ const {openModal} = useModalStore()
   const location = useLocation();
 
   let styles;
@@ -183,6 +185,7 @@ export function Header() {
           </span>
         </div>
         <button
+        onClick={openModal}
           className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ${
             scrolled ? "lg:block hidden" : "block"
           } `}

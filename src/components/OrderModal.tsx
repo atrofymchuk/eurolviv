@@ -9,6 +9,7 @@ import calendarIco from "../assets/icons/Modal/calendar.svg";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useModalStore } from "../store/useModalStore";
 
 Modal.setAppElement("#root");
 
@@ -21,13 +22,7 @@ type FormData = {
   needRooms: boolean;
 };
 
-const OrderModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
+const OrderModal = () => {
   const {
     control,
     register,
@@ -47,19 +42,21 @@ const OrderModal = ({
     toast.success("Форма успішно надіслана!", { position: "top-right" });
     setTimeout(() => {
         reset()
-      onClose();
+        closeModal();
     }, 5000);
   };
+
+  const {closeModal,isOpen} = useModalStore()
 
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={onClose}
+      onRequestClose={closeModal}
       className="fixed inset-0 flex  lg:items-center lg:justify-center"
       overlayClassName="fixed inset-0 bg-black/49 z-100"
     >
       <div className="bg-white  lg:w-[504px] lg:h-fit h-screen  relative flex flex-col justify-center p-[37px] pt-0 items-center">
-        <button className="absolute top-4 right-4 text-2xl" onClick={onClose}>
+        <button className="absolute top-4 right-4 text-2xl hover:cursor-pointer" onClick={closeModal}>
           <IoClose />
         </button>
         <div className="lg:items-center flex flex-col">

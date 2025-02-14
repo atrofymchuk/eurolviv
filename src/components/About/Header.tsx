@@ -1,10 +1,8 @@
-import { useState } from "react";
 import headerImg from "../../assets/About/header.png";
-import OrderModal from "../OrderModal";
+import { useModalStore } from "../../store/useModalStore";
 
 export const AboutHeader = () => {
-
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const { openModal } = useModalStore();
 
   return (
     <div className="relative w-full h-[1260px] flex items-center justify-center flex-col">
@@ -33,10 +31,12 @@ export const AboutHeader = () => {
           Євроготель — ваша особлива історія львівських вражень
         </span>
       </h4>
-      <button onClick={()=>setIsModalOpen(true)} className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md">
+      <button
+        onClick={openModal}
+        className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
+      >
         забронювати
       </button>
-<OrderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

@@ -17,8 +17,12 @@ import ironingChlothes from '../../assets/icons/About/ironingChlothes.svg'
 import washingMachine from '../../assets/icons/About/washingMachine.svg'
 
 import AdvantagesImg from '../../assets/About/advantages.png'
+import { useModalStore } from '../../store/useModalStore'
 
 export const Advantages = () => {
+
+  const {openModal} = useModalStore()
+
   return (
     <section className="flex justify-center items-center bg-[#A47762] px-6 *:font-cofo">
       <div className="border-x border-[#C7C7C7] xl:grid xl:grid-cols-3 items-center xl:h-[684px] max-w-[1720px] xl:w-full w-[334px] mx-auto box-border border-collapse gap-0">
@@ -59,7 +63,9 @@ export const Advantages = () => {
               <li><img className="icon" src={washingMachine} alt="washing machine" /> прання</li>
               <li><img className="icon" src={ironingChlothes} alt="ironing clothes" /> прасування</li>
             </ul>
-            <button className="uppercase bg-[#EDE8E5] text-[#A47762] w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
+            <button 
+            onClick={openModal}
+            className="uppercase bg-[#EDE8E5] text-[#A47762] w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
               забронювати номер
             </button>
           </div>

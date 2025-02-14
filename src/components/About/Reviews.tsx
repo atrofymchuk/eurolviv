@@ -1,4 +1,5 @@
 import { Reviews } from "../../store/types";
+import { useModalStore } from "../../store/useModalStore";
 import ReviewSlider from "./ReviewSlider";
 
 export const Rewies = () => {
@@ -51,6 +52,8 @@ export const Rewies = () => {
     ],
   };
 
+  const {openModal} = useModalStore()
+
   return (
     <section className="flex flex-col items-center bg-[#A47762] *:font-cofo   ">
       <div className="grid xl:grid-cols-2 xl:w-full border-x border-[#C7C7C7] xl:max-w-[1720px]  w-[336px] px-0">
@@ -63,7 +66,9 @@ export const Rewies = () => {
               100 номерів, де кожна деталь творить особливу естетику. Від
               стандартних кімнат до люксів — незмінно висока якість сервісу.
             </p>
-            <button className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer">
+            <button 
+            onClick={openModal}
+            className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer">
               забронювати номер
             </button>
           </div>
