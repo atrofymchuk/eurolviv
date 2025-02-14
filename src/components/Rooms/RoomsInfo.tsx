@@ -89,16 +89,16 @@ export const RoomsInfo = () => {
                 <span className="text-[#8C331B]">100 номерів</span>, кожен з
                 яких{" "}
               </h1>
-              <div className="flex flex-col items-end">
-                <div className="w-fit lg:space-y-[11px]">
+              <div className="flex flex-col items-end ">
+                <div className="w-fit lg:space-y-[11px] ">
                   <h1 className=" uppercase font-cofo lg:text-[100px] lg:leading-[81px] lg:tracking-[-0.04em] text-[32px] leading-[26px] tracking-[-0.07em]">
-                    продуманий до найменших{" "}
+                    продуманий до найменших
                   </h1>
-                  <h1 className=" uppercase font-cofo lg:text-[100px] lg:leading-[81px] lg:tracking-[-0.04em] text-[32px] leading-[26px] tracking-[-0.07em]">
+                  <h1 className="mb-[24px] uppercase font-cofo lg:text-[100px] lg:leading-[81px] lg:tracking-[-0.04em] text-[32px] leading-[26px] tracking-[-0.07em]">
                     деталей{" "}
                   </h1>
-                  <div className="flex  mt-[43px] items-center">
-                    <p className="text-[16px] leading-[20px] text-[#252526] uppercase">
+                  <div className="flex  lg:mt-[43px] items-center ">
+                    <p className="text-[16px] leading-[20px] text-[#252526]  uppercase pt-10 ">  
                       Забронюйте номер безпосередньо на сайті <br /> та
                       гарантовано отримайте найкращу ціну <br />
                       прямо зараз.
@@ -118,13 +118,13 @@ export const RoomsInfo = () => {
                   кожен <br /> з яких продуманий до найменших дрібниць
                 </span>
               </h1>
-              <div className="flex flex-col text-center lg:mt-[43px]  items-center">
-                <p className="text-[12px] leading-[15px] text-[#252526] uppercase">
+              <div className="flex flex-col text-center lg:mt-[43px] mt-[24px]  items-center">
+                <p className="text-[12px] leading-[15px] text-[#252526] uppercase ">
                   Забронюйте номер безпосередньо на сайті <br /> та гарантовано
                   отримайте найкращу ціну <br />
                   прямо зараз.
                 </p>
-                <button className=" font-cofo font-extrabold  uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px]  h    -fit py-[12px] rounded-full text-[12px] ">
+                <button className=" font-cofo font-extrabold  uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px]  h-fit py-[12px] rounded-full text-[12px] ">
                   забронювати
                 </button>
               </div>
@@ -152,7 +152,7 @@ export const RoomsInfo = () => {
                       />
                     </div>
 
-                    <div className="lg:h-[297px] h-[161px]">
+                    <div className="lg:h-[297px] h-[191px]">
                       <div className="flex justify-between mx-auto lg:pt-[19px] pt-[10.5px] lg:w-[530px] w-[301px] items ">
                         <div className="flex items-center">
                           <img src={square} alt="square" />
@@ -169,7 +169,7 @@ export const RoomsInfo = () => {
                       </div>
 
                       <div className="flex justify-center items-center h-full">
-                        <div className="flex flex-col text-center items-center justify-between h-full lg:max-h-[200px] max-h-[105px] w-full lg:max-w-[472px] ">
+                        <div className="flex flex-col text-center items-center justify-between h-full lg:max-h-[200px] max-h-[125px] w-full lg:max-w-[472px] ">
                           <div className="flex-1 flex flex-col justify-start w-full">
                             <h1 className="font-cofo uppercase lg:text-[40px] lg:max-w-full  lg:leading-[36px] lg:tracking-[-0.06em]  tracking-[-0.03em] text-[24px] leading-[22px] font-semibold">
                               {room.title}
