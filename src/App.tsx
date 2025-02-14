@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { Contacts } from "./pages/Contacts";
 import { Rooms } from "./pages/Rooms";
 import OrderModal from "./components/OrderModal";
+import { Room } from "./pages/Room";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About/>} />
           <Route path="/rooms" element={<Rooms/>} />
+          <Route path="/rooms/:roomType" element={<Room/>} />
           <Route path="/contacts" element={<Contacts/>} />
         </Routes>
         <Footer />

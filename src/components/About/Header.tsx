@@ -5,7 +5,7 @@ export const AboutHeader = () => {
   const { openModal } = useModalStore();
 
   return (
-    <div className="relative w-full h-[1260px] flex items-center justify-center flex-col">
+    <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
@@ -32,7 +32,7 @@ export const AboutHeader = () => {
         </span>
       </h4>
       <button
-        onClick={openModal}
+        onClick={() => openModal()}
         className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
       >
         забронювати
