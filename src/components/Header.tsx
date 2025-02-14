@@ -48,7 +48,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-4 px-6 flex lg:justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full py-4 px-6 flex lg:justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-20 ${
         scrolled ? "bg-white text-black" : " text-white"
       }`}
     >
