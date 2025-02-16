@@ -1,4 +1,5 @@
-import headerPhoto from "../../assets/rooms/header.jpg";
+import headerPhoto from "../../assets/Rooms/header.jpg"; 
+
 
 
 export const Header = () => {
