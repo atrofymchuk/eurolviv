@@ -24,7 +24,7 @@ const ImageSlider = () => {
     <div className="relative w-screen grid place-items-center">
       <div className="xl:w-[1720px] w-[332px]  border-x border-[#C7C7C7] box-border border-collapse xl:h-[700px] h-[313px] z-0"  />
 
-      <div className="absolute inset-0 grid place-items-center z-10">
+      <div className="absolute  grid place-items-center z-10">
         
         <Swiper
           effect={"coverflow"}

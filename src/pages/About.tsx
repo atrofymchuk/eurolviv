@@ -12,10 +12,10 @@ export const About = () => {
       <AboutHeader />
       <StorySection />
       <Advantages />
-      <Mission />
-      <Concepts />
-      <WhereWeAre />
-      <Rewies />
+       <Mission />
+     <Concepts />
+       <WhereWeAre />
+     <Rewies />
     </div>
   );
 };

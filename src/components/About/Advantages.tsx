@@ -25,7 +25,7 @@ export const Advantages = () => {
 
   return (
     <section className="flex justify-center items-center bg-[#A47762] px-6 *:font-cofo">
-      <div className="border-x border-[#C7C7C7] xl:grid xl:grid-cols-3 items-center xl:h-[684px] max-w-[1720px] xl:w-full w-[334px] mx-auto box-border border-collapse gap-0">
+      <div className="border-x border-[#C7C7C7] xl:grid xl:grid-cols-[575px_494px_651px] items-center xl:h-[684px] max-w-[1720px] xl:w-full w-[334px] mx-auto box-border border-collapse gap-0">
         <div className="xl:border-e border-[#C7C7C7] h-full p-4 xl:w-full w-[334px]">
           <div className="flex flex-col xl:ps-7.5">
             <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[86px] xl:text-left">

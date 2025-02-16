@@ -17,11 +17,14 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   return (
-    <div className="relative flex justify-center items-center z-20">
-      <div className="absolute xl:w-[1720px] h-full w-[299px]  " />
+    <div className="relative flex justify-center items-center ">
+      <div className="absolute  h-full w-[299px]  " />
       <Swiper
         slidesPerView={1}
+        observer={true}
+        observeParents={true}
         loop
+        
         spaceBetween={17}
         grid={{ fill: "row", rows: 2 }}
         modules={[Grid, Pagination]}

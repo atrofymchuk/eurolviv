@@ -6,7 +6,7 @@ export const WhereWeAre = () => {
   return (
     <section className="flex flex-col items-center bg-white *:font-cofo">
       <div className="grid xl:grid-cols-2 items-center  xl:w-[1720px] w-[340px] xl:px-0 px-1 box-border border-collapse">
-        <div className="xl:col-span-1 border border-t-0 border-b-0 xl:border-r-0  border-[#C7C7C7]  h-[672px] justify-center items-center flex">
+        <div className="xl:col-span-1 border border-t-0 border-b-0 xl:border-r-0  border-[#C7C7C7]  lg:h-[672px] justify-center items-center flex">
           <div className="flex-col  text-center xl:text-start pt-[61px] xl:pt-0">
             <p className="uppercase flex ">
               <img src={navigateIco} alt="navigateico" className="pe-1 " />

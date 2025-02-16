@@ -56,7 +56,7 @@ export const Rewies = () => {
 
   return (
     <section className="flex flex-col items-center bg-[#A47762] *:font-cofo   ">
-      <div className="grid xl:grid-cols-2 xl:w-full border-x border-[#C7C7C7] xl:max-w-[1720px]  w-[336px] px-0">
+      <div className="grid xl:grid-cols-2 xl:w-full border-x border-[#C7C7C7] xl:max-w-[1720px]  w-[332px] px-0">
         <div className="xl:col-span-1   pt-[52px] xl:pt-[109px] flex flex-col ">
           <h1 className="text-center font-cofo xl:text-[198px] text-[32px] uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px] leading-[32px] xl:ps-[20px]">
             Відгуки<span className=" xl:hidden block">Наших гостей</span>
@@ -83,7 +83,7 @@ export const Rewies = () => {
 
       <div className="w-full flex justify-end h-fit ">
         <div className="xl:max-w-[1720px] w-full max-w-[334px]">
-          <div className="xl:max-w-[1720px] min-h-[427px] w-[336px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7] z-10 "></div>
+          <div className="xl:max-w-[1720px] min-h-[427px] w-[332px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7]  "></div>
           <ReviewSlider reviews={reviews} />
         </div>
       </div>
