@@ -22,7 +22,7 @@ export const Guarantee = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-[1017px_803px] grid-cols-[334px] lg:justify-normal  justify-center w-full ">
+      <div className="grid lg:grid-cols-[1017px_803px] grid-cols-[334px] lg:justify-normal  3xl:justify-center xl:w-full 3xl:grid-cols-[917px_803px]">
         <div className=" px-[14px] py-[16px] lg:p-0 border-x border-[#C7C7C7]  lg:border-0">
           <img
             src={eurohotel}
