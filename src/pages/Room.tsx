@@ -1,4 +1,5 @@
 import { About } from "../components/Room/About"
+import { ComfortsBlocksWrapper } from "../components/Room/ComfortBlocksWrapper"
 import { Header } from "../components/Room/Header"
 
 export const Room = () =>{
@@ -7,6 +8,7 @@ export const Room = () =>{
         <div>
             <Header />
             <About />
+            <ComfortsBlocksWrapper />
 
         </div>
     )
