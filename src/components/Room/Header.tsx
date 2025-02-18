@@ -1,12 +1,28 @@
-import headerPhoto from "../../assets/Rooms/header.jpg"; 
+import { RoomHeader } from "../../store/types";
 
+interface RoomHeaderToProps {
+  header: RoomHeader;
+}
 
-
-export const Header = () => {
+export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
+  const {
+    title,
+    arriveTime,
+    count,
+    description,
+    leaveTime,
+    size,
+    view,
+    previewImage,
+  } = header;
   return (
     <div className="w-full relative">
-      <img src={headerPhoto} alt="" className="object-cover w-full lg:h-[1181px] h-[821px]" />
-      
+      <img
+        src={previewImage}
+        alt=""
+        className="object-cover w-full lg:h-[1181px] h-[821px]"
+      />
+
       <div
         className="absolute inset-0"
         style={{
@@ -24,30 +40,32 @@ export const Header = () => {
         </h4>
 
         <h1 className="text-white uppercase whitespace-pre-line font-cofo xl:text-[198px] flex flex-col text-[48px] font-normal z-20 xl:leading-[154.83px] leading-[39.13px] tracking-[-0.1em] text-center underline decoration-transparent">
-          {"люкс двокімнатний".split(" ").map((word, index) => (
+          {title.split(" ").map((word, index) => (
             <span key={index}>{word}</span>
           ))}
         </h1>
+        <p className={`uppercase lg:leading-[35px] lg:text-[36px] text-[20px] font-semibold leading-[25px]   pt-[8px]`}>
+          {size}
+        </p>
 
-        <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] w-[291px] lg:pt-[46px] pt-[20px]  text-[12px] leading-[15.12px] px-[10px]">
-          Класика з душею-затишок, який зустрічає вас в історичному центрі Львова
+        <p className={`font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[531px] w-[291px] ${size ? 'lg:pt-[46px] ' : ' '} pt-[20px]  text-[12px] leading-[15.12px] px-[10px]`}>
+          {description}
         </p>
       </div>
 
-      
       <div className="absolute bottom-10 w-full  lg:justify-center">
         <div className="flex flex-col lg:flex-row   text-center flex-wrap lg:justify-between w-full lg:px-[74px] ">
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            кількість номерів: <span className="text-[#FFFFFF]">4</span>
+            кількість номерів: <span className="text-[#FFFFFF]">{count}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            вид з номера: <span className="text-[#FFFFFF]">на вулицю</span>
+            вид з номера: <span className="text-[#FFFFFF]">{view}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            час заїзду: <span className="text-[#FFFFFF]">14:00</span>
+            час заїзду: <span className="text-[#FFFFFF]">{arriveTime}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            час виїзду: <span className="text-[#FFFFFF]">12:00</span>
+            час виїзду: <span className="text-[#FFFFFF]">{leaveTime}</span>
           </p>
         </div>
       </div>

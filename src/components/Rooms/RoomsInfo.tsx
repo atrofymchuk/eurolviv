@@ -1,85 +1,15 @@
-import standartSingle from "../../assets/Rooms/standart_single.jpg";
 import square from "../../assets/icons/Rooms/square.svg";
 import guests from "../../assets/icons/Rooms/guests.svg";
 import { Link } from "react-router-dom";
 import { useModalStore } from "../../store/useModalStore";
+import { useRoomStore } from "../../store/useRoomsStore";
 
-const rooms = [
-  {
-    id: 1,
-    image: standartSingle,
-    desc: "Оптимальний вибір для ділової подорожі",
-    title: "стандарт одномісний",
-    area: "15М²",
-    guests: "1",
-  },
-  {
-    id: 2,
-    image: standartSingle,
-    desc: "Комфорт та зручність для вашого відпочинку ",
-    title: "стандарт з великим ліжком",
-    area: "18М²",
-    guests: "2",
-  },
-  {
-    id: 3,
-    image: standartSingle,
-    desc: "Тиша і зручність в центрі ділового міста",
-    title: "стандарт з двома ліжками",
-    area: "18М²",
-    guests: "2",
-  },
-  {
-    id: 4,
-    image: standartSingle,
-    desc: "Ритм міста поруч, затишок усередині",
-    title: "стандарт з великим ліжком та балконом",
-    area: "18М²",
-    guests: "2",
-  },
-  {
-    id: 5,
-    image: standartSingle,
-    desc: "Відчуйте гармонію між стилем та комфортом",
-    title: "стандарт з двома ліжками та балконом",
-    area: "15М²",
-    guests: "2",
-  },
-  {
-    id: 6,
-    image: standartSingle,
-    desc: "Номер, де кожна деталь має значення ",
-    title: "напівлюкс",
-    area: "15М²",
-    guests: "2",
-  },
-  {
-    id: 7,
-    image: standartSingle,
-    desc: "затишок, який зустрічає вас в центрі Львова",
-    title: "люкс двокімнатний",
-    area: "38М²",
-    guests: "2+2",
-  },
-  {
-    id: 8,
-    image: standartSingle,
-    desc: "Для гостей, які цінують винятковість",
-    title: "люкс покращений imperial",
-    area: "60М²",
-    guests: "2",
-  },
-  {
-    id: 9,
-    image: standartSingle,
-    desc: "Комфорт та сервіс європейського рівня",
-    title: "люкс покращений elegant",
-    area: "60М²",
-    guests: "2",
-  },
-];
+
+
 
 export const RoomsInfo = () => {
+
+const {rooms} = useRoomStore()
 
   const {openModal} = useModalStore()
 
@@ -144,7 +74,7 @@ export const RoomsInfo = () => {
               const isLastInRow = (index + 1) % 3 === 0;
               return (
                 <div
-                  key={room.id}
+                  key={room.type}
                   className={`lg:border lg:border-s-0  border-[#C7C7C7]  
       ${isFirstInRow ? "lg:ps-[20px] p-4" : "p-4"}  
       ${isLastInRow ? "lg:pe-[20px] lg:border-e-0 border-t" : "border-t"} 
@@ -154,7 +84,7 @@ export const RoomsInfo = () => {
                   <div>
                     <div className="items-center flex justify-center">
                       <img
-                        src={room.image}
+                        src={room.previewImage}
                         alt={room.title}
                         className="lg:w-[530px] lg:h-[416px] w-[301px] h-[230px] object-cover"
                       />
@@ -183,12 +113,12 @@ export const RoomsInfo = () => {
                               {room.title}
                             </h1>
                             <p className="uppercase lg:text-[18px] lg:leading-[21px] mt-[15px] tracking-[-0.04em] text-[12px] leading-[14px] text-[#6B6B6B]">
-                              {room.desc}
+                              {room.description}
                             </p>
                           </div>
 
                           <Link
-                            to=""
+                            to={room.type}
                             className="uppercase lg:py-[10px] lg:px-[20px] mt lg:text-[18px] py-[8px] px-[9px]  text-[12px] border rounded-full text-[#A47762] font-cofo font-semibold"
                           >
                             переглянути номер

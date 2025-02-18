@@ -9,7 +9,7 @@ import { Navigation } from "swiper/modules";
 import { AboutSliderProps } from "../../store/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack  } from "react-icons/io";
 import { useState } from "react";
-export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider }) => {
+export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider,swiperImagesStyle }) => {
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   return (
@@ -25,7 +25,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider }) => {
             <img
               src={img}
               alt=""
-              className="w-full absolute h-full lg:object-cover object-contain object-[50%_70%] lg:scale-100 scale-103"
+              className={`${swiperImagesStyle} w-full absolute h-full lg:object-cover object-contain lg:scale-100 scale-103`}
             />
           </SwiperSlide>
         ))}
