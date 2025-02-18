@@ -84,7 +84,7 @@ const {rooms} = useRoomStore()
                   <div>
                     <div className="items-center flex justify-center">
                       <img
-                        src={room.previewImage}
+                        src={room.header.previewImage}
                         alt={room.title}
                         className="lg:w-[530px] lg:h-[416px] w-[301px] h-[230px] object-cover"
                       />
@@ -118,7 +118,7 @@ const {rooms} = useRoomStore()
                           </div>
 
                           <Link
-                            to={room.type}
+                            to={`rooms/${room.type}`}
                             className="uppercase lg:py-[10px] lg:px-[20px] mt lg:text-[18px] py-[8px] px-[9px]  text-[12px] border rounded-full text-[#A47762] font-cofo font-semibold"
                           >
                             переглянути номер
