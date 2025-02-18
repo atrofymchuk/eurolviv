@@ -22,6 +22,7 @@ export function Header() {
   let styles;
   let iconLogo;
   let link;
+  let rightMenu
 
   switch (location.pathname) {
     case "/contacts":
@@ -29,7 +30,8 @@ export function Header() {
         scrolled ? " bg-[#252526] text-[white]" : "bg-[#8C331B] text-white"
       } `;
       iconLogo = `${"filter invert"}`;
-      link = `${"text-black"}`;
+      link = `${ scrolled ? 'text-[#2525269E] hover:text-[#252526]' : ' text-[#2525269E] hover:text-[#252526]'}`;
+      rightMenu =` ${scrolled ? 'text-[#252526]' : 'text-[#252526]'}`
       break;
 
     default:
@@ -37,8 +39,12 @@ export function Header() {
         scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]"
       } `;
       iconLogo = `${scrolled ? "filter invert " : ""}`;
+      rightMenu =` ${scrolled ? 'text-[#252526]' : 'text-[#FFFFFF]'}`
+
       break;
   }
+
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,12 +102,12 @@ export function Header() {
             className="relative hidden xl:flex space-x-6 text-sm"
             onMouseLeave={() => setIsShowRooms(false)}
           >
-            <Link to="/about" className="hover:text-gray-400">
+            <Link to="/about" className={` ${link}`}>
               ПРО ГОТЕЛЬ
             </Link>
 
             <div className="relative" onMouseEnter={() => setIsShowRooms(true)}>
-              <Link to="/rooms" className="hover:text-gray-400">
+              <Link to="/rooms" className={` ${link}`}>
                 НОМЕРИ
               </Link>
 
@@ -113,19 +119,19 @@ export function Header() {
                 >
                   <Link
                     to="/rooms/deluxe"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 "
                   >
                     Делюкс
                   </Link>
                   <Link
                     to="/rooms/suite"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 "
                   >
                     Люкс
                   </Link>
                   <Link
                     to="/rooms/standard"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 "
                   >
                     Стандарт
                   </Link>
@@ -133,16 +139,16 @@ export function Header() {
               )}
             </div>
 
-            <Link to="" className="hover:text-gray-400">
+            <Link to="" className={` ${link}`}>
               КОНФЕРЕНЦ-СЕРВІС
             </Link>
-            <Link to="" className="hover:text-gray-400">
+            <Link to="" className={` ${link}`}>
               РЕСТОРАН
             </Link>
-            <Link to="" className="hover:text-gray-400">
+            <Link to="" className={` ${link}`}>
               СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
             </Link>
-            <Link to="/contacts" className="hover:text-gray-400">
+            <Link to="/contacts" className={` ${link}`}>
               КОНТАКТИ
             </Link>
           </nav>
@@ -155,7 +161,7 @@ export function Header() {
             <Link
               to="/about"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               ПРО ГОТЕЛЬ
             </Link>
@@ -164,7 +170,7 @@ export function Header() {
                 to="/rooms"
                 onMouseEnter={() => setIsShowRooms(true)}
                 onMouseLeave={() => setIsShowRooms(false)}
-                className="hover:text-gray-400"
+                className=""
               >
                 НОМЕРИ ▾
               </Link>
@@ -198,35 +204,35 @@ export function Header() {
             <Link
               to="/rooms"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               НОМЕРИ
             </Link>
             <Link
               to=""
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               КОНФЕРЕНЦ-СЕРВІС
             </Link>
             <Link
               to=""
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               РЕСТОРАН
             </Link>
             <Link
               to=""
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
             </Link>
             <Link
               to="/contacts"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-gray-400"
+              className=""
             >
               КОНТАКТИ
             </Link>
@@ -234,7 +240,7 @@ export function Header() {
         )}
 
         <div className="flex items-center space-x-4">
-          <div className={`${link} text-sm items-center hidden xl:inline-flex`}>
+          <div className={`${rightMenu} text-sm items-center hidden xl:inline-flex`}>
             <span className="me-1">
               <CiGlobe className="w-4 h-4" />
             </span>
@@ -244,7 +250,7 @@ export function Header() {
           <div className="relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`text-sm hover:text-gray-400 font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${link}`}
+              className={`text-sm  font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${rightMenu} `}
             >
               ЗАТЕЛЕФОНУВАТИ ▾
             </button>
