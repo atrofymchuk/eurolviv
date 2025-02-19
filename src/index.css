@@ -10,6 +10,9 @@
 .font-cofo{
   font-family: CoFoSans;
 }
+*{
+  font-family: CoFoSans;
+}
 @font-face {
     font-family: Blessed;
     src: url(./assets//fonts/BlessedScript-Regular.otf) ;

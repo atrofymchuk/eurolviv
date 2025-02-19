@@ -7,6 +7,7 @@ import { Contacts } from "./pages/Contacts";
 import { Rooms } from "./pages/Rooms";
 import OrderModal from "./components/OrderModal";
 import { Room } from "./pages/Room";
+import { SpecialOffers } from "./pages/SpecialOffers";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Rooms/>} />
           <Route path="/rooms/:roomType" element={<Room/>} />
           <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/special-offers" element={<SpecialOffers/>} />
         </Routes>
         <Footer />
         <OrderModal />
