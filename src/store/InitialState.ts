@@ -1,17 +1,17 @@
-// import TV from "../assets/icons/Rooms/Living Room/TV.svg";
-// import armChair from "../assets/icons/Rooms/Living Room/armChair.svg";
-// import balcony from "../assets/icons/Rooms/Living Room/balcony.svg";
-// import cabinet from "../assets/icons/Rooms/Living Room/cabinet.svg";
-// import carpet from "../assets/icons/Rooms/Living Room/carpet.svg";
-// import kettle from "../assets/icons/Rooms/Living Room/kettle.svg";
-// import minibar from "../assets/icons/Rooms/Living Room/minibar.svg";
-// import phone from "../assets/icons/Rooms/Living Room/phone.svg";
-// import safe from "../assets/icons/Rooms/Living Room/safe.svg";
-// import sofa from "../assets/icons/Rooms/Living Room/sofa.svg";
-// import tea from "../assets/icons/Rooms/Living Room/tea.svg";
-// import wardrobe from "../assets/icons/Rooms/Living Room/wardrobe.svg";
-// import airCondition from "../assets/icons/About/airConditioning.svg";
-// import wifi from "../assets/icons/About/wifi.svg";
+import TV from "../assets/icons/Rooms/Living Room/TV.svg";
+import armChair from "../assets/icons/Rooms/Living Room/armChair.svg";
+import balcony from "../assets/icons/Rooms/Living Room/balcony.svg";
+import cabinet from "../assets/icons/Rooms/Living Room/cabinet.svg";
+import carpet from "../assets/icons/Rooms/Living Room/carpet.svg";
+import kettle from "../assets/icons/Rooms/Living Room/kettle.svg";
+import minibar from "../assets/icons/Rooms/Living Room/minibar.svg";
+import phone from "../assets/icons/Rooms/Living Room/phone.svg";
+import safe from "../assets/icons/Rooms/Living Room/safe.svg";
+import sofa from "../assets/icons/Rooms/Living Room/sofa.svg";
+import wardrobe from "../assets/icons/Rooms/Living Room/wardrobe.svg";
+import airCondition from "../assets/icons/About/airConditioning.svg";
+import wifi from "../assets/icons/About/wifi.svg";
+import teakit from "../assets/icons/Rooms/Living Room/tea.svg";
 
 import bedBrown from "../assets/icons/Rooms/LivingRoomBrown/bed.svg";
 import cabinetBrown from "../assets/icons/Rooms/LivingRoomBrown/cabinet.svg";
@@ -25,6 +25,7 @@ import phoneBrown from "../assets/icons/Rooms/LivingRoomBrown/phone.svg";
 import wifiBrown from "../assets/icons/Rooms/LivingRoomBrown/wifi.svg";
 import balconyBrown from "../assets/icons/Rooms/LivingRoomBrown/balcony.svg";
 import sofaBrown from "../assets/icons/Rooms/LivingRoomBrown/sofa.svg";
+import wardrobeBrown from "../assets/icons/Rooms/LivingRoomBrown/wardrobe.svg";
 
 import bathRobe from "../assets/icons/Rooms/LivingRoomBrown/bathRobe.svg";
 import cosmetic from "../assets/icons/Rooms/LivingRoomBrown/cosmetic.svg";
@@ -59,11 +60,32 @@ import standartTwoBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithTwoB
 import semiLuxPreview from "../assets/Rooms/SemiLux/preview.jpg";
 import semiLuxBathroomFst from "../assets/Rooms/SemiLux/bathroom.jpg";
 import semiLuxBathroomScd from "../assets/Rooms/SemiLux/bathroomTwo.jpg";
-// import semiLuxBedroomFst from "../assets/Rooms/SemiLux/bedroom.jpg";
 import semiLuxBedroomScd from "../assets/Rooms/SemiLux/bedroomTwo.jpg";
-// import luxTwoRoomsPreview from "../assets/Rooms/LuxTwoRooms/header.jpg";
-// import luxImperiumPreview from "../assets/Rooms/LuxImpreial/preview.jpg";
-// import luxElegantPreview from "../assets/Rooms/LuxElegant/preview.jpg";
+
+import luxTwoRoomsPreview from "../assets/Rooms/LuxTwoRooms/header.jpg";
+import luxTwoRoomsLivingRoomTrd from "../assets/Rooms/LuxTwoRooms/room.jpg";
+import luxTwoRoomsBedroomFst from "../assets/Rooms/LuxTwoRooms/bedroom.jpg";
+import luxTwoRoomsBedroomScd from "../assets/Rooms/LuxTwoRooms/bedroom2.jpg";
+import luxTwoRoomsLivingRoomFst from "../assets/Rooms/LuxTwoRooms/livingRoom.jpg";
+import luxTwoRoomsLivingRoomScd from "../assets/Rooms/LuxTwoRooms/livingRoom2.jpg";
+import luxTwoRoomsBathRoomFst from "../assets/Rooms/LuxTwoRooms/bathroom.jpg";
+import luxTwoRoomsBathRoomScd from "../assets/Rooms/LuxTwoRooms/bathroom2.jpg";
+
+import luxImperiumPreview from "../assets/Rooms/LuxImpreial/preview.jpg";
+import luxImperiumlivigRoomFst from "../assets/Rooms/LuxImpreial/livingroom.jpg";
+import luxImperiumlivigRoomScd from "../assets/Rooms/LuxImpreial/livingroom2.jpg";
+import luxImperiumBedRoomFst from "../assets/Rooms/LuxImpreial/bedroom.jpg";
+import luxImperiumBedRoomScd from "../assets/Rooms/LuxImpreial/bedroom2.jpg";
+import luxImperiumBathRoomFst from "../assets/Rooms/LuxImpreial/bathroom.jpg";
+import luxImperiumBathRoomScd from "../assets/Rooms/LuxImpreial/bathroom2.jpg";
+
+import luxElegantPreview from "../assets/Rooms/LuxElegant/preview.jpg";
+import luxElegantBathRoomFst from "../assets/Rooms/LuxElegant/bathroom.jpg";
+import luxElegantBathRoomScd from "../assets/Rooms/LuxElegant/bathroom2.jpg";
+import luxElegantBedRoomFst from "../assets/Rooms/LuxElegant/bedroom.jpg";
+import luxElegantBedRoomScd from "../assets/Rooms/LuxElegant/bedroom2.jpg";
+import luxElegantLivingRoomFst from "../assets/Rooms/LuxElegant/livingroom.jpg";
+import luxElegantLivingRoomScd from "../assets/Rooms/LuxElegant/livingroom2.jpg";
 
 import ammenties from "../assets/Rooms/StandartAbout/amenities.jpg";
 import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.jpg";
@@ -71,18 +93,12 @@ import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
 import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
 import { StoreState } from "./types";
 
-const standartBlocksStyles =
-  "bg-[#EDE8E5] shadow-[0px_-14px_61.3px_0px_#25252612]";
-// const luxBlocksStyles = [
-//   "bg-[#A47762]",
-//   standartBlocksStyles,
-//   standartBlocksStyles,
-// ];
+
 export const initialRoomsState: StoreState = {
   rooms: [
     {
       type: "standart-single",
-      title: "стандарт одномісний",
+      title: "",
       description: "Оптимальний вибір для ділової подорожі",
       area: 15,
       guests: "1",
@@ -110,7 +126,8 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[2%_20%]",
+        ammetiveImgStyleFst: "object-[2%_20%]",
+        ammetiveImgStyleScd: "",
 
         ammentiesImages: [
           standartBedRoomTwo,
@@ -119,7 +136,6 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
@@ -146,28 +162,26 @@ export const initialRoomsState: StoreState = {
         ],
       },
 
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "стандарт",
+          size: "з великим ліжком",
+          desc: "Комфорт та зручність для вашого відпочинку",
+          img: standartBigBedPreview,
+          type: "standart-big-bed",
+        },
+        {
+          title: "стандарт",
+          size: "з великим ліжком ТА БАЛКОНОМ",
+          desc: "Ритм міста поруч, затишок усередині",
+          img: standartBigBedAndBalconyPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
     {
       type: "standart-big-bed",
-      title: "стандарт з великим ліжком",
+      title: "",
       description: "Комфорт та зручність для вашого відпочинку ",
       area: 18,
       isLux: false,
@@ -194,7 +208,8 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[33%_50%]",
+        ammetiveImgStyleFst: "object-[33%_50%]",
+        ammetiveImgStyleScd: "",
 
         ammentiesImages: [
           standartBigBedScd,
@@ -203,7 +218,6 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
@@ -229,28 +243,26 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'ОДНОМІСНИЙ',
-        desc:'Оптимальний вибір для ділової подорожі',
-        img:standartSinglePreview,
-        type:'standart-single'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "стандарт",
+          size: "ОДНОМІСНИЙ",
+          desc: "Оптимальний вибір для ділової подорожі",
+          img: standartSinglePreview,
+          type: "standart-single",
+        },
+        {
+          title: "стандарт",
+          size: "з великим ліжком ТА БАЛКОНОМ",
+          desc: "Ритм міста поруч, затишок усередині",
+          img: standartBigBedAndBalconyPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
     {
       type: "standart-two-bed",
-      title: "стандарт з двома ліжками",
+      title: "",
       description: "Тиша і зручність в центрі ділового міста",
       area: 18,
       guests: "2",
@@ -277,7 +289,8 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[0%_20%]",
+        ammetiveImgStyleFst: "object-[0%_20%]",
+        ammetiveImgStyleScd: "",
         ammentiesImages: [
           standartTwoBedScd,
           ammenties,
@@ -285,7 +298,6 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
@@ -311,28 +323,26 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з двома ліжками ТА БАЛКОНОМ',
-        desc:'Відчуйте гармонію між стилем та бездоганним комфортом',
-        img:standartTwoBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "стандарт",
+          size: "з великим ліжком",
+          desc: "Комфорт та зручність для вашого відпочинку",
+          img: standartBigBedPreview,
+          type: "standart-big-bed",
+        },
+        {
+          title: "стандарт",
+          size: "з двома ліжками ТА БАЛКОНОМ",
+          desc: "Відчуйте гармонію між стилем та бездоганним комфортом",
+          img: standartTwoBedAndBalconyPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
     {
       type: "standart-big-bed-balcony",
-      title: "стандарт з великим ліжком та балконом",
+      title: "",
       description: "Ритм міста поруч, затишок усередині",
       area: 18,
       guests: "2",
@@ -359,7 +369,8 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
+        ammetiveImgStyleFst: "object-[65%_20%]",
+        ammetiveImgStyleScd: "",
         ammentiesImages: [
           standartBigBedAndBalconyBedroomScd,
           ammenties,
@@ -367,7 +378,6 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
@@ -394,196 +404,31 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
-      suggestion:[{
-
-        title: 'напівлюкс',
-        size:'',
-        desc:'Номер, де кожна деталь має значення',
-        img:semiLuxPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'люкс двокімнатний',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Класика з душею-затишок, який зустрічає вас в історичному центрі Львова',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "напівлюкс",
+          size: "",
+          desc: "Номер, де кожна деталь має значення",
+          img: semiLuxPreview,
+          type: "standart-big-bed",
+        },
+        {
+          title: "люкс двокімнатний",
+          size: "",
+          desc: "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+          img: luxTwoRoomsPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
+  
+   
     {
-      type: "standart-two-bed-balcony",
-      title: "стандарт з двома  ліжками та балконом",
-      description: "Відчуйте гармонію між стилем та комфортом",
-      area: 18,
-      guests: "2",
-      isLux: false,
-      header: {
-        previewImage: standartTwoBedAndBalconyPreview,
-        title: "стандарт",
-        size: `з двома  ліжками та балконом`,
-        description: "Відчуйте гармонію між стилем та бездоганним комфортомі",
-        count: 33,
-        view: "на вулицю",
-        arriveTime: "14:00",
-        leaveTime: "12:00",
-      },
-      about: {
-        pOne: `Комфортабельний номер з балконом зачарує вас чудовим видом на Храм Святої Трійці. У номері два окремих ліжка, робоче місце та все необхідне для вашого приємного перебування.`,
-        pTwo: `Інтер’єр цього номера поєднує елегантність та сучасний стиль, а розташування в самому центрі Львова дозволяє легко дістатись до найвідоміших пам’яток міста.`,
-        rooms: 1,
-        swiperImagesStyle: "object-[0%_100%]",
-        swiperImages: [
-          standartTwoBedAndBalconyBedroomScd,
-          standartTwoBedAndBalconyBedroomFst,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
-        ammentiesImages: [
-          standartBigBedAndBalconyBedroomScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
-      },
-      icons: {
-        ammentiesInRoom: [
-          { src: bedBrown, text: "два односпальні ліжка (90*190 см)" },
-          { src: balconyBrown, text: "балкон" },
-          { src: cabinetBrown, text: "робочий стіл" },
-          { src: carpetBrown, text: "килимове покриття" },
-          { src: minibarBrown, text: "мінібар" },
-          { src: safeBrown, text: "сейф" },
-          { src: kettleBrown, text: "електрочайник" },
-          { src: conditionBrown, text: "кондиціонер" },
-          { src: tvBrown, text: "LCD TV 43 дюйми" },
-          { src: phoneBrown, text: "телефон" },
-          { src: wifiBrown, text: "WI-fi" },
-        ],
-        bathRoom: [
-          { src: shower, text: "душова" },
-          { src: wc, text: "туалет" },
-          { src: shovergigi, text: "гігієнічний душ" },
-          { src: hairDryer, text: "фен" },
-          { src: towels, text: "рушники" },
-          { src: bathRobe, text: "халати" },
-          { src: slippers, text: "капці" },
-          { src: cosmetic, text: "готельна косметика" },
-        ],
-      },suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
-    },
-    {
-      type: "standart-two-bed-balcony",
-      title: "стандарт з двома  ліжками та балконом",
-      description: "Відчуйте гармонію між стилем та комфортом",
-      area: 18,
-      guests: "2",
-      isLux: false,
-      header: {
-        previewImage: standartTwoBedAndBalconyPreview,
-        title: "стандарт",
-        size: `з двома  ліжками та балконом`,
-        description: "Відчуйте гармонію між стилем та бездоганним комфортомі",
-        count: 33,
-        view: "на вулицю",
-        arriveTime: "14:00",
-        leaveTime: "12:00",
-      },
-      about: {
-        pOne: `Комфортабельний номер з балконом зачарує вас чудовим видом на Храм Святої Трійці. У номері два окремих ліжка, робоче місце та все необхідне для вашого приємного перебування.`,
-        pTwo: `Інтер’єр цього номера поєднує елегантність та сучасний стиль, а розташування в самому центрі Львова дозволяє легко дістатись до найвідоміших пам’яток міста.`,
-        rooms: 1,
-        swiperImagesStyle: "object-[0%_100%]",
-        swiperImages: [
-          standartTwoBedAndBalconyBedroomScd,
-          standartTwoBedAndBalconyBedroomFst,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
-        ammentiesImages: [
-          standartBigBedAndBalconyBedroomScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
-      },
-      icons: {
-        ammentiesInRoom: [
-          { src: bedBrown, text: "два односпальні ліжка (90*190 см)" },
-          { src: balconyBrown, text: "балкон" },
-          { src: cabinetBrown, text: "робочий стіл" },
-          { src: carpetBrown, text: "килимове покриття" },
-          { src: minibarBrown, text: "мінібар" },
-          { src: safeBrown, text: "сейф" },
-          { src: kettleBrown, text: "електрочайник" },
-          { src: conditionBrown, text: "кондиціонер" },
-          { src: tvBrown, text: "LCD TV 43 дюйми" },
-          { src: phoneBrown, text: "телефон" },
-          { src: wifiBrown, text: "WI-fi" },
-        ],
-        bathRoom: [
-          { src: shower, text: "душова" },
-          { src: wc, text: "туалет" },
-          { src: shovergigi, text: "гігієнічний душ" },
-          { src: hairDryer, text: "фен" },
-          { src: towels, text: "рушники" },
-          { src: bathRobe, text: "халати" },
-          { src: slippers, text: "капці" },
-          { src: cosmetic, text: "готельна косметика" },
-        ],
-      },
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
-    },
-    {
-        type: "semi-lux",
-    title: "напівлюкс",
-    description: "Номер, де кожна деталь має значення",
-    area: 22,
-    guests: "2+2",
+      type: "semi-lux",
+      title: "",
+      description: "Номер, де кожна деталь має значення",
+      area: 22,
+      guests: "2+2",
       isLux: false,
       header: {
         previewImage: semiLuxPreview,
@@ -600,25 +445,28 @@ export const initialRoomsState: StoreState = {
         rooms: 1,
         swiperImagesStyle: "object-[0%_65%]",
         swiperImages: [
-            semiLuxPreview,
-            semiLuxBedroomScd,
+          semiLuxPreview,
+          semiLuxBedroomScd,
           semiLuxBathroomFst,
           semiLuxBathroomScd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
+        ammetiveImgStyleFst: "object-[65%_20%]",
+        ammetiveImgStyleScd: "",
         ammentiesImages: [
-            semiLuxBedroomScd,
+          semiLuxBedroomScd,
           ammenties,
           semiLuxBathroomFst,
           semiLuxBathroomScd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
-          { src: bedBrown, text: "двоспальне ліжко (160*200 см) / 2 односпальні ліжка (90*190 см)" },
+          {
+            src: bedBrown,
+            text: "двоспальне ліжко (160*200 см) / 2 односпальні ліжка (90*190 см)",
+          },
           { src: sofaBrown, text: "диван-ліжко" },
           { src: cabinetBrown, text: "робочий стіл" },
           { src: carpetBrown, text: "килимове покриття" },
@@ -640,30 +488,27 @@ export const initialRoomsState: StoreState = {
           { src: slippers, text: "капці" },
           { src: cosmetic, text: "готельна косметика" },
         ],
-        
       },
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "люкс покращений",
+          size: "elegant",
+          desc: "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій",
+          img: luxElegantPreview,
+          type: "lux-elegant",
+        },
+        {
+          title: "люкс двокімнатний",
+          size: "з великим ліжком ТА БАЛКОНОМ",
+          desc: "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+          img: luxTwoRoomsPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
     {
       type: "standart-two-bed-balcony",
-      title: "стандарт з двома  ліжками та балконом",
+      title: "",
       description: "Відчуйте гармонію між стилем та комфортом",
       area: 18,
       guests: "2",
@@ -690,7 +535,8 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
+        ammetiveImgStyleFst: "object-[65%_20%]",
+        ammetiveImgStyleScd: "",
         ammentiesImages: [
           standartBigBedAndBalconyBedroomScd,
           ammenties,
@@ -698,7 +544,6 @@ export const initialRoomsState: StoreState = {
           standartBathRoomSnd,
         ],
         bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
       },
       icons: {
         ammentiesInRoom: [
@@ -725,40 +570,325 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
-      suggestion:[{
-
-        title: 'стандарт',
-        size:'з великим ліжком',
-        desc:'Комфорт та зручність для вашого відпочинку',
-        img:standartBigBedPreview,
-        type:'standart-big-bed'
-      
-      },
-      {
-
-        title: 'стандарт',
-        size:'з великим ліжком ТА БАЛКОНОМ',
-        desc:'Ритм міста поруч, затишок усередині',
-        img:standartBigBedAndBalconyPreview,
-        type:'standart-big-bed-balcony'
-      }
-    ]
+      suggestion: [
+        {
+          title: "напівлюкс",
+          size: "",
+          desc: "Номер, де кожна деталь має значення",
+          img: semiLuxPreview,
+          type: "semi-lux",
+        },
+        {
+          title: "люкс двокімнатний",
+          size: "з великим ліжком ТА БАЛКОНОМ",
+          desc: "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+          img: luxTwoRoomsPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
     },
-   
+
+    {
+      type: "lux-two-rooms",
+      title: "",
+      description: "затишок, який зустрічає вас в центрі Львова",
+      area: 38,
+      guests: "2+2",
+      isLux: true,
+      header: {
+        previewImage: luxTwoRoomsPreview,
+        title: "люкс ",
+        size: `двокімнатний`,
+        description:
+          "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+        count: 4,
+        view: "на вулицю",
+        arriveTime: "14:00",
+        leaveTime: "12:00",
+      },
+      about: {
+        pOne: `Двокімнатний просторий номер з балконом, зручним робочим місцем і зоною для відпочинку стане ідеальним вибором для тих, хто цінує високий рівень комфортного проживання.`,
+        pTwo: `Диван з функцією ліжка створює можливість для розміщення сімʼї або ж перетворює номер на затишне місце для перезавантаження після ділових зустрічей.`,
+        rooms: 2,
+        swiperImagesStyle: "object-[0%_70%]",
+        swiperImages: [
+          luxTwoRoomsLivingRoomTrd,
+          luxTwoRoomsLivingRoomFst,
+          luxTwoRoomsLivingRoomScd,
+          luxTwoRoomsBedroomFst,
+          luxTwoRoomsBedroomScd,
+        ],
+        isBalcony: false,
+        ammetiveImgStyleFst: "",
+        ammetiveImgStyleScd: "object-[0%_100%]",
+        ammentiesImages: [
+          luxTwoRoomsLivingRoomFst,
+          luxTwoRoomsLivingRoomScd,
+          luxTwoRoomsBedroomFst,
+          luxTwoRoomsBedroomScd,
+          luxTwoRoomsBathRoomFst,
+          luxTwoRoomsBathRoomScd,
+        ],
+        bedText: "односпальне ліжко (90*190 см)",
+      },
+      icons: {
+        ammentiesInRoom: [
+          { src: sofa, text: "диван-ліжко" },
+          { src: armChair, text: "М'яке крісло" },
+          { src: balcony, text: "балкон" },
+          { src: carpet, text: "килимове покриття" },
+          { src: wardrobe, text: "гардеробна" },
+          { src: cabinet, text: "робочий стіл" },
+          { src: airCondition, text: "кондиціонер" },
+          { src: TV, text: "LCD TV 43 дюйми" },
+          { src: minibar, text: "мінібар" },
+          { src: kettle, text: "електрочайник" },
+          { src: teakit, text: "чайний набір" },
+          { src: phone, text: "телефон" },
+          { src: wifi, text: "WI-fi" },
+          { src: safe, text: "сейф" },
+        ],
+        bedRoom: [
+          { src: bedBrown, text: "особливо широке ліжко (180*200)" },
+          { src: balconyBrown, text: "балкон" },
+          { src: carpetBrown, text: "килимове покриття" },
+          { src: conditionBrown, text: "кондиціонер" },
+          { src: tvBrown, text: "LCD TV 52 дюйми" },
+          { src: wifiBrown, text: "WI-fi" },
+          { src: phoneBrown, text: "телефон" },
+        ],
+        bathRoom: [
+          { src: shower, text: "душова/ванна" },
+          { src: wc, text: "туалет" },
+          { src: shovergigi, text: "гігієнічний душ" },
+          { src: hairDryer, text: "фен" },
+          { src: towels, text: "рушники" },
+          { src: bathRobe, text: "халати" },
+          { src: slippers, text: "капці" },
+          { src: cosmetic, text: "готельна косметика" },
+        ],
+      },
+      suggestion: [
+        {
+          title: "напівлюкс",
+          size: "",
+          desc: "Номер, де кожна деталь має значення",
+          img: semiLuxPreview,
+          type: "semi-lux",
+        },
+        {
+          title: "люкс покращений",
+          size: "imperial",
+          desc: "Для гостей, які цінують винятковість",
+          img: luxImperiumPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
+    },
+    {
+      type: "lux-imperial",
+      title: "imperial",
+      description: "Для гостей, які цінують винятковість",
+      area: 60,
+      guests: "2",
+      isLux: true,
+      header: {
+        previewImage: luxImperiumPreview,
+        title: "люкс ",
+        size: `покращений `,
+        description: "Для гостей, які цінують винятковість",
+        count: 1,
+        view: "на вулицю",
+        arriveTime: "14:00",
+        leaveTime: "12:00",
+      },
+      about: {
+        pOne: `Двокімнатний просторий номер з балконом, зручним робочим місцем і зоною для відпочинку стане ідеальним вибором для тих, хто цінує високий рівень комфортного проживання.`,
+        pTwo: `Диван з функцією ліжка створює можливість для розміщення сімʼї або ж перетворює номер на затишне місце для перезавантаження після ділових зустрічей.`,
+        rooms: 2,
+        swiperImagesStyle: "object-[0%_70%]",
+        swiperImages: [
+          luxImperiumlivigRoomFst,
+          luxImperiumlivigRoomScd,
+          luxTwoRoomsBedroomFst,
+          luxTwoRoomsBedroomScd,
+        ],
+        isBalcony: false,
+        ammetiveImgStyleFst: "object-[70%_100%]",
+        ammetiveImgStyleScd: "object-[70%_100%]",
+        ammentiesImages: [
+          luxImperiumlivigRoomScd,
+          luxImperiumlivigRoomFst,
+          luxImperiumBedRoomFst,
+          luxImperiumBedRoomScd,
+          luxImperiumBathRoomFst,
+          luxImperiumBathRoomScd,
+        ],
+        bedText: "односпальне ліжко (90*190 см)",
+      },
+      icons: {
+        ammentiesInRoom: [
+          { src: sofa, text: "диван-ліжко" },
+          { src: armChair, text: "М'яке крісло" },
+          { src: balcony, text: "балкон" },
+          { src: carpet, text: "килимове покриття" },
+          { src: wardrobe, text: "гардеробна" },
+          { src: cabinet, text: "робочий стіл" },
+          { src: airCondition, text: "кондиціонер" },
+          { src: TV, text: "LCD TV 43 дюйми" },
+          { src: minibar, text: "мінібар" },
+          { src: kettle, text: "електрочайник" },
+          { src: teakit, text: "чайний набір" },
+          { src: phone, text: "телефон" },
+          { src: wifi, text: "WI-fi" },
+          { src: safe, text: "сейф" },
+        ],
+        bedRoom: [
+          { src: bedBrown, text: "особливо широке ліжко (180*200)" },
+          { src: balconyBrown, text: "балкон" },
+          { src: carpetBrown, text: "килимове покриття" },
+          { src: conditionBrown, text: "кондиціонер" },
+          { src: tvBrown, text: "LCD TV 52 дюйми" },
+          { src: wifiBrown, text: "WI-fi" },
+          { src: phoneBrown, text: "телефон" },
+        ],
+        bathRoom: [
+          { src: shower, text: "душова/ванна" },
+          { src: wc, text: "туалет" },
+          { src: shovergigi, text: "гігієнічний душ" },
+          { src: hairDryer, text: "фен" },
+          { src: towels, text: "рушники" },
+          { src: bathRobe, text: "халати" },
+          { src: slippers, text: "капці" },
+          { src: cosmetic, text: "готельна косметика" },
+        ],
+      },
+      suggestion: [
+        {
+          title: "люкс покращений",
+          size: "elegant",
+          desc: "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій",
+          img: luxElegantPreview,
+          type: "lux-elegant",
+        },
+        {
+          title: "люкс двокімнатний",
+          size: "",
+          desc: "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+          img: luxTwoRoomsPreview,
+          type: "lux-two-rooms",
+        },
+      ],
+    },
+
+    {
+      type: "lux-elegant",
+      title: "elegant",
+      description:
+        "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій",
+      area: 60,
+      guests: "2",
+      isLux: true,
+      header: {
+        previewImage: luxElegantPreview,
+        title: "люкс ",
+        size: `покращений `,
+        description: "Для гостей, які цінують винятковість",
+        count: 1,
+        view: "на вулицю",
+        arriveTime: "14:00",
+        leaveTime: "12:00",
+      },
+      about: {
+        pOne: `Двокімнатний просторий номер з балконом, зручним робочим місцем і зоною для відпочинку стане ідеальним вибором для тих, хто цінує високий рівень комфортного проживання.`,
+        pTwo: `Диван з функцією ліжка створює можливість для розміщення сімʼї або ж перетворює номер на затишне місце для перезавантаження після ділових зустрічей.`,
+        rooms: 2,
+        swiperImagesStyle: "object-[0%_70%]",
+        swiperImages: [
+          
+          luxElegantBedRoomScd,
+          luxElegantBedRoomFst,
+          luxElegantBathRoomScd,
+          luxElegantBathRoomFst,
+        ],
+        isBalcony: false,
+        ammetiveImgStyleFst: "object-[70%_100%]",
+        ammetiveImgStyleScd: "object-[70%_100%]",
+        ammentiesImages: [
+          luxElegantLivingRoomFst,
+          luxElegantLivingRoomScd,
+          luxElegantBedRoomFst,
+          luxElegantBedRoomScd,
+          luxElegantBathRoomFst,
+          luxElegantBathRoomScd,
+        ],
+        bedText: "односпальне ліжко (90*190 см)",
+      },
+      icons: {
+        ammentiesInRoom: [
+          { src: sofa, text: "відпочивальна зона" },
+          { src: balcony, text: "балкон" },
+          { src: carpet, text: "килимове покриття" },
+          { src: airCondition, text: "кондиціонер" },
+
+          { src: TV, text: "LCD TV 45 дюйми" },
+          { src: minibar, text: "мінібар" },
+          { src: kettle, text: "електрочайник" },
+          { src: teakit, text: "чайний набір" },
+          { src: phone, text: "телефон" },
+          { src: wifi, text: "WI-fi" },
+          { src: safe, text: "сейф" },
+        ],
+        bedRoom: [
+          { src: bedBrown, text: "ліжко (180*200)" },
+          { src: balconyBrown, text: "2 балкони" },
+          { src: carpetBrown, text: "килимове покриття" },
+          
+          { src: wardrobeBrown, text: "гардеробна" },
+          
+          { src: conditionBrown, text: "кондиціонер" },
+          { src: tvBrown, text: "LCD TV 43 дюйми" },
+
+          { src: wifiBrown, text: "WI-fi" },
+          { src: phoneBrown, text: "телефон" },
+        ],
+        bathRoom: [
+          { src: shower, text: "душова/ванна" },
+          { src: wc, text: "туалет" },
+          { src: shovergigi, text: "гігієнічний душ" },
+          { src: hairDryer, text: "фен" },
+          { src: towels, text: "рушники" },
+          { src: bathRobe, text: "халати" },
+          { src: slippers, text: "капці" },
+          { src: cosmetic, text: "готельна косметика" },
+        ],
+      },
+      suggestion: [
+        {
+          title: "люкс покращений",
+          size: "imperial",
+          desc: "Для гостей, які цінують винятковість",
+          img: luxImperiumPreview,
+          type: "standart-big-bed-balcony",
+        },
+        {
+          title: "люкс двокімнатний",
+          size: "з великим ліжком ТА БАЛКОНОМ",
+          desc: "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
+          img: luxTwoRoomsPreview,
+          type: "standart-big-bed-balcony",
+        },
+      ],
+    },
   ],
 };
 
 //   {
-//     
+//
 //     previewImage: semiLuxPreview,
 //   },
 //   {
-//     type: "lux-two-rooms",
-//     title: "люкс двокімнатний",
-//     description: "затишок, який зустрічає вас в центрі Львова",
-//     area: 38,
-//     guests: "2+2",
-//     previewImage: luxTwoRoomsPreview,
+//
 //   },
 //   {
 //     type: "lux-imperial",
@@ -769,10 +899,6 @@ export const initialRoomsState: StoreState = {
 //     previewImage: luxImperiumPreview,
 //   },
 //   {
-//     type: "lux-imperial",
-//     title: "люкс покращений imperial",
-//     description: "Для гостей, які цінують винятковість",
-//     area: 60,
-//     guests: "2",
+//
 //     previewImage: luxElegantPreview,
 //   },

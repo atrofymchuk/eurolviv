@@ -13,19 +13,19 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider,swiperImag
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   return (
-    <div className="relative z-10 lg:h-[523px]  w-screen h-[245px]  lg:w-full">
+    <div className="relative z-10 lg:h-[523px]  w-screen  h-[245px]  lg:w-full">
       <Swiper
         modules={[Navigation]}
-            className="mySwiper lg:h-[523px] w-screen h-[245px]  lg:w-full"
+            className="mySwiper lg:h-[523px] w-screen h-[245px] items-center  lg:w-full"
         loop
         onSwiper={(swiper)=>setSwiperInstance(swiper)}
       >
         {imageSlider.map((img) => (
-          <SwiperSlide key={img} className="relative lg:h-[523px] w-screen h-[245px]  lg:w-full">
+          <SwiperSlide key={img} className="relative lg:h-[523px] w-screen h-[245px]  lg:w-full items-center flex justify-center  ">
             <img
               src={img}
               alt=""
-              className={`${swiperImagesStyle} w-full absolute h-full lg:object-cover object-contain lg:scale-100 scale-103`}
+              className={`${swiperImagesStyle} lg:w-full absolute lg:h-full lg:object-cover   lg:scale-100 scale-100`}
             />
           </SwiperSlide>
         ))}

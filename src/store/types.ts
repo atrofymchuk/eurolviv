@@ -17,8 +17,8 @@ export type RoomAbout = {
   swiperImagesStyle:string
   isBalcony: boolean;
   bedText: string;
-  blocksStyle: string[] | string;
-  ammetiveImgStyle:string
+  ammetiveImgStyleFst:string
+  ammetiveImgStyleScd:string
   ammentiesImages:string[]
 };
 
@@ -52,6 +52,7 @@ export type Icon = {
 export type IconsState = {
   ammentiesInRoom: Icon[];
   bathRoom: Icon[];
+  bedRoom?:Icon[]
 }
 
 

@@ -2,9 +2,11 @@ import { RoomHeader } from "../../store/types";
 
 interface RoomHeaderToProps {
   header: RoomHeader;
+  isLux: boolean
+  roomName:string
 }
 
-export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
+export const Header: React.FC<RoomHeaderToProps> = ({ header, isLux ,roomName}) => {
   const {
     title,
     arriveTime,
@@ -15,6 +17,9 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
     view,
     previewImage,
   } = header;
+
+
+
   return (
     <div className="w-full relative">
       <img
@@ -40,12 +45,12 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
         </h4>
 
         <h1 className="text-white uppercase whitespace-pre-line font-cofo xl:text-[198px] flex flex-col text-[48px] font-normal z-20 xl:leading-[154.83px] leading-[39.13px] tracking-[-0.1em] text-center underline decoration-transparent">
-          {title.split(" ").map((word, index) => (
-            <span key={index}>{word}</span>
-          ))}
+         
+            <span >{title}</span><span className={`${isLux ? 'inline': 'hidden'}`}>{size}</span> 
+        
         </h1>
-        <p className={`uppercase lg:leading-[35px] lg:text-[36px] text-[20px] font-semibold leading-[25px]   pt-[8px]`}>
-          {size}
+        <p className={`uppercase lg:leading-[35px] lg:text-[36px] text-[20px] font-semibold leading-[25px] lg:pt-[46px]  pt-[8px]  `} >
+          {isLux ? roomName :size}
         </p>
 
         <p className={`font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[531px] w-[291px] ${size ? 'lg:pt-[46px] ' : ' '} pt-[20px]  text-[12px] leading-[15.12px] px-[10px]`}>

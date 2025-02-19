@@ -3,24 +3,38 @@ import { Icon } from "../../store/types";
 
 type ComfortsBlockToProps = {
   title: string;
-  icons: Icon[];
+  icons: Icon[]; 
   images: string[];
-  imgStyle: string;
+  imgStyle: ImgStyle;
+  style:Styles
+
 };
+
+type ImgStyle = {
+  ammentiesImageFst:string
+  ammentiesImageScd:string
+}
+
+type Styles={
+  bgColor:string
+  text:string
+  headerColor:string
+}
 
 export const ComfortsBlock = ({
   title,
   imgStyle,
   icons,
-  images,
+  images,style
 }: ComfortsBlockToProps) => {
+if(!icons) return
   return (
     <div className="">
-      <div className="grid lg:grid-cols-[575px_474px_545px] grid-cols-[377px] items-center *:lg:h-[840px] justify-center bg-[#EDE8E5] shadow-[0px_-14px_61.3px_0px_#25252612] ">
+      <div className={`grid lg:grid-cols-[575px_474px_545px] grid-cols-[377px] items-center *:lg:h-[840px] justify-center ${style.bgColor} shadow-[0px_-14px_61.3px_0px_#25252612] `}>
         <div className="lg:border-x border-[#C7C7C7] flex flex-col justify-center items-center">
           <div className="w-[295px] lg:w-full border-x border-[#C7C7C7] lg:border-x-0">
             <div className="p-5 pb-[22px] lg:pb-0">
-              <h1 className="uppercase  text-[#252526] lg:text-[48px] lg:mb-[51px] lg:w-[313px] text-[32px] leading-[28.8px] mt-[34px] lg:mt-0  lg:leading-[48px]">
+              <h1 className={`uppercase ${style.headerColor}  lg:text-[48px] lg:mb-[51px] lg:w-[260px] text-[32px] leading-[28.8px] mt-[34px] lg:mt-0   lg:leading-[48px]`}>
                 {title}
               </h1>
             </div>
@@ -28,7 +42,7 @@ export const ComfortsBlock = ({
               <img
                 src={images[0]}
                 alt="livingroom"
-                className={`lg:w-[533px] lg:h-[510px] object-cover  lg:flex hidden ${imgStyle}`}
+                className={`lg:w-[533px] lg:h-[510px] object-cover  lg:flex hidden ${imgStyle.ammentiesImageFst}`}
               />
             </div>
           </div>
@@ -39,7 +53,7 @@ export const ComfortsBlock = ({
               {icons.map((item, index) => (
                 <li
                   key={index}
-                  className="flex uppercase items-center text-[#6B6B6B] text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] *:font-cofo space-x-4 space-y-0.25"
+                  className={`flex uppercase items-center ${style.text} text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] *:font-cofo space-x-4 space-y-0.25`}
                 >
                   <img
                     src={item.src}
@@ -69,7 +83,7 @@ export const ComfortsBlock = ({
             <img
               src={images[1]}
               alt="livingroom"
-              className="w-[497px] h-[510px]  object-cover object-[40%_90%] lg:flex hidden"
+              className={`w-[497px] h-[510px]  object-cover object-[40%_90%] lg:flex hidden ${imgStyle.ammentiesImageScd}`}
             />
             <img
               src={images[0]}

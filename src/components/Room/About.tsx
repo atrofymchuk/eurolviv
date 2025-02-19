@@ -13,9 +13,10 @@ type RoomAboutToProps ={
   title:string
   size:string | undefined
   swiperImagesStyle:string
+  nameRoom:string
 }
 
-export const About = ({about, area , guests, title, size,swiperImagesStyle} :RoomAboutToProps) => {
+export const About = ({about, area , guests, title, size,swiperImagesStyle, nameRoom} :RoomAboutToProps) => {
 
   const {pOne,pTwo,swiperImages, rooms} = about
 
@@ -54,7 +55,7 @@ export const About = ({about, area , guests, title, size,swiperImagesStyle} :Roo
         <div className="flex items-center justify-center order-5 lg:order-none">
     <div className={`lg:border-t lg:border-e items-center justify-center flex lg:block border-[#C7C7C7]  lg:p-[35px] w-full relative`}>
       <h1 className="uppercase font-cofo lg:text-[100px] text-[32px] lg:leading-[81px] lg:w-[1200px]  font-semibold lg:font-normal leading-[28px] flex flex-col tracking-[-0.026em]   overflow-visible">
-        <span className="order-2 lg:order-1 inline w-fit">{title} {size && size.length < 17  ? <br/> : ''} {size}    </span>  
+        <span className="order-2 lg:order-1 inline w-fit">{title}  {size && size.length < 11  ? <br/> : ''} {size} {nameRoom}    </span>  
         <span className="order-1 lg:order-2 inline w-fit">  </span>  
       </h1>
     </div>
