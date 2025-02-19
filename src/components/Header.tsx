@@ -118,19 +118,19 @@ export function Header() {
                   onMouseLeave={() => setIsShowRooms(false)}
                 >
                   <Link
-                    to="/rooms/deluxe"
+                    to="/rooms/standart-single"
                     className="block px-4 py-2 "
                   >
                     Делюкс
                   </Link>
                   <Link
-                    to="/rooms/suite"
+                    to="/rooms/semi-lux"
                     className="block px-4 py-2 "
                   >
                     Люкс
                   </Link>
                   <Link
-                    to="/rooms/standard"
+                    to="/rooms/standard-two"
                     className="block px-4 py-2 "
                   >
                     Стандарт
