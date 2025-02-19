@@ -226,22 +226,67 @@ export function Header() {
                   onMouseLeave={() => setIsShowRooms(false)}
                 >
                   <Link
-                    to="/rooms/deluxe"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    to="/rooms/standart-single"
+                    className="block px-4 py-2 "
                   >
-                    Делюкс
+                    стандарт однокімнатний
+                  </Link>
+                  
+                  <Link
+                    to="/rooms/standart-two-bed"
+                    className="block px-4 py-2 "
+                  >
+                    Стандарт з двома ліжками
+                  </Link>
+                 
+                  <Link
+                    to="/rooms/standart-big-bed-balcony"
+                    className="block px-4 py-2 "
+                  >
+                    стандарт велике ліжко з балконом
                   </Link>
                   <Link
-                    to="/rooms/suite"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    to="/rooms/standart-two-bed-balcony"
+                    className="block px-4 py-2 "
                   >
-                    Люкс
+                    стандарт два ліжка з балконом
+                  </Link>
+                 
+                  <Link
+                    to="/rooms/standart-big-bed"
+                    className="block px-4 py-2 "
+                  >
+                    стандарт з великим ліжком
                   </Link>
                   <Link
-                    to="/rooms/standard"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    to="/rooms/standart-two-bed"
+                    className="block px-4 py-2 "
                   >
-                    Стандарт
+                    стандарт з двома ліжками
+                  </Link>
+                  <Link
+                    to="/rooms/semi-lux"
+                    className="block px-4 py-2 "
+                  >
+                    напів
+                  </Link>
+                  <Link
+                    to="/rooms/lux-two-rooms"
+                    className="block px-4 py-2 "
+                  >
+                    люкс двокімнатний
+                  </Link>
+                  <Link
+                    to="/rooms/lux-imperial"
+                    className="block px-4 py-2 "
+                  >
+                    люкс imperial
+                  </Link>
+                  <Link
+                    to="/rooms/lux-elegant"
+                    className="block px-4 py-2 "
+                  >
+                    люкс elegant
                   </Link>
                 </div>
               )}
