@@ -18,31 +18,31 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
 
   return (
     <div className="relative flex justify-center items-center ">
-      <div className="absolute  h-full w-[299px]  " />
+      <div className="absolute  h-full   " />
       <Swiper
-        slidesPerView={1}
-        observer={true}
-        observeParents={true}
+ 
         loop
-        
+        loopAdditionalSlides={2}
         spaceBetween={17}
+        
         grid={{ fill: "row", rows: 2 }}
         modules={[Grid, Pagination]}
         breakpoints={{
-          640: { grid: { rows: 2 }, width: 299, height: 210, slidesPerView: 1 },
+          200: { grid: { rows: 2 }, width: 299, slidesPerView: 1, loop:false  },
           1000: { grid: { rows: 1 }, width: 533, slidesPerGroup: 1 },
         }}
         onSwiper={(swiper) => setSwiperInstance(swiper)}
         className="mt-10 z-20"
       >
-        {mixedReviews.map((review) => (
+        {mixedReviews.map((review, index) => (
           <SwiperSlide
-            key={review.id}
-            className="bg-[#EDE8E5] xl:w-[533px] xl:min-h-[329px] xl:max-w-[533px] max-w-[299px] min-h-[210px]"
+            key={review.text + index}
+            className="bg-[#EDE8E5] xl:w-[533px] xl:min-h-[329px] xl:max-w-[533px]   min-h-[210px]"
           >
             <ReviewCard review={review} />
           </SwiperSlide>
         ))}
+       
         <div className="flex justify-between w-full mt-6 pb-[72px]">
           <button
             className="flex items-center justify-center border-white xl:w-[62px] xl:h-[62px] w-[32px] h-[32px] rounded-full border hover:bg-white text-white hover:text-[#A47762] transition"

@@ -21,10 +21,10 @@ const ImageSlider = () => {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   return (
-    <div className="relative w-screen grid place-items-center">
-      <div className="xl:w-[1720px] w-[332px]  border-x border-[#C7C7C7] box-border border-collapse xl:h-[700px] h-[313px] z-0"  />
+    <div className=" w-screen grid place-items-center">
+      <div className="xl:w-[1720px] w-[332px]  border-x border-[#C7C7C7] box-border border-collapse"  />
 
-      <div className="absolute  grid place-items-center z-10">
+      <div className="  grid place-items-center ">
         
         <Swiper
           effect={"coverflow"}
@@ -70,10 +70,10 @@ const ImageSlider = () => {
                   <img
                     src={image}
                     alt={`slide_${index + 1}`}
-                    className={`z-10 transition-all duration-500 ease-in-out
+                    className={` transition-all duration-500 ease-in-out
                     ${isSide ?"xl:w-[530px] xl:h-[353px] w-[231px] h-[154px]" : ""}
                     ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
-                    ${isActive ? "xl:w-[500px] xl:h-[400px] w-[290px] h-[193px]" : ""}
+                    ${isActive ? "xl:w-[510px] xl:h-[400px] w-[290px] h-[193px]" : ""}
                     `}
                   />
                 </div>
@@ -83,13 +83,13 @@ const ImageSlider = () => {
         </Swiper>
 
         <button
-          className="xl:absolute left-40 top-145   -translate-y-1/2 xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute left-40 top-135   -translate-y-1/2 xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slidePrev()}
         >
           ←
         </button>
         <button
-          className="xl:absolute right-40 top-145 -translate-y-1/2 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+          className="xl:absolute right-40 top-135 -translate-y-1/2 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
           onClick={() => swiperInstance?.slideNext()}
         >
           →

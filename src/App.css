@@ -10,7 +10,9 @@
 }
 
   
-
+.swiper-slide{
+  width: fit-content;
+ }
 
 .header-about {
     position: relative;

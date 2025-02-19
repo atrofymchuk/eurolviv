@@ -27,7 +27,8 @@ export const Mission = () => {
         </div>
       </div>
 
-      <div className="w-full xl:h-[600px] h-fit">
+      <div className="relative w-full xl:h-[600px]  h-fit items-center flex justify-center">
+        <div className="absolute border-[#C7C7C7] border-x h-full lg:w-[1720px] w-[332px]"></div>
         <ImageSlider />
       </div>
 
@@ -35,9 +36,9 @@ export const Mission = () => {
         <div className="xl:col-span-3 border-x border-[#C7C7C7] h-full justify-center items-center flex">
           <div className="flex-col text-center">
             <p
-              className="text-[#8C331B] xl:max-w-[530px] max-w-[230px] text-[12px] xl:text-[20px] font-semibold leading-[15px] xl:leading-[25.2px] text-center 
+              className="text-[#8C331B] uppercase xl:max-w-[530px] max-w-[230px] text-[12px] xl:text-[20px] font-semibold leading-[15px] xl:leading-[25.2px] text-center 
               overflow-hidden text-ellipsis 
-              xl:line-clamp-3 line-clamp-4"
+              "
             >
               Ми створені, щоб закохати вас у Львів, і наша найбільша винагорода
               — зустрічати гостей, що повертаються до нас знову і знову
