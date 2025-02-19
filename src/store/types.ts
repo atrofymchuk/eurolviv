@@ -32,7 +32,17 @@ export type Room = {
   about: RoomAbout;
   icons:IconsState
   isLux:boolean
+  suggestion:SuggestionT[]
 };
+
+
+export type SuggestionT = {
+  title:string
+  type:string
+  desc:string
+  img:string
+  size:string
+}
 
 export type Icon = {
   src: string;
@@ -64,8 +74,6 @@ export interface Review {
     flag: string;
     text: string;
   }
-
-  
   
   export interface Reviews {
     ua: Review[];

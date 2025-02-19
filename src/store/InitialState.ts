@@ -145,6 +145,25 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
+
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
       type: "standart-big-bed",
@@ -210,6 +229,24 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'ОДНОМІСНИЙ',
+        desc:'Оптимальний вибір для ділової подорожі',
+        img:standartSinglePreview,
+        type:'standart-single'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
       type: "standart-two-bed",
@@ -274,6 +311,24 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з двома ліжками ТА БАЛКОНОМ',
+        desc:'Відчуйте гармонію між стилем та бездоганним комфортом',
+        img:standartTwoBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
       type: "standart-big-bed-balcony",
@@ -339,6 +394,106 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
+      suggestion:[{
+
+        title: 'напівлюкс',
+        size:'',
+        desc:'Номер, де кожна деталь має значення',
+        img:semiLuxPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'люкс двокімнатний',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Класика з душею-затишок, який зустрічає вас в історичному центрі Львова',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
+    },
+    {
+      type: "standart-two-bed-balcony",
+      title: "стандарт з двома  ліжками та балконом",
+      description: "Відчуйте гармонію між стилем та комфортом",
+      area: 18,
+      guests: "2",
+      isLux: false,
+      header: {
+        previewImage: standartTwoBedAndBalconyPreview,
+        title: "стандарт",
+        size: `з двома  ліжками та балконом`,
+        description: "Відчуйте гармонію між стилем та бездоганним комфортомі",
+        count: 33,
+        view: "на вулицю",
+        arriveTime: "14:00",
+        leaveTime: "12:00",
+      },
+      about: {
+        pOne: `Комфортабельний номер з балконом зачарує вас чудовим видом на Храм Святої Трійці. У номері два окремих ліжка, робоче місце та все необхідне для вашого приємного перебування.`,
+        pTwo: `Інтер’єр цього номера поєднує елегантність та сучасний стиль, а розташування в самому центрі Львова дозволяє легко дістатись до найвідоміших пам’яток міста.`,
+        rooms: 1,
+        swiperImagesStyle: "object-[0%_100%]",
+        swiperImages: [
+          standartTwoBedAndBalconyBedroomScd,
+          standartTwoBedAndBalconyBedroomFst,
+          standartBathRoomFst,
+          standartBathRoomSnd,
+        ],
+        isBalcony: false,
+        ammetiveImgStyle: "object-[65%_20%]",
+        ammentiesImages: [
+          standartBigBedAndBalconyBedroomScd,
+          ammenties,
+          standartBathRoomFst,
+          standartBathRoomSnd,
+        ],
+        bedText: "односпальне ліжко (90*190 см)",
+        blocksStyle: standartBlocksStyles,
+      },
+      icons: {
+        ammentiesInRoom: [
+          { src: bedBrown, text: "два односпальні ліжка (90*190 см)" },
+          { src: balconyBrown, text: "балкон" },
+          { src: cabinetBrown, text: "робочий стіл" },
+          { src: carpetBrown, text: "килимове покриття" },
+          { src: minibarBrown, text: "мінібар" },
+          { src: safeBrown, text: "сейф" },
+          { src: kettleBrown, text: "електрочайник" },
+          { src: conditionBrown, text: "кондиціонер" },
+          { src: tvBrown, text: "LCD TV 43 дюйми" },
+          { src: phoneBrown, text: "телефон" },
+          { src: wifiBrown, text: "WI-fi" },
+        ],
+        bathRoom: [
+          { src: shower, text: "душова" },
+          { src: wc, text: "туалет" },
+          { src: shovergigi, text: "гігієнічний душ" },
+          { src: hairDryer, text: "фен" },
+          { src: towels, text: "рушники" },
+          { src: bathRobe, text: "халати" },
+          { src: slippers, text: "капці" },
+          { src: cosmetic, text: "готельна косметика" },
+        ],
+      },suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
       type: "standart-two-bed-balcony",
@@ -404,71 +559,24 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
-    },
-    {
-      type: "standart-two-bed-balcony",
-      title: "стандарт з двома  ліжками та балконом",
-      description: "Відчуйте гармонію між стилем та комфортом",
-      area: 18,
-      guests: "2",
-      isLux: false,
-      header: {
-        previewImage: standartTwoBedAndBalconyPreview,
-        title: "стандарт",
-        size: `з двома  ліжками та балконом`,
-        description: "Відчуйте гармонію між стилем та бездоганним комфортомі",
-        count: 33,
-        view: "на вулицю",
-        arriveTime: "14:00",
-        leaveTime: "12:00",
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
       },
-      about: {
-        pOne: `Комфортабельний номер з балконом зачарує вас чудовим видом на Храм Святої Трійці. У номері два окремих ліжка, робоче місце та все необхідне для вашого приємного перебування.`,
-        pTwo: `Інтер’єр цього номера поєднує елегантність та сучасний стиль, а розташування в самому центрі Львова дозволяє легко дістатись до найвідоміших пам’яток міста.`,
-        rooms: 1,
-        swiperImagesStyle: "object-[0%_100%]",
-        swiperImages: [
-          standartTwoBedAndBalconyBedroomScd,
-          standartTwoBedAndBalconyBedroomFst,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        isBalcony: false,
-        ammetiveImgStyle: "object-[65%_20%]",
-        ammentiesImages: [
-          standartBigBedAndBalconyBedroomScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
-        ],
-        bedText: "односпальне ліжко (90*190 см)",
-        blocksStyle: standartBlocksStyles,
-      },
-      icons: {
-        ammentiesInRoom: [
-          { src: bedBrown, text: "два односпальні ліжка (90*190 см)" },
-          { src: balconyBrown, text: "балкон" },
-          { src: cabinetBrown, text: "робочий стіл" },
-          { src: carpetBrown, text: "килимове покриття" },
-          { src: minibarBrown, text: "мінібар" },
-          { src: safeBrown, text: "сейф" },
-          { src: kettleBrown, text: "електрочайник" },
-          { src: conditionBrown, text: "кондиціонер" },
-          { src: tvBrown, text: "LCD TV 43 дюйми" },
-          { src: phoneBrown, text: "телефон" },
-          { src: wifiBrown, text: "WI-fi" },
-        ],
-        bathRoom: [
-          { src: shower, text: "душова" },
-          { src: wc, text: "туалет" },
-          { src: shovergigi, text: "гігієнічний душ" },
-          { src: hairDryer, text: "фен" },
-          { src: towels, text: "рушники" },
-          { src: bathRobe, text: "халати" },
-          { src: slippers, text: "капці" },
-          { src: cosmetic, text: "готельна косметика" },
-        ],
-      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
         type: "semi-lux",
@@ -532,7 +640,26 @@ export const initialRoomsState: StoreState = {
           { src: slippers, text: "капці" },
           { src: cosmetic, text: "готельна косметика" },
         ],
+        
       },
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
     {
       type: "standart-two-bed-balcony",
@@ -598,6 +725,24 @@ export const initialRoomsState: StoreState = {
           { src: cosmetic, text: "готельна косметика" },
         ],
       },
+      suggestion:[{
+
+        title: 'стандарт',
+        size:'з великим ліжком',
+        desc:'Комфорт та зручність для вашого відпочинку',
+        img:standartBigBedPreview,
+        type:'standart-big-bed'
+      
+      },
+      {
+
+        title: 'стандарт',
+        size:'з великим ліжком ТА БАЛКОНОМ',
+        desc:'Ритм міста поруч, затишок усередині',
+        img:standartBigBedAndBalconyPreview,
+        type:'standart-big-bed-balcony'
+      }
+    ]
     },
    
   ],

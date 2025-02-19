@@ -5,6 +5,7 @@ import { Header } from "../components/Room/Header"
 import { SpecialOffers } from "../components/Room/SpecialOffers"
 import { useRoomStore } from "../store/useRoomsStore"
 import { MoreInfo } from "../components/Room/MoreInfo"
+import { Suggestion } from "../components/Room/Suggestion"
 
 export const Room = () =>{
 
@@ -23,6 +24,7 @@ export const Room = () =>{
             <ComfortsBlocksWrapper icons={room.icons} room={room}/>
             <MoreInfo isShowAdditionalPlace={isShowAdditionalPlace}/>
             <SpecialOffers />
+            <Suggestion suggestion={room.suggestion} />
 
         </div>
     )
