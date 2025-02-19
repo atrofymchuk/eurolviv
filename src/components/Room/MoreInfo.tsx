@@ -98,7 +98,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
 
                 <p
                   className={` ${
-                    isShowAdditionalPlace ? "lg:flex hidden" : "lg:hidden flex "
+                    isShowAdditionalPlace ? " lg:hidden hidden" : "lg:hidden flex "
                   } uppercase text-[#E1E1E1] text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] font-cofo space-x-3 mt-[35px]`}
                 >
                   <img src={parking} alt="" className="w-[24px] h-[24px]" />
@@ -180,12 +180,12 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               src={`${isShowAdditionalPlace ? bedwithpet : coffee}`}
               alt="livingroom"
               className={`lg:w-[497px] lg:h-[510px] w-[277px] h-[262px]  object-cover object-[40%_80%] ${
-                isShowAdditionalPlace ? "lg:flex hidden " : "lg:flex hidden"
+                isShowAdditionalPlace ? "lg:flex hidden " : "lg:hidden flex"
               } `}
             />
             <p
               className={` ${
-                !isShowAdditionalPlace ? "hidden " : "lg:hidden flex "
+                !isShowAdditionalPlace ? "lg:hidden  hidden" : "lg:hidden flex "
               } uppercase text-[#E1E1E1] text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] font-cofo space-x-3 mt-[24px] p-3`}
             >
               <img src={parking} alt="" className="w-[24px] h-[24px]" />

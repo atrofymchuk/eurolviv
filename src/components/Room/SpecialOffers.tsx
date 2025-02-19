@@ -39,7 +39,7 @@ const specials = [
 
 export const SpecialOffers = () => {
   return (
-    <div className="w-full flex flex-col lg:items-end lg:justify-end items-end justify-end">
+    <div className="w-full flex flex-col lg:items-end lg:justify-end items-end justify-end mb-[71px] lg:mb-[75px]">
       <div className="grid lg:grid-cols-[1756px] grid-cols-[335px]  border-s border-[#C7C7C7] ">
         <div className=" border-b border-[#C7C7C7]">
           <div className="lg:h-[254px] flex items-center lg:pt-5 pt-[82px] ps-[20px] pb-[24px] lg:ps-0 lg:pb-[24px] ">
@@ -59,7 +59,7 @@ export const SpecialOffers = () => {
                 alt=""
                 className={`lg:w-[444px] lg:h-[428px] object-cover  w-[240px] h-[232px] ${el.classes}`}
               />
-              <p className="absolute uppercase border border-[0.5] font-cofo bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] top-8.5 lg:py-[13px] lg:px-[10px] rounded-full left-8.5 font-semibold lg:text-[16px] text-[10px] leading-[12px]">
+              <p className="left-[25px] top-[25px] absolute uppercase lg:w-fit w-[150px] border border-[0.5] font-cofo bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] lg:top-8.5 lg:py-[13px] py-[7px] px-[12px] lg:px-[10px] rounded-full lg:left-8.5 font-semibold lg:text-[16px] text-[10px] leading-[12px]">
                 {el.offer}
               </p>
 
