@@ -91,10 +91,13 @@ import ammenties from "../assets/Rooms/StandartAbout/amenities.jpg";
 import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.jpg";
 import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
 import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
-import { StoreState } from "./types";
+import { RoomsState } from "./types";
 
 
-export const initialRoomsState: StoreState = {
+
+
+
+export const initialRoomsState: RoomsState = {
   rooms: [
     {
       type: "standart-single",

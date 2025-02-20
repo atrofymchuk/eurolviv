@@ -1,43 +1,10 @@
-import military from "../../assets/SpecialOffers/military.jpg";
-// import birthday from "../../assets/SpecialOffers/birthday.png";
-import buissenes from "../../assets/SpecialOffers/buissenes.jpg";
-// import newlyweds from "../../assets/SpecialOffers/newlyweds.png";
-import photosession from "../../assets/SpecialOffers/photosession.jpg";
-import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.png";
 import { Link } from "react-router-dom";
-
-const specials = [
-  {
-    src: military,
-    title: "тариф для військових",
-    desc: " Ми щиро вдячні нашим військовим за те, що маємо можливістьнадалі працювати",
-    offer: "-20% на проживання для військових ",
-    classes:'object-[1%_50%]'
-  },
-  {
-    src: buissenes,
-    title: "бізнес - тариф денний",
-    desc: "Коротка зупинка для бізнесу чи натхнення? Обирайте наш денний бізнес-тариф з 50%",
-    offer: "-50% бізнес-тариф денний",
-    classes:'object-[50%_45%]'
-  },
-  {
-    src: bedwithpet,
-    title: "Подорож з домашнім улюбленцем",
-    desc: "Наш пакет створений для того, щоб ваш улюбленець відчував себе як вдома",
-    offer: "лапки вітаються",
-    classes:'object-[60%_45%]'
-  },
-  {
-    src: photosession,
-    title: "фотосесія",
-    desc: "Шукаєте стильну локацію для найкращих фото? Eurohotel запрошує вас скористатися унікальною можливістю ",
-    offer: "фотосесія",
-    classes:'object-[50%_0%]'
-  },
-];
+import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 
 export const SpecialOffers = () => {
+
+  const { specialOffers } = useSpecialOffersStore();
+  
   return (
     <div className="w-full flex flex-col lg:items-end lg:justify-end items-end justify-end mb-[71px] lg:mb-[75px]">
       <div className="grid lg:grid-cols-[1756px] grid-cols-[335px]  border-s border-[#C7C7C7] ">
@@ -49,7 +16,7 @@ export const SpecialOffers = () => {
           </div>
         </div>
         <div className="flex overflow-hidden ">
-          {specials.map((el, index) => (
+          {specialOffers.map((el, index) => (
             <div
               key={index}
               className="relative lg:w-[484px] lg:h-[668px] h-[426px] w-[269px] p-3.75 pb-0 border-e border-b border-[#C7C7C7] flex-shrink-0"
@@ -72,8 +39,11 @@ export const SpecialOffers = () => {
                     {el.desc}
                   </p>
 
-                    <div className="lg:mt-auto mt-[33px]">
-                    <Link to='/special-offers' className="mt-auto font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base hover:cursor-pointer hover:bg-[#8C331B] hover:text-white font-cofo">
+                  <div className="lg:mt-auto mt-[33px]">
+                    <Link
+                      to="/special-offers"
+                      className="mt-auto font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base hover:cursor-pointer hover:bg-[#8C331B] hover:text-white font-cofo"
+                    >
                       детальніше
                     </Link>
                   </div>

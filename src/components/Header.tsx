@@ -190,7 +190,7 @@ export function Header() {
             <Link to="" className={` ${link}`}>
               РЕСТОРАН
             </Link>
-            <Link to="" className={` ${link}`}>
+            <Link to="/special-offers" className={` ${link}`}>
               СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
             </Link>
             <Link to="/contacts" className={` ${link}`}>

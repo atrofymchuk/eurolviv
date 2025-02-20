@@ -1,5 +1,15 @@
 import Slider from "react-slick";
 
+export type SpecialOffers = {
+  src: string;
+  title: string;
+  desc: string;
+  offer: string;
+  classes: string;
+};
+export type SpecialOffersState = {
+  specialOffers: SpecialOffers[];
+};
 export type RoomHeader = {
   title: string;
   size?: string;
@@ -58,7 +68,7 @@ export type IconsState = {
 }
 
 
-export type StoreState = {
+export type RoomsState = {
   rooms: Room[];
   
 };
