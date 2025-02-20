@@ -1,5 +1,6 @@
 import ImageSlider from "./Slider";
 
+
 export const Mission = () => {
   return (
     <section className="flex flex-col items-center justify-center bg-white *:font-cofo">

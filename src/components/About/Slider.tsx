@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 import slide1 from "../../assets/About/champagne.png";
 import slide2 from "../../assets/About/bathroom.png";
 import slide3 from "../../assets/About/bedroom.png";
@@ -11,6 +12,9 @@ import slide4 from "../../assets/About/2roomLux.png";
 import slide5 from "../../assets/About/mirror.png";
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 const slides = [slide1, slide2, slide3, slide4, slide5];
+
+
+
 
 const ImageSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -20,6 +24,7 @@ const ImageSlider = () => {
     centerMode: true,
     centerPadding: "10%",
     slidesToShow: 3,
+    arrows:false,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,7 +49,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-full flex justify-center ">
-      <Slider {...settings} ref={slideRef} className="w-full h-full">
+      <Slider {...settings} ref={slideRef} className={`w-full h-full  img`}>
         {slides.map((image, index) => {
           const isActive = activeSlide === index;
           const isSide = Math.abs(activeSlide - index) === 1;

@@ -1,3 +1,5 @@
+import Slider from "react-slick";
+
 export type RoomHeader = {
   title: string;
   size?: string;
@@ -83,6 +85,7 @@ export interface Review {
   
   export interface ReviewSliderProps {
     reviews: Reviews;
+    ref:Slider | null
   }
   
 

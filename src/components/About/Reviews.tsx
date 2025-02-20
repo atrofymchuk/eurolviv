@@ -1,8 +1,13 @@
+import { useRef } from "react";
 import { Reviews } from "../../store/types";
 import { useModalStore } from "../../store/useModalStore";
 import ReviewSlider from "./ReviewSlider";
+import Slider from "react-slick";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 export const Rewies = () => {
+  const sliderRef = useRef<Slider | null>(null);
+
   const reviews: Reviews = {
     ua: [
       {
@@ -59,7 +64,7 @@ export const Rewies = () => {
     ],
   };
 
-  const {openModal} = useModalStore()
+  const { openModal } = useModalStore();
 
   return (
     <section className="flex flex-col items-center bg-[#A47762] *:font-cofo   ">
@@ -73,9 +78,10 @@ export const Rewies = () => {
               100 номерів, де кожна деталь творить особливу естетику. Від
               стандартних кімнат до люксів — незмінно висока якість сервісу.
             </p>
-            <button 
-            onClick={openModal}
-            className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer">
+            <button
+              onClick={openModal}
+              className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer"
+            >
               забронювати номер
             </button>
           </div>
@@ -88,10 +94,27 @@ export const Rewies = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-end h-fit ">
-        <div className="xl:max-w-[1720px] w-full max-w-[334px]">
+      <div className="lg:w-full flex justify-end  w-full  lg:h-fit h-[400px] ">
+        <div className="xl:max-w-[1781px] w-full max-w-[340px] lg:h-fit h-[400px] ">
           <div className="xl:max-w-[1720px] min-h-[427px] w-[332px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7]  "></div>
-          <ReviewSlider reviews={reviews} />
+          <ReviewSlider reviews={reviews} ref={sliderRef}  />
+        </div>
+      </div>
+      <div>
+        <div className="flex lg:w-[1720px] w-[300px] justify-between mt-20 lg:mt-0 ">
+          <button
+            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px] ms-[20px] mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
+            onClick={() => sliderRef.current?.slickPrev()}
+          >
+            <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+          </button>
+
+          <button
+            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px] me-[20px] mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
+            onClick={() => sliderRef.current?.slickNext()}
+          >
+            <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+          </button>
         </div>
       </div>
     </section>
