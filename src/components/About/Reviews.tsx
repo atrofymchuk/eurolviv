@@ -88,9 +88,9 @@ export const Rewies = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center h-fit ">
+      <div className="w-full flex justify-end h-fit ">
         <div className="xl:max-w-[1720px] w-full max-w-[334px]">
-          {/* <div className="xl:max-w-[1720px] min-h-[427px] w-[332px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7]  "></div> */}
+          <div className="xl:max-w-[1720px] min-h-[427px] w-[332px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7]  "></div>
           <ReviewSlider reviews={reviews} />
         </div>
       </div>

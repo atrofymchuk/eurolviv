@@ -33,7 +33,6 @@ export const StorySection = () => {
           />
         </div>
 
-        {/* Описовий текст */}
         <div className="border-l border-r border-[#C7C7C7] flex flex-col h-full text-[18px] lg:text-[24px] font-normal tracking-[-0.01em] text-left">
           <p className="text-sm sm:text-[16px] lg:text-[20px] text-gray-800 p-4 uppercase font-normal leading-[20px] lg:leading-[24px]">
             Історія цих стін починається ще в
@@ -45,7 +44,6 @@ export const StorySection = () => {
           </p>
         </div>
 
-        {/* Нижній відступ */}
         <div className="col-span-1 lg:col-span-2 border-x border-[#C7C7C7] w-full h-[43px] lg:h-[119px]"></div>
       </div>
     </section>

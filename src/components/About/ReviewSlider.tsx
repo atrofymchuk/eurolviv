@@ -16,25 +16,38 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
 
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
+  const loopFixCount = 2;
+  const clonedReviews = [
+    ...mixedReviews.slice(-loopFixCount),
+    ...mixedReviews,
+    ...mixedReviews.slice(0, loopFixCount),
+  ];
+
+
   return (
     <div className="relative flex justify-center items-center ">
-      <div className="absolute  h-full   " />
+      
+      <div className="absolute  h-full" />
       <Swiper
- 
-        loop
-        loopAdditionalSlides={2}
         spaceBetween={17}
-        
         grid={{ fill: "row", rows: 2 }}
         modules={[Grid, Pagination]}
         breakpoints={{
-          200: { grid: { rows: 2 }, width: 299, slidesPerView: 1, loop:false  },
-          1000: { grid: { rows: 1 }, width: 533, slidesPerGroup: 1 },
+          200: { grid: { rows: 2 }, width: 299, slidesPerView: 1, loop:true, loopAdditionalSlides:2  },
+          1000: { grid: { rows: 1 }, width: 533, slidesPerGroup: 2, loop:true, loopAdditionalSlides:2 },
         }}
         onSwiper={(swiper) => setSwiperInstance(swiper)}
+        onSlideChange={(swiper)=>{
+          if (swiper.activeIndex === 0) {
+            swiper.slideTo(clonedReviews.length - loopFixCount * 2, 0);
+          } else if (swiper.activeIndex === clonedReviews.length - loopFixCount) {
+            swiper.slideTo(loopFixCount, 0);
+          }
+        }}
         className="mt-10 z-20"
       >
-        {mixedReviews.map((review, index) => (
+        
+        {clonedReviews.map((review, index) => (
           <SwiperSlide
             key={review.text + index}
             className="bg-[#EDE8E5] xl:w-[533px] xl:min-h-[329px] xl:max-w-[533px]   min-h-[210px]"
