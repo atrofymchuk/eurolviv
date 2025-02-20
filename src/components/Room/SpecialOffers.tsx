@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 
 export const SpecialOffers = () => {
-
   const { specialOffers } = useSpecialOffersStore();
-  
   return (
     <div className="w-full flex flex-col lg:items-end lg:justify-end items-end justify-end mb-[71px] lg:mb-[75px]">
       <div className="grid lg:grid-cols-[1756px] grid-cols-[335px]  border-s border-[#C7C7C7] ">

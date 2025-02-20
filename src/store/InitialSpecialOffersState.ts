@@ -1,11 +1,11 @@
 import { SpecialOffers } from "./types";
 
-import military from "../../assets/SpecialOffers/military.jpg";
-import birthday from "../../assets/SpecialOffers/birthday.png";
-import buissenes from "../../assets/SpecialOffers/buissenes.jpg";
-import newlyweds from "../../assets/SpecialOffers/newlyweds.png";
-import photosession from "../../assets/SpecialOffers/photosession.jpg";
-import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.png";
+import military from "../assets/SpecialOffers/military.jpg";
+import birthday from "../assets/SpecialOffers/birthday.png";
+import buissenes from "../assets/SpecialOffers/buissenes.jpg";
+import newlyweds from "../assets/SpecialOffers/newlyweds.png";
+import photosession from "../assets/SpecialOffers/photosession.jpg";
+import bedwithpet from "../assets/Rooms/AdditionaInfo/bedwithpet.png";
 
 export const initialSpecialsOfferState: SpecialOffers[] = [
     {
