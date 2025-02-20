@@ -35,7 +35,7 @@ export const Location = () => {
 
         <img
           src={map}
-          alt=""
+          alt="map"
           className="w-full h-full object-cover object-center grayscale"
         />
 

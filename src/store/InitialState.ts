@@ -597,8 +597,8 @@ export const initialRoomsState: StoreState = {
       isLux: true,
       header: {
         previewImage: luxTwoRoomsPreview,
-        title: "люкс ",
-        size: `двокімнатний`,
+        title: "люкс двокімнатний",
+        size: ``,
         description:
           "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова",
         count: 4,
@@ -694,8 +694,8 @@ export const initialRoomsState: StoreState = {
       isLux: true,
       header: {
         previewImage: luxImperiumPreview,
-        title: "люкс ",
-        size: `покращений `,
+        title: "люкс покращений ",
+        size: `imperial`,
         description: "Для гостей, які цінують винятковість",
         count: 1,
         view: "на вулицю",
@@ -791,8 +791,8 @@ export const initialRoomsState: StoreState = {
       isLux: true,
       header: {
         previewImage: luxElegantPreview,
-        title: "люкс ",
-        size: `покращений `,
+        title: "люкс elegant",
+        size: ` elegant `,
         description: "Для гостей, які цінують винятковість",
         count: 1,
         view: "на вулицю",
@@ -882,23 +882,3 @@ export const initialRoomsState: StoreState = {
     },
   ],
 };
-
-//   {
-//
-//     previewImage: semiLuxPreview,
-//   },
-//   {
-//
-//   },
-//   {
-//     type: "lux-imperial",
-//     title: "люкс покращений imperial",
-//     description: "Для гостей, які цінують винятковість",
-//     area: 60,
-//     guests: "2",
-//     previewImage: luxImperiumPreview,
-//   },
-//   {
-//
-//     previewImage: luxElegantPreview,
-//   },

@@ -5,7 +5,7 @@ export const Header = () => {
     <div className="w-full relative">
       <img
         src={headerPhoto}
-        alt=""
+        alt="preview"
         className="object-cover w-full lg:h-[1181px]  h-[808px]"
       />
       <div

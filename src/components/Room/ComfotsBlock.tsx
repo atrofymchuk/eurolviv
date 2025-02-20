@@ -57,7 +57,7 @@ if(!icons) return
                 >
                   <img
                     src={item.src}
-                    alt=""
+                    alt='icon'
                     className={`lg:w-[36px] lg:h-[36px] w-[24px] h-[24px]`}
                   />
                   <p>

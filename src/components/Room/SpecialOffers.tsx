@@ -56,7 +56,7 @@ export const SpecialOffers = () => {
             >
               <img
                 src={el.src}
-                alt=""
+                alt={el.title}
                 className={`lg:w-[444px] lg:h-[428px] object-cover  w-[240px] h-[232px] ${el.classes}`}
               />
               <p className="left-[25px] top-[25px] absolute uppercase lg:w-fit w-[150px] border border-[0.5] font-cofo bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] lg:top-8.5 lg:py-[13px] py-[7px] px-[12px] lg:px-[10px] rounded-full lg:left-8.5 font-semibold lg:text-[16px] text-[10px] leading-[12px]">

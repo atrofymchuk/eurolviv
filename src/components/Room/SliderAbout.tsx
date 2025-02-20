@@ -24,7 +24,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider,swiperImag
           <SwiperSlide key={img} className="relative lg:h-[523px] w-screen h-[245px]  lg:w-full items-center flex justify-center  ">
             <img
               src={img}
-              alt=""
+              alt="room image"
               className={`${swiperImagesStyle} lg:w-full absolute lg:h-full lg:object-cover   lg:scale-100 scale-100`}
             />
           </SwiperSlide>

@@ -6,7 +6,7 @@ export const Header = () =>{
 
     return(
         <div className="w-full relative">
-        <img src={headerPhoto} alt="" className="object-cover w-full  lg:h-[1181px] h-[821px]" />
+        <img src={headerPhoto} alt="preview" className="object-cover w-full  lg:h-[1181px] h-[821px]" />
         <div className="absolute inset-0 bg-[linear-gradient(2.57deg,rgba(255,255,255,0)_0.95%,#FFFFFF_95.83%)]"></div>
 
         <div className="absolute inset-0 flex flex-col  items-center justify-center text-center text-black z-10">

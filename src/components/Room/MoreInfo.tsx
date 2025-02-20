@@ -54,7 +54,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 </h1>
                 <img
                   src={coffee}
-                  alt=""
+                  alt="coffee"
                   className="lg:w-[537px] lg:h-[512px] w-[276px] h-[262px] object-cover lg:flex hidden"
                 />
               </div>
@@ -80,7 +80,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                     >
                       <img
                         src={item.src}
-                        alt=""
+                        alt="amenities"
                         className="lg:w-[36px] lg:h-[36px] w-[24px] h-[24px]"
                       />
                       <p className="lg:h-[26px]">{item.text}</p>
@@ -101,7 +101,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                     isShowAdditionalPlace ? " lg:hidden hidden" : "lg:hidden flex "
                   } uppercase text-[#E1E1E1] text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] font-cofo space-x-3 mt-[35px]`}
                 >
-                  <img src={parking} alt="" className="w-[24px] h-[24px]" />
+                  <img src={parking} alt="parking icon" className="w-[24px] h-[24px]" />
                   міський паркінг знаходиться навпроти готелю.Попередня
                   резервація місць не передбачена.
                 </p>
@@ -135,7 +135,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 >
                   <img
                     src={item.src}
-                    alt=""
+                    alt="icon"
                     className="lg:w-[36px] lg:h-[36px] w-[24px] h-[24px]"
                   />
                   <p className="lg:h-[26px]  ">{item.text}</p>
@@ -147,7 +147,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 isShowAdditionalPlace ? "" : ""
               }`}
             >
-              <img src={parking} alt="" className="w-[36px] h-[36px]" />
+              <img src={parking} alt="parking icon" className="w-[36px] h-[36px]" />
               міський паркінг знаходиться навпроти готелю.Попередня резервація
               місць не передбачена.
             </p>
@@ -188,7 +188,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 !isShowAdditionalPlace ? "lg:hidden  hidden" : "lg:hidden flex "
               } uppercase text-[#E1E1E1] text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] font-cofo space-x-3 mt-[24px] p-3`}
             >
-              <img src={parking} alt="" className="w-[24px] h-[24px]" />
+              <img src={parking} alt="parking icon" className="w-[24px] h-[24px]" />
               міський паркінг знаходиться навпроти готелю.Попередня резервація
               місць не передбачена.
             </p>

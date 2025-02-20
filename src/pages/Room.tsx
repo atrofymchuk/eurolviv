@@ -19,7 +19,7 @@ export const Room = () => {
   if (!room) return <div>not found</div>;
   return (
     <div>
-      <Header header={room?.header} isLux={room.isLux} roomName={room.title} />
+      <Header header={room?.header}   />
       <About
         area={room.area}
         guests={room.guests}
