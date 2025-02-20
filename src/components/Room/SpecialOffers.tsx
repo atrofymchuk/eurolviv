@@ -3,52 +3,46 @@ import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 
 export const SpecialOffers = () => {
   const { specialOffers } = useSpecialOffersStore();
-  return (
-    <div className="w-full flex flex-col lg:items-end lg:justify-end items-end justify-end mb-[71px] lg:mb-[75px]">
-      <div className="grid lg:grid-cols-[1756px] grid-cols-[335px]  border-s border-[#C7C7C7] ">
-        <div className=" border-b border-[#C7C7C7]">
-          <div className="lg:h-[254px] flex items-center lg:pt-5 pt-[82px] ps-[20px] pb-[24px] lg:ps-0 lg:pb-[24px] ">
-            <h1 className="uppercase font-cofo lg:text-[100px] text-[32px] lg:ms-[19px] lg:leading-[81px] w-[278px] lg:w-fit font-semibold lg:font-normal leading-[28px] flex flex-col tracking-[-0.04em]">
-              спеціальні пропозиції
-            </h1>
-          </div>
-        </div>
-        <div className="flex overflow-hidden ">
-          {specialOffers.map((el, index) => (
-            <div
-              key={index}
-              className="relative lg:w-[484px] lg:h-[668px] h-[426px] w-[269px] p-3.75 pb-0 border-e border-b border-[#C7C7C7] flex-shrink-0"
-            >
-              <img
-                src={el.src}
-                alt={el.title}
-                className={`lg:w-[444px] lg:h-[428px] object-cover  w-[240px] h-[232px] ${el.classes}`}
-              />
-              <p className="left-[25px] top-[25px] absolute uppercase lg:w-fit w-[150px] border border-[0.5] font-cofo bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] lg:top-8.5 lg:py-[13px] py-[7px] px-[12px] lg:px-[10px] rounded-full lg:left-8.5 font-semibold lg:text-[16px] text-[10px] leading-[12px]">
-                {el.offer}
-              </p>
 
-              <div className="flex flex-col">
-                <div className="h-[200px] flex flex-col lg:justify-around">
-                  <h4 className="uppercase font-cofo text-[#252526] lg:text-[24px] lg:leading-[26px] leading-[22px] font-semibold tracking-[-0.05em] text-[20px] lg:mt-[28px] mt-[20px]">
-                    {el.title}
-                  </h4>
-                  <p className="uppercase font-cofo text-[#8F8F8F] lg:text-[16px] lg:w-fit w-[228px] lg:leading-[17px] lg:mt-[22px] text-[10px] mt-[13px]">
-                    {el.desc}
+  return (
+    <div className="w-full h-[588px] lg:h-[922px] flex justify-center items-center">
+      <div className="relative border-s border-[#C7C7C7] h-full w-[296px] mb-[71px] lg:mb-[75px] lg:w-[1595px]">
+        <div className="absolute w-screen">
+          <h1 className="uppercase text-[32px] mb-[24px] lg:leading-[81px] lg:tracking-[-0.04em] ms-[20px] lg:ms-[19px] lg:mt-[110px] lg:mb-[63px] lg:w-full lg:text-[100px] w-[244px] leading-[28px] mt-[82px]">
+            спеціальні ПРОПОЗИЦІЇ
+          </h1>
+
+          <div className="flex overflow-hidden">
+            <div className="flex overflow-x-hidden ">
+              {specialOffers.map((el, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col justify-center items-center lg:items-start w-[269px] lg:w-[484px] lg:p-[20px] lg:h-[669px] border-[#C7C7C7] border-t border-e border-b py-[15px] relative h-[426px] shrink-0"
+                >
+                  <img src={el.src} alt="" className={` w-[240px] h-[232px] lg:w-[444px] lg:h-[429px] object-cover ${el.classes}`} />
+                  <p className="absolute lg:left-[35px] lg:top-[35px] left-[23px] top-[23px] uppercase lg:w-fit w-[150px] border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] lg:py-[13px] py-[7px] px-[12px] lg:px-[22px] rounded-full font-semibold lg:text-[16px] text-[10px] leading-[12px]">
+                    {el.offer}
                   </p>
 
-                  <div className="lg:mt-auto mt-[33px]">
+                  <h4 className="uppercase text-[20px] tracking-[-0.05em] leading-[22px] font-semibold pt-[20px] text-[#252526] lg:pt-[28px] lg:text-[24px] lg:leading-[26px]">
+                    {el.title}
+                  </h4>
+                  <p className="uppercase text-[10px] w-[219px] pt-[13px] text-[#8F8F8F] lg:text-[16px] lg:leading-[17px] leading-[11px] lg:w-fit">
+                    {el.desc}
+                  </p>
+                  <div className="text-start w-full px-[15px] lg:px-0  mt-auto lg:mb-4 mb-2">
                     <Link
                       to="/special-offers"
-                      className="mt-auto font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base hover:cursor-pointer hover:bg-[#8C331B] hover:text-white font-cofo"
+                      className="mt-auto font-semibold border border-[#8C331B] text-[#8C331B] px-4 py-3 rounded-full uppercase text-[12px] xl:text-base hover:cursor-pointer hover:bg-[#8C331B] hover:text-white font-cofo"
                     >
                       детальніше
                     </Link>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
         </div>
       </div>
     </div>
