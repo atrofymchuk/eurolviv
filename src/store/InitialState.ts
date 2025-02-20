@@ -98,7 +98,7 @@ export const initialRoomsState: StoreState = {
   rooms: [
     {
       type: "standart-single",
-      title: "",
+      title: "стандарт одномісний",
       description: "Оптимальний вибір для ділової подорожі",
       area: 15,
       guests: "1",
@@ -181,7 +181,7 @@ export const initialRoomsState: StoreState = {
     },
     {
       type: "standart-big-bed",
-      title: "",
+      title: "стандарт з великим ліжком",
       description: "Комфорт та зручність для вашого відпочинку ",
       area: 18,
       isLux: false,
@@ -262,7 +262,7 @@ export const initialRoomsState: StoreState = {
     },
     {
       type: "standart-two-bed",
-      title: "",
+      title: "стандарт з двома ліжками",
       description: "Тиша і зручність в центрі ділового міста",
       area: 18,
       guests: "2",
@@ -342,7 +342,7 @@ export const initialRoomsState: StoreState = {
     },
     {
       type: "standart-big-bed-balcony",
-      title: "",
+      title: "стандарт з великим ліжком та балконом",
       description: "Ритм міста поруч, затишок усередині",
       area: 18,
       guests: "2",
@@ -425,7 +425,7 @@ export const initialRoomsState: StoreState = {
    
     {
       type: "semi-lux",
-      title: "",
+      title: "напівлюкс",
       description: "Номер, де кожна деталь має значення",
       area: 22,
       guests: "2+2",
@@ -508,7 +508,7 @@ export const initialRoomsState: StoreState = {
     },
     {
       type: "standart-two-bed-balcony",
-      title: "",
+      title: "стандарт з двома ліжками та балконом",
       description: "Відчуйте гармонію між стилем та комфортом",
       area: 18,
       guests: "2",
@@ -590,7 +590,7 @@ export const initialRoomsState: StoreState = {
 
     {
       type: "lux-two-rooms",
-      title: "",
+      title: "люкс двокімнатний",
       description: "затишок, який зустрічає вас в центрі Львова",
       area: 38,
       guests: "2+2",
@@ -687,7 +687,7 @@ export const initialRoomsState: StoreState = {
     },
     {
       type: "lux-imperial",
-      title: "imperial",
+      title: "люкс покращений imperial",
       description: "Для гостей, які цінують винятковість",
       area: 60,
       guests: "2",
@@ -783,7 +783,7 @@ export const initialRoomsState: StoreState = {
 
     {
       type: "lux-elegant",
-      title: "elegant",
+      title: "люкс покращений elegant",
       description:
         "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій",
       area: 60,

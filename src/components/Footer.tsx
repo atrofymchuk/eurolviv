@@ -55,7 +55,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <p className="uppercase underline xl:leading-[20px] underline-offset-[18%] text-[16px] xl:tracking-[0.06em] xl:mt-30 xl:block hidden">
+          <p className="uppercase underline xl:leading-[20px] underline-offset-[18%] text-[16px] xl:tracking-[0.06em] xl:mt-26 xl:block hidden">
             політика конфіденційності
           </p>
         </div>
@@ -128,7 +128,7 @@ export const Footer = () => {
               </span>
             </div>
           </div>
-          <p className="uppercase underline xl:leading-[20px] underline-offset-[18%] text-[16px] xl:tracking-[0.06em] mt-25 xl:block hidden">
+          <p className="uppercase underline xl:leading-[20px] underline-offset-[18%] text-[16px] xl:tracking-[0.06em] mt-21 xl:block hidden">
             публічна оферта
           </p>
 
