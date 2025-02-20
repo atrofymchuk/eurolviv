@@ -118,7 +118,7 @@ const {rooms} = useRoomStore()
                           </div>
 
                           <Link
-                            to={`rooms/${room.type}`}
+                            to={`/rooms/${room.type}`}
                             className="uppercase lg:py-[10px] lg:px-[20px] mt lg:text-[18px] py-[8px] px-[9px]  text-[12px] border rounded-full text-[#A47762] font-cofo font-semibold"
                           >
                             переглянути номер
