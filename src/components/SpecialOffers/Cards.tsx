@@ -6,23 +6,21 @@ export const Cards = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-3 border-x border-[#C7C7C7] lg:pt-[50px] pt-[38px] pb-[42px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[573px_573px_572px] border-[#C7C7C7] border-l border-r border-t pb-[42px]">
+        <div className="lg:block hidden border-[#C7C7C7] lg:pt-[51px] pt-[38px] "></div>
+        <div className=" border-[#C7C7C7] lg:pt-[51px] pt-[38px] "></div>
+        <div className="lg:block hidden border-[#C7C7C7] lg:pt-[51px] pt-[38px] border-s "></div>
         {specialOffers.map((el, index) => {
-          const isLastRowItem =
-            index >= specialOffers.length - (specialOffers.length % 3 || 3);
-          const isFirstRow = index < 3;
           const isFirstCol = index % 3 === 0;
 
           return (
-            <div key={el.title}>
-              <div
-                className={`lg:h-[700px] lg:w-[573px] w-[297px] h-[483px] lg:p-5 p-3 relative border-[#C7C7C7] flex flex-col justify-between
-        border-t lg:border-t-none
-        ${index == specialOffers.length - 1 ? "border-b" : ""}
-        ${!isFirstRow ? "border-t" : "lg:border-t"} 
-        ${!isFirstCol ? "lg:border-l" : ""} 
-        ${!isLastRowItem ? "" : "lg:border-b"}`}
-              >
+            <div
+              key={el.title}
+              className={`border-b border-[#C7C7C7] ${isFirstCol ? "" : "lg:border-l" } border-t`}
+            >
+              <div className={`lg:h-[700px] lg:w-[573px] w-[297px] h-[483px] lg:p-5 p-3 flex flex-col justify-between 
+                
+                `}>
                 <Card
                   src={el.src}
                   classes={el.classes}

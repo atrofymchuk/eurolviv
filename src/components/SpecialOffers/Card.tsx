@@ -11,7 +11,7 @@ type CardToProps = {
 export const Card = ({ src, title, desc, classes, offer }: CardToProps) => {
   return (
     <>
-      <div className="relative">
+      <div className="relative ">
         <img
           src={src}
           alt={title}
