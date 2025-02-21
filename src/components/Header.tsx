@@ -184,7 +184,7 @@ export function Header() {
               )}
             </div>
 
-            <Link to="" className={` ${link}`}>
+            <Link to="/conference-service" className={` ${link}`}>
               КОНФЕРЕНЦ-СЕРВІС
             </Link>
             <Link to="" className={` ${link}`}>
