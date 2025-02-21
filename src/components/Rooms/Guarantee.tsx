@@ -3,7 +3,7 @@ import { useModalStore } from "../../store/useModalStore";
 
 export const Guarantee = () => {
 
-  const {openModal} = useModalStore()
+  const {openModalOrder} = useModalStore()
 
   return (
     <div className=" w-full flex flex-col items-center ">
@@ -52,7 +52,7 @@ export const Guarantee = () => {
               </li>
             </ol>
             <button 
-            onClick={openModal}
+            onClick={openModalOrder}
             className="uppercase bg-[#8C331B] text-[#FFFFFF]  lg:w-fit self-start lg:px-5 lg:py-3 px-[23px] py-[12.5px] rounded-3xl font-semibold text-sm lg:ms-[15px] ms-[12px] mt-[24px] lg:mt-0 hover:cursor-pointer order-3 lg:order-3">
               забронювати <span className="lg:inline hidden">номер</span>
             </button>

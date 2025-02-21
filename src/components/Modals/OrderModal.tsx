@@ -5,11 +5,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import calendarIco from "../assets/icons/Modal/calendar.svg";
+import calendarIco from "../../assets/icons/Modal/calendar.svg";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useModalStore } from "../store/useModalStore";
+import { useModalStore } from "../../store/useModalStore";
 
 Modal.setAppElement("#root");
 
@@ -42,21 +42,21 @@ const OrderModal = () => {
     toast.success("Форма успішно надіслана!", { position: "top-right" });
     setTimeout(() => {
         reset()
-        closeModal();
+        closeModalOrder();
     }, 5000);
   };
 
-  const {closeModal,isOpen} = useModalStore()
+  const {closeModalOrder,isOpenOrder} = useModalStore()
 
   return (
     <Modal
-      isOpen={isOpen}
-      onRequestClose={closeModal}
+      isOpen={isOpenOrder}
+      onRequestClose={closeModalOrder}
       className="fixed inset-0 flex  lg:items-center lg:justify-center"
       overlayClassName="fixed inset-0 bg-black/49 z-100"
     >
       <div className="bg-white  lg:w-[504px] lg:h-fit h-screen  relative flex flex-col justify-center p-[37px] pt-0 items-center">
-        <button className="absolute top-4 right-4 text-2xl hover:cursor-pointer" onClick={closeModal}>
+        <button className="absolute top-4 right-4 text-2xl hover:cursor-pointer" onClick={closeModalOrder}>
           <IoClose />
         </button>
         <div className="lg:items-center flex flex-col">

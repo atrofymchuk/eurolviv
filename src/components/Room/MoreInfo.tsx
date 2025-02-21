@@ -36,7 +36,7 @@ type MoreInfoToProps = {
 };
 
 export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
-  const { openModal } = useModalStore();
+  const { openModalOrder } = useModalStore();
 
   return (
     <div className="">
@@ -88,7 +88,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   ))}
                 </ul>
                 <button
-                  onClick={openModal}
+                  onClick={openModalOrder}
                   className={`  ${
                     isShowAdditionalPlace ? "hidden" : "lg:flex hidden"
                   } uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit text-[12px] lg:text-[14px]  xl:mt-[100px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full my-[42px] xl:mx-0 hover:cursor-pointer`}
@@ -152,7 +152,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               місць не передбачена.
             </p>
             <button
-              onClick={openModal}
+              onClick={openModalOrder}
               className={` self-start ${
                 !isShowAdditionalPlace ? "lg:hidden" : "lg:flex "
               } uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit text-[12px] lg:text-[14px]  xl:mt-[100px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full my-[42px] xl:mx-0 hover:cursor-pointer`}

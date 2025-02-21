@@ -1,11 +1,12 @@
-
-
 import { create } from "zustand";
 
 import { initialSpecialsOfferState } from "./InitialSpecialOffersState";
-import { SpecialOffersState } from "./types";
-
+import { SpecialOffers, SpecialOffersState } from "./types";
 
 export const useSpecialOffersStore = create<SpecialOffersState>(() => ({
-    specialOffers: initialSpecialsOfferState, 
-  }));
+  specialOffers: initialSpecialsOfferState,
+
+  getSpecialOffer: (param: string): SpecialOffers | undefined => {
+    return initialSpecialsOfferState.find((offer) => offer.url === param);
+  },
+}));

@@ -2,13 +2,21 @@ import Slider from "react-slick";
 
 export type SpecialOffers = {
   src: string;
+  url:string
   title: string;
   desc: string;
+  cardDesc:string
   offer: string;
   classes: string;
-};
+  discount?:string
+  details:string[]
+  conditions:string[]
+}
+
 export type SpecialOffersState = {
   specialOffers: SpecialOffers[];
+  getSpecialOffer:(param:string) => SpecialOffers | undefined
+
 };
 export type RoomHeader = {
   title: string;
@@ -74,11 +82,15 @@ export type RoomsState = {
 };
 
 
-  export type ModalStore = {
-    isOpen: boolean;
-    openModal: () => void;
-    closeModal: () => void;
-  };
+export interface ModalStore {
+  isOpenOrder: boolean;
+  openModalOrder: () => void;
+  closeModalOrder: () => void;
+
+  isOpenSpecialOfferModal: boolean;
+  openModalSpecialOffer: () => void;
+  closeModalSpecialOffer: () => void;
+}
 
 export interface Review {
     id: number;

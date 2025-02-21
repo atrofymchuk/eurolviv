@@ -21,7 +21,7 @@ export const About = ({about, area , guests,swiperImagesStyle, nameRoom} :RoomAb
   const {pOne,pTwo,swiperImages, rooms} = about
 
 
-  const { openModal } = useModalStore();
+  const { openModalOrder } = useModalStore();
   console.log(swiperImages);
   
   if (!swiperImages || swiperImages.length === 0) return null;
@@ -77,7 +77,7 @@ export const About = ({about, area , guests,swiperImagesStyle, nameRoom} :RoomAb
               {pTwo}
             </p>
             <button
-              onClick={openModal}
+              onClick={openModalOrder}
               className="uppercase mb-[23px] mt-auto bg-[#8C331B] text-[#FFFFFF]  self-start lg:px-5 lg:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold lg:text-sm text-[12px]   lg:mt-[50px] hover:cursor-pointer"
             >
               забронювати <span className="lg:inline hidden">номер</span>

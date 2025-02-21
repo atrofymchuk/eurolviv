@@ -11,7 +11,7 @@ export const RoomsInfo = () => {
 
 const {rooms} = useRoomStore()
 
-  const {openModal} = useModalStore()
+  const {openModalOrder} = useModalStore()
 
   return (
     <div className="w-full flex-col flex items-center">
@@ -38,7 +38,7 @@ const {rooms} = useRoomStore()
                       прямо зараз.
                     </p>
                     <button 
-                    onClick={openModal}
+                    onClick={openModalOrder}
                     className=" font-cofo font-extrabold uppercase  ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[38px]  h-fit py-[13px] rounded-full text-[14px]">
                       забронювати
                     </button>
@@ -61,7 +61,7 @@ const {rooms} = useRoomStore()
                   прямо зараз.
                 </p>
                 <button 
-                onClick={openModal}
+                onClick={openModalOrder}
                 className=" font-cofo font-extrabold  uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px]  h-fit py-[12px] rounded-full text-[12px] ">
                   забронювати
                 </button>

@@ -16,7 +16,7 @@ export function Header() {
 
   const [isShowRooms, setIsShowRooms] = useState(false);
 
-  const { openModal } = useModalStore();
+  const { openModalOrder } = useModalStore();
   const location = useLocation();
 
   let styles;
@@ -384,7 +384,7 @@ export function Header() {
             </span>
           </div>
           <button
-            onClick={openModal}
+            onClick={openModalOrder}
             className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ${
               scrolled ? "lg:block hidden" : "block"
             } `}

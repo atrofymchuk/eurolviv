@@ -21,7 +21,7 @@ import { useModalStore } from '../../store/useModalStore'
 
 export const Advantages = () => {
 
-  const {openModal} = useModalStore()
+  const {openModalOrder} = useModalStore()
 
   return (
     <section className="flex justify-center items-center bg-[#A47762] px-6 *:font-cofo">
@@ -64,7 +64,7 @@ export const Advantages = () => {
               <li><img className="icon" src={ironingChlothes} alt="ironing clothes" /> прасування</li>
             </ul>
             <button 
-            onClick={openModal}
+            onClick={openModalOrder}
             className="uppercase bg-[#EDE8E5] text-[#A47762] w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
               забронювати номер
             </button>

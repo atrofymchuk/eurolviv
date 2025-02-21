@@ -2,7 +2,7 @@ export const Header = () => {
   return (
     <div className="flex items-center  justify-center bg-[#252526] lg:pt-[117px] pt-[73px] ">
       <div className="grid lg:grid-cols-[573px_575px_572px] grid-cols-[297px]  text-[#EDE8E5] text-center lg:text-start  ">
-        <div className="border-s  border-[#515151] flex flex-col  lg:pt-[96px] lg:ps-[31px] pt-[53px] pb-[49px] lg:mb-0 lg:h-[537px]">
+        <div className="border-s border-e  border-[#515151] flex flex-col  lg:pt-[96px] lg:ps-[31px] pt-[53px] pb-[49px] lg:mb-0 lg:h-[537px]">
           <h1 className="uppercase lg:leading-[180px] lg:text-[198px] lg:tracking-[-0.09em] z-0 font-cofo text-[48px] leading-[39px] tracking-[-0.1em] text-[#FFFFFF] ">
             спеціальні
           </h1>

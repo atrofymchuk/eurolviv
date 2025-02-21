@@ -64,7 +64,7 @@ export const Rewies = () => {
     ],
   };
 
-  const { openModal } = useModalStore();
+  const { openModalOrder } = useModalStore();
 
   return (
     <section className="flex flex-col items-center bg-[#A47762] *:font-cofo   ">
@@ -79,7 +79,7 @@ export const Rewies = () => {
               стандартних кімнат до люксів — незмінно висока якість сервісу.
             </p>
             <button
-              onClick={openModal}
+              onClick={openModalOrder}
               className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer"
             >
               забронювати номер
