@@ -1,4 +1,4 @@
-import headerPhoto from "../../assets/ConferenceService/hall.jpg";
+import headerPhoto from "../../assets/ConferenceService/BigHall.jpg";
 import headerPhotoMobile from "../../assets/ConferenceService/hallPhone.jpg";
 import { useModalStore } from "../../store/useModalStore";
 

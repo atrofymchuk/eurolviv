@@ -6,24 +6,27 @@ import { SliderAbout } from "./SliderAbout";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomAbout } from "../../store/types";
 
-type RoomAboutToProps ={ 
-  about:RoomAbout
-  area:number
-  guests:string
-  title:string
-  size:string | undefined
-  swiperImagesStyle:string
-  nameRoom:string
-}
+type RoomAboutToProps = {
+  about: RoomAbout;
+  area: number;
+  guests: string;
+  title: string;
+  size: string | undefined;
+  swiperImagesStyle: string;
+  nameRoom: string;
+};
 
-export const About = ({about, area , guests,swiperImagesStyle, nameRoom} :RoomAboutToProps) => {
-
-  const {pOne,pTwo,swiperImages, rooms} = about
-
+export const About = ({
+  about,
+  area,
+  guests,
+  swiperImagesStyle,
+  nameRoom,
+}: RoomAboutToProps) => {
+  const { pOne, pTwo, swiperImages, rooms } = about;
 
   const { openModalOrder } = useModalStore();
-  console.log(swiperImages);
-  
+
   if (!swiperImages || swiperImages.length === 0) return null;
 
   return (
@@ -37,35 +40,58 @@ export const About = ({about, area , guests,swiperImagesStyle, nameRoom} :RoomAb
           <div className="font-cofo  text-[#8C331B] pt-[22px]">
             <div className="lg:space-y-1.5">
               <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center   ">
-                <img src={house} alt="houseicon" className="pe-2 w-[22px] h-[22px] lg:w-fit" /> площа
-                номера: <span className="font-semibold">&nbsp;{area} М²</span>
+                <img
+                  src={house}
+                  alt="houseicon"
+                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                />{" "}
+                площа номера:{" "}
+                <span className="font-semibold">&nbsp;{area} М²</span>
               </p>
               <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center ">
-                <img src={square} alt="houseicon" className="pe-2 w-[22px] h-[22px] lg:w-fit" /> кількість
-                кімнат: <span className="font-semibold">&nbsp;{rooms}</span>
+                <img
+                  src={square}
+                  alt="houseicon"
+                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                />{" "}
+                кількість кімнат:{" "}
+                <span className="font-semibold">&nbsp;{rooms}</span>
               </p>
               <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center">
-                <img src={guestsIco} alt="houseicon" className="pe-2 w-[22px] h-[22px] lg:w-fit" /> кількість
-                гостей: <span className="font-semibold">&nbsp;{guests}</span>
+                <img
+                  src={guestsIco}
+                  alt="houseicon"
+                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                />{" "}
+                кількість гостей:{" "}
+                <span className="font-semibold">&nbsp;{guests}</span>
               </p>
             </div>
           </div>
         </div>
 
         <div className="flex items-center justify-center order-5 lg:order-none">
-    <div className={`lg:border-t lg:border-e items-center justify-center flex lg:block border-[#C7C7C7]  lg:p-[35px] w-full relative`}>
-      <h1 className="uppercase font-cofo lg:text-[100px] text-[32px] lg:leading-[81px] lg:w-[1200px]  font-semibold lg:font-normal leading-[28px] flex flex-col tracking-[-0.026em]   overflow-visible">
-        <span className="order-1 lg:order-2 inline w-fit">   {nameRoom} </span>  
-      </h1>
-    </div>
-  </div>
+          <div
+            className={`lg:border-t lg:border-e items-center justify-center flex lg:block border-[#C7C7C7]  lg:p-[35px] w-full relative`}
+          >
+            <h1 className="uppercase font-cofo lg:text-[100px] text-[32px] lg:leading-[81px] lg:w-[1200px]  font-semibold lg:font-normal leading-[28px] flex flex-col tracking-[-0.026em]   overflow-visible">
+              <span className="order-1 lg:order-2 inline w-fit">
+                {" "}
+                {nameRoom}{" "}
+              </span>
+            </h1>
+          </div>
+        </div>
 
         <div className="border-e border-t border-[#C7C7C7] lg:flex hidden"></div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-[1212px_708px] lg:grid-rows-none grid-cols-[337px] h-[588px] lg:h-fit order-7 lg:order-none">
+      <div className="lg:grid lg:grid-cols-[1212px_708px] lg:grid-rows-none grid-cols-[337px] h-[588px] lg:h-[524px] order-7 lg:order-none">
         <div className="object-contain lg:border-e lg:border-t w-full border-[#C7C7C7] ">
-          <SliderAbout imageSlider={swiperImages}  swiperImagesStyle={swiperImagesStyle} /> 
+          <SliderAbout
+            imageSlider={swiperImages}
+            swiperImagesStyle={swiperImagesStyle}
+          />
         </div>
         <div className="flex flex-col items-center justify-center lg:gap-[24px]  border-x lg:border-x-0 border-t border-[#C7C7C7]">
           <div className="lg:flex flex-col lg:gap-[24px] flex justify-center lg:items-center lg:w-fit w-[295px] gap-y-[13px] p-2.5 border-x border-[#C7C7C7] lg:border-x-0 h-[342px]">
@@ -90,7 +116,6 @@ export const About = ({about, area , guests,swiperImagesStyle, nameRoom} :RoomAb
         <div className="h-[84px] border-e border-[#C7C7C7]"></div>
         <div className="h-[84px]  border-[#C7C7C7] "></div>
       </div>
-
     </div>
   );
 };

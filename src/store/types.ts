@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import { ConferenceService } from "../pages/ConferenceService";
 
 export type SpecialOffers = {
   src: string;
@@ -11,7 +12,31 @@ export type SpecialOffers = {
   discount?:string
   details:string[]
   conditions:string[]
+  
 }
+export type ConferenceServiceState = {
+  halls: ConferenceService[];
+};
+
+export type ConferenceService = {
+  previewImage: string;
+  title: string;
+  size: string;
+  area: string;
+  floor: number;
+  capacity: string;
+  price: {
+    hour: number;
+    day: number;
+  };
+  about: {
+    pOne: string;
+    pTwo: string;
+  };
+  swiperImages:string[]
+  showcaseSwiperImages:string[]
+  icons: { src: string; text: string }[];
+};
 
 export type SpecialOffersState = {
   specialOffers: SpecialOffers[];
@@ -78,7 +103,11 @@ export type IconsState = {
 
 export type RoomsState = {
   rooms: Room[];
-  
+};
+export type RoomsItitialState = {
+  rooms: Room[];
+  halls: ConferenceService[];
+
 };
 
 
@@ -112,6 +141,6 @@ export interface Review {
   
 
   export interface AboutSliderProps {
-    swiperImagesStyle:string
+    swiperImagesStyle?:string
     imageSlider:string[]
   }

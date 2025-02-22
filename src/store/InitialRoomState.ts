@@ -91,11 +91,64 @@ import ammenties from "../assets/Rooms/StandartAbout/amenities.jpg";
 import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.jpg";
 import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
 import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
-import { RoomsState } from "./types";
+import { ConferenceServiceState, RoomsState } from "./types";
+
+//Conference-service 
+
+import presenter from '../assets/icons/ConferenceService/presenter.svg'
+import projector from '../assets/icons/ConferenceService/projector.svg'
+import screen from '../assets/icons/ConferenceService/screen.svg'
+import microphone from '../assets/icons/ConferenceService/microphone.svg'
+import notebook from '../assets/icons/ConferenceService/notebook.svg'
+import paper from '../assets/icons/ConferenceService/paper.svg'
+import soundSystem from '../assets/icons/ConferenceService/soundsystem.svg'
+import flipchart from '../assets/icons/ConferenceService/flipchart.svg'
+
+import bigHall from '../assets/ConferenceService/BigHall.jpg'
+import bigHallTheathre from '../assets/ConferenceService/BigHallTheathre.jpg'
+import hallH from '../assets/ConferenceService/hallH.jpg'
+import pLetterImg from '../assets/ConferenceService/pLetterImg.png'
+
+import pLetter from '../assets/ConferenceService/pLetter.png'
+import classRoom from '../assets/ConferenceService/class.png'
+import theathre from '../assets/ConferenceService/theathre.png'
+import negotiationTable from '../assets/ConferenceService/negotiationTable.png'
 
 
 
+export const initialCoferenceHallState: ConferenceServiceState = {
+  halls: [
+    {
+      previewImage: bigHall,
+      title: "конференц - зал",
+      size: "великий",
+      area: "120M²",
+      floor: 1,
+      capacity: "до 100 осіб",
+      about: {
+        pOne: "Простір у класичному дизайні, що поєднує елегантний стиль, затишну  атмосферу  та сучасні  можливості  для організації успішних заходів у центрі міста Львів: від ділових зустрічей до великих конференцій чи презентацій.",
+        pTwo: "Різні варіанти розсадки дозволяють підлаштувати зал під будь-який формат події, а розташування  поруч з лаунж-зоною забезпечить швидкий та професійний кейтеринг ваших каво-перерв.",
+      },
+      price: { hour: 800, day: 3000 },
+      swiperImages:[bigHallTheathre, hallH, bigHall], 
+      showcaseSwiperImages:[  pLetterImg, pLetter,hallH,classRoom, bigHallTheathre,theathre,bigHallTheathre,negotiationTable   ],
+      icons: [
+        { src: projector, text: "проєктор" },
+        { src: notebook, text: "ноутбук" },
+        { src: screen, text: "екран" },
+        { src: flipchart, text: "фліпчарт" },
+        { src: soundSystem, text: "звукова система" },
 
+        { src: paper, text: "блок паперу" },
+        { src: presenter, text: "презентер" },
+
+        { src: microphone, text: "2 мікрофони" },
+
+      ],
+
+    },
+  ],
+};
 
 export const initialRoomsState: RoomsState = {
   rooms: [

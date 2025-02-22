@@ -13,15 +13,15 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider,swiperImag
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   return (
-    <div className="relative z-10 lg:h-[523px]  w-screen  h-[245px]  lg:w-full">
+    <div className="relative z-10 //lg:h-[623px] lg:h-full  w-screen  h-[245px]  lg:w-full">
       <Swiper
         modules={[Navigation]}
-            className="mySwiper lg:h-[523px] w-screen h-[245px] items-center  lg:w-full"
+            className="mySwiper lg:h-full w-screen h-[245px] items-center  lg:w-full"
         loop
         onSwiper={(swiper)=>setSwiperInstance(swiper)}
       >
         {imageSlider.map((img) => (
-          <SwiperSlide key={img} className="relative lg:h-[523px] w-screen h-[245px]  lg:w-full items-center flex justify-center  ">
+          <SwiperSlide key={img} className="relative lg:h-full w-screen h-[245px]  lg:w-full items-center flex justify-center  ">
             <img
               src={img}
               alt="room image"
@@ -31,12 +31,22 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({ imageSlider,swiperImag
         ))}
       </Swiper>
 
-      <button onClick={()=>swiperInstance?.slidePrev()} className="w-[45px] h-[45px] lg:w-fit lg:h-fit absolute left-5 lg:left-20 top-1/2 -translate-y-1/2 z-10 text-white hover:text-[#8C331B] hover:bg-white p-2 rounded-full border border-white transition">
-        <IoIosArrowRoundBack size={44} className="lg:w-full lg:h-full w-[28px] h-[28px]"/>
-      </button>
-      <button onClick={()=>swiperInstance?.slideNext()} className="w-[45px] h-[45px] lg:w-fit lg:h-fit absolute lg:right-20 right-5 top-1/2 -translate-y-1/2 z-10 text-white hover:text-[#8C331B] hover:bg-white p-2 rounded-full border border-white transition">
-        <IoIosArrowRoundForward size={44} className="lg:w-full lg:h-full w-[28px] h-[28px]"/>
-      </button>
+      <button
+  onClick={() => swiperInstance?.slidePrev()}
+  className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] absolute left-5 lg:left-20 top-1/2 -translate-y-1/2 z-10 
+  text-white hover:text-[#8C331B] hover:bg-white flex items-center justify-center rounded-full border border-white transition"
+>
+  <IoIosArrowRoundBack className="w-[35px] h-[35px] lg:w-[44px] lg:h-[44px]" />
+</button>
+
+<button
+  onClick={() => swiperInstance?.slideNext()}
+  className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] absolute lg:right-20 right-5 top-1/2 -translate-y-1/2 z-10 
+  text-white hover:text-[#8C331B] hover:bg-white flex items-center justify-center rounded-full border border-white transition"
+>
+  <IoIosArrowRoundForward className="w-[35px] h-[35px] lg:w-[44px] lg:h-[44px]" />
+</button>
+
 
     </div>
   );
