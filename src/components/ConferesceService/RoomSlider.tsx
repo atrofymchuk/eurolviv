@@ -43,6 +43,16 @@ export const RoomSlider = ({ images }: RoomSliderProps) => {
           rows: 2,
         },
       },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          centerMode: true,
+          rows: 2,
+        },
+      },
     ],
   };
 
