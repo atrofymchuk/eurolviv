@@ -12,9 +12,9 @@ export const ConferenceService = () => {
   return (
     <div>
       <Header />
-      {halls.map((el) => (
+      {halls.map((el, index) => (
         <div key={el.floor}>
-          <About item={el} />
+          <About item={el} isOnTop={index === 0 ? true : false} />
           <Equipment icons={el.icons} price={el.price} />
           <RoomSliderContainer images={el.showcaseSwiperImages} />
         </div>

@@ -12,7 +12,7 @@ export const ConferenceMenu = () => {
         <p className="uppercase text-[#242425] text-[14px] lg:text-[24px] font-medium tracking-tight lg:w-full w-[257px]">
           додайте смаку у вашій події
         </p>
-        <h1 className="uppercase text-[32px] lg:text-[100px] leading-tight lg:leading-[81%] tracking-tight lg:w-full w-[257px] lg:pb-0  pb-[23px]">
+        <h1 className="uppercase text-[32px] lg:text-[100px] leading-tight lg:leading-[81%] tracking-tight lg:w-full w-[257px]  pb-[23px]">
           конференц - меню
         </h1>
       </div>
