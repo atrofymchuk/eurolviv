@@ -16,9 +16,9 @@ export const About = ({ item,isOnTop }: AboutToProps) => {
       <div className={`grid lg:grid-cols-[396px_816px_708px] grid-cols-[40px_293px_40px] items-center justify-center lg:items-start lg:justify-normal`}>
         <div className={`lg:h-[109px] ${isOnTop ? "border-x" :'border-e'}  lg:border-x-0 border-b lg:border-b-0 lg:border-e  w-full h-[53px] border-[#C7C7C7] order-1 lg:order-none`}></div>
         <div className={`lg:h-[109px] ${isOnTop ? "border-x" :'border-s'}  lg:border-x-0 border-b lg:border-b-0  lg:border-e  w-full h-[53px] border-[#C7C7C7] order-3 lg:order-none`}></div>
-        <div className={`lg:h-[109px] ${isOnTop ? "border-x" :'border-e'}  lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none`}></div>
+        <div className={`lg:h-[109px] ${isOnTop ? "border-x" :'border-e'}   lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none`}></div>
         <div className={`lg:h-[109px] ${isOnTop ? "border-x" :'border-s'}  lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-6 lg:order-none lg:hidden`}></div>
-        <div className={`flex  ${isOnTop ? 'border-t': ' '}   lg:border-e border-b lg:border-b-0 border-[#C7C7C7]  flex-col h-full justify-center p-2.5 lg:p-0  lg:items-center order-2 lg:order-none`}>
+        <div className={`flex  ${isOnTop ? 'border-t ': 'lg:border-t '}    lg:border-e border-b lg:border-b-0 border-[#C7C7C7]  flex-col h-full justify-center p-2.5 lg:p-0  lg:items-center order-2 lg:order-none`}>
           <div className="font-cofo  text-[#8C331B] hidden lg:flex ">
             <RoomInfo
               area={item.area}
