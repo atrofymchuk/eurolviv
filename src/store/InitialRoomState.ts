@@ -93,28 +93,35 @@ import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
 import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
 import { ConferenceServiceState, RoomsState } from "./types";
 
-//Conference-service 
+//Conference-service
 
-import presenter from '../assets/icons/ConferenceService/presenter.svg'
-import projector from '../assets/icons/ConferenceService/projector.svg'
-import screen from '../assets/icons/ConferenceService/screen.svg'
-import microphone from '../assets/icons/ConferenceService/microphone.svg'
-import notebook from '../assets/icons/ConferenceService/notebook.svg'
-import paper from '../assets/icons/ConferenceService/paper.svg'
-import soundSystem from '../assets/icons/ConferenceService/soundsystem.svg'
-import flipchart from '../assets/icons/ConferenceService/flipchart.svg'
+import presenter from "../assets/icons/ConferenceService/presenter.svg";
+import projector from "../assets/icons/ConferenceService/projector.svg";
+import screen from "../assets/icons/ConferenceService/screen.svg";
+import microphone from "../assets/icons/ConferenceService/microphone.svg";
+import notebook from "../assets/icons/ConferenceService/notebook.svg";
+import paper from "../assets/icons/ConferenceService/paper.svg";
+import soundSystem from "../assets/icons/ConferenceService/soundsystem.svg";
+import flipchart from "../assets/icons/ConferenceService/flipchart.svg";
 
-import bigHall from '../assets/ConferenceService/BigHall.jpg'
-import bigHallTheathre from '../assets/ConferenceService/BigHallTheathre.jpg'
-import hallH from '../assets/ConferenceService/hallH.jpg'
-import pLetterImg from '../assets/ConferenceService/pLetterImg.png'
+import bigHall from "../assets/ConferenceService/BigHall.jpg";
+import bigHallTheathre from "../assets/ConferenceService/BigHallTheathre.jpg";
+import hallH from "../assets/ConferenceService/hallH.jpg";
+import pLetterImg from "../assets/ConferenceService/pLetterImg.png";
 
-import pLetter from '../assets/ConferenceService/pLetter.png'
-import classRoom from '../assets/ConferenceService/class.png'
-import theathre from '../assets/ConferenceService/theathre.png'
-import negotiationTable from '../assets/ConferenceService/negotiationTable.png'
+import pLetter from "../assets/ConferenceService/pLetter.png";
+import classRoom from "../assets/ConferenceService/class.png";
+import theathre from "../assets/ConferenceService/theathre.png";
+import negotiationTable from "../assets/ConferenceService/negotiationTable.png";
 
+import smallHallPreview from "../assets/ConferenceService/smallHallPreview.png";
+import pLetterSmall from "../assets/ConferenceService/pLetterSmall.png";
+import theathreSmall from "../assets/ConferenceService/theathreSmall.png";
+import negotiationTableSmall from "../assets/ConferenceService/negotiationTableSmall.png";
 
+import laungePreview from "../assets/ConferenceService/laungePreview.png";
+import laungeTheatre from "../assets/ConferenceService/laungeTheatre.png";
+import negotiationTableLaunge from "../assets/ConferenceService/negotiationTableLaunge.png";
 
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
@@ -130,8 +137,17 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "Різні варіанти розсадки дозволяють підлаштувати зал під будь-який формат події, а розташування  поруч з лаунж-зоною забезпечить швидкий та професійний кейтеринг ваших каво-перерв.",
       },
       price: { hour: 800, day: 3000 },
-      swiperImages:[bigHallTheathre, hallH, bigHall], 
-      showcaseSwiperImages:[  pLetterImg, pLetter,hallH,classRoom, bigHallTheathre,theathre,bigHallTheathre,negotiationTable   ],
+      swiperImages: [bigHallTheathre, hallH, bigHall],
+      showcaseSwiperImages: [
+        pLetterImg,
+        pLetter,
+        hallH,
+        classRoom,
+        bigHallTheathre,
+        theathre,
+        bigHallTheathre,
+        negotiationTable,
+      ],
       icons: [
         { src: projector, text: "проєктор" },
         { src: notebook, text: "ноутбук" },
@@ -143,9 +159,66 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         { src: presenter, text: "презентер" },
 
         { src: microphone, text: "2 мікрофони" },
-
       ],
-
+    },
+ 
+    {
+      previewImage: smallHallPreview,
+      title: "конференц - зал",
+      size: "малий",
+      area: "75M²",
+      floor: 1,
+      capacity: "до 40 осіб",
+      about: {
+        pOne: "Функціональний і затишний зал створений для продуктивної роботи та комфортного спілкування. Завдяки стильному дизайну, двом плазмовим екранам та продуманому освітленню простір ідеально підходить для тренінгів, зустрічей та нарад.",
+        pTwo: "зал розташований поруч з великим конференц-залом та лаунж-зоною, що створює додаткові можливості для організації подій, поділу учасників для роботи в кількох групах одночасно або паралельних сесіях.",
+      },
+      price: { hour: 1000, day: 5000 },
+      swiperImages: [smallHallPreview, pLetterSmall, theathreSmall, negotiationTableSmall],
+      showcaseSwiperImages: [
+        pLetterSmall,
+        pLetter,
+        theathreSmall,
+        theathre,
+        negotiationTableSmall,
+        negotiationTable,
+      ],
+      icons: [
+        { src: screen, text: " 2 плазмові екрани" },
+        { src: soundSystem, text: "звукова система" },
+        { src: notebook, text: "ноутбук" },
+        { src: paper, text: "блок паперу" },
+        { src: presenter, text: "презентер" },
+        { src: flipchart, text: "фліпчарт" },
+      ],
+    },
+    {
+      previewImage: laungePreview,
+      title: "конференц - зал",
+      size: "лаунж",
+      area: "75M²",
+      floor: 1,
+      capacity: "до 40 осіб",
+      about: {
+        pOne: "Затишний лаунж на першому поверсі — ідеальне місце для невеликих ділових зустрічей, переговорів чи тренінгів. Тут ви можете зібратись командою для підведення підсумків у комфортній неформальній атмосфері. ",
+        pTwo: "Елегантний інтер’єр та зручне розташування поруч з двома іншими конференц-залами створюють ідеальні умови для ефективної роботи та організації каво-перерв.",
+      },
+      price: { hour: 800, day: 3000 },
+      swiperImages: [laungePreview, laungeTheatre, negotiationTableLaunge ],
+      showcaseSwiperImages: [
+        laungeTheatre,
+        theathre,
+        negotiationTableLaunge,
+        negotiationTable,
+      ],
+      icons: [
+        { src: screen, text: " 2 плазмові екрани" },
+        { src: soundSystem, text: "звукова система" },
+        { src: notebook, text: "ноутбук" },
+        { src: paper, text: "блок паперу" },
+        { src: presenter, text: "презентер" },
+        { src: flipchart, text: "фліпчарт" },
+      ],
     },
   ],
 };
@@ -477,8 +550,7 @@ export const initialRoomsState: RoomsState = {
         },
       ],
     },
-  
-   
+
     {
       type: "semi-lux",
       title: "напівлюкс",
@@ -861,7 +933,6 @@ export const initialRoomsState: RoomsState = {
         rooms: 2,
         swiperImagesStyle: "object-[0%_70%]",
         swiperImages: [
-          
           luxElegantBedRoomScd,
           luxElegantBedRoomFst,
           luxElegantBathRoomScd,
@@ -899,9 +970,9 @@ export const initialRoomsState: RoomsState = {
           { src: bedBrown, text: "ліжко (180*200)" },
           { src: balconyBrown, text: "2 балкони" },
           { src: carpetBrown, text: "килимове покриття" },
-          
+
           { src: wardrobeBrown, text: "гардеробна" },
-          
+
           { src: conditionBrown, text: "кондиціонер" },
           { src: tvBrown, text: "LCD TV 43 дюйми" },
 

@@ -15,16 +15,19 @@ export const Equipment = ({ icons, price }: EquipmentToProps) => {
           </h1>
         </div>
 
-        <div className="lg:border-e  border-[#D9D9D9] grid lg:grid-cols-2 grid-cols-1 gap-x-[40px] lg:gap-y-[10px] px-4 py-5 justify-center">
-          {icons.map((icon, index) => (
-            <div key={index} className="flex items-center lg:gap-2 gap-[6px] ">
-              <img src={icon.src} alt={icon.text} className="lg:w-6 lg:h-6 w-[22px] h-[22px]" />
-              <span className="uppercase text-[#383838] text-[18px] font-medium">
-                {icon.text}
-              </span>
-            </div>
-          ))}
-        </div>
+        <div className="flex lg:justify-center lg:items-center w-full lg:border-e border-[#D9D9D9] ">
+  <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-[80px] px-4 py-5 justify-center h-fit">
+    {icons.map((icon, index) => (
+      <div key={index} className="flex items-center lg:gap-2 gap-[6px]">
+        <img src={icon.src} alt={icon.text} className="lg:w-6 lg:h-6 w-[22px] h-[22px]" />
+        <span className="uppercase text-[#383838] text-[18px] font-medium">
+          {icon.text}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         <div className="flex flex-col justify-center p-5 ">
           <h2 className="uppercase text-[#8C331B] lg:text-[32px] text-[24px] tracking-[-5%] font-semibold">

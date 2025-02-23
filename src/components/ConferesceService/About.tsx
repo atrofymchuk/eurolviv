@@ -12,7 +12,7 @@ export const About = ({ item }: AboutToProps) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="grid lg:grid-cols-[393px_819px_708px] grid-cols-[40px_295px_40px] items-center justify-center lg:items-start lg:justify-normal">
+      <div className="grid lg:grid-cols-[396px_816px_708px] grid-cols-[40px_295px_40px] items-center justify-center lg:items-start lg:justify-normal">
         <div className="lg:h-[109px] border-x lg:border-x-0 border-b lg:border-b-0 lg:border-e  w-full h-[53px] border-[#C7C7C7] order-1 lg:order-none"></div>
         <div className="lg:h-[109px] border-x lg:border-x-0 border-b lg:border-b-0  lg:border-e  w-full h-[53px] border-[#C7C7C7] order-3 lg:order-none"></div>
         <div className="lg:h-[109px] border-x lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none"></div>
