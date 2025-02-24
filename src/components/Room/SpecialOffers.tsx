@@ -5,7 +5,7 @@ export const SpecialOffers = () => {
   const { specialOffers } = useSpecialOffersStore();
 
   return (
-    <div className="w-full h-[588px] lg:h-[922px] flex justify-center items-center">
+    <div className="w-full h-[588px] lg:h-[922px] flex justify-center items-center overflow-hidden">
       <div className="relative border-s border-[#C7C7C7] h-full w-[296px] mb-[71px] lg:mb-[75px] lg:w-[1595px]">
         <div className="absolute w-screen">
           <h1 className="uppercase text-[32px] mb-[24px] lg:leading-[81px] lg:tracking-[-0.04em] ms-[20px] lg:ms-[19px] lg:mt-[110px] lg:mb-[63px] lg:w-full lg:text-[100px] w-[244px] leading-[28px] mt-[82px]">
@@ -28,7 +28,7 @@ export const SpecialOffers = () => {
                     {el.title}
                   </h4>
                   <p className="uppercase text-[10px] w-[219px] pt-[13px] text-[#8F8F8F] lg:text-[16px] lg:leading-[17px] leading-[11px] lg:w-fit">
-                    {el.desc}
+                    {el.cardDesc}
                   </p>
                   <div className="text-start w-full px-[15px] lg:px-0  mt-auto lg:mb-4 mb-2">
                     <Link
