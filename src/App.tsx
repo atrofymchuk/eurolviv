@@ -9,6 +9,7 @@ import OrderModal from "./components/Modals/OrderModal";
 import { Room } from "./pages/Room";
 import { SpecialOffers } from "./pages/SpecialOffers";
 import { ConferenceService } from "./pages/ConferenceService";
+import { Terrase } from "./pages/Terrase";
 function App() {
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
           <Route path="/rooms/:roomType" element={<Room/>} />
           <Route path="/contacts" element={<Contacts/>} />
           <Route path="/conference-service" element={<ConferenceService/>} />
-
+          <Route path="/terrase" element={<Terrase/>}/>
           <Route path="/special-offers" element={<SpecialOffers/>} />
           <Route path="/special-offers/:offer" element={<SpecialOffers />} />
         
