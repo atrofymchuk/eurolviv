@@ -26,17 +26,17 @@ export const TerraseHeader = () => {
         на гастрономічній висоті
       </h4>
 
-      <div className="flex lg:flex-row flex-col lg:space-x-[13px] lg:spact-y-0 space-y-[12px] mt-[88px]">
-        <button className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-9 py-3 rounded-4xl text-md">
+      <div className="flex lg:flex-row flex-col lg:space-x-[13px] lg:spact-y-0 lg:space-y-0 space-y-[12px] mt-[88px]">
+        <button className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md">
           меню
         </button>
-        <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-3 rounded-4xl text-md">
+        <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-[13px] rounded-4xl text-md">
           забронювати стіл
         </button>
       </div>
 
-      <div className=" absolute right-0 lg:top-1/3 lg:bottom-0 bottom-1/3   transform -translate-y-1/2 rotate-[-90deg] origin-bottom-right bg-[#252526] rounded-full py-[13px] px-[25px] ">
-        <p className="uppercase text-white font-cofo font-bold tracking-widest text-[12px] lg:text-[16px] lg:leading-[20px]  ">
+        <div className=" absolute right-0 lg:top-1/3 h-fit bottom-1/3 flex items-center justify-center  transform -translate-y-1/2 rotate-[-90deg] origin-bottom-right bg-[#252526] rounded-full py-[13px] px-[25px] ">
+          <p className="uppercase text-white font-cofo h-fit font-bold tracking-widest  text-[12px] lg:text-[16px] lg:leading-[20px]  ">
           вартість банкету
         </p>
       </div>
