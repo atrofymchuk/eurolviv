@@ -6,11 +6,11 @@ import aboutImageTrd from '../../assets/Terrase/about3.jpg'
 
 export const AboutTerrase = ()=>{
     return(
-        <div className="flex flex-col  justify-center items-center"> 
+        <div className="flex flex-col  justify-center items-center "> 
             <div className="grid lg:grid-cols-[748px_1041px] grid-cols-[334px]">
                 <div className="border-x border-b border-[#B3B3B3] lg:h-[53px]"></div>
                 <div className="border-e border-b border-[#B3B3B3] lg:h-[53px]"></div>
-                <div className="border-x lg:border-b border-[#B3B3B3] flex flex-col items-center justify-center lg:pt-[54px] lg:pb-[60px] lg:mb-10 lg:text-start text-center">
+                <div className="border-x lg:border-b border-[#B3B3B3] flex flex-col items-center justify-center lg:pt-[54px] lg:pb-[60px] lg:text-start text-center">
                     <div className="lg:w-[635px] w-[299px] ">
                         
                     <p className="font-blessed  leading-[70%] lg:text-[36px] text-[#242425] text-[16px] lg:pt-0 pt-[33px]" >Про ресторан </p>
@@ -28,7 +28,7 @@ export const AboutTerrase = ()=>{
                 </div>
 
                 
-                <div className="lg:border-e border-x lg:border-x-0 border-t lg:border-t-0 border-[#B3B3B3]  lg:border-b // lg:mb-10">
+                <div className="lg:border-e border-x lg:border-x-0 border-t lg:border-t-0 border-[#B3B3B3]  lg:border-b // ">
                     <div className="flex items-center justify-center px-[4px] lg:px-0">
                         <div className='border-e border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[15px] lg:pb-[20px] pt-[10px] pb-[13px] '>
                             <img src={aboutImageFst} alt="" className='lg:w-[490px] lg:h-[319px] w-[155px] h-[103px]' />
