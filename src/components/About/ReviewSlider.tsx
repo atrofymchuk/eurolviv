@@ -21,8 +21,8 @@ const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) =>
         settings: {
           slidesToShow: 1, 
           slidesToScroll: 1,
-          centerMode: false, // Центруємо головний слайд
-          centerPadding: "%", // Наступний слайд частково видно справа
+          centerMode: false, 
+          centerPadding: "%", 
           rows: 2,
           useTransform:false,
           variableWidth: true,
