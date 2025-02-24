@@ -5,8 +5,8 @@ import Slider from "react-slick";
 export const Navigation = forwardRef<Slider>((_, ref) => {
   const sliderRef = ref as React.RefObject<Slider>;
   return (
-    <div className="flex flex-col items-end justify-between ">
-      <div className="flex lg:w-[1854px] w-[300px] justify-between mt-20 lg:mt-0 border-b border-s border-[#B3B3B3]">
+    <div className="flex flex-col lg:items-end lg:justify-between justify-center items-center ">
+      <div className="flex lg:w-[1854px] w-[334px] justify-between lg:mt-0 border-b border-x lg:border-t-0 border-t b border-[#B3B3B3]">
         <button
           className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 bg-white hover:text-white mt-[26px] ms-[20px] mb-[44px] lg:ms-[68px] lg:mt-[17px] lg:mb-[72px]"
           onClick={() => sliderRef?.current.slickPrev()}

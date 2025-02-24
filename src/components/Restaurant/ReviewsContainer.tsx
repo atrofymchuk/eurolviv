@@ -9,7 +9,7 @@ export const ReviewsContainer =() =>{
     const sliderRef = useRef<Slider | null>(null);
 
     return(
-        <div>
+        <div >
              
              <Reviews />
             <ReviewSlider ref={sliderRef}/> 

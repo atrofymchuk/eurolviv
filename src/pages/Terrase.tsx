@@ -9,7 +9,7 @@ import { ReviewsContainer } from "../components/Restaurant/ReviewsContainer"
 
 export const Terrase = ( ) =>{
     return (
-        <div className="">
+        <div >
             <TerraseHeader/>
             <AboutTerrase />
             <AbootSliderContainer />

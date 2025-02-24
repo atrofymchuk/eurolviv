@@ -1,7 +1,7 @@
 export const Reviews = () => {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <div className="grid lg:grid-cols-[1787px] grid-cols-[332px] border-[#B3B3B3] border-x">
+      <div className="grid lg:grid-cols-[1787px] grid-cols-[332px] border-[#B3B3B3] border-x border-b lg:border-b-0">
         <div className="lg:ps-[78px] lg:h-[490px] h-[337px] flex flex-col justify-center lg:text-start text-center  ">
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ml-2">
             Про ресторан
