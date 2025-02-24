@@ -15,7 +15,7 @@ function AboutSlider() {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "100px", // Менше відступів на мобільних
+    centerPadding: "100px", 
     arrows: false,
     slidesToShow: 1,
     variableWidth: true,
@@ -24,11 +24,11 @@ function AboutSlider() {
     beforeChange: (_: number, next: number) => setActiveSlide(next),
     responsive: [
       {
-        breakpoint: 768, // Для планшетів і мобільних
+        breakpoint: 768,
         settings: {
           centerPadding: "20px",
           slidesToShow: 1,
-          variableWidth: true, // Забираємо змінну ширину
+          variableWidth: true, 
         },
       },
     ],
@@ -67,7 +67,7 @@ function AboutSlider() {
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
                              left-5 lg:left-100 z-10 text-[#8C331B] bg-white absolute top-1/2 
-                             transform -translate-y-1/2 rounded-full border border-white transition"
+                             transform -translate-y-1/2 rounded-full border border-white transition hover:cursor-pointer" 
           onClick={() => sliderRef.current?.slickPrev()}
         >
           <IoIosArrowRoundBack className="w-3/4 h-3/4" />

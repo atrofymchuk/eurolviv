@@ -10,7 +10,7 @@ export const AbootSliderContainer = () =>{
           </div>
 
             <AboutSlider />
-            <button className="font-cofo lg:mb-[36px] lg:mt-[38px] font-medium bg-[#8C331B] uppercase border mt-[37px] mb-[55px] text-[#FFFFFF] hover:cursor-pointer px-4.5 py-[13px] rounded-4xl text-[12px]">
+            <button className="font-cofo lg:mb-[36px] lg:text-[14px] lg:mt-[38px] font-medium bg-[#8C331B] uppercase  mt-[37px] mb-[55px] text-[#FFFFFF] hover:cursor-pointer px-4.5 py-[13px] rounded-4xl text-[12px]">
           забронювати стіл
         </button>   
             
