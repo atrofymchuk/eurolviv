@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 export const ConferenceService = () => {
   const { halls } = useRoomStore();
   return (
-    <div className="flex flex-col items-center justify-center bg-[#EDE8E5] h-[1274px]">
-      <div className="grid grid-cols-[570px_579px_571px] relative">
-        <div className=" absolute  grid grid-cols-[570px_579px_571px z-1">
+    <div className="flex flex-col items-center justify-center bg-[#EDE8E5] pb-[109px]">
+      <div className="grid grid-cols-[570px_579px_571px] relative ">
+        <div className=" absolute  grid grid-cols-[570px_579px_571px z-1 ">
           <div className="border-s  absolute left-0 border-[#B3B3B3] h-[950px] w-[570px] "></div>
           <div className="border-x absolute left-[570px] border-[#B3B3B3] h-[1200px] w-[579px]"></div>
           <div className="border-e absolute left-[1149px] border-[#B3B3B3] h-[950px] w-[571px]"></div>
         </div>
-        <div className="border-[#B3B3B3] "></div>
+        <div className=""></div>
         <div className="text-center flex flex-col border-[#B3B3B3] border-e items-center justify-center h-[400px]">
           <p className="uppercase text-[24px] text-[#252526] leading-[26px] tracking-[-5%] font-medium">
             місце успішних зустрічей -
@@ -22,14 +22,14 @@ export const ConferenceService = () => {
           <h1 className="uppercase  text-[198px] text-[#252526] leading-[160px] tracking-[-7%] whitespace-nowrap mt-[10px] mb-[52px] z-1">
             конференс-сервіс
           </h1>
-          <p className="uppercase text-[24px] text-[#252526] leading-[26px] tracking-[-5%] w-[644px]">
+          <p className="uppercase text-[24px] text-[#252526] leading-[26px] tracking-[-5%] w-[644px] z-2">
             Від бізнес-сніданку до конференції. бездоганний сервіс для
             будь-якого ділового заходу.
           </p>
         </div>
         <div></div>
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <div className="flex items-center justify-center space-x-[50px]">
           <div>
             <img
