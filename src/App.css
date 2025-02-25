@@ -34,6 +34,18 @@
   width: 539px;
 
 }
+.special-offers-slider > .slick-list >.slick-track>.slick-slide > div > div  {
+  width: 488px;
+  display: flex !important;
+  flex-direction: column !important;
+  /* justify-items: center !important; */
+  /* align-items: center !important; */
+}
+.special-offers-slider > .slick-list >.slick-track>.slick-slide  {
+  width: 484px !important;
+
+
+}
 .roomslider > .slick-list >.slick-track>.slick-slide >div  {
   width: 509px !important;
 
