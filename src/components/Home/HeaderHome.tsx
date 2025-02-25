@@ -6,7 +6,7 @@ export const HeaderHome = () => {
       <img
         src={headerPhoto}
         alt="preview"
-        className="object-cover w-full lg:h-[1181px]  h-[808px]"
+        className="object-cover w-full lg:h-[1171px]  h-[808px]"
       />
       <div
         className="absolute inset-0 "
