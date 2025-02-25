@@ -9,7 +9,7 @@ export const Reviews = () => {
           <h1 className="uppercase lg:w-[892px]  text-[#242425] lg:text-[100px] lg:leading-[87px] leading-[94%]  text-[32px] tracking-[-7%] pb-[24px] lg:pb-0 ">
             Відгуки наших гостей
           </h1>
-          <div className="flex items-center lg:flex-row flex-col  lg:space-x-[138px] lg:space-y-0 space-y-[24px] ">
+          <div className="flex items-center lg:flex-row flex-col  lg:space-x-[138px] lg:space-y-0 space-y-[24px] lg:mt-[37px]">
             <p className="text-[#242425] lg:text-[16px] text-[12px] uppercase lg:w-[323px] w-[265px] ">
               Історія нашого ресторану пишеться вашими враженнями. Дякуємо, що
               ділитеся ними.

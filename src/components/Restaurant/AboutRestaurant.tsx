@@ -1,10 +1,10 @@
 
-import aboutImageFst from '../../assets/Terrase/about1.jpg'
-import aboutImageScd from '../../assets/Terrase/about2.jpg'
-import aboutImageTrd from '../../assets/Terrase/about3.jpg'
+import aboutImageFst from '../../assets/Restaurant/about1.jpg'
+import aboutImageScd from '../../assets/Restaurant/about2.jpg'
+import aboutImageTrd from '../../assets/Restaurant/about3.jpg'
 
 
-export const AboutTerrase = ()=>{
+export const AboutRestaurant = ()=>{
     return(
         <div className="flex flex-col  justify-center items-center "> 
             <div className="grid lg:grid-cols-[748px_1041px] grid-cols-[334px]">

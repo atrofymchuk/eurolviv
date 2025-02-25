@@ -187,7 +187,7 @@ export function Header() {
             <Link to="/conference-service" className={` ${link}`}>
               КОНФЕРЕНЦ-СЕРВІС
             </Link>
-            <Link to="/terrase" className={` ${link}`}>
+            <Link to="/restaurant" className={` ${link}`}>
               РЕСТОРАН
             </Link>
             <Link to="/special-offers" className={` ${link}`}>
@@ -306,7 +306,7 @@ export function Header() {
               КОНФЕРЕНЦ-СЕРВІС
             </Link>
             <Link
-              to="/terrase"
+              to="/restaurant"
               onClick={() => setMenuOpen(false)}
               className=""
             >

@@ -1,6 +1,6 @@
-import coffe from "../../assets/Terrase/Menu/Coffe.png";
-import meat from "../../assets/Terrase/Menu/meat.png";
-import spagetti from "../../assets/Terrase/Menu/spagetti.png";
+import coffe from "../../assets/Restaurant/Menu/Coffe.png";
+import meat from "../../assets/Restaurant/Menu/meat.png";
+import spagetti from "../../assets/Restaurant/Menu/spagetti.png";
 
 type MenuPCToProps ={
     className:string

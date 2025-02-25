@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import Slider from "react-slick";
 
-import SlideFst from "../../assets/Terrase/aboutSlide1.jpg";
-import SlideScd from "../../assets/Terrase/aboutSlide2.png";
-import SlideTrd from "../../assets/Terrase/aboutSlide3.png";
+import SlideFst from "../../assets/Restaurant/aboutSlide1.jpg";
+import SlideScd from "../../assets/Restaurant/aboutSlide2.png";
+import SlideTrd from "../../assets/Restaurant/aboutSlide3.png";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 function AboutSlider() {

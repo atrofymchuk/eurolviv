@@ -1,5 +1,5 @@
-import karaokeFst from "../../assets/Terrase/Karaoke/Fst.png";
-import karaokeScd from "../../assets/Terrase/Karaoke/Scnd.png";
+import karaokeFst from "../../assets/Restaurant/Karaoke/Fst.png";
+import karaokeScd from "../../assets/Restaurant/Karaoke/Scnd.png";
 
 export const Karaoke = () => {
   return (

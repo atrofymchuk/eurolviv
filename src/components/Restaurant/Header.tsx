@@ -1,6 +1,6 @@
-import headerImg from "../../assets/Terrase/header.jpg";
+import headerImg from "../../assets/Restaurant/header.jpg";
 
-export const TerraseHeader = () => {
+export const RestaurantHeader = () => {
   return (
     <div className="relative w-full lg:h-[1157px] h-[808px] flex items-center justify-center flex-col">
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>

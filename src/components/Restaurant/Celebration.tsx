@@ -1,6 +1,6 @@
-import wedFst from "../../assets/Terrase/Celebrate/WED1.jpg";
-import wedScd from "../../assets/Terrase/Celebrate/WED2.jpg";
-import wedTrd from "../../assets/Terrase/Celebrate/WED3.jpg";
+import wedFst from "../../assets/Restaurant/Celebrate/WED1.jpg";
+import wedScd from "../../assets/Restaurant/Celebrate/WED2.jpg";
+import wedTrd from "../../assets/Restaurant/Celebrate/WED3.jpg";
 
 export const Celebration = () => {
   return (
