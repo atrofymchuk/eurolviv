@@ -35,7 +35,11 @@
 
 }
 .roomslider > .slick-list >.slick-track>.slick-slide >div  {
-  height: 739px !important;
+  width: 509px !important;
+
+}
+.roomslider > .slick-list >.slick-track>.slick-slide   {
+  height: 539px !important;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -52,7 +56,6 @@
 @media (max-width: 768px) {
   .review > .slick-list >.slick-track>.slick-active>div  {
     width: 299px;
-  
   }
   .hall > .slick-list{
     padding-left:25px !important;
@@ -61,14 +64,10 @@
   .hall > .slick-list > .slick-track>.slick-active{
     width: 285px !important;
   }
-  
- 
-  
   .review > .slick-list >.slick-track>.slick-active  {
     width: 299px !important;
-  
+
   }
-  
 }
 
 
