@@ -8,15 +8,17 @@ import defaultLogo from "../../assets/logo.svg";
 const useNavbarStyles = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [isShowRooms, setIsShowRooms] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    
+      setScrolled(window.scrollY > 50)
+      setIsShowRooms(false)
+    }
+  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [scrolled]);
 
   let styles, iconLogoStyle, logo, link , rightMenu;
   
@@ -52,7 +54,7 @@ const useNavbarStyles = () => {
       break;
   }
 
-  return { styles, iconLogoStyle, logo, link, rightMenu, scrolled };
+  return { styles, iconLogoStyle, logo, link, rightMenu, scrolled,isShowRooms, setIsShowRooms };
 };
 
 export default useNavbarStyles;

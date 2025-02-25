@@ -39,7 +39,7 @@ const {rooms} = useRoomStore()
                     </p>
                     <button 
                     onClick={openModalOrder}
-                    className=" font-cofo font-extrabold uppercase  ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[38px]  h-fit py-[13px] rounded-full text-[14px]">
+                    className=" font-cofo font-extrabold uppercase lg:self-end ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[38px]  h-fit py-[13px] rounded-full text-[14px]">
                       забронювати
                     </button>
                   </div>

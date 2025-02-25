@@ -1,32 +1,45 @@
 import { useState } from "react";
-
-import { CiGlobe } from "react-icons/ci";
-
 import { useModalStore } from "../store/useModalStore";
-
 import { HeaderSocial } from "./HeaderSocial";
-import { HeaderNav } from "./HeaderNav";
 import useNavbarStyles from "./Hooks/useHeaderStyle";
+import { HeaderNav } from "./HeaderNav";
+import { CiGlobe } from "react-icons/ci";
+import { useRoomStore } from "../store/useRoomsStore";
+import { RoomsListHeader } from "./RoomsListHeader";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const { openModalOrder } = useModalStore();
-
-  const { styles, iconLogoStyle, logo, link, rightMenu, scrolled } = useNavbarStyles();
+  const { rooms } = useRoomStore();
+  const {
+    styles,
+    iconLogoStyle,
+    logo,
+    link,
+    rightMenu,
+    scrolled,
+    isShowRooms,
+    setIsShowRooms,
+  } = useNavbarStyles();
 
   return (
-    <header>
+    <header
+      className="relative w-full flex flex-col "
+      onMouseLeave={() => setIsShowRooms(false)}
+    >
       <div
-        className={`fixed top-0 left-0 w-full py-4 px-6 flex lg:justify-around items-center font-cofo border-b-1 border-[#FFFFFF33] transition-colors duration-300 z-50 ${
-          scrolled ? "bg-white text-black" : " text-white"
-        }`}
+        className={`fixed top-0 left-0 w-full py-4  px-6 flex lg:justify-around items-center font-cofo border-b border-[#FFFFFF33] transition-colors duration-300 z-50   
+          ${scrolled ? "bg-white text-black" : "text-white"}
+          ${isShowRooms ? "bg-[#252526]/93" : ""}
+        `}
       >
         <HeaderNav
           link={link}
           logo={logo}
           scrolled={scrolled}
           iconLogoStyle={iconLogoStyle}
+          setIsShowRooms={setIsShowRooms}
         />
 
         <div className="flex items-center space-x-4">
@@ -42,8 +55,7 @@ export function Header() {
           <div className="relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`text-sm  font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${rightMenu} `}
-            >
+              className={`text-sm font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${rightMenu}`}>
               ЗАТЕЛЕФОНУВАТИ ▾
             </button>
             {isDropdownOpen && (
@@ -65,7 +77,7 @@ export function Header() {
 
           <button
             onClick={openModalOrder}
-            className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ${
+            className={`bg-[#a33d2e] text-white px-4 py-2 lg:block hidden rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ${
               scrolled ? "lg:block hidden" : "block"
             } `}
           >
@@ -73,6 +85,22 @@ export function Header() {
           </button>
         </div>
       </div>
+
+      {isShowRooms && !scrolled && (
+        <div
+          className={`fixed lg:top-[117px] left-0 w-full p-4 pt-0 z-90 shadow-[0px_4px_86.4px_0px_#252526] bg-[#252526]/93 ${
+            scrolled ? "top-[81px]" : "top-[73px]"
+          }`}
+        >
+          <div className="flex items-center justify-center">
+            <div className="w-[1825px]  grid lg:grid-cols-4 lg:h-[574px] grid-cols-2">
+              {rooms.slice(0, 4).map((el, index) => (
+                <RoomsListHeader room={el} key={index} index={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
