@@ -34,10 +34,18 @@
   width: 539px;
 
 }
+.roomslider > .slick-list >.slick-track>.slick-slide >div  {
+  height: 739px !important;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-right: 20px !important; 
+  margin-left: 20px !important; 
+}
 
 .restaraunt-review> .slick-list >.slick-track>.slick-active>div{
   width: 332px !important;
-  padding-right: 50px ;
+  margin-right: 50px ;
 }
 
 

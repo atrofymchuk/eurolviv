@@ -86,7 +86,7 @@ export const Rewies = () => {
             </button>
           </div>
         </div>
-        <div className="xl:col-span-1   xl:flex flex-col justify-center items-center hidden">
+        <div className="xl:col-span-1  xl:flex flex-col justify-center items-center hidden">
           <h2 className="uppercase text-[100px] xl:leading-[81px] xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
             <span className="relative left-[-105px]">Наших</span>
             <span className="relative left-[105px]">гостей</span>
