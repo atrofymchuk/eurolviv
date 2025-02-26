@@ -12,6 +12,6 @@ export const Home = () => {
   <RoomsHome />
   <ConferenceService />
   <RoofService />
-  <SpecialOffers width={1748}/>
+  <SpecialOffers width="lg:w-[1748px]"/>
   </>;
 };
