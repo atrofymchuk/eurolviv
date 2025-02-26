@@ -18,6 +18,18 @@ export type ConferenceServiceState = {
   halls: ConferenceService[];
 };
 
+export type TerrasesInitialState = {
+  terases:TerraseT[]
+}
+
+export type TerraseT ={
+  imgs:string[]
+  title:string
+  titleTwo:string
+  desc:string
+  descTwo:string
+}
+
 export type ConferenceService = {
   previewImage: string;
   title: string;
@@ -107,7 +119,7 @@ export type RoomsState = {
 export type RoomsItitialState = {
   rooms: Room[];
   halls: ConferenceService[];
-
+  terases:TerraseT[]
 };
 
 

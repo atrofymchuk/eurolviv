@@ -35,15 +35,15 @@ export function Header() {
           ${isShowRooms ? "bg-[#252526]/93" : ""}
         `}
       >
-        <Link to='/'>
-        <HeaderNav
-          link={link}
-          logo={logo}
-          scrolled={scrolled}
-          iconLogoStyle={iconLogoStyle}
-          setIsShowRooms={setIsShowRooms}
+        <Link to="/">
+          <HeaderNav
+            link={link}
+            logo={logo}
+            scrolled={scrolled}
+            iconLogoStyle={iconLogoStyle}
+            setIsShowRooms={setIsShowRooms}
           />
-          </Link>
+        </Link>
 
         <div className="flex items-center space-x-4">
           <div
@@ -58,7 +58,8 @@ export function Header() {
           <div className="relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`text-sm font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${rightMenu}`}>
+              className={`text-sm font-cofo font-bold hover:cursor-pointer hidden xl:inline-flex ${rightMenu}`}
+            >
               ЗАТЕЛЕФОНУВАТИ ▾
             </button>
             {isDropdownOpen && (

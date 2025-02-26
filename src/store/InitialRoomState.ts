@@ -91,9 +91,8 @@ import ammenties from "../assets/Rooms/StandartAbout/amenities.jpg";
 import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.jpg";
 import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
 import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
-import { ConferenceServiceState, RoomsState } from "./types";
+import { ConferenceServiceState, RoomsState, TerrasesInitialState,  } from "./types";
 
-//Conference-service
 
 import presenter from "../assets/icons/ConferenceService/presenter.svg";
 import projector from "../assets/icons/ConferenceService/projector.svg";
@@ -122,6 +121,44 @@ import negotiationTableSmall from "../assets/ConferenceService/negotiationTableS
 import laungePreview from "../assets/ConferenceService/laungePreview.png";
 import laungeTheatre from "../assets/ConferenceService/laungeTheatre.png";
 import negotiationTableLaunge from "../assets/ConferenceService/negotiationTableLaunge.png";
+
+import mainFst from "../assets/Terrase/MainTerrase/previewFst.png";
+import mainScd from "../assets/Terrase/MainTerrase/previewScd.png";
+import mainTrd from "../assets/Terrase/MainTerrase/previewTrd.png";
+import mainFth from "../assets/Terrase/MainTerrase/previewFth.png";
+
+import upperFst from "../assets/Terrase/UpperTerrase/previewFhd.png";
+import upperScd from "../assets/Terrase/UpperTerrase/previewScd.png";
+import upperThd from "../assets/Terrase/UpperTerrase/previewThd.png";
+import upperFhd from "../assets/Terrase/UpperTerrase/previewFhd.png";
+
+export const initialTerraseState:TerrasesInitialState = {
+  terases:[
+    {
+      imgs:[mainFst, mainScd, mainTrd, mainFth],
+      title:'основна тераса',
+      desc:'Основна тераса RUFF вміщує 152 гостя й відкриває панораму міста на 360 градусів. Стильний бар, жива музика щовихідних, виступи діджеїв — усе це наповнює простір життям і динамікою. Та головна окраса — це заходи сонця!',
+      titleTwo:'Святкуйте життя, смакуйте миті під неповторним львівським небом!',
+      descTwo:'Завдяки перголі та панорамним вікнам тут добре і в мʼякому сонячному світлі, і під ритм крапель дощу. Коктейлі мають присмак свободи, а вечори пролітають на одному подиху під музику і мерехтіння вогнів міста',
+      
+    },
+    {
+      imgs:[upperFst, upperScd, upperThd, upperFhd],
+      title:'верхня тераса',
+      desc:'Верхня тераса — це 45 місць на найвищій точці даху Євроготелю, звідки відкривається приголомшливий вид на місто.',
+      titleTwo:'Ідеальний простір для особливих подій у вузькому колі — від теплих зустрічей до приватних святкувань під відкритим небом.',
+      descTwo:'',
+      
+    },
+    {
+      imgs:[upperFst, upperScd, upperThd, upperFhd],
+      title:'нижня тераса',
+      desc:'Нижня тераса Євроготелю — затишний простір під відкритим небом. 23 місця для незабутніх зустрічей з видом Високий замок, мʼякі лінії, продумане освітлення і ледь чутний шепіт вітру — тут кожна деталь працює на атмосферу затишку і розслаблення.',
+      titleTwo:'Чудове місце для невеликих компаній, де можна насолоджуватися моментом і краєвидом старого міста.',
+      descTwo:''      
+    },
+  ]
+}
 
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
