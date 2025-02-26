@@ -11,6 +11,7 @@ import { Room } from "./pages/Room";
 import { SpecialOffers } from "./pages/SpecialOffers";
 import { ConferenceService } from "./pages/ConferenceService";
 import { Restaurant } from "./pages/Restaurant";
+import { Terrase } from "./pages/Terrase";
 function App() {
   return (
     <>
@@ -27,6 +28,8 @@ function App() {
           <Route path="/restaurant" element={<Restaurant />} />
           <Route path="/special-offers" element={<SpecialOffers />} />
           <Route path="/special-offers/:offer" element={<SpecialOffers />} />
+          <Route path="/terrase" element={<Terrase />} />
+
         </Routes>
         <Footer />
         <OrderModal />

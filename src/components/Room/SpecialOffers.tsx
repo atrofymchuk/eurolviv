@@ -4,18 +4,18 @@ import { useRef } from "react";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 type SpecialOffersToProps = {
-  width?: string;
+  isHomePage?: boolean;
 };
 
 export const SpecialOffers = ({
-  width = "lg:w-[1595px]",
+  isHomePage = false,
 }: SpecialOffersToProps) => {
   const sliderRef = useRef<Slider | null>(null);
 
   return (
     <div className="relative w-full h-[658px] lg:h-[976px] flex justify-center items-center overflow-hidden flex-col">
       <div
-        className={`relative border-s border-[#C7C7C7] h-full w-[296px] mb-[71px] lg:mb-[75px] ${width} `}
+        className={`relative border-s border-[#C7C7C7] h-full w-[296px] mb-[71px] lg:mb-[75px] ${isHomePage ? "lg:w-[1748px]" :'lg:w-[1595px]'} `}
       >
         <div className="absolute w-screen">
           <h1 className="uppercase text-[32px] mb-[24px] lg:leading-[81px] lg:tracking-[-0.04em] ms-[20px] lg:ms-[19px] lg:mt-[110px] lg:mb-[63px] lg:w-full lg:text-[100px] w-[244px] leading-[28px] mt-[82px]">
