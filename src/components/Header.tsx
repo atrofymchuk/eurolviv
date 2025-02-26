@@ -6,7 +6,6 @@ import { HeaderNav } from "./HeaderNav";
 import { CiGlobe } from "react-icons/ci";
 import { useRoomStore } from "../store/useRoomsStore";
 import { RoomsListHeader } from "./RoomsListHeader";
-import { Link } from "react-router-dom";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,11 +16,11 @@ export function Header() {
     styles,
     iconLogoStyle,
     logo,
-    link,
     rightMenu,
     scrolled,
     isShowRooms,
     setIsShowRooms,
+    isActiveLink,
   } = useNavbarStyles();
 
   return (
@@ -35,15 +34,14 @@ export function Header() {
           ${isShowRooms ? "bg-[#252526]/93" : ""}
         `}
       >
-        <Link to="/">
+
           <HeaderNav
-            link={link}
             logo={logo}
             scrolled={scrolled}
             iconLogoStyle={iconLogoStyle}
             setIsShowRooms={setIsShowRooms}
+            isActiveLink={isActiveLink}
           />
-        </Link>
 
         <div className="flex items-center space-x-4">
           <div

@@ -1,24 +1,25 @@
 import { Dispatch, SetStateAction, useState } from "react";
-
-import burgerMenu from "../assets/icons/burgerMenu.svg";
 import { Link } from "react-router-dom";
+import burgerMenu from "../assets/icons/burgerMenu.svg";
 
 type HeaderNavToProps = {
   scrolled: boolean;
   logo: string;
-  link: string;
   iconLogoStyle: string;
-  setIsShowRooms: Dispatch<SetStateAction<boolean>>
+  isActiveLink:(path:string)=> string
+  setIsShowRooms: Dispatch<SetStateAction<boolean>>;
 };
 
 export const HeaderNav = ({
   scrolled,
   logo,
-  link,
   iconLogoStyle,
-  setIsShowRooms
+  setIsShowRooms,
+  isActiveLink,
 }: HeaderNavToProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+ 
 
   return (
     <div className="flex lg:w-fit w-full">
@@ -42,60 +43,65 @@ export const HeaderNav = ({
             </span>
           </div>
         </button>
-
-        <img
-          src={logo}
-          alt="logo"
-          className={`${
-            !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
-          } md:w-[153px] md:h-[84px]  duration-300 ${iconLogoStyle} ms-5 lg:ms-0 lg:me-10  `}
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="logo"
+            className={`${
+              !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
+            } md:w-[153px] md:h-[84px]  duration-300 ${iconLogoStyle} ms-5 lg:ms-0 lg:me-10`}
+          />
+        </Link>
 
         <button
-          className={`bg-[#a33d2e] text-white px-3 py-2 lg:hidden   rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[10px] md:text-[18px] hover:cursor-pointer ${
+          className={`bg-[#a33d2e] text-white px-3 py-2 lg:hidden rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[10px] md:text-[18px] hover:cursor-pointer ${
             scrolled ? "opacity-0" : "block"
           } `}
         >
           ЗАБРОНЮВАТИ {<span className="hidden md:inline">НОМЕР</span>}
         </button>
+
         <nav
           className="relative hidden xl:flex space-x-6 text-sm"
           onClick={() => setIsShowRooms(false)}
         >
-          <Link to="/about" className={` ${link}`}>
+          <Link to="/about" className={isActiveLink("/about")}>
             ПРО ГОТЕЛЬ
           </Link>
 
-          <div className="relative" onMouseEnter={() => {
-            if(scrolled) return
-            setIsShowRooms(true)
-          }}>
-            <Link to="/rooms" className={` ${link}`}>
+          <div
+            className="relative"
+            onMouseEnter={() => {
+              if (scrolled) return;
+              setIsShowRooms(true);
+            }}
+          >
+            <Link
+              to="/rooms"
+              className={isActiveLink("/rooms")}
+            >
               НОМЕРИ
             </Link>
-
           </div>
 
-          <Link to="/conference-service" className={` ${link}`}>
+          <Link to="/conference-service" className={isActiveLink("/conference-service")}>
             КОНФЕРЕНЦ-СЕРВІС
           </Link>
-          <Link to="/restaurant" className={` ${link}`}>
+          <Link to="/restaurant" className={isActiveLink("/restaurant")}>
             РЕСТОРАН
           </Link>
-          <Link to="/special-offers" className={` ${link}`}>
+          <Link to="/special-offers" className={isActiveLink("/special-offers")}>
             СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
           </Link>
-          <Link to="/contacts" className={` ${link}`}>
+          <Link to="/contacts" className={isActiveLink("/contacts")}>
             КОНТАКТИ
           </Link>
         </nav>
       </div>
 
       {menuOpen && (
-        <nav
-          className={`absolute top-full left-0 w-full bg-black  flex flex-col font-cofo items-center py-4 space-y-2 z-50 xl:hidden text-[]`}
-        >
-          <Link to="/about" onClick={() => setMenuOpen(false)} className="">
+        <nav className="absolute top-full left-0 w-full bg-black  flex flex-col font-cofo items-center py-4 space-y-2 z-50 xl:hidden text-[]">
+          <Link to="/about" onClick={() => setMenuOpen(false)} className={isActiveLink("/about")}>
             ПРО ГОТЕЛЬ
           </Link>
           <div className="relative">
@@ -103,29 +109,21 @@ export const HeaderNav = ({
               to="/rooms"
               onMouseEnter={() => setIsShowRooms(true)}
               onMouseLeave={() => setIsShowRooms(false)}
-              className=""
+              className={isActiveLink("/rooms")}
             >
               НОМЕРИ ▾
             </Link>
-           
           </div>
-          <Link to="/rooms" onClick={() => setMenuOpen(false)} className="">
-            НОМЕРИ
-          </Link>
-          <Link to="" onClick={() => setMenuOpen(false)} className="">
+          <Link to="/conference-service" onClick={() => setMenuOpen(false)} className={isActiveLink("/conference-service")}>
             КОНФЕРЕНЦ-СЕРВІС
           </Link>
-          <Link
-            to="/restaurant"
-            onClick={() => setMenuOpen(false)}
-            className=""
-          >
+          <Link to="/restaurant" onClick={() => setMenuOpen(false)} className={isActiveLink("/restaurant")}>
             РЕСТОРАН
           </Link>
-          <Link to="" onClick={() => setMenuOpen(false)} className="">
+          <Link to="/special-offers" onClick={() => setMenuOpen(false)} className={isActiveLink("/special-offers")}>
             СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ
           </Link>
-          <Link to="/contacts" onClick={() => setMenuOpen(false)} className="">
+          <Link to="/contacts" onClick={() => setMenuOpen(false)} className={isActiveLink("/contacts")}>
             КОНТАКТИ
           </Link>
         </nav>
