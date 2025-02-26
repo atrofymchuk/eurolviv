@@ -1,4 +1,3 @@
-import headerImg from "../../assets/Terrase/header.gif";
 
 export const TerraseHeader = () => {
   return (
@@ -7,7 +6,7 @@ export const TerraseHeader = () => {
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
       <img
-        src={headerImg}
+        src={'https://www.figma.com/file/utxDpDAE3Ua28t2GxjQihO/image/afb341a54c55d79be5eaec708addc0b9c51c319a'}
         alt="headerImg"
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
       />
