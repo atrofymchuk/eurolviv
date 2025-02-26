@@ -31,7 +31,17 @@ const useNavbarStyles = () => {
       logo = defaultLogo;
       break;
     
-    case "/restaurant":
+    case "/restaurant" :
+      styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
+      iconLogoStyle = scrolled ? "" : "invert";
+      link = scrolled
+        ? "text-[#252526]/62 hover:text-[#252526]"
+        : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
+      logo = ruffLogo;
+      break;
+    
+    case "/terrase" :
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
       link = scrolled

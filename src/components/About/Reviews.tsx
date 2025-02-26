@@ -67,7 +67,7 @@ export const Rewies = () => {
   const { openModalOrder } = useModalStore();
 
   return (
-    <section className="flex flex-col items-center bg-[#A47762] *:font-cofo   ">
+    <section className="flex flex-col items-center bg-[#A47762] *:font-cofo  overflow-x-hidden ">
       <div className="grid xl:grid-cols-2 xl:w-full border-x border-[#C7C7C7] xl:max-w-[1720px]  w-[332px] px-0">
         <div className="xl:col-span-1   pt-[52px] xl:pt-[109px] flex flex-col ">
           <h1 className="text-center font-cofo xl:text-[198px] text-[32px] uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px] leading-[32px] xl:ps-[20px]">
@@ -80,7 +80,7 @@ export const Rewies = () => {
             </p>
             <button
               onClick={openModalOrder}
-              className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer"
+              className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer"
             >
               забронювати номер
             </button>

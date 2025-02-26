@@ -108,7 +108,7 @@ export const ConferenceService = () => {
         <div className="text-center flex items-center justify-center pt-[37px]">
           <Link
             to="/conference-service"
-            className="w-fit py-[13px] px-[16.5px] text-[#FFFFFF] block bg-[#8C331B] rounded-full uppercase "
+            className="w-fit py-[13px] px-[16.5px] text-[#FFFFFF] block bg-[#8C331B] hover:text-[#8C331B] hover:bg-[#FFFFFF] border-[#8C331B] border rounded-full uppercase "
           >
             переглянути зали
           </Link>

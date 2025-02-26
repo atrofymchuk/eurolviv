@@ -67,7 +67,7 @@ export const Advantages = () => {
             </ul>
             <button 
             onClick={openModalOrder}
-            className="uppercase bg-[#EDE8E5] text-[#A47762] w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
+            className="uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-full xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
               забронювати номер
             </button>
           </div>

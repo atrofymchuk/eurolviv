@@ -42,7 +42,7 @@ export const Header = () => {
         </p>
         <button
           onClick={openModalOrder}
-          className="uppercase bg-[#EDE8E5] text-[#252526] w-fit  px-[34.5px] py-[13.5px] rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
+          className="uppercase bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit  px-[34.5px] py-[13.5px] rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
         >
           замовити подію
         </button>

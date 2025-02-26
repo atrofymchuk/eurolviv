@@ -66,9 +66,9 @@ export const About = ({ item,isOnTop }: AboutToProps) => {
             </p>
             <button
               onClick={openModalOrder}
-              className="uppercase mb-[23px] mt-auto border lg:flex hidden border-[#8C331B] text-[#8C331B] bg-[#FFFFFF] self-start lg:px-5 lg:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold lg:text-sm text-[12px] lg:mt-[50px] hover:cursor-pointer"
+              className="uppercase mb-[23px] mt-auto border lg:flex hidden border-[#8C331B] text-[#8C331B] hover:bg-[#8C331B] hover:text-[#FFFFFF] bg-[#FFFFFF] self-start lg:px-5 lg:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold lg:text-sm text-[12px] lg:mt-[50px] hover:cursor-pointer"
             >
-              конференц <span className="">меню</span>
+              конференц <span className="">&nbsp;меню</span>
             </button>
 
             <div className="self-start pt-[10px] lg:pt-0">

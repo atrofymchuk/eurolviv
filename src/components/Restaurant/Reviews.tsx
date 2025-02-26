@@ -19,7 +19,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
               ділитеся ними.
             </p>
 
-            <button className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:px-[20px] lg:py-[13px] px-[17px] py-[12.5px] rounded-full h-fit lg:text-[16px] text-[12px] ">
+            <button className=" hover:cursor-pointer uppercase bg-[#8C331B] text-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] hover:bg-[#FFFFFF] lg:px-[20px] lg:py-[13px] px-[17px] py-[12.5px] rounded-full h-fit lg:text-[16px] text-[12px] ">
               забронювати стіл
             </button>
           </div>

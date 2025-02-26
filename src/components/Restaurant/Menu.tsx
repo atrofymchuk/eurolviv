@@ -26,7 +26,7 @@ export const Menu = () => {
             <p className="uppercase text-[#888888] lg:text-[16px] text-[12px] lg:leading-[120%]  lg:w-[359px] lg:pt-[39px]">
               Ретельно підібрана винна карта доповнює смакову гармонію.
             </p>
-            <button className="uppercase text-[#8C331B] border-[#8C331B] border  rounded-full lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[13px] py-[12px] px-[20.5px]  lg:px-[17.5px]">
+            <button className="uppercase text-[#8C331B] border-[#8C331B] border hover:cursor-pointer hover:bg-[#8C331B] hover:text-white rounded-full lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[13px] py-[12px] px-[20.5px]  lg:px-[17.5px]">
               переглянути меню
             </button>
           </div>

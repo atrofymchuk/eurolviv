@@ -14,7 +14,7 @@ export const ConferenceMenuCard = ({img}:ConferenceMenuCardToProps) =>{
         <p className="uppercase text-[#242425] lg:text-[48px] lg:tracking-[-7%] lg:leading-[104%] lg:pt-[36px]">
           обіди та вечері
         </p>
-        <button className="uppercase text-[#8C331B] border px-4 py-2 lg:text-[16px] border-[#8C331B] rounded-full lg:mt-[37px] font-medium">
+        <button className="uppercase text-[#8C331B] hover:bg-[#8C331B] hover:text-[#FFFFFF] border px-4 py-2 lg:text-[16px] border-[#8C331B] rounded-full lg:mt-[37px] font-medium">
           переглянути меню
         </button>
       </div>

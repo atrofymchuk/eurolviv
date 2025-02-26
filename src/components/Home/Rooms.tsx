@@ -22,14 +22,14 @@ export const RoomsHome = () => {
               номери
             </h1>
             <div className="flex xl:flex-row text-start items-center xl:items-start relative h-[200px]">
-              <div className="absolute flex items-center justify-center xl:justify-start ">
+              <div className="absolute flex items-center justify-center xl:justify-start pt-[35px]">
                 <p className="uppercase w-[433px]  xl:text-[16px] text-[12px] xl:leading-[16px] text-[#E9E9E9] text-center xl:text-left absolute left-[-29px]">
                   100 номерів, де кожна деталь творить особливу естетику. Від
                   стандартних кімнат до люксів — незмінно висока якість сервісу.
                 </p>
                 <Link
                   to="/rooms"
-                  className="uppercase text-[#242425] font-semibold translate-x-[480px] bg-[#EDE8E5] w-fit h-fit xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full hover:cursor-pointer"
+                  className="uppercase text-[#242425] font-semibold hover:bg-black hover:text-[#EDE8E5] translate-x-[480px] bg-[#EDE8E5] w-fit h-fit xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full hover:cursor-pointer"
                 >
                   переглянути номери
                 </Link>
@@ -48,7 +48,7 @@ export const RoomsHome = () => {
       </div>
 
       <div className="relative">
-        <div className="-translate-y-15 z-10 h-[700px]">
+        <div className="-translate-y-9 z-10 h-[700px]">
           <RoomsSlider ref={sliderRef} />
         </div>
       </div>

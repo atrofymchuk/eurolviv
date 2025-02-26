@@ -78,7 +78,7 @@ export const RoofService = () => {
                 </p>
                 <Link
                   to={item.url}
-                  className="uppercase lg:py-[12px] lg:mt-[20px] lg:px-[20px] rounded-full font-semibold text-[#252526] bg-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
+                  className="uppercase lg:py-[12px] lg:mt-[20px] lg:px-[20px] rounded-full font-semibold text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
                 >
                   детальніше
                 </Link>

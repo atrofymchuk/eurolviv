@@ -101,14 +101,14 @@ export const Footer = () => {
               reception@eurohotel.lviv.ua
             </p>
             <div className="xl:mt-[29px] mt-[25px] flex space-x-4">
-              <span className="bg-white rounded-full ">
+              <span className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
                   className="w-[37px] h-[37px] p-1"
                   color="#45525F"
                 />
               </span>
 
-              <span className="bg-white rounded-full ">
+              <span className="bg-white rounded-full hover:cursor-pointer">
                 <FaWhatsapp
                   color="#45525E"
                   className="w-[37px] h-[37px]  p-1 "
@@ -256,7 +256,7 @@ export const Footer = () => {
             placeholder="Введіть свій email"
             className="bg-[#B5B5B52B] xl:py-[13px] xl:ps-[21px] xl:w-[415px] w-[335px] py-2.25 px-3 mb-2.5 rounded-full font-cofo"
           />
-          <button className="bg-[#A47762] py-2 px-6 rounded-full xl:text-[18px] block xl:w-[415px] w-[335px] font-semibold  font-cofo hover:cursor-pointer">
+          <button className="bg-[#A47762] border border-[#A47762] hover:bg-[#ffff] hover:text-[#A47762] py-2 px-6 rounded-full xl:text-[18px] block xl:w-[415px] w-[335px] font-semibold  font-cofo hover:cursor-pointer">
             НАДІСЛАТИ
           </button>
 

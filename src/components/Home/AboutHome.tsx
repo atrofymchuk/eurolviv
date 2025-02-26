@@ -69,7 +69,7 @@ export const AboutHome = () => {
               </p>
               <Link
                 to="/about"
-                className="border border-[#8C331B] uppercase text-[16px] font-medium px-[29px] py-[13px] rounded-full text-[#8C331B] mb-0 "
+                className="border border-[#8C331B] hover:text-[#EDE8E5] hover:bg-[#8C331B] uppercase text-[16px] font-medium px-[29px] py-[13px] rounded-full text-[#8C331B] mb-0 "
               >
                 детальніше
               </Link>

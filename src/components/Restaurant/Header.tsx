@@ -27,10 +27,10 @@ export const RestaurantHeader = () => {
       </h4>
 
       <div className="flex lg:flex-row flex-col lg:space-x-[13px] lg:spact-y-0 lg:space-y-0 space-y-[12px] mt-[88px]">
-        <button className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md">
+        <button className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md hover:text-[#8C331B] hover:bg-white">
           меню
         </button>
-        <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-[13px] rounded-4xl text-md">
+        <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-[13px] rounded-4xl text-md " >
           забронювати стіл
         </button>
       </div>

@@ -84,10 +84,10 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
               <div className="mt-[34px]">
                 
               {index === currentSlide && (
-                <div className="mt-[24px]">
+                <div className="mt-[24px] relative ">
                   <Link
                     to={`/rooms/${el.type}`}
-                    className="border border-[#FFFFFF] uppercase text-[16px] font-medium px-[29px] py-[13px] rounded-full text-[#FFFFFF]"
+                    className="hover:cursor-pointer border border-[#FFFFFF] uppercase text-[16px] font-medium px-[29px] py-[13px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF]"
                   >
                     детальніше
                   </Link>
