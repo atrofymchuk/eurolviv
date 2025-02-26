@@ -1,7 +1,9 @@
 import { AboutHome } from "../components/Home/AboutHome";
 import { ConferenceService } from "../components/Home/ConferenceService";
 import { HeaderHome } from "../components/Home/HeaderHome";
+import { RoofService } from "../components/Home/RoofService";
 import { RoomsHome } from "../components/Home/Rooms";
+import { SpecialOffers } from "../components/Room/SpecialOffers";
 
 export const Home = () => {
   return <>
@@ -9,5 +11,7 @@ export const Home = () => {
   <AboutHome />
   <RoomsHome />
   <ConferenceService />
+  <RoofService />
+  <SpecialOffers width={1748}/>
   </>;
 };

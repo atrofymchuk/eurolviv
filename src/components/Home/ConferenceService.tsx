@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const ConferenceService = () => {
   const { halls } = useRoomStore();
   return (
-    <div className="flex flex-col items-center justify-center bg-[#EDE8E5] pb-[109px]">
+    <div className="flex flex-col items-center justify-center bg-[#EDE8E5] pb-[109px] ">
       <div className="grid grid-cols-[570px_579px_571px] relative ">
         <div className=" absolute  grid grid-cols-[570px_579px_571px z-1 ">
           <div className="border-s  absolute left-0 border-[#B3B3B3] h-[950px] w-[570px] "></div>

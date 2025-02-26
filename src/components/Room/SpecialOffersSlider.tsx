@@ -31,7 +31,8 @@ export const SpecialOffersSlider = forwardRef<Slider, SpecialOffersSliderToProps
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: "20px",
+          slidesToScroll: 1,   
+          variableWidth: true
         },
       },
     ],
@@ -42,7 +43,7 @@ export const SpecialOffersSlider = forwardRef<Slider, SpecialOffersSliderToProps
   {specialOffers.map((el, index) => (
     <div
       key={index}
-      className={`border p-5 lg:h-[652px] border-[#C7C7C7] ${
+      className={`border lg:p-5 p-3.5 h-[426px] lg:h-[652px] border-[#C7C7C7] ${
         index !== specialOffers.length - 1 ? "border-r-0" : ""
       }`}
     >

@@ -12,9 +12,9 @@ export const RoomsHome = () => {
       <div className="grid grid-cols-[365px_667px_446px] ms-[100px] h-[580px]  ">
         <div className="grid absolute grid-cols-[365px_667px_446px]  h-[580px] ">
           <div className="absolute border left-0 border-[#C29986] w-[365px] h-[1280px]">
-            <div className="absolute border-e left-[365px] border-[#C29986] w-[667px] h-[1480px]"></div>
+            <div className="absolute border-e left-[365px] border-[#C29986] w-[667px] h-[1280px]"></div>
           </div>
-          <div className="absolute border-e right-0 border-[#C29986] w-[667px] h-[1480px]"></div>
+          <div className="absolute border-e right-0 border-[#C29986] w-[667px] h-[1280px]"></div>
         </div>
         <div className=" flex flex-col justify-center ">
           <div className="translate-y-[130px]">
