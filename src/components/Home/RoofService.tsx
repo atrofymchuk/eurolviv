@@ -25,7 +25,7 @@ const suggestion = [
     title: "rooftop terrace",
     titleDesc: "смакуйте миті під львівським небом",
     desc: "тут вечори наповнені музикою,а заходи сонця розфарбовують небо в кольори вашого настрою",
-    url: "/terrace",
+    url: "/terrase",
   },
 ];
 export const RoofService = () => {

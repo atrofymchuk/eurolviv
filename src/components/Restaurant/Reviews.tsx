@@ -1,10 +1,14 @@
-export const Reviews = () => {
+type ReviewsToProps = {
+  isTerrasePage?:boolean
+}
+
+export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <div className="grid lg:grid-cols-[1787px] grid-cols-[332px] border-[#B3B3B3] border-x border-b lg:border-b-0">
+      <div className={`grid  ${isTerrasePage ? 'lg:grid-cols-[1745px]':'lg:grid-cols-[1787px]'} grid-cols-[332px] border-[#B3B3B3AD] border-x border-b lg:border-b-0`}>
         <div className="lg:ps-[78px] lg:h-[490px] h-[337px] flex flex-col justify-center lg:text-start text-center  ">
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ml-2">
-            Про ресторан
+            Про {isTerrasePage ? 'терасу' : 'ресторан'}
           </span>
           <h1 className="uppercase lg:w-[892px]  text-[#242425] lg:text-[100px] lg:leading-[87px] leading-[94%]  text-[32px] tracking-[-7%] pb-[24px] lg:pb-0 ">
             Відгуки наших гостей

@@ -52,7 +52,11 @@ const reviews = [
   },
 ];
 
-export const ReviewSlider = forwardRef<Slider>((_, ref) => {
+type ReviewSliderToProps = {
+  isTerrasePage?:boolean
+}
+
+export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(({isTerrasePage}, ref) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -83,7 +87,7 @@ export const ReviewSlider = forwardRef<Slider>((_, ref) => {
 
   return (
     <div className="flex flex-col items-end justify-end w-full overflow-hidden">
-      <div className="w-full max-w-[1854px] lg:h-[458px] h-fit lg:border border-[#B3B3B3]">
+      <div className={`w-full ${isTerrasePage ? " max-w-[1833px]" :' max-w-[1854px]'}  lg:h-[458px] h-fit lg:border border-[#B3B3B3]`}>
         <div className="slider-container overflow-visible">
           <Slider {...settings} ref={ref}>
             {reviews.map((el) => (
