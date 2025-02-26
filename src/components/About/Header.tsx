@@ -17,7 +17,7 @@ export const AboutHeader = () => {
 
       <h4 className="font-cofo text-[#FFFFFF]  leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
         CТВОРЕНИЙ ЩОБ ЗАКОХУВАТИ У
-        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline ">
+        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-[32px] ml-2 xl:inline ">
           Львів
         </span>
       </h4>

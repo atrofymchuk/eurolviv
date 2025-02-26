@@ -1,0 +1,23 @@
+
+.custom-leaflet-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .marker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red; 
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .marker-icon {
+    font-size: 20px;
+    color: white;
+    content: url("./assets/icons/About/marker.svg")
+  }

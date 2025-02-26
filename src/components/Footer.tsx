@@ -1,3 +1,5 @@
+import './Footer.css'
+
 import backgroundImage from "../assets/footer.png";
 import mappin from "../assets/icons/About/navigation.svg";
 import visa from "../assets/icons/visa.svg";

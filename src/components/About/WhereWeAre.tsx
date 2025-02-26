@@ -43,11 +43,7 @@ export const WhereWeAre = () => {
           </div>
         </div>
         <div className=" block border-s xl:border-s-0 border-r h-full justify-center items-center border-t xl:border-t-0 border-[#C7C7C7] m-0 xl:px-7.5 xl:py-6.75 p-5">
-          {/* <img
-            src={map}
-            alt="map"
-            className="xl:w-[862px] xl:h-[541px] xl:mb-[101px] w-[303px] h-[290px] py-4.25 mx-auto"
-          /> */}
+
 <div className="flex justify-center items-center w-full h-[300px] xl:h-auto border-s xl:border-s-0 border-r border-[#C7C7C7]">
   <MapComponent />
 </div>

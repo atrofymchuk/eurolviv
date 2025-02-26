@@ -1,3 +1,5 @@
+import './Advantages.css'
+
 import door from '../../assets/icons/About/door.svg'
 import restaurant from '../../assets/icons/About/restaurant.svg'
 import karaoke from '../../assets/icons/About/karaoke.svg'

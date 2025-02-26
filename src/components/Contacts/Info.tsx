@@ -199,7 +199,6 @@ export const Info = () => {
               Ми відкриті до співпраці у нових цікавих проектах. Надішліть свою
               пропозицію на
               <span className="font-semibold text-[#252526]">
-                {" "}
                 info@eurohotel.lviv.ua
               </span>
               , і ми обов’язково з вами зв’яжемося.
@@ -212,10 +211,10 @@ export const Info = () => {
             </h1>
             <p className="uppercase font-cofo lg:text-[20px] text-[12px] lg:leading-[25px] lg:mt-[35px] text-[#6B6B6B] lg:w-[969px]  mt-[12px] w-[298px]">
               Якщо ви бажаєте створювати атмосферу гостинності – ми чекаємо саме
-              на вас! Надсилайте резюме на{" "}
+              на вас! Надсилайте резюме на
               <span className="font-semibold text-[#252526]">
                 info@eurohotel.lviv.ua
-              </span>{" "}
+              </span>
               і станьте частиною нашої команди.
             </p>
             <div className="lg:w-[1051px] lg:h-[589px] w-[301px] h-[198px] lg:mt-[60px] lg:mb-10 mt-[40px]">

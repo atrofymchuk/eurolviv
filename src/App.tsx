@@ -17,7 +17,6 @@ function App() {
     <>
       <Router>
         <Header />
-
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/rooms" element={<Rooms />} />
@@ -29,7 +28,6 @@ function App() {
           <Route path="/special-offers" element={<SpecialOffers />} />
           <Route path="/special-offers/:offer" element={<SpecialOffers />} />
           <Route path="/terrase" element={<Terrase />} />
-
         </Routes>
         <Footer />
         <OrderModal />
