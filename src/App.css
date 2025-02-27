@@ -23,15 +23,16 @@
 
 
 }
+
 .roomslider > .slick-list >.slick-track>.slick-slide >div  {
   width: 509px !important;
 
-}
+} 
 .roomslider > .slick-list >.slick-track>.slick-slide   {
   height: 539px !important;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  display: flex !important;
+  justify-items: center !important;
+  align-items: center !important;
   margin-right: 20px !important; 
   margin-left: 20px !important; 
 }
@@ -40,7 +41,17 @@
   width: 332px !important;
   margin-right: 50px ;
 }
-
+@media (width > 1041px) {
+  .roomslider > .slick-list {
+      width: 2000px !important;
+  }
+  .roomslider > .slick-list  > .slick-track>.slick-slide {
+      width: 300px !important;
+      display: flex !important;
+      justify-items: center !important;
+      align-items: center !important;
+  }
+}
 
 @media (max-width: 768px) {
   .review > .slick-list >.slick-track>.slick-active>div  {
@@ -48,8 +59,11 @@
   }
   .special-offers-slider > .slick-list >.slick-track>.slick-slide  {
     width: 269px !important;
-  
-  
+  }
+  .roomslider > .slick-list >.slick-track>.slick-slide   {
+
+    margin-right: 0px !important; 
+    margin-left: 0px !important; 
   }
   .hall > .slick-list{
     padding-left:25px !important;

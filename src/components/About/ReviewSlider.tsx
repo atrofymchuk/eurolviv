@@ -36,7 +36,7 @@ const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) =>
   });
 
   return (
-    <div className="z-20 h-[400px] lg:w-fit lg:h-fit ">
+    <div className="z-20 h-full lg:w-fit lg:h-fit  top-0 left-0 w-full ">
       <Slider {...settings} ref={ref} className="review mt-10">
         {mixedReviews.map((review, index) => (
           <div key={index} className="mt-2.5 ">

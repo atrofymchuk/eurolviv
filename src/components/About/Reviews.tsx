@@ -66,57 +66,56 @@ export const Rewies = () => {
 
   const { openModalOrder } = useModalStore();
 
-  return (
-    <section className="flex flex-col items-center bg-[#A47762] *:font-cofo  overflow-x-hidden ">
-      <div className="grid xl:grid-cols-2 xl:w-full border-x border-[#C7C7C7] xl:max-w-[1720px]  w-[332px] px-0">
-        <div className="xl:col-span-1   pt-[52px] xl:pt-[109px] flex flex-col ">
-          <h1 className="text-center font-cofo xl:text-[198px] text-[32px] uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px] leading-[32px] xl:ps-[20px]">
-            Відгуки<span className=" xl:hidden block">Наших гостей</span>
+  return (<section className="bg-[#A47762] px-6 md:px-6  ">
+    <div className="flex flex-col items-center border-x border-[#C7C7C7] overflow-x-hidden xl:px-0">
+      <div className="grid xl:grid-cols-2 grid-cols-1 container-fluid mx-auto w-full  xl:max-w-[1720px] pe-4">
+        <div className="xl:col-span-1 pt-10 xl:pt-[109px] flex flex-col">
+          <h1 className="text-center font-cofo text-3xl md:text-5xl xl:text-[198px]  uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px]">
+            Відгуки<span className="xl:hidden block">Наших гостей</span>
           </h1>
           <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start xl:pb-10 items-center xl:items-start">
-            <p className="uppercase w-full xl:w-[450px] xl:text-[16px] text-[12px] xl:leading-[16px] text-[#E9E9E9] pt-[15px] xl:ps-[39px] xl:pt-[38px] text-center xl:text-left">
-              100 номерів, де кожна деталь творить особливу естетику. Від
-              стандартних кімнат до люксів — незмінно висока якість сервісу.
+            <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4 xl:ps-[39px] xl:pt-[38px] text-center xl:text-left">
+              100 номерів, де кожна деталь творить особливу естетику. Від стандартних кімнат до люксів — незмінно висока якість сервісу.
             </p>
             <button
-              onClick={openModalOrder}
-              className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer"
+              onClick={() => openModalOrder()}
+              className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer text-xs md:text-sm xl:text-base"
             >
               забронювати номер
             </button>
           </div>
         </div>
-        <div className="xl:col-span-1  xl:flex flex-col justify-center items-center hidden">
-          <h2 className="uppercase text-[100px] xl:leading-[81px] xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
-            <span className="relative left-[-105px]">Наших</span>
-            <span className="relative left-[105px]">гостей</span>
+
+        <div className="xl:col-span-1 xl:flex flex-col justify-center items-center hidden ">
+          <h2 className="uppercase text-5xl md:text-[80px] xl:text-[100px] xl:leading-[81px]  xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
+            <span className="relative left-[-30px] md:left-[-70px] xl:left-[-105px]">Наших</span>
+            <span className="relative left-[30px] md:left-[70px] xl:left-[105px]">гостей</span>
           </h2>
         </div>
       </div>
 
-      <div className="lg:w-full flex justify-end  w-full  lg:h-fit h-[400px] ">
-        <div className="xl:max-w-[1781px] w-full max-w-[340px] lg:h-fit h-[400px] ">
-          <div className="xl:max-w-[1720px] min-h-[427px] w-[332px] left-1/2 translate-x-[-50%] h-full  absolute  xl:w-full border-x border-[#C7C7C7]  "></div>
-          <ReviewSlider reviews={reviews} ref={sliderRef}  />
+      <div className="lg:w-full flex justify-end w-full  max-h-[500px]">
+        <div className="xl:max-w-[1781px] w-full  h-full relative">
+          <ReviewSlider reviews={reviews} ref={sliderRef} />
         </div>
       </div>
-      <div>
-        <div className="flex lg:w-[1720px] w-[300px] justify-between mt-20 lg:mt-0 ">
-          <button
-            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px] ms-[20px] mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
-            onClick={() => sliderRef.current?.slickPrev()}
-          >
-            <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
-          </button>
 
-          <button
-            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px] me-[20px] mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
-            onClick={() => sliderRef.current?.slickNext()}
-          >
-            <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
-          </button>
-        </div>
+      <div className="flex xl:max-w-[1720px] w-screen  justify-between mt-10 lg:mt-0 z-50">
+        <button
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-15  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
+          onClick={() => sliderRef.current?.slickPrev()}
+        >
+          <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+        </button>
+
+        <button
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-15 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
+          onClick={() => sliderRef.current?.slickNext()}
+        >
+          <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+        </button>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };

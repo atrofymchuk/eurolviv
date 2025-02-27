@@ -45,7 +45,7 @@ const MapComponent = () => {
     };
   }, []);
 
-  return <div id="map" className="w-full h-full xl:h-[541px] z-10"></div>;
+  return <div id="map" className="w-full h-full  z-20"></div>;
 };
 
 export default MapComponent;
