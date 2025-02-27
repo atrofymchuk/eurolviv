@@ -23,7 +23,7 @@ const useNavbarStyles = () => {
 
   function isActiveLink(path: string) {
     if (location.pathname === path) {
-      return scrolled ? "text-[#252526]" : "text-[#FFFFFF]"; // Зміна кольору лінки при скролі
+      return scrolled ? "text-[#252526]" : "text-[#FFFFFF]"; 
     }
     return scrolled ? "text-[#252526]/62 hover:text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
   }

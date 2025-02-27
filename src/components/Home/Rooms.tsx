@@ -8,28 +8,28 @@ export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
 
   return (
-    <div className="flex flex-col bg-[#A47762] relative">
-      <div className="grid grid-cols-[365px_667px_446px] ms-[100px] h-[580px]  ">
-        <div className="grid absolute grid-cols-[365px_667px_446px]  h-[580px] ">
-          <div className="absolute border left-0 border-[#C29986] w-[365px] h-[1280px]">
+    <div className="flex flex-col bg-[#A47762] relative items-center xl:items-stretch">
+      <div className="grid xl:grid-cols-[365px_667px_446px] xl:ms-[100px] h-[580px] grid-cols-[334px] ">
+        <div className="grid absolute xl:grid-cols-[365px_667px_446px]  grid-cols-[334px]  h-[580px] ">
+          <div className="absolute border left-0 border-[#C29986] xl:w-[365px] h-[1280px]">
             <div className="absolute border-e left-[365px] border-[#C29986] w-[667px] h-[1280px]"></div>
           </div>
           <div className="absolute border-e right-0 border-[#C29986] w-[667px] h-[1280px]"></div>
         </div>
         <div className=" flex flex-col justify-center ">
-          <div className="translate-y-[130px]">
-            <h1 className="text-center font-cofo xl:text-[198px] text-[32px] -translate-x-16 uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px] leading-[32px] xl:ps-[20px]">
+          <div className="xl:translate-y-[130px]">
+            <h1 className="text-center font-cofo xl:text-[198px] text-[68px] xl:-translate-x-16 uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px] leading-[32px] xl:ps-[20px]">
               номери
             </h1>
-            <div className="flex xl:flex-row text-start items-center xl:items-start relative h-[200px]">
-              <div className="absolute flex items-center justify-center xl:justify-start pt-[35px]">
-                <p className="uppercase w-[433px]  xl:text-[16px] text-[12px] xl:leading-[16px] text-[#E9E9E9] text-center xl:text-left absolute left-[-29px]">
+            <div className="flex xl:flex-row flex-col text-start items-center xl:items-start relative xl:h-[200px]">
+              <div className="xl:absolute flex xl:flex-row flex-col items-center justify-center xl:justify-start pt-[35px]">
+                <p className="uppercase xl:w-[433px]  xl:text-[16px] text-[12px] xl:leading-[16px] text-[#E9E9E9] text-center xl:text-left xl:absolute xl:left-[-29px]">
                   100 номерів, де кожна деталь творить особливу естетику. Від
                   стандартних кімнат до люксів — незмінно висока якість сервісу.
                 </p>
                 <Link
                   to="/rooms"
-                  className="uppercase text-[#242425] font-semibold hover:bg-black hover:text-[#EDE8E5] translate-x-[480px] bg-[#EDE8E5] w-fit h-fit xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full hover:cursor-pointer"
+                  className="uppercase text-[#242425] font-semibold hover:bg-black hover:text-[#EDE8E5] mt- xl:translate-x-[480px] bg-[#EDE8E5] w-fit h-fit xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full hover:cursor-pointer"
                 >
                   переглянути номери
                 </Link>
@@ -37,8 +37,8 @@ export const RoomsHome = () => {
             </div>
           </div>
         </div>
-        <div></div>
-        <div className=" h-full flex flex-col justify-center">
+        <div className="hidden lg:flex"></div>
+        <div className="hidden lg:flex h-full flex-col justify-center">
           <h1 className="uppercase text-[100px] leading-[81%] tracking-[-9%] relative  whitespace-nowrap text-[#EDE8E5]">
             <span className="absolute translate-x-[-186px]">для вашого</span>
             <br />
@@ -47,8 +47,8 @@ export const RoomsHome = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="-translate-y-9 z-10 h-[700px]">
+      <div className="relative w-[500px]">
+        <div className="xl:-translate-y-9 z-10 lg:h-[700px]">
           <RoomsSlider ref={sliderRef} />
         </div>
       </div>
