@@ -30,38 +30,40 @@ export const About = ({
   if (!swiperImages || swiperImages.length === 0) return null;
 
   return (
-    <div>
-      <div className="grid lg:grid-cols-[393px_819px_708px] grid-cols-[40px_295px_40px] items-center justify-center lg:items-start lg:justify-normal">
-        <div className="lg:h-[109px] border-x lg:border-x-0 border-b lg:border-b-0 lg:border-e  w-full h-[109px] border-[#C7C7C7] order-1 lg:order-none"></div>
-        <div className="lg:h-[109px] border-x lg:border-x-0 border-b lg:border-b-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-3 lg:order-none"></div>
-        <div className="lg:h-[109px] border-x lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none"></div>
-        <div className="lg:h-[109px] border-x lg:border-x-0  lg:border-e  w-full h-[109px] border-[#C7C7C7] order-6 lg:order-none lg:hidden"></div>
-        <div className="border-t  lg:border-e border-b lg:border-b-0 border-[#C7C7C7] flex flex-col h-full justify-center p-2.5 lg:p-0  lg:items-center order-2 lg:order-none">
+    <div className="   ">
+      <div className="grid 2xl:grid-cols-[393px_819px_708px] xl:grid-cols-[1frpx_2frpx_2frx] lg:grid-cols-[1fr_2fr_2fr] 
+      
+      md:grid-cols-[1fr_2fr_2fr] grid-cols-[40px_295px_40px] items-center justify-center 2xl:items-start 2xl:justify-normal">
+        <div className="2xl:h-[109px] border-x 2xl:border-x-0 border-b 2xl:border-b-0 2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-1 2xl:order-none"></div>
+        <div className="2xl:h-[109px] border-x 2xl:border-x-0 border-b 2xl:border-b-0  2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-3 2xl:order-none"></div>
+        <div className="2xl:h-[109px] border-x 2xl:border-x-0  2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-5 2xl:order-none"></div>
+        <div className="2xl:h-[109px] border-x 2xl:border-x-0  2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-6 2xl:order-none 2xl:hidden"></div>
+        <div className="border-t  2xl:border-e border-b 2xl:border-b-0 border-[#C7C7C7] flex flex-col h-full justify-center p-2.5 2xl:p-0  2xl:items-center order-2 2xl:order-none">
           <div className="font-cofo  text-[#8C331B] pt-[22px]">
-            <div className="lg:space-y-1.5">
-              <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center   ">
+            <div className="2xl:space-y-1.5">
+              <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center   ">
                 <img
                   src={house}
                   alt="houseicon"
-                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                  className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />{" "}
                 площа номера:{" "}
                 <span className="font-semibold">&nbsp;{area} М²</span>
               </p>
-              <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center ">
+              <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center ">
                 <img
                   src={square}
                   alt="houseicon"
-                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                  className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />{" "}
                 кількість кімнат:{" "}
                 <span className="font-semibold">&nbsp;{rooms}</span>
               </p>
-              <p className="flex uppercase lg:text-[20px] text-[12px] lg:leading-[25.2px] leading-[15px] items-center">
+              <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center">
                 <img
                   src={guestsIco}
                   alt="houseicon"
-                  className="pe-2 w-[22px] h-[22px] lg:w-fit"
+                  className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />{" "}
                 кількість гостей:{" "}
                 <span className="font-semibold">&nbsp;{guests}</span>
@@ -70,12 +72,12 @@ export const About = ({
           </div>
         </div>
 
-        <div className="flex items-center justify-center order-5 lg:order-none">
+        <div className="flex items-center justify-center order-5 2xl:order-none">
           <div
-            className={`lg:border-t lg:border-e items-center justify-center flex lg:block border-[#C7C7C7]  lg:p-[35px] w-full relative`}
+            className={`2xl:border-t 2xl:border-e items-center justify-center flex 2xl:block border-[#C7C7C7]  2xl:p-[35px] w-full relative`}
           >
-            <h1 className="uppercase font-cofo lg:text-[100px] text-[32px] lg:leading-[81px] lg:w-[1200px]  font-semibold lg:font-normal leading-[28px] flex flex-col tracking-[-0.026em]   overflow-visible">
-              <span className="order-1 lg:order-2 inline w-fit">
+            <h1 className="uppercase font-cofo 2xl:text-[100px] text-[32px] 2xl:leading-[81px] 2xl:w-[1200px]  font-semibold 2xl:font-normal leading-[28px] flex flex-col tracking-[-0.026em]   overflow-visible">
+              <span className="order-1 2xl:order-2 inline w-fit">
                 {" "}
                 {nameRoom}{" "}
               </span>
@@ -83,38 +85,67 @@ export const About = ({
           </div>
         </div>
 
-        <div className="border-e border-t border-[#C7C7C7] lg:flex hidden"></div>
+        <div className="border-e border-t border-[#C7C7C7] 2xl:flex hidden"></div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-[1212px_708px] lg:grid-rows-none grid-cols-[337px] h-[588px] lg:h-[524px] order-7 lg:order-none">
-        <div className="object-contain lg:border-e lg:border-t w-full border-[#C7C7C7] ">
+      <div className="grid 
+        grid-cols-1 sm:grid-cols-1 md:grid-cols-[475px_1fr] lg:grid-cols-[747px_1fr] 
+        xl:grid-cols-[870px_1fr]  2xl:grid-cols-[1212px_1fr] 
+        h-auto">
+        <div className="w-full border-[#C7C7C7] border-t xl:border-e">
           <SliderAbout
             imageSlider={swiperImages}
             swiperImagesStyle={swiperImagesStyle}
           />
         </div>
-        <div className="flex flex-col items-center justify-center lg:gap-[24px]  border-x lg:border-x-0 border-t border-[#C7C7C7]">
-          <div className="lg:flex flex-col lg:gap-[24px] flex justify-center lg:items-center lg:w-fit w-[295px] gap-y-[13px] p-2.5 border-x border-[#C7C7C7] lg:border-x-0 h-[342px]">
-            <p className="lg:text-[20px] text-[12px] lg:leading-[24px] leading-[14.4px] lg:tracking-[-0.04em] lg:w-[532px] w-[257px] h-fit pt-[26px] text-[#8C331B] uppercase">
+        
+        <div className="flex flex-col xl:items-center justify-center 
+           
+          border-t  border-[#C7C7C7]  border-e 
+          py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
+          <div className="flex flex-col 
+            gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-[24px]
+            w-[280px] sm:w-[300px] md:w-[1fr] lg:w-[1fr] xl:w-[1fr] 
+            px-4 sm:px-6 md:px-4 lg:px-10 xl:px-0 ">
+            
+            <p className="text-[12px] sm:text-[14px] md:text-[12px] lg:text-[16px] xl:text-[20px]
+              leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5] xl:leading-[24px]
+              tracking-[-0.02em] sm:tracking-[-0.03em] xl:tracking-[-0.04em]
+              text-[#8C331B] uppercase">
               {pOne}
             </p>
 
-            <p className="lg:text-[20px] text-[12px] lg:leading-[24px] leading-[14.4px] lg:tracking-[-0.04em] text-[#444444]  w-[257px] h-fit uppercase lg:w-[532px]">
+            <p className="text-[12px] sm:text-[14px] md:text-[12px] lg:text-[16px] xl:text-[20px]
+              leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5] xl:leading-[24px]
+              tracking-[-0.02em] sm:tracking-[-0.03em] xl:tracking-[-0.04em]
+              text-[#444444] uppercase">
               {pTwo}
             </p>
+
             <button
               onClick={openModalOrder}
-              className="uppercase mb-[23px] mt-auto bg-[#8C331B] text-[#FFFFFF]  self-start lg:px-5 lg:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold lg:text-sm text-[12px]   lg:mt-[50px] hover:cursor-pointer"
-            >
-              забронювати <span className="lg:inline hidden">номер</span>
+              className="uppercase bg-[#8C331B] text-white
+                px-4 sm:px-5 md:px-6 lg:px-7 xl:px-5
+                py-2 sm:py-2.5 md:py-3 lg:py-3.5 xl:py-3
+                text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-sm
+                rounded-3xl font-semibold
+                hover:bg-[#9c3b20] transition-colors
+                w-fit">
+              забронювати <span className="hidden md:inline">номер</span>
             </button>
           </div>
         </div>
       </div>
-      <div className="lg:grid lg:items-center  justify-center lg:grid-cols-[575px_474px_545px] order-8 lg:order-none hidden">
-        <div className="h-[84px] border-s  border-e border-[#C7C7C7]"></div>
-        <div className="h-[84px] border-e border-[#C7C7C7]"></div>
-        <div className="h-[84px]  border-[#C7C7C7] "></div>
+      <div className="container-fluid mx-auto px-4 sm:px-6 md:px-6 lg:px-10 xl:px-6 2xl:px-6">
+        <div className="grid 
+          grid-cols-1 
+          md:grid-cols-[1fr_1fr] 
+          lg:grid-cols-[1fr_1fr_1fr] 
+          border-s border-[#C7C7C7]">
+          <div className="h-[84px]  w-full  border-[#C7C7C7]"></div>
+          <div className="h-[84px] border-x w-full  hidden lg:flex border-[#C7C7C7]"></div>
+          <div className="h-[84px]  border-e lg:border-e-0 border-[#C7C7C7] w-full   "></div>
+        </div>
       </div>
     </div>
   );

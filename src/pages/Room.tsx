@@ -18,7 +18,7 @@ export const Room = () => {
   console.log(room);
   if (!room) return <div>not found</div>;
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header header={room?.header}   />
       <About
         area={room.area}

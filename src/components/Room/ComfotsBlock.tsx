@@ -25,71 +25,119 @@ export const ComfortsBlock = ({
   title,
   imgStyle,
   icons,
-  images,style
+  images,
+  style
 }: ComfortsBlockToProps) => {
-if(!icons) return
+  if(!icons) return null;
+  
   return (
-    <div className="">
-      <div className={`grid lg:grid-cols-[575px_474px_545px] grid-cols-[377px] items-center *:lg:h-[840px] justify-center ${style.bgColor} shadow-[0px_-14px_61.3px_0px_#25252612] `}>
-        <div className="lg:border-x border-[#C7C7C7] flex flex-col justify-center items-center">
-          <div className="w-[295px] lg:w-full border-x border-[#C7C7C7] lg:border-x-0">
-            <div className="p-5 pb-[22px] lg:pb-0">
-              <h1 className={`uppercase ${style.headerColor}  lg:text-[48px] lg:mb-[51px] lg:w-[260px] text-[32px] leading-[28.8px] mt-[34px] lg:mt-0   lg:leading-[48px]`}>
+    <div className={`${style.bgColor}`}>
+      <div className="container-fluid mx-auto max-w-[1720px]">
+        <div className={`grid 
+          grid-cols-1 
+          md:grid-cols-[1fr_1fr] 
+          lg:grid-cols-[350px_350px_350px] 
+          xl:grid-cols-[1fr_1fr_1fr]
+          2xl:grid-cols-[575px_474px_545px]
+          items-center justify-center 
+          border-x border-[#C7C7C7]
+          shadow-[0px_-14px_61.3px_0px_#25252612]`}>
+          
+          <div className="
+            flex flex-col justify-center items-center 
+            py-6 pb-0 2xl:py-8 lg:py-10 xl:py-0 
+            md:col-span-2 lg:col-span-1 xl:col-span-1
+            2xl:h-[825px]">
+            <div className="w-[90%] sm:w-[400px] md:w-[500px] lg:w-fit xl:w-full 
+              px-4 sm:px-6 md:px-8 lg:px-0 2xl:px-10">
+              <h1 className={`uppercase ${style.headerColor} font-cofo
+                text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[48px]
+                leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]
+                2xl:mb-[51px]
+                text-center lg:text-left
+                 lg:max-w-none`}>
+                  
                 {title}
               </h1>
+              
+              <div className="hidden lg:flex justify-center items-center 
+                lg:w-[330px] lg:h-[411px] 
+                xl:w-[390px] xl:h-[411px]
+                2xl:w-[537px] 2xl:h-[512px]">
+                <img
+                  src={images[0]}
+                  alt="room image"
+                  className={`w-full h-full object-cover ${imgStyle.ammentiesImageFst}`}
+                />
+              </div>
             </div>
-            <div className="flex justify-center items-center lg:h-[510px]">
+          </div>
+
+          <div className="lg:border-x border-[#C7C7C7] 
+            flex items-start justify-center 
+            py-6 md:py-8 lg:py-0 h-full
+            2xl:h-[825px]">
+            <div className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full 
+              px-4 sm:px-6 lg:px-6 xl:ps-[36px]
+              lg:pt-[110px] xl:pt-[120px] 2xl:pt-[170px]">
+              <ul className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-4 xl:space-y-2">
+                {icons.map((item, index) => (
+                  <li key={index}
+                    className={`flex items-center ${style.text} 
+                    space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-5 xl:space-x-6
+                      uppercase font-cofo`}>
+                    <img
+                      src={item.src}
+                      alt='icon'
+                      className="w-[16px] h-[16px] 
+                        sm:w-[18px] sm:h-[18px] 
+                        md:w-[20px] md:h-[20px] 
+                        lg:w-[24px] lg:h-[24px] 
+                        xl:w-[32px] xl:h-[32px]"
+                    />
+                    <p className="text-[10px] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px]
+                      leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
+                      {item.text.split("/").map((part, index, array) => (
+                        <Fragment key={index}>
+                          {part}
+                          {index < array.length - 1 && (
+                            <>/<br /></>
+                          )}
+                        </Fragment>
+                      ))}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center 
+            py-6 md:py-8 lg:py-0 md:pe-10 lg:pe-0 lg:ps-5
+            2xl:h-[825px]">
+            <div className="sm:w-[400px] md:w-[400px] 
+              lg:h-[441px] lg:w-[390px]
+              xl:h-[411px] xl:w-[390px] 
+              2xl:w-[497px] 2xl:h-[510px]
+              lg:mt-[105px] xl:mt-[140px] 2xl:pe-10">
+              <img
+                src={images[1]}
+                alt="room image"
+                className={`hidden lg:block 
+                  w-full h-full object-cover
+                  lg:max-w-[350px] lg:max-h-[411px]
+                  xl:max-w-[390px] xl:max-h-[411px]
+                  2xl:max-w-[497px] 2xl:max-h-[510px]
+                  ${imgStyle.ammentiesImageScd}`}
+              />
               <img
                 src={images[0]}
-                alt="livingroom"
-                className={`lg:w-[533px] lg:h-[510px] object-cover  lg:flex hidden ${imgStyle.ammentiesImageFst}`}
+                alt="room image"
+                className="lg:hidden w-full 
+                  h-[230px] sm:h-[250px] md:h-[300px] 
+                  object-cover"
               />
             </div>
-          </div>
-        </div>
-        <div className="lg:border-e border-[#C7C7C7] lg:order-none flex  items-center justify-center  ">
-          <div className="flex flex-col lg:ps-[36px] lg:pt-[240px]   border-[#C7C7C7] border-x lg:border-x-0 p-[15px]  h-full   lg:order-none order-1 w-[295px] lg:w-full">
-            <ul>
-              {icons.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex uppercase items-center ${style.text} text-[14px] leading-[17px] lg:text-[20px] lg:leading-[20px] *:font-cofo space-x-4 space-y-0.25`}
-                >
-                  <img
-                    src={item.src}
-                    alt='icon'
-                    className={`lg:w-[36px] lg:h-[36px] w-[24px] h-[24px]`}
-                  />
-                  <p>
-                    {item.text.split("/").map((part, index) => (
-                      <Fragment key={index}>
-                        {part}
-                        {index < item.text.split("/").length - 1 && (
-                          <>
-                            /<br />
-                          </>
-                        )}
-                      </Fragment>
-                    ))}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="lg:border-e   border-[#C7C7C7] flex items-center justify-center flex-col lg:order-none order-2 ">
-          
-          <div className="flex  border-x lg:border-x-0 border-[#C7C7C7] justify-center items-center lg:h-[510px] lg:w-full w-[295px]  lg:pt-[200px] pb-[28px]">
-            <img
-              src={images[1]}
-              alt="livingroom"
-              className={`w-[497px] h-[510px]  object-cover object-[40%_90%] lg:flex hidden ${imgStyle.ammentiesImageScd}`}
-            />
-            <img
-              src={images[0]}
-              alt="livingroom"
-              className="lg:w-[533px] lg:h-[510px] w-[276px] h-[262px] object-cover flex lg:hidden"
-            />
           </div>
         </div>
       </div>

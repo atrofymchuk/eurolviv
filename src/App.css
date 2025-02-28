@@ -53,6 +53,17 @@
   }
 }
 
+.special-offers-slider > .slick-list > .slick-track{
+  height: 800px !important;
+  overflow-y: hidden !important;
+}
+
+@media (width > 768px) {
+  .special-offers-slider > .slick-list > .slick-track > .slick-slide {
+width: 399px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .review > .slick-list >.slick-track>.slick-active>div  {
     width: 299px;
