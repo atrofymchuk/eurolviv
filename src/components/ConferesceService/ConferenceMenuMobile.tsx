@@ -21,15 +21,15 @@ export const ConferenceMenuMobileCard = ({
           <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
             фуршет
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium">
+          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
             переглянути меню
           </button>
         </div>
         <div className="space-y-[13px]">
-          <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
+          <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center ">
             обіди та вечері
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] bg-[#EDE8E5] rounded-full lg:mt-[37px] font-medium">
+          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5]  rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition" >
             переглянути меню
           </button>
         </div>
@@ -37,7 +37,7 @@ export const ConferenceMenuMobileCard = ({
           <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
             каво-перерви
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px]  border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium">
+          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px]  border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
             переглянути меню
           </button>
         </div>

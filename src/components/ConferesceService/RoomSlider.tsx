@@ -10,12 +10,12 @@ interface RoomSliderProps {
 
 export const RoomSlider = ({ images }: RoomSliderProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const sliderRef = useRef<Slider | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
+      setIsMobile(window.innerWidth <= 768);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -34,17 +34,37 @@ export const RoomSlider = ({ images }: RoomSliderProps) => {
 
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1280,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          variableWidth: true,
+          // centerMode: true,
+          rows: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          variableWidth: true,
+          // centerMode: true,
+          // rows: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 1,
           variableWidth: true,
-          centerMode: true,
+          // centerMode: true,
           rows: 2,
         },
       },
       {
-        breakpoint: 720,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -73,9 +93,9 @@ export const RoomSlider = ({ images }: RoomSliderProps) => {
         <div className="w-full">
           <Slider ref={sliderRef} {...settings} className="hall">
             {images.map((slide, index) => (
-              <div key={index} className="flex justify-center lg:w-[855px] lg:pe-[28px] w-[276px] h-[184px]">
-                <div className="flex lg:w-[835px] w-[276px] h-[184px]">
-                  <img src={slide} alt={`Slide ${index}`} className="lg:w-[835px] lg:h-[556px] w-[276px] h-[184px] object-cover" />
+              <div key={index} className="flex justify-center 2xl:w-[855px] 2xl:pe-[28px] xl:pe-[20px] sm:w-[355px] sm:h-[184px] lg:pe-[15px] md:pe-[10px] sm:pe-[20px] pe-[20px] w-[276px] h-[184px]">
+                <div className="flex md:items-start md:justify-center 2xl:w-[835px] xl:w-[590px] lg:w-[505px] md:w-[382px] sm:w-[355px] w-[276px] h-[184px] sm:pe-0 pe-[20px]">
+                  <img src={slide} alt={`Slide ${index}`} className="lg:w-full lg:h-[556px] md:w-[452px] md:h-[334px] sm:w-[325px] sm:h-[303px] w-[276px] h-[184px] object-cover " />
                 </div>
               </div>
             ))}
@@ -86,7 +106,7 @@ export const RoomSlider = ({ images }: RoomSliderProps) => {
       {(isMobile ? currentSlide < totalSlidesMobile - 1 : currentSlide + 2 < images.length) && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                     right-5 lg:right-25 z-10 text-[#8C331B] bg-white absolute top-1/2 
+                     right-5 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickNext()}
         >

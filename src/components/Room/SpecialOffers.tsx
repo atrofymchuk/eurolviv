@@ -29,7 +29,6 @@ export const SpecialOffers = () => {
           </div>
         </div>
       </div>
-      {/* Кнопки навігації під слайдером */}
       <div className="w-full flex justify-between space-x-4 mt-4 -translate-y-20">
         <button
           className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] lg:w-[62px] lg:h-[62px] flex items-center justify-center 

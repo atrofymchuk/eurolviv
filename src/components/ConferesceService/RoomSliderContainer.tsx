@@ -1,23 +1,21 @@
 import { RoomSlider } from "./RoomSlider";
 
 interface RoomSliderProps {
-    images: string[];
-  }
-  
+  images: string[];
+}
 
-  export const RoomSliderContainer = ({ images }: RoomSliderProps) => {
-    return (
-      <div className="relative flex  justify-center w-full h-[471px] lg:h-[711px] items-center">
-        <div className="lg:w-full w-[295px]  absolute grid lg:grid-cols-[396px_816px_706px] grid-col-[295px] h-full ">
-          <div className="border-[#C7C7C7] border-x border-e h-full"></div>
-          <div className="border-[#C7C7C7] border-e h-full lg:flex hidden"></div>
-          <div className="border-[#C7C7C7] border-e h-full lg:flex hidden"></div>
-        </div>
-  
-        <div className=" lg:pt-[79px] pt-[20.5px] w-full">
-          <RoomSlider images={images} />
-        </div>
+export const RoomSliderContainer = ({ images }: RoomSliderProps) => {
+  return (
+    <div className="relative flex justify-center h-[471px] lg:h-[711px] sm:h-[671px] items-center w-full box-border">
+      <div className="absolute grid lg:grid-cols-[21%_42%_37%] grid-cols-1  lg:w-full w-[calc(100%-15%)] mx-auto lg:mx-0 max-w-[1920px] h-full box-border">
+        <div className=" h-full lg:border-0 border-x border-[#C7C7C7] "></div>
+        <div className="border-l border-r border-[#C7C7C7] h-full hidden lg:block box-border"></div>
+        <div className=" border-[#C7C7C7] h-full hidden lg:block box-border"></div>
       </div>
-    );
-  };
-  
+
+      <div className="lg:pt-[79px] pt-[20.5px] w-full">
+        <RoomSlider images={images} />
+      </div>
+    </div>
+  );
+};

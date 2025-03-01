@@ -8,19 +8,21 @@ export const ConferenceMenuContent = () => {
   const imageArray = [food, sandwich, coffee];
 
   return (
-    <div className="relative flex items-center justify-center   lg:h-[900px]">
-      <div className="grid absolute lg:grid-cols-[396px_816px_708px] grid-cols-[295px] lg:h-[900px] h-[100px] z-[-1]">
-        <div className=" lg:border-x-none border-x lg:border-e border-[#C7C7C7] "></div>
-        <div className="lg:border-e  lg:flex hidden border-[#C7C7C7]"></div>
-        <div className="lg:border-e  lg:flex hidden border-[#C7C7C7]"></div>
+    <div className="relative flex items-center justify-center lg:py-[100px]">
+      <div className="grid absolute lg:grid-cols-[21%_42%_37%] grid-cols-1 lg:h-[1000px] h-full z-[-1] w-full">
+        <div className="w-full  border-[#C7C7C7]"></div>
+        <div className="w-full lg:border-x hidden lg:flex border-[#C7C7C7]"></div>
+        <div className="w-full hidden lg:flex border-[#C7C7C7]"></div>
       </div>
-      <div className="hidden  items-center lg:space-x-[24px] lg:flex">
-        {imageArray.map((el, ) => (
-          <ConferenceMenuCard img={el} />
+
+      <div className="hidden items-center lg:space-x-[24px] lg:flex">
+        {imageArray.map((el, index) => (
+          <ConferenceMenuCard key={index} img={el} />
         ))}
       </div>
+
       <div className="lg:hidden block">
-        <ConferenceMenuMobileCard img={imageArray[0]}/>
+          <ConferenceMenuMobileCard  img={food} />
       </div>
     </div>
   );
