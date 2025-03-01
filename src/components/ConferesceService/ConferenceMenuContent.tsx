@@ -6,6 +6,7 @@ import { ConferenceMenuMobileCard } from "./ConferenceMenuMobile";
 
 export const ConferenceMenuContent = () => {
   const imageArray = [food, sandwich, coffee];
+  
 
   return (
     <div className="relative flex items-center justify-center lg:py-[100px]">
