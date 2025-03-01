@@ -28,7 +28,7 @@ export const Mission = () => {
       </div>
 
       <div className="relative w-full xl:h-[600px] h-fit flex items-center justify-center ">
-  <div className="absolute border-[#C7C7C7] border-x h-full  xl:w-[calc(100%)] 2xl:max-w-[1720px] w-[calc(100%-32px)] sm:w-[calc(100%-0px)]"></div>
+  <div className="absolute border-[#C7C7C7] border-x h-full  xl:w-[calc(100%)] 2xl:max-w-[1720px] w-[calc(100%)] sm:w-[calc(100%-0px)] "></div>
   <ImageSlider />
 </div>
 

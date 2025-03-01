@@ -66,9 +66,9 @@ export const Rewies = () => {
 
   const { openModalOrder } = useModalStore();
 
-  return (<section className="bg-[#A47762] px-6 md:px-6  ">
-    <div className="flex flex-col items-center border-x border-[#C7C7C7] overflow-x-hidden xl:px-0">
-      <div className="grid xl:grid-cols-2 grid-cols-1 container-fluid mx-auto w-full  xl:max-w-[1720px] pe-4">
+  return (<section className="bg-[#A47762]   px-4 md:px-6 sm:px-6 xl:px-6 flex justify-center  ">
+    <div className="flex flex-col items-center border-x border-[#C7C7C7] overflow-x-hidden xl:px-0 xl:max-w-[1720px]">
+      <div className="grid xl:grid-cols-2 grid-cols-1 container-fluid mx-auto w-full   pe-4">
         <div className="xl:col-span-1 pt-10 xl:pt-[109px] flex flex-col">
           <h1 className="text-center font-cofo text-3xl md:text-5xl xl:text-[198px]  uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px]">
             Відгуки<span className="xl:hidden block">Наших гостей</span>
