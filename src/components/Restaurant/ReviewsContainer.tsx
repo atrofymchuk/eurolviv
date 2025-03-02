@@ -14,8 +14,10 @@ export const ReviewsContainer = ({
   const sliderRef = useRef<Slider | null>(null);
 
   return (
-    <div>
-      <Reviews isTerrasePage={isTerrasePage} />
+    <div className="">
+      <div className="">
+        <Reviews isTerrasePage={isTerrasePage} />
+      </div>
       <ReviewSlider ref={sliderRef} isTerrasePage={isTerrasePage} />
       <Navigation ref={sliderRef} isTerrasePage={isTerrasePage} />
     </div>

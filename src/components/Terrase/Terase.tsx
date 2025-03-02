@@ -28,42 +28,51 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
 
   return (
     <>
-      <div className="w-full flex flex-col items-center border-[#B3B3B3AD] border-y">
-        <div className="border-x border-[#B3B3B3AD] grid grid-cols-[872px_873px]">
-          <div className="flex-col flex items-center justify-center h-[420px] border-e border-[#B3B3B3AD]">
-            <div>
-              <h1 className="uppercase text-[100px] leading-[94%] tracking-[-10%] text-[#242425] w-[686px]">
+      <hr className="w-full border-[#B3B3B3AD] " />
+
+      <div className="max-w-[90.3%] w-full flex flex-col items-center border-[#B3B3B3AD] ">
+        <div className="border-x border-[#B3B3B3AD] grid grid-cols-[49.97%_50.03%] w-full">
+          <div className="flex-col flex items-center justify-center h-[420px] border-e  border-[#B3B3B3AD] ">
+            <div className="overflow-hidden w-full   flex flex-col items-center justify-center ">
+              <div>
+
+              <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] lg:text-[52px] md:text-[40px] text-[28px] leading-[94%] tracking-normal text-[#242425] w-full max-w-[506px] break-words whitespace-normal">
                 {title}
               </h1>
-              <p className="uppercase text-[16px] font-semibold w-[586px] pt-[30px]">
+              <p className="uppercase 2xl:text-[16px]  text-[14px]  font-semibold w-full 2xl:max-w-[586px] xl:max-w-[400px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px] pt-[30px] break-words whitespace-normal">
                 {index == 0 ? (
                   <>
-                    {" "}
-                    <span className="text-[#8C331B] ">{firstPart} &nbsp;</span>
+                    <span className="text-[#8C331B]">{firstPart} &nbsp;</span>
                     <span className="text-[#000000]">{secondPart}</span>
                   </>
                 ) : (
                   <span className="text-[#000000]">{desc}</span>
                 )}
               </p>
+                </div>
             </div>
           </div>
           <div className="flex-col flex items-center justify-center h-[420px]">
-            <h1 className="uppercase text-[36px] leading-[94%] tracking-[-2%] text-[#242425] w-[580px]">
-              {titleTwo}{" "}
+            <div>
+
+            <h1 className="uppercase 2xl:text-[36px] xl:text-[24px] lg:text-[24px] md:text-[18px] text-[18px] leading-[94%] tracking-[-2%] text-[#242425] xl:max-w-[580px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px]" >
+              {titleTwo}
             </h1>
-            <p className="uppercase text-[16px] w-[586px] pt-[30px]">
-              <span className="text-[#8C331B] "></span>
-              <span className="text-[#000000]">{descTwo}</span>
+            <p className="uppercase 2xl:text-[16px] text-[14px] 2xl:max-w-[586px] xl:max-w-[400px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px] pt-[30px] text-[#444444]">
+              <span className="text-[#444444] "></span>
+              <span className="text-[#444444]">{descTwo}</span>
             </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center relative">
-        <div className="w-[1747px] grid grid-cols-1 absolute self-center">
-          <div className="border-x h-[600px] border-[#B3B3B3AD] z-[-1]"></div>
+      <div className="w-full flex flex-col justify-center  relative items-center ">
+        <div className="max-w-[90.31%]   grid grid-cols-1 absolute  z-[-5] border-[#B3B3B3AD] border-x   w-full">
+          <div className="2xl:h-[600px] xl:h-[573px] lg:h-[900px] md:h-[900px] h-[900px] border- w-full  border-[#B3B3B3AD] "></div>
         </div>
-        <div className="grid grid-cols-4 overflow-hidden">
+        <hr className="w-full border-[#B3B3B3AD] " />
+
+        <div className="grid xl:grid-cols-4 grid-cols-2  overflow-hidden ">
           {imgs.map((el, index) => (
             <TerraseCard
               key={index}

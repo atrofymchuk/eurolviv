@@ -68,8 +68,9 @@ export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(({isTerraseP
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
+          // slidesPerRow: 2,
           variableWidth: false,
         },
       },
@@ -85,9 +86,9 @@ export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(({isTerraseP
     ],
   };
 
-  return (
-    <div className="flex flex-col items-end justify-end w-full overflow-hidden">
-      <div className={`w-full ${isTerrasePage ? " max-w-[1833px]" :' max-w-[1854px]'}  lg:h-[458px] h-fit lg:border border-[#B3B3B3]`}>
+  return ( 
+    <div className="flex flex-col xl:items-end items-center justify-end w-full overflow-hidden">
+      <div className={`w-full ${isTerrasePage ? " xl:max-w-[95.16%] max-w-[90.31%] " :' max-w-[96.56%]'}  2xl:h-[458px] lg:h-[267px] h-fit md:border-x xl:border border-[#B3B3B3]`}>
         <div className="slider-container overflow-visible">
           <Slider {...settings} ref={ref}>
             {reviews.map((el) => (
