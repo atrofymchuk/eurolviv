@@ -5,7 +5,7 @@ export const Header = () => {
         <div className="lg:border-s border-x  border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left py-8 px-6 lg:pt-[96px] lg:pl-[31px] ">
           <h1
             className="uppercase font-cofo text-white leading-tight tracking-tight 
-            text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px]"
+            text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px] z-1"
           >
             спеціальні
           </h1>{" "}
