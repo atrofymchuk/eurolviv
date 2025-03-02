@@ -15,7 +15,7 @@ function AboutSlider() {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "100px", 
+    centerPadding: "100px",
     arrows: false,
     slidesToShow: 1,
     variableWidth: true,
@@ -28,15 +28,25 @@ function AboutSlider() {
         settings: {
           centerPadding: "20px",
           slidesToShow: 1,
-          variableWidth: true, 
+          variableWidth: true,
         },
       },
     ],
   };
 
   return (
-    <div className="slider-container relative w-full ">
-      <Slider ref={sliderRef} {...settings}>
+    <div className="slider-container relative w-full flex items-center justify-center">
+      <button
+        className="absolute left-10 md:left-[18%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+                   lg:flex hidden items-center justify-center text-[#8C331B] bg-white 
+                   rounded-full border border-white transition hover:cursor-pointer"
+        onClick={() => sliderRef.current?.slickPrev()}
+      >
+        <IoIosArrowRoundBack className="w-3/4 h-3/4" />
+      </button>
+
+      {/* Сам слайдер */}
+      <Slider ref={sliderRef} {...settings} className="w-full">
         {slides.map((el, index) => {
           const isSide =
             Math.abs(activeSlide - index) === 1 ||
@@ -50,9 +60,8 @@ function AboutSlider() {
               <img
                 src={el}
                 alt={`slide_${index}`}
-                className="lg:w-[1223px] lg:h-[675px] w-[285px] h-[186px] mx-auto transition-all duration-300"
+                className="2xl:w-[1223px] 2xl:h-[675px] xl:w-[1000px] xl:h-[550px] lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[285px] h-[186px] mx-auto transition-all duration-300"
               />
-
               <div
                 className={`absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
                   isSide ? "opacity-100" : "opacity-0"
@@ -63,24 +72,14 @@ function AboutSlider() {
         })}
       </Slider>
 
-      <div className="lg:flex hidden">
-        <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                             left-5 lg:left-100 z-10 text-[#8C331B] bg-white absolute top-1/2 
-                             transform -translate-y-1/2 rounded-full border border-white transition hover:cursor-pointer" 
-          onClick={() => sliderRef.current?.slickPrev()}
-        >
-          <IoIosArrowRoundBack className="w-3/4 h-3/4" />
-        </button>
-        <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center  
-                                      right-5 lg:right-100 z-10 text-[#8C331B] bg-white absolute top-1/2 
-                                      transform -translate-y-1/2 rounded-full border border-white transition hover:cursor-pointer"
-          onClick={() => sliderRef.current?.slickNext()}
-        >
-          <IoIosArrowRoundForward className="w-3/4 h-3/4" />
-        </button>
-      </div>
+      <button
+        className="absolute hidden md:right-[18%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+                   lg:flex items-center justify-center text-[#8C331B] bg-white 
+                   rounded-full border border-white transition hover:cursor-pointer"
+        onClick={() => sliderRef.current?.slickNext()}
+      >
+        <IoIosArrowRoundForward className="w-3/4 h-3/4" />
+      </button>
     </div>
   );
 }

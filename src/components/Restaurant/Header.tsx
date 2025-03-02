@@ -12,13 +12,13 @@ export const RestaurantHeader = () => {
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
       />
 
-      <h4 className="font-cofo text-[#FFFFFF] leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
-        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
+      <h4 className="font-cofo text-[#FFFFFF] leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4 lg:mb-6 md:mb-1">
+        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl lg:text-2xl md:text-xl ml-2 xl:inline">
           Ресторан
         </span>
       </h4>
 
-      <h1 className="uppercase font-cofo xl:text-[198px] text-[64px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent">
+      <h1 className="uppercase font-cofo xl:text-[198px] lg:text-[148px] md:text-[108px] text-[64px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent">
         ruff
       </h1>
 

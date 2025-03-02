@@ -11,25 +11,25 @@ export const MenuPC = ({className}:MenuPCToProps) =>{
 
         < >
         
-        <div className={`flex  lg:justify-end border-s border-[#B3B3B3] lg:pe-2.25 ${className}`}>
+        <div className={`flex  md:justify-end  md:pe-2.25 ${className}`}>
             <img
               src={coffe}
               alt=""
-              className={`lg:w-[456px] lg:h-[686px] w-[97px] h-[146px] object-cover `}
+              className={`lg:w-[326px] xl:w-[426px] 2xl:w-[526px] lg:h-[686px] md:w-[300px] md:h-[300px] w-[97px] h-[146px] object-cover `}
             />
           </div>
-          <div className={`flex border-[#B3B3B3] flex-col  text-center  items-center ${className}`}>
+          <div className={`flex  flex-col  text-center  items-center ${className}`}>
             <img
               src={spagetti}
               alt=""
-              className="lg:w-full lg:h-[686px] w-[97px] h-[146px] object-cover "
+              className="lg:w-[326px] xl:w-[426px] 2xl:w-[526px] lg:h-[686px] md:w-[300px] md:h-[300px] w-[97px] h-[146px] object-cover "
             />
           </div>
-          <div className={`flex border-[#B3B3B3] lg:ps-2.25 border-e ${className}` }>
+          <div className={`flex  md:ps-2.25  ${className}` }>
             <img
               src={meat}
               alt=""
-              className="lg:w-[456px] lg:h-[686px] w-[97px] h-[146px] object-cover"
+              className="lg:w-[326px] xl:w-[426px] 2xl:w-[526px] lg:h-[686px] md:w-[300px] md:h-[300px] w-[97px] h-[146px] object-cover"
             />
           </div>
         </>

@@ -6,7 +6,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
   return (
     <>
     <div className="flex flex-col items-center justify-center ">
-      <div className={`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'max-w-[93.07%]'} grid-cols-1 border-[#B3B3B3AD] border-x border-b lg:border-b-0 ` }>
+      <div className={`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'max-w-[93.16%]'} grid-cols-1 border-[#B3B3B3AD] border-x border-b lg:border-b-0 ` }>
         <div className="lg:ps-[78px] lg:h-[490px] h-[337px] flex flex-col justify-center lg:text-start text-center  ">
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ml-2">
             Про {isTerrasePage ? 'терасу' : 'ресторан'}
