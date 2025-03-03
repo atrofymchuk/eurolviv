@@ -36,7 +36,7 @@ export const RoofService = () => {
           <div
             key={index}
             className={`relative flex flex-col bg-[#252526] ${
-              index === 2 ? "lg:col-span-2 max-h-[1600px]" : "max-h-[1173px]"
+              index === 2 ? "lg:col-span-2 md:h-[1600px] h-[873px]" : "md:h-[1173px] h-[873px]"
             }`}
           >
             <div className="relative w-full h-full">
@@ -52,28 +52,38 @@ export const RoofService = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[1748px] border-x border-[#AEAEAE3D] pointer-events-none"></div>
             )}
 
-            <div className={`absolute inset-0 flex flex-col items-center text-center mt-[138px] text-white z-10 p-4 ${
-              index === 2 ? "justify-center" : "justify-start"
-            }`}>
+            <div
+              className={`absolute inset-0 flex flex-col items-center text-center mt-[138px] text-white z-10 p-4 ${
+                index === 2 ? "justify-center" : "justify-start"
+              }`}
+            >
               <div className="flex flex-col items-center space-y-[29px]">
                 <div className="flex justify-center w-full">
                   <img src={ruffLogo} alt="" className="w-[135px] h-[18px]" />
                 </div>
-                <h1 className={`${index === 2 ? "lg:text-[198px] max-w-[900px]" : "lg:text-[100px] max-w-[722px]"} 
-  text-[32px] text-center uppercase leading-[28px] tracking-[-5%] 
-   w-full lg:leading-[81%]`}>
-  {item.title}
-</h1>
+                <h1
+                  className={`${
+                    index === 2
+                      ? "lg:text-[198px] max-w-[900px] text-[120px] md:text-[100px] sm:text-[80px] "
+                      : "lg:text-[100px] max-w-[722px] text-[90px] md:text-[70px] sm:text-[50px] "
+                  } 
+  text-[32px] text-center uppercase leading-[104%] tracking-[-5%] 
+      w-full lg:leading-[81%]`}
+                >
+                  {item.title}
+                </h1>
 
                 <p className="uppercase font-semibold lg:text-[20px] text-[14px] lg:leading-[21px] leading-[12px] lg:pt-[19px]">
                   {item.titleDesc}
                 </p>
               </div>
 
-              <div className={`flex flex-col items-center space-y-[20px] ${
-                index === 2 ? "mt-10" : "mt-auto pb-14"
-              }`}>
-                <p className="uppercase lg:text-[18px] text-[12px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
+              <div
+                className={`flex flex-col items-center space-y-[20px] ${
+                  index === 2 ? "mt-10" : "mt-auto pb-14"
+                }`}
+              >
+                <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
                   {item.desc}
                 </p>
                 <Link

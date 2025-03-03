@@ -162,6 +162,38 @@ export const initialTerraseState:TerrasesInitialState = {
 
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
+    
+ 
+    {
+      previewImage: smallHallPreview,
+      title: "конференц - зал",
+      size: "малий",
+      area: "75M²",
+      floor: 1,
+      capacity: "до 40 осіб",
+      about: {
+        pOne: "Функціональний і затишний зал створений для продуктивної роботи та комфортного спілкування. Завдяки стильному дизайну, двом плазмовим екранам та продуманому освітленню простір ідеально підходить для тренінгів, зустрічей та нарад.",
+        pTwo: "зал розташований поруч з великим конференц-залом та лаунж-зоною, що створює додаткові можливості для організації подій, поділу учасників для роботи в кількох групах одночасно або паралельних сесіях.",
+      },
+      price: { hour: 1000, day: 5000 },
+      swiperImages: [smallHallPreview, pLetterSmall, theathreSmall, negotiationTableSmall],
+      showcaseSwiperImages: [
+        pLetterSmall,
+        pLetter,
+        theathreSmall,
+        theathre,
+        negotiationTableSmall,
+        negotiationTable,
+      ],
+      icons: [
+        { src: screen, text: " 2 плазмові екрани" },
+        { src: soundSystem, text: "звукова система" },
+        { src: notebook, text: "ноутбук" },
+        { src: paper, text: "блок паперу" },
+        { src: presenter, text: "презентер" },
+        { src: flipchart, text: "фліпчарт" },
+      ],
+    },
     {
       previewImage: bigHall,
       title: "конференц - зал",
@@ -196,37 +228,6 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         { src: presenter, text: "презентер" },
 
         { src: microphone, text: "2 мікрофони" },
-      ],
-    },
- 
-    {
-      previewImage: smallHallPreview,
-      title: "конференц - зал",
-      size: "малий",
-      area: "75M²",
-      floor: 1,
-      capacity: "до 40 осіб",
-      about: {
-        pOne: "Функціональний і затишний зал створений для продуктивної роботи та комфортного спілкування. Завдяки стильному дизайну, двом плазмовим екранам та продуманому освітленню простір ідеально підходить для тренінгів, зустрічей та нарад.",
-        pTwo: "зал розташований поруч з великим конференц-залом та лаунж-зоною, що створює додаткові можливості для організації подій, поділу учасників для роботи в кількох групах одночасно або паралельних сесіях.",
-      },
-      price: { hour: 1000, day: 5000 },
-      swiperImages: [smallHallPreview, pLetterSmall, theathreSmall, negotiationTableSmall],
-      showcaseSwiperImages: [
-        pLetterSmall,
-        pLetter,
-        theathreSmall,
-        theathre,
-        negotiationTableSmall,
-        negotiationTable,
-      ],
-      icons: [
-        { src: screen, text: " 2 плазмові екрани" },
-        { src: soundSystem, text: "звукова система" },
-        { src: notebook, text: "ноутбук" },
-        { src: paper, text: "блок паперу" },
-        { src: presenter, text: "презентер" },
-        { src: flipchart, text: "фліпчарт" },
       ],
     },
     {
