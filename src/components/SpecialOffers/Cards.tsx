@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
-  const { openModalSpecialOffer } = useModalStore();
+  const {   onOpenModal } = useModalStore();
 
   const navigate = useNavigate();
 
   const handleCardClick = (url: string) => {
     navigate(`/special-offers/${url}`);
-    openModalSpecialOffer();
+    onOpenModal('specialOffer');
   };
 
   return (

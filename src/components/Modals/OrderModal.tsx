@@ -9,7 +9,6 @@ import calendarIco from "../../assets/icons/Modal/calendar.svg";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useModalStore } from "../../store/useModalStore";
 
 Modal.setAppElement("#root");
 
@@ -22,7 +21,7 @@ type FormData = {
   needRooms: boolean;
 };
 
-const OrderModal = () => {
+const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => {
   const {
     control,
     register,
@@ -42,21 +41,15 @@ const OrderModal = () => {
     toast.success("Форма успішно надіслана!", { position: "top-right" });
     setTimeout(() => {
         reset()
-        closeModalOrder();
+        onCloseGlobalModal();
     }, 5000);
   };
 
-  const {closeModalOrder,isOpenOrder} = useModalStore()
 
   return (
-    <Modal
-      isOpen={isOpenOrder}
-      onRequestClose={closeModalOrder}
-      className="fixed inset-0 flex  lg:items-center lg:justify-center"
-      overlayClassName="fixed inset-0 bg-black/49 z-100"
-    >
+  
       <div className="bg-white  lg:w-[504px] lg:h-fit h-screen  relative flex flex-col justify-center p-[37px] pt-0 items-center">
-        <button className="absolute top-4 right-4 text-2xl hover:cursor-pointer" onClick={closeModalOrder}>
+        <button className="absolute top-4 right-4 text-2xl hover:cursor-pointer" onClick={onCloseGlobalModal}>
           <IoClose />
         </button>
         <div className="lg:items-center flex flex-col">
@@ -204,7 +197,7 @@ const OrderModal = () => {
           autoClose={5000}
         />
       </div>
-    </Modal>
+
   );
 };
 

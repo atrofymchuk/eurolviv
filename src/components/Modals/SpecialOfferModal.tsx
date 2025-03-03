@@ -10,7 +10,7 @@ import { OfferDetailsColumn } from "./OfferDetailsColumn";
 Modal.setAppElement("#root");
 
 const SpecialOffersModal = () => {
-  const { closeModalSpecialOffer, isOpenSpecialOfferModal } = useModalStore();
+  const {   onCloseGlobalModal  , isOpenSpecialOfferModal } = useModalStore();
   const {  getSpecialOffer } = useSpecialOffersStore();
   let data;
   const { offer } = useParams();
@@ -26,14 +26,14 @@ if(!data) {
   return (
     <Modal
       isOpen={isOpenSpecialOfferModal}
-      onRequestClose={closeModalSpecialOffer}
+        onRequestClose={onCloseGlobalModal}
       className="fixed inset-0 flex items-center justify-center h-full lg:overflow-hidden overflow-y-auto lg:top-0 top-[70px] left-1/2 transform -translate-x-1/2 w-[100%]"
       overlayClassName="fixed inset-0 bg-black/49 z-49 lg:z-51"
     >
       <div className="bg-white lg:w-[1469px] w-[334px] max-h-screen relative flex flex-col lg:justify-center lg:p-[37px] p-[25px] items-center lg:overflow-hidden overflow-y-auto">
         <button
           className="absolute top-2 right-2 text-2xl hover:cursor-pointer"
-          onClick={closeModalSpecialOffer}
+          onClick={onCloseGlobalModal}
         >
           <IoClose color="#8C331B" />
         </button>

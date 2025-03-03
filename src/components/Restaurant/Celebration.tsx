@@ -1,8 +1,10 @@
 import wedFst from "../../assets/Restaurant/Celebrate/WED1.jpg";
 import wedScd from "../../assets/Restaurant/Celebrate/WED2.jpg";
 import wedTrd from "../../assets/Restaurant/Celebrate/WED3.jpg";
+import { useModalStore } from "../../store/useModalStore";
 
-export const Celebration = () => {
+    export const Celebration = () => {
+  const { onOpenModal } = useModalStore();
   return (
     <div className="flex flex-col items-center justify-center mx-auto w-[93.16%] border-[#B3B3B3] md:border-b">
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-full md:border-x border-[#B3B3B3] md:border-t ">
@@ -28,7 +30,7 @@ export const Celebration = () => {
               щоб ваше свято було бездоганним
             </p>
           </div>
-          <button className="uppercase lg:text-[14px] text-[12px] font-semibold bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[22px] py-[12.5px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]">
+          <button onClick={()=>onOpenModal('menu')} className="uppercase lg:text-[14px] text-[12px] font-semibold bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[22px] py-[12.5px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]">
             бенкетне меню
           </button>
         </div>

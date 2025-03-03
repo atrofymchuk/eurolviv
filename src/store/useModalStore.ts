@@ -3,14 +3,26 @@ import { ModalStore } from "./types";
 
 
 
-export const useModalStore = create<ModalStore>((set) => ({
+export const useModalStore = create<ModalStore>((set,get) => ({
+  
   isOpenOrder: false,
-  openModalOrder: () => set({ isOpenOrder: true }),
-  closeModalOrder: () => set({ isOpenOrder: false }),
-
+  isOpenMenuModal:false,
   isOpenSpecialOfferModal:false,
-  openModalSpecialOffer: () => set({ isOpenSpecialOfferModal: true }),
-  closeModalSpecialOffer: () => set({ isOpenSpecialOfferModal: false }),
-
- 
+  onOpenModal: (modal: string) =>{
+    if(modal === 'order'){
+      set({ isOpenOrder: true })
+    }else if(modal === 'menu'){
+      console.log(get().isOpenMenuModal); 
+      set({ isOpenMenuModal: true })
+    }else if(modal === 'specialOffer'){
+      set({ isOpenSpecialOfferModal: true })
+      
+      
+    }
+  },
+  onCloseGlobalModal: () => {
+    console.log('close');
+    set({isOpenOrder: false, isOpenMenuModal: false })
+    
+  },
 }));

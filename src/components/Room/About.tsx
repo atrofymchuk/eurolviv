@@ -25,7 +25,7 @@ export const About = ({
 }: RoomAboutToProps) => {
   const { pOne, pTwo, swiperImages, rooms } = about;
 
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
   if (!swiperImages || swiperImages.length === 0) return null;
 
@@ -123,7 +123,7 @@ export const About = ({
             </p>
 
             <button
-              onClick={openModalOrder}
+              onClick={()=>onOpenModal('order')}
               className="uppercase bg-[#8C331B] text-white
                 px-4 sm:px-5 md:px-6 lg:px-7 xl:px-5
                 py-2 sm:py-2.5 md:py-3 lg:py-3.5 xl:py-3

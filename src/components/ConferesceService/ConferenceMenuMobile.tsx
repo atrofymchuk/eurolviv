@@ -1,3 +1,5 @@
+import { useModalStore } from "../../store/useModalStore";
+
 type ConferenceMenuMobileCardToProps = {
   img: string;
 };
@@ -5,6 +7,7 @@ type ConferenceMenuMobileCardToProps = {
 export const ConferenceMenuMobileCard = ({
   img,
 }: ConferenceMenuMobileCardToProps) => {
+  const { onOpenModal } = useModalStore();
   return (
     <div className="flex flex-col items-center relative ">
       <img src={img} alt="" className="w-screen h-[432px] object-cover " />
@@ -21,7 +24,7 @@ export const ConferenceMenuMobileCard = ({
           <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
             фуршет
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
+          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
             переглянути меню
           </button>
         </div>
@@ -29,7 +32,7 @@ export const ConferenceMenuMobileCard = ({
           <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center ">
             обіди та вечері
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5]  rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition" >
+          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5]  rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition" >
             переглянути меню
           </button>
         </div>
@@ -37,7 +40,7 @@ export const ConferenceMenuMobileCard = ({
           <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
             каво-перерви
           </p>
-          <button className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px]  border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
+          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px]  border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
             переглянути меню
           </button>
         </div>

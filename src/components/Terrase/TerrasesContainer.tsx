@@ -1,8 +1,11 @@
+import { useModalStore } from "../../store/useModalStore";
 import { useRoomStore } from "../../store/useRoomsStore";
 import { Terrase } from "./Terase";
 
 export const TerrasesContainer = () => {
   const { terases } = useRoomStore();
+  const { onOpenModal } = useModalStore();
+
 
   return (
     <>
@@ -21,7 +24,7 @@ export const TerrasesContainer = () => {
               Тут подають вишукані страви та авторські коктейлі, грає жива
               музика — не дивно, що сюди так хочеться повертатись!
             </p>
-            <button className="uppercase border px-4 py-2 lg:text-[16px] border-[#8C331B] rounded-full lg:mt-[37px] font-medium text-[#8C331B] hover:bg-[#8C331B] hover:text-white">
+            <button  onClick={()=>onOpenModal('menu')} className="uppercase border px-4 py-2 lg:text-[16px] border-[#8C331B] rounded-full lg:mt-[37px] font-medium text-[#8C331B] hover:bg-[#8C331B] hover:text-white">
               переглянути меню
             </button>
           </div>

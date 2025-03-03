@@ -36,8 +36,8 @@ type MoreInfoToProps = {
 };
 
 export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
-  const { openModalOrder } = useModalStore();
-
+  const { onOpenModal } = useModalStore();
+        
   return (
     <div className="bg-[#A47762] px-4 sm:px-6 md:px-6 lg:px-10 xl:px-6 ">
       <div className=" container-fluid mx-auto max-w-[1720px]">
@@ -172,7 +172,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 
               </div>
               <button
-                onClick={openModalOrder}
+                onClick={()=>onOpenModal('order')}
                 className={`mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] ${!isShowAdditionalPlace ? "hidden" : "block"}
                   uppercase font-semibold 
                   bg-[#EDE8E5] text-[#A47762]
@@ -205,10 +205,10 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               />
               
               <button
-                onClick={openModalOrder}
+                onClick={()=>onOpenModal('order')}
                 className={`mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] ${isShowAdditionalPlace ? "hidden" : "flex"}
                   uppercase font-semibold 
-                  bg-[#EDE8E5] text-[#A47762]
+                  bg-[#EDE8E5]    text-[#A47762]
                   text-[12px] sm:text-[13px] md:text-[14px]
                   px-4 sm:px-5 md:px-6 lg:px-[22.5px]
                   py-2 sm:py-2.5 md:py-3 lg:py-[13px]

@@ -6,12 +6,13 @@ import { Home } from "./pages/Home";
 import Footer from "./components/Footer";
 import { Contacts } from "./pages/Contacts";
 import { Rooms } from "./pages/Rooms";
-import OrderModal from "./components/Modals/OrderModal";
 import { Room } from "./pages/Room";
 import { SpecialOffers } from "./pages/SpecialOffers";
 import { ConferenceService } from "./pages/ConferenceService";
 import { Restaurant } from "./pages/Restaurant";
 import { Terrase } from "./pages/Terrase";
+import BaseModal from "./components/Modals/BaseModal";
+
 function App() {
   return (
     <>
@@ -30,7 +31,7 @@ function App() {
           <Route path="/terrase" element={<Terrase />} />
         </Routes>
         <Footer />
-        <OrderModal />
+        <BaseModal />
       </Router>
     </>
   );

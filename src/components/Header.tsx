@@ -10,7 +10,7 @@ import { RoomsListHeader } from "./RoomsListHeader";
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
   const { rooms } = useRoomStore();
   const {
     styles,
@@ -78,7 +78,7 @@ export function Header() {
           <HeaderSocial styles={styles} />
 
           <button
-            onClick={openModalOrder}
+            onClick={()=>onOpenModal('order')}
             className={`bg-[#a33d2e] text-white px-4 py-2 lg:block hidden rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[13px] md:text-[18px] hover:cursor-pointer ${
               scrolled ? "lg:block hidden" : "block"
             } `}

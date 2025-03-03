@@ -4,7 +4,7 @@ import { RoomInfoCard } from "./RoomInfoCard";
 
 export const RoomsInfo = () => {
   const { rooms } = useRoomStore();
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
   return (
     <div className="w-full flex-col flex items-center px-4 md:px-6 sm:px-6 xl:px-6 2xl:px-0">
@@ -31,7 +31,7 @@ export const RoomsInfo = () => {
                       прямо зараз.
                     </p>
                     <button
-                      onClick={openModalOrder}
+                        onClick={()=>onOpenModal('order')}
                       className="font-cofo font-extrabold uppercase ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer lg:px-[38px] md:px-[30px] sm:px-[25px] h-fit lg:py-[13px] md:py-[11px] sm:py-[10px] rounded-full lg:text-[14px] md:text-[13px] sm:text-[12px]"
                     >
                       забронювати
@@ -55,7 +55,7 @@ export const RoomsInfo = () => {
                   прямо зараз.
                 </p>
                 <button
-                  onClick={openModalOrder}
+                  onClick={()=>onOpenModal('order')}
                   className="font-cofo font-extrabold uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px] h-fit py-[12px] rounded-full text-[12px]"
                 >
                   забронювати

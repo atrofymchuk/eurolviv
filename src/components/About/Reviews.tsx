@@ -56,7 +56,7 @@ export const Rewies = () => {
       },
       {
         id: 7,
-        name: "Michal",
+        name: "Michal", 
         country: "Polska",
         flag: "🇵🇱",
         text: "Hotel czysty, śniadanie, miła obsuga, wszystkobsprawne, blisko do centrum.”",
@@ -64,7 +64,7 @@ export const Rewies = () => {
     ],
   };
 
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
   return (<section className="bg-[#A47762]   px-4 md:px-6 sm:px-6 xl:px-6 flex justify-center  ">
     <div className="flex flex-col items-center border-x border-[#C7C7C7] overflow-x-hidden xl:px-0 xl:max-w-[1720px]">
@@ -78,7 +78,7 @@ export const Rewies = () => {
               100 номерів, де кожна деталь творить особливу естетику. Від стандартних кімнат до люксів — незмінно висока якість сервісу.
             </p>
             <button
-              onClick={() => openModalOrder()}
+              onClick={() => onOpenModal('order')}
               className="uppercase text-[#A47762] font-semibold bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer text-xs md:text-sm xl:text-base"
             >
               забронювати номер

@@ -1,6 +1,8 @@
 import headerImg from "../../assets/Restaurant/header.jpg";
+import { useModalStore } from "../../store/useModalStore";
 
 export const RestaurantHeader = () => {
+  const { onOpenModal } = useModalStore();
   return (
     <div className="relative w-full lg:h-[1157px] h-[808px] flex items-center justify-center flex-col">
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
@@ -27,7 +29,7 @@ export const RestaurantHeader = () => {
       </h4>
 
       <div className="flex lg:flex-row flex-col lg:space-x-[13px] lg:spact-y-0 lg:space-y-0 space-y-[12px] mt-[88px]">
-        <button className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md hover:text-[#8C331B] hover:bg-white">
+        <button  onClick={()=>onOpenModal('menu')} className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md hover:text-[#8C331B] hover:bg-white">
           меню
         </button>
         <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-[13px] rounded-4xl text-md " >

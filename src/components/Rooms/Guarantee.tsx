@@ -2,7 +2,7 @@ import eurohotel from "../../assets/Rooms/eurohotel.jpg";
 import { useModalStore } from "../../store/useModalStore";
 
 export const Guarantee = () => {
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal    } = useModalStore();
 
   return (
     <div className="w-full flex flex-col items-center px-4 sm:px-6 xl:px-6 2xl:px-0 ">
@@ -57,7 +57,7 @@ export const Guarantee = () => {
             </ol>
 
             <button
-              onClick={openModalOrder}
+                onClick={()=>onOpenModal('order')}
               className="uppercase bg-[#8C331B] text-[#FFFFFF] 2xl:w-fit self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[12.5px] rounded-3xl font-semibold 2xl:text-base xl:text-sm text-sm 2xl:ms-[15px] ms-[12px] mt-[24px] 2xl:mt-0 hover:cursor-pointer order-3 2xl:order-3"
               >
               забронювати <span className="2xl:inline hidden">номер</span>

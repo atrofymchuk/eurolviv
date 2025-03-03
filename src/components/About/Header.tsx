@@ -2,7 +2,7 @@ import headerImg from "../../assets/About/header.png";
 import { useModalStore } from "../../store/useModalStore";
 
 export const AboutHeader = () => {
-  const { openModalOrder } = useModalStore();
+  const {   onOpenModal } = useModalStore();
 
   return (
     <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
@@ -32,7 +32,7 @@ export const AboutHeader = () => {
         </span>
       </h4>
       <button
-        onClick={() => openModalOrder()}
+        onClick={() => onOpenModal('order')}
         className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
       >
         забронювати

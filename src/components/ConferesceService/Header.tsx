@@ -3,7 +3,7 @@ import headerPhotoMobile from "../../assets/ConferenceService/hallPhone.jpg";
 import { useModalStore } from "../../store/useModalStore";
 
 export const Header = () => {
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
   return (
     <div className="w-full relative">
       <img
@@ -41,7 +41,7 @@ export const Header = () => {
           ділові зустрічі які надихають
         </p>
         <button
-          onClick={openModalOrder}
+          onClick={()=>onOpenModal('order')}
           className="uppercase bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit  px-[34.5px] py-[13.5px] rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
         >
           замовити подію

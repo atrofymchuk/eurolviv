@@ -3,32 +3,31 @@ import { ConferenceService } from "../pages/ConferenceService";
 
 export type SpecialOffers = {
   src: string;
-  url:string
+  url: string;
   title: string;
   desc: string;
-  cardDesc:string
+  cardDesc: string;
   offer: string;
   classes: string;
-  discount?:string
-  details:string[]
-  conditions:string[]
-  
-}
+  discount?: string;
+  details: string[];
+  conditions: string[];
+};
 export type ConferenceServiceState = {
   halls: ConferenceService[];
 };
 
 export type TerrasesInitialState = {
-  terases:TerraseT[]
-}
+  terases: TerraseT[];
+};
 
-export type TerraseT ={
-  imgs:string[]
-  title:string
-  titleTwo:string
-  desc:string
-  descTwo:string
-}
+export type TerraseT = {
+  imgs: string[];
+  title: string;
+  titleTwo: string;
+  desc: string;
+  descTwo: string;
+};
 
 export type ConferenceService = {
   previewImage: string;
@@ -45,15 +44,14 @@ export type ConferenceService = {
     pOne: string;
     pTwo: string;
   };
-  swiperImages:string[]
-  showcaseSwiperImages:string[]
+  swiperImages: string[];
+  showcaseSwiperImages: string[];
   icons: { src: string; text: string }[];
 };
 
 export type SpecialOffersState = {
   specialOffers: SpecialOffers[];
-  getSpecialOffer:(param:string) => SpecialOffers | undefined
-
+  getSpecialOffer: (param: string) => SpecialOffers | undefined;
 };
 export type RoomHeader = {
   title: string;
@@ -69,14 +67,14 @@ export type RoomHeader = {
 export type RoomAbout = {
   pOne: string;
   pTwo: string;
-  rooms:number
+  rooms: number;
   swiperImages: string[];
-  swiperImagesStyle:string
+  swiperImagesStyle: string;
   isBalcony: boolean;
   bedText: string;
-  ammetiveImgStyleFst:string
-  ammetiveImgStyleScd:string
-  ammentiesImages:string[]
+  ammetiveImgStyleFst: string;
+  ammetiveImgStyleScd: string;
+  ammentiesImages: string[];
 };
 
 export type Room = {
@@ -87,31 +85,29 @@ export type Room = {
   guests: string;
   header: RoomHeader;
   about: RoomAbout;
-  icons:IconsState
-  isLux:boolean
-  suggestion:SuggestionT[]
+  icons: IconsState;
+  isLux: boolean;
+  suggestion: SuggestionT[];
 };
 
-
 export type SuggestionT = {
-  title:string
-  type:string
-  desc:string
-  img:string
-  size:string
-}
+  title: string;
+  type: string;
+  desc: string;
+  img: string;
+  size: string;
+};
 
 export type Icon = {
   src: string;
   text: string;
-}
+};
 
 export type IconsState = {
   ammentiesInRoom: Icon[];
   bathRoom: Icon[];
-  bedRoom?:Icon[]
-}
-
+  bedRoom?: Icon[];
+};
 
 export type RoomsState = {
   rooms: Room[];
@@ -119,40 +115,47 @@ export type RoomsState = {
 export type RoomsItitialState = {
   rooms: Room[];
   halls: ConferenceService[];
-  terases:TerraseT[]
+  terases: TerraseT[];
 };
-
 
 export interface ModalStore {
   isOpenOrder: boolean;
-  openModalOrder: () => void;
-  closeModalOrder: () => void;
-
+  isOpenMenuModal: boolean;
   isOpenSpecialOfferModal: boolean;
-  openModalSpecialOffer: () => void;
-  closeModalSpecialOffer: () => void;
+  onOpenModal: (modal: string) => void;
+  onCloseGlobalModal: () => void;
 }
 
 export interface Review {
-    id: number;
-    name: string;
-    country: string;
-    flag: string;
-    text: string;
-  }
-  
-  export interface Reviews {
-    ua: Review[];
-    abroad: Review[];
-  }
-  
-  export interface ReviewSliderProps {
-    reviews: Reviews;
-    ref:Slider | null
-  }
-  
+  id: number;
+  name: string;
+  country: string;
+  flag: string;
+  text: string;
+}
 
-  export interface AboutSliderProps {
-    swiperImagesStyle?:string
-    imageSlider:string[]
-  }
+export interface Reviews {
+  ua: Review[];
+  abroad: Review[];
+}
+
+export interface ReviewSliderProps {
+  reviews: Reviews;
+  ref: Slider | null;
+}
+
+export interface AboutSliderProps {
+  swiperImagesStyle?: string;
+  imageSlider: string[];
+}
+
+export interface MenuInitialState {
+  menuItems: MenuItem[];
+}
+
+export interface MenuItem {
+  title: string;
+  previewImage: string;
+  ingredients: string[];
+  grams: string;
+}

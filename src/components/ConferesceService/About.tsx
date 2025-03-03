@@ -9,7 +9,7 @@ type AboutToProps = {
 };
 
 export const About = ({ item, isOnTop }: AboutToProps) => {
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
   return (
     <div className="flex flex-col">
@@ -64,7 +64,7 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
               {item.about.pTwo}
             </p>
             <button
-              onClick={openModalOrder}
+              onClick={()=>onOpenModal('menu')}
               className="uppercase mb-[23px] mt-auto border lg:flex hidden border-[#8C331B] text-[#8C331B] hover:bg-[#8C331B] hover:text-[#FFFFFF] bg-[#FFFFFF] self-center 2xl:px-5 2xl:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold 2xl:text-sm text-[12px] 2xl:mt-[50px] hover:cursor-pointer"
             >
               конференц <span className="">&nbsp;меню</span>

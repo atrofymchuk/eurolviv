@@ -44,7 +44,7 @@ const services = [
 ];
 
 export const Advantages = () => {
-  const { openModalOrder } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
   return (
     <section className="flex justify-center items-center bg-[#A47762] px-4 sm:px-6 *:font-cofo">
@@ -85,7 +85,7 @@ export const Advantages = () => {
               ))}
             </ul>
             <button 
-              onClick={openModalOrder}
+              onClick={()=>onOpenModal('order')}
               className="uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
               забронювати номер
             </button>
