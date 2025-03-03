@@ -117,7 +117,7 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
          />
        </div>
      
-       <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-9%] pt-[10px] xl:pt-[20px] text-center line-clamp-2">
+       <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-3%] pt-[20px] text-center line-clamp-2">
          {el.title}
        </h4>
      
