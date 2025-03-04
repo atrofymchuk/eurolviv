@@ -19,44 +19,42 @@ const useNavbarStyles = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
-  let styles, iconLogoStyle, logo, link, rightMenu;
-
   function isActiveLink(path: string) {
-    if (location.pathname === path) {
-      return scrolled ? "text-[#252526]" : "text-[#FFFFFF]"; 
+    if (location.pathname === "/contacts") {
+      return location.pathname === path
+        ? "text-[#252526]" 
+        : "text-[#252526]/62 hover:text-[#252526]"; 
     }
-    return scrolled ? "text-[#252526]/62 hover:text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+    return location.pathname === path
+      ? scrolled
+        ? "text-[#252526]"
+        : "text-[#FFFFFF]"
+      : scrolled
+      ? "text-[#252526]/62 hover:text-[#252526]"
+      : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
   }
 
+  let styles, iconLogoStyle, logo, rightMenu;
+
   switch (location.pathname) {
-    case "/contacts":
-      styles = scrolled ? "bg-[#252526] text-white" : "bg-[#8C331B] text-white";
-      iconLogoStyle = "filter invert";
-      link = isActiveLink(location.pathname);
-      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#252526]";
-      logo = defaultLogo;
-      break;
-
     case "/restaurant":
-      styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
-      iconLogoStyle = scrolled ? "" : "invert";
-      link = isActiveLink(location.pathname);
-      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
-      logo = ruffLogo;
-      break;
-
     case "/terrase":
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
-      link = isActiveLink(location.pathname);
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
       logo = ruffLogo;
+      break;
+
+    case "/contacts":
+      styles = scrolled ? "bg-[#252526] text-white" : "bg-[#8C331B] text-white";
+      iconLogoStyle = "filter invert";
+      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#252526]";
+      logo = defaultLogo;
       break;
 
     default:
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "filter invert" : "";
-      link = isActiveLink(location.pathname);
       rightMenu = scrolled ? "text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
       logo = defaultLogo;
       break;
@@ -66,12 +64,12 @@ const useNavbarStyles = () => {
     styles,
     iconLogoStyle,
     logo,
-    link,
     rightMenu,
     scrolled,
     isShowRooms,
     setIsShowRooms,
-    isActiveLink
+    isActiveLink,
+    pathname: location.pathname,
   };
 };
 

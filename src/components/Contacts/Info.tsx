@@ -221,11 +221,11 @@ export const Info = () => {
               </span>
               і станьте частиною нашої команди.
             </p>
-            <div className="lg:w-[1051px] lg:h-[589px] w-[301px] h-[198px] lg:mt-[60px] lg:mb-10 mt-[40px]">
+            <div className=" max-w-full lg:mt-[60px] lg:mb-10 mt-[40px]">
               <img
                 src={hotel}
                 alt="hotel"
-                className="lg:w-[1051px] lg:h-[589px] w-[301px] h-[198px] object-cover"
+                className="w-full lobject-cover "
               />
             </div>
           </div>

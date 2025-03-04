@@ -14,6 +14,7 @@ export function Header() {
   const {
     styles,
     iconLogoStyle,
+    pathname,
     logo,
     rightMenu,
     scrolled,
@@ -32,11 +33,10 @@ export function Header() {
           ${scrolled ? "bg-white text-black" : "text-white"} 
           ${isShowRooms ? "bg-[#252526]/93" : ""}`}
       >
-
         <div className="flex items-center lg:space-x-4 lg:justify-around lg:w-fit w-full">
-        <HeaderNav
-          {...{ logo, scrolled, iconLogoStyle, setIsShowRooms, isActiveLink }}
-        />
+          <HeaderNav
+            {...{ logo, scrolled, iconLogoStyle, setIsShowRooms, isActiveLink, rightMenu, styles, pathname }}
+          />
           <div className={`hidden xl:flex items-center space-x-1 ${rightMenu}`}>
             <CiGlobe className="w-4 h-4" />
             <span className="hover:cursor-pointer">UK</span>/
@@ -46,17 +46,18 @@ export function Header() {
           <div className="relative ">
             <button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
-              className={`hidden xl:flex font-cofo font-bold hover:cursor-pointer ${rightMenu}`}
+              className={`hidden xl:flex items-center space-x-1 font-cofo font-bold hover:cursor-pointer ${rightMenu}`}
             >
-              ЗАТЕЛЕФОНУВАТИ ▾
+              <span>ЗАТЕЛЕФОНУВАТИ</span>
+              <span>▾</span>
             </button>
+
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo">
                 {["+380 99 123 45 67", "+380 97 765 43 21"].map(
                   (phone, index) => (
                     <a
                       key={index}
-                      href="#"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       {phone}
@@ -71,8 +72,8 @@ export function Header() {
 
           <button
             onClick={() => onOpenModal("order")}
-            className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer hidden lg:block ${
-              scrolled ? "lg:block hidden" : "block"
+            className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
+              scrolled ? "lg:flex hidden" : "flex"
             }`}
           >
             ЗАБРОНЮВАТИ <span className="hidden md:inline">НОМЕР</span>

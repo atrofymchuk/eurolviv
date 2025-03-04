@@ -6,12 +6,12 @@
   import { SpecialOffers } from "../components/Room/SpecialOffers";
 
   export const Home = () => {
-    return <>
+    return <div className="overflow-x-hidden">
     <HeaderHome/>
     <AboutHome />
     <RoomsHome />
     <ConferenceService />
     <RoofService />
     <SpecialOffers />
-    </>;
+    </div>;
   };
