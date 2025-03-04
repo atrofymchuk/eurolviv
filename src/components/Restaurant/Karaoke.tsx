@@ -1,7 +1,8 @@
 import karaokeFst from "../../assets/Restaurant/Karaoke/Fst.png";
 import karaokeScd from "../../assets/Restaurant/Karaoke/Scnd.png";
-
+import { useTranslation } from "react-i18next";   
 export const Karaoke = () => {
+  const { t } = useTranslation()
   return (
     <div className="flex flex-col items-center">
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-[93.16%] mx-auto border-x border-[#B3B3B3] border-t ">
@@ -11,21 +12,17 @@ export const Karaoke = () => {
               Ruff
             </p>
             <h1 className="uppercase 2xl:text-[100px] xl:text-[86px] lg:text-[82px] md:text-[56px] text-[64px] leading-[51px] lg:leading-[67px] 2xl:max-w-[525px]  lg:max-w-[350px] xl:max-w-[400px] md:max-w-[250px] max-w-[299px] tracking-[-7%] 2xl:pt-5 ">
-              караоке лаунж
+              {t('restaurant.karaoke.title')}
             </h1>
             <div className="lg:space-y-5 space-y-2 2xl:pt-[34px] xl:pt-[20px] lg:pt-[10px]  flex flex-col 2xl:max-w-[525px] md:max-w-[250px] max-w-[299px] lg:max-w-[350px] xl:max-w-[400px] ">
               <p className="uppercase text-[#252526] lg:text-[18px] lg:leading-[22.6px] leading-[15px] text-[12px]   lg:order-none order-2 ">
-                Караоке-лаунж RUFF підхоплює вас на хвилі музики й підносить іще
-                вище. Професійне обладнання і величезна колекція пісень чекають
-                своїх зірок, а атмосферу релаксу доповнюють запашні кальяни.
+                {t('restaurant.karaoke.desc.0')}
               </p>
               <p className="uppercase text-[#252526] lg:text-[18px] lg:leading-[22.6px] leading-[15px]  text-[12px] lg:order-none order-3">
-                Панорамні вікна пропонують найкращий у місті фон для музичних
-                експериментів — тут ваш голос звучить у дуеті з краєвидом
-                вечірнього Львова.
+                {t('restaurant.karaoke.desc.1')}
               </p>
               <p className="uppercase font-semibold lg:text-[18px] lg:mt-[20px] text-[12px] leading-[15px] lg:order-none order-1 mt-[13px] mb-[14px]">
-                Караоке: пт-нд з 20:00{" "}
+                {t('restaurant.karaoke.karaokeDesc')}
               </p>
             </div>
           </div>

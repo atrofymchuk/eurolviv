@@ -6,7 +6,7 @@ import { RoomsInfo } from "../components/Rooms/RoomsInfo"
 export const Rooms = ()=>{
     
     return(
-        <div>
+        <div className="overflow-x-hidden">
                 <Header />
                 <RoomsInfo />
                 <Guarantee />

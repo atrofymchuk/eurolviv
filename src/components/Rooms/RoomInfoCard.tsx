@@ -2,6 +2,8 @@ import { Room } from "../../store/types";
 import square from "../../assets/icons/Rooms/square.svg";
 import guests from "../../assets/icons/Rooms/guests.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 type RoomInfoCard = {
   room: Room;
   length: number;
@@ -11,6 +13,8 @@ type RoomInfoCard = {
 export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   const isFirstInRow = index % 3 === 0;
   const isLastInRow = (index + 1) % 3 === 0;
+  const {t} = useTranslation()
+
   return (
     <div
       key={room.type}
@@ -36,13 +40,13 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             <div className="flex items-center">
               <img src={square} alt="square" className="2xl:w-6 w-5" />
               <p className="font-cofo uppercase 2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
-                площа: {room.area}
+                {t("rooms.about.area")}: {room.area}
               </p>
             </div>
             <div className="flex items-center">
               <img src={guests} alt="square" className="2xl:w-6 w-5" />
               <p className="font-cofo uppercase 2xl:text-[16px] xl:text-[15px] sm:ps-[11.62px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
-                гостей: {room.guests}
+                {t("rooms.about.guests")}: {room.guests}
               </p>
             </div>
           </div>
@@ -62,7 +66,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
                 to={`/rooms/${room.type}`}
                 className="uppercase 2xl:py-[10px] xl:py-[9px] lg:py-[8px] py-[8px] 2xl:px-[20px] xl:px-[18px] lg:px-[16px] px-[9px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] border rounded-full text-[#A47762] hover:bg-[#A47762] hover:text-white font-cofo font-semibold transition-colors"
               >
-                переглянути номер
+                {t("buttons.viewRoom")}
               </Link>
             </div>
           </div>

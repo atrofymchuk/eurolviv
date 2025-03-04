@@ -4,31 +4,34 @@ import karaoke from "../../assets/Restaurant/Karaoke/Fst.png";
 import restaurant from "../../assets/Restaurant/homePreview.png";
 import terrace from "../../assets/Terrase/homePreview.jpg";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
+import { useTranslation } from "react-i18next";
 
-const suggestion = [
-  {
-    img: restaurant,
-    title: "Ресторан RUFF {Р’УФ}",
-    titleDesc: "на гастрономічній висоті",
-    desc: "Восьмий поверх дарує панораму старого міста, а кухня від шефа — нові кулінарні відкриття. Авторські коктейлі та вишуканий інтерʼєр доповнять враження.",
-    url: "/restaurant",
-  },
-  {
-    img: karaoke,
-    title: "Караоке лаунж",
-    titleDesc: "територія яскравих вечорів",
-    desc: "Ваш особистий простір для відпочинку: кальян, улюблені пісні та атмосфера розслаблення. Місце, де вечір стає особливим, а емоції бʼють через край.",
-    url: "/restaurant",
-  },
-  {
-    img: terrace,
-    title: "rooftop terrace",
-    titleDesc: "смакуйте миті під львівським небом",
-    desc: "тут вечори наповнені музикою,а заходи сонця розфарбовують небо в кольори вашого настрою",
-    url: "/terrase",
-  },
-];
 export const RoofService = () => {
+  const { t } = useTranslation();
+
+  const suggestion = [
+    {
+      img: restaurant,
+      title: t("home.roofService.restaurant.title"),
+      titleDesc: t("home.roofService.restaurant.titleDesc"),
+      desc: t("home.roofService.restaurant.desc"),
+      url: "/restaurant",
+    },
+    {
+      img: karaoke,
+      title: t("home.roofService.karaoke.title"),
+      titleDesc: t("home.roofService.karaoke.titleDesc"),
+      desc: t("home.roofService.karaoke.desc"),
+      url: "/restaurant",
+    },
+    {
+      img: terrace,
+      title: t("home.roofService.terrace.title"),
+      titleDesc: t("home.roofService.terrace.titleDesc"),
+      desc: t("home.roofService.terrace.desc"),
+      url: "/terrase",
+    },
+  ];
   return (
     <div className="w-full flex justify-center">
       <div className="grid w-full lg:grid-cols-2 grid-cols-1">
@@ -36,7 +39,9 @@ export const RoofService = () => {
           <div
             key={index}
             className={`relative flex flex-col bg-[#252526] ${
-              index === 2 ? "lg:col-span-2 md:h-[1600px] h-[873px]" : "md:h-[1173px] h-[873px]"
+              index === 2
+                ? "lg:col-span-2 md:h-[1600px] h-[873px]"
+                : "md:h-[1173px] h-[873px]"
             }`}
           >
             <div className="relative w-full h-full">
@@ -90,7 +95,7 @@ export const RoofService = () => {
                   to={item.url}
                   className="uppercase lg:py-[12px] lg:mt-[20px] lg:px-[20px] rounded-full font-semibold text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
                 >
-                  детальніше
+                  {t("buttons.details")}
                 </Link>
               </div>
             </div>

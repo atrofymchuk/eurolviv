@@ -9,6 +9,7 @@ import calendarIco from "../../assets/icons/Modal/calendar.svg";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 Modal.setAppElement("#root");
 
@@ -32,13 +33,15 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
   } = useForm<FormData>();
 
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+  const { t } = useTranslation()
+
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log("Форма відправлена:", data);
 
     console.log(data.date);
 
-    toast.success("Форма успішно надіслана!", { position: "top-right" });
+    toast.success(t("orderModal.toast.success"), { position: "top-right" });
     setTimeout(() => {
         reset()
         onCloseGlobalModal();
@@ -54,7 +57,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
         </button>
         <div className="lg:items-center flex flex-col">
           <h2 className="lg:mb-[25px]  text-center lg:text-[48px] text-[32px] leading-[30px]  lg:leading-[39px] lg:w-[337px] lg:pt-[68px] items-center lg:tracking-[-0.07em] uppercase text-[#252526]">
-            Замовити <br className="lg:hidden block"/> подію
+            {t("orderModal.title.0")} <br className="lg:hidden block"/> {t("orderModal.title.1")}
           </h2>
         </div>
 
@@ -66,7 +69,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
               }
             });
             if (!getValues("date")) {
-              toast.error("Виберіть коректну дату", { position: "top-right" });
+              toast.error(t("orderModal.toast.errorDate"), { position: "top-right" });
             }
           })}
           className="mt-4 flex flex-col gap-3"
@@ -74,7 +77,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
           <div className="relative">
             <div className="flex justify-between items-center border-b border-[#C9C9C9] lg:pb-[8px] pb-[8px]">
               <label className="font-cofo flex items-center text-[14px] lg:text-[18px] uppercase ">
-                Дата заходу
+                {t("orderModal.date")}
               </label>
               <div className="bg-[#A47762] rounded-full p-2 w-fit">
                 <img
@@ -90,7 +93,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
                 <Controller
                   name="date"
                   control={control}
-                  rules={{ required: "Виберіть дату" }}
+                  rules={{ required: t("orderModal.errors.date") }}
                   render={({ field }) => (
                     <DatePicker
                       selected={field.value}
@@ -114,38 +117,38 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
           <div className="lg:pt-[18px] space-y-[8px] lg:w-[436px]">
             <input
               type="text"
-              {...register("name", { required: "Введіть контактну особу" })}
-              placeholder="КОНТАКТНА ОСОБА"
+              {...register("name", { required: t("orderModal.errors.name") })}
+              placeholder={t("orderModal.contactPerson")} 
               className="font-cofo w-full py-[14px] px-[15px] lg:text-[14px] text-[12px] rounded-full outline-none bg-[#C2C2C242] ps-[25px]"
             />
 
             <input
               type="tel"
               {...register("phone", {
-                required: "Введіть номер телефону",
+                required: t("orderModal.errors.tel"),
                 pattern: {
                   value: /^[0-9]{10,15}$/, 
-                  message: "Некоректний номер телефону",
+                  message: t("orderModal.errors.tel2"),
                 },
               })}
               onInput={(e) => {
                 e.currentTarget.value = e.currentTarget.value.replace(/\D/g, ""); 
               }}
             
-              placeholder="НОМЕР ТЕЛЕФОНУ"
+              placeholder={t("orderModal.phone")}
               className="font-cofo w-full py-[14px] px-[15px] lg:text-[14px] text-[12px] rounded-full outline-none bg-[#C2C2C242] ps-[25px]"
             />
 
             <input
               type="email"
               {...register("email", {
-                required: "Введіть email",
+                required: t("orderModal.errors.email"),
                 pattern: {
                   value: /^\S+@\S+\.\S+$/,
-                  message: "Некоректний email",
+                  message: t("orderModal.errors.email2"),
                 },
               })}
-              placeholder="EMAIL"
+              placeholder={t("orderModal.email")}
               className="font-cofo w-full py-[14px] lg:text-[14px] text-[12px] px-[15px] ps-[25px] rounded-full outline-none bg-[#C2C2C242]"
             />
 
@@ -153,7 +156,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
               <select
                 className="w-full font-cofo py-[14px] lg:text-[14px] text-[12px] px-[25px] rounded-full outline-none bg-[#C2C2C242] uppercase appearance-none pr-10 text-[#7C7C7C]"
                 {...register("guests", {
-                  required: "Оберіть кількість гостей",
+                  required: t("orderModal.errors.guests"),
                 })}
               >
                 <option value="" className="text-[#7C7C7C]">
@@ -178,7 +181,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
                 htmlFor="needRooms"
                 className="uppercase lg:text-[14px] lg:leading-[17px] font-cofo"
               >
-                Чи потрібні номери для гостей?
+                {t("orderModal.isGuestRooms")}
               </label>
             </div>
 
@@ -186,7 +189,7 @@ const OrderModal = ({onCloseGlobalModal }: {onCloseGlobalModal: () => void}) => 
               type="submit"
               className="w-full lg:py-[14.5px] bg-[#A47762] py-[14px] font-cofo  text-white uppercase font-semibold rounded-full hover:cursor-pointer"
             >
-              Надіслати
+              {t("buttons.send")}
             </button>
           </div>
         </form>

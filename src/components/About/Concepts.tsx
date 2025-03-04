@@ -2,49 +2,54 @@ import roomLux from "../../assets/About/2roomLux.png";
 import terasse from "../../assets/About/terrase.png";
 import bussines from "../../assets/About/bussines.png";
 import bar from "../../assets/About/bar.png";
+import { useTranslation } from "react-i18next";
 
 
-const concepts = [
-  
-    {
-      title: ["комфорт", "без компромісів"],
-      img: roomLux,
-      alt: "bedroom",
-      text: "Стиль, комфорт і увага до деталей — у кожному номері. Тут час ніби сповільнюється, даруючи момент спокою серед міської метушні і наповнюючи кожну мить гармонією",
-    },
-    {
-      title: ["краєвиди,", "що надихають"],
-      img: terasse,
-      alt: "terrace",
-      text: "У панорамному ресторані RUFF та з тераси місто відкривається по-новому. Тут, під львівським небом, локальні смаки набувають сучасного звучання, а панорама міста стає найкращим акомпанементом до вашого відпочинку",
-    },
-    {
-      title: ["настав час для", "бізнес-справ?"],
-      img: bussines,
-      alt: "conference",
-      text: "Натхненні ідеї народжуються саме тут. Наші конференц-зали поєднують продуманий простір та бездоганний сервіс, щоб ви могли сфокусуватися на справах. Ділові зустрічі, зігріті львівською гостинністю",
-    },
-    {
-      title: ["вечірня", "енергетика"],
-      img: bar,
-      alt: "karaoke",
-      text: "Стильний караоке-лаунж – місце, де кожен вечір вирує життям, пульсує енергією вечірнього міста, запрошуючи розділити радість моменту. Тут музика об’єднує, а спогади стають особливими",
-    },
-  ]  
 
 export const Concepts = () => {
+  
+  const {t} = useTranslation()
+  const concepts = [
+    
+      {
+        title: [t("about.concepts.frstCard.title.0"), t("about.concepts.frstCard.title.1")],
+        img: roomLux,
+        alt: "bedroom",
+        text: t("about.concepts.frstCard.desc"),
+      },
+      {
+        title: [t("about.concepts.secondCard.title.0"), t("about.concepts.secondCard.title.1")],
+        img: terasse,
+        alt: "terrace",
+        text: t("about.concepts.secondCard.desc"),
+      },
+      {
+        title: [t("about.concepts.thirdCard.title.0"), t("about.concepts.thirdCard.title.1")],
+        img: bussines,
+        alt: "conference",
+        text: t("about.concepts.thirdCard.desc"),
+      },
+      {
+        title: [t("about.concepts.fourthCard.title.0"), t("about.concepts.fourthCard.title.1")],
+        img: bar,
+        alt: "karaoke",
+        text: t("about.concepts.fourthCard.desc"),
+      },
+    ]  
+
+
   return (
     <section className="w-full flex justify-center flex-col items-center bg-white  ">
       <div className="grid xl:grid-cols-4 w-full lg:grid-cols-2 box-border   border-[#C7C7C7]  px-4 md:px-6 sm:px-6 xl:px-6 2xl:px-0 fluid-container mx-auto max-w-[1720px]  ">
         <div className="xl:col-span-4 md:col-span-2 pt-[112px] xl:pt-[159px] text-center border-x border-[#C7C7C7] xl:pb-[54px] pb-6 ">
           <h1 className="text-[32px] xl:text-[100px] leading-[20px] xl:leading-[94px] uppercase font-cofo">
-            досконалість
+            {t("about.concepts.title")}
           </h1>
           <h1 className="text-[32px] xl:text-[100px] leading-[35px] xl:leading-[94px] uppercase font-cofo">
-            у кожній деталі
+            {t("about.concepts.heading.0")}
           </h1>
           <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] font-semibold font-cofo">
-            наші концепції
+              {t("about.concepts.desc")}
           </p>
         </div>
 
@@ -74,7 +79,7 @@ export const Concepts = () => {
               </p>
               <div className="mt-auto">
                 <button className="font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base transition-all duration-300 hover:bg-[#8C331B] hover:text-white font-cofo">
-                  детальніше
+                  {t("buttons.details")}
                 </button>
               </div>
             </div>

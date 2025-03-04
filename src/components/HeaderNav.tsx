@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { Link } from "react-router-dom";
 import burgerMenu from "../assets/icons/burgerMenu.svg";
+import { useTranslation } from "react-i18next";
 
 type HeaderNavProps = {
   scrolled: boolean;
@@ -12,15 +13,6 @@ type HeaderNavProps = {
   rightMenu: string;
 };
 
-const navLinks = [
-  { path: "/about", label: "ПРО ГОТЕЛЬ" },
-  { path: "/rooms", label: "НОМЕРИ" },
-  { path: "/conference-service", label: "КОНФЕРЕНЦ-СЕРВІС" },
-  { path: "/restaurant", label: "РЕСТОРАН" },
-  { path: "/special-offers", label: "СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ" },
-  { path: "/contacts", label: "КОНТАКТИ" },
-];
-
 export const HeaderNav = ({
   scrolled,
   pathname,
@@ -30,13 +22,24 @@ export const HeaderNav = ({
   isActiveLink,
 }: HeaderNavProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
+  
+  
+  const navLinks = [
+    { path: "/about", label: t("header.about") },
+    { path: "/rooms", label: t("header.rooms") },
+    { path: "/conference-service", label: t("header.conferenceServices") },
+    { path: "/restaurant", label: t("header.restaurant") },
+    { path: "/special-offers", label: t("header.specialOffers") },
+    { path: "/contacts", label: t("header.contacts") },
+  ];
 
   const renderNavLinks = (isMobile = false) =>
     navLinks.map(({ path, label }) => (
       <Link
         key={path}
         to={path}
-        className={`${ isActiveLink(
+        className={`uppercase ${ isActiveLink(
           path
         )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `}
         onClick={() => isMobile && setMenuOpen(false)}
@@ -50,6 +53,8 @@ export const HeaderNav = ({
         {label}
       </Link>
     ));
+
+
 
   return (
     <div className="flex w-full  ">

@@ -1,6 +1,8 @@
 import AboutSlider from './AboutSlider'
+import { useTranslation } from 'react-i18next'
 
 export const AbootSliderContainer = () =>{
+    const { t } = useTranslation()
 
     return (
 
@@ -9,7 +11,7 @@ export const AbootSliderContainer = () =>{
           </div>
             <AboutSlider  />
             <button className="font-cofo lg:mb-[36px] lg:text-[14px] lg:mt-[38px] font-medium bg-[#8C331B] border border-[#8C331B] hover:text-[#8C331B] uppercase  mt-[37px] mb-[55px] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-4.5 py-[13px] rounded-4xl text-[12px]">
-          забронювати стіл
+            {t('buttons.bookTable')}
         </button>               
         </div>
     )

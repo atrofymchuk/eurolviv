@@ -2,10 +2,11 @@ import Slider from "react-slick";
 import { SpecialOffersSlider } from "./SpecialOffersSlider";
 import { useRef } from "react";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
-
+import { useTranslation } from "react-i18next";
 
 
 export const SpecialOffers = () => {
+  const {t} = useTranslation()
   const sliderRef = useRef<Slider | null>(null);
 
   return (
@@ -18,7 +19,7 @@ export const SpecialOffers = () => {
             <h1 className="uppercase text-[24px] sm:text-[28px] md:text-[32px] lg:text-[100px] mb-[24px] lg:leading-[81px] lg:tracking-[-0.04em] 
               ms-[20px] lg:ms-[19px] lg:pt-[110px] lg:mb-[63px] lg:w-full  pt-[10px]
               w-[244px] leading-[28px] ">
-              спеціальні ПРОПОЗИЦІЇ
+              {t("home.specialOffers.title")}
             </h1>
 
             <div className="flex overflow-hidden h-[450px] sm:h-[500px] md:h-[600px] lg:h-[670px] flex-col">

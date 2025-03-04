@@ -1,6 +1,6 @@
 import { IconsState, Room } from "../../store/types";
 import { ComfortsBlock } from "./ComfotsBlock";
-
+import { useTranslation } from "react-i18next";
 type ComfortsBlockToProps = {
   icons: IconsState;
   room: Room;
@@ -10,6 +10,7 @@ export const ComfortsBlocksWrapper = ({
   icons,
   room,
 }: ComfortsBlockToProps) => {
+  const {t} = useTranslation()
   const commonProps = {
     imgStyle: {
       ammentiesImageFst: room.about.ammetiveImgStyleFst,
@@ -35,7 +36,7 @@ export const ComfortsBlocksWrapper = ({
       {room.isLux ? (
         <>
           <ComfortsBlock
-            title="зручності у вітальні"
+            title={t('room.comfortBlock.title')}
             icons={icons.ammentiesInRoom}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}
@@ -44,7 +45,7 @@ export const ComfortsBlocksWrapper = ({
 
           {icons.bedRoom && (
             <ComfortsBlock
-              title="зручності в спальні"
+              title={t('room.comfortBlock.title2')}
               icons={icons.bedRoom}
               {...commonProps}
               images={[commonProps.images[2], commonProps.images[3]]}
@@ -53,7 +54,7 @@ export const ComfortsBlocksWrapper = ({
           )}
 
           <ComfortsBlock
-            title="ванна кімната"
+            title={t('room.comfortBlock.title3')}
             icons={icons.bathRoom}
             {...commonProps}
             images={[commonProps.images[4], commonProps.images[5]]}
@@ -63,7 +64,7 @@ export const ComfortsBlocksWrapper = ({
       ) : (
         <>
           <ComfortsBlock
-            title="зручності в номері"
+            title={t('room.comfortBlock.title')}
             icons={icons.ammentiesInRoom}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}
@@ -71,7 +72,7 @@ export const ComfortsBlocksWrapper = ({
           />
           
           <ComfortsBlock
-            title="ванна кімната"
+            title={t('room.comfortBlock.title3')}
             icons={icons.bathRoom}
             {...commonProps}
             images={[commonProps.images[2], commonProps.images[3]]}

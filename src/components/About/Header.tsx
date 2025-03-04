@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import headerImg from "../../assets/About/header.png";
 import { useModalStore } from "../../store/useModalStore";
 
 export const AboutHeader = () => {
-  const {   onOpenModal } = useModalStore();
+  const {onOpenModal } = useModalStore();
+  const {t} = useTranslation()
+
 
   return (
     <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
@@ -15,27 +18,27 @@ export const AboutHeader = () => {
         className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
       />
 
-      <h4 className="font-cofo text-[#FFFFFF]  leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
-        CТВОРЕНИЙ ЩОБ ЗАКОХУВАТИ У
-        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-[32px] ml-2 xl:inline ">
-          Львів
+      <h4 className="font-cofo text-[#FFFFFF]  uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
+        {t("global.createdFor")}
+        <span className="font-blessed xl:font-extrabold normal-case block text-center text-[13px] xl:text-[32px] ml-2 xl:inline ">
+          {t("global.whereTo")}
         </span>
       </h4>
 
-      <h1 className="font-cofo xl:text-[198px]  text-[64px] font-normal  text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
-        EUROHOTEL
+      <h1 className="uppercase font-cofo xl:text-[198px]  text-[64px] font-normal  text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+        {t("global.eurohotel")}
       </h1>
-      <h4 className="font-cofo text-[18px] font-medium  w-[300px] lg:w-fit  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">
-        ПРОСТІР, ЩО ОГОРТАЄ ТЕПЛОМ. МІСТО, ЯКЕ НАДИХАЄ.
-        <span className="xl:block font-extrabold text-[18px]  leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
-          Євроготель — ваша особлива історія львівських вражень
+      <h4 className="font-cofo text-[18px] font-medium uppercase w-[300px] lg:w-fit  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">
+        {t("about.header.desc.0")}
+        <span className="xl:block font-extrabold text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
+          {t("about.header.desc.1")}
         </span>
       </h4>
       <button
         onClick={() => onOpenModal('order')}
         className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
       >
-        забронювати
+        {t("buttons.book")}
       </button>
     </div>
   );

@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const Header = () => {
+  const { t } = useTranslation()
   return (
     <div className="flex items-center justify-center bg-[#252526] md:pt-[117px] pt-[73px]  px-9">
       <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[1720px]">
@@ -7,21 +10,19 @@ export const Header = () => {
             className="uppercase font-cofo text-white leading-tight tracking-tight 
             text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px] z-1"
           >
-            спеціальні
+            {t("specialOffers.title")}
           </h1>{" "}
           <h1
             className="uppercase font-cofo text-white leading-tight tracking-tight lg:hidden flex 
             text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px] "
           >
-            пропозиції
+            {t("specialOffers.desc2")}
           </h1>
           <p
             className="relative uppercase font-cofo text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[18px] leading-tight sm:leading-normal 
              mt-4 sm:mt-6 lg:mt-0 "
           >
-            Обирайте найкраще для свого відпочинку – комфортні номери, вигідні
-            тарифи, особливі бонуси та незабутні враження чекають на вас у
-            самому серці Львова.
+            {t("specialOffers.desc")}
           </p>
         </div>
 
@@ -30,7 +31,7 @@ export const Header = () => {
             className="uppercase font-cofo text-white leading-tight tracking-tight lg:flex hidden 
             text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px] "
           >
-            пропозиції
+            {t("specialOffers.desc2")}
           </h1>
         </div>
 

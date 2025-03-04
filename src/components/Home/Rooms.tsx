@@ -3,9 +3,11 @@ import { RoomsSlider } from "./RoomsSlider";
 import { useRef } from "react";
 import Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+import { useTranslation } from "react-i18next";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
+  const {t} = useTranslation()
 
   return (
     <div className="flex flex-col bg-[#A47762] relative items-center md:items-stretch overflow-x-hidden overflow-y-hidden ">
@@ -23,13 +25,12 @@ export const RoomsHome = () => {
             uppercase tracking-[-0.09em] 
              text-[#EDE8E5] xl:text-start lg:text-start md:text-center 2xl:leading-[160px] xl:leading-[140px] 
              lg:leading-[120px] md:leading-[90px] sm:leading-[60px] leading-[32px]  xl:ps-[18px] lg:ps-[15px]">
-              номери
+              {t("home.rooms.rooms")}
             </h1>
             <div className="flex md:flex-row flex-col text-start items-center md:items-start  2xl:items-start relative 2xl:h-[200px] xl:h-[190px] lg:h-[180px] md:h-[150px] sm:h-[130px] ">
               <div className="md:absolute flex md:flex-row flex-col pt-[35px] md:pt-[30px] sm:pt-[25px] space-y-4 md:space-y-0 text-center md:text-start">
                 <p className="uppercase  2xl:w-[433px] xl:w-[400px] lg:w-[330px] md:w-[300px] sm:w-[280px] w-[250px] 2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px]  text-[14px] leading-[104%] text-[#E9E9E9] ps-[30px]">
-                  100 номерів, де кожна деталь творить особливу естетику. Від
-                  стандартних кімнат до люксів — незмінно висока якість сервісу.
+                {t("home.rooms.desc")}
                 </p>
                 <div className="flex justify-center items-center xl:ms-[10px] lg:ms-[10px] ">
 
@@ -37,7 +38,7 @@ export const RoomsHome = () => {
                   to="/rooms"
                   className="uppercase text-center text-[#242425] font-semibold hover:bg-black hover:text-[#EDE8E5]   bg-[#EDE8E5] whitespace-nowrap 2xl:px-[22.5px] 2xl:py-[13px] xl:px-[22px] xl:py-[12px] lg:px-[18px] lg:py-[10px] md:px-[20px] md:py-[11px] sm:px-[16px] sm:py-[10px] py-[12.5px] px-[14.5px] rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px]"
                   >
-                  переглянути номери
+                  {t("buttons.viewRooms")}
                 </Link>
                   </div>
               </div>
@@ -48,11 +49,11 @@ export const RoomsHome = () => {
         <div className="hidden md:flex h-full flex-col justify-center pe-[50px] xl:-translate-y-[60px] lg:-translate-y-[60px] md:-translate-y-[80px] ">
           <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] lg:text-[60px] md:text-[60px] sm:text-[50px] text-[40px] leading-[81%] tracking-[-9%] relative whitespace-nowrap text-[#EDE8E5]">
             <span className="absolute  xl:-translate-x-[280px] lg:-translate-x-[200px] md:-translate-x-[150px]">
-              для вашого
+              {t("home.rooms.forWhat.0")}
             </span>
             <br />
             <span className="absolute xl:-translate-x-[50px]  md:-translate-x-[50px]">
-              комфорту
+              {t("home.rooms.forWhat.1")}
             </span>
           </h1>
         </div>

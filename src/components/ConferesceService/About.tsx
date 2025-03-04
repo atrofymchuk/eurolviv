@@ -2,7 +2,7 @@ import { SliderAbout } from "../Room/SliderAbout";
 import { ConferenceService } from "../../store/types";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomInfo } from "./RoomInfo";
-
+import { useTranslation } from "react-i18next";
 type AboutToProps = {
   item: ConferenceService;
   isOnTop:boolean
@@ -10,7 +10,7 @@ type AboutToProps = {
 
 export const About = ({ item, isOnTop }: AboutToProps) => {
   const { onOpenModal } = useModalStore();
-
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
       <div className={`grid 2xl:grid-cols-[21%_42%_37%] lg:grid-cols-[21%_42%_37%]  grid-cols-[7.5%_85%_7.5%] items-center justify-center 2xl:items-start 2xl:justify-normal`}>
@@ -56,6 +56,8 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
                 roomFloor={item.floor}
               />
             </div>
+            <div className="space-y-3">
+
             <p className="2xl:text-[20px] text-[12px] sm:text-[14px]  text-center lg:text-left md:text-[16px] 2xl:leading-[24px] leading-[14.4px] 2xl:tracking-[-0.04em] 2xl:w-[532px] w-[256px] lg:w-fit h-fit lg:leading-[20px] 2xl:text-[#8C331B] text-[#252526] uppercase pt-[10px] xl:pt-[30px] 2xl:pt-0">
               {item.about.pOne}
             </p>
@@ -63,16 +65,17 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
             <p className="2xl:text-[20px] text-[12px] sm:text-[14px]  md:text-[16px] 2xl:leading-[24px] leading-[14.4px] 2xl:tracking-[-0.04em] text-[#444444] w-[2] h-fit uppercase 2xl:w-[532px] lg:flex hidden">
               {item.about.pTwo}
             </p>
+            </div>
             <button
               onClick={()=>onOpenModal('menu')}
               className="uppercase mb-[23px] mt-auto border lg:flex hidden border-[#8C331B] text-[#8C331B] hover:bg-[#8C331B] hover:text-[#FFFFFF] bg-[#FFFFFF] self-center 2xl:px-5 2xl:py-3 px-[28px] py-[13px] w-fit rounded-3xl font-semibold 2xl:text-sm text-[12px] 2xl:mt-[50px] hover:cursor-pointer"
             >
-              конференц <span className="">&nbsp;меню</span>
+              {t('buttons.conferenceMenu')}
             </button>
 
             <div className="self-center lg:self-start pt-[10px] 2xl:pt-0 text-center lg:text-left">
               <h1 className="2xl:text-[20px] tracking-[-0.05em] text-[14px] sm:text-[16px] md:text-[18px] 2xl:leading-[20px] text-[#8C331B] uppercase font-medium">
-                Контакти
+                {t('conferenceService.about.contact')}
               </h1>
               <ul className="2xl:space-y-[9px] space-y-1 2xl:pt-[21px] ">
                 <li className="uppercase text-[#252526] font-[500] 2xl:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] leading-[15px]">

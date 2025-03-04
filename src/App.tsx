@@ -12,8 +12,10 @@ import { ConferenceService } from "./pages/ConferenceService";
 import { Restaurant } from "./pages/Restaurant";
 import { Terrase } from "./pages/Terrase";
 import BaseModal from "./components/Modals/BaseModal";
+import './i18n';
 
 function App() {
+
   return (
     <>
       <Router>

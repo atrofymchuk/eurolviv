@@ -1,7 +1,7 @@
 import house from "../../assets/icons/Rooms/house.svg";
 import square from "../../assets/icons/Rooms/squareBrown.svg";
 import guestsIco from "../../assets/icons/Rooms/guestsBrown.svg";
-
+import { useTranslation } from "react-i18next";
 import { SliderAbout } from "./SliderAbout";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomAbout } from "../../store/types";
@@ -24,7 +24,7 @@ export const About = ({
   nameRoom,
 }: RoomAboutToProps) => {
   const { pOne, pTwo, swiperImages, rooms } = about;
-
+  const {t} = useTranslation()
   const { onOpenModal } = useModalStore();
 
   if (!swiperImages || swiperImages.length === 0) return null;
@@ -46,8 +46,8 @@ export const About = ({
                   src={house}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
-                />{" "}
-                площа номера:{" "}
+                />
+                {t('room.about.area')}:
                 <span className="font-semibold">&nbsp;{area} М²</span>
               </p>
               <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center ">
@@ -55,8 +55,8 @@ export const About = ({
                   src={square}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
-                />{" "}
-                кількість кімнат:{" "}
+                />
+                {t('room.about.count')}:
                 <span className="font-semibold">&nbsp;{rooms}</span>
               </p>
               <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center">
@@ -64,8 +64,8 @@ export const About = ({
                   src={guestsIco}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
-                />{" "}
-                кількість гостей:{" "}
+                />
+                {t('room.about.guests')}:
                 <span className="font-semibold">&nbsp;{guests}</span>
               </p>
             </div>
@@ -130,8 +130,8 @@ export const About = ({
                 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-sm
                 rounded-3xl font-semibold
                 hover:bg-[#9c3b20] transition-colors
-                w-fit">
-              забронювати <span className="hidden md:inline">номер</span>
+                w-fit"> 
+              {t('buttons.bookRoomArr.0')} <span className="hidden md:inline">{t('buttons.bookRoomArr.1')}</span>
             </button>
           </div>
         </div>

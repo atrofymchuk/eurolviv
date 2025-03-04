@@ -7,7 +7,7 @@ import { useRoomStore } from "../../store/useRoomsStore";
 import area from "../../assets/icons/Rooms/squareWhite.svg";
 import guest from "../../assets/icons/Rooms/guestWhite.svg";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 type RoomSSliderProps = {
     ref:Slider | null
 }
@@ -16,6 +16,7 @@ type RoomSSliderProps = {
 export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
   const { rooms } = useRoomStore();
   const [currentSlide, setCurrentSlide] = useState(1);
+  const {t} = useTranslation()
   const settings = {
     infinite: true,
     speed: 800,
@@ -121,17 +122,17 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
          {el.title}
        </h4>
      
-       <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px]">
+       <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px] gap-y-2">
          <div className="flex gap-2 items-center">
            <img src={area} alt="" className="w-[20px] h-[20px]" />
            <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
-             площа: {el.area}
+              {t("home.rooms.area")}: {el.area}
            </p>
          </div>
          <div className="flex gap-2 items-center">
            <img src={guest} alt="" className="w-[20px] h-[20px]" />
            <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
-             гостей: {el.guests}
+             {t("home.rooms.guests")}: {el.guests}
            </p>
          </div>
        </div>
@@ -142,7 +143,7 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
              to={`/rooms/${el.type}`}
              className="hover:cursor-pointer border border-[#FFFFFF] uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] font-medium px-[20px] py-[10px] 2xl:px-[29px] 2xl:py-[13px] xl:px-[25px] xl:py-[12px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
            >
-             детальніше
+           {t("buttons.details")}
            </Link>
          </div>
        )}

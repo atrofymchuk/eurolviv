@@ -19,7 +19,7 @@ export const ConferenceService = () => {
           <RoomSliderContainer images={el.showcaseSwiperImages} />
         </div>
       ))}
-      <div className="  ">
+      <div >
 
       <ConferenceMenu />
       <ConferenceMenuContent />

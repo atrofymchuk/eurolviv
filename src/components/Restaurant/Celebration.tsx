@@ -2,9 +2,11 @@ import wedFst from "../../assets/Restaurant/Celebrate/WED1.jpg";
 import wedScd from "../../assets/Restaurant/Celebrate/WED2.jpg";
 import wedTrd from "../../assets/Restaurant/Celebrate/WED3.jpg";
 import { useModalStore } from "../../store/useModalStore";
+import { useTranslation } from "react-i18next";
 
     export const Celebration = () => {
   const { onOpenModal } = useModalStore();
+  const { t } = useTranslation()
   return (
     <div className="flex flex-col items-center justify-center mx-auto w-[93.16%] border-[#B3B3B3] md:border-b">
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-full md:border-x border-[#B3B3B3] md:border-t ">
@@ -15,23 +17,18 @@ import { useModalStore } from "../../store/useModalStore";
             Ruff
           </span>
           <h1 className="uppercase lg:w-fit w-[217px] md:w-[317px] xl:text-[64px] lg:text-[54px] md:text-[44px]  lg:leading-[67px] leading-[94%]   text-[32px] tracking-[-7%] lg:whitespace-nowrap   ">
-            святкування та події
+            {t('restaurant.celebration.title')}
           </h1>
           <div className="lg:space-y-4 space-y-4 lg:mt-[37px] mt-[24px]">
             <p className="text-[#252526] 2xl:w-[722px] lg:w-[520px] xl:w-[620px] md:w-[420px] md:text-[14px]  w-[319px] uppercase lg:text-[18px]  lg:leading-[120%] text-[12px] ">
-              У RUFF кожне святкування набуває особливого шарму. Весілля,
-              ювілей, корпоратив чи хрестини — простір ресторану легко
-              трансформується під ваш формат, зберігаючи свою родзинку —
-              панораму старого Львова за вікнами.
+              {t('restaurant.celebration.desc.0')}
             </p>
             <p className="text-[#252526] 2xl:w-[722px] lg:w-[520px] xl:w-[620px] md:w-[420px]  md:text-[14px]  w-[319px] uppercase lg:text-[18px]  lg:leading-[120%] text-[12px] ">
-              Основна бенкетна зала на 8-му поверсі вміщує до 80 гостей, а
-              стильний лаунж з караоке — до 40. Ми подбаємо про кожну деталь,
-              щоб ваше свято було бездоганним
+              {t('restaurant.celebration.desc.1')}
             </p>
           </div>
           <button onClick={()=>onOpenModal('menu')} className="uppercase lg:text-[14px] text-[12px] font-semibold bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[22px] py-[12.5px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]">
-            бенкетне меню
+            {t('buttons.celebrationMenu')}
           </button>
         </div>
         <div className="md:flex hidden  border-[#B3B3B3]  "></div>

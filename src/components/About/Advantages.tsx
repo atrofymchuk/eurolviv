@@ -21,30 +21,33 @@ import washingMachine from '../../assets/icons/About/washingMachine.svg';
 import AdvantagesImg from '../../assets/About/advantages.png';
 import { useModalStore } from '../../store/useModalStore';
 
-const hotelInfo = [
-  { icon: door, text: 'номерів: 100' },
-  { icon: wheelChair, text: 'номери для гостей з інвалідністю' },
-  { icon: pet, text: 'pet-friendly' },
-  { icon: parking, text: 'міський паркінг поруч' },
-  { icon: conferenceRoom, text: 'конференц-зали' },
-  { icon: restaurant, text: 'ресторан' },
-  { icon: karaoke, text: 'караоке-лаунж' },
-  { icon: terasse, text: 'літня тераса на даху' },
-];
+import { useTranslation } from 'react-i18next';
 
-const services = [
-  { icon: reception, text: 'цілодобова стійка рецепції' },
-  { icon: roomService, text: 'цілодобовий рум-сервіс' },
-  { icon: car, text: 'трансфер' },
-  { icon: breakfast, text: 'сніданок' },
-  { icon: airConditioning, text: 'кондиціонер' },
-  { icon: wifi, text: 'безкоштовний Wi-Fi' },
-  { icon: washingMachine, text: 'прання' },
-  { icon: ironingChlothes, text: 'прасування' },
-];
 
 export const Advantages = () => {
   const { onOpenModal } = useModalStore();
+  const {t} = useTranslation()
+  const hotelInfo = [
+    { icon: door, text: t("about.advantages.services.0") },
+    { icon: wheelChair, text: t("about.advantages.services.1") },
+    { icon: pet, text: t("about.advantages.services.2") },
+    { icon: parking, text: t("about.advantages.services.3") },
+    { icon: conferenceRoom, text: t("about.advantages.services.4") },
+    { icon: restaurant, text: t("about.advantages.services.5") },
+    { icon: karaoke, text: t("about.advantages.services.6") },
+    { icon: terasse, text: t("about.advantages.services.7") },
+  ];
+  
+  const services = [
+    { icon: reception, text: t("about.advantages.servises2.0") },
+    { icon: roomService, text: t("about.advantages.servises2.1") },
+    { icon: car, text: t("about.advantages.servises2.2") },
+    { icon: breakfast, text: t("about.advantages.servises2.3") },
+    { icon: airConditioning, text: t("about.advantages.servises2.4") },
+    { icon: wifi, text: t("about.advantages.servises2.5") },
+    { icon: washingMachine, text: t("about.advantages.servises2.6") },
+    { icon: ironingChlothes, text: t("about.advantages.servises2.7") },
+  ];
 
   return (
     <section className="flex justify-center items-center bg-[#A47762] px-4 sm:px-6 *:font-cofo">
@@ -53,7 +56,7 @@ export const Advantages = () => {
       <div className="h-full p-4 flex lg:justify-start justify-center">
   <div className="flex flex-col xl:ps-7.5 items-center  lg:items-start lg:text-start">
     <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[56px]">
-      інформація <br className="hidden xl:block" /> про готель
+      {t("about.advantages.title")}
     </h1>
     <ul className="uppercase pt-[29px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl space-y-2">
       {hotelInfo.map(({ icon, text }, index) => (
@@ -74,7 +77,7 @@ export const Advantages = () => {
         <div className="h-full p-4 w-full lg:border-x  border-[#C7C7C7]">
           <div className="flex flex-col ps-0 xl:ps-7.5 items-center lg:items-start">
             <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[56px] xl:text-left">
-              послуги та зручності
+              {t("about.advantages.title2")}
             </h1>
             <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] space-y-2">
               {services.map(({ icon, text }, index) => (
@@ -87,7 +90,7 @@ export const Advantages = () => {
             <button 
               onClick={()=>onOpenModal('order')}
               className="uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer">
-              забронювати номер
+              {t("buttons.bookRoom")}
             </button>
           </div>
         </div>

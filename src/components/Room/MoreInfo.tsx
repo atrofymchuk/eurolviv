@@ -15,21 +15,7 @@ import parking from "../../assets/icons/About/parking.svg";
 
 import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.png";
 import coffee from "../../assets/Rooms/AdditionaInfo/coffee.jpg";
-
-const amenities = [
-  { src: sofa, text: "спальне місце на дивані " },
-  { src: babybed, text: "доступне дитяче ліжечко" },
-  { src: kid, text: "дитина до 6 років безкоштовно" },
-  { src: olderkid, text: "старше 6 років  – 700 UAH/доба" },
-  { src: cup, text: "сніданок включено" },
-  { src: guest, text: "max – 2 особи" },
-];
-const availableService = [
-  { src: washingMachine, text: "прання " },
-  { src: roomservice, text: "прасування" },
-  { src: ironing, text: "цілодобовий рум-сервіс" },
-  { src: pet, text: "pet-friendly" },
-];
+import { useTranslation } from "react-i18next";
 
 type MoreInfoToProps = {
   isShowAdditionalPlace: boolean;
@@ -37,6 +23,23 @@ type MoreInfoToProps = {
 
 export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
   const { onOpenModal } = useModalStore();
+  const {t} = useTranslation()
+        
+
+  const amenities = [
+    { src: sofa, text: t('room.moreInfo.amenties.0') },
+    { src: babybed, text: t('room.moreInfo.amenties.1') },
+    { src: kid, text: t('room.moreInfo.amenties.2') },
+    { src: olderkid, text: t('room.moreInfo.amenties.3') },
+    { src: cup, text: t('room.moreInfo.amenties.4') },
+    { src: guest, text: t('room.moreInfo.amenties.5') },
+  ];
+  const availableService = [
+    { src: washingMachine, text: t('room.moreInfo.availableService.0') },
+    { src: roomservice, text: t('room.moreInfo.availableService.1') },
+    { src: ironing, text: t('room.moreInfo.availableService.2') },
+    { src: pet, text: t('room.moreInfo.availableService.3') },
+  ];
         
   return (
     <div className="bg-[#A47762] px-4 sm:px-6 md:px-6 lg:px-10 xl:px-6 ">
@@ -50,7 +53,6 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
           lg:items-center lg:justify-center 
           border-x border-[#C7C7C7]">
 
-          {/* Перша колонка */}
           <div className="flex flex-col justify-center items-center 
             py-6 md:py-0 lg:py-0 xl:py-0 2xl:ps-5 
             md:col-span-2 lg:col-span-1
@@ -59,13 +61,12 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
             <div className="w-[90%] sm:w-[400px] md:w-[500px] lg:w-fit xl:w-full 
               ">
               
-              {/* Секція для додаткових послуг */}
               <div className={`${isShowAdditionalPlace ? "flex flex-col" : "hidden"} px-5 lg:px-0`}>
                 <h1 className="uppercase text-white font-cofo text-center lg:text-left
                   text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px]
-                  leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]
+                  leading-[104%]
                   2xl:mb-[51px]">
-                  доступні платні послуги
+                  {t('room.moreInfo.title2')}
                 </h1>
                 <img
                   src={coffee}
@@ -79,13 +80,12 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 />
               </div>
 
-              {/* Секція для додаткового місця */}
               <div className={!isShowAdditionalPlace ? "block" : "hidden"}>
                 <h1 className="uppercase text-white font-cofo
                   text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] 
-                  leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]
+                  leading-[104%]
                   mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]">
-                  додаткове місце в номері
+                  {t('room.moreInfo.title2')}
                 </h1>
                 
                 <ul className="">
@@ -103,7 +103,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                           xl:w-[36px] xl:h-[36px]"
                       />
                       <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]
-                        leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
+                        leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[85%]">
                         {item.text}
                       </p>
                     </li>
@@ -112,21 +112,18 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               </div>
             </div>
           </div>
-
-          {/* Друга колонка */}
           <div className="lg:border-x border-[#C7C7C7] 
             flex lg:items-start justify-center 
             2xl:h-[825px] ">
             <div className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full 
               px-4 sm:px-6 lg:px-6 xl:ps-[36px] md:py-10 
-              lg:pt-[200px] xl:pt-[120px] 2xl:pt-[170px]">
+              lg:pt-[200px] xl:pt-[120px] 2xl:pt-[70px]">
               
-              <h1 className={!isShowAdditionalPlace ? "block" : "hidden " + 
-                " uppercase text-white font-cofo" +
-                " text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]  xl:text-[48px] " +
-                " leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]" +
-                " mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]"}>
-                доступні платні послуги
+              <h1 className={`${isShowAdditionalPlace ? "block" : "hidden "} 
+                uppercase text-white font-cofo
+                text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]  xl:text-[48px] leading-[104%]
+           mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]"`}>
+                {t('room.moreInfo.title')}
               </h1>
 
               <ul className="">
@@ -144,14 +141,13 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                         xl:w-[36px] xl:h-[36px]"
                     />
                     <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]
-                      leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
+                      leading-[104%]">
                       {item.text}
                     </p>
                   </li>
                 ))}
               </ul>
 
-              {/* Паркінг інформація */}
               <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-[148px]
                 flex items-center text-[#E1E1E1] uppercase font-cofo
                 space-x-3 sm:space-x-4">
@@ -165,9 +161,8 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                     xl:w-[36px] xl:h-[36px]"
                 />
                 <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] mt-auto
-                  leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
-                  міський паркінг знаходиться навпроти готелю. 
-                  Попередня резервація місць не передбачена.
+                  leading-[104%]">
+                  {t('room.moreInfo.parking')}
                 </p>
                 
               </div>
@@ -181,7 +176,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   py-2 sm:py-2.5 md:py-3 lg:py-[13px]
                   rounded-full
                   hover:bg-white transition-colors`}>
-                забронювати номер
+                {t('buttons.bookRoom')}
               </button>
             </div>
            
@@ -214,7 +209,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   py-2 sm:py-2.5 md:py-3 lg:py-[13px]
                   rounded-full
                   hover:bg-white transition-colors`}>
-                забронювати номер
+                {t('buttons.bookRoom')}
               </button>
             </div>
           </div>

@@ -1,0 +1,15 @@
+{
+    "header": {
+        "about": "About Us",
+        "rooms": "Rooms",
+        "conferenceServices": "Conference Services",
+        "restaurant": "Restaurant",
+        "specialOffers": "Special Offers",
+        "contacts": "Contacts",
+        "callUs": "Call Us",
+        "book": "Book a Room"
+    },
+    "footer": {
+
+    }
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { RoomHeader } from "../../store/types";
 
 interface RoomHeaderToProps {
@@ -17,6 +18,7 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header}) => {
   } = header;
 const titlePart = title.split(' ')
 
+const {t} = useTranslation()
 
   return (
     <div className="w-full relative">
@@ -35,10 +37,10 @@ const titlePart = title.split(' ')
       ></div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
-        <h4 className="font-cofo leading-[22.68px] font-semibold underline text-sm decoration-transparent xl:mb-4">
-          СТВОРЕНИЙ ЩОБ ЗАКОХУВАТИ У
-          <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
-            Львів
+        <h4 className="font-cofo uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent xl:mb-4">
+          {t('global.createdFor')}
+          <span className="font-blessed normal-case xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
+            {t('global.whereTo')}
           </span>
         </h4>
 
@@ -59,16 +61,16 @@ const titlePart = title.split(' ')
       <div className="absolute bottom-10 w-full  lg:justify-center">
         <div className="flex flex-col lg:flex-row   text-center flex-wrap lg:justify-between w-full lg:px-[74px] ">
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            кількість номерів: <span className="text-[#FFFFFF]">{count}</span>
+            {t('room.header.count')}: <span className="text-[#FFFFFF]">{count}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            вид з номера: <span className="text-[#FFFFFF]">{view}</span>
+            {t('room.header.view')}: <span className="text-[#FFFFFF]">{view}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            час заїзду: <span className="text-[#FFFFFF]">{arriveTime}</span>
+            {t('room.header.arriveTime')}: <span className="text-[#FFFFFF]">{arriveTime}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            час виїзду: <span className="text-[#FFFFFF]">{leaveTime}</span>
+            {t('room.header.leaveTime')}: <span className="text-[#FFFFFF]">{leaveTime}</span>
           </p>
         </div>
       </div>

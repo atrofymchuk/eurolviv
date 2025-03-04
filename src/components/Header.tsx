@@ -6,6 +6,7 @@ import useNavbarStyles from "./Hooks/useHeaderStyle";
 import { HeaderNav } from "./HeaderNav";
 import { RoomsListHeader } from "./RoomsListHeader";
 import { CiGlobe } from "react-icons/ci";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,9 +24,16 @@ export function Header() {
     isActiveLink,
   } = useNavbarStyles();
 
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = () => {
+    const newLang = i18n.language === "en" ? "uk" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <header
-      className="relative max-w-screen  flex"
+      className="max-w-screen fixed inset-0 z-50 h-fit  flex "
       onMouseLeave={() => setIsShowRooms(false)}
     >
       <div
@@ -35,20 +43,46 @@ export function Header() {
       >
         <div className="flex items-center lg:space-x-4 lg:justify-around lg:w-fit w-full">
           <HeaderNav
-            {...{ logo, scrolled, iconLogoStyle, setIsShowRooms, isActiveLink, rightMenu, styles, pathname }}
+            {...{
+              logo,
+              scrolled,
+              iconLogoStyle,
+              setIsShowRooms,
+              isActiveLink,
+              rightMenu,
+              styles,
+              pathname,
+            }}
           />
-          <div className={`hidden xl:flex items-center space-x-1 ${rightMenu}`}>
-            <CiGlobe className="w-4 h-4" />
-            <span className="hover:cursor-pointer">UK</span>/
-            <span className="hover:cursor-pointer">ENG</span>
-          </div>
+          <button
+            className={`hidden xl:flex items-center  uppercase`}
+            onClick={changeLanguage}
+          >
+            <CiGlobe className="w-4 h-4 me-1" />
+            
+            {["uk", "en"]
+              .map((lang) => (
+                <span
+                  key={lang}
+                  className={`hover:cursor-pointer ${
+                    i18n.language === lang ? "font-semibold " : ""
+                  }`}
+                >
+                  { lang === 'en' ? 'ENG' : 'UK' }
+                </span>
+              ))
+              .reduce<React.ReactNode[]>(
+                (prev, curr) => (prev.length ? [...prev, "/", curr] : [curr]),
+                []
+              )}
+          </button>
 
           <div className="relative ">
             <button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
-              className={`hidden xl:flex items-center space-x-1 font-cofo font-bold hover:cursor-pointer ${rightMenu}`}
+              className={`whitespace-nowrap uppercase hidden xl:flex items-center space-x-1 font-cofo font-bold hover:cursor-pointer ${rightMenu}`}
             >
-              <span>ЗАТЕЛЕФОНУВАТИ</span>
+              <span>{t("header.callUs")}</span>
               <span>▾</span>
             </button>
 
@@ -72,11 +106,13 @@ export function Header() {
 
           <button
             onClick={() => onOpenModal("order")}
-            className={`bg-[#a33d2e] text-white px-4 py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
+            className={`uppercase bg-[#a33d2e] text-white px-4 lg:w-xs text-center items-center justify-center  py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
               scrolled ? "lg:flex hidden" : "flex"
             }`}
           >
-            ЗАБРОНЮВАТИ <span className="hidden md:inline">НОМЕР</span>
+            {t("header.book").split(" ").map((word, index) => (
+              <span className={`${index === 1 ? "lg:flex hidden" : ""}`} key={index}>{word}&nbsp;</span>
+            ))}
           </button>
         </div>
       </div>

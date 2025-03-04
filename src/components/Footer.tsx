@@ -18,10 +18,8 @@ export const Footer = () => {
     <footer className="relative text-white py-[67px] px-6 2xl:px-20 overflow-hidden lg:h-[800px] h-[1600px] z-20">
        <div className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10"></div>
   
-  {/* Градієнтна частина після 200px */}
   <div className="absolute top-[200px] left-0 w-full h-[calc(100%-200px)] footer-gradient z-10"></div>
 
-  {/* Напівпрозорий фон поверх */}
   <div className="absolute inset-0 bg-[#25252659] pt-[100px] z-10"></div>
       <img
         src={backgroundImage}

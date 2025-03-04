@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 
 import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
-
+import { useTranslation } from "react-i18next"; 
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
 
 Modal.setAppElement("#root");
@@ -12,15 +12,17 @@ Modal.setAppElement("#root");
 const SpecialOffersModal = () => {
   const {   onCloseGlobalModal  , isOpenSpecialOfferModal } = useModalStore();
   const {  getSpecialOffer } = useSpecialOffersStore();
+  
+  
   let data;
   const { offer } = useParams();
+  const { t } = useTranslation()
   if (offer) {
     data = getSpecialOffer(offer);
-  }
+  } 
 
 if(!data) {
-  console.log('no data', offer);
-  return
+  return null
 }
 
   return (
@@ -60,15 +62,15 @@ if(!data) {
         </div>
 
         <div className="flex flex-col lg:flex-row ">
-        <OfferDetailsColumn items={data.details} title="деталі пропозиції"/>
+        <OfferDetailsColumn items={data.details} title={t("specialOffers.card.title.0")}/>
         <hr className="border-[#C7C7C7] lg:hidden"/>
-        <OfferDetailsColumn items={data.conditions} title="умови пропозиції"/>
+        <OfferDetailsColumn items={data.conditions} title={t("specialOffers.card.title.1")}/>
         </div>
 
         <div className="flex  lg:flex-row flex-col  lg:py-0 py-[27px] text-center lg:text-start w-full lg:w-full bg-[#252526] max">
           <div className="flex-col lg:py-[44px]  lg:ps-[36px] w- lg:w-[697px] border-e ">
             <h1 className="lg:text-[48px] lg:tracking-[-0.07em] lg:leading-[39px] text-[#FFFFFF] uppercase">
-              Контакти
+              {t("specialOfferModal.contacts.title")}
             </h1>
           </div>
           <div className="flex-col lg:py-[21px] lg:ps-[39px] lg:w-[697px] items-start pt-[18px]">
