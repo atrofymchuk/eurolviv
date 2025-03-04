@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 
+.footer-gradient{
+  background: linear-gradient(180deg, #242425 2.15%, rgba(22, 22, 23, 0.25) 38.6%, rgba(0, 0, 0, 0) 97.05%);
+
+}
+
 .img > .slick-list >.slick-track>.slick-slide > div {
   display: grid;
   place-items: center;
