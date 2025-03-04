@@ -328,7 +328,7 @@
 "orderModal":{
     "title":["замовити ","подію"],
     "date":"Дата заходу",
-    "contactPerson":"КОНТАКТНА ОСОБАG",
+    "contactPerson":"КОНТАКТНА ОСОБА",
     "phone":"НОМЕР ТЕЛЕФОНУ",
     "email":"EMAIL",
     "guests":"КІЛЬКІСТЬ ГОСТЕЙ",
