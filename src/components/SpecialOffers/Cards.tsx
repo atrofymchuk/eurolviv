@@ -39,7 +39,7 @@ export const Cards = () => {
                 ${isFirstInRowLg ? "lg:border-l-0" : ""}
                 ${isLastRowLg ? "lg:border-b" : ""}
                 ${isLastRowMd ? "md:border-b" : ""}
-                ${index === specialOffers.length - 1 ? "border-b md:border-b-0" : ""}
+                ${index === specialOffers.length - 1 ? "border-b " : ""}
               `}
             >
               <div
