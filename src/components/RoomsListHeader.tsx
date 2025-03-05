@@ -8,7 +8,7 @@ type RoomsListHeaderToProps = {
   index:number
 }
 
-export   const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
+export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
 
     return(
      

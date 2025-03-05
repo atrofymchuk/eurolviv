@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { Link } from "react-router-dom";
-import burgerMenu from "../assets/icons/burgerMenu.svg";
+import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { useTranslation } from "react-i18next";
+import { ChangeLangButton } from "./ChangeLangButton";
 
 type HeaderNavProps = {
   scrolled: boolean;
@@ -11,6 +12,7 @@ type HeaderNavProps = {
   isActiveLink: (path: string) => string;
   setIsShowRooms: Dispatch<SetStateAction<boolean>>;
   rightMenu: string;
+  changeLanguage: () => void 
 };
 
 export const HeaderNav = ({
@@ -20,6 +22,7 @@ export const HeaderNav = ({
   iconLogoStyle,
   setIsShowRooms,
   isActiveLink,
+  changeLanguage
 }: HeaderNavProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t } = useTranslation();
@@ -106,11 +109,16 @@ export const HeaderNav = ({
 
       {menuOpen && (
         <nav
-          className={`absolute top-full left-0 w-full  flex flex-col items-center py-4 space-y-2 z-50 xl:hidden animate-fadeIn ${
+          className={`absolute top-full left-0 w-full  flex flex-col items-center py-4 space-y-2 z-50 xl:hidden  animate-fadeIn ${
             pathname === '/contacts' || scrolled ? "bg-white text-black" : "bg-black text-white"
           }`}
         >
           {renderNavLinks(true)}
+          <div className="flex justify-center w-full h-10">
+
+          <ChangeLangButton changeLanguage={changeLanguage} isMobile={true}/>
+          </div>
+
         </nav>
       )}
     </div>

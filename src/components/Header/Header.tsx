@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useModalStore } from "../store/useModalStore";
-import { useRoomStore } from "../store/useRoomsStore";
+import { useModalStore } from "../../store/useModalStore";
+import { useRoomStore } from "../../store/useRoomsStore";
 import { HeaderSocial } from "./HeaderSocial";
-import useNavbarStyles from "./Hooks/useHeaderStyle";
+import useNavbarStyles from "../Hooks/useHeaderStyle";
 import { HeaderNav } from "./HeaderNav";
-import { RoomsListHeader } from "./RoomsListHeader";
-import { CiGlobe } from "react-icons/ci";
+import { RoomsListHeader } from "../RoomsListHeader";
 import { useTranslation } from "react-i18next";
+import { ChangeLangButton } from "./ChangeLangButton";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -52,31 +52,10 @@ export function Header() {
               rightMenu,
               styles,
               pathname,
+              changeLanguage
             }}
           />
-          <button
-            className={`hidden xl:flex items-center  uppercase`}
-            onClick={changeLanguage}
-          >
-            <CiGlobe className="w-4 h-4 me-1" />
-            
-            {["uk", "en"]
-              .map((lang) => (
-                <span
-                  key={lang}
-                  className={`hover:cursor-pointer ${
-                    i18n.language === lang ? "font-semibold " : ""
-                  }`}
-                >
-                  { lang === 'en' ? 'ENG' : 'UK' }
-                </span>
-              ))
-              .reduce<React.ReactNode[]>(
-                (prev, curr) => (prev.length ? [...prev, "/", curr] : [curr]),
-                []
-              )}
-          </button>
-
+       <ChangeLangButton changeLanguage={changeLanguage} isMobile={false}/>
           <div className="relative ">
             <button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
