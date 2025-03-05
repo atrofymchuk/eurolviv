@@ -19,7 +19,7 @@ export const RoomInfo = ({ area, roomFloor, capacity }: RoomInfoToProps) => {
           className="pe-2 w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[22px] lg:h-[22px] 2xl:w-fit"
         />
         {t('conferenceService.about.area')}:
-        <span className="font-semibold">&nbsp;{area}</span>
+        <span className="font-semibold">&nbsp;{t(area)}</span>
       </p>
       <p className="flex flex-wrap text-[#8C331B] uppercase text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] 2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
         <img
@@ -38,7 +38,7 @@ export const RoomInfo = ({ area, roomFloor, capacity }: RoomInfoToProps) => {
         />
         {t('conferenceService.about.capacity')}:
         <span className="font-semibold text-[#8C331B] whitespace-nowrap">
-          &nbsp;{capacity}
+          &nbsp;{t(capacity)}
         </span>
       </p>
     </div>

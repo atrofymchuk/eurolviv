@@ -32,8 +32,8 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
         <div className="flex flex-col-reverse lg:flex-row 2xl:items-center justify-center order-5 lg:order-none h-full">
           <div className={`${isOnTop ? ' lg:border-x border-x' : 'lg:border-x  border-x'} items-center justify-center flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative h-full `}>
             <h1 className="uppercase font-cofo 2xl:text-[100px] text-[32px] sm:text-[40px] md:text-[48px] 2xl:leading-[81%] 2xl:w-[1200px] font-semibold 2xl:font-normal flex flex-col 2xl:tracking-[-4%] tracking-[-0.07em] leading-[90%] overflow-visible mt-auto 2xl:mt-0 2xl:mb-0 mb-5">
-              <span className="order-1 2xl:order-2 inline w-fit">{item.title}</span>
-              <span className="order-1 2xl:order-2 inline w-fit 2xl:pt-2.5">{item.size}</span>
+              <span className="order-1 2xl:order-2 inline w-fit">{t(item.title)}</span>
+              <span className="order-1 2xl:order-2 inline w-fit 2xl:pt-2.5">{t(item.size)}</span>
             </h1>
           </div>
         </div>
@@ -59,11 +59,11 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
             <div className="space-y-3">
 
             <p className="2xl:text-[20px] text-[12px] sm:text-[14px]  text-center lg:text-left md:text-[16px] 2xl:leading-[24px] leading-[14.4px] 2xl:tracking-[-0.04em] 2xl:w-[532px] w-[256px] lg:w-fit h-fit lg:leading-[20px] 2xl:text-[#8C331B] text-[#252526] uppercase pt-[10px] xl:pt-[30px] 2xl:pt-0">
-              {item.about.pOne}
+              {t(item.about.pOne)}
             </p>
 
             <p className="2xl:text-[20px] text-[12px] sm:text-[14px]  md:text-[16px] 2xl:leading-[24px] leading-[14.4px] 2xl:tracking-[-0.04em] text-[#444444] w-[2] h-fit uppercase 2xl:w-[532px] lg:flex hidden">
-              {item.about.pTwo}
+              {t(item.about.pTwo)}
             </p>
             </div>
             <button

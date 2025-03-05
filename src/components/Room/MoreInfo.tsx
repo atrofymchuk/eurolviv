@@ -42,14 +42,11 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
   ];
         
   return (
-    <div className="bg-[#A47762] px-4 sm:px-6 md:px-6 lg:px-10 xl:px-6 ">
-      <div className=" container-fluid mx-auto max-w-[1720px]">
+    <div className="bg-[#A47762]  ">
+      <div className=" container-fluid mx-auto max-w-[84.04%] ">
         <div className="grid  
           grid-cols-1 
-          md:grid-cols-[1fr_1fr] 
-          lg:grid-cols-[350px_350px_350px] 
-          xl:grid-cols-[1fr_1fr_1fr]
-          2xl:grid-cols-[1fr_1fr_1fr]
+          md:grid-cols-[35.65%_30.63%_33.73%]
           lg:items-center lg:justify-center 
           border-x border-[#C7C7C7]">
 

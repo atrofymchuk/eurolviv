@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { SuggestionT } from "../../store/types";
-
+import { useTranslation } from "react-i18next";
 type SuggestionToProps = {
   suggestion: SuggestionT[];
 };
 
 export const Suggestion = ({ suggestion }: SuggestionToProps) => {
+  const {t} = useTranslation()
   return (
     <div className="w-full flex justify-center">
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
@@ -25,16 +26,16 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
 
             <div className="absolute top-0 flex flex-col items-center text-center text-white z-10 lg:p-4 p-[51px] w-full lg:h-[250px] justify-s">
               <h1 className="lg:text-[100px] text-[32px] lg:leading-[81px] uppercase leading-[28px] lg:mt-20 lg:min-h-[162px]  flex items-end">
-                {item.title}
+                {t(item.title)}
               </h1>
 
               {item.size.length > 5 && (
                 <p className="uppercase font-semibold lg:text-[24px] text-[14px] lg:leading-[24px] leading-[12px] lg:pt-[19px] pt-[7px]">
-                  {item.size}
+                  {t(item.size)}
                 </p>
               )}
               <p className="uppercase lg:text-[18px] text-[12px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
-                {item.desc}
+                {t(item.desc)}
               </p>
               <Link
                 to={`/rooms/${item.type}`}

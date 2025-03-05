@@ -11,87 +11,106 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
     {
       src: military,
       url:'military',
-      title: "тариф для військових",
-      desc:'Ми щиро вдячні нашим військовим за те, що маємо можливість надалі працювати, адже завдяки їхній відвазі ми можемо продовжувати нашу місію та дарувати гостинність.',
-      cardDesc: " Ми щиро вдячні нашим військовим за те, що маємо можливість надалі працювати",
-      offer: "-20% на проживання для військових ",
+      title: "specialOffersState.tarifForMilitary.title",
+      desc:'specialOffersState.tarifForMilitary.desc',
+      cardDesc: "specialOffersState.tarifForMilitary.cardDesc",
+      offer: "specialOffersState.tarifForMilitary.offer",
       classes: "object-[1%_50%]",
       discount:'-20%',
-      details:['знижка доступна для військовослужбовців ЗСУ, Нацгвардії, прикордонників, СБУ, ветеранів та учасників АТО/ООС','20% знижки від вартості базового тарифу',
-        'для отримання знижки необхідно пред’явити дійсний військовий квиток або посвідчення учасника бойових дій при заселенні'
+      details:['specialOffersState.tarifForMilitary.details.0','specialOffersState.tarifForMilitary.details.1',
+        'specialOffersState.tarifForMilitary.details.2'
       ],
-      conditions:['тариф діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей','знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері']
+      conditions:['specialOffersState.tarifForMilitary.conditions.0','specialOffersState.tarifForMilitary.conditions.1']
     },
     {
       src: business,
       url:'business',
-      title: "бізнес - тариф денний",
-      desc:'Коротка зупинка для бізнесу чи натхнення? Обирайте наш денний бізнес-тариф з 50% знижкою на проживання та відчуйте комфорт, затишок і зручність у самому центрі Львова.',
-      cardDesc: "Коротка зупинка для бізнесу чи натхнення? Обирайте наш денний бізнес-тариф з 50%",
-      offer: "-50% бізнес-тариф денний",
+      title: "specialOffersState.businessTarifDay.title",
+      desc:'specialOffersState.businessTarifDay.desc',
+      cardDesc: "specialOffersState.businessTarifDay.cardDesc",
+      offer: "specialOffersState.businessTarifDay.offer",
       classes: "object-[50%_45%]",
       discount:'-50%',
-      details:['проживання в номерах категорії Стандарт та Стандарт з балконом не більше 8 годин в період від 06:00 до 18:00 того ж дня',
-        '50% знижки на проживання від вартості базового тарифу', 'у вартість проживання не включено сніданок'],
-      conditions:['пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей','знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері',
-        'у святкові дні та періоди високої завантаженості готелю дана пропозиція може бути недоступна'
+      details:['specialOffersState.businessTarifDay.details.0',
+        'specialOffersState.businessTarifDay.details.1',
+        'specialOffersState.businessTarifDay.details.2'
+      ],
+      conditions:['specialOffersState.businessTarifDay.conditions.0',
+        'specialOffersState.businessTarifDay.conditions.1',
+        'specialOffersState.businessTarifDay.conditions.2'
       ]
     },
     {
       src: bedwithpet,
       url:'travel-with-pet',
-      title: "Подорож з домашнім улюбленцем",
-      desc:'Наш пакет створений для того, щоб ваш улюбленець відчував себе як вдома. Ми забезпечуємо комфортні умови для перебування з тваринами, включаючи спеціальні зручності та подарунки для пухнастих друзів.',
-      cardDesc: "Наш пакет створений для того, щоб ваш улюбленець відчував себе як вдома",
-      offer: "лапки вітаються",
+      title: "specialOffersState.petFriendly.title",
+      desc:'specialOffersState.petFriendly.desc',
+      cardDesc: "specialOffersState.petFriendly.cardDesc",
+      offer: "specialOffersState.petFriendly.offer",
       classes: "object-[60%_45%]",
-      details:['в номері на вашого чотирилапого друга чекатиме зручна лежанка, миски для їжі та води і речі першої необхідності','Комплімент від нашого партнера- ласощі та іграшка для вашого улюбленця',
-        'можливість розмістити до двох тварин одночасно у номері','вартість перебування – 500 UAH/доба за одну тварину'
+      details:['specialOffersState.petFriendly.details.0',
+        'specialOffersState.petFriendly.details.1',
+        'specialOffersState.petFriendly.details.2',
+        'specialOffersState.petFriendly.details.3'
       ],
-      conditions:['можливе проживання гостей з собачками декоративних порід вагою до 10 кг','обовʼязкова наявність ветеринарного паспорта з актуальними щепленнями', 'пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей']
+      conditions:['specialOffersState.petFriendly.conditions.0',
+        'specialOffersState.petFriendly.conditions.1',
+        'specialOffersState.petFriendly.conditions.2'
+      ]
     },
     {
       src: photosession,
       url:'photossession',
-      title: "фотосесія",
-      desc:'Шукаєте стильну локацію для найкращих фото? Eurohotel запрошує вас скористатися унікальною можливістю та провести фотосесію у вишуканій атмосфері',
-      cardDesc: "Шукаєте стильну локацію для найкращих фото? Eurohotel запрошує вас скористатися унікальною можливістю ",
-      offer: "фотосесія",
+      title: "specialOffersState.photoSession.title",
+      desc:'specialOffersState.photoSession.desc',
+      cardDesc: "specialOffersState.photoSession.cardDesc",
+      offer: "specialOffersState.photoSession.offer",
       classes: "object-[50%_0%]",
-      details:['3000 UAH - фотосесія в номері категорії Люкс, тривалість до 3 год.','4000 UAH— фотосесія в номері категорії Люкс покращений, тривалість до 3 год.',
-        'у вартість включено: номер для проведення фотосесії на 3 год. та доступ до готельного лобі для фотосесії'
-      ],
-      conditions:['обов`язкове попереднє бронювання - за 3 дні до дати фотосесії','оплата здійснюється під час підтвердження бронювання',
-        'при скасуванні бронювання менше ніж за 24 години вартість не повертається','при тривалості фотосесії понад 3 год - здійснюється повна оплата вартості номера'
+      details:['specialOffersState.photoSession.details.0',
+        'specialOffersState.photoSession.details.1',
+        'specialOffersState.photoSession.details.2'
+      ],  
+      conditions:['specialOffersState.photoSession.conditions.0',
+        'specialOffersState.photoSession.conditions.1',
+        'specialOffersState.photoSession.conditions.2',
+        'specialOffersState.photoSession.conditions.3'
       ]
     },
     {
       src: newlyweds,
       url:'newly-weeds',
-      title: "Подарунок для молодят",
-      desc:'Ваш ідеальний початок спільного життя! Подаруйте собі незабутній відпочинок після найважливішого дня святкування. Нехай цей день залишить лише найсолодші спогади!',
-      cardDesc: "Ваш ідеальний початок спільного життя! Подаруйте собі незабутній відпочинок післянайважливішого дня святкування. ",
-      offer: "Подарунок для молодят",
+      title: "specialOffersState.newlyweds.title",
+      desc:'specialOffersState.newlyweds.desc',
+      cardDesc: "specialOffersState.newlyweds.cardDesc",
+      offer: "specialOffersState.newlyweds.offer",
       classes: "object-[50%_0%]",
-      details:['безкоштовне проживання в номері категорії Напівлюкс або Люкс (залежно від наявності доступних категорій номерів)','комплімент від готелю - пляшка ігристого та солодкий десерт',
-        'пізнє виселення з готелю (надається за умови наявності вільного номеру на момент проживання гостей )','бонус на майбутнє - знижка 15% на проживання під час святкування наступної річниці в готелі'
+      details:['specialOffersState.newlyweds.details.0',
+        'specialOffersState.newlyweds.details.1',
+        'specialOffersState.newlyweds.details.2',
+        'specialOffersState.newlyweds.details.3'
       ],
-      conditions:['проживання у подарунок надається за умови святкування весілля у ресторані RUFF','бронювання номеру слід підтвердити не пізніше ніж за 7 днів до дати святкування весілля',
-        'бонусна знижка 15% діє для проживання під час святкування першої річниці шлюбу та надається за умови прямого бронювання через готель', 'знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері'
+      conditions:['specialOffersState.newlyweds.conditions.0',
+        'specialOffersState.newlyweds.conditions.1',
+        'specialOffersState.newlyweds.conditions.2',
+        'specialOffersState.newlyweds.conditions.3'
       ]
     },
     {
       src: birthday,
       url:'birthday',
-      title: "день народження",
-      desc:'Відсвяткуйте свій особливий день у затишній атмосфері Eurohotel! Ми підготували для вас приємний сюрприз, щоб зробити ваше свято ще яскравішим і незабутнім',
-      cardDesc: "Відсвяткуйте свій особливий день у затишній атмосфері Eurohotel! ",
-      offer: "-20% у день народження",
+      title: "specialOffersState.birthday.title",
+      desc:'specialOffersState.birthday.desc',
+      cardDesc: "specialOffersState.birthday.cardDesc",
+      offer: "specialOffersState.birthday.offer",
       classes: "object-[50%_0%]",
       discount:'-20%',
-      details:['знижка 20 % від вартості базового тарифу на проживання в будь-якому номері у день вашого народження','комплімент від готелю - святковий подарунок для іменинника',
+      details:['specialOffersState.birthday.details.0',
+        'specialOffersState.birthday.details.1',
       ],
-      conditions:['пропозиція діє лише в день вашого народження','знижка не сумується з іншими акціями чи спеціальними пропозиціями', 'пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції']
+      conditions:['specialOffersState.birthday.conditions.0',
+        'specialOffersState.birthday.conditions.1',
+        'specialOffersState.birthday.conditions.2'
+      ]
 
     },
   ];

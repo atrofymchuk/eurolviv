@@ -16,9 +16,12 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header}) => {
     view,
     previewImage,
   } = header;
-const titlePart = title.split(' ')
+  const {t} = useTranslation()
+  const translatedTitle = t(title);
 
-const {t} = useTranslation()
+  const titlePart = translatedTitle.split(' ');
+  
+
 
   return (
     <div className="w-full relative">
@@ -50,11 +53,11 @@ const {t} = useTranslation()
         
         </h1>
         <p className={`uppercase lg:leading-[35px] lg:text-[36px] text-[20px] font-semibold leading-[25px] lg:pt-[46px]  pt-[8px]  `} >
-          {size}
+          {t(size || '')}
         </p>
 
         <p className={`font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[531px] w-[291px] ${size ? 'lg:pt-[46px] ' : ' '} pt-[20px]  text-[12px] leading-[15.12px] px-[10px]`}>
-          {description}
+          {t(description)}
         </p>
       </div>
 
@@ -64,7 +67,7 @@ const {t} = useTranslation()
             {t('room.header.count')}: <span className="text-[#FFFFFF]">{count}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
-            {t('room.header.view')}: <span className="text-[#FFFFFF]">{view}</span>
+            {t('room.header.view')}: <span className="text-[#FFFFFF]">{t(view)}</span>
           </p>
           <p className="text-[#B3B3B3] lg:text-[16px] lg:leading-[20px] uppercase font-semibold">
             {t('room.header.arriveTime')}: <span className="text-[#FFFFFF]">{arriveTime}</span>

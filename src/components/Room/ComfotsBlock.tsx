@@ -1,5 +1,5 @@
-import { Fragment } from "react/jsx-runtime";
 import { Icon } from "../../store/types";
+import { useTranslation } from "react-i18next";
 
 type ComfortsBlockToProps = {
   title: string;
@@ -28,17 +28,16 @@ export const ComfortsBlock = ({
   images,
   style
 }: ComfortsBlockToProps) => {
+
+  const {t} = useTranslation()
   if(!icons) return null;
   
   return (
     <div className={`${style.bgColor}`}>
-      <div className="container-fluid mx-auto max-w-[1720px]">
+      <div className="container-fluid mx-auto max-w-[84.04%] ">
         <div className={`grid 
           grid-cols-1 
-          md:grid-cols-[1fr_1fr] 
-          lg:grid-cols-[350px_350px_350px] 
-          xl:grid-cols-[1fr_1fr_1fr]
-          2xl:grid-cols-[575px_474px_545px]
+          md:grid-cols-[35.65%_30.63%_33.73%]  
           items-center justify-center 
           border-x border-[#C7C7C7]
           shadow-[0px_-14px_61.3px_0px_#25252612]`}>
@@ -97,14 +96,7 @@ export const ComfortsBlock = ({
                     />
                     <p className="text-[10px] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px]
                       leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
-                      {item.text.split("/").map((part, index, array) => (
-                        <Fragment key={index}>
-                          {part}
-                          {index < array.length - 1 && (
-                            <>/<br /></>
-                          )}
-                        </Fragment>
-                      ))}
+                     {t(item.text)}
                     </p>
                   </li>
                 ))}

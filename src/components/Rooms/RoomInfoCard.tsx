@@ -55,10 +55,10 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             <div className="flex flex-col text-center items-center justify-between h-full 2xl:max-h-[200px] xl:max-h-[180px] lg:max-h-[160px] md:max-h-[140px] max-h-[125px] w-full 2xl:max-w-[472px] xl:max-w-[440px] lg:max-w-[400px] md:max-w-[340px]">
               <div className="flex-1 flex flex-col justify-start w-full">
                 <h1 className="font-cofo uppercase 2xl:text-[40px] xl:text-[36px] lg:text-[32px] md:text-[28px] text-[24px] 2xl:leading-[36px] xl:leading-[32px] lg:leading-[28px] md:leading-[24px] leading-[22px] tracking-[-0.06em] font-semibold">
-                  {room.title}
+                  {t(room.title)}
                 </h1>
                 <p className="uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:leading-[21px] xl:leading-[19px] lg:leading-[17px] md:leading-[15px] leading-[14px] mt-[15px] tracking-[-0.04em] text-[#6B6B6B]">
-                  {room.description}
+                  {t(room.description)}
                 </p>
               </div>
 

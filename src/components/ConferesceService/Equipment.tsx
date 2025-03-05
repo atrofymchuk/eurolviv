@@ -25,7 +25,7 @@ export const Equipment = ({ icons, price }: EquipmentToProps) => {
                   className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] md:w-[22px] md:h-[22px] lg:w-6 lg:h-6"
                 />
                 <span className="uppercase text-[#383838] text-[14px] sm:text-[16px] md:text-[18px] font-medium">
-                  {icon.text}
+                  {t(icon.text)}
                 </span>
               </div>
             ))}

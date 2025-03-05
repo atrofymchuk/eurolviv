@@ -7,9 +7,9 @@ type TerraseCardToProps = {
 export const TerraseCard = ({ index, el, length }: TerraseCardToProps) => {
   const isFirstInRow = index % 2 === 0;
   const isLastInRow = index % 2 !== 0;
-  const isBottomRow = index >= length - (length % 2 === 0 ? 2 : 1); // Останній рядок
-  const isFirstRow = index < 2; // Перевіряємо, чи це перший рядок
-  const isNotLastCard = index !== length - 1; // Чи не остання картка
+  const isBottomRow = index >= length - (length % 2 === 0 ? 2 : 1); 
+  const isFirstRow = index < 2; 
+  const isNotLastCard = index !== length - 1; 
 
   return (
     <div
