@@ -5,7 +5,7 @@ import {Header} from '../components/SpecialOffers/Header'
 export const SpecialOffers = () =>{
 
     return(
-       <div>
+       <div className='overflow-x-hidden'>
         <Header />
         <Cards />
 

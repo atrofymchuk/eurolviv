@@ -22,7 +22,7 @@ export const useModalStore = create<ModalStore>((set,get) => ({
   },
   onCloseGlobalModal: () => {
     console.log('close');
-    set({isOpenOrder: false, isOpenMenuModal: false })
+    set({isOpenOrder: false, isOpenMenuModal: false, isOpenSpecialOfferModal: false })
     
   },
 }));

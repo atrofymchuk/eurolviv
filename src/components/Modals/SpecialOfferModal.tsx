@@ -4,37 +4,36 @@ import { IoClose } from "react-icons/io5";
 
 import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
 
 Modal.setAppElement("#root");
 
 const SpecialOffersModal = () => {
-  const {   onCloseGlobalModal  , isOpenSpecialOfferModal } = useModalStore();
-  const {  getSpecialOffer } = useSpecialOffersStore();
-  
-  
+  const { onCloseGlobalModal, isOpenSpecialOfferModal } = useModalStore();
+  const { getSpecialOffer } = useSpecialOffersStore();
+  const { t } = useTranslation();
+
   let data;
   const { offer } = useParams();
-  const { t } = useTranslation()
   if (offer) {
     data = getSpecialOffer(offer);
-  } 
+  }
 
-if(!data) {
-  return null
-}
+  if (!data) {
+    return null;
+  }
 
   return (
     <Modal
       isOpen={isOpenSpecialOfferModal}
-        onRequestClose={onCloseGlobalModal}
-      className="fixed inset-0 flex items-center justify-center h-full lg:overflow-hidden overflow-y-auto lg:top-0 top-[70px] left-1/2 transform -translate-x-1/2 w-[100%]"
-      overlayClassName="fixed inset-0 bg-black/49 z-49 lg:z-51"
+      onRequestClose={onCloseGlobalModal}
+      className="fixed inset-0 flex items-center justify-center overflow-auto "
+      overlayClassName="fixed inset-0 bg-black/50 z-50"
     >
-      <div className="bg-white lg:w-[1469px] w-[334px] max-h-screen relative flex flex-col lg:justify-center lg:p-[37px] p-[25px] items-center lg:overflow-hidden overflow-y-auto">
+      <div className="bg-white md:w-[76.51%] min-h-[80vh] max-h-[100vh] relative lg:overflow-hidden flex flex-col 2xl:justify-center md:p-[25px] p-[25px] items-center overflow-auto ">
         <button
-          className="absolute top-2 right-2 text-2xl hover:cursor-pointer"
+          className="absolute top-0 right-0 text-3xl hover:cursor-pointer"
           onClick={onCloseGlobalModal}
         >
           <IoClose color="#8C331B" />
@@ -42,47 +41,54 @@ if(!data) {
 
         <div className="relative w-full">
           <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%] to-[#252526]"></div>
-
           <img
             src={data.src}
-            className="lg:w-[1395px] lg:h-[407px] w-[288px] h-[351px] object-cover object-[50%_40%]"
+            className="w-full h-[351px] md:max-h-[50vh]  object-cover object-center rounded-t-lg"
           />
+          <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10">
+            <h1 className="text-[32px] lg:text-[70px] text-[#FFFFFF80] tracking-[-0.07em]">
+              {t(data.discount || "")}
+            </h1>
+            <div className="flex flex-col items-center justify-center  md:mt-auto">
 
-          <div className="absolute inset-0 flex flex-col items-center justify-around text-center px-5">
-            <h1 className="lg:text-[91px] lg:leading-[81px] tracking-[-0.07em] text-[#FFFFFF80] text-[32px] leading-[26px]">
-              {data.discount}
+            <h1 className={`uppercase text-white text-[32px] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${data.url === 'business' ? "md:w-2/3" : ""}`}>
+              {t(data.title)}
             </h1>
-            <h1 className="uppercase lg:text-[91px] lg:leading-[81px] leading-[29.44px] tracking-[-0.07em] lg:w-[879px] text-[#FFFFFF] text-[32px]">
-              {data.title}
-            </h1>
-            <p className="uppercase lg:w-[785px] text-[#FFFFFF] lg:text-[18px] lg:leading-[22.68px] text-[12px] leading-[15.12px]">
-              {data.desc}
+            <p className="uppercase md:w-3/5 text-white text-[12px] md:text-[16px] leading-[15px] md:leading-[22px]">
+              {t(data.desc)}
             </p>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row ">
-        <OfferDetailsColumn items={data.details} title={t("specialOffers.card.title.0")}/>
-        <hr className="border-[#C7C7C7] lg:hidden"/>
-        <OfferDetailsColumn items={data.conditions} title={t("specialOffers.card.title.1")}/>
+        <div className="grid grid-cols-2 border-x border-[#C7C7C7] w-full ">
+          <OfferDetailsColumn
+            items={data.details}
+            title={t("specialOffers.card.title.0")}
+          />
+          <OfferDetailsColumn
+            items={data.conditions}
+            title={t("specialOffers.card.title.1")}
+          />
         </div>
 
-        <div className="flex  lg:flex-row flex-col  lg:py-0 py-[27px] text-center lg:text-start w-full lg:w-full bg-[#252526] max">
-          <div className="flex-col lg:py-[44px]  lg:ps-[36px] w- lg:w-[697px] border-e ">
-            <h1 className="lg:text-[48px] lg:tracking-[-0.07em] lg:leading-[39px] text-[#FFFFFF] uppercase">
+        <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526]">
+          
+          <div className="flex flex-col justify-center border-black/90 border-e px-4 col-span-2 md:col-span-1  ">
+            <h1 className="text-[24px] lg:text-[48px] text-white uppercase md:ps-6">
               {t("specialOfferModal.contacts.title")}
             </h1>
           </div>
-          <div className="flex-col lg:py-[21px] lg:ps-[39px] lg:w-[697px] items-start pt-[18px]">
-            <ul className="lg:space-y-[5px] space-y-1">
-              <li className="uppercase text-[#FFFFFF] font-[500] lg:text-[18px] text-[12px] leading-[15px]">
+          <div className="flex flex-col md:justify-center justify-start px-4 py-4 col-span-2 md:col-span-1 ">
+            <ul className="space-y-1 lg:space-y-2 " >
+              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
                 +38 (073) 242 40 02
               </li>
-              <li className="uppercase text-[#FFFFFF] font-[500] lg:text-[18px] text-[12px] leading-[15px]">
+              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
                 +38 (093) 242 40 02
               </li>
             </ul>
-            <p className="uppercase text-[#FFFFFF] font-[500] lg:text-[18px] text-[12px] leading-[15px] lg:pt-[16px] pt-[17px]">
+            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] pt-2 lg:pt-4">
               info@eurohotel.lviv.ua
             </p>
           </div>
