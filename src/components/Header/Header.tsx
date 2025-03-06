@@ -4,7 +4,7 @@ import { useRoomStore } from "../../store/useRoomsStore";
 import { HeaderSocial } from "./HeaderSocial";
 import useNavbarStyles from "../Hooks/useHeaderStyle";
 import { HeaderNav } from "./HeaderNav";
-import { RoomsListHeader } from "../RoomsListHeader";
+import { RoomsListHeader } from "./RoomsListHeader";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
 

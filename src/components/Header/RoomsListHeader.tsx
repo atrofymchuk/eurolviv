@@ -1,8 +1,9 @@
-import area from "../assets/icons/Rooms/squareWhite.svg";
-import guest from "../assets/icons/Rooms/guestWhite.svg";
-import { Room } from "../store/types";
+import area from "../../assets/icons/Rooms/squareWhite.svg";
+import guest from "../../assets/icons/Rooms/guestWhite.svg";
+import { Room } from "../../store/types";
 import { Link } from "react-router-dom";
-import { InViewWrapper } from "./InViewWrapper";
+import { InViewWrapper } from "../InViewWrapper";
+import { useTranslation } from "react-i18next";
 
 type RoomsListHeaderToProps = {
   room:Room
@@ -10,6 +11,8 @@ type RoomsListHeaderToProps = {
 }
 
 export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
+
+  const {t} = useTranslation()
 
     return(
      
@@ -36,10 +39,10 @@ export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
             </div>
   
             <h1 className="uppercase text-[#FFFFFF] lg:text-[36px] text-[14px] mt-2 tracking-[-6%] font-semibold text-center lg:leading-[30px] mx-auto leading-[15px] lg:w-[320px] lg:mt-[38px]">
-              {room.title}
+              {t(room.title)}
             </h1>
             <p className="uppercase text-[#FFFFFF] text-center lg:text-[18px] mt-2 text-[10px] leading-[-2%] max-w-[310px] mx-auto lg:mt-[15px]">
-             {room.description}
+             {t(room.description)}
             </p>
           </div>
           </Link>

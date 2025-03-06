@@ -2,7 +2,7 @@ import area from "../../assets/icons/Rooms/square.svg";
 import guest from "../../assets/icons/Rooms/guests.svg";
 import { Link } from "react-router-dom";
 import { InViewWrapper } from "../InViewWrapper";
-
+import { useTranslation } from "react-i18next";
 type HallCardProps = {
   hall: {
     previewImage: string;
@@ -14,8 +14,9 @@ type HallCardProps = {
   index: number;
 };
 
-export const HallCard = ({ hall, index }: HallCardProps) => (
-  <>
+export const HallCard = ({ hall, index }: HallCardProps) => {
+  const {t} = useTranslation()
+  return <>
     <div className="flex flex-col items-center justify-center w-full">
       <InViewWrapper> 
         
@@ -30,7 +31,7 @@ export const HallCard = ({ hall, index }: HallCardProps) => (
         />
         </InViewWrapper>
       <h4 className="uppercase text-sm sm:text-xs md:text-[22px] lg:text-lg 2xl:text-[24px] leading-[28px] tracking-[-5%] text-center xl:mt-[25px] px-2 xl:mb-[16px] mt-[10px]">
-        {hall.title} {hall.size}
+        {t(hall.title)} {t(hall.size)}
       </h4>
       <div className="flex flex-col items-center justify-center mb-2">
         <div className="flex items-center justify-center space-x-1">
@@ -42,7 +43,7 @@ export const HallCard = ({ hall, index }: HallCardProps) => (
         <div className="flex items-center justify-center space-x-1">
           <img src={guest} alt="guestico" className="w-4 h-4" />
           <p className="uppercase text-sm sm:text-xs md:text-х14px]  lg:text-lg 2xl:text-[16px]  text-[#252526]">
-            вмістимість: {hall.capacity.slice(0, -2) + "."}
+            вмістимість: {t(hall.capacity).slice(0, -2) + "."}
           </p>
         </div>
       </div>
@@ -52,10 +53,10 @@ export const HallCard = ({ hall, index }: HallCardProps) => (
             to="/conference-service"
             className="w-fit py-[13px] px-[16.5px] text-[#8c331b] block absolute top-[37px]  hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase"
           >
-            детальніше
+            {t("buttons.details")}
           </Link>
         </div>
       )}
     </div>
   </>
-);
+}

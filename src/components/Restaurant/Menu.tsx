@@ -2,7 +2,6 @@ import { MenuPC } from "./MenuPC";
 import { MenuSmallWidth } from "./MenuSmallWidth";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
 
 export const Menu = () => {
   const { t } = useTranslation()
@@ -22,12 +21,11 @@ export const Menu = () => {
             </h1>
           </div>
           <div className="md:flex hidden border-t  border-[#B3B3B3] "></div>
-          <InViewWrapper>
-
+      
           <MenuPC className="md:flex hidden " />
+
           <MenuSmallWidth className="flex md:hidden" />
 
-          </InViewWrapper>
           <div className="lg:h-[329px] md:flex hidden  lg:justify-end  lg:pe-2.25"></div>
           <div className="lg:h-[329px] flex  md:border-x flex-col  border-[#B3B3B3] text-center  items-center">
             <p className="uppercase text-[#888888] lg:text-[16px] sm:text-[14px] text-[12px]  lg:leading-[120%] lg:w-[359px]  md:pt-[39px]">

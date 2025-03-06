@@ -43,7 +43,7 @@ export const HeaderNav = ({
       <Link
         key={path}
         to={path}
-        className={`uppercase ${ isActiveLink(
+        className={`uppercase ${isActiveLink(
           path
         )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `}
         onClick={() => isMobile && setMenuOpen(false)}
@@ -51,7 +51,7 @@ export const HeaderNav = ({
           !isMobile && path === "/rooms" && !scrolled && setIsShowRooms(true)
         }
         onMouseLeave={() =>
-          !isMobile && path === "/rooms" && setIsShowRooms(false)
+          !isMobile && path !== "/rooms" && setIsShowRooms(false)
         }
       >
         {label}

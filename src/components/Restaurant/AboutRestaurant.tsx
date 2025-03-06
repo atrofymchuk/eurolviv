@@ -2,7 +2,6 @@ import aboutImageFst from "../../assets/Restaurant/about1.webp";
 import aboutImageScd from "../../assets/Restaurant/about2.webp";
 import aboutImageTrd from "../../assets/Restaurant/about3.webp";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
 export const AboutRestaurant = () => {
 
   const {t} = useTranslation()
@@ -53,32 +52,26 @@ export const AboutRestaurant = () => {
         <div className="md:border-e border-x md:border-x-0 border-t md:border-t-0 border-[#B3B3B3]  md:border-b ">
           <div className="flex items-center justify-center ">
             <div className="border-e border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[15px] lg:pb-[20px] pt-[10px] pb-[13px] ">
-              <InViewWrapper>
                 <img
                   src={aboutImageFst}
                   alt=""
                   className="2xl:w-[490px] 2xl:h-[319px] xl:w-[316px] xl:h-[306px] md:w-[255px] md:h-[203px] w-[155px] lg:w-[303px] h-[203px] px-2 object-cover"
                 />
-              </InViewWrapper>
             </div>
             <div className=" border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[15px] lg:pb-[20px] pt-[10px] pb-[13px] ">
-              <InViewWrapper>
                 <img
                   src={aboutImageScd}
                   alt=""
                   className="2xl:w-[490px] 2xl:h-[319px] xl:w-[316px] xl:h-[306px] w-[155px] md:w-[255px] md:h-[203px] lg:w-[303px] h-[203px] px-2 object-cover"
                 />
-              </InViewWrapper>
             </div>
           </div>
           <div className="flex items-center justify-center lg:pt-[12px] lg:pb-[34px] pt-[10px]">
-            <InViewWrapper>
-              <img
+            <img
                 src={aboutImageTrd}
                 alt=""
                 className="2xl:w-[1001px] 2xl:h-[292px] xl:w-[632px] lg:w-[418px] xl:h-[390px] lg:h-[326px] md:w-[476px] md:h-[306px] w-[316px] h-[206px] px-2 object-cover"
               />
-            </InViewWrapper>
           </div>
         </div>
 

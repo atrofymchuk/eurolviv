@@ -121,7 +121,7 @@ export const WhereWeAre = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]  md:border-t-0  container-fluid max-w-[89.58%] mx-auto">
+      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]  md:border-t-0  container-fluid max-w-[89.58%  ] mx-auto">
         <div className="p-8 xl:p-12  lg:border-r border-[#c7c7c7]">
           <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left">
             {t("about.whereWeAre.infrastructureTitle")}
