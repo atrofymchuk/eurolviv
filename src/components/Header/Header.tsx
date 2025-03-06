@@ -66,7 +66,7 @@ export function Header() {
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo">
+              <div className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo" onMouseLeave={() => setIsDropdownOpen(false)}>
                 {["+380 99 123 45 67", "+380 97 765 43 21"].map(
                   (phone, index) => (
                     <a

@@ -10,14 +10,13 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
 type RoomSSliderProps = {
-    ref:Slider | null
-}
+  ref: Slider | null;
+};
 
-
-export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
+export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
   const { rooms } = useRoomStore();
   const [currentSlide, setCurrentSlide] = useState(1);
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const settings = {
     infinite: true,
     speed: 800,
@@ -103,58 +102,56 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
     <div className="2xl:w-full xl:w-full lg:w-full w-full overflow-visible ">
       <Slider {...settings} className=" overflow-visible" ref={ref}>
         {rooms.map((el, index) => (
-       <div
-       key={index}
-       className={`flex flex-col items-center text-center justify-between ${getSlideClass(
-         index
-       )}`}
-     >
-       <div className="flex items-center justify-center w-full h-[250px] xl:h-[300px]">
+          <div
+            key={index}
+            className={`flex flex-col items-center text-center justify-between ${getSlideClass(
+              index
+            )}`}
+          >
+            <div className="flex items-center justify-center w-full h-[250px] xl:h-[300px]">
+              <InViewWrapper>
+                <img
+                  src={el.header.previewImage}
+                  alt={`Slide ${index}`}
+                  className={`object-cover w-full h-full transition-all  duration-300 ${
+                    index === currentSlide ? " scale-105" : "scale-100 "
+                  }`}
+                />
+              </InViewWrapper>
+            </div>
 
-        <InViewWrapper> 
-          
-         <img
-           src={el.header.previewImage}
-           alt={`Slide ${index}`}
-           className={`object-cover w-full h-full transition-all  duration-300 ${
-             index === currentSlide ? ' scale-105' : 'scale-100 '
-            }`}
-            />
-            </InViewWrapper>
-       </div>
-     
-       <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-3%] pt-[20px] text-center line-clamp-2">
-         {t(el.title)}
-       </h4>
-     
-       <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px] gap-y-2">
-         <div className="flex gap-2 items-center">
-           <img src={area} alt="" className="w-[20px] h-[20px]" />
-           <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
-              {t("home.rooms.area")}: {el.area}
-           </p>
-         </div>
-         <div className="flex gap-2 items-center">
-           <img src={guest} alt="" className="w-[20px] h-[20px]" />
-           <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
-             {t("home.rooms.guests")}: {el.guests}
-           </p>
-         </div>
-       </div>
-     
-       {index === currentSlide && (
-         <div className="xl:mt-5 mt-5 ">
-           <Link
-             to={`/rooms/${el.type}`}
-             className="hover:cursor-pointer border border-[#FFFFFF] uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] font-medium px-[20px] py-[10px] 2xl:px-[29px] 2xl:py-[13px] xl:px-[25px] xl:py-[12px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
-           >
-           {t("buttons.details")}
-           </Link>
-         </div>
-       )}
-     </div>
+            <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-3%] pt-[20px] text-center line-clamp-2">
+              {t(el.title)}
+            </h4>
+
+            <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px] gap-y-2">
+              <div className="flex gap-2 items-center">
+                <img src={area} alt="" className="w-[20px] h-[20px]" />
+                <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
+                  {t("home.rooms.area")}: {el.area}
+                </p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <img src={guest} alt="" className="w-[20px] h-[20px]" />
+                <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
+                  {t("home.rooms.guests")}: {el.guests}
+                </p>
+              </div>
+            </div>
+
+            {index === currentSlide && (
+              <div className="xl:mt-5 mt-5 ">
+                <Link
+                  to={`/rooms/${el.type}`}
+                  className="hover:cursor-pointer border border-[#FFFFFF] uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] font-medium px-[20px] py-[10px] 2xl:px-[29px] 2xl:py-[13px] xl:px-[25px] xl:py-[12px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
+                >
+                  {t("buttons.details")}
+                </Link>
+              </div>
+            )}
+          </div>
         ))}
       </Slider>
     </div>
   );
-})
+});
