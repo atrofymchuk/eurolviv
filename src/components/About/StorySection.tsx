@@ -6,8 +6,8 @@ export const StorySection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="flex justify-center items-center flex-col w-full px-4 sm:px-6 md:px-6 lg:px-6 2xl:px-6">
-      <div className="fluid-container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-[74.42%_25.58%] items-center justify-center w-full max-w-[1720px]">
+    <section className="flex justify-center items-center flex-col w-full ">
+      <div className="fluid-container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-[74.42%_25.58%] items-center justify-center w-full max-w-[89.58%]">
         <div
           className="border-b  border-[#C7C7C7]
          pt-[50px] sm:pt-[60px] md:pt-[100px] lg:pt-[130px] lg:h-[384px] p-4 lg:pb-0 

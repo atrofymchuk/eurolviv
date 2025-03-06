@@ -51,8 +51,8 @@ export const Advantages = () => {
   ];
 
   return (
-    <section className="flex justify-center items-center bg-[#A47762] px-4 sm:px-6 *:font-cofo">
-      <div className="container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 items-center xl:h-[684px] max-w-[1720px] gap-0">
+    <section className="flex justify-center items-center bg-[#A47762]  *:font-cofo">
+      <div className="container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 items-center xl:h-[684px] max-w-[89.58%] gap-0">
         
       <div className="h-full p-4 flex lg:justify-start justify-center">
   <div className="flex flex-col xl:ps-7.5 items-center  lg:items-start lg:text-start">

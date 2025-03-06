@@ -68,9 +68,9 @@ export const Rewies = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#A47762]   px-4 md:px-6 sm:px-6 xl:px-6 flex justify-center  ">
-      <div className="flex flex-col items-center border-x border-[#C7C7C7] overflow-x-hidden xl:px-0 xl:max-w-[1720px]">
-        <div className="grid xl:grid-cols-2 grid-cols-1 container-fluid mx-auto w-full   pe-4">
+    <section className="bg-[#A47762] flex-col   flex justify-center items-center  ">
+      <div className="flex flex-col items-center border-x border-[#C7C7C7]  overflow-x-hidden xl:px-0 w-[89.58%] ">
+        <div className="grid xl:grid-cols-2 grid-cols-1  w-full   pe-4">
           <div className="xl:col-span-1 pt-10 xl:pt-[109px] flex flex-col">
             <h1 className="text-center font-cofo text-3xl md:text-5xl xl:text-[198px]  uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px]">
               {t("reviews.title")}
@@ -92,36 +92,42 @@ export const Rewies = () => {
           <div className="xl:col-span-1 xl:flex flex-col justify-center items-center hidden ">
             <h2 className="uppercase text-5xl md:text-[80px] xl:text-[100px] xl:leading-[81px]  xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
               <span className="relative left-[-30px] md:left-[-70px] xl:left-[-105px]">
-                {t('reviews.heading')}
+                {t("reviews.heading")}
               </span>
               <span className="relative left-[30px] md:left-[70px] xl:left-[105px]">
-                {t('reviews.heading2')}
+                {t("reviews.heading2")}
               </span>
             </h2>
           </div>
         </div>
+      </div>
+      <div className="relative w-full flex flex-col items-center h-[500px] md:h-[400px] overflow-x-hidden overflow-y-hidden">
+  <div className="absolute w-[89.58%] border-x border-[#C7C7C7] h-[700px] left-1/2 -translate-x-1/2 overflow-y-hidden"></div>
 
-        <div className="lg:w-full flex justify-end w-full  max-h-[500px]">
-          <div className="xl:max-w-[1781px] w-full  h-full relative">
-            <ReviewSlider reviews={reviews} ref={sliderRef} />
-          </div>
-        </div>
+  <div className="absolute inset-0 flex justify-center ">
+    <div className="relative w-[80.79%] ">
+      <div className="absolute inset-0 w-full ">
+        <ReviewSlider reviews={reviews} ref={sliderRef} />
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div className="flex xl:max-w-[1720px] w-screen  justify-between mt-10 lg:mt-0 z-50">
-          <button
-            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-15  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
-            onClick={() => sliderRef.current?.slickPrev()}
-          >
-            <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
-          </button>
 
-          <button
-            className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-15 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
-            onClick={() => sliderRef.current?.slickNext()}
-          >
-            <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
-          </button>
-        </div>
+      <div className="flex max-w-[89.58%] w-screen  border-x border-[#C7C7C7]  justify-between  z-50">
+        <button
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-15  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
+          onClick={() => sliderRef.current?.slickPrev()}
+        >
+          <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+        </button>
+
+        <button
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-15 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
+          onClick={() => sliderRef.current?.slickNext()}
+        >
+          <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
+        </button>
       </div>
     </section>
   );

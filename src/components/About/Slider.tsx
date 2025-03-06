@@ -23,7 +23,7 @@ const ImageSlider = () => {
   const settings = {
     infinite: true,
     centerMode: true,
-    centerPadding: "10%",
+    centerPadding: "8%",
     slidesToShow: 3,
     arrows:false,
     responsive: [

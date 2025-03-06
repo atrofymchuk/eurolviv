@@ -76,8 +76,8 @@ export const WhereWeAre = () => {
     ],
   ];
   return (
-    <section className="flex flex-col   font-cofo   px-4 md:px-6 sm:px-6 ">
-      <div className="grid lg:grid-cols-[1fr_1fr] max-w-[1720px]  mx-auto w-full container-fluid border lg:border-t-0 border-[#c7c7c7]">
+    <section className="flex flex-col   font-cofo   ">
+      <div className="grid lg:grid-cols-[1fr_1fr] max-w-[89.58%]  mx-auto w-full container-fluid border lg:border-t-0 border-[#c7c7c7]">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 pe-0 xl:h-[692px] lg:pt-[73px]">
           <div className="lg:ms-[52px]  ">
             <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
@@ -121,7 +121,7 @@ export const WhereWeAre = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]  md:border-t-0  container-fluid max-w-[1720px] mx-auto">
+      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]  md:border-t-0  container-fluid max-w-[89.58%] mx-auto">
         <div className="p-8 xl:p-12  lg:border-r border-[#c7c7c7]">
           <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left">
             {t("about.whereWeAre.infrastructureTitle")}
