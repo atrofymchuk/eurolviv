@@ -1,6 +1,6 @@
-import coffe from "../../assets/Restaurant/Menu/Coffe.png";
-import meat from "../../assets/Restaurant/Menu/meat.png";
-import spagetti from "../../assets/Restaurant/Menu/spagetti.png";
+import coffe from "../../assets/Restaurant/Menu/Coffe.webp";
+import meat from "../../assets/Restaurant/Menu/meat.webp";
+import spagetti from "../../assets/Restaurant/Menu/spagetti.webp";
 
 type MenuPCToProps ={
     className:string

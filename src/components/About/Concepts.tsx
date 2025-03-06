@@ -1,42 +1,50 @@
-import roomLux from "../../assets/About/2roomLux.png";
-import terasse from "../../assets/About/terrase.png";
-import bussines from "../../assets/About/bussines.png";
-import bar from "../../assets/About/bar.png";
+import roomLux from "../../assets/About/2roomLux.webp";
+import terasse from "../../assets/About/terrase.webp";
+import bussines from "../../assets/About/bussines.webp";
+import bar from "../../assets/About/bar.webp";
 import { useTranslation } from "react-i18next";
-
-
+import { InViewWrapper } from "../InViewWrapper";
 
 export const Concepts = () => {
-  
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const concepts = [
-    
-      {
-        title: [t("about.concepts.frstCard.title.0"), t("about.concepts.frstCard.title.1")],
-        img: roomLux,
-        alt: "bedroom",
-        text: t("about.concepts.frstCard.desc"),
-      },
-      {
-        title: [t("about.concepts.secondCard.title.0"), t("about.concepts.secondCard.title.1")],
-        img: terasse,
-        alt: "terrace",
-        text: t("about.concepts.secondCard.desc"),
-      },
-      {
-        title: [t("about.concepts.thirdCard.title.0"), t("about.concepts.thirdCard.title.1")],
-        img: bussines,
-        alt: "conference",
-        text: t("about.concepts.thirdCard.desc"),
-      },
-      {
-        title: [t("about.concepts.fourthCard.title.0"), t("about.concepts.fourthCard.title.1")],
-        img: bar,
-        alt: "karaoke",
-        text: t("about.concepts.fourthCard.desc"),
-      },
-    ]  
-
+    {
+      title: [
+        t("about.concepts.frstCard.title.0"),
+        t("about.concepts.frstCard.title.1"),
+      ],
+      img: roomLux,
+      alt: "bedroom",
+      text: t("about.concepts.frstCard.desc"),
+    },
+    {
+      title: [
+        t("about.concepts.secondCard.title.0"),
+        t("about.concepts.secondCard.title.1"),
+      ],
+      img: terasse,
+      alt: "terrace",
+      text: t("about.concepts.secondCard.desc"),
+    },
+    {
+      title: [
+        t("about.concepts.thirdCard.title.0"),
+        t("about.concepts.thirdCard.title.1"),
+      ],
+      img: bussines,
+      alt: "conference",
+      text: t("about.concepts.thirdCard.desc"),
+    },
+    {
+      title: [
+        t("about.concepts.fourthCard.title.0"),
+        t("about.concepts.fourthCard.title.1"),
+      ],
+      img: bar,
+      alt: "karaoke",
+      text: t("about.concepts.fourthCard.desc"),
+    },
+  ];
 
   return (
     <section className="w-full flex justify-center flex-col items-center bg-white  ">
@@ -49,7 +57,7 @@ export const Concepts = () => {
             {t("about.concepts.heading.0")}
           </h1>
           <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] font-semibold font-cofo">
-              {t("about.concepts.desc")}
+            {t("about.concepts.desc")}
           </p>
         </div>
 
@@ -57,10 +65,16 @@ export const Concepts = () => {
           <div
             key={index}
             className={`border border-[#C7C7C7] 
-              ${index === concepts.length - 2 ? "md:border-e-0 xl:border-e md:border-b" : ""}
               ${
-              index === 0 ? "xl:border-l md:border-e-0 md:border-b-0 xl:border-r xl:border-b" : "xl:border-l-0 xl:border-t border-t-0 md:border-t md:border-b-0 xl:border-b "
-            }`}
+                index === concepts.length - 2
+                  ? "md:border-e-0 xl:border-e md:border-b"
+                  : ""
+              }
+              ${
+                index === 0
+                  ? "xl:border-l md:border-e-0 md:border-b-0 xl:border-r xl:border-b"
+                  : "xl:border-l-0 xl:border-t border-t-0 md:border-t md:border-b-0 xl:border-b "
+              }`}
           >
             <div className="text-center flex flex-col items-center px-6 py-8 xl:h-[579px] h-[469px]">
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
@@ -69,11 +83,13 @@ export const Concepts = () => {
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
                 {title[1]}
               </h1>
-              <img
-                src={img}
-                alt={alt}
-                className="w-[200px] h-[191px] object-cover xl:my-6 my-4"
-              />
+              <InViewWrapper>
+                <img
+                  src={img}
+                  alt={alt}
+                  className="w-[200px] h-[191px] object-cover xl:my-6 my-4"
+                />
+              </InViewWrapper>
               <p className="text-sm xl:text-base flex-grow font-cofo font-normal px-2  xl:text-[16px]  2xl:text-[18px]">
                 {text}
               </p>

@@ -18,10 +18,11 @@ import wifi from '../../assets/icons/About/wifi.svg';
 import ironingChlothes from '../../assets/icons/About/ironingChlothes.svg';
 import washingMachine from '../../assets/icons/About/washingMachine.svg';
 
-import AdvantagesImg from '../../assets/About/advantages.png';
+import AdvantagesImg from '../../assets/About/advantages.webp';
 import { useModalStore } from '../../store/useModalStore';
 
 import { useTranslation } from 'react-i18next';
+import { InViewWrapper } from '../InViewWrapper';
 
 
 export const Advantages = () => {
@@ -61,7 +62,9 @@ export const Advantages = () => {
     <ul className="uppercase pt-[29px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl space-y-2">
       {hotelInfo.map(({ icon, text }, index) => (
         <li key={index} className="flex items-center gap-1.5 lg:self-end">
+          <InViewWrapper>
           <img className="icon" src={icon} alt={text} />
+          </InViewWrapper>
           {text}
         </li>
       ))}
@@ -70,8 +73,10 @@ export const Advantages = () => {
 </div>
 
 
-        <div className="lg:hidden flex justify-center py-6 w-full">
+        <div className="lg:hidden flex justify-center py-6 w-full"> 
+          <InViewWrapper>
           <img src={AdvantagesImg} alt="advantages" className="w-[250px] h-[250px]" />
+          </InViewWrapper>
         </div>
 
         <div className="h-full p-4 w-full lg:border-x  border-[#C7C7C7]">
@@ -82,7 +87,9 @@ export const Advantages = () => {
             <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] space-y-2">
               {services.map(({ icon, text }, index) => (
                 <li key={index} className="flex items-center gap-1.5">
+                  <InViewWrapper>
                   <img className="icon " src={icon} alt={text} />
+                  </InViewWrapper>
                   {text}
                 </li>
               ))}
@@ -96,11 +103,13 @@ export const Advantages = () => {
         </div>
 
         <div className="hidden lg:flex  h-full justify-center items-center p-4">
-  <img
-    src={AdvantagesImg}
-    alt="advantages"
+          <InViewWrapper>
+          <img
+            src={AdvantagesImg}
+            alt="advantages"
     className="w-[95%] h-auto max-w-[400px] xl:max-w-[496px] max-h-[400px] xl:max-h-[509px] object-contain"
   />
+  </InViewWrapper>
 </div>
 
       </div>

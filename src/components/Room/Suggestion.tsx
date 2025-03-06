@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SuggestionT } from "../../store/types";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 type SuggestionToProps = {
   suggestion: SuggestionT[];
 };
@@ -17,11 +18,14 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
           >
             <div className="relative">
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent"></div>
+              <InViewWrapper> 
+
               <img
                 src={item.img}
                 alt={item.type}
                 className="lg:w-full lg:h-[654px] object-cover"
-              />
+                />
+                </InViewWrapper>
             </div>
 
             <div className="absolute top-0 flex flex-col items-center text-center text-white z-10 lg:p-4 p-[51px] w-full lg:h-[250px] justify-s">
@@ -41,7 +45,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                 to={`/rooms/${item.type}`}
                 className="uppercase lg:py-[12px] lg:mt-[61px] mt-[20px] lg:px-[20px] rounded-full font-semibold border-[0.5px] text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
               >
-                переглянути
+                {t('buttons.view')}
               </Link>
             </div>
           </div>

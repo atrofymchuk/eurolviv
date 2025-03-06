@@ -2,6 +2,7 @@ import area from "../assets/icons/Rooms/squareWhite.svg";
 import guest from "../assets/icons/Rooms/guestWhite.svg";
 import { Room } from "../store/types";
 import { Link } from "react-router-dom";
+import { InViewWrapper } from "./InViewWrapper";
 
 type RoomsListHeaderToProps = {
   room:Room
@@ -15,11 +16,14 @@ export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
         <div className={`flex flex-col  border-[#FFFFFF33] items-center justify-center  ${index === 0 ? 'border-x' : 'border-e'}  ${index == 2 ? 'lg-border-e border-x':'' } p-2`}>
           <Link to={`/rooms/${room.type}`}>
           <div>
+            <InViewWrapper>
+
             <img
               src={room.header.previewImage}
               alt="preview"
               className="lg:w-[394px] lg:h-[304px]  "
-            />
+              />
+              </InViewWrapper>
             <div className="flex justify-between w-full lg:mt-3.5 mt-1">
               <div className="flex items-center">
                 <img src={area} alt="area icon" className="lg:w-5 lg:h-5 w-4  me-2" />

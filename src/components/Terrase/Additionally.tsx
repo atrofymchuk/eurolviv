@@ -1,6 +1,6 @@
-import menu from "../../assets/Terrase/Aditionally/menu.png";
-import bar from "../../assets/Terrase/Aditionally/bar.png";
-import celebrating from "../../assets/Terrase/Aditionally/celebrating.png";
+import menu from "../../assets/Terrase/Aditionally/menu.webp";
+import bar from "../../assets/Terrase/Aditionally/bar.webp";
+import celebrating from "../../assets/Terrase/Aditionally/celebrating.webp";
 import { useTranslation } from "react-i18next";
 
 export const Additionally = () => {

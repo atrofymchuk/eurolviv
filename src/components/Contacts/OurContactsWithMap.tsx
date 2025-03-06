@@ -1,6 +1,7 @@
 import { FaInstagram } from "react-icons/fa";
 import MapImg from "./MapImg";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 
 export const OurContactsWithMap = () => {
@@ -66,8 +67,11 @@ export const OurContactsWithMap = () => {
         <FaInstagram color="white" className="w-[26px] h-[26px]" />
       </div>
     </div>
+    <InViewWrapper> 
+
 
     <MapImg             />
+    </InViewWrapper>
   </div>
 </div>
 };

@@ -1,5 +1,6 @@
-import Section from "../../assets/About/Section.png";
+import Section from "../../assets/About/Section.webp";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const StorySection = () => {
   const { t } = useTranslation();
@@ -43,11 +44,14 @@ tracking-[-0.017em] uppercase text-[#242425] text-center w-full lg:text-end"
         <div className="hidden lg:block border-s border-b border-[#C7C7C7] h-full"></div>
 
         <div className=" flex justify-center items-center w-full border-[#C7C7C7] border-b p-4">
+          <InViewWrapper> 
+
           <img
             src={Section}
             alt="Reception"
             className="w-full max-h-[543px] object-cover object-[0%_35%] "
-          />
+            />
+            </InViewWrapper>
         </div>
 
         <div className="lg:border-s  border-[#C7C7C7] flex flex-col h-full text-xs sm:text-sm md:text-base lg:text-lg 2xl:text-2xl font-normal tracking-[-0.01em] text-left">

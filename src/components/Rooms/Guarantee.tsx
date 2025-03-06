@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import eurohotel from "../../assets/Rooms/eurohotel.jpg";
+import eurohotel from "../../assets/Rooms/eurohotel.webp";
 import { useModalStore } from "../../store/useModalStore";
 
 export const Guarantee = () => {

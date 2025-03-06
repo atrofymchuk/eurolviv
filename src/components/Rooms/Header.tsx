@@ -1,15 +1,19 @@
-import headerPhoto from "../../assets/Rooms/header.jpg";
+import headerPhoto from "../../assets/Rooms/header.webp";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const Header = () => {
   const {t} = useTranslation()
   return (
     <div className="w-full relative">
+      <InViewWrapper> 
+
       <img
         src={headerPhoto}
         alt="preview"
         className="object-cover w-full lg:h-[1181px]  h-[808px]"
-      />
+        />
+        </InViewWrapper>
       <div
         className="absolute inset-0 "
         style={{

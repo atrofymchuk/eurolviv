@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { forwardRef } from "react";
+import { InViewWrapper } from "../InViewWrapper";
 
 type SpecialOffersSliderToProps = {
     ref:Slider | null
@@ -51,11 +52,14 @@ export const SpecialOffersSlider = forwardRef<Slider, SpecialOffersSliderToProps
             index !== specialOffers.length - 1 ? "border-r-0" : ""
           }`}
         >
+          <InViewWrapper> 
+
           <img
             src={el.src}
             alt=""
             className={`w-[240px] h-[232px] md:w-[340px] md:h-[320px] lg:w-[444px] lg:h-[421px] object-cover ${el.classes}`}
-          />
+            />
+            </InViewWrapper>
           <p className="absolute lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] left-[23px] top-[23px] uppercase lg:w-fit md:w-[180px] w-[150px] border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] md:leading-[16px] lg:py-[13px] md:py-[10px] py-[7px] px-[12px] lg:px-[22px] md:px-[16px] rounded-full font-semibold lg:text-[16px] md:text-[13px] text-[10px] leading-[12px]">
             {t(el.offer)}
           </p>

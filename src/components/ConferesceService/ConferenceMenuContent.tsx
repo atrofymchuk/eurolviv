@@ -1,6 +1,6 @@
-import food from "../../assets/ConferenceService/Menu/food.png";
-import sandwich from "../../assets/ConferenceService/Menu/sandwich.png";
-import coffee from "../../assets/ConferenceService/Menu/coffee.png";
+import food from "../../assets/ConferenceService/Menu/food.webp";
+import sandwich from "../../assets/ConferenceService/Menu/sandwich.webp";
+import coffee from "../../assets/ConferenceService/Menu/coffee.webp";
 import { ConferenceMenuCard } from "./ConferenceMenuCard";
 import { ConferenceMenuMobileCard } from "./ConferenceMenuMobile";
 import { useTranslation } from "react-i18next";

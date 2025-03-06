@@ -1,5 +1,6 @@
 import { IoClose } from "react-icons/io5";
 import { useMenuStore } from "../../store/useMenuStore";
+import { InViewWrapper } from "../InViewWrapper";
 
 export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: () => void }) {
   const { menuItems } = useMenuStore();
@@ -29,11 +30,13 @@ export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: 
                 <span className="font-semibold">{item.grams}</span>
               </p>
             </div>
-            <img
-              src={item.previewImage}
-              alt={item.title}
-              className="lg:w-full max object-cover max-w-[280px]"
-            />
+            <InViewWrapper>
+              <img
+                src={item.previewImage}
+                alt={item.title}
+                className="lg:w-full max object-cover max-w-[280px]"
+              />
+            </InViewWrapper>
           </div>
         </div>
       ))}

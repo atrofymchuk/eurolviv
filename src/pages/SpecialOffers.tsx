@@ -8,7 +8,6 @@ export const SpecialOffers = () =>{
        <div className='overflow-x-hidden'>
         <Header />
         <Cards />
-
         <SpecialOffersModal />  
        </div>
     )

@@ -8,6 +8,7 @@ import area from "../../assets/icons/Rooms/squareWhite.svg";
 import guest from "../../assets/icons/Rooms/guestWhite.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 type RoomSSliderProps = {
     ref:Slider | null
 }
@@ -109,13 +110,17 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
        )}`}
      >
        <div className="flex items-center justify-center w-full h-[250px] xl:h-[300px]">
+
+        <InViewWrapper> 
+          
          <img
            src={el.header.previewImage}
            alt={`Slide ${index}`}
            className={`object-cover w-full h-full transition-all duration-300 ${
              index === currentSlide ? 'scale-110' : 'scale-100'
-           }`}
-         />
+            }`}
+            />
+            </InViewWrapper>
        </div>
      
        <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-3%] pt-[20px] text-center line-clamp-2">

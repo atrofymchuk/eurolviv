@@ -1,6 +1,7 @@
-import karaokeFst from "../../assets/Restaurant/Karaoke/Fst.png";
-import karaokeScd from "../../assets/Restaurant/Karaoke/Scnd.png";
+import karaokeFst from "../../assets/Restaurant/Karaoke/Fst.webp";
+import karaokeScd from "../../assets/Restaurant/Karaoke/Scnd.webp";
 import { useTranslation } from "react-i18next";   
+import { InViewWrapper } from "../InViewWrapper";
 export const Karaoke = () => {
   const { t } = useTranslation()
   return (
@@ -27,21 +28,23 @@ export const Karaoke = () => {
             </div>
           </div>
         </div>
+        <InViewWrapper>
 
         <div className=" flex items-center justify-center md:border-x border-[#B3B3B3] border-y md:border-y-0  py-5 md:py-0 lg:h-full px-5">
           <img
             src={karaokeFst}
             alt=""
             className="2xl:w-[475px] 2xl:h-[517px] sm:w-[430px] xl:w-[400px] xl:h-[400px]  md:w-[300px] md:h-[280px] sm:h-[425px] w-[299px] h-[325px]"
-          />
+            />
         </div>
         <div className=" flex items-center justify-center border-b border-[#B3B3B3] md:border-b-0  py-5 md:py-0 lg:h-full px-5" >
           <img
             src={karaokeScd}
             alt=""
             className="2xl:w-[583px] 2xl:h-[518px] sm:w-[430px] xl:w-[420px] xl:h-[420px]  md:w-[300px] md:h-[300px] sm:h-[425px] w-[300px] h-[325px] "
-          />
+            />
         </div>
+            </InViewWrapper>
       </div>
     </div>
   );

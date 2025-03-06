@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
-import headerImg from "../../assets/About/header.png";
+import headerImg from "../../assets/About/header.webp";
 import { useModalStore } from "../../store/useModalStore";
+import { InViewWrapper } from "../InViewWrapper";
+
 
 export const AboutHeader = () => {
   const {onOpenModal } = useModalStore();
   const {t} = useTranslation()
+
 
 
   return (
@@ -12,11 +15,16 @@ export const AboutHeader = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
-      <img
-        src={headerImg}
-        alt="headerImg"
-        className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
-      />
+      <InViewWrapper>
+
+
+        <img
+          
+          src={headerImg}
+          alt="headerImg"
+          className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
+          />
+      </InViewWrapper>
 
       <h4 className="font-cofo text-[#FFFFFF]  uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
         {t("global.createdFor")}

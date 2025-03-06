@@ -12,7 +12,7 @@ export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { onOpenModal } = useModalStore();
   const { rooms } = useRoomStore();
-  const {
+  const  {
     styles,
     iconLogoStyle,
     pathname,

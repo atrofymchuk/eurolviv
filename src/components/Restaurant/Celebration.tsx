@@ -1,8 +1,9 @@
-import wedFst from "../../assets/Restaurant/Celebrate/WED1.jpg";
-import wedScd from "../../assets/Restaurant/Celebrate/WED2.jpg";
-import wedTrd from "../../assets/Restaurant/Celebrate/WED3.jpg";
+import wedFst from "../../assets/Restaurant/Celebrate/WED1.webp";
+import wedScd from "../../assets/Restaurant/Celebrate/WED2.webp";
+import wedTrd from "../../assets/Restaurant/Celebrate/WED3.webp";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
     export const Celebration = () => {
   const { onOpenModal } = useModalStore();
@@ -34,9 +35,10 @@ import { useTranslation } from "react-i18next";
         <div className="md:flex hidden  border-[#B3B3B3]  "></div>
       </div>
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 border-x md:border-b-0   border-y border-[#B3B3B3] w-full">
+          <InViewWrapper>
         <div className="flex items-center justify-center px-5 py-5  ">
-          <img
-            src={wedFst}
+            <img
+              src={wedFst}
             alt=""
             className="md:w-full md:h-full  w-[300px] h-[310px]  2xl:max-h-[620px] xl:max-h-[520px] object-cover"
           />
@@ -54,7 +56,8 @@ import { useTranslation } from "react-i18next";
             alt=""
             className="md:w-full md:h-full  2xl:max-h-[620px]  xl:max-h-[520px] w-[300px] h-[316px] object-cover"
           />
-        </div>
+          </div>
+        </InViewWrapper>  
       </div>
     </div>
   );

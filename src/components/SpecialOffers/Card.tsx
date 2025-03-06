@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 type CardToProps = {
   src: string;
   title: string;
@@ -13,12 +14,15 @@ export const Card = ({ src, title, desc, classes, offer }: CardToProps) => {
   return (
     <div className="flex flex-col h-full">
       <div className="relative w-full">
+        <InViewWrapper>
+
         <img
           src={src}
           alt={title}
           className={`w-full object-cover ${classes} 
-            h-[200px] sm:h-[250px] md:h-[320px] lg:h-[510px]`}
-        />
+          h-[200px] sm:h-[250px] md:h-[320px] lg:h-[510px]`}
+          />
+          </InViewWrapper>
 
         <p className="absolute top-[10px] left-[10px] lg:top-[20px] lg:left-[20px] uppercase border bg-white text-[#A47762] font-medium rounded-full 
           px-3 py-1 text-[10px] leading-[12px] sm:text-[12px] sm:px-4 sm:py-2 md:text-[14px] lg:text-[16px] lg:px-[22px] lg:py-[13px]">

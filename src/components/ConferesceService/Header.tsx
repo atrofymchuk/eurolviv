@@ -1,5 +1,5 @@
-import headerPhoto from "../../assets/ConferenceService/BigHall.jpg";
-import headerPhotoMobile from "../../assets/ConferenceService/hallPhone.jpg";
+import headerPhoto from "../../assets/ConferenceService/BigHall.webp";
+import headerPhotoMobile from "../../assets/ConferenceService/hallPhone.webp";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 export const Header = () => {

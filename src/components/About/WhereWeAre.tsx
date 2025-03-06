@@ -1,7 +1,8 @@
 import navigateIco from "../../assets/icons/About/navigation.svg";
-import hotel from "../../assets/About/hotel.png";
+import hotel from "../../assets/About/hotel.webp";
 import MapComponent from "./Map";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const WhereWeAre = () => {
   const { t } = useTranslation();
@@ -80,7 +81,10 @@ export const WhereWeAre = () => {
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 pe-0 xl:h-[692px] lg:pt-[73px]">
           <div className="lg:ms-[52px]  ">
             <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
+              <InViewWrapper>
+
               <img src={navigateIco} alt="navigate" className="mr-2" />
+              </InViewWrapper>
               <span className="underline text-[#8C331B] font-semibold text-sm xl:text-lg ">
                 {t("about.whereWeAre.desc.0")}
               </span>
@@ -110,7 +114,10 @@ export const WhereWeAre = () => {
           </div>
         </div>
         <div className="flex justify-center items-center h-full w-full max-h-[34rem] xl:min-h-[521px] lg:h-[28rem] mx-auto my-auto max-w-[862px]  p-5 ps-0">
+          <InViewWrapper>
+
           <MapComponent />
+          </InViewWrapper>
         </div>
       </div>
 
@@ -126,11 +133,13 @@ export const WhereWeAre = () => {
             {t("about.whereWeAre.infrastructureDesc")}
           </p>
           <div className="flex justify-center xl:justify-start mt-6">
+            <InViewWrapper>
             <img
               src={hotel}
               alt="hotel"
               className="hidden lg:block w-[760px] h-[582px]"
             />
+            </InViewWrapper>
           </div>
         </div>
 
@@ -150,7 +159,9 @@ export const WhereWeAre = () => {
             ))}
           </ul>
           <div className="flex justify-center mt-6 lg:hidden">
+            <InViewWrapper>
             <img src={hotel} alt="hotel" className="w-[300px] h-[230px]" />
+            </InViewWrapper>
           </div>
           <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left mt-10">
             {t("about.whereWeAre.places.heading")}

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
-import karaoke from "../../assets/Restaurant/Karaoke/Fst.png";
-import restaurant from "../../assets/Restaurant/homePreview.png";
-import terrace from "../../assets/Terrase/homePreview.jpg";
+import karaoke from "../../assets/Restaurant/Karaoke/Fst.webp";
+import restaurant from "../../assets/Restaurant/homePreview.webp";
+import terrace from "../../assets/Terrase/homePreview.webp";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const RoofService = () => {
   const { t } = useTranslation();
@@ -64,7 +65,9 @@ export const RoofService = () => {
             >
               <div className="flex flex-col items-center space-y-[29px]">
                 <div className="flex justify-center w-full">
-                  <img src={ruffLogo} alt="" className="w-[135px] h-[18px]" />
+                  <InViewWrapper>
+                    <img src={ruffLogo} alt="" className="w-[135px] h-[18px]" />
+                  </InViewWrapper>
                 </div>
                 <h1
                   className={`${

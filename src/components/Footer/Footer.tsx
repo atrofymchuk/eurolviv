@@ -1,6 +1,6 @@
 import "./Footer.css";
 
-import backgroundImage from "../../assets/footer.png";
+import backgroundImage from "../../assets/footer.webp";
 
 import instagram from "../../assets/icons/instagram-f-svgrepo-com.svg";
 import { FaFacebook } from "react-icons/fa6";
@@ -10,6 +10,7 @@ import { RatingMobile } from "./RatingMobile";
 import { BookingSection } from "./BookingSection";
 import { BottomText } from "./BottomText";
 import { AddressWithSchedule } from "./AddressWithSchedule";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -20,11 +21,14 @@ export const Footer = () => {
       <div className="absolute top-[200px] left-0 w-full h-[calc(100%-200px)] footer-gradient z-10"></div>
 
       <div className="absolute inset-0 bg-[#25252659] pt-[100px] z-10"></div>
+      <InViewWrapper>
+
       <img
         src={backgroundImage}
         alt="Background"
         className="absolute inset-0 w-full h-full  z-0 "
-      />
+        />
+        </InViewWrapper>
 
       <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between max-w-[1720px] lg:mx-auto  ">
         <div className="lg:order-1 order-2">

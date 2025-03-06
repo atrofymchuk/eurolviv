@@ -3,6 +3,7 @@ import square from "../../assets/icons/Rooms/square.svg";
 import guests from "../../assets/icons/Rooms/guests.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 type RoomInfoCard = {
   room: Room;
@@ -27,12 +28,14 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
         lg:p-[15px]`}
     >
       <div className="">
-        <div className="items-center flex justify-center">
-          <img
-            src={room.header.previewImage}
-            alt={room.title}
+        <div className="items-center flex justify-center">      
+          <InViewWrapper>
+            <img
+              src={room.header.previewImage}
+              alt={room.title}
             className="2xl:w-[530px] 2xl:h-[416px] xl:w-[480px] xl:h-[380px] lg:w-[420px] lg:h-[340px] md:w-[360px] md:h-[280px] w-[301px] h-[230px] object-cover"
           />
+          </InViewWrapper>
         </div>
 
         <div className="2xl:h-[297px] xl:h-[280px] lg:h-[260px] md:h-[220px] h-[191px]">

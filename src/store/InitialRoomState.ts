@@ -37,61 +37,61 @@ import slippers from "../assets/icons/Rooms/LivingRoomBrown/slippers.svg";
 import towels from "../assets/icons/Rooms/LivingRoomBrown/towels.svg";
 import wc from "../assets/icons/Rooms/LivingRoomBrown/wc.svg";
 
-import standartSinglePreview from "../assets/Rooms/StandartSingle/prewiew.jpg";
-import standartSingleBedroomFst from "../assets/Rooms/StandartSingle/bedroom.jpg";
-import standartSingleBedroomScd from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
-import standartSingleAmmenties from "../assets/Rooms/StandartSingle/ammenties.jpg";
+import standartSinglePreview from "../assets/Rooms/StandartSingle/prewiew.webp";
+import standartSingleBedroomFst from "../assets/Rooms/StandartSingle/bedroom.webp";
+import standartSingleBedroomScd from "../assets/Rooms/StandartSingle/bedroomTwo.webp";
+import standartSingleAmmenties from "../assets/Rooms/StandartSingle/ammenties.webp";
 
-import standartBigBedPreview from "../assets/Rooms/StandartWithBigBed/preview.jpg";
-import standartBigBedFst from "../assets/Rooms/StandartWithBigBed/bedroom.jpg";
-import standartBigBedScd from "../assets/Rooms/StandartWithBigBed/bedroomTwo.jpg";
+import standartBigBedPreview from "../assets/Rooms/StandartWithBigBed/preview.webp";
+import standartBigBedFst from "../assets/Rooms/StandartWithBigBed/bedroom.webp";
+import standartBigBedScd from "../assets/Rooms/StandartWithBigBed/bedroomTwo.webp";
 
-import standartTwoBedPreview from "../assets/Rooms/StandartWithTwoBeds/preview.jpg";
-import standartTwoBedFst from "../assets/Rooms/StandartWithTwoBeds/bedrom.jpg";
-import standartTwoBedScd from "../assets/Rooms/StandartWithTwoBeds/bedroomTwo.jpg";
+import standartTwoBedPreview from "../assets/Rooms/StandartWithTwoBeds/preview.webp";
+import standartTwoBedFst from "../assets/Rooms/StandartWithTwoBeds/bedrom.webp";
+import standartTwoBedScd from "../assets/Rooms/StandartWithTwoBeds/bedroomTwo.webp";
 
-import standartBigBedAndBalconyPreview from "../assets/Rooms/StandartWithBigBedAndBalcony/preview.jpg";
-import standartBigBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.jpg";
-import standartBigBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.Two.jpg";
+import standartBigBedAndBalconyPreview from "../assets/Rooms/StandartWithBigBedAndBalcony/preview.webp";
+import standartBigBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.webp";
+import standartBigBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.Two.webp";
 
-import standartTwoBedAndBalconyPreview from "../assets/Rooms/StandartWithTwoBedsAndBalcony/preview.jpg";
-import standartTwoBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroom.jpg";
-import standartTwoBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroomTwo.jpg";
+import standartTwoBedAndBalconyPreview from "../assets/Rooms/StandartWithTwoBedsAndBalcony/preview.webp";
+import standartTwoBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroom.webp";
+import standartTwoBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroomTwo.webp";
 
-import semiLuxPreview from "../assets/Rooms/SemiLux/preview.jpg";
-import semiLuxBathroomFst from "../assets/Rooms/SemiLux/bathroom.jpg";
-import semiLuxBathroomScd from "../assets/Rooms/SemiLux/bathroomTwo.jpg";
-import semiLuxBedroomScd from "../assets/Rooms/SemiLux/bedroomTwo.jpg";
+import semiLuxPreview from "../assets/Rooms/SemiLux/preview.webp";
+import semiLuxBathroomFst from "../assets/Rooms/SemiLux/bathroom.webp";
+import semiLuxBathroomScd from "../assets/Rooms/SemiLux/bathroomTwo.webp";
+import semiLuxBedroomScd from "../assets/Rooms/SemiLux/bedroomTwo.webp";
 
-import luxTwoRoomsPreview from "../assets/Rooms/LuxTwoRooms/header.jpg";
-import luxTwoRoomsLivingRoomTrd from "../assets/Rooms/LuxTwoRooms/room.jpg";
-import luxTwoRoomsBedroomFst from "../assets/Rooms/LuxTwoRooms/bedroom.jpg";
-import luxTwoRoomsBedroomScd from "../assets/Rooms/LuxTwoRooms/bedroom2.jpg";
-import luxTwoRoomsLivingRoomFst from "../assets/Rooms/LuxTwoRooms/livingRoom.jpg";
-import luxTwoRoomsLivingRoomScd from "../assets/Rooms/LuxTwoRooms/livingRoom2.jpg";
-import luxTwoRoomsBathRoomFst from "../assets/Rooms/LuxTwoRooms/bathroom.jpg";
-import luxTwoRoomsBathRoomScd from "../assets/Rooms/LuxTwoRooms/bathroom2.jpg";
+import luxTwoRoomsPreview from "../assets/Rooms/LuxTwoRooms/header.webp";
+import luxTwoRoomsLivingRoomTrd from "../assets/Rooms/LuxTwoRooms/room.webp";
+import luxTwoRoomsBedroomFst from "../assets/Rooms/LuxTwoRooms/bedroom.webp";
+import luxTwoRoomsBedroomScd from "../assets/Rooms/LuxTwoRooms/bedroom2.webp";
+import luxTwoRoomsLivingRoomFst from "../assets/Rooms/LuxTwoRooms/livingRoom.webp";
+import luxTwoRoomsLivingRoomScd from "../assets/Rooms/LuxTwoRooms/livingRoom2.webp";
+import luxTwoRoomsBathRoomFst from "../assets/Rooms/LuxTwoRooms/bathroom.webp";
+import luxTwoRoomsBathRoomScd from "../assets/Rooms/LuxTwoRooms/bathroom2.webp";
 
-import luxImperiumPreview from "../assets/Rooms/LuxImpreial/preview.jpg";
-import luxImperiumlivigRoomFst from "../assets/Rooms/LuxImpreial/livingroom.jpg";
-import luxImperiumlivigRoomScd from "../assets/Rooms/LuxImpreial/livingroom2.jpg";
-import luxImperiumBedRoomFst from "../assets/Rooms/LuxImpreial/bedroom.jpg";
-import luxImperiumBedRoomScd from "../assets/Rooms/LuxImpreial/bedroom2.jpg";
-import luxImperiumBathRoomFst from "../assets/Rooms/LuxImpreial/bathroom.jpg";
-import luxImperiumBathRoomScd from "../assets/Rooms/LuxImpreial/bathroom2.jpg";
+import luxImperiumPreview from "../assets/Rooms/LuxImpreial/preview.webp";
+import luxImperiumlivigRoomFst from "../assets/Rooms/LuxImpreial/livingroom.webp";
+import luxImperiumlivigRoomScd from "../assets/Rooms/LuxImpreial/livingroom2.webp";
+import luxImperiumBedRoomFst from "../assets/Rooms/LuxImpreial/bedroom.webp";
+import luxImperiumBedRoomScd from "../assets/Rooms/LuxImpreial/bedroom2.webp";
+import luxImperiumBathRoomFst from "../assets/Rooms/LuxImpreial/bathroom.webp";
+import luxImperiumBathRoomScd from "../assets/Rooms/LuxImpreial/bathroom2.webp";
 
-import luxElegantPreview from "../assets/Rooms/LuxElegant/preview.jpg";
-import luxElegantBathRoomFst from "../assets/Rooms/LuxElegant/bathroom.jpg";
-import luxElegantBathRoomScd from "../assets/Rooms/LuxElegant/bathroom2.jpg";
-import luxElegantBedRoomFst from "../assets/Rooms/LuxElegant/bedroom.jpg";
-import luxElegantBedRoomScd from "../assets/Rooms/LuxElegant/bedroom2.jpg";
-import luxElegantLivingRoomFst from "../assets/Rooms/LuxElegant/livingroom.jpg";
-import luxElegantLivingRoomScd from "../assets/Rooms/LuxElegant/livingroom2.jpg";
+import luxElegantPreview from "../assets/Rooms/LuxElegant/preview.webp";
+import luxElegantBathRoomFst from "../assets/Rooms/LuxElegant/bathroom.webp";
+import luxElegantBathRoomScd from "../assets/Rooms/LuxElegant/bathroom2.webp";
+import luxElegantBedRoomFst from "../assets/Rooms/LuxElegant/bedroom.webp";
+import luxElegantBedRoomScd from "../assets/Rooms/LuxElegant/bedroom2.webp";
+import luxElegantLivingRoomFst from "../assets/Rooms/LuxElegant/livingroom.webp";
+import luxElegantLivingRoomScd from "../assets/Rooms/LuxElegant/livingroom2.webp";
 
-import ammenties from "../assets/Rooms/StandartAbout/amenities.jpg";
-import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.jpg";
-import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.jpg";
-import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.jpg";
+import ammenties from "../assets/Rooms/StandartAbout/amenities.webp";
+import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.webp";
+import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.webp";
+import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.webp";
 import {
   ConferenceServiceState,
   RoomsState,
@@ -107,34 +107,34 @@ import paper from "../assets/icons/ConferenceService/paper.svg";
 import soundSystem from "../assets/icons/ConferenceService/soundsystem.svg";
 import flipchart from "../assets/icons/ConferenceService/flipchart.svg";
 
-import bigHall from "../assets/ConferenceService/BigHall.jpg";
-import bigHallTheathre from "../assets/ConferenceService/BigHallTheathre.jpg";
-import hallH from "../assets/ConferenceService/hallH.jpg";
-import pLetterImg from "../assets/ConferenceService/pLetterImg.png";
+import bigHall from "../assets/ConferenceService/BigHall.webp";
+import bigHallTheathre from "../assets/ConferenceService/BigHallTheathre.webp";
+import hallH from "../assets/ConferenceService/hallH.webp";
+import pLetterImg from "../assets/ConferenceService/pLetterImg.webp";
 
-import pLetter from "../assets/ConferenceService/pLetter.png";
-import classRoom from "../assets/ConferenceService/class.png";
-import theathre from "../assets/ConferenceService/theathre.png";
-import negotiationTable from "../assets/ConferenceService/negotiationTable.png";
+import pLetter from "../assets/ConferenceService/pLetter.webp";
+import classRoom from "../assets/ConferenceService/class.webp";
+import theathre from "../assets/ConferenceService/theathre.webp";
+import negotiationTable from "../assets/ConferenceService/negotiationTable.webp";
 
-import smallHallPreview from "../assets/ConferenceService/smallHallPreview.png";
-import pLetterSmall from "../assets/ConferenceService/pLetterSmall.png";
-import theathreSmall from "../assets/ConferenceService/theathreSmall.png";
-import negotiationTableSmall from "../assets/ConferenceService/negotiationTableSmall.png";
+import smallHallPreview from "../assets/ConferenceService/smallHallPreview.webp";
+import pLetterSmall from "../assets/ConferenceService/pLetterSmall.webp";
+import theathreSmall from "../assets/ConferenceService/theathreSmall.webp";
+import negotiationTableSmall from "../assets/ConferenceService/negotiationTableSmall.webp";
 
-import laungePreview from "../assets/ConferenceService/laungePreview.png";
-import laungeTheatre from "../assets/ConferenceService/laungeTheatre.png";
-import negotiationTableLaunge from "../assets/ConferenceService/negotiationTableLaunge.png";
+import laungePreview from "../assets/ConferenceService/laungePreview.webp";
+import laungeTheatre from "../assets/ConferenceService/laungeTheatre.webp";
+import negotiationTableLaunge from "../assets/ConferenceService/negotiationTableLaunge.webp";
 
-import mainFst from "../assets/Terrase/MainTerrase/previewFst.png";
-import mainScd from "../assets/Terrase/MainTerrase/previewScd.png";
-import mainTrd from "../assets/Terrase/MainTerrase/previewTrd.png";
-import mainFth from "../assets/Terrase/MainTerrase/previewFth.png";
+import mainFst from "../assets/Terrase/MainTerrase/previewFst.webp";
+import mainScd from "../assets/Terrase/MainTerrase/previewScd.webp";
+import mainTrd from "../assets/Terrase/MainTerrase/previewTrd.webp";
+import mainFth from "../assets/Terrase/MainTerrase/previewFth.webp";
 
-import upperFst from "../assets/Terrase/UpperTerrase/previewFhd.png";
-import upperScd from "../assets/Terrase/UpperTerrase/previewScd.png";
-import upperThd from "../assets/Terrase/UpperTerrase/previewThd.png";
-import upperFhd from "../assets/Terrase/UpperTerrase/previewFhd.png";
+import upperFst from "../assets/Terrase/UpperTerrase/previewFhd.webp";
+import upperScd from "../assets/Terrase/UpperTerrase/previewScd.webp";
+import upperThd from "../assets/Terrase/UpperTerrase/previewThd.webp";
+import upperFhd from "../assets/Terrase/UpperTerrase/previewFhd.webp";
 
 export const initialTerraseState: TerrasesInitialState = {
   terases: [

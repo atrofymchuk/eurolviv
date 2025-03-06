@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import previewImage from "../../assets/Home/preview.jpg";
+import previewImage from "../../assets/Home/preview.webp";
 import { useTranslation } from "react-i18next";
 
 export const AboutHome = () => {

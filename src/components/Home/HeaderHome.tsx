@@ -1,14 +1,18 @@
 import { t } from "i18next";
-import headerPhoto from "../../assets/Home/header.png";
+import headerPhoto from "../../assets/Home/header.webp";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const HeaderHome = () => {
   return (
     <div className="w-full relative">
+      <InViewWrapper>
+
       <img
         src={headerPhoto}
         alt="preview"
         className="object-cover w-full lg:h-[1171px]  h-[808px]"
-      />
+        />
+        </InViewWrapper>
       <div
         className="absolute inset-0 "
         style={{

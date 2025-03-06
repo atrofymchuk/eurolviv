@@ -1,21 +1,21 @@
 import { MenuInitialState } from "./types";
 
-import ClassicBritishBreakfaseFst from "../assets/Menu/ClassicBritishBreakfase.png";
-import ClassicBritishBreakfastScd from "../assets/Menu/ClassicBritishBreakfast2.png";
-import ClassicBritishBreakfastThrd from "../assets/Menu/ClassicBritishBreakfast3.png";
-import ClassicBritishBreakfastFth from "../assets/Menu/breakfast4.png";
-import ClassicBritishBreakfastSix from "../assets/Menu/breakfast5.png";
-import ClassicBritishBreakfastSev from "../assets/Menu/breakfast6.png";
-import ClassicBritishBreakfastEig from "../assets/Menu/breakfast7.png";
-import ClassicBritishBreakfastNie from "../assets/Menu/breakfast8.png";
-import ClassicBritishBreakfastTen from "../assets/Menu/breakfast9.png";
-import ClassicBritishBreakfastEleven from "../assets/Menu/breakfast10.png";
-import ClassicBritishBreakfastTwelve from "../assets/Menu/breakfast11.png";
-import ClassicBritishBreakfastThirteen from "../assets/Menu/breakfast12.png";
-import ClassicBritishBreakfastFourteen from "../assets/Menu/breakfast13.png";
-import ClassicBritishBreakfastFifteen from "../assets/Menu/breakfast14.png";
-import ClassicBritishBreakfastSixteen from "../assets/Menu/breakfast15.png";
-import ClassicBritishBreakfastSeventeen from "../assets/Menu/breakfast16.png";
+import ClassicBritishBreakfaseFst from "../assets/Menu/ClassicBritishBreakfase.webp";
+import ClassicBritishBreakfastScd from "../assets/Menu/ClassicBritishBreakfast2.webp";
+import ClassicBritishBreakfastThrd from "../assets/Menu/ClassicBritishBreakfast3.webp";
+import ClassicBritishBreakfastFth from "../assets/Menu/breakfast4.webp";
+import ClassicBritishBreakfastSix from "../assets/Menu/breakfast5.webp";
+import ClassicBritishBreakfastSev from "../assets/Menu/breakfast6.webp";
+import ClassicBritishBreakfastEig from "../assets/Menu/breakfast7.webp";
+import ClassicBritishBreakfastNie from "../assets/Menu/breakfast8.webp";
+import ClassicBritishBreakfastTen from "../assets/Menu/breakfast9.webp";
+import ClassicBritishBreakfastEleven from "../assets/Menu/breakfast10.webp";
+import ClassicBritishBreakfastTwelve from "../assets/Menu/breakfast11.webp";
+import ClassicBritishBreakfastThirteen from "../assets/Menu/breakfast12.webp";
+import ClassicBritishBreakfastFourteen from "../assets/Menu/breakfast13.webp";
+import ClassicBritishBreakfastFifteen from "../assets/Menu/breakfast14.webp";
+import ClassicBritishBreakfastSixteen from "../assets/Menu/breakfast15.webp";
+import ClassicBritishBreakfastSeventeen from "../assets/Menu/breakfast16.webp";
 
 export const initialMenuState:MenuInitialState = {
     menuItems:[

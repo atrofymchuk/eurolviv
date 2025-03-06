@@ -5,12 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import slide1 from "../../assets/About/champagne.png";
-import slide2 from "../../assets/About/bathroom.png";
-import slide3 from "../../assets/About/bedroom.png";
-import slide4 from "../../assets/About/2roomLux.png";
-import slide5 from "../../assets/About/mirror.png";
+import slide1 from "../../assets/About/champagne.webp";
+import slide2 from "../../assets/About/bathroom.webp";
+import slide3 from "../../assets/About/bedroom.webp";
+import slide4 from "../../assets/About/2roomLux.webp";
+import slide5 from "../../assets/About/mirror.webp";
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
+import { InViewWrapper } from "../InViewWrapper";
 const slides = [slide1, slide2, slide3, slide4, slide5];
 
 
@@ -56,18 +57,21 @@ const ImageSlider = () => {
           const isEdge = Math.abs(activeSlide - index) > 1;
 
           return (
+            <InViewWrapper>
             <img
-              src={image}
-              alt={`slide_${index}`}
-              className={`w-full max-w-[500px]  object-cover  transition-all duration-500 lg:px-0      px-2
-                ${isSide ? "xl:w-[530px] xl:h-[353px] w-[231px] h-[154px]" : ""}
-                ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
-                ${
-                  isActive
-                    ? "xl:w-[510px] xl:h-[400px] w-[290px] h-[193px]"
-                    : ""
-                }`}
-            />
+            
+            src={image}
+            alt={`slide_${index}`}
+            className={`w-full max-w-[500px]  object-cover  transition-all duration-500 lg:px-0      px-2
+              ${isSide ? "xl:w-[530px] xl:h-[353px] w-[231px] h-[154px]" : ""}
+              ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
+              ${
+                isActive
+                ? "xl:w-[510px] xl:h-[400px] w-[290px] h-[193px]"
+                : ""
+              }`}
+              />
+              </InViewWrapper>
           );
         })}
       </Slider>

@@ -1,6 +1,7 @@
-import headerImg from "../../assets/Restaurant/header.jpg";
+import headerImg from "../../assets/Restaurant/header.webp";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";   
+import { InViewWrapper } from "../InViewWrapper";
 export const RestaurantHeader = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
@@ -8,12 +9,14 @@ export const RestaurantHeader = () => {
     <div className="relative w-full lg:h-[1157px] h-[808px] flex items-center justify-center flex-col">
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
+      <InViewWrapper> 
 
       <img
         src={headerImg}
         alt="headerImg"
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
-      />
+        />
+        </InViewWrapper>
 
       <h4 className="font-cofo text-[#FFFFFF] leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4 lg:mb-6 md:mb-1">
         <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl lg:text-2xl md:text-xl ml-2 xl:inline">

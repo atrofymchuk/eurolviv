@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
+import { InViewWrapper } from "../InViewWrapper";
 
 type HeaderNavProps = {
   scrolled: boolean;
@@ -81,6 +82,7 @@ export const HeaderNav = ({
         </button>
 
         <Link to="/">
+          <InViewWrapper>
           <img
             src={logo}
             alt="logo"
@@ -88,6 +90,7 @@ export const HeaderNav = ({
               !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
             } 2xl:w-[153px] 2xl:h-[84px] xl:w-[120px] xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`}
           />
+          </InViewWrapper>
         </Link>
 
         <button

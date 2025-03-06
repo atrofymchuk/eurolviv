@@ -54,7 +54,7 @@ export const RoomsInfo = () => {
                   onClick={()=>onOpenModal('order')}
                   className="font-cofo font-extrabold uppercase mt-[24px] mb-[20px] z-20 bg-[#8C331B] text-white hover:cursor-pointer px-[23px] h-fit py-[12px] rounded-full text-[12px]"
                 >
-                  забронювати
+                  {t("buttons.book")}
                 </button>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";
 import Slider from "react-slick";
 
-import SlideFst from "../../assets/Restaurant/aboutSlide1.jpg";
-import SlideScd from "../../assets/Restaurant/aboutSlide2.png";
-import SlideTrd from "../../assets/Restaurant/aboutSlide3.png";
+import SlideFst from "../../assets/Restaurant/aboutSlide1.webp";
+import SlideScd from "../../assets/Restaurant/aboutSlide2.webp";
+import SlideTrd from "../../assets/Restaurant/aboutSlide3.webp";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import { InViewWrapper } from "../InViewWrapper";
 
 function AboutSlider() {
   const slides = [SlideFst, SlideScd, SlideTrd, SlideFst, SlideScd];
@@ -45,7 +46,6 @@ function AboutSlider() {
         <IoIosArrowRoundBack className="w-3/4 h-3/4" />
       </button>
 
-      {/* Сам слайдер */}
       <Slider ref={sliderRef} {...settings} className="w-full">
         {slides.map((el, index) => {
           const isSide =
@@ -57,11 +57,13 @@ function AboutSlider() {
               key={index}
               className="px-2 transition-all duration-300 slick-slide relative"
             >
-              <img
-                src={el}
-                alt={`slide_${index}`}
-                className="2xl:w-[1223px] 2xl:h-[675px] xl:w-[1000px] xl:h-[550px] lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[285px] h-[186px] mx-auto transition-all duration-300"
-              />
+              <InViewWrapper>
+                <img
+                  src={el}
+                  alt={`slide_${index}`}
+                  className="2xl:w-[1223px] 2xl:h-[675px] xl:w-[1000px] xl:h-[550px] lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[285px] h-[186px] mx-auto transition-all duration-300"
+                />
+              </InViewWrapper>
               <div
                 className={`absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
                   isSide ? "opacity-100" : "opacity-0"

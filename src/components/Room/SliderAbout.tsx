@@ -6,6 +6,7 @@ import { Navigation } from "swiper/modules";
 import { AboutSliderProps } from "../../store/types";
 import { useRef } from "react";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import { InViewWrapper } from "../InViewWrapper";
 
 export const SliderAbout: React.FC<AboutSliderProps> = ({
   imageSlider,
@@ -34,13 +35,16 @@ export const SliderAbout: React.FC<AboutSliderProps> = ({
               w-full 
               flex items-center justify-center"
             >
+              <InViewWrapper> 
+
               <img
                 src={img}
                 alt="room image"
                 className={`${swiperImagesStyle} 
                 w-full h-full 
                 object-cover`}
-              />
+                />
+                </InViewWrapper>
             </SwiperSlide>
           ))}
         </Swiper>

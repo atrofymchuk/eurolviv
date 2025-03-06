@@ -6,6 +6,7 @@ import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
+import { InViewWrapper } from "../InViewWrapper";
 
 Modal.setAppElement("#root");
 
@@ -41,10 +42,12 @@ const SpecialOffersModal = () => {
 
         <div className="relative w-full">
           <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%] to-[#252526]"></div>
-          <img
-            src={data.src}
+          <InViewWrapper> 
+            <img
+              src={data.src}
             className="w-full h-[351px] md:max-h-[50vh]  object-cover object-center rounded-t-lg"
-          />
+            />
+          </InViewWrapper>  
           <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10">
             <h1 className="text-[32px] lg:text-[70px] text-[#FFFFFF80] tracking-[-0.07em]">
               {t(data.discount || "")}

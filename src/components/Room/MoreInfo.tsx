@@ -13,9 +13,10 @@ import ironing from "../../assets/icons/About/ironingChlothes.svg";
 import pet from "../../assets/icons/About/pet.svg";
 import parking from "../../assets/icons/About/parking.svg";
 
-import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.png";
-import coffee from "../../assets/Rooms/AdditionaInfo/coffee.jpg";
+import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.webp";
+import coffee from "../../assets/Rooms/AdditionaInfo/coffee.webp";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../InViewWrapper";
 
 type MoreInfoToProps = {
   isShowAdditionalPlace: boolean;
@@ -65,6 +66,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   2xl:mb-[51px]">
                   {t('room.moreInfo.title2')}
                 </h1>
+                <InViewWrapper>
                 <img
                   src={coffee}
                   alt="coffee"
@@ -75,6 +77,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                     
                     object-cover"
                 />
+                </InViewWrapper>
               </div>
 
               <div className={!isShowAdditionalPlace ? "block" : "hidden"}>
@@ -90,15 +93,17 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                     <li key={index}
                       className="flex items-center text-[#E1E1E1] uppercase font-cofo
                         space-x-3 sm:space-x-4">
-                      <img
-                        src={item.src}
-                        alt="amenities"
-                        className="w-[20px] h-[20px] 
+                      <InViewWrapper>
+                        <img
+                          src={item.src}
+                          alt="amenities"
+                          className="w-[20px] h-[20px] 
                           sm:w-[24px] sm:h-[24px] 
                           md:w-[28px] md:h-[28px] 
                           lg:w-[32px] lg:h-[32px] 
                           xl:w-[36px] xl:h-[36px]"
-                      />
+                        />
+                      </InViewWrapper>
                       <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]
                         leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[85%]">
                         {item.text}
@@ -128,15 +133,17 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   <li key={index}
                     className="flex items-center text-[#E1E1E1] uppercase font-cofo
                       space-x-3 sm:space-x-4">
-                    <img
-                      src={item.src}
-                      alt="service"
-                      className="w-[20px] h-[20px] 
+                    <InViewWrapper>
+                      <img
+                        src={item.src}
+                        alt="service"
+                        className="w-[20px] h-[20px] 
                         sm:w-[24px] sm:h-[24px] 
                         md:w-[28px] md:h-[28px] 
                         lg:w-[32px] lg:h-[32px] 
                         xl:w-[36px] xl:h-[36px]"
-                    />
+                      />
+                    </InViewWrapper>
                     <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]
                       leading-[104%]">
                       {item.text}
@@ -148,10 +155,11 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-[148px]
                 flex items-center text-[#E1E1E1] uppercase font-cofo
                 space-x-3 sm:space-x-4">
-                <img
-                  src={parking}
-                  alt="parking icon"
-                  className="w-[20px] h-[20px] 
+                <InViewWrapper>
+                  <img
+                    src={parking}
+                    alt="parking icon"
+                    className="w-[20px] h-[20px] 
                     sm:w-[24px] sm:h-[24px] 
                     md:w-[28px] md:h-[28px] 
                     lg:w-[32px] lg:h-[32px] 
@@ -159,9 +167,9 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 />
                 <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] mt-auto
                   leading-[104%]">
-                  {t('room.moreInfo.parking')}
-                </p>
-                
+                    {t('room.moreInfo.parking')}
+                  </p>
+                </InViewWrapper>
               </div>
               <button
                 onClick={()=>onOpenModal('order')}
@@ -185,6 +193,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
             <div className="w-[90%] sm:w-[400px] md:w-[400px] lg:w-full  
               lg:h-[441px] xl:h-[510px]
               lg:pt-[70px] px-5 lg:px-0 ">
+                <InViewWrapper>
               <img
                 src={isShowAdditionalPlace ? bedwithpet : coffee}
                 alt="room image"
@@ -195,7 +204,8 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   2xl:w-[497px] 2xl:h-[510px] 
                   object-cover"
               />
-              
+              </InViewWrapper>
+
               <button
                 onClick={()=>onOpenModal('order')}
                 className={`mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] ${isShowAdditionalPlace ? "hidden" : "flex"}
