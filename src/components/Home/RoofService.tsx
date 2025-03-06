@@ -55,7 +55,7 @@ export const RoofService = () => {
             </div>
 
             {index === 2 && (
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[1748px] border-x border-[#AEAEAE3D] pointer-events-none"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[91%] border-x border-[#AEAEAE3D] pointer-events-none"></div>
             )}
 
             <div

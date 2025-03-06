@@ -3,10 +3,10 @@ import { useInView } from "react-intersection-observer";
 
 type InViewWrapperProps = {
   children: ReactNode;
-  threshold?: number;  
+  threshold?: number;
   rootMargin?: string;
-  className?: string;  
-  onEnter?: () => void; 
+  className?: string;
+  onEnter?: () => void;
 };
 
 export const InViewWrapper = ({
@@ -19,7 +19,7 @@ export const InViewWrapper = ({
   const { ref, inView } = useInView({
     threshold,
     rootMargin,
-    triggerOnce: true, 
+    triggerOnce: true,
   });
 
   if (inView && onEnter) {
@@ -27,7 +27,7 @@ export const InViewWrapper = ({
   }
 
   return (
-    <div ref={ref} className={`${className}`}>
+    <div ref={ref} className={className} style={{ display: "contents" }}>
       {children}
     </div>
   );

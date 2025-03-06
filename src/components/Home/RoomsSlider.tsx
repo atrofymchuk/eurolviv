@@ -25,7 +25,7 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
     slidesToShow: 3.5,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "5px",
     initialSlide: 1,
     beforeChange: (_: number, newIndex: number) => setCurrentSlide(newIndex),
     responsive: [
@@ -94,9 +94,9 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
   const getSlideClass = (index: number) => {
     const baseClass = "transition-all duration-300";
     if (index === currentSlide) {
-      return `${baseClass} 2xl:w-[589px] 2xl:h-[556px] xl:w-[500px] xl:h-[660px] lg:w-[450px] lg:h-[440px] md:w-[400px] md:h-[520px] w-[350px] h-[500px] z-10`;
+      return `${baseClass} 2xl:w-[589px] lg:px-10 2xl:h-[556px] xl:w-[500px] xl:h-[660px] lg:w-[450px] lg:h-[440px] md:w-[400px] md:h-[520px] w-[350px] h-[500px] z-10`;
     }
-    return `${baseClass} 2xl:w-[475px] 2xl:h-[311px] xl:w-[400px] xl:h-[280px] lg:w-[380px] lg:h-[260px] md:w-[350px] md:h-[240px] w-[300px] h-[220px]`;
+    return `${baseClass} 2xl:w-[475px] lg:px-5 2xl:h-[311px] xl:w-[400px] xl:h-[280px] lg:w-[380px] lg:h-[260px] md:w-[350px] md:h-[240px] w-[300px] h-[220px]`;
   };
 
   return (
@@ -116,15 +116,15 @@ export const RoomsSlider =  forwardRef<Slider, RoomSSliderProps>((_,ref) => {
          <img
            src={el.header.previewImage}
            alt={`Slide ${index}`}
-           className={`object-cover w-full h-full transition-all duration-300 ${
-             index === currentSlide ? 'scale-110' : 'scale-100'
+           className={`object-cover w-full h-full transition-all  duration-300 ${
+             index === currentSlide ? ' scale-105' : 'scale-100 '
             }`}
             />
             </InViewWrapper>
        </div>
      
        <h4 className="uppercase text-[#EDE8E5] text-[24px] 2xl:text-[31.2px] xl:text-[28px] lg:text-[26px] xl:w-[399px] lg:w-[360px] w-[320px] mx-auto leading-[32.5px] tracking-[-3%] pt-[20px] text-center line-clamp-2">
-         {el.title}
+         {t(el.title)}
        </h4>
      
        <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px] gap-y-2">
