@@ -1,49 +1,12 @@
 
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
-import { roomLux, terasse, bussines, bar } from "../../store/exportsImg";
+import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 
 export const Concepts = () => {
   const { t } = useTranslation();
-  const concepts = [
-    {
-      title: [
-        t("about.concepts.frstCard.title.0"),
-        t("about.concepts.frstCard.title.1"),
-      ],
-      img: roomLux,
-      alt: "bedroom",
-      text: t("about.concepts.frstCard.desc"),
-    },
-    {
-      title: [
-        t("about.concepts.secondCard.title.0"),
-        t("about.concepts.secondCard.title.1"),
-      ],
-      img: terasse,
-      alt: "terrace",
-      text: t("about.concepts.secondCard.desc"),
-    },
-    {
-      title: [
-        t("about.concepts.thirdCard.title.0"),
-        t("about.concepts.thirdCard.title.1"),
-      ],
-      img: bussines,
-      alt: "conference",
-      text: t("about.concepts.thirdCard.desc"),
-    },
-    {
-      title: [
-        t("about.concepts.fourthCard.title.0"),
-        t("about.concepts.fourthCard.title.1"),
-      ],
-      img: bar,
-      alt: "karaoke",
-      text: t("about.concepts.fourthCard.desc"),
-    },
-  ];
-
+  const { concepts } = usePagesInfoStore();
+  
   return (
     <section className="w-full flex justify-center flex-col items-center bg-white  ">
       <div className="grid xl:grid-cols-4 w-full lg:grid-cols-2 box-border   border-[#C7C7C7]  fluid-container mx-auto max-w-[89.58%] ">
@@ -76,10 +39,10 @@ export const Concepts = () => {
           >
             <div className="text-center flex flex-col items-center px-6 py-8 xl:h-[579px] h-[469px]">
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
-                {title[0]}
+                {t(title[0])}
               </h1>
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
-                {title[1]}
+                {t(title[1])}
               </h1>
               <InViewWrapper>
                 <img
@@ -89,7 +52,7 @@ export const Concepts = () => {
                 />
               </InViewWrapper>
               <p className="text-sm xl:text-base flex-grow font-cofo font-normal px-2  xl:text-[16px]  2xl:text-[18px]">
-                {text}
+                {t(text)}
               </p>
               <div className="mt-auto">
                 <button className="font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base transition-all duration-300 hover:bg-[#8C331B] hover:text-white font-cofo">
@@ -100,7 +63,6 @@ export const Concepts = () => {
           </div>
         ))}
 
-        {/* Нижня рамка */}
         <div className="xl:col-span-4 md:col-span-2 xl:h-[165px] xl:w-full  xl:border-x border-x xl:border-b xl:border-t-0 border-t md:h-0  border-[#C7C7C7] "></div>
       </div>
     </section>

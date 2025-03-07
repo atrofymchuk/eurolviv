@@ -139,6 +139,12 @@ export interface Reviews {
   abroad: Review[];
 }
 
+export interface RestaurantReview {
+  id:number
+  text: string;
+  impression: string;
+}
+
 export interface ReviewSliderProps {
   reviews: Reviews;
   ref: Slider | null;
@@ -159,3 +165,20 @@ export interface MenuItem {
   ingredients: string[];
   grams: string;
 }
+
+
+
+
+export interface PagesInfo {
+hotelInfo:{icon:string,text:string}[]
+services:{icon:string,text:string}[]
+concepts:{title:string[],img:string,alt:string,text:string}[]
+places:string[][]
+infrastructure:string[][]
+reviews:Reviews
+suggestion:{img:string,title:string,titleDesc:string,desc:string,url:string}[]
+restaurantReviews:RestaurantReview[]
+amenities:Icon[]
+availableService:Icon[]
+cards:{src:string,title:string,text:string}[]
+} 

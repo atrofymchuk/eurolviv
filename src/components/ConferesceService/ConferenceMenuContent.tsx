@@ -3,23 +3,25 @@ import { ConferenceMenuCard } from "./ConferenceMenuCard";
 import { ConferenceMenuMobileCard } from "./ConferenceMenuMobile";
 import { useTranslation } from "react-i18next";
 import { food, sandwich, coffee } from "../../store/exportsImg";
+import { useMemo } from "react";
 
 export const ConferenceMenuContent = () => {
   const { t } = useTranslation();
-  const imageArray = [
+  const imageArray = useMemo(() => [
     {
-      img:food,
+      img: food,
       text: t("conferenceService.conferenceMenu.menu.title1"),
     },
     {
-      img:sandwich,
+      img: sandwich,
       text: t("conferenceService.conferenceMenu.menu.title2"),
     },
     {
-      img:coffee,
+      img: coffee,
       text: t("conferenceService.conferenceMenu.menu.title3"),
     },
-  ];
+  ], [t]);
+  
   
   return (
     <div className="relative flex items-center justify-center lg:py-[100px]">

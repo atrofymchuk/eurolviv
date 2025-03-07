@@ -1,32 +1,10 @@
 
 import { useTranslation } from "react-i18next";
-import { barTerrase, celebratingTerrase, menuTerrase } from "../../store/exportsImg";
-
+import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 export const Additionally = () => {
   const { t } = useTranslation()      
-  const cards = [
-    {
-      src: menuTerrase,
-      title: t("terrase.additionally.cardTitles.0"),
-      text: {
-        xl: t("terrase.additionally.cardsDesc.0"),
-      },
-    },
-    {
-      src: celebratingTerrase,
-      title: t("terrase.additionally.cardTitles.1"),
-      text: {
-        xl: t("terrase.additionally.cardsDesc.1"),
-      },
-    },
-    {
-      src: barTerrase,
-        title: t("terrase.additionally.cardTitles.2"),
-      text: {
-        xl: t("terrase.additionally.cardsDesc.2"),
-      },
-    },
-  ];
+  const { cards } = usePagesInfoStore();
+
   return (
     <>
       <hr className="w-full border-[#B3B3B3AD]" />
@@ -64,10 +42,10 @@ export const Additionally = () => {
                 </div>
 
                 <h4 className="uppercase text-[24px] sm:text-[28px] md:text-[32px] tracking-[-3%] sm:tracking-[-5%] leading-[104%] pt-[16px] sm:pt-[20px] md:pt-[26px]">
-                  {item.title}
+                  {t(item.title)}
                 </h4>
                 <p className="uppercase w-full sm:w-[300px] md:w-[400px] xl:max-w-[528px] 2xl:min-w-[508px] text-[#888888] pt-[16px] sm:pt-[20px] md:pt-[27px] text-[14px] sm:text-[16px] md:text-[14px] px-6 xl:text-[18px]">
-                  {item.text.xl}
+                  {t(item.text)}
                 </p>
               </div>
             ))}

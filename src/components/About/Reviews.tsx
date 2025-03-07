@@ -1,72 +1,19 @@
 import { useRef } from "react";
-import { Reviews } from "../../store/types";
 import { useModalStore } from "../../store/useModalStore";
 import ReviewSlider from "./ReviewSlider";
 import Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
+import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+
 export const Rewies = () => {
   const sliderRef = useRef<Slider | null>(null);
 
-  const reviews: Reviews = {
-    ua: [
-      {
-        id: 1,
-        name: "Anna",
-        country: "Україна",
-        flag: "🇺🇦",
-        text: "комфортні світлі номери, розташування супер, 10 хв прогулянки і ти в центрі, чудовий ресторан на 8 поверсі, смачні сніданки з прекрасним краєвидом",
-      },
-      {
-        id: 2,
-        name: "Tetiana",
-        country: "Україна",
-        flag: "🇺🇦",
-        text: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
-      },
-      {
-        id: 3,
-        name: "Svetlana",
-        country: "Україна",
-        flag: "🇺🇦",
-        text: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
-      },
-    ],
-    abroad: [
-      {
-        id: 4,
-        name: "Polska",
-        country: "Polska",
-        flag: "🇵🇱",
-        text: "Śniadanie w takim miejscu i jeszcze szampon! Żadnej rewelacji. Mama była podekscytowana. Widok na cały Lwów! Pięknie świeciło święciło. Nie było ruchu. Żadnych środowych marzeń",
-      },
-      {
-        id: 5,
-        name: "Grzegorz",
-        country: "Polska",
-        flag: "🇵🇱",
-        text: "Hotel czysty, śniadanie, miła obsuga, wszystkobsprawne, blisko do centrum.”",
-      },
-      {
-        id: 6,
-        name: "Michal",
-        country: "Polska",
-        flag: "🇵🇱",
-        text: "Hotel czysty, śniadanie, miła obsuga, wszystkobsprawne, blisko do centrum.”",
-      },
-      {
-        id: 7,
-        name: "Michal",
-        country: "Polska",
-        flag: "🇵🇱",
-        text: "Hotel czysty, śniadanie, miła obsuga, wszystkobsprawne, blisko do centrum.”",
-      },
-    ],
-  };
+  
 
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
-
+  const { reviews } = usePagesInfoStore();
   return (
     <section className="bg-[#A47762] flex-col   flex justify-center items-center  ">
       <div className="flex flex-col items-center border-x border-[#C7C7C7]  overflow-x-hidden xl:px-0 w-[89.58%] ">

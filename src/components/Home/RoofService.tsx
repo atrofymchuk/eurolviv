@@ -1,35 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { restaurant, karaoke, terasseHome } from "../../store/exportsImg";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
+import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 export const RoofService = () => {
   const { t } = useTranslation();
+  const { suggestion } = usePagesInfoStore();
 
-  const suggestion = [
-    {
-      img: restaurant,
-      title: t("home.roofService.restaurant.title"),
-      titleDesc: t("home.roofService.restaurant.titleDesc"),
-      desc: t("home.roofService.restaurant.desc"),
-      url: "/restaurant",
-    },
-    {
-      img: karaoke,
-      title: t("home.roofService.karaoke.title"),
-      titleDesc: t("home.roofService.karaoke.titleDesc"),
-      desc: t("home.roofService.karaoke.desc"),
-      url: "/restaurant",
-    },
-    {
-      img: terasseHome,
-      title: t("home.roofService.terrace.title"),
-      titleDesc: t("home.roofService.terrace.titleDesc"),
-      desc: t("home.roofService.terrace.desc"),
-      url: "/terrase",
-    },
-  ];
   return (
     <div className="w-full flex justify-center">
       <div className="grid w-full lg:grid-cols-2 grid-cols-1">
@@ -75,11 +53,11 @@ export const RoofService = () => {
   text-[32px] text-center uppercase leading-[104%] tracking-[-5%] 
       w-full lg:leading-[81%]`}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </h1>
 
                 <p className="uppercase font-semibold lg:text-[20px] text-[14px] lg:leading-[21px] leading-[12px] lg:pt-[19px]">
-                  {item.titleDesc}
+                  {t(item.titleDesc)}
                 </p>
               </div>
 
@@ -89,7 +67,7 @@ export const RoofService = () => {
                 }`}
               >
                 <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
-                  {item.desc}
+                  {t(item.desc) }
                 </p>
                 <Link
                   to={item.url}

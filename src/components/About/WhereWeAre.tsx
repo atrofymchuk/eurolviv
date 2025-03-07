@@ -4,78 +4,11 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
 import { navigate } from "../../store/exportsIcons";
 import { hotel } from "../../store/exportsImg";
+import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 
 export const WhereWeAre = () => {
   const { t } = useTranslation();
-  const places = [
-    [
-      t("about.whereWeAre.places.title.0"),
-      t("about.whereWeAre.places.title.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title2.0"),
-      t("about.whereWeAre.places.title2.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title3.0"),
-      t("about.whereWeAre.places.title3.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title4.0"),
-      t("about.whereWeAre.places.title4.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title5.0"),
-      t("about.whereWeAre.places.title5.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title6.0"),
-      t("about.whereWeAre.places.title6.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title7.0"),
-      t("about.whereWeAre.places.title7.1"),
-    ],
-    [
-      t("about.whereWeAre.places.title8.0"),
-      t("about.whereWeAre.places.title8.1"),
-    ],
-  ];
-
-  const infrastructure = [
-    [
-      t("about.whereWeAre.infrastructure.title.0"),
-      t("about.whereWeAre.infrastructure.title.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title2.0"),
-      t("about.whereWeAre.infrastructure.title2.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title3.0"),
-      t("about.whereWeAre.infrastructure.title3.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title4.0"),
-      t("about.whereWeAre.infrastructure.title4.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title5.0"),
-      t("about.whereWeAre.infrastructure.title5.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title6.0"),
-      t("about.whereWeAre.infrastructure.title6.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title7.0"),
-      t("about.whereWeAre.infrastructure.title7.1"),
-    ],
-    [
-      t("about.whereWeAre.infrastructure.title8.0"),
-      t("about.whereWeAre.infrastructure.title8.1"),
-    ],
-  ];
+  const {places,infrastructure} = usePagesInfoStore()
   return (
     <section className="flex flex-col   font-cofo   ">
       <div className="grid lg:grid-cols-[1fr_1fr] max-w-[89.58%]  mx-auto w-full container-fluid border lg:border-t-0 border-[#c7c7c7]">
@@ -153,8 +86,8 @@ export const WhereWeAre = () => {
                 key={index}
                 className="flex justify-between text-sm xl:text-lg"
               >
-                <span>{place}</span>
-                <span className="text-[#8C331B] font-semibold">{distance}</span>
+                <span>{t(place)}</span>
+                <span className="text-[#8C331B] font-semibold">{t(distance)}</span>
               </li>
             ))}
           </ul>
@@ -172,8 +105,8 @@ export const WhereWeAre = () => {
                 key={index}
                 className="flex justify-between text-sm xl:text-lg"
               >
-                <span>{place}</span>
-                <span className="text-[#8C331B] font-semibold">{distance}</span>
+                <span>{t(place)}</span>
+                <span className="text-[#8C331B] font-semibold">{t(distance)}</span>
               </li>
             ))}
           </ul>

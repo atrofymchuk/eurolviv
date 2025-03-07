@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Icon } from "../../store/types";
 import { useTranslation } from "react-i18next";
 type EquipmentToProps = {
@@ -5,7 +6,7 @@ type EquipmentToProps = {
   price: { hour: number; day: number };
 };
 
-export const Equipment = ({ icons, price }: EquipmentToProps) => {
+export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
   const { t } = useTranslation();
   return (
     <div className="flex w-full bg-[#F2EFEC] justify-center px-[7.5%]  lg:px-0   flex-1  ">
@@ -54,4 +55,4 @@ export const Equipment = ({ icons, price }: EquipmentToProps) => {
       </div>
     </div>
   );
-};
+})

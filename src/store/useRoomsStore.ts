@@ -1,6 +1,8 @@
 import { create } from "zustand";
 
-import { initialCoferenceHallState, initialRoomsState, initialTerraseState } from "./InitialRoomState";
+import { initialRoomsState } from "./InitialRoomState";
+import { initialCoferenceHallState } from "./InitialConferenceHallState";
+import { initialTerraseState } from "./InitialTerraseState";
 import { RoomsItitialState } from "./types";
 
 export const useRoomStore = create<RoomsItitialState>(() => ({

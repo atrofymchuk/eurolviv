@@ -1,16 +1,15 @@
 import Slider from "react-slick";
 import { ReviewSliderProps } from "../../store/types";
 import { ReviewCard } from "./ReviewCard";
-import { forwardRef } from "react";
+import { forwardRef, memo, useMemo } from "react";
 
-const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
+const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
 
   const settings = {
     initialSlide: 0,
     slidesToShow: 3, 
     slidesToScroll: 1, 
     speed: 500,
-   
     variableWidth: true,
     infinite:true,
     useTransform: false,
@@ -31,9 +30,11 @@ const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) =>
     ],
   };
 
-  const mixedReviews = reviews.ua.flatMap((review, index) => {
-    return [review, reviews.abroad[index]].filter(Boolean);
-  });
+  const mixedReviews = useMemo(() => 
+    reviews.ua.flatMap((review, index) => [review, reviews.abroad[index]].filter(Boolean)), 
+    [reviews]
+  );
+  
 
   return (
     <div className="z-20 h-full lg:w-fit   top-0 left-0 w-full ">
@@ -47,6 +48,6 @@ const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) =>
       
     </div>
   );
-})
+}))
 
 export default ReviewSlider;
