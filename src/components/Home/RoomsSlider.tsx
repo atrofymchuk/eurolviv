@@ -3,9 +3,8 @@ import { forwardRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRoomStore } from "../../store/useRoomsStore";
+import { squareWhite, guestWhite } from "../../store/exportsIcons";
 
-import area from "../../assets/icons/Rooms/squareWhite.svg";
-import guest from "../../assets/icons/Rooms/guestWhite.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
@@ -126,13 +125,13 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
 
             <div className="flex flex-col items-center text-white pt-[10px] xl:pt-[18px] gap-y-2">
               <div className="flex gap-2 items-center">
-                <img src={area} alt="" className="w-[20px] h-[20px]" />
+                <img src={squareWhite} alt="" className="w-[20px] h-[20px]" />
                 <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
                   {t("home.rooms.area")}: {el.area}
                 </p>
               </div>
               <div className="flex gap-2 items-center">
-                <img src={guest} alt="" className="w-[20px] h-[20px]" />
+                <img src={guestWhite} alt="" className="w-[20px] h-[20px]" />
                 <p className="uppercase text-[14px] 2xl:text-[16px] xl:text-[15px] leading-[20px]">
                   {t("home.rooms.guests")}: {el.guests}
                 </p>

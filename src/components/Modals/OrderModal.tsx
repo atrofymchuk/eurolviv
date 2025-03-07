@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
-import calendarIco from "../../assets/icons/Modal/calendar.svg";
+import { calendar} from "../../store/exportsIcons";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast, ToastContainer } from "react-toastify";
@@ -108,7 +108,7 @@ const OrderModal = ({
             <div className="bg-[#A47762] rounded-full p-2 w-fit">
               <img
                 className="text-xl cursor-pointer"
-                src={calendarIco}
+                src={calendar}
                 onClick={() => setIsDatePickerOpen(!isDatePickerOpen)}
               />
             </div>

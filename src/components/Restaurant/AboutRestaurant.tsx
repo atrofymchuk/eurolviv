@@ -1,7 +1,5 @@
-import aboutImageFst from "../../assets/Restaurant/about1.webp";
-import aboutImageScd from "../../assets/Restaurant/about2.webp";
-import aboutImageTrd from "../../assets/Restaurant/about3.webp";
 import { useTranslation } from "react-i18next";
+import { aboutImageFst, aboutImageScd, aboutImageTrd } from "../../store/exportsImg";
 export const AboutRestaurant = () => {
 
   const {t} = useTranslation()

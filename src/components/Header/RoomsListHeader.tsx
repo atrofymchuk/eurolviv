@@ -1,9 +1,9 @@
-import area from "../../assets/icons/Rooms/squareWhite.svg";
-import guest from "../../assets/icons/Rooms/guestWhite.svg";
+
 import { Room } from "../../store/types";
 import { Link } from "react-router-dom";
 import { InViewWrapper } from "../InViewWrapper";
 import { useTranslation } from "react-i18next";
+import { squareWhite, guestWhite } from "../../store/exportsIcons";
 
 type RoomsListHeaderToProps = {
   room:Room
@@ -29,11 +29,11 @@ export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
               </InViewWrapper>
             <div className="flex justify-between w-full lg:mt-3.5 mt-1">
               <div className="flex items-center">
-                <img src={area} alt="area icon" className="lg:w-5 lg:h-5 w-4  me-2" />
+                <img src={squareWhite} alt="area icon" className="lg:w-5 lg:h-5 w-4  me-2" />
                 <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px] ">площа: {room.area}</p>
               </div>
               <div className="flex items-center">
-                <img src={guest} alt="area icon" className="lg:w-5 lg:h-5 w-4 me-2" />
+                <img src={guestWhite  } alt="area icon" className="lg:w-5 lg:h-5 w-4 me-2" />
                 <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px] ">гостей: {room.guests}</p>
               </div>
             </div>

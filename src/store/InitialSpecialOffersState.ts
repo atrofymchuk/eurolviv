@@ -1,12 +1,6 @@
 import { SpecialOffers } from "./types";
 
-import military from "../assets/SpecialOffers/military.webp";
-import birthday from "../assets/SpecialOffers/birthday.webp";
-import business from "../assets/SpecialOffers/buissenes.webp";
-import newlyweds from "../assets/SpecialOffers/newlyweds.webp";
-import photosession from "../assets/SpecialOffers/photosession.webp";
-import bedwithpet from "../assets/Rooms/AdditionaInfo/bedwithpet.webp";
-
+import { military, business, bedWithPet,  birthday,   wedding, photosession } from "./exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [
     {
       src: military,
@@ -41,7 +35,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
       ]
     },
     {
-      src: bedwithpet,
+      src: bedWithPet,
       url:'travel-with-pet',
       title: "specialOffersState.petFriendly.title",
       desc:'specialOffersState.petFriendly.desc',
@@ -77,7 +71,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
       ]
     },
     {
-      src: newlyweds,
+      src: wedding,
       url:'newly-weeds',
       title: "specialOffersState.newlyweds.title",
       desc:'specialOffersState.newlyweds.desc',

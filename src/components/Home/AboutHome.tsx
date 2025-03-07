@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import previewImage from "../../assets/Home/preview.webp";
 import { useTranslation } from "react-i18next";
-
+import { previewImg } from "../../store/exportsImg";
 export const AboutHome = () => {
 
   
@@ -55,7 +54,7 @@ export const AboutHome = () => {
 
         <div className=" 2xl:h-[720px] xl:h-[680px] border-[#C7C7C7] md:col-span-2 border-e order-4 md:order-none mt-4 md:mt-0">
           <img
-            src={previewImage}
+            src={ previewImg}
             alt=""
             className="2xl:w-[1080px] xl:w-[980px] 2xl:h-[720px] xl:h-[680px] w-full"
           />

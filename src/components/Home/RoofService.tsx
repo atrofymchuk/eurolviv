@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 
-import karaoke from "../../assets/Restaurant/Karaoke/Fst.webp";
-import restaurant from "../../assets/Restaurant/homePreview.webp";
-import terrace from "../../assets/Terrase/homePreview.webp";
-import ruffLogo from "../../assets/icons/ruffLogo.svg";
+import { restaurant, karaoke, terasseHome } from "../../store/exportsImg";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
-
+import ruffLogo from "../../assets/icons/ruffLogo.svg";
 export const RoofService = () => {
   const { t } = useTranslation();
 
@@ -26,7 +23,7 @@ export const RoofService = () => {
       url: "/restaurant",
     },
     {
-      img: terrace,
+      img: terasseHome,
       title: t("home.roofService.terrace.title"),
       titleDesc: t("home.roofService.terrace.titleDesc"),
       desc: t("home.roofService.terrace.desc"),

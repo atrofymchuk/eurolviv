@@ -1,6 +1,6 @@
-import headerPhoto from "../../assets/Contacts/header.webp";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { headerContacts } from "../../store/exportsImg";
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -9,7 +9,7 @@ export const Header = () => {
     <div className="w-full relative">
       <InViewWrapper>
         <img
-          src={headerPhoto}
+          src={headerContacts }
           alt="preview"
           className="object-cover w-full  lg:h-[1181px] h-[821px]"
         />

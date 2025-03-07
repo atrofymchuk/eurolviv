@@ -1,6 +1,6 @@
-import headerPhoto from "../../assets/Rooms/header.webp";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { headerPhoto } from "../../store/exportsImg";
 
 export const Header = () => {
   const {t} = useTranslation()

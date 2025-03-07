@@ -1,12 +1,12 @@
-import house from "../../assets/icons/Rooms/house.svg";
-import square from "../../assets/icons/Rooms/squareBrown.svg";
-import guestsIco from "../../assets/icons/Rooms/guestsBrown.svg";
+
+
+
 import { useTranslation } from "react-i18next";
 import { SliderAbout } from "./SliderAbout";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomAbout } from "../../store/types";
 import { memo } from "react";
-
+import { guestBrown, houseBrown, squareBrown } from "../../store/exportsIcons";
 type RoomAboutToProps = {
   about: RoomAbout;
   area: number;
@@ -42,7 +42,7 @@ export const About = memo(({
             <div className="2xl:space-y-1.5">
               <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center   ">
                 <img
-                  src={house}
+                  src={houseBrown}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />
@@ -51,7 +51,7 @@ export const About = memo(({
               </p>
               <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center ">
                 <img
-                  src={square}
+                  src={ squareBrown}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />
@@ -60,7 +60,7 @@ export const About = memo(({
               </p>
               <p className="flex uppercase 2xl:text-[20px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center">
                 <img
-                  src={guestsIco}
+                  src={guestBrown}
                   alt="houseicon"
                   className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
                 />

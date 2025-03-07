@@ -1,7 +1,7 @@
-import headerImg from "../../assets/Restaurant/header.webp";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";   
 import { InViewWrapper } from "../InViewWrapper";
+import { headerRestaurant } from "../../store/exportsImg";
 export const RestaurantHeader = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ export const RestaurantHeader = () => {
       <InViewWrapper> 
 
       <img
-        src={headerImg}
+        src={headerRestaurant}
         alt="headerImg"
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
         />

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import list from "../../assets/icons/Modal/list.svg";
+import { list } from "../../store/exportsIcons";
 
 type OfferDetailsColumnToProps = {
     title:string

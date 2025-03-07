@@ -1,11 +1,8 @@
-import mainFst from "../../assets/Terrase/MainTerrase/previewFst.webp";
-import mainScd from "../../assets/Terrase/MainTerrase/previewScd.webp";
-import mainTrd from "../../assets/Terrase/MainTerrase/previewTrd.webp";
-import mainFth from "../../assets/Terrase/MainTerrase/previewFth.webp";
 import { TerraseCard } from "./TerraseCard";
 import { TerraseT } from "../../store/types";
 import { useTranslation } from "react-i18next";
 
+import { mainFst, mainScd, mainTrd, mainFth } from "../../store/exportsImg";
 const main = [mainFst, mainScd, mainTrd, mainFth];
 
 type TerraseToProps = {

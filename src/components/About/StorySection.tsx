@@ -1,6 +1,7 @@
-import Section from "../../assets/About/Section.webp";
+
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { sectionAbout } from "../../store/exportsImg";
 
 export const StorySection = () => {
   const { t } = useTranslation();
@@ -47,7 +48,7 @@ tracking-[-0.017em] uppercase text-[#242425] text-center w-full lg:text-end"
           <InViewWrapper> 
 
           <img
-            src={Section}
+            src={ sectionAbout}
             alt="Reception"
             className="w-full max-h-[543px] object-cover object-[0%_35%] "
             />

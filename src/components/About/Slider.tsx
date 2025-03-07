@@ -4,15 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider } from "../../store/exportsImg";
 
-import slide1 from "../../assets/About/champagne.webp";
-import slide2 from "../../assets/About/bathroom.webp";
-import slide3 from "../../assets/About/bedroom.webp";
-import slide4 from "../../assets/About/2roomLux.webp";
-import slide5 from "../../assets/About/mirror.webp";
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "../InViewWrapper";
-const slides = [slide1, slide2, slide3, slide4, slide5];
+const slides = [champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider];
 
 
 

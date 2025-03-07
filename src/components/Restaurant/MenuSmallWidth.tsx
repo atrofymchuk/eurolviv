@@ -1,6 +1,5 @@
-import coffe from "../../assets/Restaurant/Menu/Coffe.webp";
-import meat from "../../assets/Restaurant/Menu/meat.webp";
-import spagetti from "../../assets/Restaurant/Menu/spagetti.webp";
+
+import { coffe, meat, spagetti } from "../../store/exportsImg";
 import { InViewWrapper } from "../InViewWrapper";
 type MenuSmallWidthToProps ={
     className:string

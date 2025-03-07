@@ -1,9 +1,7 @@
-import roomLux from "../../assets/About/2roomLux.webp";
-import terasse from "../../assets/About/terrase.webp";
-import bussines from "../../assets/About/bussines.webp";
-import bar from "../../assets/About/bar.webp";
+
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { roomLux, terasse, bussines, bar } from "../../store/exportsImg";
 
 export const Concepts = () => {
   const { t } = useTranslation();

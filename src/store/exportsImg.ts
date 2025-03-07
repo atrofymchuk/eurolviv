@@ -76,6 +76,7 @@ export  { default as laungePreview} from "../assets/ConferenceService/laungePrev
 export  { default as laungeTheatre} from "../assets/ConferenceService/laungeTheatre.webp";
 export  { default as negotiationTableLaunge} from "../assets/ConferenceService/negotiationTableLaunge.webp";
 
+//Terrase page
 export  { default as mainFst} from "../assets/Terrase/MainTerrase/previewFst.webp";
 export  { default as mainScd} from "../assets/Terrase/MainTerrase/previewScd.webp";
 export  { default as mainTrd} from "../assets/Terrase/MainTerrase/previewTrd.webp";
@@ -85,3 +86,80 @@ export  { default as upperFst} from "../assets/Terrase/UpperTerrase/previewFhd.w
 export  { default as upperScd} from "../assets/Terrase/UpperTerrase/previewScd.webp";
 export  { default as upperThd} from "../assets/Terrase/UpperTerrase/previewThd.webp";
 export  { default as upperFhd} from "../assets/Terrase/UpperTerrase/previewFhd.webp";
+
+//About page
+export  { default as roomLux} from "../assets/About/2roomLux.webp";
+export  { default as terasse} from "../assets/About/terrase.webp";
+export  { default as bussines} from "../assets/About/bussines.webp";
+export  { default as bar} from "../assets/About/bar.webp";
+export  { default as advantages} from "../assets/About/advantages.webp";
+export  { default as headerAbout} from "../assets/About/header.webp";
+export  { default as champagneAboutSlider} from "../assets/About/champagne.webp";
+export  { default as bathroomAboutSlider} from "../assets/About/bathroom.webp";
+export  { default as bedroomAboutSlider} from "../assets/About/bedroom.webp";
+export  { default as mirrorAboutSlider} from "../assets/About/mirror.webp";
+export  { default as sectionAbout} from "../assets/About/Section.webp";
+export  { default as hotel} from "../assets/About/hotel.webp";
+export  { default as aboutImageFst} from "../assets/Restaurant/about1.webp";
+export  { default as aboutImageScd} from "../assets/Restaurant/about2.webp";
+export  { default as aboutImageTrd} from "../assets/Restaurant/about3.webp";
+
+//Conference page0
+export  { default as food} from "../assets/ConferenceService/Menu/food.webp";
+export  { default as sandwich} from "../assets/ConferenceService/Menu/sandwich.webp";
+export  { default as coffee} from "../assets/ConferenceService/Menu/coffee.webp";
+export  { default as headerConference} from "../assets/ConferenceService/BigHall.webp";
+export  { default as headerConferenceMobile} from "../assets/ConferenceService/hallPhone.webp";
+
+
+//contacts page 
+export  { default as hotelContacts} from "../assets/Contacts/hotel.webp"; 
+export  { default as headerContacts} from "../assets/Contacts/header.webp"; 
+export  { default as mapContacts} from "../assets/Contacts/map.webp"; 
+
+//footer 
+export  { default as footer} from "../assets/footer.webp"; 
+
+//home page
+export  { default as previewImg} from "../assets/Home/preview.webp"; 
+export  { default as headerHome} from "../assets/Home/header.webp"; 
+export  { default as restaurant} from "../assets/Restaurant/homePreview.webp"; 
+export  { default as karaoke} from "../assets/Restaurant/Karaoke/Fst.webp"; 
+export  { default as terasseHome} from "../assets/Terrase/homePreview.webp"; 
+
+//restaurant page
+export  { default as headerRestaurant} from "../assets/Restaurant/header.webp"; 
+export  { default as aboutRestaurant} from "../assets/Restaurant/aboutSlide1.webp"; 
+export  { default as aboutRestaurantScd} from "../assets/Restaurant/aboutSlide2.webp"; 
+export  { default as aboutRestaurantTrd} from "../assets/Restaurant/aboutSlide3.webp"; 
+export  { default as weddingFst} from "../assets/Restaurant/Celebrate/WED1.webp"; 
+export  { default as weddingScd} from "../assets/Restaurant/Celebrate/WED2.webp"; 
+export  { default as weddingTrd} from "../assets/Restaurant/Celebrate/WED3.webp"; 
+export  { default as karaokeFst} from "../assets/Restaurant/Karaoke/Fst.webp"; 
+export  { default as karaokeScd} from "../assets/Restaurant/Karaoke/Scnd.webp"; 
+
+
+export  { default as coffe} from "../assets/Restaurant/Menu/Coffe.webp"; 
+export  { default as meat} from "../assets/Restaurant/Menu/meat.webp"; 
+export  { default as spagetti} from "../assets/Restaurant/Menu/spagetti.webp"; 
+export  { default as menuTerrase} from "../assets/Terrase/Aditionally/menu.webp"; 
+export  { default as barTerrase} from "../assets/Terrase/Aditionally/bar.webp"; 
+export  { default as celebratingTerrase} from "../assets/Terrase/Aditionally/celebrating.webp"; 
+
+//rooom page
+export  { default as bedWithPet} from "../assets/Rooms/AdditionaInfo/bedwithpet.webp"; 
+export  { default as coffeeRoom} from "../assets/Rooms/AdditionaInfo/coffee.webp"; 
+
+
+//rooms page 
+export  { default as eurohotel} from "../assets/Rooms/eurohotel.webp"; 
+export  { default as headerPhoto} from "../assets/Rooms/header.webp"; 
+
+
+//Special offers page
+export  { default as military} from "../assets/SpecialOffers/military.webp"; 
+export  { default as business} from "../assets/SpecialOffers/buissenes.webp"; 
+export  { default as birthday} from "../assets/SpecialOffers/birthday.webp"; 
+export  { default as wedding} from "../assets/SpecialOffers/newlyweds.webp"; 
+export  { default as photosession} from "../assets/SpecialOffers/photosession.webp"; 
+

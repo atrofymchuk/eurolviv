@@ -1,6 +1,6 @@
-import karaokeFst from "../../assets/Restaurant/Karaoke/Fst.webp";
-import karaokeScd from "../../assets/Restaurant/Karaoke/Scnd.webp";
+
 import { useTranslation } from "react-i18next";   
+import { karaokeFst, karaokeScd } from "../../store/exportsImg";
 export const Karaoke = () => {
   const { t } = useTranslation()
   return (

@@ -1,8 +1,9 @@
-import navigateIco from "../../assets/icons/About/navigation.svg";
-import hotel from "../../assets/About/hotel.webp";
+
 import MapComponent from "./Map";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { navigate } from "../../store/exportsIcons";
+import { hotel } from "../../store/exportsImg";
 
 export const WhereWeAre = () => {
   const { t } = useTranslation();
@@ -83,7 +84,7 @@ export const WhereWeAre = () => {
             <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
 
               <InViewWrapper>
-              <img src={navigateIco} alt="navigate" className="mr-2" />
+              <img src={navigate} alt="navigate" className="mr-2" />
               </InViewWrapper>
               <span className="underline text-[#8C331B] font-semibold text-sm xl:text-lg ">
                 {t("about.whereWeAre.desc.0")}

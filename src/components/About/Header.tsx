@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import headerImg from "../../assets/About/header.webp";
+import { headerAbout } from "../../store/exportsImg";
 import { useModalStore } from "../../store/useModalStore";
 import { InViewWrapper } from "../InViewWrapper";
 
@@ -14,7 +14,7 @@ export const AboutHeader = () => {
 
       <InViewWrapper>
         <img
-          src={headerImg}
+          src={headerAbout}
           alt="headerImg"
           className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
         />

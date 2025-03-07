@@ -1,16 +1,15 @@
 import "./Footer.css";
 
-import backgroundImage from "../../assets/footer.webp";
 
-import instagram from "../../assets/icons/instagram-f-svgrepo-com.svg";
 import { FaFacebook } from "react-icons/fa6";
-
+import { instagram } from "../../store/exportsIcons";
 import { useTranslation } from "react-i18next";
 import { RatingMobile } from "./RatingMobile";
 import { BookingSection } from "./BookingSection";
 import { BottomText } from "./BottomText";
 import { AddressWithSchedule } from "./AddressWithSchedule";
 import { InViewWrapper } from "../InViewWrapper";
+import { footer } from "../../store/exportsImg";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -24,7 +23,7 @@ export const Footer = () => {
       <InViewWrapper>
 
       <img
-        src={backgroundImage}
+        src={footer}
         alt="Background"
         className="absolute inset-0 w-full h-full  z-0 "
         />

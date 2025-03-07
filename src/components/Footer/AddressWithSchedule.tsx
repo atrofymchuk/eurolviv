@@ -1,7 +1,8 @@
 import { FaWhatsapp } from "react-icons/fa6"
 import { RiTelegram2Fill } from "react-icons/ri"
 import { useTranslation } from "react-i18next";
-import mappin from "../../assets/icons/About/navigation.svg";
+import { navigate } from "../../store/exportsIcons";
+
 export const AddressWithSchedule = () => {
     const {t} = useTranslation();
     return (
@@ -12,7 +13,7 @@ export const AddressWithSchedule = () => {
             </h4>
             <p className="flex items-center 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase underline  lg:pt-2 underline-offset-[18%] lg:leading-[22.6px] lg:ps-[4px] pt-3 decoration-[6.5%]">
               <img
-                src={mappin}
+                src={navigate}
                 className="filter-invert-white  "
                 alt="location"
               />

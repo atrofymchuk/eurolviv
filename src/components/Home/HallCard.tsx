@@ -1,8 +1,8 @@
-import area from "../../assets/icons/Rooms/square.svg";
-import guest from "../../assets/icons/Rooms/guests.svg";
+
 import { Link } from "react-router-dom";
 import { InViewWrapper } from "../InViewWrapper";
 import { useTranslation } from "react-i18next";
+import { square, guest } from "../../store/exportsIcons";
 type HallCardProps = {
   hall: {
     previewImage: string;
@@ -35,7 +35,7 @@ export const HallCard = ({ hall, index }: HallCardProps) => {
       </h4>
       <div className="flex flex-col items-center justify-center mb-2">
         <div className="flex items-center justify-center space-x-1">
-          <img src={area} alt="areaico" className="w-4 h-4" />
+          <img src={square} alt="areaico" className="w-4 h-4" />
           <p className="uppercase text-sm sm:text-xs md:text-х14px]  lg:text-lg 2xl:text-[16px] text-[#252526]">
             площа: {hall.area}
           </p>

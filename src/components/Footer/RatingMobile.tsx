@@ -1,6 +1,4 @@
-import rating from "../../assets/icons/rating.svg";
-import visa from "../../assets/icons/visa.svg";
-import mastercard from "../../assets/icons/mastercard.svg";
+import { mastercard, visa, rating } from "../../store/exportsIcons"
 
 
         export const RatingMobile = () => {

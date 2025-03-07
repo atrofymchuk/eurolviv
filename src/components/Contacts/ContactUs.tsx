@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import hotel from "../../assets/Contacts/hotel.webp";
 import { InViewWrapper } from "../InViewWrapper";
+import { hotelContacts } from "../../store/exportsImg";
 
 export const ContactUs = () => {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ export const ContactUs = () => {
     <div className=" max-w-full lg:mt-[60px] lg:mb-10 mt-[40px] lg:pe-[40px] ">
       <InViewWrapper>
       <img
-        src={hotel}
+        src={hotelContacts}
         alt="hotel"
         className="w-full lobject-cover "
         />

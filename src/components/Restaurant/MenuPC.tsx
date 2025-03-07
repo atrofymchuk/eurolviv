@@ -1,7 +1,5 @@
-import coffe from "../../assets/Restaurant/Menu/Coffe.webp";
-import meat from "../../assets/Restaurant/Menu/meat.webp";
-import spagetti from "../../assets/Restaurant/Menu/spagetti.webp";
 import { InViewWrapper } from "../InViewWrapper";
+import { coffe, meat, spagetti } from "../../store/exportsImg";
 type MenuPCToProps ={
     className:string
 }

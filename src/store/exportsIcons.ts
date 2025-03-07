@@ -44,3 +44,40 @@ export  { default as notebook} from "../assets/icons/ConferenceService/notebook.
 export  { default as paper} from "../assets/icons/ConferenceService/paper.svg";
 export  { default as soundSystem} from "../assets/icons/ConferenceService/soundsystem.svg";
 export  { default as flipchart} from "../assets/icons/ConferenceService/flipchart.svg";
+
+export  { default as door} from '../assets/icons/About/door.svg';
+export  { default as restaurant} from '../assets/icons/About/restaurant.svg';
+export  { default as karaoke} from '../assets/icons/About/karaoke.svg';
+export  { default as terasse} from '../assets/icons/About/terrase.svg';
+export  { default as conferenceRoom} from '../assets/icons/About/conferenceRoom.svg';
+export  { default as wheelChair} from '../assets/icons/About/wheelchairuser.svg';
+export  { default as parking} from '../assets/icons/About/parking.svg';
+export  { default as pet} from '../assets/icons/About/pet.svg';
+
+export  { default as reception} from '../assets/icons/About/reception.svg'; 
+export  { default as roomService} from '../assets/icons/About/roomService.svg';
+export  { default as car} from '../assets/icons/About/car.svg';
+export  { default as breakfast} from '../assets/icons/About/breakfast.svg';
+export  { default as ironingChlothes} from '../assets/icons/About/ironingChlothes.svg';
+export  { default as washingMachine} from '../assets/icons/About/washingMachine.svg';
+export  { default as guest} from '../assets/icons/Rooms/guests.svg';
+export  { default as babybed} from '../assets/icons/Rooms/Living Room/babybed.svg';
+export  { default as kid} from '../assets/icons/Rooms/Living Room/kid.svg';
+export  { default as olderkid} from '../assets/icons/Rooms/Living Room/olderKid.svg';
+export  { default as cup} from '../assets/icons/Rooms/Living Room/cup.svg';
+export  { default as houseBrown} from '../assets/icons/Rooms/house.svg';
+export  { default as squareBrown} from '../assets/icons/Rooms/squareBrown.svg';
+export  { default as square} from '../assets/icons/Rooms/square.svg';
+export  { default as house} from '../assets/icons/Rooms/house.svg';
+export  { default as floor} from '../assets/icons/About/floor.svg';
+export  { default as guestBrown} from '../assets/icons/Rooms/guestsBrown.svg';  
+export  { default as navigate} from '../assets/icons/About/navigation.svg';
+export  { default as instagram} from '../assets/icons/instagram-f-svgrepo-com.svg';
+export  { default as visa} from '../assets/icons/visa.svg';
+export  { default as mastercard} from '../assets/icons/mastercard.svg';
+export  { default as rating} from '../assets/icons/rating.svg';
+export  { default as squareWhite} from '../assets/icons/Rooms/squareWhite.svg';
+export  { default as guestWhite} from '../assets/icons/Rooms/guestWhite.svg';
+export  { default as list} from '../assets/icons/Modal/list.svg';
+export  { default as calendar} from '../assets/icons/Modal/calendar.svg';
+

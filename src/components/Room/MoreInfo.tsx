@@ -1,22 +1,11 @@
 import { useModalStore } from "../../store/useModalStore";
 
-import guest from "../../assets/icons/Rooms/Living Room/guests.svg";
-import sofa from "../../assets/icons/Rooms/Living Room/sofa.svg";
-import babybed from "../../assets/icons/Rooms/Living Room/babybed.svg";
-import kid from "../../assets/icons/Rooms/Living Room/kid.svg";
-import olderkid from "../../assets/icons/Rooms/Living Room/olderKid.svg";
-import cup from "../../assets/icons/Rooms/Living Room/cup.svg";
+import { sofa, babybed, kid, olderkid, cup, guest, washingMachine, roomService, ironingChlothes, pet, parking } from "../../store/exportsIcons";
 
-import washingMachine from "../../assets/icons/About/washingMachine.svg";
-import roomservice from "../../assets/icons/About/roomService.svg";
-import ironing from "../../assets/icons/About/ironingChlothes.svg";
-import pet from "../../assets/icons/About/pet.svg";
-import parking from "../../assets/icons/About/parking.svg";
 
-import bedwithpet from "../../assets/Rooms/AdditionaInfo/bedwithpet.webp";
-import coffee from "../../assets/Rooms/AdditionaInfo/coffee.webp";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { bedWithPet, coffeeRoom } from "../../store/exportsImg";
 
 type MoreInfoToProps = {
   isShowAdditionalPlace: boolean;
@@ -38,8 +27,8 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
   
   const availableService = [
     { src: washingMachine, text: t('room.moreInfo.availableService.0') },
-    { src: roomservice, text: t('room.moreInfo.availableService.1') },
-    { src: ironing, text: t('room.moreInfo.availableService.2') },
+    { src: roomService  , text: t('room.moreInfo.availableService.1') },
+    { src: ironingChlothes, text: t('room.moreInfo.availableService.2') },
     { src: pet, text: t('room.moreInfo.availableService.3') },
   ]
         
@@ -69,7 +58,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                 </h1>
                 <InViewWrapper>
                 <img
-                  src={coffee}
+                  src={coffeeRoom}
                   alt="coffee"
                   className="hidden lg:block 
                     w-full h-[300px] md:h-[400px]
@@ -196,7 +185,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               lg:pt-[70px] px-5 lg:px-0 ">
                 <InViewWrapper>
               <img
-                src={isShowAdditionalPlace ? bedwithpet : coffee}
+                src={isShowAdditionalPlace ? bedWithPet : coffeeRoom}
                 alt="room image"
                 className="w-full 
                   h-[230px] sm:h-[300px] md:h-[350px]

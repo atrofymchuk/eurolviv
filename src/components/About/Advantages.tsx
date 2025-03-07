@@ -1,24 +1,8 @@
 import './Advantages.css';
 
-import door from '../../assets/icons/About/door.svg';
-import restaurant from '../../assets/icons/About/restaurant.svg';
-import karaoke from '../../assets/icons/About/karaoke.svg';
-import terasse from '../../assets/icons/About/terrase.svg';
-import conferenceRoom from '../../assets/icons/About/conferenceRoom.svg';
-import wheelChair from '../../assets/icons/About/wheelchairuser.svg';
-import parking from '../../assets/icons/About/parking.svg';
-import pet from '../../assets/icons/About/pet.svg';
 
-import reception from '../../assets/icons/About/reception.svg';
-import roomService from '../../assets/icons/About/roomService.svg';
-import car from '../../assets/icons/About/car.svg';
-import breakfast from '../../assets/icons/About/breakfast.svg';
-import airConditioning from '../../assets/icons/About/airConditioning.svg';
-import wifi from '../../assets/icons/About/wifi.svg';
-import ironingChlothes from '../../assets/icons/About/ironingChlothes.svg';
-import washingMachine from '../../assets/icons/About/washingMachine.svg';
-
-import AdvantagesImg from '../../assets/About/advantages.webp';
+import {airCondition ,wifi, ironingChlothes, terasse,karaoke,pet, wheelChair, reception,washingMachine, door, parking, conferenceRoom, restaurant, roomService, car, breakfast} from '../../store/exportsIcons';
+import { advantages } from '../../store/exportsImg';
 import { useModalStore } from '../../store/useModalStore';
 
 import { useTranslation } from 'react-i18next';
@@ -44,7 +28,7 @@ export const Advantages = () => {
     { icon: roomService, text: t("about.advantages.servises2.1") },
     { icon: car, text: t("about.advantages.servises2.2") },
     { icon: breakfast, text: t("about.advantages.servises2.3") },
-    { icon: airConditioning, text: t("about.advantages.servises2.4") },
+    { icon: airCondition, text: t("about.advantages.servises2.4") },
     { icon: wifi, text: t("about.advantages.servises2.5") },
     { icon: washingMachine, text: t("about.advantages.servises2.6") },
     { icon: ironingChlothes, text: t("about.advantages.servises2.7") },
@@ -75,7 +59,7 @@ export const Advantages = () => {
 
         <div className="lg:hidden flex justify-center py-6 w-full"> 
           <InViewWrapper>
-          <img src={AdvantagesImg} alt="advantages" className="w-[250px] h-[250px]" />
+          <img src={advantages} alt="advantages" className="w-[250px] h-[250px]" />
           </InViewWrapper>
         </div>
 
@@ -105,7 +89,7 @@ export const Advantages = () => {
         <div className="hidden lg:flex  h-full justify-center items-center p-4">
           <InViewWrapper>
           <img
-            src={AdvantagesImg}
+            src={ advantages}
             alt="advantages"
     className="w-[95%] h-auto max-w-[400px] xl:max-w-[496px] max-h-[400px] xl:max-h-[509px] object-contain"
   />

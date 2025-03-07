@@ -1,9 +1,7 @@
-import wedFst from "../../assets/Restaurant/Celebrate/WED1.webp";
-import wedScd from "../../assets/Restaurant/Celebrate/WED2.webp";
-import wedTrd from "../../assets/Restaurant/Celebrate/WED3.webp";
-import { useModalStore } from "../../store/useModalStore";
-import { useTranslation } from "react-i18next";
 
+import { useModalStore } from "../../store/useModalStore";
+import   { useTranslation } from "react-i18next";
+import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
     export const Celebration = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation()
@@ -36,21 +34,21 @@ import { useTranslation } from "react-i18next";
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 border-x md:border-b-0   border-y border-[#B3B3B3] w-full">
         <div className="flex items-center justify-center px-5 py-5  ">
             <img
-              src={wedFst}
+              src={weddingFst}
             alt=""
             className="md:w-full md:h-full  w-[300px] h-[310px]  2xl:max-h-[620px] xl:max-h-[520px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center px-5 md:border-x border-y md:border-y-0 border-[#B3B3B3]  py-5 ">
           <img
-            src={wedScd}
+            src={weddingScd}
             alt=""
             className="md:w-full md:h-full  w-[300px]  2xl:max-h-[620px]  xl:max-h-[520px] h-[392px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center px-5 py-5 ">
           <img
-            src={wedTrd}
+            src={weddingTrd}
             alt=""
             className="md:w-full md:h-full  2xl:max-h-[620px]  xl:max-h-[520px] w-[300px] h-[316px] object-cover"
           />

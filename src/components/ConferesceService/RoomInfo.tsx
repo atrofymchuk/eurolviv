@@ -1,7 +1,6 @@
-import square from "../../assets/icons/Rooms/squareBrown.svg";
-import guestsIco from "../../assets/icons/Rooms/guestsBrown.svg";
-import floor from "../../assets/icons/About/floor.svg";
 import { useTranslation } from "react-i18next";
+import { floor, squareBrown, guestBrown } from "../../store/exportsIcons";
+
 type RoomInfoToProps = {
   area: string;
   roomFloor: number;
@@ -23,7 +22,7 @@ export const RoomInfo = ({ area, roomFloor, capacity }: RoomInfoToProps) => {
       </p>
       <p className="flex flex-wrap text-[#8C331B] uppercase text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] 2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
         <img
-          src={square}
+          src={squareBrown}
           alt="houseicon"
           className="pe-2 w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[22px] lg:h-[22px] 2xl:w-fit"
         />
@@ -32,7 +31,7 @@ export const RoomInfo = ({ area, roomFloor, capacity }: RoomInfoToProps) => {
       </p>
       <p className="flex flex-wrap text-[#8C331B] uppercase text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] 2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
         <img
-          src={guestsIco}
+          src={guestBrown}
           alt="houseicon"
           className="pe-2 w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[22px] lg:h-[22px] 2xl:w-fit"
         />

@@ -1,5 +1,5 @@
-import headerPhoto from "../../assets/ConferenceService/BigHall.webp";
-import headerPhotoMobile from "../../assets/ConferenceService/hallPhone.webp";
+  
+import { headerConference, headerConferenceMobile } from "../../store/exportsImg";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 export const Header = () => {
@@ -8,12 +8,12 @@ export const Header = () => {
   return (
     <div className="w-full relative">
       <img
-        src={headerPhoto}
+        src={headerConference}
         alt="preview"
         className="object-cover w-full lg:h-[1181px] lg:block hidden  h-[808px]"
       />
       <img
-        src={headerPhotoMobile}
+        src={headerConferenceMobile}
         alt="preview"
         className="object-cover lg:hidden w-full lg:h-[1181px]  h-[808px]"
       />

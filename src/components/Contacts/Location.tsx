@@ -1,8 +1,8 @@
 import { CiLocationOn } from "react-icons/ci";
-import map from "../../assets/Contacts/map.webp";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
+import { mapContacts } from "../../store/exportsImg";
 
 export const Location = () => {
   const { t } = useTranslation();
@@ -38,7 +38,7 @@ export const Location = () => {
         <InViewWrapper>
 
         <img
-          src={map}
+          src={mapContacts  }
           alt="map"
           className="w-full h-full object-cover object-center grayscale"
         /></InViewWrapper>

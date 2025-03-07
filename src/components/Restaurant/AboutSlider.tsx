@@ -1,14 +1,13 @@
 import { useState, useRef } from "react";
 import Slider from "react-slick";
 
-import SlideFst from "../../assets/Restaurant/aboutSlide1.webp";
-import SlideScd from "../../assets/Restaurant/aboutSlide2.webp";
-import SlideTrd from "../../assets/Restaurant/aboutSlide3.webp";
+
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { InViewWrapper } from "../InViewWrapper";
+import { aboutRestaurant, aboutRestaurantScd, aboutRestaurantTrd } from "../../store/exportsImg";
 
 function AboutSlider() {
-  const slides = [SlideFst, SlideScd, SlideTrd, SlideFst, SlideScd];
+  const slides = [aboutRestaurant, aboutRestaurantScd, aboutRestaurantTrd, aboutRestaurant, aboutRestaurantScd];
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
 

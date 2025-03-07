@@ -1,27 +1,26 @@
-import menu from "../../assets/Terrase/Aditionally/menu.webp";
-import bar from "../../assets/Terrase/Aditionally/bar.webp";
-import celebrating from "../../assets/Terrase/Aditionally/celebrating.webp";
+
 import { useTranslation } from "react-i18next";
+import { barTerrase, celebratingTerrase, menuTerrase } from "../../store/exportsImg";
 
 export const Additionally = () => {
   const { t } = useTranslation()      
   const cards = [
     {
-      src: menu,
+      src: menuTerrase,
       title: t("terrase.additionally.cardTitles.0"),
       text: {
         xl: t("terrase.additionally.cardsDesc.0"),
       },
     },
     {
-      src: celebrating,
+      src: celebratingTerrase,
       title: t("terrase.additionally.cardTitles.1"),
       text: {
         xl: t("terrase.additionally.cardsDesc.1"),
       },
     },
     {
-      src: bar,
+      src: barTerrase,
         title: t("terrase.additionally.cardTitles.2"),
       text: {
         xl: t("terrase.additionally.cardsDesc.2"),
