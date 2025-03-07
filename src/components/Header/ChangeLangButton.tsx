@@ -1,12 +1,13 @@
 import { CiGlobe } from "react-icons/ci";
 import i18n from "../../i18n";
+import { memo } from "react";
 
 type changeLanguageToProps ={
     changeLanguage:()=>void
     isMobile:boolean
 }
 
-export const ChangeLangButton = ({changeLanguage, isMobile}:changeLanguageToProps) => {
+export const ChangeLangButton = memo(({changeLanguage, isMobile}:changeLanguageToProps) => {
   return    <button
   className={`flex items-center  uppercase ${isMobile ? 'lg:hidden' : 'hidden lg:flex'}`}
   onClick={() => changeLanguage()}
@@ -30,5 +31,4 @@ export const ChangeLangButton = ({changeLanguage, isMobile}:changeLanguageToProp
     )}
 </button>
 
-};
-
+})

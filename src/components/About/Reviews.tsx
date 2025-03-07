@@ -8,9 +8,6 @@ import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 
 export const Rewies = () => {
   const sliderRef = useRef<Slider | null>(null);
-
-  
-
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   const { reviews } = usePagesInfoStore();

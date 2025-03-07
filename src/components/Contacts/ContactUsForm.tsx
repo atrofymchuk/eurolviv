@@ -27,7 +27,7 @@ export default function ContactUsForm() {
     reset,
   } = useForm<FormData>({
     resolver: yupResolver(schema),
-  });
+  })
 
   const onSubmit = async (data: FormData) => {
     try {

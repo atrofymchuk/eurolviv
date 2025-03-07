@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, memo, SetStateAction, useCallback,  useMemo,  useState } from "react";
 import { Link } from "react-router-dom";
 import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { useTranslation } from "react-i18next";
@@ -16,7 +16,7 @@ type HeaderNavProps = {
   changeLanguage: () => void 
 };
 
-export const HeaderNav = ({
+export const HeaderNav = memo(({
   scrolled,
   pathname,
   logo,
@@ -26,38 +26,45 @@ export const HeaderNav = ({
   changeLanguage
 }: HeaderNavProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { t } = useTranslation();
-  
-  
-  const navLinks = [
-    { path: "/about", label: t("header.about") },
-    { path: "/rooms", label: t("header.rooms") },
-    { path: "/conference-service", label: t("header.conferenceServices") },
-    { path: "/restaurant", label: t("header.restaurant") },
-    { path: "/special-offers", label: t("header.specialOffers") },
-    { path: "/contacts", label: t("header.contacts") },
-  ];
+  const toggleMenu = useCallback(() => setMenuOpen(prev => !prev), []);
+    const { t } = useTranslation();
 
-  const renderNavLinks = (isMobile = false) =>
-    navLinks.map(({ path, label }) => (
+ 
+  const handleMouseEnterRooms = useCallback(() => {
+    if (!scrolled) setIsShowRooms(true);
+  }, [scrolled, setIsShowRooms]);
+  
+  const handleMouseLeaveRooms = useCallback(() => {
+    setIsShowRooms(false);
+  }, [setIsShowRooms]);
+  
+  
+ const navLinks = useMemo(() => [
+   { path: "/about", label: t("header.about") },
+   { path: "/rooms", label: t("header.rooms") },
+   { path: "/conference-service", label: t("header.conferenceServices") },
+   { path: "/restaurant", label: t("header.restaurant") },
+   { path: "/special-offers", label: t("header.specialOffers") },
+   { path: "/contacts", label: t("header.contacts") },
+ ], [t]);
+ 
+
+  const renderNavLinks = useCallback((isMobile = false) =>{
+    return navLinks.map(({ path, label }) => (
       <Link
-        key={path}
-        to={path}
-        className={`uppercase ${isActiveLink(
-          path
-        )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `}
-        onClick={() => isMobile && setMenuOpen(false)}
-        onMouseEnter={() =>
-          !isMobile && path === "/rooms" && !scrolled && setIsShowRooms(true)
-        }
-        onMouseLeave={() =>
-          !isMobile && path !== "/rooms" && setIsShowRooms(false)
-        }
-      >
-        {label}
-      </Link>
-    ));
-
+      key={path}
+      to={path}
+      className={`uppercase ${isActiveLink(
+        path
+      )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `}
+      onClick={() => isMobile && setMenuOpen(false)}
+      onMouseEnter={path === "/rooms" ? handleMouseEnterRooms : undefined}
+      onMouseLeave={path !== "/rooms" ? handleMouseLeaveRooms : undefined}
+    >
+      {label}
+    </Link>
+    ))
+    }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms])
 
 
   return (
@@ -65,7 +72,7 @@ export const HeaderNav = ({
       <div className="flex font-cofo font-normal  lg:justify-end justify-between w-full ">
         <button
           className={`lg:hidden text-white text-2xl flex items-center gap-2`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => toggleMenu()}
         >
           <img
             src={burgerMenu}
@@ -126,4 +133,4 @@ export const HeaderNav = ({
       )}
     </div>
   );
-};
+})

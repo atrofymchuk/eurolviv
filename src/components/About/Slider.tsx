@@ -58,7 +58,7 @@ const ImageSlider = () => {
             
             src={image}
             alt={`slide_${index}`}
-            className={`w-full max-w-[500px]  object-cover  transition-all duration-500 lg:px-0      px-2
+            className={`w-full max-w-[500px]  object-cover  transition-all duration-500 lg:px-0 px-2
               ${isSide ? "xl:w-[530px] xl:h-[353px] w-[231px] h-[154px]" : ""}
               ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
               ${

@@ -2,7 +2,7 @@ import Modal from "react-modal";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { calendar} from "../../store/exportsIcons";
 import * as yup from "yup";
@@ -61,14 +61,18 @@ const OrderModal = ({
 
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log("Форма відправлена:", data);
-    toast.success(t("orderModal.toast.success"), { position: "top-right" });
-    setTimeout(() => {
-      reset();
-      onCloseGlobalModal();
-    }, 5000);
-  };
+  const onSubmit: SubmitHandler<FormData> = useCallback(
+    (data) => {
+      console.log("Форма відправлена:", data);
+      toast.success(t("orderModal.toast.success"));
+      setTimeout(() => {
+        reset();
+        onCloseGlobalModal();
+      }, 5000);
+    },
+    [t, reset, onCloseGlobalModal]
+  );
+
 
   return (
     <div className="bg-white  lg:w-[504px] lg:h-fit h-screen  relative flex flex-col justify-center p-[37px] pt-0 items-center">
@@ -126,7 +130,7 @@ const OrderModal = ({
                     dateFormat="dd/MM/yyyy"
                     onChange={(date) => {
                       field.onChange(date);
-                      setIsDatePickerOpen(false);
+                      setIsDatePickerOpen(false);   
                     }}
                     minDate={new Date(new Date().setDate(new Date().getDate()))}
                     showPopperArrow={false}

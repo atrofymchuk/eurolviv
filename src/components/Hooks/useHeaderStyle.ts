@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 import ruffLogo from "../../assets/ruffLogo.svg";
@@ -17,7 +17,9 @@ const useNavbarStyles = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrolled]);
+  }, []);
+
+  
 
   function isActiveLink(path: string) {
     if (location.pathname === "/contacts") {
@@ -34,32 +36,26 @@ const useNavbarStyles = () => {
       : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
   }
 
-  let styles, iconLogoStyle, logo, rightMenu;
+  const { styles, iconLogoStyle, rightMenu, logo } = useMemo(() => {
+    let logo = defaultLogo;
+    let iconLogoStyle = scrolled ? "filter invert" : "";
+    let rightMenu = scrolled ? "text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+    let styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
 
-  switch (location.pathname) {
-    case "/restaurant":
-    case "/terrase":
+    if (location.pathname === "/restaurant" || location.pathname === "/terrase") {
+      logo = ruffLogo;
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
-      logo = ruffLogo;
-      break;
-
-    case "/contacts":
+    } else if (location.pathname === "/contacts") {
       styles = scrolled ? "bg-[#252526] text-white" : "bg-[#8C331B] text-white";
       iconLogoStyle = "filter invert";
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#252526]";
-      logo = defaultLogo;
-      break;
+    }
 
-    default:
-      styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
-      iconLogoStyle = scrolled ? "filter invert" : "";
-      rightMenu = scrolled ? "text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
-      logo = defaultLogo;
-      break;
-  }
-
+    return { styles, iconLogoStyle, rightMenu, logo };
+  }, [location.pathname, scrolled]);
+  
   return {
     styles,
     iconLogoStyle,

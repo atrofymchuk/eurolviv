@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, memo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,7 +8,7 @@ interface RoomSliderProps {
   images: string[];
 }
 
-export const RoomSlider = ({ images }: RoomSliderProps) => {
+export const RoomSlider = memo(({ images }: RoomSliderProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const sliderRef = useRef<Slider | null>(null);
@@ -115,4 +115,4 @@ export const RoomSlider = ({ images }: RoomSliderProps) => {
       )}
     </div>
   );
-};
+});

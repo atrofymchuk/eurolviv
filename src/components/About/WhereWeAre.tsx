@@ -10,7 +10,7 @@ export const WhereWeAre = () => {
   const { t } = useTranslation();
   const {places,infrastructure} = usePagesInfoStore()
   return (
-    <section className="flex flex-col   font-cofo   ">
+    <section className="flex flex-col   font-cofo">
       <div className="grid lg:grid-cols-[1fr_1fr] max-w-[89.58%]  mx-auto w-full container-fluid border lg:border-t-0 border-[#c7c7c7]">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 pe-0 xl:h-[692px] lg:pt-[73px]">
           <div className="lg:ms-[52px]  ">

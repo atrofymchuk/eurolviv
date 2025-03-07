@@ -1,4 +1,3 @@
-
 import { ConferenceMenuCard } from "./ConferenceMenuCard";
 import { ConferenceMenuMobileCard } from "./ConferenceMenuMobile";
 import { useTranslation } from "react-i18next";
@@ -7,22 +6,24 @@ import { useMemo } from "react";
 
 export const ConferenceMenuContent = () => {
   const { t } = useTranslation();
-  const imageArray = useMemo(() => [
-    {
-      img: food,
-      text: t("conferenceService.conferenceMenu.menu.title1"),
-    },
-    {
-      img: sandwich,
-      text: t("conferenceService.conferenceMenu.menu.title2"),
-    },
-    {
-      img: coffee,
-      text: t("conferenceService.conferenceMenu.menu.title3"),
-    },
-  ], [t]);
-  
-  
+  const imageArray = useMemo(
+    () => [
+      {
+        img: food,
+        text: t("conferenceService.conferenceMenu.menu.title1"),
+      },
+      {
+        img: sandwich,
+        text: t("conferenceService.conferenceMenu.menu.title2"),
+      },
+      {
+        img: coffee,
+        text: t("conferenceService.conferenceMenu.menu.title3"),
+      },
+    ],
+    [t]
+  );
+
   return (
     <div className="relative flex items-center justify-center lg:py-[100px]">
       <div className="grid absolute lg:grid-cols-[21%_42%_37%] grid-cols-1 lg:h-[1000px] h-full z-[-1] w-full">
@@ -33,7 +34,12 @@ export const ConferenceMenuContent = () => {
 
       <div className="hidden items-center lg:space-x-[24px] lg:flex">
         {imageArray.map((el, index) => (
-          <ConferenceMenuCard key={index} img={el.img} text={el.text} buttonText={t("buttons.viewMenu")} />
+          <ConferenceMenuCard
+            key={index}
+            img={el.img}
+            text={el.text}
+            buttonText={t("buttons.viewMenu")}
+          />
         ))}
       </div>
 
