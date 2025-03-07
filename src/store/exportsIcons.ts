@@ -11,7 +11,7 @@ export { default as wardrobe } from "./../assets/icons/Rooms/Living Room/wardrob
 export { default as airCondition } from "./../assets/icons/About/airConditioning.svg";
 export { default as wifi } from "./../assets/icons/About/wifi.svg";
 export { default as teakit } from "./../assets/icons/Rooms/Living Room/tea.svg";
-export { default as tv } from "./../assets/icons/Rooms/Living Room/tv.svg";
+export { default as tv } from "./../assets/icons/Rooms/Living Room/TV.svg";
 
 
 export { default as bedBrown } from "./../assets/icons/Rooms/LivingRoomBrown/bed.svg";
