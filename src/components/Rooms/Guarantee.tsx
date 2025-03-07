@@ -7,9 +7,9 @@ export const Guarantee = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full flex flex-col items-center px-4 sm:px-6 xl:px-6 2xl:px-0 ">
-      <div className="max-w-[1720px] border-x border-[#C7C7C7] lg:w-full">
-        <div className="grid 2xl:grid-cols-[1fr]  justify-center   xl:grid-cols-[1fr] lg:grid-cols-[1fr] md:grid-cols-[1fr] grid-cols-[1fr]   border-t lg:border-t-0 border-[#C7C7C7] ">
+    <div className="w-full flex flex-col items-center  ">
+      <div className="max-w-[89.58%] border-x border-[#C7C7C7] lg:w-full">
+        <div className="grid   justify-center  grid-cols-[1fr]  border-t lg:border-t-0 border-[#C7C7C7] ">
           <div className="md::border-x  lg:border-x-0 border-[#C7C7C7]">
             <div className=" flex flex-col 2xl:items-end xl:items-center  2xl:pt-[81px] xl:pt-[60px] lg:pt-[50px] pt-[49px] 2xl:pb-[48px] xl:pb-[40px] pb-[30px]">
               <h1 className="font-cofo hidden 2xl:block uppercase 2xl:text-[100px] 2xl:leading-[81px] 2xl:tracking-[-0.04em] 2xl:w-[1300px]">

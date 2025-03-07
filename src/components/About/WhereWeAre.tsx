@@ -81,8 +81,8 @@ export const WhereWeAre = () => {
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 pe-0 xl:h-[692px] lg:pt-[73px]">
           <div className="lg:ms-[52px]  ">
             <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
-              <InViewWrapper>
 
+              <InViewWrapper>
               <img src={navigateIco} alt="navigate" className="mr-2" />
               </InViewWrapper>
               <span className="underline text-[#8C331B] font-semibold text-sm xl:text-lg ">
@@ -90,7 +90,6 @@ export const WhereWeAre = () => {
               </span>
             </p>
             <h1 className="uppercase text-3xl xl:text-[100px] font-bold mt-4 text-center lg:text-left leading-[81%] tracking-[-10%]">
-              {" "}
               {t("about.whereWeAre.title")}
             </h1>
             <p className="text-[#8F8F8F] text-sm xl:text-[20px] xl:max-w-[500px] text-center uppercase lg:text-left xl:mt-[52px]">

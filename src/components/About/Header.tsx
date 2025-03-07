@@ -3,12 +3,9 @@ import headerImg from "../../assets/About/header.webp";
 import { useModalStore } from "../../store/useModalStore";
 import { InViewWrapper } from "../InViewWrapper";
 
-
 export const AboutHeader = () => {
-  const {onOpenModal } = useModalStore();
-  const {t} = useTranslation()
-
-
+  const { onOpenModal } = useModalStore();
+  const { t } = useTranslation();
 
   return (
     <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
@@ -16,14 +13,11 @@ export const AboutHeader = () => {
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
       <InViewWrapper>
-
-
         <img
-          
           src={headerImg}
           alt="headerImg"
           className="absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
-          />
+        />
       </InViewWrapper>
 
       <h4 className="font-cofo text-[#FFFFFF]  uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
@@ -43,7 +37,7 @@ export const AboutHeader = () => {
         </span>
       </h4>
       <button
-        onClick={() => onOpenModal('order')}
+        onClick={() => onOpenModal("order")}
         className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
       >
         {t("buttons.book")}

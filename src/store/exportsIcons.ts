@@ -1,0 +1,46 @@
+export { default as armChair } from "./../assets/icons/Rooms/Living Room/armChair.svg";
+export { default as balcony } from "./../assets/icons/Rooms/Living Room/balcony.svg";
+export { default as cabinet } from "./../assets/icons/Rooms/Living Room/cabinet.svg";
+export { default as carpet } from "./../assets/icons/Rooms/Living Room/carpet.svg";
+export { default as kettle } from "./../assets/icons/Rooms/Living Room/kettle.svg";
+export { default as minibar } from "./../assets/icons/Rooms/Living Room/minibar.svg";
+export { default as phone } from "./../assets/icons/Rooms/Living Room/phone.svg";
+export { default as safe } from "./../assets/icons/Rooms/Living Room/safe.svg";
+export { default as sofa } from "./../assets/icons/Rooms/Living Room/sofa.svg";
+export { default as wardrobe } from "./../assets/icons/Rooms/Living Room/wardrobe.svg";
+export { default as airCondition } from "./../assets/icons/About/airConditioning.svg";
+export { default as wifi } from "./../assets/icons/About/wifi.svg";
+export { default as teakit } from "./../assets/icons/Rooms/Living Room/tea.svg";
+export { default as tv } from "./../assets/icons/Rooms/Living Room/tv.svg";
+
+
+export { default as bedBrown } from "./../assets/icons/Rooms/LivingRoomBrown/bed.svg";
+export { default as carpetBrown } from "./../assets/icons/Rooms/LivingRoomBrown/carpet.svg";
+export { default as safeBrown } from "./../assets/icons/Rooms/LivingRoomBrown/safe.svg";
+export { default as kettleBrown } from "./../assets/icons/Rooms/LivingRoomBrown/kettle.svg";
+export { default as conditionBrown } from "./../assets/icons/Rooms/LivingRoomBrown/condition.svg";
+export { default as tvBrown } from "./../assets/icons/Rooms/LivingRoomBrown/tv.svg";
+export { default as phoneBrown } from "./../assets/icons/Rooms/LivingRoomBrown/phone.svg";
+export { default as wifiBrown } from "./../assets/icons/Rooms/LivingRoomBrown/wifi.svg";
+export { default as balconyBrown } from "./../assets/icons/Rooms/LivingRoomBrown/balcony.svg";
+export { default as sofaBrown } from "./../assets/icons/Rooms/LivingRoomBrown/sofa.svg";
+export { default as wardrobeBrown } from "./../assets/icons/Rooms/LivingRoomBrown/wardrobe.svg";
+export { default as cabinetBrown } from "./../assets/icons/Rooms/LivingRoomBrown/cabinet.svg";
+export { default as bathRobe } from "./../assets/icons/Rooms/LivingRoomBrown/bathRobe.svg";
+export { default as cosmetic } from "./../assets/icons/Rooms/LivingRoomBrown/cosmetic.svg";
+export { default as minibarBrown } from "./../assets/icons/Rooms/LivingRoomBrown/minibar.svg";
+export { default as hairDryer } from "./../assets/icons/Rooms/LivingRoomBrown/hairDryer.svg";
+export { default as shovergigi } from "./../assets/icons/Rooms/LivingRoomBrown/shovergigi.svg";
+export { default as shower } from "./../assets/icons/Rooms/LivingRoomBrown/shower.svg";
+export { default as slippers } from "./../assets/icons/Rooms/LivingRoomBrown/slippers.svg";
+export { default as towels } from "./../assets/icons/Rooms/LivingRoomBrown/towels.svg";
+export { default as wc } from "./../assets/icons/Rooms/LivingRoomBrown/wc.svg";
+
+export  { default as presenter} from "../assets/icons/ConferenceService/presenter.svg";
+export  { default as projector} from "../assets/icons/ConferenceService/projector.svg";
+export  { default as screen} from "../assets/icons/ConferenceService/screen.svg";  
+export  { default as microphone} from "../assets/icons/ConferenceService/microphone.svg";
+export  { default as notebook} from "../assets/icons/ConferenceService/notebook.svg";
+export  { default as paper} from "../assets/icons/ConferenceService/paper.svg";
+export  { default as soundSystem} from "../assets/icons/ConferenceService/soundsystem.svg";
+export  { default as flipchart} from "../assets/icons/ConferenceService/flipchart.svg";

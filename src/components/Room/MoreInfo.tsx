@@ -34,13 +34,14 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
     { src: olderkid, text: t('room.moreInfo.amenties.3') },
     { src: cup, text: t('room.moreInfo.amenties.4') },
     { src: guest, text: t('room.moreInfo.amenties.5') },
-  ];
+  ]
+  
   const availableService = [
     { src: washingMachine, text: t('room.moreInfo.availableService.0') },
     { src: roomservice, text: t('room.moreInfo.availableService.1') },
     { src: ironing, text: t('room.moreInfo.availableService.2') },
     { src: pet, text: t('room.moreInfo.availableService.3') },
-  ];
+  ]
         
   return (
     <div className="bg-[#A47762]  ">
@@ -88,7 +89,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   {t('room.moreInfo.title2')}
                 </h1>
                 
-                <ul className="">
+                <ul>
                   {amenities.map((item, index) => (
                     <li key={index}
                       className="flex items-center text-[#E1E1E1] uppercase font-cofo
@@ -124,11 +125,11 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               <h1 className={`${isShowAdditionalPlace ? "block" : "hidden "} 
                 uppercase text-white font-cofo
                 text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]  xl:text-[48px] leading-[104%]
-           mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]"`}>
+                mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]`}>
                 {t('room.moreInfo.title')}
               </h1>
 
-              <ul className="">
+              <ul>
                 {availableService.map((item, index) => (
                   <li key={index}
                     className="flex items-center text-[#E1E1E1] uppercase font-cofo

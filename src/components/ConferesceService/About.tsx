@@ -3,12 +3,13 @@ import { ConferenceService } from "../../store/types";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomInfo } from "./RoomInfo";
 import { useTranslation } from "react-i18next";
+import { memo } from "react";
 type AboutToProps = {
   item: ConferenceService;
   isOnTop:boolean
-};
+  };
 
-export const About = ({ item, isOnTop }: AboutToProps) => {
+export const About = memo(({ item, isOnTop }: AboutToProps) => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   return (
@@ -94,4 +95,4 @@ export const About = ({ item, isOnTop }: AboutToProps) => {
       </div>
     </div>
   );
-};
+});

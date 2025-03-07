@@ -7,7 +7,6 @@ export const AboutHome = () => {
   
   const {t} = useTranslation()
 
-  console.log(t("home.about.aboutRooms"))
   
   return (
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">

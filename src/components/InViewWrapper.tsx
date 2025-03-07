@@ -27,8 +27,8 @@ export const InViewWrapper = ({
   }
 
   return (
-    <div ref={ref} className={className} style={{ display: "contents" }}>
+    <span ref={ref} className={className} style={{ display: "contents" }}>
       {children}
-    </div>
+    </span>
   );
 };

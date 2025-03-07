@@ -15,7 +15,6 @@ export const Room = () => {
     roomType === "lux-two-room" || roomType === "semi-lux" ? false : true;
 
   const room = rooms.find((r) => r.type === roomType);
-  console.log(room);
   if (!room) return <div>not found</div>;
   return (
     <div className="overflow-x-hidden">

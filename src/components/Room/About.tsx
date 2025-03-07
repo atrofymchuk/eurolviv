@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { SliderAbout } from "./SliderAbout";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomAbout } from "../../store/types";
+import { memo } from "react";
 
 type RoomAboutToProps = {
   about: RoomAbout;
@@ -14,9 +15,9 @@ type RoomAboutToProps = {
   size: string | undefined;
   swiperImagesStyle: string;
   nameRoom: string;
-};
+}
 
-export const About = ({
+export const About = memo(({
   about,
   area,
   guests,
@@ -160,4 +161,4 @@ export const About = ({
       </div>
     </div>
   );
-};
+});

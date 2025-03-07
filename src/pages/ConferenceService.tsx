@@ -13,7 +13,7 @@ export const ConferenceService = () => {
     <div>
       <Header />
       {halls.map((el, index) => (
-        <div key={el.floor}>
+        <div key={index}>
           <About item={el} isOnTop={index === 0 ? true : false} />
           <Equipment icons={el.icons} price={el.price} />
           <RoomSliderContainer images={el.showcaseSwiperImages} />

@@ -57,7 +57,7 @@ const ImageSlider = () => {
           const isEdge = Math.abs(activeSlide - index) > 1;
 
           return (
-            <InViewWrapper>
+            <InViewWrapper key={index}>
             <img
             
             src={image}

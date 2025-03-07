@@ -1,159 +1,31 @@
-import TV from "../assets/icons/Rooms/Living Room/TV.svg";
+import * as icons from "./exportsIcons";
+import * as imgs from "./exportsImg";
 
-import armChair from "../assets/icons/Rooms/Living Room/armChair.svg";
-import balcony from "../assets/icons/Rooms/Living Room/balcony.svg";
-import cabinet from "../assets/icons/Rooms/Living Room/cabinet.svg";
-import carpet from "../assets/icons/Rooms/Living Room/carpet.svg";
-import kettle from "../assets/icons/Rooms/Living Room/kettle.svg";
-import minibar from "../assets/icons/Rooms/Living Room/minibar.svg";
-import phone from "../assets/icons/Rooms/Living Room/phone.svg";
-import safe from "../assets/icons/Rooms/Living Room/safe.svg";
-import sofa from "../assets/icons/Rooms/Living Room/sofa.svg";
-import wardrobe from "../assets/icons/Rooms/Living Room/wardrobe.svg";
-import airCondition from "../assets/icons/About/airConditioning.svg";
-import wifi from "../assets/icons/About/wifi.svg";
-import teakit from "../assets/icons/Rooms/Living Room/tea.svg";
-
-import bedBrown from "../assets/icons/Rooms/LivingRoomBrown/bed.svg";
-import cabinetBrown from "../assets/icons/Rooms/LivingRoomBrown/cabinet.svg";
-import carpetBrown from "../assets/icons/Rooms/LivingRoomBrown/carpet.svg";
-import minibarBrown from "../assets/icons/Rooms/LivingRoomBrown/minibar.svg";
-import safeBrown from "../assets/icons/Rooms/LivingRoomBrown/safe.svg";
-import kettleBrown from "../assets/icons/Rooms/LivingRoomBrown/kettle.svg";
-import conditionBrown from "../assets/icons/Rooms/LivingRoomBrown/condition.svg";
-import tvBrown from "../assets/icons/Rooms/LivingRoomBrown/tv.svg";
-import phoneBrown from "../assets/icons/Rooms/LivingRoomBrown/phone.svg";
-import wifiBrown from "../assets/icons/Rooms/LivingRoomBrown/wifi.svg";
-import balconyBrown from "../assets/icons/Rooms/LivingRoomBrown/balcony.svg";
-import sofaBrown from "../assets/icons/Rooms/LivingRoomBrown/sofa.svg";
-import wardrobeBrown from "../assets/icons/Rooms/LivingRoomBrown/wardrobe.svg";
-
-import bathRobe from "../assets/icons/Rooms/LivingRoomBrown/bathRobe.svg";
-import cosmetic from "../assets/icons/Rooms/LivingRoomBrown/cosmetic.svg";
-import hairDryer from "../assets/icons/Rooms/LivingRoomBrown/hairDryer.svg";
-import shovergigi from "../assets/icons/Rooms/LivingRoomBrown/shovergigi.svg";
-import shower from "../assets/icons/Rooms/LivingRoomBrown/shower.svg";
-import slippers from "../assets/icons/Rooms/LivingRoomBrown/slippers.svg";
-import towels from "../assets/icons/Rooms/LivingRoomBrown/towels.svg";
-import wc from "../assets/icons/Rooms/LivingRoomBrown/wc.svg";
-
-import standartSinglePreview from "../assets/Rooms/StandartSingle/prewiew.webp";
-import standartSingleBedroomFst from "../assets/Rooms/StandartSingle/bedroom.webp";
-import standartSingleBedroomScd from "../assets/Rooms/StandartSingle/bedroomTwo.webp";
-import standartSingleAmmenties from "../assets/Rooms/StandartSingle/ammenties.webp";
-
-import standartBigBedPreview from "../assets/Rooms/StandartWithBigBed/preview.webp";
-import standartBigBedFst from "../assets/Rooms/StandartWithBigBed/bedroom.webp";
-import standartBigBedScd from "../assets/Rooms/StandartWithBigBed/bedroomTwo.webp";
-
-import standartTwoBedPreview from "../assets/Rooms/StandartWithTwoBeds/preview.webp";
-import standartTwoBedFst from "../assets/Rooms/StandartWithTwoBeds/bedrom.webp";
-import standartTwoBedScd from "../assets/Rooms/StandartWithTwoBeds/bedroomTwo.webp";
-
-import standartBigBedAndBalconyPreview from "../assets/Rooms/StandartWithBigBedAndBalcony/preview.webp";
-import standartBigBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.webp";
-import standartBigBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.Two.webp";
-
-import standartTwoBedAndBalconyPreview from "../assets/Rooms/StandartWithTwoBedsAndBalcony/preview.webp";
-import standartTwoBedAndBalconyBedroomFst from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroom.webp";
-import standartTwoBedAndBalconyBedroomScd from "../assets/Rooms/StandartWithTwoBedsAndBalcony/bedroomTwo.webp";
-
-import semiLuxPreview from "../assets/Rooms/SemiLux/preview.webp";
-import semiLuxBathroomFst from "../assets/Rooms/SemiLux/bathroom.webp";
-import semiLuxBathroomScd from "../assets/Rooms/SemiLux/bathroomTwo.webp";
-import semiLuxBedroomScd from "../assets/Rooms/SemiLux/bedroomTwo.webp";
-
-import luxTwoRoomsPreview from "../assets/Rooms/LuxTwoRooms/header.webp";
-import luxTwoRoomsLivingRoomTrd from "../assets/Rooms/LuxTwoRooms/room.webp";
-import luxTwoRoomsBedroomFst from "../assets/Rooms/LuxTwoRooms/bedroom.webp";
-import luxTwoRoomsBedroomScd from "../assets/Rooms/LuxTwoRooms/bedroom2.webp";
-import luxTwoRoomsLivingRoomFst from "../assets/Rooms/LuxTwoRooms/livingRoom.webp";
-import luxTwoRoomsLivingRoomScd from "../assets/Rooms/LuxTwoRooms/livingRoom2.webp";
-import luxTwoRoomsBathRoomFst from "../assets/Rooms/LuxTwoRooms/bathroom.webp";
-import luxTwoRoomsBathRoomScd from "../assets/Rooms/LuxTwoRooms/bathroom2.webp";
-
-import luxImperiumPreview from "../assets/Rooms/LuxImpreial/preview.webp";
-import luxImperiumlivigRoomFst from "../assets/Rooms/LuxImpreial/livingroom.webp";
-import luxImperiumlivigRoomScd from "../assets/Rooms/LuxImpreial/livingroom2.webp";
-import luxImperiumBedRoomFst from "../assets/Rooms/LuxImpreial/bedroom.webp";
-import luxImperiumBedRoomScd from "../assets/Rooms/LuxImpreial/bedroom2.webp";
-import luxImperiumBathRoomFst from "../assets/Rooms/LuxImpreial/bathroom.webp";
-import luxImperiumBathRoomScd from "../assets/Rooms/LuxImpreial/bathroom2.webp";
-
-import luxElegantPreview from "../assets/Rooms/LuxElegant/preview.webp";
-import luxElegantBathRoomFst from "../assets/Rooms/LuxElegant/bathroom.webp";
-import luxElegantBathRoomScd from "../assets/Rooms/LuxElegant/bathroom2.webp";
-import luxElegantBedRoomFst from "../assets/Rooms/LuxElegant/bedroom.webp";
-import luxElegantBedRoomScd from "../assets/Rooms/LuxElegant/bedroom2.webp";
-import luxElegantLivingRoomFst from "../assets/Rooms/LuxElegant/livingroom.webp";
-import luxElegantLivingRoomScd from "../assets/Rooms/LuxElegant/livingroom2.webp";
-
-import ammenties from "../assets/Rooms/StandartAbout/amenities.webp";
-import standartBathRoomFst from "../assets/Rooms/StandartAbout/bathRoom.webp";
-import standartBathRoomSnd from "../assets/Rooms/StandartAbout/bathRoomTwo.webp";
-import standartBedRoomTwo from "../assets/Rooms/StandartSingle/bedroomTwo.webp";
 import {
   ConferenceServiceState,
   RoomsState,
   TerrasesInitialState,
 } from "./types";
 
-import presenter from "../assets/icons/ConferenceService/presenter.svg";
-import projector from "../assets/icons/ConferenceService/projector.svg";
-import screen from "../assets/icons/ConferenceService/screen.svg";
-import microphone from "../assets/icons/ConferenceService/microphone.svg";
-import notebook from "../assets/icons/ConferenceService/notebook.svg";
-import paper from "../assets/icons/ConferenceService/paper.svg";
-import soundSystem from "../assets/icons/ConferenceService/soundsystem.svg";
-import flipchart from "../assets/icons/ConferenceService/flipchart.svg";
-
-import bigHall from "../assets/ConferenceService/BigHall.webp";
-import bigHallTheathre from "../assets/ConferenceService/BigHallTheathre.webp";
-import hallH from "../assets/ConferenceService/hallH.webp";
-import pLetterImg from "../assets/ConferenceService/pLetterImg.webp";
-
-import pLetter from "../assets/ConferenceService/pLetter.webp";
-import classRoom from "../assets/ConferenceService/class.webp";
-import theathre from "../assets/ConferenceService/theathre.webp";
-import negotiationTable from "../assets/ConferenceService/negotiationTable.webp";
-
-import smallHallPreview from "../assets/ConferenceService/smallHallPreview.webp";
-import pLetterSmall from "../assets/ConferenceService/pLetterSmall.webp";
-import theathreSmall from "../assets/ConferenceService/theathreSmall.webp";
-import negotiationTableSmall from "../assets/ConferenceService/negotiationTableSmall.webp";
-
-import laungePreview from "../assets/ConferenceService/laungePreview.webp";
-import laungeTheatre from "../assets/ConferenceService/laungeTheatre.webp";
-import negotiationTableLaunge from "../assets/ConferenceService/negotiationTableLaunge.webp";
-
-import mainFst from "../assets/Terrase/MainTerrase/previewFst.webp";
-import mainScd from "../assets/Terrase/MainTerrase/previewScd.webp";
-import mainTrd from "../assets/Terrase/MainTerrase/previewTrd.webp";
-import mainFth from "../assets/Terrase/MainTerrase/previewFth.webp";
-
-import upperFst from "../assets/Terrase/UpperTerrase/previewFhd.webp";
-import upperScd from "../assets/Terrase/UpperTerrase/previewScd.webp";
-import upperThd from "../assets/Terrase/UpperTerrase/previewThd.webp";
-import upperFhd from "../assets/Terrase/UpperTerrase/previewFhd.webp";
 
 export const initialTerraseState: TerrasesInitialState = {
   terases: [
     {
-      imgs: [mainFst, mainScd, mainTrd, mainFth],
+      imgs: [imgs.mainFst, imgs.mainScd, imgs.mainTrd, imgs.mainFth],
       title: "terasesState.mainTerrase.title",
       desc: "terasesState.mainTerrase.desc",
       titleTwo: "terasesState.mainTerrase.titleTwo",
       descTwo: "terasesState.mainTerrase.descTwo",
     },
     {
-      imgs: [upperFst, upperScd, upperThd, upperFhd],
+      imgs: [imgs.upperFst, imgs.upperScd, imgs.upperThd, imgs.upperFhd],
       title: "terasesState.upperTerrase.title",
       desc: "terasesState.upperTerrase.desc",
       titleTwo: "terasesState.upperTerrase.titleTwo",
       descTwo: "terasesState.upperTerrase.descTwo",
     },
     {
-      imgs: [upperFst, upperScd, upperThd, upperFhd],
+      imgs: [imgs.upperFst, imgs.upperScd, imgs.upperThd, imgs.upperFhd],
       title: "terasesState.lowerTerrase.title",
       desc: "terasesState.lowerTerrase.desc",
       titleTwo: "terasesState.lowerTerrase.titleTwo",
@@ -165,7 +37,7 @@ export const initialTerraseState: TerrasesInitialState = {
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
     {
-      previewImage: bigHall,
+      previewImage: imgs.bigHall,
       title: "conferenceHallState.bigHall.title",
       size: "conferenceHallState.bigHall.desc",
       area: "120M²",
@@ -176,37 +48,37 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.bigHall.about.pTwo",
       },
       price: { hour: 800, day: 3000 },
-      swiperImages: [bigHallTheathre, hallH, bigHall],
+      swiperImages: [imgs.bigHallTheathre, imgs.hallH, imgs.bigHall],
       showcaseSwiperImages: [
-        pLetterImg,
-        pLetter,
-        hallH,
-        classRoom,
-        bigHallTheathre,
-        theathre,
-        bigHallTheathre,
-        negotiationTable,
+        imgs.pLetterImg,
+        imgs.pLetter,
+        imgs. hallH,
+        imgs.classRoom,
+        imgs.bigHallTheathre,
+        imgs.theathre,
+        imgs.bigHallTheathre,
+        imgs.negotiationTable,
       ],
       icons: [
-        { src: projector, text: "conferenceHallState.bigHall.icons.projector" },
-        { src: notebook, text: "conferenceHallState.bigHall.icons.notebook" },
-        { src: screen, text: "conferenceHallState.bigHall.icons.screen" },
-        { src: flipchart, text: "conferenceHallState.bigHall.icons.flipchart" },
+        { src: icons.projector, text: "conferenceHallState.bigHall.icons.projector" },
+        { src: icons.notebook, text: "conferenceHallState.bigHall.icons.notebook" },
+        { src: icons.screen, text: "conferenceHallState.bigHall.icons.screen" },
+        { src: icons.flipchart, text: "conferenceHallState.bigHall.icons.flipchart" },
         {
-          src: soundSystem,
+          src: icons.soundSystem,
           text: "conferenceHallState.bigHall.icons.soundSystem",
         },
-        { src: paper, text: "conferenceHallState.bigHall.icons.paper" },
-        { src: presenter, text: "conferenceHallState.bigHall.icons.presenter" },
+        { src: icons.paper, text: "conferenceHallState.bigHall.icons.paper" },
+        { src: icons.presenter, text: "conferenceHallState.bigHall.icons.presenter" },
         {
-          src: microphone,
+          src: icons.microphone,
           text: "conferenceHallState.bigHall.icons.microphone",
         },
       ],
     },
 
     {
-      previewImage: smallHallPreview,
+      previewImage: imgs.smallHallPreview,
       title: "conferenceHallState.smallHall.title",
       size: "conferenceHallState.smallHall.desc",
       area: "75M²",
@@ -218,40 +90,40 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       },
       price: { hour: 1000, day: 5000 },
       swiperImages: [
-        smallHallPreview,
-        pLetterSmall,
-        theathreSmall,
-        negotiationTableSmall,
+        imgs.smallHallPreview,
+        imgs.pLetterSmall,
+        imgs.theathreSmall,
+        imgs.negotiationTableSmall,
       ],
       showcaseSwiperImages: [
-        pLetterSmall,
-        pLetter,
-        theathreSmall,
-        theathre,
-        negotiationTableSmall,
-        negotiationTable,
+        imgs.pLetterSmall,
+        imgs.pLetter,
+        imgs.theathreSmall,
+        imgs.theathre,
+        imgs.negotiationTableSmall,
+        imgs.negotiationTable,
       ],
       icons: [
-        { src: screen, text: "conferenceHallState.smallHall.icons.screen" },
+        { src: icons.screen, text: "conferenceHallState.smallHall.icons.screen" },
         {
-          src: soundSystem,
+          src: icons.soundSystem,
           text: "conferenceHallState.smallHall.icons.soundSystem",
         },
-        { src: notebook, text: "conferenceHallState.smallHall.icons.notebook" },
-        { src: paper, text: "conferenceHallState.smallHall.icons.paper" },
+        { src: icons.notebook, text: "conferenceHallState.smallHall.icons.notebook" },
+        { src: icons.paper, text: "conferenceHallState.smallHall.icons.paper" },
         {
-          src: presenter,
+          src: icons.presenter,
           text: "conferenceHallState.smallHall.icons.presenter",
         },
         {
-          src: flipchart,
+          src: icons.flipchart,
           text: "conferenceHallState.smallHall.icons.flipchart",
         },
       ],
     },
 
     {
-      previewImage: laungePreview,
+      previewImage: imgs.laungePreview,
       title: "conferenceHallState.launge.title",
       size: "conferenceHallState.launge.desc",
       area: "45M²",
@@ -262,23 +134,23 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.launge.about.pTwo",
       },
       price: { hour: 800, day: 3000 },
-      swiperImages: [laungePreview, laungeTheatre, negotiationTableLaunge],
+      swiperImages: [imgs.laungePreview, imgs.laungeTheatre, imgs.negotiationTableLaunge],
       showcaseSwiperImages: [
-        laungeTheatre,
-        theathre,
-        negotiationTableLaunge,
-        negotiationTable,
+        imgs.laungeTheatre,
+        imgs.theathre,
+        imgs.negotiationTableLaunge,
+        imgs.negotiationTable,
       ],
       icons: [
-        { src: screen, text: "conferenceHallState.launge.icons.screen" },
+        { src: icons.screen, text: "conferenceHallState.launge.icons.screen" },
         {
-          src: soundSystem,
+          src: icons.soundSystem,
           text: "conferenceHallState.launge.icons.soundSystem",
         },
-        { src: notebook, text: "conferenceHallState.launge.icons.notebook" },
-        { src: paper, text: "conferenceHallState.launge.icons.paper" },
-        { src: presenter, text: "conferenceHallState.launge.icons.presenter" },
-        { src: flipchart, text: "conferenceHallState.launge.icons.flipchart" },
+        { src: icons.notebook, text: "conferenceHallState.launge.icons.notebook" },
+        { src: icons.paper, text: "conferenceHallState.launge.icons.paper" },
+        { src: icons.presenter, text: "conferenceHallState.launge.icons.presenter" },
+        { src: icons.flipchart, text: "conferenceHallState.launge.icons.flipchart" },
       ],
     },
   ],
@@ -294,7 +166,7 @@ export const initialRoomsState: RoomsState = {
       guests: "1",
       isLux: false,
       header: {
-        previewImage: standartSinglePreview,
+        previewImage: imgs.standartSinglePreview,
         title: "roomsState.standartSingle.header.title",
         size: "roomsState.standartSingle.header.size",
         description: "roomsState.standartSingle.header.description",
@@ -309,92 +181,92 @@ export const initialRoomsState: RoomsState = {
         rooms: 2,
         swiperImagesStyle: "object-[100%_40%]",
         swiperImages: [
-          standartSingleBedroomFst,
-          standartSingleBedroomScd,
-          standartSinglePreview,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartSingleBedroomFst,
+          imgs.standartSingleBedroomScd,
+          imgs.standartSinglePreview,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[2%_20%]",
         ammetiveImgStyleScd: "",
 
         ammentiesImages: [
-          standartBedRoomTwo,
-          standartSingleAmmenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBedRoomTwo,
+          imgs.standartSingleAmmenties,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         bedText: "roomsState.standartSingle.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: bedBrown,
+            src: icons.bedBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.bed",
           },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.condition",
           },
           {
-            src: tvBrown,
+            src: icons.tvBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.tv",
           },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.standartSingle.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
           {
-            src: shower,
+            src: icons.shower,
             text: "roomsState.standartSingle.icons.bathRoom.shower",
           },
-          { src: wc, text: "roomsState.standartSingle.icons.bathRoom.wc" },
+          { src: icons.wc, text: "roomsState.standartSingle.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.standartSingle.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.standartSingle.icons.bathRoom.hairDryer",
           },
           {
-            src: towels,
+            src: icons.towels,
             text: "roomsState.standartSingle.icons.bathRoom.towels",
           },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.standartSingle.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.standartSingle.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.standartSingle.icons.bathRoom.cosmetic",
           },
         ],
@@ -405,14 +277,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartSingle.suggestion.0.title",
           size: "roomsState.standartSingle.suggestion.0.size",
           desc: "roomsState.standartSingle.suggestion.0.desc",
-          img: standartBigBedPreview,
+          img: imgs.standartBigBedPreview,
           type: "standart-big-bed",
         },
         {
           title: "roomsState.standartSingle.suggestion.1.title",
           size: "roomsState.standartSingle.suggestion.1.size",
           desc: "roomsState.standartSingle.suggestion.1.desc",
-          img: standartBigBedAndBalconyPreview,
+          img: imgs.standartBigBedAndBalconyPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -425,7 +297,7 @@ export const initialRoomsState: RoomsState = {
       isLux: false,
       guests: "2",
       header: {
-        previewImage: standartBigBedPreview,
+        previewImage: imgs.standartBigBedPreview,
         title: "roomsState.standartBigbed.header.title",
         size: "roomsState.standartBigbed.header.size",
         description: "roomsState.standartBigbed.header.description",
@@ -440,88 +312,88 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[100%_65%]",
         swiperImages: [
-          standartBigBedFst,
-          standartBigBedScd,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBigBedFst,
+          imgs.standartBigBedScd,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[33%_50%]",
         ammetiveImgStyleScd: "",
 
         ammentiesImages: [
-          standartBigBedScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBigBedScd,
+          imgs.ammenties,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         bedText: "roomsState.standartBigbed.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
-          { src: bedBrown, text: "двоспальне ліжко (160*200 см)" },
+          { src: icons.bedBrown, text: "двоспальне ліжко (160*200 см)" },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.airConditioner",
           },
           {
-            src: tvBrown,
+            src: icons.tvBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.tv",
           },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.standartBigbed.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
           {
-            src: shower,
+            src: icons.shower,
             text: "roomsState.standartBigbed.icons.bathRoom.shower",
           },
-          { src: wc, text: "roomsState.standartBigbed.icons.bathRoom.wc" },
+          { src: icons.wc, text: "roomsState.standartBigbed.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.standartBigbed.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.standartBigbed.icons.bathRoom.hairDryer",
           },
           {
-            src: towels,
+            src: icons.towels,
             text: "roomsState.standartBigbed.icons.bathRoom.towels",
           },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.standartBigbed.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.standartBigbed.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.standartBigbed.icons.bathRoom.cosmetic",
           },
         ],
@@ -531,14 +403,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartBigbed.suggestion.0.title",
           size: "roomsState.standartBigbed.suggestion.0.size",
           desc: "roomsState.standartBigbed.suggestion.0.desc",
-          img: standartSinglePreview,
+          img: imgs.standartSinglePreview,
           type: "standart-single",
         },
         {
           title: "roomsState.standartBigbed.suggestion.1.title",
           size: "roomsState.standartBigbed.suggestion.1.size",
           desc: "roomsState.standartBigbed.suggestion.1.desc",
-          img: standartBigBedAndBalconyPreview,
+          img: imgs.standartBigBedAndBalconyPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -551,7 +423,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2",
       isLux: false,
       header: {
-        previewImage: standartTwoBedPreview,
+        previewImage: imgs.standartTwoBedPreview,
         title: "roomsState.standartTwoBed.header.title",
         size: "roomsState.standartTwoBed.header.size",
         description: "roomsState.standartTwoBed.header.description",
@@ -566,90 +438,90 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[100%_78%]",
         swiperImages: [
-          standartTwoBedFst,
-          standartTwoBedScd,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartTwoBedFst,
+          imgs.standartTwoBedScd,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[0%_20%]",
         ammetiveImgStyleScd: "",
         ammentiesImages: [
-          standartTwoBedScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartTwoBedScd,
+          imgs.ammenties,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         bedText: "roomsState.standartTwoBed.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: bedBrown,
+            src: icons.bedBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.bed",
           },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.condition",
           },
           {
-            src: tvBrown,
+            src: icons.tvBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.tv",
           },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.standartTwoBed.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
           {
-            src: shower,
+            src: icons.shower,
             text: "roomsState.standartTwoBed.icons.bathRoom.shower",
           },
-          { src: wc, text: "roomsState.standartTwoBed.icons.bathRoom.wc" },
+          { src: icons.wc, text: "roomsState.standartTwoBed.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.standartTwoBed.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.standartTwoBed.icons.bathRoom.hairDryer",
           },
           {
-            src: towels,
+            src: icons.towels,
             text: "roomsState.standartTwoBed.icons.bathRoom.towels",
           },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.standartTwoBed.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.standartTwoBed.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.standartTwoBed.icons.bathRoom.cosmetic",
           },
         ],
@@ -659,14 +531,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartTwoBed.suggestion.0.title",
           size: "roomsState.standartTwoBed.suggestion.0.size",
           desc: "roomsState.standartTwoBed.suggestion.0.desc",
-          img: standartBigBedPreview,
+          img: imgs.standartBigBedPreview,
           type: "standart-big-bed",
         },
         {
           title: "roomsState.standartTwoBed.suggestion.1.title",
           size: "roomsState.standartTwoBed.suggestion.1.size",
           desc: "roomsState.standartTwoBed.suggestion.1.desc",
-          img: standartTwoBedAndBalconyPreview,
+          img: imgs.standartTwoBedAndBalconyPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -679,7 +551,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2",
       isLux: false,
       header: {
-        previewImage: standartBigBedAndBalconyPreview,
+        previewImage: imgs.standartBigBedAndBalconyPreview,
         title: "roomsState.standartBigBedBalcony.header.title",
         size: "roomsState.standartBigBedBalcony.header.size",
         description: "roomsState.standartBigBedBalcony.header.description",
@@ -694,97 +566,97 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[0%_100%]",
         swiperImages: [
-          standartBigBedAndBalconyBedroomFst,
-          standartBigBedAndBalconyBedroomScd,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBigBedAndBalconyBedroomFst,
+          imgs.standartBigBedAndBalconyBedroomScd,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[65%_20%]",
         ammetiveImgStyleScd: "",
         ammentiesImages: [
-          standartBigBedAndBalconyBedroomScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBigBedAndBalconyBedroomScd,
+          imgs.ammenties,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         bedText: "roomsState.standartBigBedBalcony.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: bedBrown,
+            src: icons.bedBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.bed",
           },
           {
-            src: balconyBrown,
+            src: icons.balconyBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.balcony",
           },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown  ,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.condition",
           },
           {
-            src: tvBrown,
+            src: icons.tvBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.tv",
           },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.standartBigBedBalcony.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
           {
-            src: shower,
+            src: icons.shower,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.shower",
           },
           {
-            src: wc,
+            src: icons.wc,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.wc",
           },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.hairDryer",
           },
           {
-            src: towels,
+            src: icons.towels,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.towels",
           },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.standartBigBedBalcony.icons.bathRoom.cosmetic",
           },
         ],
@@ -794,14 +666,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartBigBedBalcony.suggestion.0.title",
           size: "roomsState.standartBigBedBalcony.suggestion.0.size",
           desc: "roomsState.standartBigBedBalcony.suggestion.0.desc",
-          img: standartBigBedPreview,
+          img: imgs.standartBigBedPreview,
           type: "standart-big-bed",
         },
         {
           title: "roomsState.standartBigBedBalcony.suggestion.1.title",
           size: "roomsState.standartBigBedBalcony.suggestion.1.size",
           desc: "roomsState.standartBigBedBalcony.suggestion.1.desc",
-          img: luxTwoRoomsPreview,
+          img: imgs.luxTwoRoomsPreview,
           type: "lux-two-rooms",
         },
       ],
@@ -815,7 +687,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2+2",
       isLux: false,
       header: {
-        previewImage: semiLuxPreview,
+        previewImage: imgs.semiLuxPreview,
         title: "roomsState.semiLux.header.title",
         description: "roomsState.semiLux.header.description",
         count: 6,
@@ -829,78 +701,78 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[0%_65%]",
         swiperImages: [
-          semiLuxPreview,
-          semiLuxBedroomScd,
-          semiLuxBathroomFst,
-          semiLuxBathroomScd,
+          imgs.semiLuxPreview,
+          imgs.semiLuxBedroomScd,
+          imgs.semiLuxBathroomFst,
+          imgs.semiLuxBathroomScd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[65%_20%]",
         ammetiveImgStyleScd: "",
         ammentiesImages: [
-          semiLuxBedroomScd,
-          ammenties,
-          semiLuxBathroomFst,
-          semiLuxBathroomScd,
+          imgs.semiLuxBedroomScd,
+          imgs.ammenties,
+          imgs.semiLuxBathroomFst,
+          imgs.semiLuxBathroomScd,
         ],
         bedText: "roomsState.semiLux.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: bedBrown,
+            src: icons.bedBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.bed",
           },
           {
-            src: sofaBrown,
+            src: icons.sofaBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.sofa",
           },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.condition",
           },
-          { src: tvBrown, text: "roomsState.semiLux.icons.ammentiesInRoom.tv" },
+          { src: icons.tvBrown, text: "roomsState.semiLux.icons.ammentiesInRoom.tv" },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
-          { src: shower, text: "roomsState.semiLux.icons.bathRoom.shower" },
-          { src: wc, text: "roomsState.semiLux.icons.bathRoom.wc" },
+          { src: icons.shower, text: "roomsState.semiLux.icons.bathRoom.shower" },
+          { src: icons.wc, text: "roomsState.semiLux.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.semiLux.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.semiLux.icons.bathRoom.hairDryer",
           },
-          { src: towels, text: "roomsState.semiLux.icons.bathRoom.towels" },
-          { src: bathRobe, text: "roomsState.semiLux.icons.bathRoom.bathRobe" },
-          { src: slippers, text: "roomsState.semiLux.icons.bathRoom.slippers" },
-          { src: cosmetic, text: "roomsState.semiLux.icons.bathRoom.cosmetic" },
+          { src: icons.towels, text: "roomsState.semiLux.icons.bathRoom.towels" },
+          { src: icons.bathRobe, text: "roomsState.semiLux.icons.bathRoom.bathRobe" },
+          { src: icons.slippers, text: "roomsState.semiLux.icons.bathRoom.slippers" },
+          { src: icons.cosmetic, text: "roomsState.semiLux.icons.bathRoom.cosmetic" },
         ],
       },
       suggestion: [
@@ -908,14 +780,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.semiLux.suggestion.0.title",
           size: "roomsState.semiLux.suggestion.0.size",
           desc: "roomsState.semiLux.suggestion.0.desc",
-          img: luxElegantPreview,
+          img: imgs.luxElegantPreview,
           type: "lux-elegant",
         },
         {
           title: "roomsState.semiLux.suggestion.1.title",
           size: "roomsState.semiLux.suggestion.1.size",
           desc: "roomsState.semiLux.suggestion.1.desc",
-          img: luxTwoRoomsPreview,
+          img: imgs.luxTwoRoomsPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -928,7 +800,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2",
       isLux: false,
       header: {
-        previewImage: standartTwoBedAndBalconyPreview,
+        previewImage: imgs.standartTwoBedAndBalconyPreview,
         title: "roomsState.standartTwoBedBalcony.header.title",
         size: `roomsState.standartTwoBedBalcony.header.size`,
         description: "roomsState.standartTwoBedBalcony.header.description",
@@ -943,97 +815,97 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[0%_100%]",
         swiperImages: [
-          standartTwoBedAndBalconyBedroomScd,
-          standartTwoBedAndBalconyBedroomFst,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartTwoBedAndBalconyBedroomScd,
+          imgs.standartTwoBedAndBalconyBedroomFst,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[65%_20%]",
         ammetiveImgStyleScd: "",
         ammentiesImages: [
-          standartBigBedAndBalconyBedroomScd,
-          ammenties,
-          standartBathRoomFst,
-          standartBathRoomSnd,
+          imgs.standartBigBedAndBalconyBedroomScd,
+          imgs.ammenties,
+          imgs.standartBathRoomFst,
+          imgs.standartBathRoomSnd,
         ],
         bedText: "roomsState.standartTwoBedBalcony.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: bedBrown,
+            src: icons.bedBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.bed",
           },
           {
-            src: balconyBrown,
+            src: icons.balconyBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.balcony",
           },
           {
-            src: cabinetBrown,
+            src: icons.cabinetBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.table",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.carpet",
           },
           {
-            src: minibarBrown,
+            src: icons.minibarBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.minibar",
           },
           {
-            src: safeBrown,
+            src: icons.safeBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.safe",
           },
           {
-            src: kettleBrown,
+            src: icons.kettleBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.kettle",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.condition",
           },
           {
-            src: tvBrown,
+            src: icons.tvBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.tv",
           },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.standartTwoBedBalcony.icons.ammentiesInRoom.phone",
           },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
         ],
         bathRoom: [
           {
-            src: shower,
+            src: icons.shower,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.shower",
           },
           {
-            src: wc,
+            src: icons.wc,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.wc",
           },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.hairDryer",
           },
           {
-            src: towels,
+            src: icons.towels,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.towels",
           },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.standartTwoBedBalcony.icons.bathRoom.cosmetic",
           },
         ],
@@ -1043,14 +915,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartTwoBedBalcony.suggestion.0title",
           size: "roomsState.standartTwoBedBalcony.suggestion.0.size",
           desc: "roomsState.standartTwoBedBalcony.suggestion.0.desc",
-          img: semiLuxPreview,
+          img: imgs.semiLuxPreview,
           type: "semi-lux",
         },
         {
           title: "roomsState.standartTwoBedBalcony.suggestion.1.title",
           size: "roomsState.standartTwoBedBalcony.suggestion.1.size",
           desc: "roomsState.standartTwoBedBalcony.suggestion.1.desc",
-          img: luxTwoRoomsPreview,
+          img: imgs.luxTwoRoomsPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -1064,7 +936,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2+2",
       isLux: true,
       header: {
-        previewImage: luxTwoRoomsPreview,
+        previewImage: imgs.luxTwoRoomsPreview,
         title: "roomsState.luxTwoRooms.header.title",
         size: `roomsState.luxTwoRooms.header.size`,
         description: "roomsState.luxTwoRooms.header.description",
@@ -1079,121 +951,121 @@ export const initialRoomsState: RoomsState = {
         rooms: 2,
         swiperImagesStyle: "object-[0%_70%]",
         swiperImages: [
-          luxTwoRoomsLivingRoomTrd,
-          luxTwoRoomsLivingRoomFst,
-          luxTwoRoomsLivingRoomScd,
-          luxTwoRoomsBedroomFst,
-          luxTwoRoomsBedroomScd,
+          imgs.luxTwoRoomsLivingRoomTrd,
+          imgs.luxTwoRoomsLivingRoomFst,
+          imgs.luxTwoRoomsLivingRoomScd,
+          imgs.luxTwoRoomsBedroomFst,
+          imgs.luxTwoRoomsBedroomScd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "",
         ammetiveImgStyleScd: "object-[0%_100%]",
         ammentiesImages: [
-          luxTwoRoomsLivingRoomFst,
-          luxTwoRoomsLivingRoomScd,
-          luxTwoRoomsBedroomFst,
-          luxTwoRoomsBedroomScd,
-          luxTwoRoomsBathRoomFst,
-          luxTwoRoomsBathRoomScd,
+          imgs.luxTwoRoomsLivingRoomFst,
+          imgs.luxTwoRoomsLivingRoomScd,
+          imgs.luxTwoRoomsBedroomFst,
+          imgs.luxTwoRoomsBedroomScd,
+          imgs.luxTwoRoomsBathRoomFst,
+          imgs.luxTwoRoomsBathRoomScd,
         ],
         bedText: "roomsState.luxTwoRooms.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: sofa,
+            src: icons.sofa,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.sofa",
           },
           {
-            src: armChair,
+            src: icons.armChair,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.armChair",
           },
           {
-            src: balcony,
+            src: icons.balcony,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.balcony",
           },
           {
-            src: carpet,
+            src: icons.carpet,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.carpet",
           },
           {
-            src: wardrobe,
+            src: icons.wardrobe,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.wardrobe",
           },
           {
-            src: cabinet,
+            src: icons.cabinet,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.table",
           },
           {
-            src: airCondition,
+            src: icons.airCondition,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.condition",
           },
-          { src: TV, text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.tv" },
+          { src: icons.tv, text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.tv" },
           {
-            src: minibar,
+            src: icons.minibar,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.minibar",
           },
           {
-            src: kettle,
+            src: icons.kettle,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.kettle",
           },
           {
-            src: teakit,
+            src: icons.teakit,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.teakit",
           },
           {
-            src: phone,
+            src: icons.phone,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.phone",
           },
-          { src: wifi, text: "WI-fi" },
+          { src: icons.wifi, text: "WI-fi" },
           {
-            src: safe,
+            src: icons.safe,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.safe",
           },
         ],
         bedRoom: [
-          { src: bedBrown, text: "roomsState.luxTwoRooms.icons.bedRoom.bed" },
+          { src: icons.bedBrown, text: "roomsState.luxTwoRooms.icons.bedRoom.bed" },
           {
-            src: balconyBrown,
+            src: icons.balconyBrown,
             text: "roomsState.luxTwoRooms.icons.bedRoom.balcony",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.luxTwoRooms.icons.bedRoom.carpet",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.luxTwoRooms.icons.bedRoom.condition",
           },
-          { src: tvBrown, text: "roomsState.luxTwoRooms.icons.bedRoom.tv" },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.tvBrown, text: "roomsState.luxTwoRooms.icons.bedRoom.tv" },
+          { src: icons.wifiBrown, text: "WI-fi" },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.luxTwoRooms.icons.bedRoom.phone",
           },
         ],
         bathRoom: [
-          { src: shower, text: "roomsState.luxTwoRooms.icons.bathRoom.shower" },
-          { src: wc, text: "roomsState.luxTwoRooms.icons.bathRoom.wc" },
+          { src: icons.shower, text: "roomsState.luxTwoRooms.icons.bathRoom.shower" },
+          { src: icons.wc, text: "roomsState.luxTwoRooms.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.luxTwoRooms.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.luxTwoRooms.icons.bathRoom.hairDryer",
           },
-          { src: towels, text: "roomsState.luxTwoRooms.icons.bathRoom.towels" },
+          { src: icons.towels, text: "roomsState.luxTwoRooms.icons.bathRoom.towels" },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.luxTwoRooms.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.luxTwoRooms.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.luxTwoRooms.icons.bathRoom.cosmetic",
           },
         ],
@@ -1203,14 +1075,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.luxTwoRooms.suggestion.0.title",
           size: "roomsState.luxTwoRooms.suggestion.0.size",
           desc: "roomsState.luxTwoRooms.suggestion.0.desc",
-          img: semiLuxPreview,
+          img: imgs.semiLuxPreview,
           type: "semi-lux",
         },
         {
           title: "roomsState.luxTwoRooms.suggestion.1.title",
           size: "roomsState.luxTwoRooms.suggestion.1.size",
           desc: "roomsState.luxTwoRooms.suggestion.1.desc",
-          img: luxImperiumPreview,
+          img: imgs.luxImperiumPreview,
           type: "standart-big-bed-balcony",
         },
       ],
@@ -1223,7 +1095,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2",
       isLux: true,
       header: {
-        previewImage: luxImperiumPreview,
+        previewImage: imgs.luxImperiumPreview,
         title: "roomsState.luxImperial.header.title",
         size: `roomsState.luxImperial.header.size`,
         description: "roomsState.luxImperial.header.description",
@@ -1238,120 +1110,120 @@ export const initialRoomsState: RoomsState = {
         rooms: 2,
         swiperImagesStyle: "object-[0%_70%]",
         swiperImages: [
-          luxImperiumlivigRoomFst,
-          luxImperiumlivigRoomScd,
-          luxTwoRoomsBedroomFst,
-          luxTwoRoomsBedroomScd,
+          imgs.luxImperiumlivigRoomFst,
+          imgs.luxImperiumlivigRoomScd,
+          imgs.luxTwoRoomsBedroomFst,
+          imgs.luxTwoRoomsBedroomScd,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[70%_100%]",
         ammetiveImgStyleScd: "object-[70%_100%]",
         ammentiesImages: [
-          luxImperiumlivigRoomScd,
-          luxImperiumlivigRoomFst,
-          luxImperiumBedRoomFst,
-          luxImperiumBedRoomScd,
-          luxImperiumBathRoomFst,
-          luxImperiumBathRoomScd,
+          imgs.luxImperiumlivigRoomScd,
+          imgs.luxImperiumlivigRoomFst,
+          imgs.luxImperiumBedRoomFst,
+          imgs.luxImperiumBedRoomScd,
+          imgs.luxImperiumBathRoomFst,
+          imgs.luxImperiumBathRoomScd,
         ],
         bedText: "roomsState.luxImperial.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: sofa,
+            src: icons.sofa,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.sofa",
           },
           {
-            src: armChair,
+            src: icons.armChair,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.armChair",
           },
           {
-            src: balcony,
+            src: icons.balcony,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.balcony",
           },
           {
-            src: carpet,
+            src: icons.carpet,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.carpet",
           },
           {
-            src: wardrobe,
+            src: icons.wardrobe,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.wardrobe",
           },
           {
-            src: cabinet,
+            src: icons.cabinet,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.table",
           },
           {
-            src: airCondition,
+            src: icons.airCondition,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.condition",
           },
-          { src: TV, text: "roomsState.luxImperial.icons.ammentiesInRoom.tv" },
+          { src: icons.tv, text: "roomsState.luxImperial.icons.ammentiesInRoom.tv" },
           {
-            src: minibar,
+            src: icons.minibar,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.minibar",
           },
           {
-            src: kettle,
+            src: icons.kettle,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.kettle",
           },
           {
-            src: teakit,
+            src: icons.teakit,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.teakit",
           },
           {
-            src: phone,
+            src: icons.phone,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.phone",
           },
-          { src: wifi, text: "WI-fi" },
+          { src: icons.wifi, text: "WI-fi" },
           {
-            src: safe,
+            src: icons.safe,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.safe",
           },
         ],
         bedRoom: [
-          { src: bedBrown, text: "roomsState.luxImperial.icons.bedRoom.bed" },
+          { src: icons.bedBrown, text: "roomsState.luxImperial.icons.bedRoom.bed" },
           {
-            src: balconyBrown,
+            src: icons.balconyBrown,
             text: "roomsState.luxImperial.icons.bedRoom.balcony",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,  
             text: "roomsState.luxImperial.icons.bedRoom.carpet",
           },
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.luxImperial.icons.bedRoom.condition",
           },
-          { src: tvBrown, text: "roomsState.luxImperial.icons.bedRoom.tv" },
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.tvBrown, text: "roomsState.luxImperial.icons.bedRoom.tv" },
+          { src: icons.wifiBrown, text: "WI-fi" },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.luxImperial.icons.bedRoom.phone",
           },
         ],
         bathRoom: [
-          { src: shower, text: "roomsState.luxImperial.icons.bathRoom.shower" },
-          { src: wc, text: "roomsState.luxImperial.icons.bathRoom.wc" },
+          { src: icons.shower, text: "roomsState.luxImperial.icons.bathRoom.shower" },
+          { src: icons.wc, text: "roomsState.luxImperial.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.luxImperial.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.luxImperial.icons.bathRoom.hairDryer",
           },
-          { src: towels, text: "roomsState.luxImperial.icons.bathRoom.towels" },
+          { src: icons.towels, text: "roomsState.luxImperial.icons.bathRoom.towels" },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.luxImperial.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.luxImperial.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.luxImperial.icons.bathRoom.cosmetic",
           },
         ],
@@ -1361,14 +1233,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.luxImperial.suggestion.0.title",
           size: "roomsState.luxImperial.suggestion.0.size",
           desc: "roomsState.luxImperial.suggestion.0.desc",
-          img: luxElegantPreview,
+          img: imgs.luxElegantPreview,
           type: "lux-elegant",
         },
         {
           title: "roomsState.luxImperial.suggestion.1.title",
           size: "roomsState.luxImperial.suggestion.1.size",
           desc: "roomsState.luxImperial.suggestion.1.desc",
-          img: luxTwoRoomsPreview,
+          img: imgs.luxTwoRoomsPreview,
           type: "lux-two-rooms",
         },
       ],
@@ -1382,7 +1254,7 @@ export const initialRoomsState: RoomsState = {
       guests: "2",
       isLux: true,
       header: {
-        previewImage: luxElegantPreview,
+        previewImage: imgs.luxElegantPreview,
         title: "roomsState.luxElegant.header.title",
         size: `roomsState.luxElegant.header.size`,
         description: "roomsState.luxElegant.header.description",
@@ -1397,116 +1269,116 @@ export const initialRoomsState: RoomsState = {
         rooms: 2,
         swiperImagesStyle: "object-[0%_70%]",
         swiperImages: [
-          luxElegantBedRoomScd,
-          luxElegantBedRoomFst,
-          luxElegantBathRoomScd,
-          luxElegantBathRoomFst,
+          imgs.luxElegantBedRoomScd,
+          imgs.luxElegantBedRoomFst,
+          imgs.luxElegantBathRoomScd,
+          imgs.luxElegantBathRoomFst,
         ],
         isBalcony: false,
         ammetiveImgStyleFst: "object-[70%_100%]",
         ammetiveImgStyleScd: "object-[70%_100%]",
         ammentiesImages: [
-          luxElegantLivingRoomFst,
-          luxElegantLivingRoomScd,
-          luxElegantBedRoomFst,
-          luxElegantBedRoomScd,
-          luxElegantBathRoomFst,
-          luxElegantBathRoomScd,
+          imgs.luxElegantLivingRoomFst,
+          imgs.luxElegantLivingRoomScd,
+          imgs.luxElegantBedRoomFst,
+          imgs.luxElegantBedRoomScd,
+          imgs.luxElegantBathRoomFst,
+          imgs.luxElegantBathRoomScd,
         ],
         bedText: "roomsState.luxElegant.about.bedText",
       },
       icons: {
         ammentiesInRoom: [
           {
-            src: sofa,
+            src: icons.sofa,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.sofa",
           },
           {
-            src: balcony,
+            src: icons.balcony,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.balcony",
           },
           {
-            src: carpet,
+            src: icons.carpet,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.carpet",
           },
           {
-            src: airCondition,
+            src: icons.airCondition,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.condition",
           },
 
-          { src: TV, text: "roomsState.luxElegant.icons.ammentiesInRoom.tv" },
+          { src: icons.tv, text: "roomsState.luxElegant.icons.ammentiesInRoom.tv" },
           {
-            src: minibar,
+            src: icons.minibar,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.minibar",
           },
           {
-            src: kettle,
+            src: icons.kettle,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.kettle",
           },
           {
-            src: teakit,
+            src: icons.teakit,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.teakit",
           },
           {
-            src: phone,
+            src: icons.phone,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.phone",
           },
-          { src: wifi, text: "WI-fi" },
+          { src: icons.wifi, text: "WI-fi" },
           {
-            src: safe,
+            src: icons.safe,
             text: "roomsState.luxElegant.icons.ammentiesInRoom.safe",
           },
         ],
         bedRoom: [
-          { src: bedBrown, text: "roomsState.luxElegant.icons.bedRoom.bed" },
+          { src: icons.bedBrown, text: "roomsState.luxElegant.icons.bedRoom.bed" },
           {
-            src: balconyBrown,
+            src: icons.balconyBrown,
             text: "roomsState.luxElegant.icons.bedRoom.balcony",
           },
           {
-            src: carpetBrown,
+            src: icons.carpetBrown,
             text: "roomsState.luxElegant.icons.bedRoom.carpet",
           },
 
           {
-            src: wardrobeBrown,
+            src: icons.wardrobeBrown,
             text: "roomsState.luxElegant.icons.bedRoom.wardrobe",
           },
 
           {
-            src: conditionBrown,
+            src: icons.conditionBrown,
             text: "roomsState.luxElegant.icons.bedRoom.condition",
           },
-          { src: tvBrown, text: "roomsState.luxElegant.icons.bedRoom.tv" },
+          { src: icons.tvBrown, text: "roomsState.luxElegant.icons.bedRoom.tv" },
 
-          { src: wifiBrown, text: "WI-fi" },
+          { src: icons.wifiBrown, text: "WI-fi" },
           {
-            src: phoneBrown,
+            src: icons.phoneBrown,
             text: "roomsState.luxElegant.icons.bedRoom.phone",
           },
         ],
         bathRoom: [
-          { src: shower, text: "roomsState.luxElegant.icons.bathRoom.shower" },
-          { src: wc, text: "roomsState.luxElegant.icons.bathRoom.wc" },
+          { src: icons.shower, text: "roomsState.luxElegant.icons.bathRoom.shower" },
+          { src: icons.wc, text: "roomsState.luxElegant.icons.bathRoom.wc" },
           {
-            src: shovergigi,
+            src: icons.shovergigi,
             text: "roomsState.luxElegant.icons.bathRoom.showerGigi",
           },
           {
-            src: hairDryer,
+            src: icons.hairDryer,
             text: "roomsState.luxElegant.icons.bathRoom.hairDryer",
           },
-          { src: towels, text: "roomsState.luxElegant.icons.bathRoom.towels" },
+          { src: icons.towels, text: "roomsState.luxElegant.icons.bathRoom.towels" },
           {
-            src: bathRobe,
+            src: icons.bathRobe,
             text: "roomsState.luxElegant.icons.bathRoom.bathRobe",
           },
           {
-            src: slippers,
+            src: icons.slippers,
             text: "roomsState.luxElegant.icons.bathRoom.slippers",
           },
           {
-            src: cosmetic,
+            src: icons.cosmetic,
             text: "roomsState.luxElegant.icons.bathRoom.cosmetic",
           },
         ],
@@ -1516,14 +1388,14 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.luxElegant.suggestion.0.title",
           size: "roomsState.luxElegant.suggestion.0.size",
           desc: "roomsState.luxElegant.suggestion.0.desc",
-          img: luxImperiumPreview,
+          img: imgs.luxImperiumPreview,
           type: "standart-imperial",
         },
         {
           title: "roomsState.luxElegant.suggestion.1.title",
           size: "roomsState.luxElegant.suggestion.1.size",
           desc: "roomsState.luxElegant.suggestion.1.desc",
-          img: luxTwoRoomsPreview,
+          img: imgs.luxTwoRoomsPreview,
           type: "lux-two-rooms",
         },
       ],
