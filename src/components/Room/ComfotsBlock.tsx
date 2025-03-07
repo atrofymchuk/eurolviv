@@ -104,7 +104,9 @@ export const ComfortsBlock = ({
                         sm:w-[18px] sm:h-[18px] 
                         md:w-[20px] md:h-[20px] 
                         lg:w-[20px] lg:h-[20px] 
-                        xl:w-[28px] xl:h-[28px]"
+                        xl:w-[28px] xl:h-[28px]
+                        2xl:w-[32px] 2xl:h-[32px]
+                        "
                       />
                     </InViewWrapper>
                     <p
