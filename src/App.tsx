@@ -1,18 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
-import { About } from "./pages/About";
-import { Home } from "./pages/Home";
 import Footer from "./components/Footer/Footer";
-import { Contacts } from "./pages/Contacts";
-import { Rooms } from "./pages/Rooms";
 import { Room } from "./pages/Room";
-import { SpecialOffers } from "./pages/SpecialOffers";
-import { ConferenceService } from "./pages/ConferenceService";
-import { Restaurant } from "./pages/Restaurant";
-import { Terrase } from "./pages/Terrase";
 import BaseModal from "./components/Modals/BaseModal";
 import './i18n';
+import { InfinityScrollPage } from "./pages/InfinityScrollPage";
 
 function App() {
 
@@ -21,16 +14,16 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/rooms" element={<Rooms />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
+          <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />
+          <Route path="/" element={<InfinityScrollPage pageKey="home" />} />
           <Route path="/rooms/:roomType" element={<Room />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/conference-service" element={<ConferenceService />} />
-          <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/special-offers" element={<SpecialOffers />} />
-          <Route path="/special-offers/:offer" element={<SpecialOffers />} />
-          <Route path="/terrase" element={<Terrase />} />
+          <Route path="/contacts" element={<InfinityScrollPage pageKey="contacts" />} />
+          <Route path="/conference-service" element={<InfinityScrollPage pageKey="conference" />} />
+          <Route path="/restaurant" element={<InfinityScrollPage pageKey="restaurant" />} />
+          <Route path="/special-offers" element={<InfinityScrollPage pageKey="specialOffers" />} />
+          <Route path="/special-offers/:offer" element={<InfinityScrollPage pageKey="specialOffers" />} />
+          <Route path="/terrase" element={<InfinityScrollPage pageKey="terrase" />} />
         </Routes>
         <Footer />
         <BaseModal />
