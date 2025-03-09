@@ -20,7 +20,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
         <div
           className="grid  
           grid-cols-1 
-          md:grid-cols-[35.65%_30.63%_33.73%]
+          md:grid-cols-[35.65%_29.3%_33.73%]  
           lg:items-center lg:justify-center 
           border-x border-[#C7C7C7]"
         >
@@ -69,7 +69,7 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
                   leading-[104%]
                   mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]"
                 >
-                  {t("room.moreInfo.title2")}
+                  {t("room.moreInfo.title1")}
                 </h1>
 
                 <ul>
@@ -115,10 +115,10 @@ export const MoreInfo = ({ isShowAdditionalPlace }: MoreInfoToProps) => {
               <h1
                 className={`${isShowAdditionalPlace ? "block" : "hidden "} 
                 uppercase text-white font-cofo
-                text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]  xl:text-[48px] leading-[104%]
+                text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]  xl:text-[44px] leading-[104%]
                 mb-6 sm:mb-8 md:mb-10 lg:mb-[51px]`}
               >
-                {t("room.moreInfo.title")}
+                {t("room.moreInfo.title2")}
               </h1>
 
               <ul>

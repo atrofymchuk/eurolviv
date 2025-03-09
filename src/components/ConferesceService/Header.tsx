@@ -35,7 +35,7 @@ export const Header = () => {
           </span>
         </h4>
         <h1
-          className="font-cofo xl:text-[183px] uppercase text-[64px] font-normal z-20  xl:leading-[146.4px] lg:w-[1523px]
+          className="font-cofo xl:text-[183px] uppercase text-[48px] font-normal z-20  xl:leading-[146.4px] lg:w-[1523px]
         leading-[52.13px] tracking-[-7%] text-center underline decoration-transparent "
         >
           {t("conferenceService.header.title")}

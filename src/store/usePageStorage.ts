@@ -7,10 +7,9 @@ import { Concepts } from "../components/About/Concepts";
 import { WhereWeAre } from "../components/About/WhereWeAre";
 import { Rewies } from "../components/About/Reviews";
 
-import {Header as HeaderSpecialOffers} from "../components/SpecialOffers/Header"
-import {Cards} from "../components/SpecialOffers/Cards"
+import { Header as HeaderSpecialOffers } from "../components/SpecialOffers/Header"
+import { Cards } from "../components/SpecialOffers/Cards"
 import SpecialOffersModal from "../components/Modals/SpecialOfferModal"
-
 
 import { Header as ContactsHeader } from "../components/Contacts/Header";
 import { Info } from "../components/Contacts/Info";

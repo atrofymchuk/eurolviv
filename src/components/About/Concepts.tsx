@@ -25,7 +25,7 @@ export const Concepts = () => {
         {concepts.map(({ title, img, alt, text }, index) => (
           <div
             key={index}
-            className={`border border-[#C7C7C7] 
+            className={`border  border-[#C7C7C7] 
               ${
                 index === concepts.length - 2
                   ? "md:border-e-0 xl:border-e md:border-b"
@@ -35,7 +35,7 @@ export const Concepts = () => {
                 index === 0
                   ? "xl:border-l md:border-e-0 md:border-b-0 xl:border-r xl:border-b"
                   : "xl:border-l-0 xl:border-t border-t-0 md:border-t md:border-b-0 xl:border-b "
-              }`}
+              }${index === concepts.length - 1 ? "border-b-0 md:border-b" : ""}`}
           >
             <div className="text-center flex flex-col items-center px-6 py-8 xl:h-[579px] h-[469px]">
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">

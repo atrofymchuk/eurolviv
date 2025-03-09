@@ -32,7 +32,7 @@ export const ConferenceService = () => {
           <div className=" text-center flex items-center justify-center mb-4">
           <Link
             to="/conference-service"
-            className="w-fit py-[13px] px-[16.5px] bg-[#8c331b] block    hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1"
+            className="w-fit md:py-[13px] md:px-[16.5px] bg-[#8c331b] block px-5 py-2   hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1"
           >
             {t("buttons.viewHalls")}
           </Link>

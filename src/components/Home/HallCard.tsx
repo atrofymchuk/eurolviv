@@ -17,7 +17,7 @@ type HallCardProps = {
 export const HallCard = ({ hall, index }: HallCardProps) => {
   const {t} = useTranslation()
   return <>
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full ">
       <InViewWrapper> 
         
       <img
@@ -30,7 +30,7 @@ export const HallCard = ({ hall, index }: HallCardProps) => {
         }`}
         />
         </InViewWrapper>
-      <h4 className="uppercase text-sm sm:text-xs md:text-[22px] lg:text-lg 2xl:text-[24px] leading-[28px] tracking-[-5%] text-center xl:mt-[25px] px-2 xl:mb-[16px] mt-[10px]">
+      <h4 className="uppercase text-[18px]  md:text-[22px] lg:text-lg 2xl:text-[24px] leading-[28px] tracking-[-5%] text-center xl:mt-[25px] px-2 xl:mb-[16px] mt-[10px]">
         {t(hall.title)} {t(hall.size)}
       </h4>
       <div className="flex flex-col items-center justify-center mb-2">
@@ -46,17 +46,18 @@ export const HallCard = ({ hall, index }: HallCardProps) => {
             вмістимість: {t(hall.capacity).slice(0, -2) + "."}
           </p>
         </div>
-      </div>
-      {index === 1 && (
+        {index === 1 && (
         <div className=" text-center flex items-center justify-center pt-[37px] relative">
           <Link
             to="/conference-service"
-            className="w-fit py-[13px] px-[16.5px] text-[#8c331b] block absolute top-[37px]  hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase"
+            className="w-fit md:py-[13px] md:px-[16.5px] px-5 py-2 text-[#8c331b] block md:absolute top-[37px]  hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase"
           >
             {t("buttons.details")}
           </Link>
         </div>
       )}
+      </div>
+      
     </div>
   </>
 }

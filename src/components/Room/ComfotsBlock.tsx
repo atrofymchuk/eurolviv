@@ -53,13 +53,14 @@ export const ComfortsBlock = memo(
 
     return (
       <div className={`${style.bgColor}`}>
-        <div className="container-fluid mx-auto max-w-[84.04%]">
+        <div className="flex flex-col justify-center items-center  w-full">
           <div
             className="grid 
             grid-cols-1 
-            md:grid-cols-[35.65%_30.63%_33.73%]  
+            md:grid-cols-[35.65%_29.3%_33.73%]  
             items-center justify-center 
             border-x border-[#C7C7C7]
+            w-[84.06%]
             shadow-[0px_-14px_61.3px_0px_#25252612]"
           >
             <div className="flex flex-col justify-center items-center md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:h-[825px]">
@@ -75,21 +76,21 @@ export const ComfortsBlock = memo(
                     <img
                       src={images[0]}
                       alt="room image"
-                      className={`2xl:w-[537px] 2xl:h-[512px] xl:w-[400px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[300px] md:h-[240px] w-[250px] lg:px-4 h-full object-cover ${imgStyle.ammentiesImageFst}`}
+                      className={`2xl:w-[537px] 2xl:h-[512px] xl:w-[360px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[300px] md:h-[240px] w-[250px]  h-full object-cover ${imgStyle.ammentiesImageFst}`}
                     />
                   </InViewWrapper>
                 </div>
               </div>
             </div>
             <div
-              className="lg:border-x border-[#C7C7C7] 
+              className="md:border-x border-[#C7C7C7]
               flex items-start justify-center 
               py-6 md:py-8 lg:py-0 h-full
               2xl:h-[825px]"
             >
               <div
-                className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full 
-                px-4 sm:px-6 lg:px-6 xl:ps-[36px]
+                className="w-[90%]   sm:w-[400px] md:w-[300px] lg:w-full 
+                  2xl:ps-[36px] xl:ps-[14px]
                 lg:pt-[200px] xl:pt-[120px] 2xl:pt-[210px] md:pt-[45px]"
               >
                 <ul className="space-y-2 sm:space-y-3 md:space-y-1 lg:space-y-2 xl:space-y-2">
@@ -100,23 +101,23 @@ export const ComfortsBlock = memo(
 
             <div
               className="flex flex-col items-center justify-center 
-              py-6 md:py-8 lg:py-0 md:px-3 lg:p-5 
+              py-6 md:py-8 lg:py-0 md:px-0 
               2xl:h-[825px]"
             >
               <div
-                className="sm:w-[400px] md:w-[400px] 
-                lg:h-[441px] lg:w-[390px]
+                className="sm:w-full
+                lg:h-[441px] lg:w-[390px] 
                 xl:h-[411px] xl:w-[390px] 
                 2xl:w-[497px] 2xl:h-[510px]
-                max-w-full
+                max-w-full p-2 md:p-0
                 lg:mt-[195px] xl:mt-[140px]  md:mt-[45px]"
               >
                 <InViewWrapper>
                   <img
                     src={images[1]}
                     alt="room image"
-                    className={`hidden md:block 
-                    2xl:w-[537px] 2xl:h-[512px] xl:w-[400px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[300px] md:h-[240px] w-[250px] object-cover
+                    className={`hidden md:block mx-auto
+                    2xl:w-[537px] 2xl:h-[512px] xl:w-[340px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[250px] md:h-[240px] w-[250px] object-cover
                     ${imgStyle.ammentiesImageScd}`}
                   />
                   <img

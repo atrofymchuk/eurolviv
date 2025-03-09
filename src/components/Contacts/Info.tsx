@@ -63,7 +63,7 @@ export const Info = () => {
 
           <OurContactsWithMap />
           <div className="border-e border-[#C7C7C7] flex flex-col h-full md:text-start  text-center ">
-            <div className="xl:ps-[95px] md:ps-[40px] lg:pt-[58px] pt-[43px] flex-1 ">
+            <div className="xl:ps-[95px] md:ps-[40px] lg:pt-[58px] pt-[43px] flex-1 mx-[30px] md:mx-0">
               <h1
                 className="font-cofo uppercase 
               leading-[102%] lg:tracking-[-0.04em]

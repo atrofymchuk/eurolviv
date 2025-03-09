@@ -104,7 +104,7 @@ export  { default as aboutImageFst} from "../assets/Restaurant/about1.webp";
 export  { default as aboutImageScd} from "../assets/Restaurant/about2.webp";
 export  { default as aboutImageTrd} from "../assets/Restaurant/about3.webp";
 
-//Conference page0
+//Conference page
 export  { default as food} from "../assets/ConferenceService/Menu/food.webp";
 export  { default as sandwich} from "../assets/ConferenceService/Menu/sandwich.webp";
 export  { default as coffee} from "../assets/ConferenceService/Menu/coffee.webp";

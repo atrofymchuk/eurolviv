@@ -47,10 +47,10 @@ export const RoofService = () => {
                 <h1
                   className={`${
                     index === 2
-                      ? "lg:text-[198px] max-w-[900px] text-[120px] md:text-[100px] sm:text-[80px] "
-                      : "lg:text-[100px] max-w-[722px] text-[90px] md:text-[70px] sm:text-[50px] "
+                      ? "lg:text-[198px] max-w-[900px] text-[76px] md:text-[100px] sm:text-[80px] "
+                      : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] "
                   } 
-  text-[32px] text-center uppercase leading-[104%] tracking-[-5%] 
+ text-center uppercase leading-[104%] tracking-[-5%] 
       w-full lg:leading-[81%]`}
                 >
                   {t(item.title)}

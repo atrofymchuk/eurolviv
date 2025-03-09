@@ -32,7 +32,7 @@ export const About = memo(({
 
   return (
     <div className="   ">
-      <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[40px_295px_40px] items-center justify-center 2xl:items-start 2xl:justify-normal">
+      <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[10.67%_78.67%_10.67%] items-center justify-center 2xl:items-start 2xl:justify-normal max-w-[84.06%] md:max-w-full mx-auto md:mx-0">
         <div className="2xl:h-[109px] border-x 2xl:border-x-0 border-b 2xl:border-b-0 2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-1 2xl:order-none"></div>
         <div className="2xl:h-[109px] border-x 2xl:border-x-0 border-b 2xl:border-b-0  2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-3 2xl:order-none"></div>
         <div className="2xl:h-[109px] border-x 2xl:border-x-0  2xl:border-e  w-full h-[109px] border-[#C7C7C7] order-5 2xl:order-none"></div>
@@ -87,12 +87,13 @@ export const About = memo(({
       </div>
 
       <div
-        className="grid 
+        className="grid  
+        max-w-[84.06%] md:max-w-full  mx-auto md:mx-0
         grid-cols-1 sm:grid-cols-1 md:grid-cols-[63.13%_36.88%]
 
         h-auto"
       >
-        <div className="w-full border-[#C7C7C7] border-t xl:border-e">
+        <div className="w-full border-[#C7C7C7] border-t ">
           <SliderAbout
             imageSlider={swiperImages}
             swiperImagesStyle={swiperImagesStyle}
@@ -101,15 +102,17 @@ export const About = memo(({
 
         <div
           className="flex flex-col xl:items-center justify-center 
-           
-          border-t  border-[#C7C7C7]  border-e 
-          py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16"
+        
+          border-t  border-[#C7C7C7]  border-e md:border-e border-x md:border-x-0  
+          py-6 sm:py-8 md:py-0 
+          "
         >
           <div
             className="flex flex-col 
             gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-[24px]
-            w-[280px] sm:w-[300px] md:w-[1fr] lg:w-[1fr] xl:w-[1fr] 
-            px-4 sm:px-6 md:px-4 lg:px-10 xl:px-0 "
+             md:w-[1fr] lg:w-[1fr] xl:w-[1fr] 
+
+            px-4 sm:px-6 md:px-4 lg:px-10  "
           >
             <p
               className="text-[12px] sm:text-[14px] md:text-[12px] lg:text-[16px] xl:text-[20px]
@@ -149,14 +152,16 @@ export const About = memo(({
       </div>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="grid w-full  max-w-[84.04%] 
+          className="md:grid w-full  max-w-[84.06%] 
           grid-cols-1 
-          md:grid-cols-[35.65%_30.63%_33.73%]
-          border-s border-[#C7C7C7]"
+          md:grid-cols-[36.25%_29.35%_33.73%]
+          border-s border-[#C7C7C7]
+          hidden 
+          "
         >
           <div className="h-[84px]  w-full  border-[#C7C7C7]"></div>
-          <div className="h-[84px] border-x w-full  hidden lg:flex border-[#C7C7C7]"></div>
-          <div className="h-[84px]  border-e  border-[#C7C7C7] w-full   "></div>
+          <div className="h-[84px] border-x w-full   border-[#C7C7C7]"></div>
+          <div className="h-[84px]    border-[#C7C7C7] w-full   "></div>
         </div>
       </div>
     </div>

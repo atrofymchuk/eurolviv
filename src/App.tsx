@@ -6,6 +6,7 @@ import { Room } from "./pages/Room";
 import BaseModal from "./components/Modals/BaseModal";
 import './i18n';
 import { InfinityScrollPage } from "./pages/InfinityScrollPage";
+import { ConferenceService } from "./pages/ConferenceService";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<InfinityScrollPage pageKey="home" />} />
           <Route path="/rooms/:roomType" element={<Room />} />
           <Route path="/contacts" element={<InfinityScrollPage pageKey="contacts" />} />
-          <Route path="/conference-service" element={<InfinityScrollPage pageKey="conference" />} />
+          <Route path="/conference-service" element={<ConferenceService />} />
           <Route path="/restaurant" element={<InfinityScrollPage pageKey="restaurant" />} />
           <Route path="/special-offers" element={<InfinityScrollPage pageKey="specialOffers" />} />
           <Route path="/special-offers/:offer" element={<InfinityScrollPage pageKey="specialOffers" />} />

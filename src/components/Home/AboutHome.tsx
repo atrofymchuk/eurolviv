@@ -9,9 +9,9 @@ export const AboutHome = () => {
   
   return (
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">
-      <div className="grid md:grid-cols-[24.2%_34.7%_25.8%_15.3%] grid-cols-1     mx-0 w-full">
+      <div className="grid md:grid-cols-[24.2%_34.7%_25.8%_15.3%] grid-cols-[89.07%]  justify-center md:justify-stretch   mx-0 w-full">
         <div className="md:flex hidden border-[#C7C7C7]  border-b"></div>
-        <div className="md:border-x flex flex-col  xl:flex-row justify-around items-center space-y-2 2xl:space-y-0 xl:space-y-0 border-[#C7C7C7] 2xl:h-[168px] xl:h-[160px] order-5 md:order-none border-b">
+        <div className="md:border-x flex flex-col border-x  xl:flex-row justify-around items-center space-y-2 2xl:space-y-0 xl:space-y-0 border-[#C7C7C7] 2xl:h-[168px] xl:h-[160px] order-5 md:order-none border-b">
           <div className=" space-y-1 space-x-5 lg: flex flex-col md:flex-row xl:max-w-[430px]">
       
             <p className="text-sm sm:text-xs md:text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-2xl uppercase 2xl:w-[256px] xl:w-[240px] font-cofo font-medium 2xl:text-[16px]  text-[12px] leading-[104%]  tracking-[0%] p-2 lg:p-0">
@@ -23,7 +23,7 @@ export const AboutHome = () => {
           </div>
         </div>
 
-        <div className="border-[#C7C7C7] md:border-e flex  md:border-s-0 2xl:justify-start xl:justify-start justify-center items-center order-5 md:order-none border-b">
+        <div className="border-[#C7C7C7] md:border-e flex border-x md:border-x-0 md:border-s-0 2xl:justify-start xl:justify-start justify-center items-center order-5 md:order-none border-b">
           <div className=" ">
             <p className="text-sm sm:text-xs lg:text-[14px] xl:text-[16px] 2xl:text-2xl  uppercase 2xl:w-[210px] xl:w-[200px] font-cofo font-medium 2xl:text-[16px] text-[12px] leading-[104%]  tracking-[0%] 2xl:ms-[44px] xl:ms-[40px] md:text-[14px] p-2 lg:p-0">
             {t("home.about.aboutRooms.2")}
@@ -32,18 +32,18 @@ export const AboutHome = () => {
         </div>
         <div className="border-b border-[#C7C7C7] md:flex hidden"></div>
 
-        <div className="border-[#C7C7C7] md:border-e-0   order-1 md:order-none  2xl:border-e-0 xl:border-e-0 border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col items-center py-10">
+        <div className="border-[#C7C7C7] md:border-e-0 border-x md:border-x-0  order-1 md:order-none  2xl:border-e-0 xl:border-e-0 border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col items-center py-10">
           <p className="text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase 2xl:text-[24px] xl:text-[22px] sm:text-[28px] tracking-[-5%] font-medium 2xl:ps-[68px] xl:ps-[60px] lg:ps-[30px] 2xl:pt-[90px] xl:pt-[85px] text-[32px]">
             {t("home.about.title")}
           </p>
         </div>
 
-        <div className="md:border-x border-b md:border-b-0  border-[#C7C7C7]  flex flex-col  2xl:h-[307px] xl:h-[290px] order-1 md:order-none 2xl:pt-0 xl:pt-0 md:pt-10  pt-[15px]">
+        <div className="border-x border-b md:border-b-0   border-[#C7C7C7]  flex flex-col  2xl:h-[307px] xl:h-[290px] order-1 md:order-none 2xl:pt-0 xl:pt-0 md:pt-10  pt-[15px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-4 xl:pb-0">
-          <h1 className="whitespace-nowrap text-[32px] sm:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px] text-center md:text-start uppercase text-[#242425] leading-[0.81] tracking-tight">
+          <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px] text-center md:text-start uppercase text-[#242425] leading-[0.81] tracking-tight">
   {t("home.about.heading").split(" ").slice(0, -1).join(" ")}
   <br />
-  <span className="whitespace-nowrap">{t("home.about.heading").split(" ").slice(-1)}</span>
+  <span className="md:whitespace-nowrap">{t("home.about.heading").split(" ").slice(-1)}</span>
 </h1>
 
           </div>
@@ -52,7 +52,7 @@ export const AboutHome = () => {
           <h1 className="text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase w-fit 2xl:absolute xl:absolute 2xl:mt-[90px] xl:mt-[85px] left-[-10px] 2xl:text-[100px] xl:text-[90px] text-[32px] text-[#242425] leading-[81%] tracking-[-10%] 2xl:pb-0 xl:pb-0 lg:pb-0 pb-10 md:pt-10 2xl:pt-0 xl:pt-0 lg:text-[48px]"></h1>
         </div>
 
-        <div className=" 2xl:h-[720px] xl:h-[680px] border-[#C7C7C7] md:col-span-2 border-e order-4 md:order-none mt-4 md:mt-0">
+        <div className=" 2xl:h-[720px] xl:h-[680px] border-[#C7C7C7] md:col-span-2 border-e order-4 md:order-none ">
           <img
             src={ previewImg}
             alt=""
@@ -60,7 +60,7 @@ export const AboutHome = () => {
           />
         </div>
 
-        <div className="flex flex-row md:flex-col items-center justify-center md:justify-start md:border-e border-[#C7C7C7] order-3 md:order-none">
+        <div className="flex flex-row md:flex-col items-center justify-center md:justify-start border-x md:border-x-0 md:border-e border-[#C7C7C7] order-3 md:order-none">
   <div className=" sm:max-w-[500px]  lg:max-w-fit flex sm:flex-row flex-col md:flex-col items-center">
     <div className="flex flex-col 2xl:space-y-[17px] xl:space-y-[15px] space-y-3">
       <p className="text-sm sm:text-[16px] md:text-[12px] lg:text-[14px] xl:text uppercase 2xl:text-[20px] xl:text-[18px] 2xl:leading-[24px] xl:leading-[22px] font-cofo tracking-[-4%] 2xl:w-[400px] xl:w-[320px] 2xl:p-0 xl:p-0 px-3 text-[14px] font-normal text-[#444444]">

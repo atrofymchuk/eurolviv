@@ -33,7 +33,7 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
   const mixedReviews = useMemo(() => 
     reviews.ua.flatMap((review, index) => [review, reviews.abroad[index]].filter(Boolean)), 
     [reviews]
-  );
+  )
   
 
   return (

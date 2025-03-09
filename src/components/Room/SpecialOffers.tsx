@@ -11,7 +11,7 @@
 
     return (
       <div className="w-full h-[668px] sm:h-[720px]  lg:h-[1106px] md:h-[825px] xl:h-[1026px] flex justify-end items-center overflow-hidden flex-col">
-        <div className="container-fluid  max-w-[91%] px-4 sm:px-6 md:px-6 lg:px-6 2xl:px-0">
+        <div className="container-fluid  max-w-[84.06%] px-4 sm:px-6 md:px-6 lg:px-6 2xl:px-0">
           <div  
             className={`border-s border-[#C7C7C7] h-full w-full mb-[71px] lg:mb-[75px]`}
           >
