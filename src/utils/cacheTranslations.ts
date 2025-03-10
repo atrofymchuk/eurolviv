@@ -35,28 +35,28 @@ export const cacheTranslation = async (lang: string, data: Record<string, string
   const db = await openDB();
   const transaction = db.transaction(STORE_NAME, "readwrite");
   const store = transaction.objectStore(STORE_NAME);
-  store.put(data, lang);
+
+  store.put(JSON.parse(JSON.stringify(data)), lang);
 };
 
-
-
 export const fetchTranslation = async (lang: string): Promise<Record<string, string>> => {
-    const cachedTranslation = await getCachedTranslation(lang);
-    if (cachedTranslation) {
-      console.log(`✅ Get translation from cache: ${lang}`);
-      return cachedTranslation;
-    }
-  
-    try {
-      const response = await fetch(`/locales/${lang}.json`);
-      if (!response.ok) throw new Error("error get translation");
-  
-      const data = await response.json();
-      await cacheTranslation(lang, data); // Кешуємо
-  
-      return data;
-    } catch (error) {
-      console.error(error);
-      return {}; 
-    }
-  };
+  const cachedTranslation = await getCachedTranslation(lang);
+  if (cachedTranslation) {
+    console.log(`✅ Get translation from cache: ${lang}`);
+    return cachedTranslation;
+  }
+
+  try {
+    const module = await import(`./../locales/${lang}.json`);
+    const data = module.default || module; 
+
+    console.log(data);
+
+    await cacheTranslation(lang, data);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    return {}; 
+  }
+};

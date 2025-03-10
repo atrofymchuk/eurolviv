@@ -9,11 +9,14 @@ import { InfinityScrollPage } from "./pages/InfinityScrollPage";
 import { ConferenceService } from "./pages/ConferenceService";
 import { ScrollToTop } from "./components/ScrollOnTop";
 import { registerServiceWorker } from "./utils/registerServiceWorker";
+
 function App() {
-    registerServiceWorker()
+
+  registerServiceWorker()
+
   return (
     <>
-      <Router>
+      <Router basename="/">
         <Header />
         <ScrollToTop />
         <Routes>
