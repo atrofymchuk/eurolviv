@@ -12,7 +12,7 @@ export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { onOpenModal } = useModalStore();
   const { rooms } = useRoomStore();
-  const  {
+  const {
     styles,
     iconLogoStyle,
     pathname,
@@ -55,7 +55,9 @@ export function Header() {
               changeLanguage
             }}
           />
-       <ChangeLangButton changeLanguage={changeLanguage} isMobile={false}/>
+          <div className={`${rightMenu}`}>
+          <ChangeLangButton changeLanguage={changeLanguage} isMobile={false} />
+          </div>
           <div className="relative ">
             <button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -66,7 +68,10 @@ export function Header() {
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo" onMouseLeave={() => setIsDropdownOpen(false)}>
+              <div
+                className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo"
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 {["+380 99 123 45 67", "+380 97 765 43 21"].map(
                   (phone, index) => (
                     <a
@@ -89,9 +94,16 @@ export function Header() {
               scrolled ? "lg:flex hidden" : "flex"
             }`}
           >
-            {t("header.book").split(" ").map((word, index) => (
-              <span className={`${index === 1 ? "lg:flex hidden" : ""}`} key={index}>{word}&nbsp;</span>
-            ))}
+            {t("header.book")
+              .split(" ")
+              .map((word, index) => (
+                <span
+                  className={`${index === 1 ? "lg:flex hidden" : ""}`}
+                  key={index}
+                >
+                  {word}&nbsp;
+                </span>
+              ))}
           </button>
         </div>
       </div>

@@ -1,11 +1,10 @@
 import { create } from "zustand";
-import * as Components from './exportComponents'
-
+import * as Components from "./exportComponents";
 
 interface PageStore {
   sections: Record<string, React.FC[]>;
   loadedSections: Record<string, number>;
-  loadMore: (page: string) => void; 
+  loadMore: (page: string) => void;
 }
 
 const allPageSections: Record<string, React.FC[]> = {
@@ -30,7 +29,7 @@ const allPageSections: Record<string, React.FC[]> = {
   offers: [
     Components.HeaderSpecialOffers,
     Components.Cards,
-    Components.SpecialOffersModal
+    Components.SpecialOffersModal,
   ],
   restaurant: [
     Components.RestaurantHeader,
@@ -39,31 +38,27 @@ const allPageSections: Record<string, React.FC[]> = {
     Components.Menu,
     Components.Karaoke,
     Components.Celebration,
-    Components.ReviewsContainer
+    Components.ReviewsContainer,
   ],
   terrase: [
     Components.TerraseHeader,
     Components.TerrasesContainer,
     Components.Additionally,
-    Components.ReviewsContainer
+    Components.ReviewsContainer,
   ],
-  rooms:[
-    Components.HeaderRooms,
-    Components.RoomsInfo,
-    Components.Guarantee
-  ],
-  specialOffers:[
+  rooms: [Components.HeaderRooms, Components.RoomsInfo, Components.Guarantee],
+  specialOffers: [
     Components.HeaderSpecialOffers,
     Components.Cards,
-    Components.SpecialOffersModal
-  ]
+    Components.SpecialOffersModal,
+  ],
 };
-  
+
 export const usePageStore = create<PageStore>((set, get) => ({
   sections: allPageSections,
   loadedSections: Object.fromEntries(
     Object.keys(allPageSections).map((key) => [key, 2])
-  ), 
+  ),
 
   loadMore: (page) => {
     const currentLength = get().loadedSections[page];

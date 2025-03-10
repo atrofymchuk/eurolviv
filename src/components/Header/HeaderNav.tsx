@@ -106,7 +106,7 @@ export const HeaderNav = memo(({
                   scrolled ? "opacity-0" : ""
                 }`}
         >
-          ЗАБРОНЮВАТИ <span className="hidden lg:inline">НОМЕР</span>
+          {t("buttons.bookRoomArr.0")} <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>
         </button>
 
         <nav
