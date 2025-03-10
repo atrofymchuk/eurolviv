@@ -41,6 +41,8 @@ interface PageStore {
   loadMore: (page: string) => void; 
 }
 
+
+
 const allPageSections: Record<string, React.FC[]> = {
   about: [
     AboutHeader,
@@ -91,7 +93,7 @@ const allPageSections: Record<string, React.FC[]> = {
     SpecialOffersModal
   ]
 };
-
+  
 export const usePageStore = create<PageStore>((set, get) => ({
   sections: allPageSections,
   loadedSections: Object.fromEntries(

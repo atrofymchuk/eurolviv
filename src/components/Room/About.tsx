@@ -8,13 +8,13 @@ import { RoomAbout } from "../../store/types";
 import { memo } from "react";
 import { guestBrown, houseBrown, squareBrown } from "../../store/exportsIcons";
 type RoomAboutToProps = {
-  about: RoomAbout;
-  area: number;
-  guests: string;
-  title: string;
-  size: string | undefined;
-  swiperImagesStyle: string;
-  nameRoom: string;
+  about?: RoomAbout;
+  area?: number;
+  guests?: string;
+  title?: string;
+  size?: string | undefined;
+  swiperImagesStyle?: string;
+  nameRoom?: string;
 }
 
 export const About = memo(({
@@ -24,12 +24,10 @@ export const About = memo(({
   swiperImagesStyle,
   nameRoom,
 }: RoomAboutToProps) => {
-  const { pOne, pTwo, swiperImages, rooms } = about;
+  const { pOne, pTwo, swiperImages, rooms } = about || {};
   const { t } = useTranslation();
   const { onOpenModal } = useModalStore();
-
-  if (!swiperImages || swiperImages.length === 0) return null;
-
+  if (!about || !swiperImages || swiperImages.length === 0 || !pOne || !pTwo || !nameRoom)  return null;
   return (
     <div className="   ">
       <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[10.67%_78.67%_10.67%] items-center justify-center 2xl:items-start 2xl:justify-normal max-w-[84.06%] md:max-w-full mx-auto md:mx-0">

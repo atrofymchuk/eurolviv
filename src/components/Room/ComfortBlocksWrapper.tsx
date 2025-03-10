@@ -2,8 +2,8 @@ import { IconsState, Room } from "../../store/types";
 import { ComfortsBlock } from "./ComfotsBlock";
 import { useTranslation } from "react-i18next";
 type ComfortsBlockToProps = {
-  icons: IconsState;
-  room: Room;
+  icons?: IconsState;
+  room?: Room;
 };
 
 export const ComfortsBlocksWrapper = ({
@@ -11,6 +11,8 @@ export const ComfortsBlocksWrapper = ({
   room,
 }: ComfortsBlockToProps) => {
   const {t} = useTranslation()
+  if(!icons || !room) return null;
+
   const commonProps = {
     imgStyle: {
       ammentiesImageFst: room.about.ammetiveImgStyleFst,
@@ -30,6 +32,7 @@ export const ComfortsBlocksWrapper = ({
     text: 'text-[#E1E1E1]',
     headerColor: 'text-white'
   };
+
 
   return (
     <div className="">

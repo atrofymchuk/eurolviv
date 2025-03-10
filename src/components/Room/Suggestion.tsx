@@ -2,26 +2,20 @@ import { Link } from "react-router-dom";
 import { SuggestionT } from "../../store/types";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../InViewWrapper";
-import { useMemo } from "react";
 
 type SuggestionToProps = {
-  suggestion: SuggestionT[];
+  suggestion?: SuggestionT[];
 };
 
 export const Suggestion = ({ suggestion }: SuggestionToProps) => {
   const { t } = useTranslation();
-
-  const translatedSuggestions = useMemo(
-    () =>
-      suggestion.map((item) => ({
-        ...item,
-        translatedTitle: t(item.title),
-        translatedSize: item.size.length > 5 ? t(item.size) : "",
-        translatedDesc: t(item.desc),
-      })),
-    [suggestion, t]
-  );
-
+  if(!suggestion) return null
+    const translatedSuggestions = suggestion.map((item) => ({
+      ...item,
+      translatedTitle: t(item.title),
+      translatedSize: item.size.length > 5 ? t(item.size) : "",
+      translatedDesc: t(item.desc),
+    }))  
   return (
     <div className="w-full flex justify-center">
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full">

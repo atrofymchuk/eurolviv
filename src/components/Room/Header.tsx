@@ -2,10 +2,12 @@ import { useTranslation } from "react-i18next";
 import { RoomHeader } from "../../store/types";
 
 interface RoomHeaderToProps {
-  header: RoomHeader;
+  header?: RoomHeader;
 }
 
 export const Header: React.FC<RoomHeaderToProps> = ({ header}) => {
+  const {t} = useTranslation()
+  if(!header) return null;
   const {
     title,
     arriveTime,
@@ -16,7 +18,6 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header}) => {
     view,
     previewImage,
   } = header;
-  const {t} = useTranslation()
   const translatedTitle = t(title);
 
   const titlePart = translatedTitle.split(' ');

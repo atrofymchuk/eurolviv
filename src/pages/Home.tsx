@@ -12,6 +12,6 @@
     <RoomsHome />
     <ConferenceService />
     <RoofService />
-    <SpecialOffers />
+    <SpecialOffers isHome={true} />1
     </div>;
   };
