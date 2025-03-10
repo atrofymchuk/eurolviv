@@ -88,7 +88,7 @@ export const HeaderNav = memo(({
           </span>
         </button>
 
-        <Link to="/">
+        <Link to="/" >
           <InViewWrapper>
           <img
             src={logo}

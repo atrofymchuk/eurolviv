@@ -7,6 +7,7 @@ import { HeaderNav } from "./HeaderNav";
 import { RoomsListHeader } from "./RoomsListHeader";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
+import useLanguage from "../Hooks/useLanguage";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -24,12 +25,8 @@ export function Header() {
     isActiveLink,
   } = useNavbarStyles();
 
-  const { i18n, t } = useTranslation();
-
-  const changeLanguage = () => {
-    const newLang = i18n.language === "en" ? "uk" : "en";
-    i18n.changeLanguage(newLang);
-  };
+  const {  t } = useTranslation();
+  const { changeLanguage } = useLanguage();
 
   return (
     <header

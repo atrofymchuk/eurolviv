@@ -17,43 +17,57 @@ const openDB = async (): Promise<IDBDatabase> => {
   });
 };
 
-const getCachedImage = async (url: string): Promise<Blob | null> => {
+const getCachedImage = async (url: string): Promise<{ blob: Blob; type: string } | null> => {
   const db = await openDB();
   return new Promise((resolve) => {
     const transaction = db.transaction(STORE_NAME, "readonly");
     const store = transaction.objectStore(STORE_NAME);
     const request = store.get(url);
 
-    request.onsuccess = () => resolve(request.result as Blob | null);
+    request.onsuccess = () => {
+      const result = request.result as { blob: Blob; type: string } | null;
+      resolve(result);
+    };
     request.onerror = () => resolve(null);
   });
 };
 
-const cacheImage = async (url: string, blob: Blob): Promise<void> => {
+const cacheImage = async (url: string, blob: Blob, type: string): Promise<void> => {
   const db = await openDB();
   const transaction = db.transaction(STORE_NAME, "readwrite");
   const store = transaction.objectStore(STORE_NAME);
-  store.put(blob, url);
+  store.put({ blob, type }, url);
 };
-
 
 self.addEventListener("fetch", (event: Event) => {
   const fetchEvent = event as FetchEvent;
   const { request } = fetchEvent;
 
-  if (request.destination === "image") {
+  if (request.destination === "image" || request.url.endsWith(".svg")) {
     fetchEvent.respondWith(
       (async () => {
-        const cachedBlob = await getCachedImage(request.url);
-        if (cachedBlob) {
-          return new Response(cachedBlob);
+        const cachedData = await getCachedImage(request.url);
+        if (cachedData) {
+          return new Response(cachedData.blob, { headers: { "Content-Type": cachedData.type } });
         }
 
         const response = await fetch(request);
-        const blob = await response.blob();
-        await cacheImage(request.url, blob);
+        if (!response.ok) return response;
 
-        return response;
+        const responseClone1 = response.clone();
+        const responseClone2 = response.clone();
+
+        (async () => {
+          try {
+            const blob = await responseClone1.blob();
+            const type = response.headers.get("Content-Type") || "image/webp"; // Автоматичне визначення MIME-типу
+            await cacheImage(request.url, blob, type);
+          } catch (error) {
+            console.error("Error caching image:", error);
+          }
+        })();
+
+        return responseClone2;
       })()
     );
   }

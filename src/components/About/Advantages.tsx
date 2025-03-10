@@ -10,7 +10,7 @@ export const Advantages = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   
-  const {hotelInfo,services} =usePagesInfoStore()
+  const {hotelInfo,services} = usePagesInfoStore()
 
 
   return (

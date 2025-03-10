@@ -8,18 +8,9 @@ import './i18n';
 import { InfinityScrollPage } from "./pages/InfinityScrollPage";
 import { ConferenceService } from "./pages/ConferenceService";
 import { ScrollToTop } from "./components/ScrollOnTop";
+import { registerServiceWorker } from "./utils/registerServiceWorker";
 function App() {
-
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./store/sw.js").then(() => {
-      console.log("Service Worker зареєстрований!");
-    }).catch((error) => {
-      console.error("Error registering Service Worker:", error);
-    });
-  }
-  
-
-
+    registerServiceWorker()
   return (
     <>
       <Router>
