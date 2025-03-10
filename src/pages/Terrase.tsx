@@ -9,7 +9,7 @@ export const Terrase = () => {
       <TerraseHeader />
       <TerrasesContainer />
       <Additionally />
-      <ReviewsContainer isTerrasePage={true} />
+      <ReviewsContainer  />
     </div>
   );
 };

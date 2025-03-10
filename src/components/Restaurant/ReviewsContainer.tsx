@@ -3,16 +3,14 @@ import { Reviews } from "./Reviews";
 import { ReviewSlider } from "./ReviewSlider";
 import Slider from "react-slick";
 import { Navigation } from "./Navigation";
+import { useLocation } from "react-router-dom";
 
-type ReviewsContainerToProps = {
-  isTerrasePage?: boolean;
-};
 
-export const ReviewsContainer = ({
-  isTerrasePage = false,
-}: ReviewsContainerToProps) => {
+export const ReviewsContainer = () => {
   const sliderRef = useRef<Slider | null>(null);
-
+  const {pathname} = useLocation()
+  const isTerrasePage = pathname === "/terrase"
+  
   return (
     <div className="">
       <div className="">
