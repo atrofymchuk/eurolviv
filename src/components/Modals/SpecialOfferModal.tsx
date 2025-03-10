@@ -10,7 +10,7 @@ import { InViewWrapper } from "../InViewWrapper";
 
 Modal.setAppElement("#root");
 
-const SpecialOffersModal = () => {
+export const SpecialOffersModal = () => {
   const { onCloseGlobalModal, isOpenSpecialOfferModal } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
   const { t } = useTranslation();
@@ -101,4 +101,3 @@ const SpecialOffersModal = () => {
   );
 };
 
-export default SpecialOffersModal;

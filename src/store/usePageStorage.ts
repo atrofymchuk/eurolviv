@@ -1,39 +1,6 @@
 import { create } from "zustand";
-import { AboutHeader } from "../components/About/Header";
-import { StorySection } from "../components/About/StorySection";
-import { Advantages } from "../components/About/Advantages";
-import { Mission } from "../components/About/Mission";
-import { Concepts } from "../components/About/Concepts";
-import { WhereWeAre } from "../components/About/WhereWeAre";
-import { Rewies } from "../components/About/Reviews";
+import * as Components from './exportComponents'
 
-import { Header as HeaderSpecialOffers } from "../components/SpecialOffers/Header"
-import { Cards } from "../components/SpecialOffers/Cards"
-import SpecialOffersModal from "../components/Modals/SpecialOfferModal"
-
-import { Header as ContactsHeader } from "../components/Contacts/Header";
-import { Info } from "../components/Contacts/Info";
-import { Location } from "../components/Contacts/Location";
-
-import { HeaderHome } from "../components/Home/HeaderHome";
-import { AboutHome } from "../components/Home/AboutHome";
-import { RoomsHome } from "../components/Home/Rooms";
-import { ConferenceService as HomeConferenceService } from "../components/Home/ConferenceService";
-import { RoofService } from "../components/Home/RoofService";
-import { SpecialOffers } from "../components/Room/SpecialOffers";
-import { Menu } from "../components/Restaurant/Menu";
-import { AboutRestaurant } from "../components/Restaurant/AboutRestaurant";
-import { Celebration } from "../components/Restaurant/Celebration";
-import { RestaurantHeader } from "../components/Restaurant/Header";
-import { ReviewsContainer } from "../components/Restaurant/ReviewsContainer";
-import { AbootSliderContainer } from "../components/Restaurant/AbootSliderContainer";               
-import { Karaoke } from "../components/Restaurant/Karaoke";
-import { TerrasesContainer } from "../components/Terrase/TerrasesContainer";
-import { TerraseHeader } from "../components/Terrase/Header";
-import { Additionally } from "../components/Terrase/Additionally";
-import { RoomsInfo } from "../components/Rooms/RoomsInfo";
-import { Guarantee } from "../components/Rooms/Guarantee";
-import { Header as HeaderRooms } from "../components/Rooms/Header";
 
 interface PageStore {
   sections: Record<string, React.FC[]>;
@@ -41,56 +8,54 @@ interface PageStore {
   loadMore: (page: string) => void; 
 }
 
-
-
 const allPageSections: Record<string, React.FC[]> = {
   about: [
-    AboutHeader,
-    StorySection,
-    Advantages,
-    Mission,
-    Concepts,
-    WhereWeAre,
-    Rewies,
+    Components.AboutHeader,
+    Components.StorySection,
+    Components.Advantages,
+    Components.Mission,
+    Components.Concepts,
+    Components.WhereWeAre,
+    Components.Rewies,
   ],
-  contacts: [ContactsHeader, Info, Location],
+  contacts: [Components.ContactsHeader, Components.Info, Components.Location],
   home: [
-    HeaderHome,
-    AboutHome,
-    RoomsHome,
-    HomeConferenceService,
-    RoofService,
-    SpecialOffers,
+    Components.HeaderHome,
+    Components.AboutHome,
+    Components.RoomsHome,
+    Components.HomeConferenceService,
+    Components.RoofService,
+    Components.SpecialOffers,
   ],
   offers: [
-    HeaderSpecialOffers,
-    Cards,
-    SpecialOffersModal
+    Components.HeaderSpecialOffers,
+    Components.Cards,
+    Components.SpecialOffersModal
   ],
   restaurant: [
-    RestaurantHeader,
-    AboutRestaurant,
-    AbootSliderContainer,
-    Menu,
-    Karaoke,
-    Celebration,
-    ReviewsContainer
+    Components.RestaurantHeader,
+    Components.AboutRestaurant,
+    Components.AbootSliderContainer,
+    Components.Menu,
+    Components.Karaoke,
+    Components.Celebration,
+    Components.ReviewsContainer
   ],
   terrase: [
-    TerraseHeader,
-    TerrasesContainer,
-    Additionally,
-    ReviewsContainer
+    Components.TerraseHeader,
+    Components.TerrasesContainer,
+    Components.Additionally,
+    Components.ReviewsContainer
   ],
   rooms:[
-    HeaderRooms,
-    RoomsInfo,
-    Guarantee
+    Components.HeaderRooms,
+    Components.RoomsInfo,
+    Components.Guarantee
   ],
   specialOffers:[
-    HeaderSpecialOffers,
-    Cards,
-    SpecialOffersModal
+    Components.HeaderSpecialOffers,
+    Components.Cards,
+    Components.SpecialOffersModal
   ]
 };
   
