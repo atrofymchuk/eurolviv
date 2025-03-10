@@ -7,13 +7,14 @@ import BaseModal from "./components/Modals/BaseModal";
 import './i18n';
 import { InfinityScrollPage } from "./pages/InfinityScrollPage";
 import { ConferenceService } from "./pages/ConferenceService";
-
+import { ScrollToTop } from "./components/ScrollOnTop";
 function App() {
 
   return (
     <>
       <Router>
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
           <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />
