@@ -110,7 +110,7 @@ export function Header() {
 
       {isShowRooms && !scrolled && (
         <div
-          className={`fixed left-0 w-full p-4 pt-0 z-90 shadow-[0px_4px_86.4px_0px_#252526] bg-[#252526]/93 lg:top-[117px]`}
+          className={`fixed left-0 w-full p-4 pt-0 z-90 shadow-[0px_4px_86.4px_0px_#252526] bg-[#252526]/93 2xl:top-[117px] xl:top-[103px] lg:top-[93px] md:top-[93px] top-[80px] md:hidden lg:block`}
         >
           <div className="flex justify-center">
             <div className=" grid lg:grid-cols-4 grid-cols-2">

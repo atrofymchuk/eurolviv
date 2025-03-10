@@ -42,7 +42,7 @@ export default function ContactUsForm() {
 
   return (
     <div className=" flex flex-col items-center  lg:pb-10 lg:pt-0 pb-[42px] pt-[50px] md:border-b-0 border-b border-[#C7C7C7]  ">
-      <div className="flex flex-col items-center w-[83.42%]">
+      <div className="flex flex-col items-center md:items-start w-[83.42%]">
         <h2 className="uppercase font-cofo lg:text-[39px] text-[32px] lg:tracking-[-0.05em]">
           {t("contacts.info.writeUs")}
         </h2>

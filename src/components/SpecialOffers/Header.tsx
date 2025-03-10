@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-center bg-[#252526] 2xl:pt-[117px] xl:pt-[102px] lg:pt-[93px] md:pt-[80px] pt-[73px]   px-9">
       <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[1720px]">
-        <div className="lg:border-s border-x  border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left py-8 px-6 lg:pt-[96px] lg:pl-[31px] ">
+        <div className=" border-x  lg:border-e-0 border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left py-8 px-6 lg:pt-[96px] lg:pl-[31px] ">
           <h1
             className="uppercase font-cofo text-white leading-tight tracking-tight 
             text-[36px] sm:text-[48px] md:text-[64px] lg:text-[96px] xl:text-[120px] 2xl:text-[198px] z-1"
@@ -35,10 +35,8 @@ export const Header = () => {
           </h1>
         </div>
 
-        {/* Порожній блок для балансу в сітці */}
         <div className="border-e border-[#515151]  items-center hidden lg:flex"></div>
 
-        {/* Додатковий блок для мобільних пристроїв */}
         <div className=" border-[#515151] flex items-center lg:hidden"></div>
       </div>
     </div>

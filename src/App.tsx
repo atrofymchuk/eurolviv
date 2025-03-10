@@ -10,6 +10,16 @@ import { ConferenceService } from "./pages/ConferenceService";
 import { ScrollToTop } from "./components/ScrollOnTop";
 function App() {
 
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./store/sw.js").then(() => {
+      console.log("Service Worker зареєстрований!");
+    }).catch((error) => {
+      console.error("Error registering Service Worker:", error);
+    });
+  }
+  
+
+
   return (
     <>
       <Router>

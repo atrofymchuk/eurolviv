@@ -9,43 +9,48 @@ type RoomsListHeaderToProps = {
   room:Room
   index:number
 }
+export const RoomsListHeader = ({ room, index }: RoomsListHeaderToProps) => {
+  const { t } = useTranslation();
 
-export  const RoomsListHeader = ({room, index}:RoomsListHeaderToProps) =>{
-
-  const {t} = useTranslation()
-
-    return(
-     
-        <div className={`flex flex-col  border-[#FFFFFF33] items-center justify-center  ${index === 0 ? 'border-x' : 'border-e'}  ${index == 2 ? 'lg-border-e border-x':'' } p-2`}>
-          <Link to={`/rooms/${room.type}`}>
-          <div>
-            <InViewWrapper>
-
+  return (
+    <div
+      className={`flex flex-col items-center justify-between border-[#FFFFFF33] ${index === 0 ? "border-x" : "border-e"} ${
+        index === 2 ? "lg-border-e border-x" : ""
+      } p-4 h-auto`}
+    >
+      <Link to={`/rooms/${room.type}`} className="w-full h-full flex flex-col justify-between">
+        <div className="w-full flex justify-center flex-col items-center">
+          <InViewWrapper>
             <img
               src={room.header.previewImage}
               alt="preview"
-              className="lg:w-[394px] lg:h-[304px]  "
-              />
-              </InViewWrapper>
-            <div className="flex justify-between w-full lg:mt-3.5 mt-1">
-              <div className="flex items-center">
-                <img src={squareWhite} alt="area icon" className="lg:w-5 lg:h-5 w-4  me-2" />
-                <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px] ">площа: {room.area}</p>
-              </div>
-              <div className="flex items-center">
-                <img src={guestWhite  } alt="area icon" className="lg:w-5 lg:h-5 w-4 me-2" />
-                <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px] ">гостей: {room.guests}</p>
-              </div>
-            </div>
-  
-            <h1 className="uppercase text-[#FFFFFF] lg:text-[36px] text-[14px] mt-2 tracking-[-6%] font-semibold text-center lg:leading-[30px] mx-auto leading-[15px] lg:w-[320px] lg:mt-[38px]">
-              {t(room.title)}
-            </h1>
-            <p className="uppercase text-[#FFFFFF] text-center lg:text-[18px] mt-2 text-[10px] leading-[-2%] max-w-[310px] mx-auto lg:mt-[15px]">
-             {t(room.description)}
+              className="lg:w-full object-cover"
+            />
+          </InViewWrapper>
+        <div className="w-full flex justify-between items-center mt-3.5">
+          <div className="flex items-center">
+            <img src={squareWhite} alt="area icon" className="lg:w-5 lg:h-5 w-4 me-2" />
+            <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px]">
+              площа: {room.area}
             </p>
           </div>
-          </Link>
+          <div className="flex items-center">
+            <img src={guestWhite} alt="guest icon" className="lg:w-5 lg:h-5 w-4 me-2" />
+            <p className="text-[#FFFFFF] uppercase lg:text-[16px] text-[10px]">
+              гостей: {room.guests}
+            </p>
+          </div>
+        </div>
+        </div>
+
+
+        <h1 className="uppercase text-[#FFFFFF] xl:text-[36px] 2xl:mt-3 lg:text-[24px] text-[14px] tracking-[-6%] font-semibold text-center leading-[15px] lg:leading-[30px] min-h-[40px] flex items-center">
+          {t(room.title)}
+        </h1>
+        <p className="uppercase text-[#FFFFFF] text-center lg:text-[18px] text-[10px] leading-[-2%] max-w-[310px] mx-auto lg:mt-[15px] min-h-[40px] flex items-center">
+          {t(room.description)}
+        </p>
+      </Link>
     </div>
-    )
- }
+  );
+};
