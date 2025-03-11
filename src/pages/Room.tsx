@@ -5,8 +5,8 @@ import { ComfortsBlocksWrapper } from "../components/Room/ComfortBlocksWrapper";
 import { Header } from "../components/Room/Header";
 import { SpecialOffers } from "../components/Room/SpecialOffers";
 import { useRoomStore } from "../store/useRoomsStore";
-import { MoreInfo } from "../components/Room/MoreInfo";
 import { Suggestion } from "../components/Room/Suggestion";
+import { MoreInfo } from "../components/Room/MoreInfo";
 
 export const Room = () => {
   const { roomType } = useParams();
@@ -31,7 +31,6 @@ export const Room = () => {
     <ComfortsBlocksWrapper key="comforts" icons={room?.icons } room={room} />,
     <MoreInfo
       key="moreInfo"
-      isShowAdditionalPlace={roomType !== "lux-two-room" && roomType !== "semi-lux"}
     />,
     <SpecialOffers key="specialOffers" />,
     <Suggestion key="suggestion" suggestion={room?.suggestion || []} />,

@@ -57,7 +57,7 @@ export const ComfortsBlock = memo(
           <div
             className="grid 
             grid-cols-1 
-            md:grid-cols-[35.65%_29.3%_33.73%]  
+            md:grid-cols-[35.64%_30.63%_33.73%]
             items-center justify-center 
             border-x border-[#C7C7C7]
             w-[84.06%]
