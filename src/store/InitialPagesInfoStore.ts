@@ -1,6 +1,4 @@
 import * as icons from "./exportsIcons";
-import { sofa } from "./exportsIcons";
-import { babybed, kid, olderkid, pet, cup, ironingChlothes, guest, roomService, washingMachine } from "./exportsIcons";
 import { roomLux, terasse, bussines, bar, restaurant, karaoke, terasseHome, menuTerrase, celebratingTerrase, barTerrase } from "./exportsImg";
 import { Reviews } from "./types";
 
@@ -24,19 +22,19 @@ export  const cards = [
   ];
 
   export  const amenities = [
-    { src: sofa, text: 'room.moreInfo.amenties.0' },
-    { src: babybed, text: 'room.moreInfo.amenties.1' },
-    { src: kid, text: 'room.moreInfo.amenties.2' },
-    { src: olderkid, text: 'room.moreInfo.amenties.3' },
-    { src: cup, text: 'room.moreInfo.amenties.4' },
-    { src: guest, text: 'room.moreInfo.amenties.5' },
+    { src: icons.sofa, text: 'room.moreInfo.amenties.0' },
+    { src: icons.babybed, text: 'room.moreInfo.amenties.1' },
+    { src: icons.kid, text: 'room.moreInfo.amenties.2' },
+    { src: icons.olderkid, text: 'room.moreInfo.amenties.3' },
+    { src: icons.cup, text: 'room.moreInfo.amenties.4' },
+    { src: icons.guestAmmenties, text: 'room.moreInfo.amenties.5' },
   ]
   
   export const availableService = [
-    { src: washingMachine, text: 'room.moreInfo.availableService.0' },
-    { src: roomService  , text: 'room.moreInfo.availableService.1' },
-    { src: ironingChlothes, text: 'room.moreInfo.availableService.2' },
-    { src: pet, text: 'room.moreInfo.availableService.3' },
+    { src: icons.washingMachine, text: 'room.moreInfo.availableService.0' },
+    { src: icons.roomService  , text: 'room.moreInfo.availableService.1' },
+    { src: icons.ironingChlothes, text: 'room.moreInfo.availableService.2' },
+    { src: icons.pet, text: 'room.moreInfo.availableService.3' },
   ]
 
 export const suggestion = [

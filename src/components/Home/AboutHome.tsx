@@ -38,9 +38,9 @@ export const AboutHome = () => {
           </p>
         </div>
 
-        <div className="border-x border-b md:border-b-0   border-[#C7C7C7]  flex flex-col  2xl:h-[307px] xl:h-[290px] order-1 md:order-none 2xl:pt-0 xl:pt-0 md:pt-10  pt-[15px]">
+        <div className="border-x border-b md:border-b-0   border-[#C7C7C7]   flex flex-col  2xl:h-[307px] xl:h-[290px] order-1 md:order-none 2xl:pt-0 xl:pt-0 md:pt-10  pt-[15px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-4 xl:pb-0">
-          <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px] md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px] text-center md:text-start uppercase text-[#242425] leading-[0.81] tracking-tight">
+          <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px] text-center md:text-start uppercase text-[#242425] leading-[0.81] tracking-tight">
   {t("home.about.heading").split(" ").slice(0, -1).join(" ")}
   <br />
   <span className="md:whitespace-nowrap">{t("home.about.heading").split(" ").slice(-1)}</span>
@@ -48,8 +48,7 @@ export const AboutHome = () => {
 
           </div>
         </div>
-        <div className="md:flex hidden   flex-col relative border-s md:border-s-0  2xl:border-s-0 xl:border-s-0 items-center lg:items-start 2xl:items-start xl:items-start border-e border-[#C7C7C7] order-3 md:order-none">
-          <h1 className="text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase w-fit 2xl:absolute xl:absolute 2xl:mt-[90px] xl:mt-[85px] left-[-10px] 2xl:text-[100px] xl:text-[90px] text-[32px] text-[#242425] leading-[81%] tracking-[-10%] 2xl:pb-0 xl:pb-0 lg:pb-0 pb-10 md:pt-10 2xl:pt-0 xl:pt-0 lg:text-[48px]"></h1>
+        <div className="md:flex hidden -z-1   flex-col relative border-s md:border-s-0  2xl:border-s-0 xl:border-s-0 items-center lg:items-start 2xl:items-start xl:items-start border-e border-[#C7C7C7] order-3 md:order-none">
         </div>
 
         <div className=" 2xl:h-[720px] xl:h-[680px] border-[#C7C7C7] md:col-span-2 border-e order-4 md:order-none ">

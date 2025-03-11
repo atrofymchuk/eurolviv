@@ -80,4 +80,4 @@ export  { default as squareWhite} from '../assets/icons/Rooms/squareWhite.svg';
 export  { default as guestWhite} from '../assets/icons/Rooms/guestWhite.svg';
 export  { default as list} from '../assets/icons/Modal/list.svg';
 export  { default as calendar} from '../assets/icons/Modal/calendar.svg';
-
+export  { default as guestAmmenties} from '../assets/icons/Rooms/guestAmmenties.svg';

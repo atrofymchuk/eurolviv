@@ -65,11 +65,15 @@ export const ComfortsBlock = memo(
           >
             <div className="flex flex-col justify-center items-center md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:h-[825px]">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
-                <h1
-                  className={`uppercase ${style.headerColor} font-cofo text-[24px] sm:text-[28px] md:text-[28px] lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[104%] 2xl:mb-[51px] lg:mb-[20px] text-center md:text-left`}
-                >
-                  {title}
-                </h1>
+              <h1
+  className={`uppercase ${style.headerColor} font-cofo text-[32px] 
+              lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[104%] 
+              2xl:mb-[51px] lg:mb-[20px] md:text-left 
+              break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`}
+>
+  {title}
+</h1>
+
 
                 <div className="hidden md:flex justify-center items-center w-full">
                   <InViewWrapper>
