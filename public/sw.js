@@ -58,7 +58,7 @@ self.addEventListener("fetch", (event) => {
             (() => __awaiter(this, void 0, void 0, function* () {
                 try {
                     const blob = yield responseClone1.blob();
-                    const type = response.headers.get("Content-Type") || "image/webp"; // Автоматичне визначення MIME-типу
+                    const type = response.headers.get("Content-Type") || "image/webp";
                     yield cacheImage(request.url, blob, type);
                 }
                 catch (error) {

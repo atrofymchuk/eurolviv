@@ -7,7 +7,7 @@ export const OurContactsWithMap = () => {
   const { t } = useTranslation();
   return (
     <div className="xl:w-full border-[#C7C7C7] md:border-b  text-center md:text-start  md:px-5">
-      <div className="grid md:grid-cols-2    2xl:pb-[48px] lg:pt-[68px] 2xl:h-[540px]  2xl:w-full md:space-y-5">
+      <div className="grid md:grid-cols-2    lg:pt-[68px]   2xl:w-full md:space-y-5">
         <div className="xl:ms-[38px] lg:ms-[20px] md:block pt-4.5 lg:pt-0 items-center flex flex-col md:border-b-0 md:border-e-0 border-b border-e border-[#C7C7C7]  ">
           <h4 className="text-[12px] md:text-[14px] lg:text-[18px] font-semibold text-[#6B6B6B] font-cofo uppercase">
             {t("contacts.info.reception")}

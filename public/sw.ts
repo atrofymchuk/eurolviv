@@ -60,7 +60,7 @@ self.addEventListener("fetch", (event: Event) => {
         (async () => {
           try {
             const blob = await responseClone1.blob();
-            const type = response.headers.get("Content-Type") || "image/webp"; // Автоматичне визначення MIME-типу
+            const type = response.headers.get("Content-Type") || "image/webp"; 
             await cacheImage(request.url, blob, type);
           } catch (error) {
             console.error("Error caching image:", error);
