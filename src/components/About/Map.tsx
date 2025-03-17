@@ -29,7 +29,7 @@ const MapComponent = () => {
       onAdd: () => {
         const div = L.DomUtil.create("div", "google-maps-button");
         div.innerHTML = `
-          <a href="https://www.google.com.ua/maps/place/Imperium+Massage/@50.0815915,14.4436222,17z/data=!4m15!1m8!3m7!1s0x470b949bb670f68b:0x1cf1dc06140e9442!2zS3ViZWzDrWtvdmEgOTc2LzMsIDEzMCAwMCBQcmFoYSAzLcW9acW-a292LCDQp9C10YXQuNGP!3b1!8m2!3d50.0815881!4d14.4461971!16s%2Fg%2F11c1ywyg4x!3m5!1s0x470b950006540d31:0xb3b02a684a5d9842!8m2!3d50.0815515!4d14.4461776!16s%2Fg%2F11wpp88zvc?hl=cz&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" 
+          <a href="https://www.google.com/maps?client=firefox-b-d&sca_esv=88182c9360e229b5&output=search&q=eurohotel&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBjnSuuKZNj-6zieDk_gkn6AKnSLKCogWmTELYC4Vpj6g-WWn00XmA4gGIIJ-PmnKVd3JGlcDfFYJQtIaLnXvVy8hY2CveUcFfF3d27KlT4c6eUcSdLJVOezL04y6ywQmt7be_VPsnZomZkwc1xCKXX9aS0DIkBm3TtOmG1fp-GkXpGCi0w&entry=mc&ved=1t:200715&ictx=111" target="_blank" 
             style="background: white; padding: 5px 10px; text-decoration: none; color: black; border: 1px solid #ccc; border-radius: 4px;">
             Open in Google Maps
           </a>`;
