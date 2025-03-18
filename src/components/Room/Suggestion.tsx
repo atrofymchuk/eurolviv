@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { SuggestionT } from "../../store/types";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 type SuggestionToProps = {
   suggestion?: SuggestionT[];

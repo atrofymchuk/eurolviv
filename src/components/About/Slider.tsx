@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider } from "../../store/exportsImg";
 
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 const slides = [champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider];
 
 

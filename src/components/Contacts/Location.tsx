@@ -1,7 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { mapContacts } from "../../store/exportsImg";
 
 export const Location = () => {

@@ -1,4 +1,4 @@
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { coffe, meat, spagetti } from "../../store/exportsImg";
 type MenuPCToProps ={
     className:string

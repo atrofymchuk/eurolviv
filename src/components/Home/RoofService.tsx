@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 export const RoofService = () => {

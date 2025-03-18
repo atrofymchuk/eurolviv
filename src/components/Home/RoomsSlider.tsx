@@ -7,7 +7,7 @@ import { squareWhite, guestWhite } from "../../store/exportsIcons";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 type RoomSSliderProps = {
   ref: Slider | null;
 };

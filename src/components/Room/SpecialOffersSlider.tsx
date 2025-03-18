@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { forwardRef } from "react";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 type SpecialOffersSliderToProps = {
     ref:Slider | null

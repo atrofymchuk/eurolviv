@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 type HeaderNavProps = {
   scrolled: boolean;

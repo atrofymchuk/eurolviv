@@ -1,5 +1,5 @@
 import { t } from "i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { headerHome } from "../../store/exportsImg";
 export const HeaderHome = () => {
   return (

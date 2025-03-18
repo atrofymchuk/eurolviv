@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { AboutSliderProps } from "../../store/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 export const SliderAbout: React.FC<AboutSliderProps> = memo(
   ({ imageSlider, swiperImagesStyle }) => {

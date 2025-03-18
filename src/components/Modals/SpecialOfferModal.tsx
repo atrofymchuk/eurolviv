@@ -6,7 +6,7 @@ import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 Modal.setAppElement("#root");
 

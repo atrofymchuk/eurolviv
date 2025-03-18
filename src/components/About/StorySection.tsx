@@ -1,6 +1,6 @@
 
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { sectionAbout } from "../../store/exportsImg";
 
 export const StorySection = () => {

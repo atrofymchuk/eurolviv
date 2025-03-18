@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { hotelContacts } from "../../store/exportsImg";
 
 export const ContactUs = () => {

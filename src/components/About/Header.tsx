@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { headerAbout } from "../../store/exportsImg";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { Link } from "react-router-dom";
 
 

@@ -1,6 +1,6 @@
 
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 
 export const Concepts = () => {

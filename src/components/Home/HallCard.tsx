@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { square, guest } from "../../store/exportsIcons";
 type HallCardProps = {

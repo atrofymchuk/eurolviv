@@ -8,7 +8,7 @@ import { RatingMobile } from "./RatingMobile";
 import { BookingSection } from "./BookingSection";
 import { BottomText } from "./BottomText";
 import { AddressWithSchedule } from "./AddressWithSchedule";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { footer } from "../../store/exportsImg";
 
 export const Footer = () => {

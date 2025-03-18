@@ -3,7 +3,7 @@ import "./Advantages.css";
 import { advantages } from "../../store/exportsImg";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 
 export const Advantages = () => {

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { aboutRestaurant, aboutRestaurantScd, aboutRestaurantTrd } from "../../store/exportsImg";
 
 function AboutSlider() {

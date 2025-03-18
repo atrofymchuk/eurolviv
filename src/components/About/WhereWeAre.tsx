@@ -1,7 +1,7 @@
 
 import MapComponent from "./Map";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 import { navigate } from "../../store/exportsIcons";
 import { hotel } from "../../store/exportsImg";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";

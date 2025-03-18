@@ -1,7 +1,7 @@
 import { FaInstagram } from "react-icons/fa";
 import MapImg from "./MapImg";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../InViewWrapper";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 export const OurContactsWithMap = () => {
   const { t } = useTranslation();
