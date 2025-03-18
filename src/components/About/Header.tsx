@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { headerAbout } from "../../store/exportsImg";
-import { useModalStore } from "../../store/useModalStore";
 import { InViewWrapper } from "../InViewWrapper";
+import { Link } from "react-router-dom";
+
 
 export const AboutHeader = () => {
-  const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
+  
 
   return (
     <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
@@ -36,12 +37,12 @@ export const AboutHeader = () => {
           {t("about.header.desc.1")}
         </span>
       </h4>
-      <button
-        onClick={() => onOpenModal("order")}
+      <Link
+      to={'/booking'}
         className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md"
       >
         {t("buttons.book")}
-      </button>
+      </Link>
     </div>
   );
 };

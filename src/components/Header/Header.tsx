@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useModalStore } from "../../store/useModalStore";
 import { useRoomStore } from "../../store/useRoomsStore";
 import { HeaderSocial } from "./HeaderSocial";
 import useNavbarStyles from "../Hooks/useHeaderStyle";
@@ -8,10 +7,10 @@ import { RoomsListHeader } from "./RoomsListHeader";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
 import useLanguage from "../Hooks/useLanguage";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { onOpenModal } = useModalStore();
   const { rooms } = useRoomStore();
   const {
     styles,
@@ -25,7 +24,7 @@ export function Header() {
     isActiveLink,
   } = useNavbarStyles();
 
-  const {  t } = useTranslation();
+  const { t } = useTranslation();
   const { changeLanguage } = useLanguage();
 
   return (
@@ -49,11 +48,14 @@ export function Header() {
               rightMenu,
               styles,
               pathname,
-              changeLanguage
+              changeLanguage,
             }}
           />
           <div className={`${rightMenu}`}>
-          <ChangeLangButton changeLanguage={changeLanguage} isMobile={false} />
+            <ChangeLangButton
+              changeLanguage={changeLanguage}
+              isMobile={false}
+            />
           </div>
           <div className="relative ">
             <button
@@ -85,8 +87,8 @@ export function Header() {
 
           <HeaderSocial styles={styles} />
 
-          <button
-            onClick={() => onOpenModal("order")}
+          <Link
+          to={'/booking'}
             className={`uppercase bg-[#a33d2e] text-white px-4 lg:w-xs text-center items-center justify-center  py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
               scrolled ? "lg:flex hidden" : "flex"
             }`}
@@ -101,7 +103,7 @@ export function Header() {
                   {word}&nbsp;
                 </span>
               ))}
-          </button>
+          </Link>
         </div>
       </div>
 
