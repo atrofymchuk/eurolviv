@@ -10,6 +10,7 @@ import { ConferenceService } from "./pages/ConferenceService";
 import { ScrollToTop } from "./components/utils/ScrollOnTop";
 import Booking from "./pages/BookRoom";
 import RedirectToAdminPanel from "./components/utils/RedirectToAdminPanel";
+import { OnLoadingSpin } from "./components/utils/OnLoadingSpin";
 
 export const Layout = () => {
   const location = useLocation();
@@ -17,9 +18,7 @@ export const Layout = () => {
   if (location.pathname === "/admin") {
     RedirectToAdminPanel();
     return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-      </div>
+      <OnLoadingSpin />
     );
   }
 
