@@ -2,9 +2,10 @@ import Slider from "react-slick";
 import { ReviewSliderProps } from "../../store/types";
 import { ReviewCard } from "./ReviewCard";
 import { forwardRef, memo, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
-
+  const {t } = useTranslation()
   const settings = {
     initialSlide: 0,
     slidesToShow: 3, 
@@ -39,7 +40,7 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
       <Slider {...settings} ref={ref} className="review mt-10">
         {mixedReviews.map((review, index) => (
           <div key={index} className="mt-2.5 ">
-            <ReviewCard review={review} />
+            <ReviewCard review={review} reviewHeader={t("reviews.review")}/>
           </div>
         ))}
       </Slider>

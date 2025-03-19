@@ -32,7 +32,7 @@ export const WhereWeAre = () => {
               </span>
               {t("about.whereWeAre.desc.2")}
             </p>
-            <p className="font-semibold text-sm xl:text-lg text-center lg:text-left  uppercase pt-6 md:w-1/2">
+            <p className="font-semibold text-sm xl:text-lg text-center lg:text-left  uppercase pt-6 w-1/2 mx-auto lg:mx-0 lg:w-2/3">
               {t("about.whereWeAre.rating")}
             </p>
             <div className="flex justify-center lg:justify-start">
