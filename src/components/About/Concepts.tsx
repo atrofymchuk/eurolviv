@@ -37,7 +37,7 @@ export const Concepts = () => {
                   : "xl:border-l-0 xl:border-t border-t-0 md:border-t md:border-b-0 xl:border-b "
               }${index === concepts.length - 1 ? "border-b-0 md:border-b" : ""}`}
           >
-            <div className="text-center flex flex-col items-center px-6 py-8 xl:h-[579px] h-[469px]">
+            <div className="text-center flex flex-col items-center px-10 py-8 h-full xl:min-h-[579px] min-h-[469px]">
               <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
                 {t(title[0])}
               </h1>
@@ -51,7 +51,7 @@ export const Concepts = () => {
                   className="w-[200px] h-[191px] object-cover xl:my-6 my-4"
                 />
               </InViewWrapper>
-              <p className="text-sm xl:text-base flex-grow font-cofo font-normal px-2  xl:text-[16px]  2xl:text-[18px]">
+              <p className="text-sm xl:text-base flex-grow font-cofo font-normal   xl:text-[16px]  2xl:text-[18px]">
                 {t(text)}
               </p>
               <div className="mt-auto">

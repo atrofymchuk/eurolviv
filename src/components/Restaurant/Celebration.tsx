@@ -14,7 +14,7 @@ import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
           <span className="font-blessed  block text-center leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] ml-2 xl:inline lg:pb-[19px]">
             Ruff
           </span>
-          <h1 className="uppercase lg:w-fit w-[217px] md:w-[317px] xl:text-[64px] lg:text-[54px] md:text-[44px]  lg:leading-[67px] leading-[94%]   text-[32px] tracking-[-7%] lg:whitespace-nowrap   ">
+          <h1 className="uppercase lg:w-fit w-[217px] md:w-[317px] xl:text-[100px] lg:text-[54px] md:text-[44px]  lg:leading-[67px] leading-[94%]   text-[32px] tracking-[-7%] lg:whitespace-nowrap   ">
             {t('restaurant.celebration.title')}
           </h1>
           <div className="lg:space-y-4 space-y-4 lg:mt-[37px] mt-[24px]">
@@ -29,7 +29,7 @@ import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
             {t('buttons.celebrationMenu')}
           </button>
         </div>
-        <div className="md:flex hidden  border-[#B3B3B3]  "></div>
+        <div className="md:flex hidden  border-[#B3B3B3]"></div>
       </div>
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 border-x md:border-b-0   border-y border-[#B3B3B3] w-full">
         <div className="flex items-center justify-center px-5 py-5  ">

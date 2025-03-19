@@ -89,7 +89,7 @@ export function Header() {
 
           <Link
           to={'/booking'}
-            className={`uppercase bg-[#a33d2e] text-white px-4 lg:w-xs text-center items-center justify-center  py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
+            className={ `uppercase bg-[#a33d2e] text-white px-4 lg:w-xs text-center items-center justify-center  py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
               scrolled ? "lg:flex hidden" : "flex"
             }`}
           >
@@ -97,7 +97,7 @@ export function Header() {
               .split(" ")
               .map((word, index) => (
                 <span
-                  className={`${index === 1 ? "lg:flex hidden" : ""}`}
+                  className={`uppercase ${index === 1 ? "lg:flex hidden" : ""}`}
                   key={index}
                 >
                   {word}&nbsp;

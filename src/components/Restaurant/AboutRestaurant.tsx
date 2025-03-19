@@ -53,14 +53,14 @@ export const AboutRestaurant = () => {
                 <img
                   src={aboutImageFst}
                   alt=""
-                  className="2xl:w-[490px] 2xl:h-[319px] xl:w-[316px] xl:h-[306px] md:w-[255px] md:h-[203px] w-[155px] lg:w-[303px] h-[203px] px-2 object-cover"
+                  className=" w-full h-full  px-2 object-cover"
                 />
             </div>
             <div className=" border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[15px] lg:pb-[20px] pt-[10px] pb-[13px] ">
                 <img
                   src={aboutImageScd}
                   alt=""
-                  className="2xl:w-[490px] 2xl:h-[319px] xl:w-[316px] xl:h-[306px] w-[155px] md:w-[255px] md:h-[203px] lg:w-[303px] h-[203px] px-2 object-cover"
+                  className=" w-full h-full px-2 object-cover"
                 />
             </div>
           </div>
@@ -68,7 +68,7 @@ export const AboutRestaurant = () => {
             <img
                 src={aboutImageTrd}
                 alt=""
-                className="2xl:w-[1001px] 2xl:h-[292px] xl:w-[632px] lg:w-[418px] xl:h-[390px] lg:h-[326px] md:w-[476px] md:h-[306px] w-[316px] h-[206px] px-2 object-cover"
+                className=" w-full h-full px-2.5 object-cover"
               />
           </div>
         </div>

@@ -19,33 +19,29 @@ export const RestaurantHeader = () => {
         </InViewWrapper>
 
       <h4 className="font-cofo text-[#FFFFFF] leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4 lg:mb-6 md:mb-1">
-        <span className="font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl lg:text-2xl md:text-xl ml-2 xl:inline">
+        <span className="font-blessed xl:font-extrabold block text-center text-[13px] lg:text-[28px] xl:text-[36px] lg:text-2xl md:text-xl ml-2 xl:inline">
           {t('restaurant.header.title')}
         </span>
       </h4>
 
-      <h1 className="uppercase font-cofo xl:text-[198px] lg:text-[148px] md:text-[108px] text-[64px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent">
+      <h1 className="uppercase font-cofo xl:text-[357px] lg:text-[238px] md:text-[108px] text-[120px] font-normal text-[#FFFFFF] xl:leading-[69%] md:leading-[60%] leading-[70%] tracking-[-0.1em] text-center underline decoration-transparent">
         ruff
       </h1>
 
-      <h4 className="font-cofo text-[18px] font-semibold w-[300px] lg:w-fit text-white leading-[22.68px] text-center uppercase xl:mt-4 mt-7.5">
+      <h4 className="font-cofo text-[14px] xl:text-[38px] lg:text-[26px] leading-[104%] font-semibold w-fit text-white  text-center uppercase xl:mt-4 mt-3.5">
         {t('restaurant.header.desc')}
       </h4>
-
-      <div className="flex lg:flex-row flex-col lg:space-x-[13px] lg:spact-y-0 lg:space-y-0 space-y-[12px] mt-[88px]">
-        <button  onClick={()=>onOpenModal('menu')} className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] hover:cursor-pointer px-[96px] py-[13px] rounded-full text-md hover:text-[#8C331B] hover:bg-white">
+      <div className="flex lg:flex-row flex-col w-fit lg:space-x-[13px] lg:spact-y-0 lg:space-y-0 space-y-[12px] mt-[88px] md:max-w-full max-w-[171px]">
+        <button  onClick={()=>onOpenModal('menu')} className="font-cofo font-extrabold uppercase text-white bg-[#8C331B] text-[12px] md:text-[13px] lg:text-[14px] 
+         hover:cursor-pointer md:px-[96px] md:py-[13px] px-[65px] py-[12.5px] rounded-full text-md hover:text-[#8C331B] hover:bg-white">
           {t('restaurant.menu.menu')}
         </button>
-        <button className="font-cofo font-extrabold uppercase border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer px-9 py-[13px] rounded-4xl text-md " >
+        <button className="font-cofo font-extrabold uppercase  py-[12.5px] border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer md:px-9 md:py-[13px] rounded-4xl  md:text-[13px] lg:text-[14px] text-[12px] " >
           {t('buttons.bookTable')}
         </button>
+
       </div>
 
-        <div className=" absolute right-0 lg:top-1/3 h-fit bottom-1/3 flex items-center justify-center  transform -translate-y-1/2 rotate-[-90deg] origin-bottom-right bg-[#252526] rounded-full py-[13px] px-[25px] ">
-          <p className="uppercase text-white font-cofo h-fit font-bold tracking-widest  text-[12px] lg:text-[16px] lg:leading-[20px]  ">
-          {t('restaurant.header.price')}
-        </p>
-      </div>
     </div>
   );
 };

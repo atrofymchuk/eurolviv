@@ -22,7 +22,7 @@ export const Karaoke = () => {
                 {t('restaurant.karaoke.desc.1')}
               </p>
               <p className="uppercase font-semibold lg:text-[18px] lg:mt-[20px] text-[12px] leading-[15px] lg:order-none order-1 mt-[13px] mb-[14px]">
-                {t('restaurant.karaoke.karaokeDesc')}
+                {t('restaurant.karaoke.karaokeTime')}
               </p>
             </div>
           </div>

@@ -1,13 +1,22 @@
 import { useState, useRef } from "react";
 import Slider from "react-slick";
 
-
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { InViewWrapper } from "../utils/InViewWrapper";
-import { aboutRestaurant, aboutRestaurantScd, aboutRestaurantTrd } from "../../store/exportsImg";
+import {
+  aboutRestaurant,
+  aboutRestaurantScd,
+  aboutRestaurantTrd,
+} from "../../store/exportsImg";
 
 function AboutSlider() {
-  const slides = [aboutRestaurant, aboutRestaurantScd, aboutRestaurantTrd, aboutRestaurant, aboutRestaurantScd];
+  const slides = [
+    aboutRestaurant,
+    aboutRestaurantScd,
+    aboutRestaurantTrd,
+    aboutRestaurant,
+    aboutRestaurantScd,
+  ];
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
 
@@ -37,7 +46,7 @@ function AboutSlider() {
   return (
     <div className="slider-container relative w-full flex items-center justify-center">
       <button
-        className="absolute left-10 md:left-[18%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute left-10 md:left-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
                    lg:flex hidden items-center justify-center text-[#8C331B] bg-white 
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickPrev()}
@@ -74,7 +83,7 @@ function AboutSlider() {
       </Slider>
 
       <button
-        className="absolute hidden md:right-[18%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute hidden md:right-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
                    lg:flex items-center justify-center text-[#8C331B] bg-white 
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickNext()}
