@@ -9,15 +9,14 @@ import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 export const Advantages = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
-  
   const {hotelInfo,services} = usePagesInfoStore()
 
 
   return (
     <section className="flex justify-center items-center bg-[#A47762]  *:font-cofo">
       <div className="container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 items-center xl:h-[684px] max-w-[89.58%] gap-0">
-        <div className="h-full p-4 flex lg:justify-start justify-center">
-          <div className="flex flex-col xl:ps-7.5 items-center  lg:items-start lg:text-start">
+        <div className="h-full p-4 flex lg:justify-start sm:justify-center">
+          <div className="flex flex-col xl:ps-7.5 sm:items-center  lg:items-start lg:text-start">
             <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[56px]">
               {t("about.advantages.title")}
             </h1>
@@ -47,8 +46,8 @@ export const Advantages = () => {
           </InViewWrapper>
         </div>
 
-        <div className="h-full p-4 w-full lg:border-x  border-[#C7C7C7]">
-          <div className="flex flex-col ps-0 xl:ps-7.5 items-center lg:items-start">
+        <div className="h-full p-4 w-full lg:border-x  pb-[47px] lg:pb-0 border-[#C7C7C7]">
+          <div className="flex flex-col ps-0 xl:ps-7.5 sm:items-center lg:items-start">
             <h1 className="uppercase text-3xl xl:text-5xl text-[#FFFFFF] pt-[18px] xl:pt-[56px] xl:text-left">
               {t("about.advantages.title2")}
             </h1>
@@ -64,7 +63,7 @@ export const Advantages = () => {
             </ul>
             <button
               onClick={() => onOpenModal("order")}
-              className="uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
+              className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
             >
               {t("buttons.bookRoom")}
             </button>

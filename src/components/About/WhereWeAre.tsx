@@ -12,18 +12,18 @@ export const WhereWeAre = () => {
   return (
     <section className="flex flex-col   font-cofo">
       <div className="grid lg:grid-cols-[1fr_1fr] max-w-[89.58%]  mx-auto w-full container-fluid border border-t-0 border-[#c7c7c7]">
-        <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 pe-0 xl:h-[692px] lg:pt-[73px]">
+        <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start  border-t-0 p-4 mt-[54px] lg:mt-0  xl:h-[692px] lg:pt-[73px]">
           <div className="lg:ms-[52px]  ">
             <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
 
               <InViewWrapper>
-              <img src={navigate} alt="navigate" className="mr-2" />
+              <img src={navigate} alt="navigate" className="mr-1" />
               </InViewWrapper>
-              <span className="underline text-[#8C331B] font-semibold text-[12px] xl:text-lg ">
+              <span className="underline text-[#8C331B] font-normal text-[12px] xl:text-lg ">
                 {t("about.whereWeAre.desc.0")}
               </span>
             </p>
-            <h1 className="uppercase text-3xl xl:text-[100px] font-bold mt-4 text-center lg:text-left leading-[81%] tracking-[-10%] ">
+            <h1 className="uppercase text-3xl xl:text-[100px] font-normal mt-4 text-center lg:text-left leading-[81%] tracking-[-0.1em] ">
               {t("about.whereWeAre.title")}
             </h1>
             <p className="text-[#8F8F8F] text-sm xl:text-[20px] xl:max-w-[500px] text-center uppercase lg:text-left xl:mt-[52px] mt-6">
@@ -32,7 +32,7 @@ export const WhereWeAre = () => {
               </span>
               {t("about.whereWeAre.desc.2")}
             </p>
-            <p className="font-semibold text-sm xl:text-lg text-center lg:text-left  uppercase">
+            <p className="font-semibold text-sm xl:text-lg text-center lg:text-left  uppercase pt-6 md:w-1/2">
               {t("about.whereWeAre.rating")}
             </p>
             <div className="flex justify-center lg:justify-start">
@@ -46,7 +46,7 @@ export const WhereWeAre = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center h-full w-full max-h-[34rem] xl:min-h-[521px] lg:h-[28rem] mx-auto my-auto max-w-[862px]  p-5 ps-0">
+        <div className="flex justify-center items-center h-full w-full max-h-[34rem] xl:min-h-[521px] lg:h-[28rem] min-h-[303px] mx-auto my-auto max-w-[862px]  p-5 ">
           <InViewWrapper>
 
           <MapComponent />
@@ -54,18 +54,18 @@ export const WhereWeAre = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]  border-t-0  container-fluid max-w-[89.58%] mx-auto">
-        <div className="p-8 xl:p-12  lg:border-r border-[#c7c7c7]">
-          <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left">
+      <div className="grid lg:grid-cols-2 w-full border   border-[#c7c7c7]   border-t-0  container-fluid max-w-[89.58%] mx-auto">
+        <div className="p-4 xl:p-12  lg:border-r border-[#c7c7c7] flex flex-col items-center">
+          <h2 className="text-[#8C331B] text-xl xl:text-[24px] font-semibold text-center xl:text-left uppercase tracking-[-0.05em]">
             {t("about.whereWeAre.infrastructureTitle")}
           </h2>
-          <h1 className="uppercase text-3xl xl:text-[100px] font-bold mt-4 text-center xl:text-left leading-[81%] tracking-[-7%]">
+          <h1 className="uppercase text-3xl xl:text-[100px] font-bold mt-4 text-center xl:text-left leading-[81%] tracking-[-7%] ">
             {t("about.whereWeAre.placesTitle")}
           </h1>
-          <p className="text-[#252526] text-sm xl:text-lg mt-6 text-center xl:text-left ">
+          <p className="text-[#252526] text-sm xl:text-[18px] mt-6 text-center  xl:text-left uppercase w-4/5 tracking-[-0.001em] leading-[120%]">
             {t("about.whereWeAre.infrastructureDesc")}
           </p>
-          <div className="flex justify-center xl:justify-start mt-6">
+          <div className="flex justify-center xl:justify-start mt-12">
             <InViewWrapper>
             <img
               src={hotel}
@@ -76,18 +76,18 @@ export const WhereWeAre = () => {
           </div>
         </div>
 
-        <div className="p-8 xl:p-12 border-t lg:border-t-0 border-[#c7c7c7]">
-          <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left">
+        <div className="p-4 xl:p-10 border-t lg:border-t-0 border-[#c7c7c7]">
+          <h2 className="text-[#8C331B] text-xl xl:text-[40px] tracking-[-0.04em] font-semibold text-center xl:text-left uppercase">
             {t("about.whereWeAre.whatIsClose")}
           </h2>
-          <ul className="grid gap-3 mt-6 text-left">
+          <ul className="grid gap-3 mt-6 text-left uppercase lg:space-y-1.5 ">
             {infrastructure.map(([place, distance], index) => (
               <li
                 key={index}
-                className="flex justify-between text-sm xl:text-lg"
+                className="flex justify-between text-[12px] xl:text-[20px]"
               >
-                <span>{t(place)}</span>
-                <span className="text-[#8C331B] font-semibold">{t(distance)}</span>
+                <span >{t(place)}</span>
+                <span className="text-[#8C331B] font-semibold whitespace-nowrap my-auto text-[12px]">{t(distance)}</span>
               </li>
             ))}
           </ul>
@@ -96,17 +96,17 @@ export const WhereWeAre = () => {
             <img src={hotel} alt="hotel" className="w-[300px] h-[230px]" />
             </InViewWrapper>
           </div>
-          <h2 className="text-[#8C331B] text-xl xl:text-3xl font-semibold text-center xl:text-left mt-10">
+          <h2 className="text-[#8C331B] text-xl xl:text-[40px] font-semibold text-center xl:text-left mt-10 uppercase">
             {t("about.whereWeAre.places.heading")}
           </h2>
-          <ul className="grid gap-3 mt-6 text-left">
+          <ul className="grid gap-3 mt-6 text-left uppercase lg:space-y-1.5">
             {places.map(([place, distance], index) => (
               <li
                 key={index}
-                className="flex justify-between text-sm xl:text-lg"
+                className="flex justify-between text-sm xl:text-[20px] text-[12px]"
               >
                 <span>{t(place)}</span>
-                <span className="text-[#8C331B] font-semibold">{t(distance)}</span>
+                <span className="text-[#8C331B] font-semibold whitespace-nowrap text-[12px]">{t(distance)}</span>
               </li>
             ))}
           </ul>

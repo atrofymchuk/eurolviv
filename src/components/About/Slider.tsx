@@ -4,14 +4,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider } from "../../store/exportsImg";
+import {
+  champagneAboutSlider,
+  mirrorAboutSlider,
+  bathroomAboutSlider,
+  bedroomAboutSlider,
+} from "../../store/exportsImg";
 
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "../utils/InViewWrapper";
-const slides = [champagneAboutSlider, bathroomAboutSlider, bedroomAboutSlider, mirrorAboutSlider];
-
-
-
+const slides = [
+  champagneAboutSlider,
+  bathroomAboutSlider,
+  bedroomAboutSlider,
+  mirrorAboutSlider,
+];
 
 const ImageSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -21,7 +28,7 @@ const ImageSlider = () => {
     centerMode: true,
     centerPadding: "8%",
     slidesToShow: 3,
-    arrows:false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -45,6 +52,7 @@ const ImageSlider = () => {
   const slideRef = useRef<Slider | null>(null);
 
   return (
+    
     <div className="relative w-full flex justify-center ">
       <Slider {...settings} ref={slideRef} className={`w-full h-full  img`}>
         {slides.map((image, index) => {
@@ -54,20 +62,23 @@ const ImageSlider = () => {
 
           return (
             <InViewWrapper key={index}>
-            <img
-            
-            src={image}
-            alt={`slide_${index}`}
-            className={`w-full max-w-[500px]  object-cover  transition-all duration-500 lg:px-0 px-2
-              ${isSide ? "xl:w-[530px] xl:h-[353px] w-[231px] h-[154px] z-5" : ""}
+              <img
+                src={image}
+                alt={`slide_${index}`}
+                className={`w-full max-w-[500px]  object-cover  transition-all duration-500  px-2
+              ${
+                isSide
+                  ? "xl:w-[530px] xl:h-[353px] w-[231px] h-[154px] z-5"
+                  : ""
+              }
               ${isEdge ? "xl:w-[514px] xl:h-[316px] w-[231px] h-[154px]" : ""}
               ${
                 isActive
-                ? "xl:w-[510px] xl:h-[400px] w-[290px] h-[193px] z-10"
-                : ""
+                  ? "xl:w-[510px] xl:h-[400px] w-[290px] max-h-full h-5/6 z-10 scale-[105%] lg:scale-[100%]"
+                  : ""
               }`}
               />
-              </InViewWrapper>
+            </InViewWrapper>
           );
         })}
       </Slider>

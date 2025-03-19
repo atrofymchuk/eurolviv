@@ -20,8 +20,6 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
         settings: {
           slidesToShow: 1, 
           slidesToScroll: 1,
-          centerMode: false, 
-          centerPadding: "%", 
           rows: 2,
           useTransform:false,
           variableWidth: true,
@@ -37,7 +35,7 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
   
 
   return (
-    <div className="z-20 h-full lg:w-fit   top-0 left-0 w-full ">
+    <div className="z-20  w-screen top-0 left-0  ">
       <Slider {...settings} ref={ref} className="review mt-10">
         {mixedReviews.map((review, index) => (
           <div key={index} className="mt-2.5 ">
