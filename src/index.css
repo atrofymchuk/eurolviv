@@ -23,3 +23,14 @@
 .font-blessed{
   font-family: Blessed;
 }
+
+@font-face {
+  font-family: 'CoFoSans-Medium';
+    src: url(./assets//fonts/CoFoSans-Medium.ttf) ;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-cofo-medium{
+  font-family: 'CoFoSans-Medium';
+}

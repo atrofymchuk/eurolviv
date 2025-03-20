@@ -4,3 +4,13 @@
     filter: invert(21%) sepia(0%) saturate(30%) hue-rotate(254deg) brightness(91%) contrast(88%);
 }
 
+.border-gradient {
+  border-width: 1px;
+  
+  border-style: solid;
+  border-image: linear-gradient(270deg, #242425 0%, #6D7984 100%);
+}
+  .footer-gradient{
+    background: linear-gradient(180deg, #242425 0%, rgba(0, 0, 0, 0) 97.05%);
+
+  }
