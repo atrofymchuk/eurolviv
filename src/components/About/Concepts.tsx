@@ -1,8 +1,7 @@
 
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-
+import { ConceptCasd } from "./ConceptCasd";  
 export const Concepts = () => {
   const { t } = useTranslation();
   const { concepts } = usePagesInfoStore();
@@ -17,51 +16,14 @@ export const Concepts = () => {
           <h1 className="text-[32px] xl:text-[100px] leading-[35px] xl:leading-[94px] uppercase font-cofo">
             {t("about.concepts.heading.0")}
           </h1>
-          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] font-semibold font-cofo">
+          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B]  font-cofo-medium">
             {t("about.concepts.desc")}
           </p>
         </div>
 
         {concepts.map(({ title, img, alt, text }, index) => (
-          <div
-            key={index}
-            className={`border  border-[#C7C7C7] 
-              ${
-                index === concepts.length - 2
-                  ? "md:border-e-0 xl:border-e md:border-b"
-                  : ""
-              }
-              ${
-                index === 0
-                  ? "xl:border-l md:border-e-0 md:border-b-0 xl:border-r xl:border-b"
-                  : "xl:border-l-0 xl:border-t border-t-0 md:border-t md:border-b-0 xl:border-b "
-              }${index === concepts.length - 1 ? "border-b-0 md:border-b" : ""}`}
-          >
-            <div className="text-center flex flex-col items-center px-10 py-8 h-full xl:min-h-[579px] min-h-[469px]">
-              <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
-                {t(title[0])}
-              </h1>
-              <h1 className="uppercase text-[20px] xl:text-[30px] font-semibold leading-[20px] xl:leading-[30px] font-cofo">
-                {t(title[1])}
-              </h1>
-              <InViewWrapper>
-                <img
-                  src={img}
-                  alt={alt}
-                  className="w-[200px] h-[191px] object-cover xl:my-6 my-4"
-                />
-              </InViewWrapper>
-              <p className="text-sm xl:text-base flex-grow font-cofo font-normal   xl:text-[16px]  2xl:text-[18px]">
-                {t(text)}
-              </p>
-              <div className="mt-auto">
-                <button className="font-semibold border border-[#8C331B] text-[#8C331B] px-8 py-3 rounded-full uppercase text-sm xl:text-base transition-all duration-300 hover:bg-[#8C331B] hover:text-white font-cofo">
-                  {t("buttons.details")}
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
+          <ConceptCasd key={index} title={title} img={img} alt={alt} text={text} index={index} />
+        ))} 
 
         <div className="xl:col-span-4 md:col-span-2 xl:h-[165px] xl:w-full  xl:border-x border-x xl:border-b xl:border-t-0 border-t md:h-0  border-[#C7C7C7] "></div>
       </div>

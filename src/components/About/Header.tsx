@@ -23,7 +23,7 @@ export const AboutHeader = () => {
         />
       </InViewWrapper>
 
-      <h4 className="font-cofo text-[#FFFFFF] z-10  uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent items-center xl:mb-4">
+      <h4 className="font-cofo text-[#FFFFFF] z-10  uppercase leading-[22.68px] font-cofo-medium lg:text-[18px] underline text-sm decoration-transparent items-center xl:mb-4">
         {t("global.createdFor")}
         <span className="font-blessed xl:font-extrabold normal-case block text-center text-[13px] xl:text-[32px] ml-2 xl:inline ">
           {t("global.whereTo")}
@@ -35,13 +35,13 @@ export const AboutHeader = () => {
       </h1>
       <h4 className="font-cofo md:text-[18px] text-[14px] font-medium uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">
         {t("about.header.desc.0")}
-        <span className="xl:block font-extrabold text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
+        <span className="xl:block font-cofo-medium text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
           {t("about.header.desc.1")}
         </span>
       </h4>
       <Link
         to={"/booking"}
-        className=" font-cofo font-extrabold uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl z-10 text-md"
+        className=" font-cofo-medium uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl z-10 text-md"
       >
         {t("buttons.book")}
       </Link>

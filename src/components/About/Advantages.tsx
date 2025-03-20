@@ -63,7 +63,7 @@ export const Advantages = () => {
             </ul>
             <button
               onClick={() => onOpenModal("order")}
-              className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-semibold text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
+              className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-cofo-medium text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
             >
               {t("buttons.bookRoom")}
             </button>

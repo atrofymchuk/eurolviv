@@ -24,7 +24,7 @@ export const StorySection = () => {
             <div
               className="flex flex-col items-center lg:items-start text-xs
              sm:text-sm md:text-base lg:text-lg 2xl:text-[20px] text-[#252526]
-              uppercase md:mt-3.5 mb-5 font-semibold"
+              uppercase md:mt-3.5 mb-5 "
             >
               <h1
                 className="text-[32px]  md:text-[48px] lg:text-[60px] 2xl:text-[100px] font-normal 
@@ -34,10 +34,10 @@ tracking-[-0.017em] uppercase text-[#242425] text-center w-full lg:text-end"
                 {t("about.about.title.1")}
               </h1>
 
-              <p className="w-full block md:pt-4 pt-6 lg:pt-0 text-[12px] leading-[120%]">
+              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 lg:pt-0 text-[12px] leading-[120%]">
                 {t("about.about.desc.0")}
               </p>
-              <p className="w-full block text-[12px] leading-[120%]">{t("about.about.desc.1")}</p>
+              <p className="w-full block xl:text-[20px] lg:text-[18px] text-[12px] leading-[120%]">{t("about.about.desc.1")}</p>
             </div>
           </div>
         </div>
@@ -58,11 +58,11 @@ tracking-[-0.017em] uppercase text-[#242425] text-center w-full lg:text-end"
         <div className="lg:border-s  border-[#C7C7C7] flex flex-col h-full text-xs sm:text-sm md:text-base  2xl:text-2xl font-normal tracking-[-0.01em] text-center lg:text-left">
           <p className="text-xs sm:text-sm md:text-[14px] tracking-[-0.01]  xl:text-[18px] 2xl:text-[20px] text-[#252526] p-[15px] pt-[26px]  md:px-3 uppercase font-normal leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24px] 2xl:leading-[28px]">
             {t("about.about.photoDesc.0")}
-            <span className="font-semibold text-[#8C331B]">{t("about.about.year")}</span>
+            <span className="font-cofo-medium text-[#8C331B]">{t("about.about.year")}</span>
             {t("about.about.photoDesc.1")}
           </p>
 
-          <p className="border-t md:font-semibold p-[15px] sm:p-6  md:px-3 lg:p-3 border-[#C7C7C7] text-xs sm:text-sm md:text-[14px]  pt-[26px]  xl:text-[18px] 2xl:text-[20px] mt-auto  leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24px] 2xl:leading-[28px] tracking-[-0.001em] uppercase text-[#8C331B] border-b">
+          <p className="border-t md:font-cofo-medium font-[600] p-[15px] sm:p-6  md:px-3 lg:p-3 border-[#C7C7C7] text-xs sm:text-sm md:text-[14px]  pt-[26px]  xl:text-[18px] 2xl:text-[20px] mt-auto  leading-[16px] sm:leading-[18px] md:leading-[20px] lg:leading-[24px] 2xl:leading-[28px] tracking-[-0.001em] uppercase text-[#8C331B] border-b">
             {t("about.about.photoDesc.2")}
           </p>
         </div>
