@@ -5,7 +5,7 @@ import { TFunction } from "i18next";
 export const PlacesNearbySection = ({ t, places, infrastructure }: { t: TFunction, places: string[][], infrastructure: string[][] } ) => {
   return (
     <div className="p-4 xl:p-10 border-t lg:border-t-0 border-[#c7c7c7]">
-      <h2 className="text-[#8C331B] text-xl xl:text-[40px] tracking-[-0.04em]  text-center xl:text-left uppercase">
+      <h2 className="text-[#8C331B] text-[24px] xl:text-[40px] tracking-[-0.04em]  text-center xl:text-left uppercase">
         {t("about.whereWeAre.whatIsClose")}
       </h2>
       <ul className="grid gap-3 mt-6 text-left uppercase lg:space-y-1.5">
@@ -21,13 +21,13 @@ export const PlacesNearbySection = ({ t, places, infrastructure }: { t: TFunctio
           </li>
         ))}
       </ul>
-      
+
       <div className="flex justify-center mt-6 lg:hidden">
         <InViewWrapper>
-          <img src={hotel} alt="hotel" className="w-[300px] h-[230px]" />
+          <img src={hotel} alt="hotel" className="w-full h-[25%]" />
         </InViewWrapper>
       </div>
-      <h2 className="text-[#8C331B] text-xl xl:text-[40px]  text-center xl:text-left mt-10 uppercase">
+      <h2 className="text-[#8C331B] text-[24px] xl:text-[40px]  text-center xl:text-left mt-10 uppercase">
         {t("about.whereWeAre.places.heading")}
       </h2>
       <ul className="grid gap-3 mt-6 text-left uppercase lg:space-y-1.5">

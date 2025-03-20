@@ -7,7 +7,7 @@ import { map } from "../../Constants/map";
 export const LocationInfo = ({ t }: { t: TFunction }) => {
   return (
     <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start border-t-0 p-4 mt-[54px] lg:mt-0 xl:h-[692px] lg:pt-[73px]">
-      <div className="lg:ms-[52px]">
+      <div className="xl:ms-[52px]">
         <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
           <InViewWrapper>
             <img src={navigate} alt="navigate" className="mr-1" />
@@ -25,7 +25,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           </span>
           {t("about.whereWeAre.desc.2")}
         </p>
-        <p className="font-cofo-medium text-sm xl:text-lg text-center lg:text-left uppercase pt-6 w-1/2 mx-auto lg:mx-0 lg:w-2/3">
+        <p className="font-cofo-medium text-sm xl:text-lg text-center lg:text-left uppercase pt-6 w-4/5 mx-auto lg:mx-0 lg:w-2/3">
           {t("about.whereWeAre.rating")}
         </p>
         <div className="flex justify-center lg:justify-start">

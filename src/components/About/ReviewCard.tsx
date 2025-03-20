@@ -13,7 +13,7 @@ export const  ReviewCard =({ review, reviewHeader }: { review: Review, reviewHea
         </div>
       
         <div className="xl:ps-[33px] xl:mt-[34px] max-h-fit mt-[28px] ps-[17px]  ">
-        <h2 className="uppercase text-[#A47762] font-semibold xl:text-[20px] text-[14px]   font-cofo ">{reviewHeader}</h2>
+        <h2 className="uppercase text-[#A47762] xl:text-[20px] text-[14px]   font-cofo-medium ">{reviewHeader}</h2>
           <p className="uppercase text-[#6B6B6B] xl:pt-[13px] xl:max-w-[476px] text-[12px] xl:text-[18px] xl:leading-[22px] font-cofo leading-[15.1px]">
             {review.text}
           </p>

@@ -16,7 +16,7 @@ export const WhereWeAre = () => {
         <MapSection />
       </div>
 
-      <div className="grid lg:grid-cols-2 w-full border border-[#c7c7c7] border-t-0 container-fluid max-w-[89.58%] mx-auto">
+      <div className="grid lg:grid-cols-2 w-full  border border-[#c7c7c7] border-t-0 container-fluid max-w-[89.58%] mx-auto">
         <InfrastructureSection t={t} />
         <PlacesNearbySection t={t} places={places} infrastructure={infrastructure} />
       </div>
