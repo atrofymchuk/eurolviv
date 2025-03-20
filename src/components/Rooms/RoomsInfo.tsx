@@ -16,7 +16,7 @@ export const RoomsInfo = () => {
               <h1 className="uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                 <span className="text-[#8C331B]">{t("rooms.about.heading.0")}</span>, {t("rooms.about.heading.1")}
               </h1>
-              <div className="flex flex-col items-end">
+              <div className="flex flex-col items-end ">
                 <div className="w-fit space-y-[11px]">
                   <h1 className="uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                     {t("rooms.about.heading.2")}
@@ -25,12 +25,12 @@ export const RoomsInfo = () => {
                     {t("rooms.about.heading.3")}
                   </h1>
                   <div className="flex mt-[43px] items-center">
-                    <p className="lg:text-[16px] md:text-[14px] sm:text-[12px] leading-[20px] text-[#252526] uppercase pt-10 max-w-[412px]">
+                    <p className="lg:text-[16px] md:text-[14px] sm:text-[12px] leading-[20px] text-[#252526] uppercase  max-w-[412px]">
                         {t("rooms.about.desc")}
                     </p>
                     <button
                         onClick={()=>onOpenModal('order')}
-                      className="font-cofo font-extrabold uppercase ms-[30px] z-20 bg-[#8C331B] text-white hover:cursor-pointer lg:px-[38px] md:px-[30px] sm:px-[25px] h-fit lg:py-[13px] md:py-[11px] sm:py-[10px] rounded-full lg:text-[14px] md:text-[13px] sm:text-[12px]"
+                      className="font-cofo-medium uppercase ms-[30px] z-20 self-center bg-[#8C331B] text-white hover:cursor-pointer lg:px-[38px] md:px-[30px] sm:px-[25px] h-fit lg:py-[13px] md:py-[11px] sm:py-[10px] rounded-full lg:text-[14px] md:text-[13px] sm:text-[12px]"
                     >
                       {t("buttons.bookRoom")}
                     </button>
