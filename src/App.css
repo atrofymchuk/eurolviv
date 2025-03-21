@@ -6,7 +6,7 @@
   display: grid;
   place-items: center;
   margin: auto;
-  height: 400px;
+  height: 574px;
   padding: 0px;
 }
 .review > .slick-list >.slick-track>.slick-active  {
@@ -63,6 +63,7 @@
   .special-offers-slider > .slick-list > .slick-track > .slick-slide {
 width: 399px !important;
   }
+
 }
 
 @media(max-width:1024px){
@@ -72,6 +73,9 @@ width: 399px !important;
   .review > .slick-list >.slick-track>.slick-active  {
     width: 299px !important;
 
+  }
+  .img > .slick-list >.slick-track>.slick-slide > div {
+    height: 350px;
   }
 }
 
