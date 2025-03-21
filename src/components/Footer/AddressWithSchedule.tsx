@@ -24,7 +24,7 @@ export const AddressWithSchedule = () => {
           <Link
             target="_blank"
             to={map.address}
-            className="inline-flex w-fit uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[22px] lg:py-[10px] lg:text-[14px] text-[12px] rounded-full
+            className="inline-flex w-fit uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[28.5px] lg:py-[11.5px] lg:text-[14px] text-[12px] rounded-full
               font-cofo-medium  mt-5  lg:mt-[35px]    hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}

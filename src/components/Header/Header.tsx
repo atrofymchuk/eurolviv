@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
 import useLanguage from "../Hooks/useLanguage";
 import { Link } from "react-router-dom";
+import { RiArrowDownSLine } from "react-icons/ri";
+import cn from "classnames";
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -29,15 +31,23 @@ export function Header() {
 
   return (
     <header
-      className="max-w-screen fixed inset-0 z-50 h-fit  flex "
+      className=" fixed inset-0 z-50 h-fit flex items-center justify-center "
       onMouseLeave={() => setIsShowRooms(false)}
     >
+
       <div
-        className={`fixed top-0 left-0 w-full py-4  px-6 flex lg:justify-around  justify-around items-center font-cofo border-b border-[#FFFFFF33] transition-colors duration-300 z-50  max-w-screen 
-          ${scrolled ? "bg-white text-black" : "text-white"} 
-          ${isShowRooms ? "bg-[#252526]/93" : ""}`}
+        className={cn(
+          "fixed top-0 left-0 right-0  mx-auto py-4 px-6 flex justify-between items-center  transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
+          {
+            "bg-white text-black": scrolled,
+            "text-white": !scrolled,
+            "bg-[#252526]/93": isShowRooms,
+          }
+        )}
       >
-        <div className="flex items-center lg:space-x-4 lg:justify-around lg:w-fit w-full">
+        <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto">
+          
+        <div className="flex items-center lg:space-x-4 justify-between w-full">
           <HeaderNav
             {...{
               logo,
@@ -51,66 +61,78 @@ export function Header() {
               changeLanguage,
             }}
           />
-          <div className={`${rightMenu}`}>
-            <ChangeLangButton
-              changeLanguage={changeLanguage}
-              isMobile={false}
-            />
-          </div>
-          <div className="relative ">
-            <button
-              onClick={() => setIsDropdownOpen((prev) => !prev)}
-              className={`whitespace-nowrap uppercase hidden xl:flex items-center space-x-1 font-cofo font-bold hover:cursor-pointer ${rightMenu}`}
-            >
-              <span>{t("header.callUs")}</span>
-              <span>▾</span>
-            </button>
-
-            {isDropdownOpen && (
-              <div
-                className="absolute right-0 mt-2 w-fit bg-white text-black rounded shadow-lg py-2 font-cofo"
-                onMouseLeave={() => setIsDropdownOpen(false)}
+          <div className="flex items-center lg:space-x-4">
+            <div className={cn(`${rightMenu}`)}>
+              <ChangeLangButton
+                changeLanguage={changeLanguage}
+                isMobile={false}
+              />
+            </div>
+            <div className="relative">
+              <button
+                onClick={() => setIsDropdownOpen((prev) => !prev)}
+                className={cn(`whitespace-nowrap uppercase hidden xl:flex items-center space-x-1 font-cofo-medium hover:cursor-pointer ${rightMenu}`) }
               >
-                {["+380 99 123 45 67", "+380 97 765 43 21"].map(
-                  (phone, index) => (
-                    <a
-                      key={index}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {phone}
-                    </a>
-                  )
-                )}
-              </div>
-            )}
-          </div>
-
-          <HeaderSocial styles={styles} />
-
-          <Link
-          to={'/booking'}
-            className={ `uppercase bg-[#a33d2e] text-white px-4 lg:w-xs text-center items-center justify-center  py-2 rounded-3xl hover:bg-[#922b1f] font-cofo font-semibold text-[12px] md:text-[14px] hover:cursor-pointer  hidden lg:flex ${
-              scrolled ? "lg:flex hidden" : "flex"
-            }`}
-          >
-            {t("header.book")
-              .split(" ")
-              .map((word, index) => (
-                <span
-                  className={`uppercase ${index === 1 ? "lg:flex hidden" : ""}`}
-                  key={index}
-                >
-                  {word}&nbsp;
+                <span>{t("header.callUs")}</span>
+                <span>
+                  <RiArrowDownSLine />
                 </span>
-              ))}
-          </Link>
+              </button>
+
+              {isDropdownOpen && (
+                <div
+                  className="absolute right-0 mt-2  bg-white text-black rounded shadow-lg py-2 font-cofo-medium w-[200px]"
+                  onMouseLeave={() => setIsDropdownOpen(false)}
+                >
+                  {["+380 99 123 45 67", "+380 97 765 43 21"].map(
+                    (phone, index) => (
+                      <a
+                        key={index}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                        {phone}
+                      </a>
+                    )
+                  )}
+                </div>
+              )}
+            </div>
+
+            <HeaderSocial styles={styles} />
+
+            <Link
+              to={'/booking'}
+              className={cn(`uppercase bg-[#a33d2e] text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] md:text-[14px] hover:cursor-pointer hidden lg:flex`, {
+                "lg:flex hidden": scrolled,
+                "flex": !scrolled,
+              })}
+              >
+              {t("header.book")
+                .split(" ")
+                .map((word, index) => (
+                  <span
+                  className={cn(`uppercase ${index === 1 ? "lg:flex hidden" : ""}`, {
+                    "lg:flex hidden": scrolled,
+                    "flex": !scrolled,
+                  })}
+                  key={index}
+                  >
+                    {word}&nbsp;
+                  </span>
+                ))}
+            </Link>
+          </div>
+      </div>
         </div>
       </div>
 
       {isShowRooms && !scrolled && (
         <div
-          className={`fixed left-0 w-full p-4 pt-0 z-90 shadow-[0px_4px_86.4px_0px_#252526] bg-[#252526]/93 2xl:top-[117px] xl:top-[103px] lg:top-[93px] md:top-[93px] top-[80px] md:hidden lg:block`}
-        >
+          className={cn(`fixed left-0 w-full p-4 pt-0 z-90 shadow-[0px_4px_86.4px_0px_#252526] bg-[#252526]/93 2xl:top-[117px] xl:top-[103px] lg:top-[93px] md:top-[93px] top-[80px] md:hidden lg:block`, {
+            "bg-white text-black": scrolled,
+            "text-white": !scrolled,
+          })}
+          >
           <div className="flex justify-center">
             <div className=" grid lg:grid-cols-4 grid-cols-2">
               {rooms.slice(0, 4).map((room, index) => (

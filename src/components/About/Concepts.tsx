@@ -16,7 +16,7 @@ export const Concepts = () => {
           <h1 className="text-[32px] xl:text-[100px] leading-[35px] xl:leading-[94px] uppercase font-cofo tracking-[-0.07em]">
             {t("about.concepts.heading.0")}
           </h1>
-          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B]  font-cofo-medium">
+          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] xl:text-[24px] text-[12px]  font-cofo-medium">
             {t("about.concepts.desc")}
           </p>
         </div>

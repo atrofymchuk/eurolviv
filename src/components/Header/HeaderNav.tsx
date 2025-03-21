@@ -4,7 +4,7 @@ import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
 import { InViewWrapper } from "../utils/InViewWrapper";
-
+import cn from "classnames";
 type HeaderNavProps = {
   scrolled: boolean;
   logo: string;
@@ -54,9 +54,12 @@ export const HeaderNav = memo(({
       <Link
       key={path}
       to={path}
-      className={`uppercase ${isActiveLink(
+      className={cn(`uppercase ${isActiveLink(
         path
-      )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `}
+      )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `, {
+        "text-white": !scrolled,
+        "text-black": scrolled,
+      })}
       onClick={() => isMobile && setMenuOpen(false)}
       onMouseEnter={path === "/rooms" ? handleMouseEnterRooms : undefined}
       onMouseLeave={path !== "/rooms" ? handleMouseLeaveRooms : undefined}
@@ -64,12 +67,12 @@ export const HeaderNav = memo(({
       {label}
     </Link>
     ))
-    }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms])
+    }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms, scrolled])
 
 
   return (
-    <div className="flex w-full  ">
-      <div className="flex font-cofo font-normal  lg:justify-end justify-between w-full ">
+    <div className="flex w-[100%]   ">
+      <div className="flex font-normal  lg:justify-end justify-between w-full ">
         <button
           className={`lg:hidden text-white text-2xl flex items-center gap-2`}
           onClick={() => toggleMenu()}
@@ -80,11 +83,11 @@ export const HeaderNav = memo(({
             className={pathname === '/contacts' || scrolled ? "filter-invert-gray" : "" }
           />
           <span
-            className={`font-cofo text-sm ${isActiveLink(
+            className={` text-sm ${isActiveLink(
               '/contacts'
             )}`}
           >
-            МЕНЮ
+            {t("header.menu")}
           </span>
         </button>
 
@@ -93,21 +96,23 @@ export const HeaderNav = memo(({
           <img
             src={logo}
             alt="logo"
-            className={`duration-300 ${iconLogoStyle}  ${
+            className={cn(`duration-300 ${iconLogoStyle}  ${
               !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
-            } 2xl:w-[153px] 2xl:h-[84px] xl:w-[120px] xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`}
+            } 2xl:w-[153px] 2xl:h-[84px] xl:w-[120px] xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`)}
           />
           </InViewWrapper>
         </Link>
 
-        <button
-          className={`bg-[#a33d2e] text-white px-2 py-1 lg:hidden rounded-3xl hover:bg-[#922b1f]  self-center
-                font-cofo  text-[9px] lg:justify-self-end h-fit  ${
+        <Link to="/booking" className={cn(`bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase  rounded-3xl hover:bg-[#922b1f]  self-center
+                font-cofo-medium  text-[9px] justify-end h-fit  ${
                   scrolled ? "opacity-0" : ""
-                }`}
+                }`, {
+                  "text-white": !scrolled,
+                  "text-black": scrolled,
+                })}
         >
           {t("buttons.bookRoomArr.0")} <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>
-        </button>
+        </Link>
 
         <nav
           className="hidden lg:flex 2xl:space-x-3 xl:space-x-3 text-center lg:space-x-1.5 w-full items-center justify-center "
@@ -119,9 +124,9 @@ export const HeaderNav = memo(({
 
       {menuOpen && (
         <nav
-          className={`absolute top-full left-0 w-full  flex flex-col items-center py-4 space-y-2 z-50 xl:hidden  animate-fadeIn ${
+          className={cn(`absolute top-full left-0 w-full  flex flex-col items-center py-4 space-y-2 z-50 xl:hidden  animate-fadeIn ${
             pathname === '/contacts' || scrolled ? "bg-white text-black" : "bg-black text-white"
-          }`}
+          }`)}
         >
           {renderNavLinks(true)}
           <div className="flex justify-center w-full h-10">

@@ -1,14 +1,13 @@
 import { useRef } from "react";
-import { useModalStore } from "../../store/useModalStore";
 import ReviewSlider from "./ReviewSlider";
 import Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+import { Link } from "react-router-dom";
 
 export const Rewies = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   const { reviews } = usePagesInfoStore();
   return (
@@ -16,37 +15,37 @@ export const Rewies = () => {
       <div className="flex flex-col items-center border-x border-[#C7C7C7]  overflow-x-hidden xl:px-0 w-[89.68%] ">
         <div className="grid xl:grid-cols-2 grid-cols-1  w-full   pe-4">
           <div className="xl:col-span-1 pt-10 xl:pt-[109px] flex flex-col">
-            <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5] xl:text-start xl:leading-[160px]">
-              
-              <span className="xl:hidden block text-[32px] lg:text-[80px] leading-[96%]">{t("reviews.title")} {t("reviews.heading")}</span>
+            <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5]  xl:leading-[160px]">
+              <span className="xl:hidden block text-[32px] lg:text-[80px] leading-[96%]">
+                {t("reviews.title")} {t("reviews.heading")}
+              </span>
               <span className="hidden xl:block text-[32px] xl:text-[150px] leading-[96%] 2xl:text-[198px]">
                 {t("reviews.title")}
               </span>
               <span className="xl:hidden block lg:text-[80px]  text-[32px] leading-[96%]">
                 {t("reviews.heading2")}
               </span>
-              
             </h1>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start xl:pb-10 items-center xl:items-start">
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start xl:pb-10 items-center xl:items-end">
               <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4 px-4  xl:ps-[39px] xl:pt-[38px] text-center xl:text-left">
                 {t("reviews.desc")}
               </p>
-              
-              <button
-                onClick={() => onOpenModal("order")}
-                className="uppercase text-[#A47762] font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit mt-4 xl:mt-[38px] xl:px-[22.5px] xl:py-[13px] py-[12.5px] px-[14.5px] rounded-full mx-auto xl:mx-0 hover:cursor-pointer text-[12px] xl:text-[16px]"
+
+              <Link
+                to={"/booking"}
+                className="uppercase text-[#A47762]  font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit  xl:px-[22.5px] xl:py-[10px] py-[10px] px-[14px] rounded-full -0 hover:cursor-pointer text-[12px] xl:text-[16px]"
               >
                 {t("buttons.bookRoom")}
-              </button>
+              </Link>
             </div>
           </div>
 
           <div className="xl:col-span-1 xl:flex flex-col justify-center items-center hidden ">
             <h2 className="uppercase text-5xl md:text-[80px] xl:text-[100px] xl:leading-[81px]  xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
-              <span className="relative left-[-30px] md:left-[-70px] xl:left-[-105px]">
+              <span className="relative left-[-30px] md:left-[-70px] xl:left-[-105px] 2xl:left-[0px]">
                 {t("reviews.heading")}
               </span>
-              <span className="relative left-[30px] md:left-[70px] xl:left-[105px]">
+              <span className="relative left-[30px] md:left-[70px] xl:left-[105px] 2xl:left-[220px]">
                 {t("reviews.heading2")}
               </span>
             </h2>

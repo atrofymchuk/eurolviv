@@ -1,13 +1,11 @@
 import "./Advantages.css";
 
 import { advantages } from "../../store/exportsImg";
-import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-
+import { BookLink } from "../Buttons/BookLink";
 export const Advantages = () => {
-  const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   const {hotelInfo,services} = usePagesInfoStore()
 
@@ -61,12 +59,7 @@ export const Advantages = () => {
                 </li>
               ))}
             </ul>
-            <button
-              onClick={() => onOpenModal("order")}
-              className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5] border-[#EDE8E5] border w-fit xl:w-fit self-center xl:self-start px-5 py-3 rounded-3xl font-cofo-medium text-sm mt-4 xl:mt-6.5 hover:cursor-pointer"
-            >
-              {t("buttons.bookRoom")}
-            </button>
+              <BookLink className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] mt-4" to={"/booking"}>{t("buttons.bookRoom")}</BookLink>
           </div>
         </div>
 

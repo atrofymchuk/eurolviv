@@ -1,8 +1,7 @@
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { navigate } from "../../store/exportsIcons";
 import { TFunction } from "i18next";
-import { Link } from "react-router-dom";
-import { map } from "../../Constants/map";
+import { RouteButton } from "../Buttons/RouteButton";
 
 export const LocationInfo = ({ t }: { t: TFunction }) => {
   return (
@@ -29,13 +28,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.rating")}
         </p>
         <div className="flex justify-center lg:justify-start">
-          <Link
-            target="_blank"
-            to={map.address}
-            className="bg-black text-white px-5 py-3 mt-6 text-sm xl:text-lg rounded-full font-cofo-medium border border-black transition-all hover:bg-white hover:text-black uppercase xl:mt-[50px]"
-          >
-            {t("buttons.route")}
-          </Link>
+          <RouteButton className="mt-6 xl:mt-[50px]"/>
         </div>
       </div>
     </div>
