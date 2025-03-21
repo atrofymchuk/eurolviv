@@ -16,10 +16,10 @@ export const Guarantee = () => {
 
       <div className="md:max-w-[94.79%] max-w-[89.6%] md:border-e border-x md:border-x-0 border-[#C7C7C7] lg:w-full">
         <div className="grid   justify-center md:justify-start  grid-cols-[1fr]   border-[#C7C7C7] ">
-          <div className="md:border-x  lg:border-x-0 border-[#C7C7C7] ">
+          <div className="  lg:border-x-0 border-[#C7C7C7] ">
             <div className="flex flex-col xl:items-end md:items-center  2xl:pt-[81px] xl:pt-[60px] lg:pt-[50px] pt-[49px] 2xl:pb-[48px] xl:pb-[40px] pb-[16px] px-[14px] md:px-0">
               
-              <h1 className="font-cofo text-[32px] 2xl:block uppercase sm:text-[42px] 2xl:text-[100px] xl:text-[70px] leading-[104%] tracking-[-0.07em] 2xl:leading-[81px] 2xl:tracking-[-0.04em] xl:w-[1000px] 2xl:w-[1300px] ">
+              <h1 className="font-cofo text-[32px] 2xl:block uppercase sm:text-[42px] 2xl:text-[100px] xl:text-[70px] leading-[104%] tracking-[-0.07em] 2xl:leading-[81px] 2xl:tracking-[-0.04em] xl:w-[900px] 2xl:w-[1350px] ">
                 <span className="hidden md:block">
                   {t("rooms.guarantee.heading.0")}
                 </span>
@@ -28,7 +28,7 @@ export const Guarantee = () => {
                 </span>
               </h1>
 
-              <h1 className="font-cofo text-[32px]  2xl:block sm:text-[42px] uppercase 2xl:text-[100px] xl:text-[70px] leading-[104%] tracking-[-0.07em] 2xl:leading-[81px] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[1100px] xl:w-[1200px] 2xl:self-start  ">
+              <h1 className="font-cofo text-[32px]  2xl:block sm:text-[42px] uppercase 2xl:text-[100px] xl:text-[70px] leading-[104%] tracking-[-0.07em] 2xl:leading-[81px] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[1150px] xl:w-[1100px] 2xl:self-start  ">
                 <span className="hidden md:block">
                   {t("rooms.guarantee.heading.1")}
                 </span>
@@ -37,7 +37,7 @@ export const Guarantee = () => {
                 </span>
               </h1>
 
-              <h1 className="font-cofo text-[32px] block md:hidden sm:text-[42px] uppercase 2xl:text-[100px] leading-[104%] tracking-[-0.07em]2xl:leading-[81px] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[1000px] self-start md:self-center">
+              <h1 className="font-cofo text-[32px] block md:hidden sm:text-[42px] uppercase 2xl:text-[100px] leading-[104%] tracking-[-0.07em]2xl:leading-[81px] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[1000px]  self-start md:self-center">
                 {t("rooms.guarantee.headingMobile.2")}
               </h1>
             </div>

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { headerPhoto } from "../../store/exportsImg";
-import { Link } from "react-router-dom";
+import { BookLink } from "../Buttons/BookLink";
 
 export const Header = () => {
   const {t} = useTranslation()
@@ -23,7 +23,7 @@ export const Header = () => {
         }}
       ></div>
 
-      <div className="absolute inset-0 flex flex-col  items-center justify-center text-center text-white z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
         <h4 className="uppercase font-cofo leading-[22.68px] font-cofo-medium underline text-sm decoration-transparent xl:mb-4">
           {t("global.createdFor")}
           <span className="font-blessed xl:font-extrabold normal-case block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
@@ -36,12 +36,7 @@ export const Header = () => {
         <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[46px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px]  ">
           {t("rooms.header.desc")}
         </p>
-        <Link
-        to={"/booking"}
-        className=" font-cofo-medium uppercase text-[#252526] bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl z-10 text-md"
-      >
-        {t("buttons.book")}
-      </Link>
+        <BookLink className="text-[#252526] bg-[#EDE8E5] mt-8" to={"/booking"}>{t("buttons.book")}</BookLink>
       </div>
     </div>
   );

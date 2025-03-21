@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { headerAbout } from "../../store/exportsImg";
 import { InViewWrapper } from "../utils/InViewWrapper";
-import { Link } from "react-router-dom";
+import { BookLink } from "../Buttons/BookLink";
 
 export const AboutHeader = () => {
   const { t } = useTranslation();
@@ -39,12 +39,7 @@ export const AboutHeader = () => {
           {t("about.header.desc.1")}
         </span>
       </h4>
-      <Link
-        to={"/booking"}
-        className=" font-cofo-medium uppercase  bg-[#EDE8E5]  hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl z-10 text-md"
-      >
-        {t("buttons.book")}
-      </Link>
+      <BookLink className="text-[#252526] bg-[#EDE8E5]" to={"/booking"}>{t("buttons.book")}</BookLink>
     </div>
   );
 };
