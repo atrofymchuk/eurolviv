@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 import { initialSpecialsOfferState } from "./InitialSpecialOffersState";
-import { SpecialOffers, SpecialOffersState } from "./types";
+import { SpecialOffers, SpecialOffersState } from "../types/types";
 
 export const useSpecialOffersStore = create<SpecialOffersState>(() => ({
   specialOffers: initialSpecialsOfferState,

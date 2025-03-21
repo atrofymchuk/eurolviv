@@ -1,4 +1,4 @@
-import { Review } from "../../store/types";
+import { Review } from "../../types/types";
 
 export const  ReviewCard =({ review, reviewHeader }: { review: Review, reviewHeader:string }) =>{
     return (

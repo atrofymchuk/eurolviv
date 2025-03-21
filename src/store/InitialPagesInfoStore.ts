@@ -1,6 +1,6 @@
 import * as icons from "./exportsIcons";
 import { roomLux, terasse, bussines, bar, restaurant, karaoke, terasseHome, menuTerrase, celebratingTerrase, barTerrase } from "./exportsImg";
-import { Reviews } from "./types";
+import { Reviews } from "../types/types";
 
 
 export  const cards = [

@@ -1,5 +1,5 @@
 import { SliderAbout } from "../Room/SliderAbout";
-import { ConferenceService } from "../../store/types";
+import { ConferenceService } from "../../types/types";
 import { useModalStore } from "../../store/useModalStore";
 import { RoomInfo } from "./RoomInfo";
 import { useTranslation } from "react-i18next";

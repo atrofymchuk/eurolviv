@@ -3,7 +3,7 @@ import * as imgs from "./exportsImg";
 
 import {
   RoomsState,
-} from "./types";
+} from "../types/types";
 
 export const initialRoomsState: RoomsState = {
   rooms: [
@@ -787,7 +787,6 @@ export const initialRoomsState: RoomsState = {
       header: {
         previewImage: imgs.luxTwoRoomsPreview,
         title: "roomsState.luxTwoRooms.header.title",
-        size: `roomsState.luxTwoRooms.header.size`,
         description: "roomsState.luxTwoRooms.header.description",
         count: 4,
         view: "roomsState.luxTwoRooms.header.view",

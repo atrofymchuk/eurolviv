@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Icon } from "../../store/types";
+import { Icon } from "../../types/types";
 import { useTranslation } from "react-i18next";
 type EquipmentToProps = {
   icons: Icon[];

@@ -1,4 +1,4 @@
-import { IconsState, Room } from "../../store/types";
+import { IconsState, Room } from "../../types/types";
 import { ComfortsBlock } from "./ComfotsBlock";
 import { useTranslation } from "react-i18next";
 type ComfortsBlockToProps = {

@@ -1,4 +1,4 @@
-import { MenuInitialState } from "./types";
+import { MenuInitialState } from "../types/types";
 
 import ClassicBritishBreakfaseFst from "../assets/Menu/ClassicBritishBreakfase.webp";
 import ClassicBritishBreakfastScd from "../assets/Menu/ClassicBritishBreakfast2.webp";

@@ -1,5 +1,5 @@
 import { memo, useMemo } from "react";
-import { Icon } from "../../store/types";
+import { Icon } from "../../types/types";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 

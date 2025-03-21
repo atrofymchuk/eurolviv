@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { ReviewSliderProps } from "../../store/types";
+import { ReviewSliderProps } from "../../types/types";
 import { ReviewCard } from "./ReviewCard";
 import { forwardRef, memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";

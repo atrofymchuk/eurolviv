@@ -4,7 +4,7 @@ import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { AboutSliderProps } from "../../store/types";
+import { AboutSliderProps } from "../../types/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { InViewWrapper } from "../utils/InViewWrapper";
 
@@ -26,12 +26,12 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
       <div>
         <div
           className="relative z-10 
-          h-[245px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[623px]"
+          h-[245px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[522px]"
         >
           <Swiper
             modules={swiperModules}
             className="mySwiper 
-            h-[245px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[623px]"
+            h-[245px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[522px]"
             loop
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
@@ -39,8 +39,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
               <SwiperSlide
                 key={img}
                 className="relative 
-                h-[245px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] 2xl:h-[623px] 
-                w-full flex items-center justify-center"
+                w-full flex items-center justify-center h-full"
               >
                 <InViewWrapper>
                   <img

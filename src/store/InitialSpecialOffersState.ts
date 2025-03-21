@@ -1,4 +1,4 @@
-import { SpecialOffers } from "./types";
+import { SpecialOffers } from "../types/types";
 
 import { military, business, bedWithPet,  birthday,   wedding, photosession } from "./exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [

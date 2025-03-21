@@ -1,4 +1,4 @@
-import { Room } from "../../store/types";
+import { Room } from "../../types/types";
 import { square, guest } from "../../store/exportsIcons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";

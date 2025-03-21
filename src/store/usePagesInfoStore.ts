@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PagesInfo } from "./types";
+import { PagesInfo } from "../types/types";
 import { hotelInfo, services,concepts,reviews,places,infrastructure,suggestion,restaurantReviews, availableService, amenities, cards } from "./InitialPagesInfoStore";
 
 export const usePagesInfoStore = create<PagesInfo>(() => ({

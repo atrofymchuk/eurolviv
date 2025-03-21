@@ -1,5 +1,5 @@
 import { TerraseCard } from "./TerraseCard";
-import { TerraseT } from "../../store/types";
+import { TerraseT } from "../../types/types";
 import { useTranslation } from "react-i18next";
 
 import { mainFst, mainScd, mainTrd, mainFth } from "../../store/exportsImg";

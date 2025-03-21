@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SuggestionT } from "../../store/types";
+import { SuggestionT } from "../../types/types";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 
