@@ -49,25 +49,23 @@ export const HeaderNav = memo(({
  ], [t]);
  
 
-  const renderNavLinks = useCallback((isMobile = false) =>{
+  const renderNavLinks = useCallback((isMobile = false) => {
     return navLinks.map(({ path, label }) => (
       <Link
-      key={path}
-      to={path}
-      className={cn(`uppercase ${isActiveLink(
-        path
-      )} 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px] `, {
-        "text-white": !scrolled,
-        "text-black": scrolled,
-      })}
-      onClick={() => isMobile && setMenuOpen(false)}
-      onMouseEnter={path === "/rooms" ? handleMouseEnterRooms : undefined}
-      onMouseLeave={path !== "/rooms" ? handleMouseLeaveRooms : undefined}
-    >
-      {label}
-    </Link>
+        key={path}
+        to={path}
+        className={cn(
+          "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px]",
+          isActiveLink(path)
+        )}
+        onClick={() => isMobile && setMenuOpen(false)}
+        onMouseEnter={path === "/rooms" ? handleMouseEnterRooms : undefined}
+        onMouseLeave={path !== "/rooms" ? handleMouseLeaveRooms : undefined}
+      >
+        {label}
+      </Link>
     ))
-    }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms, scrolled])
+  }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms]);
 
 
   return (
@@ -104,7 +102,8 @@ export const HeaderNav = memo(({
         </Link>
 
         <Link to="/booking" className={cn(`bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase  rounded-3xl hover:bg-[#922b1f]  self-center
-                font-cofo-medium  text-[9px] justify-end h-fit  ${
+                font-cofo-medium  text-[9px] justify-end h-fit
+                ${
                   scrolled ? "opacity-0" : ""
                 }`, {
                   "text-white": !scrolled,
@@ -131,7 +130,7 @@ export const HeaderNav = memo(({
           {renderNavLinks(true)}
           <div className="flex justify-center w-full h-10">
 
-          <ChangeLangButton changeLanguage={changeLanguage} isMobile={true}/>
+          <ChangeLangButton scrolled={scrolled} changeLanguage={changeLanguage} isMobile={true}/>
           </div>
 
         </nav>

@@ -66,6 +66,7 @@ export function Header() {
               <ChangeLangButton
                 changeLanguage={changeLanguage}
                 isMobile={false}
+                scrolled={scrolled}
               />
             </div>
             <div className="relative">

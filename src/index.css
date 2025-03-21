@@ -1,44 +1,36 @@
 @import "tailwindcss";
 
 @font-face {
+    font-family: CoFoSans;
+    src: url(./assets//fonts/CoFoSans-Regular.ttf) ;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.font-cofo{
+  font-family: CoFoSans;
+}
+body{
   font-family: 'CoFoSans';
-  src: url(./assets/fonts/CoFoSans-Regular.ttf) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+}
+@font-face {
+    font-family: Blessed;
+    src: url(./assets//fonts/BlessedScript-Regular.otf) ;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.font-blessed{
+  font-family: Blessed;
 }
 
 @font-face {
-  font-family: 'CoFoSans';
-  src: url(./assets/fonts/CoFoSans-Medium.ttf) format('truetype');
+  font-family: 'CoFoSans-Medium';
+    src: url(./assets//fonts/CoFoSans-Medium.ttf) ;
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 
-@font-face {
-  font-family: 'Blessed';
-  src: url(./assets/fonts/BlessedScript-Regular.otf) format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: 'CoFoSans', sans-serif;
-  font-weight: normal;
-}
-
-.font-cofo {
-  font-family: 'CoFoSans', sans-serif;
-  font-weight: normal;
-}
-
-.font-cofo-medium {
-  font-family: 'CoFoSans', sans-serif;
-  font-weight: 500;
-}
-
-.font-blessed {
-  font-family: 'Blessed', cursive;
+.font-cofo-medium{
+  font-family: 'CoFoSans-Medium';
 }

@@ -1,6 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa6"
 import { RiTelegram2Fill } from "react-icons/ri"
-
+import cn from "classnames"
 
 type HeaderSocialToProps = {
     styles:string
@@ -9,7 +9,7 @@ type HeaderSocialToProps = {
 export const HeaderSocial = ({styles}:HeaderSocialToProps ) =>{
 
     return   <div className=" lg:flex hidden space-x-2 ">
-    <span className={` rounded-full ${styles}`}>
+    <span className={cn(` rounded-full ${styles}`)}>
       <RiTelegram2Fill className="w-[37px] h-[37px] p-1" />
     </span>
 
@@ -17,7 +17,7 @@ export const HeaderSocial = ({styles}:HeaderSocialToProps ) =>{
       <FaWhatsapp className="w-[37px] h-[37px]  p-1 " />
     </span>
     <span
-      className={` rounded-full  p-1 px-1.5 flex text-center items-center ${styles}`}
+      className={cn(` rounded-full  p-1 px-1.5 flex text-center items-center ${styles}`)}
     >
       <svg
         width="26"

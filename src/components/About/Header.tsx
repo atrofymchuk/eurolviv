@@ -30,7 +30,7 @@ export const AboutHeader = () => {
         </span>
       </h4>
 
-      <h1 className="uppercase font-cofo xl:text-[198px]  text-[64px] font-normal  z-10 text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+      <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
       </h1>
       <h4 className="font-cofo md:text-[18px] text-[14px] font-medium uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">

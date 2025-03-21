@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { squareWhite, guestWhite } from "../../store/exportsIcons";
-
+import cn from "classnames"
 type RoomsListHeaderToProps = {
   room:Room
   index:number
@@ -14,9 +14,9 @@ export const RoomsListHeader = ({ room, index }: RoomsListHeaderToProps) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-between border-[#FFFFFF33] ${index === 0 ? "border-x" : "border-e"} ${
+      className={cn(`flex flex-col items-center justify-between border-[#FFFFFF33] ${index === 0 ? "border-x" : "border-e"} ${
         index === 2 ? "lg-border-e border-x" : ""
-      } p-4 h-auto`}
+      } p-4 h-auto`)}
     >
       <Link to={`/rooms/${room.type}`} className="w-full h-full flex flex-col justify-between">
         <div className="w-full flex justify-center flex-col items-center">

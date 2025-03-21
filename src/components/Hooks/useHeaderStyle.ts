@@ -19,30 +19,38 @@ const useNavbarStyles = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
-
   function isActiveLink(path: string) {
+    const isActive = location.pathname === path;
+
     if (location.pathname === "/contacts") {
-      return location.pathname === path
-        ? "text-[#252526]" 
-        : "text-[#252526]/62 hover:text-[#252526]"; 
+      return isActive
+        ? "text-[#252526] "
+        : "text-[#252526]/62 hover:text-[#252526]";
     }
-    return location.pathname === path
-      ? scrolled
-        ? "text-[#252526]"
-        : "text-[#FFFFFF]"
-      : scrolled
-      ? "text-[#252526]/62 hover:text-[#252526]"
-      : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+
+    if (isActive) {
+      return scrolled ? "text-[#252526]" : "text-[#FFFFFF]";
+    } else {
+      return scrolled
+        ? "text-[#252526]/62 hover:text-[#252526]"
+        : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+    }
   }
 
   const { styles, iconLogoStyle, rightMenu, logo } = useMemo(() => {
     let logo = defaultLogo;
     let iconLogoStyle = scrolled ? "filter invert" : "";
-    let rightMenu = scrolled ? "text-[#252526]" : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
-    let styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
+    let rightMenu = scrolled
+      ? "text-[#252526]"
+      : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+    let styles = scrolled
+      ? "bg-[#252526] text-white"
+      : "bg-white text-[#8C331B]";
 
-    if (location.pathname === "/restaurant" || location.pathname === "/terrase") {
+    if (
+      location.pathname === "/restaurant" ||
+      location.pathname === "/terrase"
+    ) {
       logo = ruffLogo;
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
@@ -55,7 +63,7 @@ const useNavbarStyles = () => {
 
     return { styles, iconLogoStyle, rightMenu, logo };
   }, [location.pathname, scrolled]);
-  
+
   return {
     styles,
     iconLogoStyle,
