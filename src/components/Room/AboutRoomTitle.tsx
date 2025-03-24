@@ -1,6 +1,5 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-
 export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
   const { t } = useTranslation();
   return (
@@ -19,10 +18,10 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
             
             return (
               <>
-                <span className="whitespace-nowrap order-1 md:order-1 block">
+                <span className="md:whitespace-nowrap order-1 md:order-1 block">
                   {firstLine}
                 </span>
-                <span className="whitespace-nowrap order-2 md:order-2 block">
+                <span className="md:whitespace-nowrap order-2 md:order-2 block">
                   {secondLine}
                 </span>
               </>
@@ -30,7 +29,7 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
           })()}
         </>
       ) : (
-        <span className="whitespace-nowrap">{t(nameRoom)}</span>
+        <span className="md:whitespace-nowrap">{t(nameRoom)}</span>
       )}
     </h1>
   </div>)

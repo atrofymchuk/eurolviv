@@ -13,10 +13,11 @@ export const HeaderTitle: React.FC<HeaderTitleProps> = ({ title, textColor = "wh
           </h1>
         );
       }
+
     }
   
   return (
-    <h1 className={cn(`font-cofo xl:text-[198px] uppercase text-[64px] font-normal z-20 ${textColor === "white" ? "text-white" : "text-black"} xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent`) }>
+    <h1 className={cn(`2xl:text-[198px] xl:text-[150px] lg:text-[120px] md:text-[100px] sm:text-[80px] uppercase text-[48px] [text-wrap:balance] w-[90%] font-normal z-20 ${textColor === "white" ? "text-white" : "text-black"} leading-[77%]  tracking-[-0.1em] text-center underline decoration-transparent`) }>
       {title}
     </h1>
   );
