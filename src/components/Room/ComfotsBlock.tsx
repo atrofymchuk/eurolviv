@@ -49,7 +49,7 @@ export const ComfortsBlock = memo(
                 <h1
                   className={cn(`uppercase ${style.headerColor} font-cofo text-[32px] 
               lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[104%] 
-              2xl:mb-[51px] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[60%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
+              2xl:mb-[51px] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
               break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
                 >
                   {title}

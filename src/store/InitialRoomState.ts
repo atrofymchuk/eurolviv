@@ -761,7 +761,7 @@ export const initialRoomsState: RoomsState = {
       },
       suggestion: [
         {
-          title: "roomsState.standartTwoBedBalcony.suggestion.0title",
+          title: "roomsState.standartTwoBedBalcony.suggestion.0.title",
           size: "roomsState.standartTwoBedBalcony.suggestion.0.size",
           desc: "roomsState.standartTwoBedBalcony.suggestion.0.desc",
           img: imgs.semiLuxPreview,
@@ -1237,7 +1237,7 @@ export const initialRoomsState: RoomsState = {
           size: "roomsState.luxElegant.suggestion.0.size",
           desc: "roomsState.luxElegant.suggestion.0.desc",
           img: imgs.luxImperiumPreview,
-          type: "standart-imperial",
+          type: "lux-imperial",
         },
         {
           title: "roomsState.luxElegant.suggestion.1.title",
