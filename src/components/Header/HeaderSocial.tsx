@@ -9,11 +9,11 @@ type HeaderSocialToProps = {
 export const HeaderSocial = ({styles}:HeaderSocialToProps ) =>{
 
     return   <div className=" lg:flex hidden space-x-2 ">
-    <span className={cn(` rounded-full ${styles}`)}>
+    <span className={cn(`rounded-full ${styles}`)}>
       <RiTelegram2Fill className="w-[37px] h-[37px] p-1" />
     </span>
 
-    <span className={` rounded-full ${styles} `}>
+    <span className={cn(` rounded-full ${styles} `)}>
       <FaWhatsapp className="w-[37px] h-[37px]  p-1 " />
     </span>
     <span

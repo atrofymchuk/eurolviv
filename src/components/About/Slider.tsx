@@ -54,7 +54,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-full flex justify-center ">
-      <Slider {...settings} ref={slideRef} className={`w-full h-full  img`}>
+      <Slider {...settings} ref={slideRef} className={cn(`w-full h-full  img`)}>
         {slides.map((image, index) => {
           const isActive = activeSlide === index;
           const isSide = Math.abs(activeSlide - index) === 1;
@@ -65,8 +65,7 @@ const ImageSlider = () => {
               <img
                 src={image}
                 alt={`slide_${index}`}
-                className={cn(
-                  `w-full max-w-[500px]  object-cover  transition-all duration-500  px-2
+                className={cn(`w-full max-w-[500px]  object-cover  transition-all duration-500  px-2
               
             `,
             {

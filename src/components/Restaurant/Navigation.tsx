@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import Slider from "react-slick";
-
+import cn from "classnames";
 type NavigationToProps ={
   isTerrasePage:boolean
 }
@@ -10,7 +10,7 @@ export const Navigation = forwardRef<Slider, NavigationToProps>(({isTerrasePage}
   const sliderRef = ref as React.RefObject<Slider>;
   return (
     <div className="flex flex-col md:items-end lg:justify-between md:justify-end justify-center items-center ">
-      <div className={`flex ${isTerrasePage ? 'xl:max-w-[95.16%] max-w-[90.31%] ': 'max-w-[96.56%]'}  w-full justify-between lg:mt-0 border-b border-x  border-t  border-[#B3B3B3]`}>
+      <div className={cn(`flex ${isTerrasePage ? 'xl:max-w-[95.16%] max-w-[90.31%] ': 'max-w-[96.56%]'}  w-full justify-between lg:mt-0 border-b border-x  border-t  border-[#B3B3B3]`)}>
         <button
           className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 bg-white hover:text-white mt-[26px] ms-[20px] mb-[44px] lg:ms-[68px] lg:mt-[17px] lg:mb-[72px]"
           onClick={() => sliderRef?.current.slickPrev()}

@@ -1,6 +1,7 @@
 
 import { coffe, meat, spagetti } from "../../store/exportsImg";
 import { InViewWrapper } from "../utils/InViewWrapper";
+import cn from "classnames";
 type MenuSmallWidthToProps ={
     className:string
 }
@@ -9,7 +10,7 @@ type MenuSmallWidthToProps ={
 export const MenuSmallWidth = ({className}:MenuSmallWidthToProps) =>{
 
     return(
-        <div className={`flex flex-row w-full   justify-center space-x-[5px]  ${className}`}>
+        <div className={cn(`flex flex-row w-full   justify-center space-x-[5px]  ${className}`)}>
           <InViewWrapper>
 
         <img

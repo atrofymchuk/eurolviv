@@ -1,3 +1,4 @@
+import cn from "classnames";
 type TerraseCardToProps = {
   index: number;
   el: string;
@@ -14,7 +15,7 @@ export const TerraseCard = ({ index, el, length }: TerraseCardToProps) => {
   return (
     <div
       key={index}
-      className={`border-[#B3B3B3AD] xl:p-[10px] 
+      className={cn(`border-[#B3B3B3AD] xl:p-[10px] 
         ${isFirstInRow ? "pr-2 sm:pr-3 md:pr-4 pb-2 " : ""}  
         ${isLastInRow ? "pl-2 sm:pl-3 md:pl-4  pt-4" : ""}  
         ${index === 0 ? "sm:pl-0 pt-4 xl:ps-0" : ""} 
@@ -22,7 +23,7 @@ export const TerraseCard = ({ index, el, length }: TerraseCardToProps) => {
         ${isBottomRow ? "pt-2 pb-4" : ""}
         ${isFirstRow ? "border-b xl:border-b-0 pb-2" : ""}  
         ${isNotLastCard ? "border-r" : ""}  
-      `}
+      `)}
     >
       <img
         src={el}

@@ -7,6 +7,7 @@ import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
 import { InViewWrapper } from "../utils/InViewWrapper";
+import cn from "classnames";
 
 Modal.setAppElement("#root");
 
@@ -54,7 +55,7 @@ export const SpecialOffersModal = () => {
             </h1>
             <div className="flex flex-col items-center justify-center  md:mt-auto">
 
-            <h1 className={`uppercase text-white text-[32px] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${data.url === 'business' ? "md:w-2/3" : ""}`}>
+            <h1 className={cn(`uppercase text-white text-[32px] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${data.url === 'business' ? "md:w-2/3" : ""}`)}>
               {t(data.title)}
             </h1>
             <p className="uppercase md:w-3/5 text-white text-[12px] md:text-[16px] leading-[15px] md:leading-[22px]">

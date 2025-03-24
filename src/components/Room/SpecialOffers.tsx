@@ -3,7 +3,7 @@ import { SpecialOffersSlider } from "./SpecialOffersSlider";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
-
+import cn from "classnames";
 export const SpecialOffers = () => {
   const { t } = useTranslation();
   const sliderRef = useRef<Slider | null>(null);
@@ -13,12 +13,12 @@ export const SpecialOffers = () => {
   return (
     <div className="w-full h-[598px] sm:h-[612px]  lg:h-[1003px] md:h-[746px] xl:h-[922px] flex  items-center overflow-hidden flex-col mb-[30px] md:mb-[71px] lg:mb-[75px]">
       <div
-        className={`container-fluid    ${
+        className={cn(`container-fluid    ${
           isHome ? "w-[91.0%]" : "w-[79.4%] md:w-[85.06%]"
-        } `}
+        } `)}
       >
         <div
-          className={`border-s border-[#C7C7C7] h-full w-full  `}
+          className={cn(`border-s border-[#C7C7C7] h-full w-full  `)}
         >
           <div>
             <h1

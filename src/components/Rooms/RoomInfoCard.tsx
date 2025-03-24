@@ -3,6 +3,7 @@ import { square, guest } from "../../store/exportsIcons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
+import cn from "classnames";
 
 type RoomInfoCard = {
   room: Room;
@@ -18,13 +19,13 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   return (
     <div
       key={room.type}
-      className={`lg:border lg:border-s-0 border-[#C7C7C7]  
+      className={cn(`lg:border lg:border-s-0 border-[#C7C7C7]  
         ${isFirstInRow ? "lg:ps-[20px] p-4" : "p-4"}  
         ${isLastInRow ? "lg:pe-[20px] lg:border-e-0 border-t" : "border-t"} 
         ${index < length - 3 ? "lg:border-b-0 border-t" : ""} 
         ${index % 2 === 0 ? " border-e" : ""}
         ${index === length - 1 ? "md:col-span-2 border-e-0 lg:col-span-1 " : ""}
-        lg:p-[15px]`}
+        lg:p-[15px]`)}
     >
       <div className="">
         <div className="items-center flex justify-center">      

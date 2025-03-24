@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRoomStore } from "../../store/useRoomsStore";
 import { squareWhite, guestWhite } from "../../store/exportsIcons";
-
+import cn from "classnames";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
@@ -103,18 +103,18 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
         {rooms.map((el, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center text-center justify-between ${getSlideClass(
+            className={cn(`flex flex-col items-center text-center justify-between ${getSlideClass(
               index
-            )}`}
+            )}`)}
           >
             <div className="flex items-center justify-center w-full h-[250px] xl:h-[300px]">
               <InViewWrapper>
                 <img
                   src={el.header.previewImage}
                   alt={`Slide ${index}`}
-                  className={`object-cover w-full h-full transition-all  duration-300 ${
+                  className={cn(`object-cover w-full h-full transition-all  duration-300 ${
                     index === currentSlide ? " scale-105" : "scale-100 "
-                  }`}
+                  }`)}
                 />
               </InViewWrapper>
             </div>

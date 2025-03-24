@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
@@ -14,11 +14,11 @@ export const RoofService = () => {
         {suggestion.map((item, index) => (
           <div
             key={index}
-            className={`relative flex flex-col bg-[#252526] ${
+            className={cn(`relative flex flex-col bg-[#252526] ${
               index === 2
                 ? "lg:col-span-2 md:h-[1600px] h-[873px]"
                 : "md:h-[1173px] h-[873px]"
-            }`}
+            }`)}
           >
             <div className="relative w-full h-full">
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent"></div>
@@ -34,9 +34,9 @@ export const RoofService = () => {
             )}
 
             <div
-              className={`absolute inset-0 flex flex-col items-center text-center mt-[138px] text-white z-10 p-4 ${
+              className={cn(`absolute inset-0 flex flex-col items-center text-center mt-[138px] text-white z-10 p-4 ${
                 index === 2 ? "justify-center" : "justify-start"
-              }`}
+              }`)}
             >
               <div className="flex flex-col items-center space-y-[29px]">
                 <div className="flex justify-center w-full">
@@ -45,13 +45,13 @@ export const RoofService = () => {
                   </InViewWrapper>
                 </div>
                 <h1
-                  className={`${
+                  className={cn(`${
                     index === 2
                       ? "lg:text-[198px] max-w-[900px] text-[76px] md:text-[100px] sm:text-[80px] "
                       : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] "
                   } 
  text-center uppercase leading-[104%] tracking-[-5%] 
-      w-full lg:leading-[81%]`}
+      w-full lg:leading-[81%]`)}
                 >
                   {t(item.title)}
                 </h1>
@@ -62,9 +62,9 @@ export const RoofService = () => {
               </div>
 
               <div
-                className={`flex flex-col items-center space-y-[20px] ${
+                className={cn(`flex flex-col items-center space-y-[20px] ${
                   index === 2 ? "mt-10" : "mt-auto pb-14"
-                }`}
+                }`)}
               >
                 <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
                   {t(item.desc) }

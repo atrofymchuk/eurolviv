@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import { AboutSliderProps } from "../../types/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { InViewWrapper } from "../utils/InViewWrapper";
-
+import cn from "classnames";
 export const SliderAbout: React.FC<AboutSliderProps> = memo(
   ({ imageSlider, swiperImagesStyle }) => {
     const swiperRef = useRef<SwiperType | null>(null);
@@ -45,7 +45,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
                   <img
                     src={img}
                     alt="room image"
-                    className={`${swiperImagesStyle} w-full h-full object-cover`}
+                    className={cn(`${swiperImagesStyle} w-full h-full object-cover`)}
                   />
                 </InViewWrapper>
               </SwiperSlide>

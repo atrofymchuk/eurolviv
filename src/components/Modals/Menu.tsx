@@ -1,7 +1,7 @@
 import { IoClose } from "react-icons/io5";
 import { useMenuStore } from "../../store/useMenuStore";
 import { InViewWrapper } from "../utils/InViewWrapper";
-
+import cn from "classnames";
 export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: () => void }) {
   const { menuItems } = useMenuStore();
 
@@ -16,9 +16,9 @@ export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: 
       {menuItems.map((item, index) => (
         <div
           key={item.title}
-          className={`${
+          className={cn(`${
             index === menuItems.length - 1 && "lg:col-span-1 justify-self-center"
-          }`}
+          }`)}
         >
           <div className="flex justify-center 2xl:w-full 2xl:max-w-[537px] p-5 border border-[#b3b3b3]">
             <div className="flex flex-col justify-between lg:items-center">

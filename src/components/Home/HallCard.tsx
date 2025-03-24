@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { square, guest } from "../../store/exportsIcons";
+import cn from "classnames";
+
 type HallCardProps = {
   hall: {
     previewImage: string;
@@ -23,11 +25,11 @@ export const HallCard = ({ hall, index }: HallCardProps) => {
       <img
         src={hall.previewImage}
         alt={hall.title}
-        className={`${
+        className={cn(`${
           index === 1
           ? "2xl:w-[667px] 2xl:h-[445px] xl:w-[430px] xl:h-[327px] lg:w-[370px] lg:h-[290px] md:w-[300px] md:h-[233px] w-[334px] h-[223px] "
           : "2xl:w-[382px] 2xl:h-[256px] xl:w-[339px] xl:h-[200px] lg:w-[250px] lg:h-[194px] md:w-[200px] md:h-[113px] w-[334px] h-[223px] "
-        }`}
+        }`)}
         />
         </InViewWrapper>
       <h4 className="uppercase text-[18px]  md:text-[22px] lg:text-lg 2xl:text-[24px] leading-[28px] tracking-[-5%] text-center xl:mt-[25px] px-2 xl:mb-[16px] mt-[10px]">

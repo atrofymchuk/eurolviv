@@ -20,9 +20,9 @@ export const MoreInfoSecondCol = ({
       )}
     >
       <div
-        className={`flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[27px] lg:ps-[17px] md:ps-[10px] ${
+        className={cn(`flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[27px] lg:ps-[17px] md:ps-[10px] ${
           isShowOtherInfo ? "2xl:h-[512px] lg:h-[300px] xl:h-[371px]" : "ps-[10px] 2xl:h-[662px] lg:h-[384px] xl:h-[521px]"
-        }`}
+        }`)}
       >
           <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] lg:pb-[20px] md:pb-[15px] hidden md:block">
             {t("room.moreInfo.title")}
@@ -93,13 +93,13 @@ export const MoreInfoSecondCol = ({
           {!isShowOtherInfo && (
             <BookLink
               to="/booking"
-              className={` 
+              className={cn(` 
         bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10
         lg:mt-9
         md:mt-4
         mt-10
       block  w-fit
-        `}
+        `)}
             >
               {t("buttons.bookRoom")}
             </BookLink>

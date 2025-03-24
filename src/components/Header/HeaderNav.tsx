@@ -72,18 +72,18 @@ export const HeaderNav = memo(({
     <div className="flex w-[100%]   ">
       <div className="flex font-normal  lg:justify-end justify-between w-full ">
         <button
-          className={`lg:hidden text-white text-2xl flex items-center gap-2`}
+          className={cn(`lg:hidden text-white text-2xl flex items-center gap-2`)}
           onClick={() => toggleMenu()}
         >
           <img
             src={burgerMenu}
             alt="Меню"
-            className={pathname === '/contacts' || scrolled ? "filter-invert-gray" : "" }
+            className={cn(pathname === '/contacts' || scrolled ? "filter-invert-gray" : "" )}
           />
           <span
-            className={` text-sm ${isActiveLink(
+            className={cn(` text-sm ${isActiveLink(
               '/contacts'
-            )}`}
+            )}`)}
           >
             {t("header.menu")}
           </span>

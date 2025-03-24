@@ -2,7 +2,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { Rating } from "./Rating";
 import { useTranslation } from "react-i18next";
-
+import cn from "classnames";
 export const BookingSection = () => {
   const { t } = useTranslation();
   return (
@@ -38,7 +38,7 @@ export const BookingSection = () => {
             </p>
             <div className="flex lg:space-x-4 space-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] lg:mt-[17px] mt-6  ">
               <span
-                className={`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `}
+                className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <FaInstagram
                   color="white"
@@ -46,7 +46,7 @@ export const BookingSection = () => {
                 />
               </span>
               <span
-                className={`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `}
+                className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <RiTelegram2Fill
                   color="white"
@@ -54,7 +54,7 @@ export const BookingSection = () => {
                 />
               </span>
               <span
-                className={`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `}
+                className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <FaWhatsapp
                   color="white"
@@ -62,7 +62,7 @@ export const BookingSection = () => {
                 />
               </span>
               <span
-                className={`rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`}
+                className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`)}
               >
                 <svg
                   width="26"

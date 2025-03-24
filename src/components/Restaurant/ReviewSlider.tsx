@@ -3,7 +3,7 @@ import { ReviewSliderCard } from "./ReviewSliderCard";
 import { forwardRef } from "react";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 import { useTranslation } from "react-i18next";
-
+import cn from "classnames";
 type ReviewSliderToProps = {
   isTerrasePage?:boolean
 }
@@ -43,7 +43,7 @@ export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(({isTerraseP
 
   return ( 
     <div className="flex flex-col md:items-end items-center justify-end w-full overflow-hidden">
-      <div className={`w-full ${isTerrasePage ? " xl:max-w-[95.16%] max-w-[95.31%] " :' max-w-[96.56%]'}  2xl:h-[458px] lg:h-[267px] h-fit md:border-x xl:border border-[#B3B3B3]`}>
+      <div className={cn(`w-full ${isTerrasePage ? " xl:max-w-[95.16%] max-w-[95.31%] " :' max-w-[96.56%]'}  2xl:h-[458px] lg:h-[267px] h-fit md:border-x xl:border border-[#B3B3B3]`)}>
         <div className="slider-container overflow-visible">
           <Slider {...settings} ref={ref}>
             {restaurantReviews.map((el) => (

@@ -2,6 +2,7 @@ import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
 import { useNavigate } from "react-router-dom";
+import cn from "classnames";
 
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
@@ -33,14 +34,14 @@ export const Cards = () => {
           return (
             <div
               key={el.title}
-              className={`border-t border-[#C7C7C7] 
+              className={cn(`border-t border-[#C7C7C7] 
                 ${isMiddleCard ? "lg:border-x" : ""}
                 ${isMdSecondColumn ? "md:border-l" : ""}
                 ${isFirstInRowLg ? "lg:border-l-0" : ""}
                 ${isLastRowLg ? "lg:border-b" : ""}
                 ${isLastRowMd ? "md:border-b" : ""}
                 ${index === specialOffers.length - 1 ? "border-b " : ""}
-              `}
+              `)}
             >
               <div
                 onClick={() => handleCardClick(el.url)}

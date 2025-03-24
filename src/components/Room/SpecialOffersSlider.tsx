@@ -51,9 +51,9 @@ export const SpecialOffersSlider = forwardRef<
       {specialOffers.map((el, index) => (
         <div
           key={index}
-          className={`border lg:p-5 md:p-4 p-3.5 h-[426px] md:h-[540px] lg:h-[668px] border-[#C7C7C7] relative   ${
+          className={cn(`border lg:p-5 md:p-4 p-3.5 h-[426px] md:h-[540px] lg:h-[668px] border-[#C7C7C7] relative   ${
             index !== specialOffers.length - 1 ? "border-r-0" : ""
-          }`}
+          }`)}
         >
           <InViewWrapper className="relative">
             <img

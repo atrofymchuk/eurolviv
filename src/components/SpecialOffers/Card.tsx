@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { useMemo } from "react";
-
+import cn from "classnames";
 type CardToProps = {
   src: string;
   title: string;
@@ -31,7 +31,7 @@ export const Card = ({ src, title, desc, classes, offer }: CardToProps) => {
           <img
             src={src}
             alt={translatedTexts.title}
-            className={`w-full object-cover ${classes} h-[200px] sm:h-[250px] md:h-[320px] lg:h-[510px]`}
+            className={cn(`w-full object-cover ${classes} h-[200px] sm:h-[250px] md:h-[320px] lg:h-[510px]`)}
           />
         </InViewWrapper>
 

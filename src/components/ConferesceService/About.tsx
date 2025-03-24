@@ -4,7 +4,9 @@ import { useModalStore } from "../../store/useModalStore";
 import { RoomInfo } from "./RoomInfo";
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
-type AboutToProps = {
+import cn from "classnames";
+
+  type AboutToProps = {
   item: ConferenceService;
   isOnTop: boolean;
 };
@@ -15,33 +17,33 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
   return (
     <div className="flex flex-col">
       <div
-        className={`grid 2xl:grid-cols-[21%_42%_37%] lg:grid-cols-[21%_42%_37%]  grid-cols-[7.5%_85%_7.5%] items-center justify-center 2xl:items-start 2xl:justify-normal`}
+            className={cn(`grid 2xl:grid-cols-[21%_42%_37%] lg:grid-cols-[21%_42%_37%]  grid-cols-[7.5%_85%_7.5%] items-center justify-center 2xl:items-start 2xl:justify-normal`)}
       >
         <div
-          className={`2xl:h-[109px] ${
+          className={cn(`2xl:h-[109px] ${
             isOnTop ? "lg:border- " : "  "
-          } 2xl:border-x-0 box-border border-b  w-full h-[109px] border-[#C7C7C7] order-1 lg:order-none`}
+          } 2xl:border-x-0 box-border border-b  w-full h-[109px] border-[#C7C7C7] order-1 lg:order-none`)}
         ></div>
         <div
-          className={`2xl:h-[109px] ${
+          className={cn(`2xl:h-[109px] ${
             isOnTop ? "lg:border-b  lg:border-x" : "lg:border-x border-b"
-          } 2xl:border-x box-border border-b  2xl:border-e w-full h-[109px] border-[#C7C7C7] order-3 lg:order-none`}
+          } 2xl:border-x box-border border-b  2xl:border-e w-full h-[109px] border-[#C7C7C7] order-3 lg:order-none`)}
         ></div>
         <div
-          className={`2xl:h-[109px] ${
+          className={cn(`2xl:h-[109px] ${
             isOnTop ? " lg:border-b " : " lg:border-b "
-          } 2xl:border-x-0 box-border  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none`}
+          } 2xl:border-x-0 box-border  w-full h-[109px] border-[#C7C7C7] order-5 lg:order-none`)}
         ></div>
         <div
-          className={`2xl:h-[109px] ${
+          className={cn(`2xl:h-[109px] ${
             isOnTop ? "lg:border-e " : " "
-          } box-border  w-full h-[109px] border-[#C7C7C7] order-6 lg:order-none lg:hidden`}
+          } box-border  w-full h-[109px] border-[#C7C7C7] order-6 lg:order-none lg:hidden`)}
         ></div>
         <div
-          className={`flex ${
+            className={cn(`flex ${
             isOnTop ? "lg:border-x-0 border-x" : " border-x lg:border-x-0"
           }  border-b 2xl:border-b-0 border-[#C7C7C7] flex-col h-full justify-center p-2.5 2xl:p-0 2xl:items-center
-         order-2 lg:order-none`}
+         order-2 lg:order-none`)}
         >
           <div className="font-cofo text-[#8C331B] hidden lg:flex">
             <RoomInfo
@@ -54,9 +56,9 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
 
         <div className="flex flex-col-reverse lg:flex-row 2xl:items-center justify-center order-5 lg:order-none h-full">
           <div
-            className={`${
+            className={cn(`${
               isOnTop ? " lg:border-x border-x" : "lg:border-x  border-x"
-            } items-center justify-center flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative h-full `}
+            } items-center justify-center flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative h-full `)}
           >
             <h1 className="uppercase font-cofo 2xl:text-[100px] text-[32px] sm:text-[40px] md:text-[48px] 2xl:leading-[81%] 2xl:w-[1200px] font-semibold 2xl:font-normal flex flex-col 2xl:tracking-[-4%] tracking-[-0.07em] leading-[90%] overflow-visible mt-auto 2xl:mt-0 2xl:mb-0 mb-5">
               <span className="order-1 2xl:order-2 inline w-fit">

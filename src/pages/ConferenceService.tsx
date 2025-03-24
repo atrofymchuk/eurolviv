@@ -6,6 +6,7 @@ import { Equipment } from "../components/ConferesceService/Equipment";
 import { Header } from "../components/ConferesceService/Header";
 import { RoomSliderContainer } from "../components/ConferesceService/RoomSliderContainer";
 import { useRoomStore } from "../store/useRoomsStore";
+import cn from "classnames";
 
 export const ConferenceService = () => {
   const { halls } = useRoomStore();
@@ -14,9 +15,9 @@ export const ConferenceService = () => {
   const lastElementRef = useRef<HTMLDivElement | null>(null);
 
   const sections = halls.flatMap((el, index) => [
-    <About key={`about-${index}`} item={el} isOnTop={index === 0} />, 
-    <Equipment key={`equipment-${index}`} icons={el.icons} price={el.price} />, 
-    <RoomSliderContainer key={`slider-${index}`} images={el.showcaseSwiperImages} />
+    <About key={cn(`about-${index}`)} item={el} isOnTop={index === 0} />, 
+    <Equipment key={cn(`equipment-${index}`)} icons={el.icons} price={el.price} />, 
+    <RoomSliderContainer key={cn(`slider-${index}`)} images={el.showcaseSwiperImages} />
   ]);
 
   sections.push(<ConferenceMenu key="menu" />, <ConferenceMenuContent key="content" />);

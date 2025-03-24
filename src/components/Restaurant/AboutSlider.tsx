@@ -8,7 +8,7 @@ import {
   aboutRestaurantScd,
   aboutRestaurantTrd,
 } from "../../store/exportsImg";
-
+import cn from "classnames";
 function AboutSlider() {
   const slides = [
     aboutRestaurant,
@@ -73,9 +73,9 @@ function AboutSlider() {
                 />
               </InViewWrapper>
               <div
-                className={`absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
+                className={cn(`absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
                   isSide ? "opacity-100" : "opacity-0"
-                }`}
+                }`)}
               ></div>
             </div>
           );

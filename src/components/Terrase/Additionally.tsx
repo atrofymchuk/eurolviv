@@ -1,6 +1,7 @@
 
 import { useTranslation } from "react-i18next";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+import cn from "classnames";
 export const Additionally = () => {
   const { t } = useTranslation()      
   const { cards } = usePagesInfoStore();
@@ -31,7 +32,7 @@ export const Additionally = () => {
             {cards.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center text-center ${index === cards.length - 1 && 'sm:col-span-2 xl:col-span-1' }`}
+                className={cn(`flex flex-col items-center text-center ${index === cards.length - 1 && 'sm:col-span-2 xl:col-span-1' }`)}
               >
                 <div className="flex items-start h-auto ">
                   <img
