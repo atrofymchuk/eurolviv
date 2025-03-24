@@ -12,9 +12,9 @@ export const MoreInfoFirstCol = ({
 }) => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col lg:py-20 pt-[54px] pb-[28px] md:py-10 xl:px-[21px_17px] lg:px-[14px_10px]  md:px-[10px_8px]">
+    <div className="flex flex-col lg:py-20 pt-[54px] pb-[28px] md:py-10 xl:px-[21px_17px] lg:px-[14px_10px]  md:px-[10px_8px] h-full">
       {isShowOtherInfo ? (
-        <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] ">
+        <h1 className="text-white text-[32px] px-[11px] tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase font-cofo md:pb-[15px] xl:pb-[51px] lg:pb-[20px] ">
           {t("room.moreInfo.title2")}
         </h1>
       ) : (
@@ -24,7 +24,7 @@ export const MoreInfoFirstCol = ({
       )}
       {isShowOtherInfo ? (
         <div>
-          <ul className="flex flex-col 2xl:gap-2 gap-1 w-full pt-10 md:pt-0 ">
+          <ul className="flex flex-col 2xl:gap-2 gap-1 w-full pt-10 md:pt-0 px-[11px] ">
             {amenities.map((item) => (
               <li
                 key={item.src}
@@ -55,11 +55,11 @@ export const MoreInfoFirstCol = ({
             <BookLink
             to="/booking"
             className=" 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors    xl:mt-auto
         lg:mt-9
         md:mt-4
         mt-10
-        block w-fit
+        md:block hidden w-fit
         "
           >
             {t("buttons.bookRoom")}
