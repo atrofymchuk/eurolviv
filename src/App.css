@@ -60,9 +60,7 @@
 }
 
 @media (width > 768px) {
-  .special-offers-slider > .slick-list > .slick-track > .slick-slide {
-width: 399px !important;
-  }
+  
 
 }
 
@@ -77,6 +75,9 @@ width: 399px !important;
   .img > .slick-list >.slick-track>.slick-slide > div {
     height: 350px;
   }
+  .special-offers-slider > .slick-list > .slick-track > .slick-slide {
+    width: 399px !important;
+      }
 }
 
 

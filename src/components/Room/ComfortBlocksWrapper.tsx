@@ -36,6 +36,8 @@ export const ComfortsBlocksWrapper = ({
 
   return (
     <div className="">
+
+      
       {room.isLux ? (
         <>
           <ComfortsBlock
@@ -67,7 +69,7 @@ export const ComfortsBlocksWrapper = ({
       ) : (
         <>
           <ComfortsBlock
-            title={t('room.comfortBlock.title')}
+            title={t('room.comfortBlock.title4')}
             icons={icons.ammentiesInRoom}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}

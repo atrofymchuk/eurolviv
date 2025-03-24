@@ -1,7 +1,7 @@
 import { parking } from "../../store/exportsIcons";
 import { coffeeRoom } from "../../store/exportsImg";
-import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
+import { BookLink } from "../Buttons/BookLink";
 
 export const MoreInfoFirstCol = ({
   isShowOtherInfo,
@@ -11,15 +11,14 @@ export const MoreInfoFirstCol = ({
   amenities: { src: string; text: string }[];
 }) => {
   const { t } = useTranslation();
-  const { onOpenModal } = useModalStore();
   return (
-    <div className="flex flex-col md:py-15 py-10 px-5 ">
+    <div className="flex flex-col lg:py-20 pt-[54px] pb-[28px] md:py-10 xl:px-[21px_17px] lg:px-[14px_10px]  md:px-[10px_8px]">
       {isShowOtherInfo ? (
         <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] ">
           {t("room.moreInfo.title2")}
         </h1>
       ) : (
-        <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] hidden md:block">
+        <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] pb-[20px] hidden md:block">
           {t("room.moreInfo.title")}
         </h1>
       )}
@@ -45,34 +44,26 @@ export const MoreInfoFirstCol = ({
         <img
           src={coffeeRoom}
           alt="bedWithPet"
-          className="w-full 2xl:max-h-[512px] xl:max-h-[371px] lg:max-h-[300px] md:max-h-[250px] max-h-[276px]   object-cover  "
+          className="w-full 2xl:max-h-[512px] xl:max-h-[371px] lg:max-h-[300px] md:max-h-[250px] max-h-[276px] px-2 md:px-0  object-cover md:object-bottom object-[20%_80%]  "
         />
       )}
-      <p className="text-white text-[14px] 2xl:text-[20px] md:text-[14px] lg:text-[14px] uppercase mt-[23px]   flex md:hidden xl:ps-5">
+      <p className="text-white text-[14px] 2xl:text-[20px] md:text-[14px] lg:text-[14px] uppercase mt-[23px]  px-2 md:px-0 flex md:hidden xl:ps-5">
         <img src={parking} alt="parking" className="w-6 h-6" />
         {t("room.moreInfo.parking")}
       </p>
       {isShowOtherInfo && (
-        <button
-          onClick={() => onOpenModal("order")}
-          className={` 
-        uppercase font-semibold 
-        bg-[#EDE8E5] text-[#A47762]
-        text-[12px]   lg:text-[14px]
-        px-4 sm:px-5 md:px-4 lg:px-[18.5px]
-        py-2 sm:py-2.5 md:py-2.5 lg:py-[9px]
-        xl:py-[10px] xl:px-[20px]
-        rounded-full
-        hidden md:block
-        self-start
-        xl:mt-10
+            <BookLink
+            to="/booking"
+            className=" 
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10
         lg:mt-9
         md:mt-4
         mt-10
-        hover:bg-white transition-colors`}
-        >
-          {t("buttons.bookRoom")}
-        </button>
+        block w-fit
+        "
+          >
+            {t("buttons.bookRoom")}
+          </BookLink>
       )}
     </div>
   );

@@ -1,48 +1,29 @@
 import { memo, useMemo } from "react";
-import { Icon } from "../../types/types";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
-
-type ComfortsBlockToProps = {
-  title: string;
-  icons: Icon[];
-  images: string[];
-  imgStyle: ImgStyle;
-  style: Styles;
-};
-
-type ImgStyle = {
-  ammentiesImageFst: string;
-  ammentiesImageScd: string;
-};
-
-type Styles = {
-  bgColor: string;
-  text: string;
-  headerColor: string;
-};
-
+import { ComfortsBlockToProps } from "../../types/entity";
+import cn from "classnames";
 export const ComfortsBlock = memo(
   ({ title, imgStyle, icons, images, style }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
 
     const renderedIcons = useMemo(() => {
-      if (!icons) return null; 
+      if (!icons) return null;
       return icons.map((item, index) => (
         <li
           key={index}
-          className={`flex items-center gap-x-1 ${style.text} uppercase font-cofo`}
+          className={cn(
+            `flex items-center gap-1  ${style.text} uppercase font-cofo`
+          )}
         >
           <InViewWrapper>
             <img
               src={item.src}
               alt="icon"
-              className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[20px] md:h-[20px] lg:w-[20px] lg:h-[20px] xl:w-[28px] xl:h-[28px] 2xl:w-[32px] 2xl:h-[32px]"
+              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8"
             />
           </InViewWrapper>
-          <p
-            className="text-[10px] sm:text-[12px] md:text-[12px] lg:text-[12px] xl:text-[16px] leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]"
-          >
+          <p className="text-[14px] sm:text-[12px] xl:text-[16px] leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
             {t(item.text)}
           </p>
         </li>
@@ -52,50 +33,54 @@ export const ComfortsBlock = memo(
     if (!icons) return null;
 
     return (
-      <div className={`${style.bgColor}`}>
-        <div className="flex flex-col justify-center items-center  w-full">
+      <div className={cn(`${style.bgColor}`)}>
+        <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
           <div
-            className="grid 
+            className="grid  
             grid-cols-1 
-            md:grid-cols-[35.64%_30.63%_33.73%]
+            md:grid-cols-[35.67%_30.65%_33.76%]
             items-center justify-center 
             border-x border-[#C7C7C7]
-            w-[84.06%]
-            shadow-[0px_-14px_61.3px_0px_#25252612]"
+            md:max-w-[90.83%]  w-full max-w-[79.5%]
+            "
           >
-            <div className="flex flex-col justify-center items-center md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:h-[825px]">
+            <div className="flex flex-col  ps-[8px] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
-              <h1
-  className={`uppercase ${style.headerColor} font-cofo text-[32px] 
+                <h1
+                  className={cn(`uppercase ${style.headerColor} font-cofo text-[32px] 
               lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[104%] 
-              2xl:mb-[51px] lg:mb-[20px] md:text-left 
-              break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`}
->
-  {title}
-</h1>
+              2xl:mb-[51px] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[60%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
+              break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
+                >
+                  {title}
+                </h1>
 
-
-                <div className="hidden md:flex justify-center items-center w-full">
+                <div className="hidden md:flex justify-center items-center w-full xl:px-[21px] lg:px-[14px] md:px-[10px]">
                   <InViewWrapper>
                     <img
                       src={images[0]}
                       alt="room image"
-                      className={`2xl:w-[537px] 2xl:h-[512px] xl:w-[360px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[300px] md:h-[240px] w-[250px]  h-full object-cover ${imgStyle.ammentiesImageFst}`}
+                      className={cn(
+                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-full object-cover ${imgStyle.ammentiesImageFst}`
+                      )}
                     />
                   </InViewWrapper>
                 </div>
               </div>
             </div>
+
             <div
               className="md:border-x border-[#C7C7C7]
-              flex items-start justify-center 
-              py-6 md:py-8 lg:py-0 h-full
-              2xl:h-[825px]"
+              flex  md:justify-center 
+              md:items-center xl:py-[89px] lg:py-[45px]
+              py-6 md:py-8  h-full ps-[8px] md:ps-[4px]
+              "
             >
               <div
-                className="w-[90%]   sm:w-[400px] md:w-[300px] lg:w-full 
-                  2xl:ps-[36px] xl:ps-[14px]
-                lg:pt-[200px] xl:pt-[120px] 2xl:pt-[210px] md:pt-[45px]"
+                className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
+              2xl:h-[512px] md:h-[260px] lg:h-[311px]
+                  2xl:ps-[36px] xl:ps-[14px]  
+                lg:pt-[50px] xl:pt-[120px] 2xl:pt-[78px] md:pt-[45px] "
               >
                 <ul className="space-y-2 sm:space-y-3 md:space-y-1 lg:space-y-2 xl:space-y-2">
                   {renderedIcons}
@@ -105,31 +90,35 @@ export const ComfortsBlock = memo(
 
             <div
               className="flex flex-col items-center justify-center 
-              py-6 md:py-8 lg:py-0 md:px-0 
-              2xl:h-[825px]"
+               md:py-8 lg:py-0 md:px-0 
+              xl:pt-[130px]
+              
+                pb-[28px]
+               md:pb-0"
             >
               <div
-                className="sm:w-full
-                lg:h-[441px] lg:w-[390px] 
-                xl:h-[411px] xl:w-[390px] 
-                2xl:w-[497px] 2xl:h-[510px]
-                max-w-full p-2 md:p-0
-                lg:mt-[195px] xl:mt-[140px]  md:mt-[45px]"
+                className="sm
+                lg:h-[441px]  
+                xl:h-[411px]  
+                 2xl:h-[510px]
+                w-full p-2.5 md:p-0
+                lg:pt-[110px]   xl:pt-0  md:pt-[45px] 2xl:pt-[10px]"
+                
               >
                 <InViewWrapper>
                   <img
                     src={images[1]}
                     alt="room image"
-                    className={`hidden md:block mx-auto
-                    2xl:w-[537px] 2xl:h-[512px] xl:w-[340px] xl:h-[380px] lg:w-[350px] lg:h-[311px] md:w-[250px] md:h-[240px] w-[250px] object-cover
-                    ${imgStyle.ammentiesImageScd}`}
+                    className={cn(`hidden md:flex
+                     2xl:h-[512px]  xl:h-[380px]  lg:h-[311px] md:w-full md:h-[260px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                    ${imgStyle.ammentiesImageScd}`)}
                   />
                   <img
                     src={images[0]}
                     alt="room image"
                     className="md:hidden w-full 
-                  h-[230px] sm:h-[250px] md:h-[300px] 
-                  object-cover"
+                    h-[230px] sm:h-[250px] md:h-[300px] 
+                    object-cover"
                   />
                 </InViewWrapper>
               </div>

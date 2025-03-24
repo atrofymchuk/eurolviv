@@ -5,9 +5,9 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
   const { t } = useTranslation();
   return (
     <div
-    className={cn(`md:border-t md:border-e items-center justify-center md:justify-start md:ps-2.5 flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative`)}
+    className={cn(`md:border-t md:border-e ps-[10px]  md:justify-start md:ps-2.5 flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative`)}
   >
-    <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] text-[32px] lg:text-[60px] 2xl:leading-[81px] 2xl:font-normal leading-[28px] tracking-[-0.026em] flex flex-col justify-center lg:h-full">
+    <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] text-[32px] lg:text-[60px] 2xl:leading-[81px] 2xl:font-normal leading-[86%] tracking-[-0.026em] flex flex-col justify-center lg:h-full">
       {t(nameRoom).length > 17 ? (
         <>
           {(() => {
