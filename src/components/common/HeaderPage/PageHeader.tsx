@@ -28,6 +28,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   onOrderClick,
 }) => {
   const { t } = useTranslation();
+  
 
   return (
     <div className="w-full relative lg:h-[1181px] h-[821px]">
