@@ -20,6 +20,7 @@ export const Card = ({ src, title, desc, classes, offer }: CardToProps) => {
       title: t(title),
       desc: t(desc),
       details: t("buttons.details"),
+      
     }),
     [t, offer, title, desc]
   );
@@ -31,36 +32,45 @@ export const Card = ({ src, title, desc, classes, offer }: CardToProps) => {
           <img
             src={src}
             alt={translatedTexts.title}
-            className={cn(`w-full object-cover ${classes} h-[200px] sm:h-[250px] md:h-[320px] lg:h-[510px]`)}
+            className={cn(
+              `w-full object-cover ${classes} h-[264px] sm:h-[320px] md:h-[320px] lg:h-[310px] xl:h-[450px] 2xl:h-[510px] `
+            )}
           />
         </InViewWrapper>
 
-        <p className="absolute top-[10px] left-[10px] lg:top-[20px] lg:left-[20px] uppercase border bg-white text-[#A47762] font-medium rounded-full 
-          px-3 py-1 text-[10px] leading-[12px] sm:text-[12px] sm:px-4 sm:py-2 md:text-[14px] lg:text-[16px] lg:px-[22px] lg:py-[13px]">
+        <p
+          className="absolute top-[13px]  left-[11px] xl:top-[20px] xl:left-[20px] uppercase border bg-white text-[#A47762] font-cofo-medium rounded-full 
+        px-[12px] font-cofo-medium py-1.25 text-[10px]  sm:text-[12px]  md:text-[12px] lg:text-[12px]  2xl:text-[16px] xl:px-[16px] xl:py-[10px]  lg:px-[14px] lg:py-[9px]  2xl:py-[10px]
+        shrink-0  "
+        >
           {translatedTexts.offer}
         </p>
       </div>
 
-      <h4 className="uppercase text-[#252526] font-semibold tracking-[-0.05em] flex items-center min-h-[60px] 
-        text-[18px] leading-[18px] sm:text-[22px] sm:leading-[20px] md:text-[26px] md:leading-[22px] lg:text-[32px] lg:leading-[26px] pt-[15px] lg:pt-[20px]">
+      <h4
+        className="uppercase text-[#252526] font-cofo-medium tracking-[-0.05em] flex items-center 
+        text-[24px] leading-[106%]  sm:leading-[20px] md:text-[26px] md:leading-[22px] lg:text-[32px] lg:leading-[36px] pt-[20px] "
+      >
         {translatedTexts.title}
       </h4>
 
-      <p className="uppercase text-[#8F8F8F] mt-2 lg:mt-3 
-        text-[10px] leading-[11px] sm:text-[12px] sm:leading-[13px] md:text-[14px] md:leading-[15px] lg:text-[18px] lg:leading-[17px]">
+      <p
+        className="uppercase text-[#8F8F8F] mt-3.25 lg:mt-auto
+        text-[12px] leading-[120%] sm:text-[12px] sm:leading-[14px] md:text-[14px] md:leading-[15px] xl:text-[18px] lg:leading-[17px]"
+      >
         {translatedTexts.desc}
       </p>
 
-      <div className="text-start w-full lg:hidden mt-auto mb-[20px]">
-        <Link
-          to="/special-offers"
-          className="font-semibold border border-[#8C331B] text-[#8C331B] px-4 py-3 rounded-full uppercase 
-            text-[10px] sm:text-[12px] md:text-[14px] xl:text-base 
-            hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition duration-300 ease-in-out"
-        >
-          {translatedTexts.details}
-        </Link>
-      </div>
+        <div className="mt-auto flex lg:hidden">
+          <Link
+            to="/special-offers"
+            className="font-cofo-medium border border-[#8C331B] text-[#8C331B] px-7.75 py-2.5 rounded-full uppercase 
+              text-[10px] sm:text-[12px] md:text-[14px]  inline-block
+              hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition duration-300 ease-in-out"
+          >
+            {translatedTexts.details}
+          </Link>
+        </div>
     </div>
   );
 };
