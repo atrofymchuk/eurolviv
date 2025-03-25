@@ -7,14 +7,13 @@ export default {
   ],
   theme: {
     extend: {
-
       fontFamily: {
-
         cofo: ['CoFoSans', 'sans-serif'],
-       
+        cofoMedium: ['CoFoSans-Medium', 'sans-serif'], 
       },
-    },
+    }
+    
   },
-  plugins: [],
 
+  plugins: [],
 } satisfies Config;

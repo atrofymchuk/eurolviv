@@ -8,10 +8,10 @@ export const Karaoke = () => {
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-[93.16%] mx-auto border-x border-[#B3B3B3] border-t ">
         <div className="flex flex-col  items-center justify-center lg:h-[561px] h-[389px]">
           <div className="flex  flex-col justify-center items-center text-center md:text-start ">
-          <p className="font-blessed xl:font-extrabold 2xl:w-[565px] w-[267px] text-[16px] xl:text-[36px]  lg:w-[350px] lg:text-[26px] lg:leading-[25.2px] ml-2 xl:inline pt-4  xl:w-[400px]">
+          <p className="font-blessed xl:font-extrabold 2xl:w-[525px] w-[267px] text-[16px] xl:text-[36px]  lg:w-[350px] lg:text-[26px] lg:leading-[25.2px] ml-2 xl:inline pt-4  xl:w-[400px]">
               Ruff
             </p>
-            <h1 className="uppercase 2xl:text-[100px] xl:text-[86px] lg:text-[82px] md:text-[56px] text-[64px] leading-[51px] lg:leading-[67px] 2xl:max-w-[525px]  lg:max-w-[350px] xl:max-w-[400px] md:max-w-[250px] max-w-[299px] tracking-[-7%] 2xl:pt-5 ">
+            <h1 className="uppercase 2xl:text-[100px] xl:text-[86px] lg:text-[82px] md:text-[56px] text-[64px] leading-[81%] 2xl:max-w-[525px]  lg:max-w-[350px] xl:max-w-[400px] md:max-w-[250px] max-w-[299px] tracking-[-7%] 2xl:pt-5 ">
               {t('restaurant.karaoke.title')}
             </h1>
             <div className="lg:space-y-5 space-y-2 2xl:pt-[34px] xl:pt-[20px] lg:pt-[10px]  flex flex-col 2xl:max-w-[525px] md:max-w-[250px] max-w-[299px] lg:max-w-[350px] xl:max-w-[400px] ">
