@@ -153,6 +153,7 @@ export interface ReviewSliderProps {
 export interface AboutSliderProps {
   swiperImagesStyle?: string;
   imageSlider: string[];
+  isConference?: boolean;
 }
 
 export interface MenuInitialState {

@@ -8,8 +8,10 @@ import { AboutSliderProps } from "../../types/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
+
+
 export const SliderAbout: React.FC<AboutSliderProps> = memo(
-  ({ imageSlider, swiperImagesStyle }) => {
+  ({ imageSlider, swiperImagesStyle, isConference }) => {
     const swiperRef = useRef<SwiperType | null>(null);
 
     const swiperModules = useMemo(() => [Navigation], []);
@@ -25,13 +27,15 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
     return (
       <div>
         <div
-          className="relative z-10 
-          h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[522px] "
+          className={cn(`relative z-10 
+          ${isConference ? "h-full" : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[522px]"}`)}
         >
           <Swiper
             modules={swiperModules}
-            className="mySwiper 
-            h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[522px]"
+            className={`mySwiper 
+            ${isConference ?
+               "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[623px]" 
+              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[522px]"}`}
             loop
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
@@ -53,7 +57,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </Swiper>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] flex items-center justify-center 
                      left-5 lg:left-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handlePrev}
@@ -62,7 +66,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </button>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] xl:w-[60px] xl:h-[60px] flex items-center justify-center 
                      right-5 lg:right-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handleNext}

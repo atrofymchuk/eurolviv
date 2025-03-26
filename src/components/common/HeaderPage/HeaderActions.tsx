@@ -22,14 +22,14 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       {showOrderButton && (
         <button
           onClick={onOrderClick}
-          className="uppercase bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit px-[34.5px] py-[13.5px] rounded-3xl font-semibold text-sm hover:cursor-pointer"
+          className="uppercase bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit px-[34.5px] py-[13.5px] rounded-3xl font-cofo-medium text-sm hover:cursor-pointer mt-2.5"
         >
           {t("buttons.order")}
         </button>
       )}
 
       {showConferenceMenuButton && (
-        <button className="uppercase hover:bg-[#EDE8E5] hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border w-fit px-[25.5px] py-[13.5px] rounded-3xl font-semibold text-sm lg:hidden hover:cursor-pointer">
+        <button className="uppercase hover:bg-[#EDE8E5] hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border w-fit px-[25.5px] py-[13.5px] rounded-3xl font-cofo-medium text-sm  lg:hidden hover:cursor-pointer">
           {t("buttons.conferenceMenu")}
         </button>
       )}
