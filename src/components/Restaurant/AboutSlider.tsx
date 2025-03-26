@@ -47,7 +47,7 @@ function AboutSlider() {
     <div className="slider-container relative w-full flex items-center justify-center">
       <button
         className="absolute left-10 md:left-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
-                   lg:flex hidden items-center justify-center text-[#8C331B] bg-white 
+                   lg:flex hidden items-center justify-center text-white hover:text-[#8C331B] hover:bg-white 
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickPrev()}
       >
@@ -73,9 +73,11 @@ function AboutSlider() {
                 />
               </InViewWrapper>
               <div
-                className={cn(`absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
-                  isSide ? "opacity-100" : "opacity-0"
-                }`)}
+                className={cn(
+                  `absolute inset-0 bg-[#FFFFFFB2] transition-opacity duration-500 ${
+                    isSide ? "opacity-100" : "opacity-0"
+                  }`
+                )}
               ></div>
             </div>
           );
@@ -84,7 +86,7 @@ function AboutSlider() {
 
       <button
         className="absolute hidden md:right-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
-                   lg:flex items-center justify-center text-[#8C331B] bg-white 
+                   lg:flex items-center justify-center text-white hover:text-[#8C331B] hover:bg-white
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickNext()}
       >
