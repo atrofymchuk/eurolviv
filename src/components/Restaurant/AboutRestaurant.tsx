@@ -12,18 +12,20 @@ export const AboutRestaurant = () => {
       <div className="grid md:grid-cols-[41.82%_58.18%] w-full grid-cols-1 ">
         <div className="border-x border-b h-[33px] border-[#B3B3B3] lg:h-[53px]"></div>
         <div className="border-e md:border-b border-[#B3B3B3] lg:h-[53px]"></div>
-        <div className="border-x md:border-b border-[#B3B3B3] flex flex-col items-center justify-center lg:pt-[54px] lg:pb-[60px] md:text-start text-center">
+        <div className="border-x md:border-b border-[#B3B3B3] flex flex-col items-center justify-center lg:pt-[54px] 2xl:pb-[60px] md:text-start text-center">
           <div className="2xl:w-[635px]  w-[299px] lg:w-[406px] ">
             <p className="font-blessed  leading-[70%] 2xl:text-[36px] xl:text-[28px] lg:text-[24px] md:text-[18px]  text-[#242425] text-[16px] lg:pt-0 pt-[33px]">
               {t("restaurant.about.title")}
             </p>
-            <h1 className="uppercase tracking-[-7%] lg:leading-[81%] leading-[50%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px] md:flex items-center space-y-1.5">
-              ruff
-                <br className="md:hidden" />  
-              <span className="2xl:text-[64px] lg:tracking-[-6%] text-[32px] inline-flex items-center md:self-center">
-                {t("restaurant.about.title2")} -
-              </span>
-            </h1>
+            <div className="md:flex md:items-center md:gap-2">
+                <h1 className="uppercase tracking-[-7%] leading-[81%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px]">
+                    ruff
+                </h1>
+                <span className="2xl:text-[64px] lg:tracking-[-6%] text-[32px] flex items-center mt-auto justify-center md:justify-start">
+                    {t("restaurant.about.title2")}
+                    <span className="md:inline-flex hidden">&nbsp;-</span>
+                </span>
+            </div>
 
             <div className="lg:space-y-6 space-y-3 lg:pt-[45px] pt-[22px]  mb-8">
               <p className="uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
@@ -52,7 +54,7 @@ export const AboutRestaurant = () => {
               <p className="md:block hidden uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
                 <span className="font-cofo lg:font-cofo-medium">
                   {t("restaurant.about.desc.fourh.0")}
-                  </span>
+                </span>
                 {t("restaurant.about.desc.fourh.1")}
                 {t("restaurant.about.desc.fourh.2")}
               </p>
@@ -81,13 +83,13 @@ export const AboutRestaurant = () => {
             <img
               src={aboutImageTrd}
               alt=""
-              className=" w-full h-full px-2.5 object-cover xl:max-h-[292px]"
+              className=" w-full h-full px-2.5 object-cover "
             />
           </div>
         </div>
 
         <div className="border-x border-b border-[#B3B3B3] flex flex-col items-center justify-center py-[27px]   lg:mb-10 md:text-start text-center md:hidden  ">
-          <div className="2xl:w-[635px] w-[299px]   ">
+          <div className="2xl:w-[635px] w-[299px]">
             <p className="uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
               <span className="lg:font-cofo-medium">
                 {t("restaurant.about.desc.third.0")}
@@ -100,7 +102,7 @@ export const AboutRestaurant = () => {
                 {t("restaurant.about.desc.fourh.0")}
               </span>
               <span className="font-cofo-medium">
-              {t("restaurant.about.desc.fourh.1")}
+                {t("restaurant.about.desc.fourh.1")}
               </span>
               {t("restaurant.about.desc.fourh.2")}
             </p>
