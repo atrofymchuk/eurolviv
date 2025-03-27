@@ -5,6 +5,9 @@ import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "./ChangeLangButton";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
+import { RoomsListHeader } from "./RoomsListHeader";
+import { Room } from "../../types/types";
+
 type HeaderNavProps = {
   scrolled: boolean;
   logo: string;
@@ -13,7 +16,9 @@ type HeaderNavProps = {
   isActiveLink: (path: string) => string;
   setIsShowRooms: Dispatch<SetStateAction<boolean>>;
   rightMenu: string;
-  changeLanguage: () => void 
+  changeLanguage: () => void;
+  rooms: Room[];
+  isShowRooms: boolean;
 };
 
 export const HeaderNav = memo(({
@@ -23,7 +28,9 @@ export const HeaderNav = memo(({
   iconLogoStyle,
   setIsShowRooms,
   isActiveLink,
-  changeLanguage
+  changeLanguage,
+  rooms,
+  isShowRooms
 }: HeaderNavProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = useCallback(() => setMenuOpen(prev => !prev), []);
@@ -51,21 +58,41 @@ export const HeaderNav = memo(({
 
   const renderNavLinks = useCallback((isMobile = false) => {
     return navLinks.map(({ path, label }) => (
-      <Link
+      <div 
         key={path}
-        to={path}
-        className={cn(
-          "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px]",
-          isActiveLink(path)
-        )}
-        onClick={() => isMobile && setMenuOpen(false)}
+        className="relative"
         onMouseEnter={path === "/rooms" ? handleMouseEnterRooms : undefined}
-        onMouseLeave={path !== "/rooms" ? handleMouseLeaveRooms : undefined}
+        onMouseLeave={path === "/rooms" ? handleMouseLeaveRooms : undefined}
       >
-        {label}
-      </Link>
+        <Link
+          to={path}
+          className={cn(
+            "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px]",
+            isActiveLink(path)
+          )}
+          onClick={() => isMobile && setMenuOpen(false)}
+        >
+          {label}
+        </Link>
+        
+        {path === "/rooms" && isShowRooms &&  (
+          <div className="absolute -left-5  top-full pt-4">
+            <div className="w-fit">
+              <div className="flex flex-col rounded-lg overflow-hidden">
+                {rooms.map((room) => (
+                  <RoomsListHeader 
+                    key={room.type} 
+                    roomType={room.type} 
+                    roomTitle={room.title} 
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     ))
-  }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms]);
+  }, [navLinks, isActiveLink, handleMouseEnterRooms, handleMouseLeaveRooms, isShowRooms, rooms]);
 
 
   return (

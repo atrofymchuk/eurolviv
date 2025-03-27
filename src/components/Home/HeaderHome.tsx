@@ -27,7 +27,7 @@ export const HeaderHome = () => {
             {t("global.whereTo")}
           </span>
         </h4>
-        <h1 className="nor font-cofo xl:text-[198px] uppercase text-[64px] font-normal z-20  xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+        <h1 className="nor font-cofo xl:text-[198px] uppercase text-[64px] font-normal z-20  2xl:text-[289px]  xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
         </h1>
         <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[46px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px]  ">
