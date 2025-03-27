@@ -1,49 +1,48 @@
-import { useModalStore } from "../../store/useModalStore";
+import { useTranslation } from "react-i18next";
+import { ViewMenuButton } from "../Buttons/ViewMenu";
 
 type ConferenceMenuMobileCardToProps = {
   img: string;
 };
 
+type MenuSection = {
+  titleKey: string;
+};
+
 export const ConferenceMenuMobileCard = ({
   img,
 }: ConferenceMenuMobileCardToProps) => {
-  const { onOpenModal } = useModalStore();
+  const { t } = useTranslation();
+
+  const menuSections: MenuSection[] = [
+    { titleKey: "conferenceService.conferenceMenu.menu.title1" },
+    { titleKey: "conferenceService.conferenceMenu.menu.title" },
+    { titleKey: "conferenceService.conferenceMenu.menu.title2" },
+  ];
+
   return (
-    <div className="flex flex-col items-center relative ">
-      <img src={img} alt="" className="w-screen h-[432px] object-cover " />
+    <div className="flex flex-col items-center relative">
+      <img src={img} alt="" className="w-screen h-[432px] sm:h-[500px] md:h-[600px] object-cover" />
       <div
         className="absolute inset-0"
         style={{
           background: `linear-gradient(180deg, #252526 0%, rgba(37, 37, 38, 0) 50.25%, #252526 100%),
                        linear-gradient(0deg, rgba(37, 37, 38, 0.2), rgba(37, 37, 38, 0.2))`,
         }}
-      ></div>
+      />
 
-      <div className="absolute">
-        <div className="space-y-[13px]">
-          <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
-            фуршет
-          </p>
-          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
-            переглянути меню
-          </button>
-        </div>
-        <div className="space-y-[13px]">
-          <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center ">
-            обіди та вечері
-          </p>
-          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px] border-[#EDE8E5]  rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition" >
-            переглянути меню
-          </button>
-        </div>
-        <div className="space-y-[13px]">
-          <p className="uppercase text-[#FFFFFF] text-[24px] tracking-[-7%] leading-[104%] pt-[44px] text-center">
-            каво-перерви
-          </p>
-          <button onClick={()=>onOpenModal('menu')} className="uppercase text-[#EDE8E5] border px-4 py-2 lg:text-[16px]  border-[#EDE8E5] rounded-full lg:mt-[37px] font-medium hover:bg-[#EDE8E5] hover:text-[#242425] transition">
-            переглянути меню
-          </button>
-        </div>
+      <div className="absolute flex flex-col items-center justify-center space-y-[44px] mt-[55px] sm:mt-[65px] md:mt-[80px] md:space-y-[64px]">
+        {menuSections.map((section, index) => (
+          <div
+            key={index}
+            className={`space-y-[13px] sm:space-y-[16px] md:space-y-[18px] flex flex-col items-center w-full `}
+          >
+            <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-7%] leading-[104%]  text-center">
+              {t(section.titleKey)}
+            </p>
+            <ViewMenuButton />
+          </div>
+        ))}
       </div>
     </div>
   );

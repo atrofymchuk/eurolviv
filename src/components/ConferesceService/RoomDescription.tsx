@@ -12,8 +12,8 @@ export const RoomDescription = memo(({ pOne, pTwo }: RoomDescriptionProps) => {
   const { onOpenModal } = useModalStore();
 
   return (
-    <div className="xl:pt-[42px] lg:pt-[30px] lg:px-[22px_20px]">
-      <p className="2xl:text-[20px] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[14px] xl:text-[17px] leading-[120.1%] 2xl:tracking-[-0.04em] 2xl:w-[532px] lg:w-fit h-fit lg:text-[#8C331B] text-[#252526] uppercase pt-[10px] lg:pt-0">
+    <div className="xl:pt-[42px] lg:pt-[30px] lg:px-[22px_20px]  pt-[52px]">
+      <p className="2xl:text-[20px] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[14px] xl:text-[17px] leading-[120.1%] 2xl:tracking-[-0.04em] 2xl:w-[532px] lg:w-fit h-fit lg:text-[#8C331B] text-[#252526] uppercase ">
         {t(pOne)}
       </p>
 

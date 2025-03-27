@@ -17,10 +17,10 @@ export const RoomTitle = memo(({ title, size, isOnTop }: RoomTitleProps) => {
         className={cn(
           `${
             isOnTop ? " lg:border-x border-x" : "lg:border-x border-x"
-          } items-center lg:justify-center flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] w-full relative h-full ps-[10px]`
+          } 2xl:ps-[31px] xl:ps-[24px] lg:ps-[20px] md:ps-[14px]  items-center  flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] xl:p-[28px] lg:p-[24px] md:p-[18px] w-full relative h-full ps-[10px]`
         )}
       >
-        <h1 className="uppercase 2xl:text-[100px] text-[32px] sm:text-[40px] md:text-[58px] 2xl:leading-[81%] 2xl:w-[1200px] 2xl:font-normal flex flex-col 2xl:tracking-[-4%] tracking-[-0.07em] leading-[90%] overflow-visible mt-auto 2xl:mt-0 2xl:mb-0 mb-5">
+        <h1 className="uppercase 2xl:text-[100px] text-[32px] sm:text-[40px] md:text-[58px] lg:text-[64px] 2xl:leading-[81%] xl:text-[72px] md:whitespace-nowrap 2xl:font-normal flex flex-col 2xl:tracking-[-4%] tracking-[-0.07em] leading-[90%] overflow-visible  2xl:mt-0 ">
           <span className="order-1 2xl:order-2 inline w-fit">
             {t(title)}
           </span>
