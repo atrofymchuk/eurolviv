@@ -48,7 +48,10 @@ export const Layout = () => {
         />
         <Route
           path="/special-offers/:offer"
-          element={<SpecialOffersModal /> }
+          element={<>
+            <InfinityScrollPage pageKey="specialOffers" />
+            <SpecialOffersModal />
+          </>}
         />
         <Route
           path="/terrase"
