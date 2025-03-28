@@ -7,7 +7,6 @@ import BaseModal from "./components/Modals/BaseModal";
 import "./i18n";
 import { InfinityScrollPage } from "./pages/InfinityScrollPage";
 import { ConferenceService } from "./pages/ConferenceService";
-import { ScrollToTop } from "./components/utils/ScrollOnTop";
 import Booking from "./pages/BookRoom";
 import RedirectToAdminPanel from "./components/utils/RedirectToAdminPanel";
 import { OnLoadingSpin } from "./components/utils/OnLoadingSpin";
@@ -27,7 +26,7 @@ export const Layout = () => {
   return (
     <>
       {!isBookingPage && <Header />}
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Routes>
         <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
         <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />
