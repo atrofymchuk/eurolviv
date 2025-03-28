@@ -18,11 +18,25 @@
   flex-direction: column !important;
 
 }
-.special-offers-slider > .slick-list >.slick-track>.slick-slide  {
-  width: 484px !important;
+
+.special-offers-slider > .slick-list >.slick-track>.slick-current .slick-slide .slick-slide   {
+  width: 589px !important;
+}
+/* .home-slider > .slick-list >.slick-track>.slick-slide > div > div  {
+  width: fit-content !important;
 
 
 }
+.home-slider > .slick-list >.slick-track>.slick-slide > div   {
+  width: fit-content !important;
+
+
+}
+.home-slider > .slick-list >.slick-track>.slick-slide    {
+  width: fit-content !important;
+
+
+} */
 
 .roomslider > .slick-list >.slick-track>.slick-slide >div  {
   width: 509px !important;
@@ -81,6 +95,7 @@
 
 
 @media (max-width: 768px) {
+  
   .review > .slick-list >.slick-track>.slick-active>div  {
     width: 299px;
   }
@@ -96,9 +111,7 @@
     margin-right: 0px !important; 
     margin-left: 0px !important; 
   }
-  .hall > .slick-list{
-
-  }
+  
   .hall > .slick-list > .slick-track>.slick-slide{
     max-width: fit-content !important;
 
@@ -109,8 +122,3 @@
   }
 }
 
-
-
-
-
-  

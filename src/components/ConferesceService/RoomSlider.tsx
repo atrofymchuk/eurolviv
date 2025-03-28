@@ -27,52 +27,40 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2.2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     arrows: false,
-    variableWidth: false,
-    beforeChange: (_oldIndex: number, newIndex: number) =>
-      setCurrentSlide(newIndex),
+    variableWidth: true,
+    beforeChange: (_oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
 
     responsive: [
       {
-        breakpoint: 1536,
-        settings: {
-          slidesToShow: 2.2,
-          slidesToScroll: 2,
-          rows: 1,
-        },
-      },
-      {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 2.2,
-          slidesToScroll: 2,
-          rows: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2.2,
-          slidesToScroll: 2,
-          rows: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2.2,
           slidesToScroll: 1,
-          rows: 2,
+          variableWidth: true,
+          rows: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.2,
           slidesToScroll: 1,
-          rows: 2,
+          variableWidth: true,
+          rows: 1,
         },
       },
     ],
@@ -83,7 +71,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
       {currentSlide > 0 && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                     left-10 lg:left-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
+                     left-5 lg:left-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickPrev()}
         >
@@ -92,18 +80,21 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
       )}
 
       <div className="max-w-screen flex justify-center w-full relative">
-        <div className="w-full ps-5 lg:px-0">
+        <div className="w-full">
           <Slider ref={sliderRef} {...settings} className="hall">
             {images.map((slide, index) => (
-              <div
-                key={index}
-                className="px-2"
-              >
-                <div className="w-full h-full">
-                  <img
-                    src={slide}
-                    alt={`Slide ${index}`}
-                    className="w-full h-[184px] md:h-[334px] lg:h-[456px] object-cover"
+              <div key={index} className="pe-5">
+                <div className="relative">
+                  <img 
+                    src={slide} 
+                    alt={`Slide ${index}`} 
+                    className="object-cover rounded-lg
+                      w-[280px] h-[180px]
+                      sm:w-[300px] sm:h-[200px]
+                      md:w-[320px] md:h-[220px]
+                      lg:w-[400px] lg:h-[280px]
+                      xl:w-[450px] xl:h-[320px]
+                      2xl:w-[500px] 2xl:h-[350px]"
                   />
                 </div>
               </div>
@@ -112,12 +103,10 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         </div>
       </div>
 
-      {(isMobile
-        ? currentSlide < totalSlidesMobile - 1
-        : currentSlide + 2 < images.length) && (
+      {(isMobile ? currentSlide < totalSlidesMobile - 1 : currentSlide + 2 < images.length) && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                     right-14 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
+                     right-5 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickNext()}
         >
