@@ -14,7 +14,7 @@ export const Header = () => {
           </h1>
           <h1
             className="uppercase  text-white lg:leading-[91%] leading-[82%] tracking-[-0.1em] lg:hidden flex 
-            text-[48px]  md:text-[64px]  "
+            text-[48px]  md:text-[64px]"
           >
             {t("specialOffers.desc2")}
           </h1>

@@ -1,15 +1,19 @@
 import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
-import { Link } from "react-router-dom";
 import cn from "classnames";
+import { useNavigate } from "react-router-dom";
 
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
   const { onOpenModal } = useModalStore();
+  const navigate = useNavigate();
 
-
-
+  const handleCardClick = (url: string, e: React.MouseEvent) => {
+    e.preventDefault(); 
+    onOpenModal('specialOffer');
+    navigate(`/special-offers/${url}`);
+  };
 
   return (
     <div className="flex items-center justify-center px-[38px_40px] md:pb-[82px] ">
@@ -39,10 +43,9 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b " : ""}
               `)}
             >
-              <Link 
-                to={`/special-offers/${el.url}`}
-                onClick={() => onOpenModal('specialOffer')}
-                className="w-full   sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
+              <div 
+                onClick={(e) => handleCardClick(el.url, e)}
+                className="w-full sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
               >
                 <Card
                   src={el.src}
@@ -52,7 +55,7 @@ export const Cards = () => {
                   offer={el.offer}
                   url={el.url}
                 />
-              </Link>
+              </div>
             </div>
           );
         })}

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
 
@@ -12,12 +12,20 @@ import cn from "classnames";
 Modal.setAppElement("#root");
 
 export const SpecialOffersModal = () => {
+
+  const navigate = useNavigate();
   const { onCloseGlobalModal, isOpenSpecialOfferModal } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
   const { t } = useTranslation();
+  const { offer } = useParams();
+
+
+  const handleCloseModal = () => {
+    onCloseGlobalModal();
+    navigate('/special-offers');
+  }
 
   let data;
-  const { offer } = useParams();
   if (offer) {
     data = getSpecialOffer(offer);
   }
@@ -29,14 +37,14 @@ export const SpecialOffersModal = () => {
   return (
     <Modal
       isOpen={isOpenSpecialOfferModal}
-      onRequestClose={onCloseGlobalModal}
+      onRequestClose={handleCloseModal}
       className="fixed inset-0 flex items-center justify-center overflow-auto "
       overlayClassName="fixed inset-0 bg-black/50 z-50"
     >
       <div className="bg-white md:w-[76.51%] min-h-[80vh] max-h-[100vh] relative lg:overflow-hidden flex flex-col 2xl:justify-center md:p-[25px] p-[25px] items-center overflow-auto ">
         <button
           className="absolute top-0 right-0 text-3xl hover:cursor-pointer"
-          onClick={onCloseGlobalModal}
+          onClick={handleCloseModal}
         >
           <IoClose color="#8C331B" />
         </button>

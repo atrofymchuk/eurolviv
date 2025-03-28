@@ -13,8 +13,7 @@ export const useModalStore = create<ModalStore>((set) => ({
       set({ isOpenOrder: true })
     }else if(modal === 'menu'){
       set({ isOpenMenuModal: true })
-    }else if(modal === 'specialOffer'){
-      set({ isOpenSpecialOfferModal: true })
+    }else {      set({ isOpenSpecialOfferModal: true })
     }
   },
   onCloseGlobalModal: () => {
