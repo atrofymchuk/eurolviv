@@ -16,7 +16,7 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
   const { rooms } = useRoomStore();
   const [currentSlide, setCurrentSlide] = useState(1);
   const { t } = useTranslation();
-  
+
   const settings = {
     infinite: true,
     speed: 800,
@@ -28,7 +28,6 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
     centerPadding: "0",
     beforeChange: (_: number, newIndex: number) => setCurrentSlide(newIndex),
     responsive: [
-   
       {
         breakpoint: 1280, // xl
         settings: {
@@ -72,7 +71,7 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
       <Slider {...settings} className="overflow-visible" ref={ref}>
         {rooms.map((el, index) => {
           const isActive = index === currentSlide;
-          
+
           return (
             <div
               key={index}
@@ -81,17 +80,21 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
                 "flex flex-col items-center justify-between",
                 {
                   "z-10": isActive,
-                  "opacity-85": !isActive
+                  "opacity-85": !isActive,
                 }
               )}
             >
-              <div className={cn(
-                "overflow-hidden h-full transition-all duration-500",
-                {
-                  "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] sm:h-[250px] h-[220px] ": isActive,
-                  "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] sm:h-[210px] h-[190px] ": !isActive
-                }
-              )}>
+              <div
+                className={cn(
+                  "overflow-hidden h-full transition-all duration-500",
+                  {
+                    "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] sm:h-[250px] h-[220px] ":
+                      isActive,
+                    "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] sm:h-[210px] h-[190px] ":
+                      !isActive,
+                  }
+                )}
+              >
                 <InViewWrapper>
                   <img
                     src={el.header.previewImage}
@@ -105,31 +108,45 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
               </div>
 
               <div className="mt-4 px-2 w-full">
-                <h4 className={cn(
-                  "uppercase text-[#EDE8E5] text-center line-clamp-2 transition-all duration-500",
-                  {
-                    "2xl:text-[28px] xl:text-[24px] lg:text-[22px] md:text-[20px] text-[18px]": isActive,
-                    "2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px]": !isActive
-                  }
-                )}>
+                <h4
+                  className={cn(
+                    "uppercase font-cofo-medium text-[#EDE8E5] text-center line-clamp-2 transition-all duration-500",
+                    {
+                      "2xl:text-[28px] xl:text-[24px] lg:text-[22px] md:text-[20px] text-[18px]":
+                        isActive,
+                      "2xl:text-[22px] xl:text-[20px] lg:text-[18px] md:text-[16px] text-[14px]":
+                        !isActive,
+                    }
+                  )}
+                >
                   {t(el.title)}
                 </h4>
 
-                <div className={cn(
-                  "flex flex-col items-center text-white gap-y-2 transition-all duration-500",
-                  {
-                    "pt-[14px]": isActive,
-                    "pt-[8px]": !isActive
-                  }
-                )}>
+                <div
+                  className={cn(
+                    "flex flex-col items-center text-white gap-y-2 transition-all duration-500",
+                    {
+                      "pt-[14px]": isActive,
+                      "pt-[8px]": !isActive,
+                    }
+                  )}
+                >
                   <div className="flex gap-2 items-center">
-                    <img src={squareWhite} alt="" className="w-[18px] h-[18px]" />
+                    <img
+                      src={squareWhite}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
                     <p className="uppercase text-[14px] leading-[20px]">
-                      {t("home.rooms.area")}: {el.area}
+                      {t("home.rooms.area")}: {el.area} M<sup>2</sup>
                     </p>
                   </div>
                   <div className="flex gap-2 items-center">
-                    <img src={guestWhite} alt="" className="w-[18px] h-[18px]" />
+                    <img
+                      src={guestWhite}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
                     <p className="uppercase text-[14px] leading-[20px]">
                       {t("home.rooms.guests")}: {el.guests}
                     </p>
@@ -140,7 +157,7 @@ export const RoomsSlider = forwardRef<Slider, RoomSSliderProps>((_, ref) => {
                   <div className="mt-5 flex justify-center transition-all duration-500">
                     <Link
                       to={`/rooms/${el.type}`}
-                      className="border border-[#FFFFFF] uppercase text-[14px] font-medium px-[20px] py-[10px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
+                      className="border border-[#FFFFFF] uppercase text-[12px] xl:text-[16px] font-cofo-medium w-fit px-[20.5px] py-[10px] xl:px-[30.5px] xl:py-[12px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
                     >
                       {t("buttons.details")}
                     </Link>

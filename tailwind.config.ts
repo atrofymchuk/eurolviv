@@ -11,8 +11,12 @@ export default {
         cofo: ['CoFoSans', 'sans-serif'],
         cofoMedium: ['CoFoSans-Medium', 'sans-serif'], 
       },
-    }
-    
+    },
+    variants: {
+      extend: {
+        display: ['last, first'],
+      },
+    },
   },
 
   plugins: [],
