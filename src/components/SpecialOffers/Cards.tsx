@@ -2,7 +2,7 @@ import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
 import cn from "classnames";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
   const { onOpenModal } = useModalStore();
@@ -42,8 +42,9 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b " : ""}
               `)}
             >
-              <div
-                onClick={() => handleCardClick(el.url)}
+              <Link
+                to={`/special-offers/${el.url}`}
+                onClick={() => onOpenModal('specialOffer')}
                 className="w-full sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
               >
                 <Card
@@ -55,7 +56,7 @@ export const Cards = () => {
                   url={el.url}
                   handleCardClick={handleCardClick}
                 />
-              </div>
+              </Link>
             </div>
           );
         })}
