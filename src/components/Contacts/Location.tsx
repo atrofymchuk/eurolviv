@@ -1,10 +1,10 @@
-import { CiLocationOn } from "react-icons/ci";
+
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { mapContacts } from "../../store/exportsImg";
 import { RouteButton } from "../Buttons/RouteButton";
-
+import { location } from "../../store/exportsIcons";
 export const Location = () => {
   const { t } = useTranslation();
   return (
@@ -13,8 +13,8 @@ export const Location = () => {
         <h1 className="font-cofo uppercase lg:leading-[81px] lg:tracking-[-0.04em] lg:text-[100px] text-[32px] tracking-[-0.05em] leading:[34px] text-[#252526]">
           {t("contacts.location.locationTitle")}
         </h1>
-        <p className="flex items-center text-[12px] font-cofo uppercase underline underline-offset-[18%] lg:text-[18px] lg:leading-[22.6px] lg:ps-[4px] lg:mt-[22px] mt-[11.5px] decoration-[6.5%]">
-          <CiLocationOn color="black" className="font-cofo-medium" />
+        <p className="flex items-center text-[12px] font-cofo-medium uppercase underline  underline-offset-[22%] lg:text-[18px] lg:leading-[22.6px] lg:ps-[4px] lg:mt-[22px] mt-[11.5px] decoration-[6.5%]">
+          <img src={location} alt="location" />
           {t("contacts.info.addressDesc")}
         </p>
         <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px]" />

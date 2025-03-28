@@ -12,30 +12,30 @@ export const Info = () => {
     <div className="flex md:flex-row flex-col items-center w-full">
       <div className="flex w-[89.067%] md:w-[94.79%] max-w-fit">
         <div className="grid grid-cols-1  md:grid-cols-[38.13%_61.87%] md:border-b border-[#C7C7C7] md:border-e border-s xl:border-s-0">
-          <div className="2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] pt-[43px] border-e border-[#C7C7C7] lg:w-full lg:pt-[68px]  lg:h-[540px] border-b md:text-start">
+          <div className="2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] pt-[43px] border-e border-[#C7C7C7] lg:w-full lg:pt-[68px]  lg:h-[540px] border-b md:text-start ">
             <h1
               className="font-cofo uppercase xl:pt-0  text-center md:text-start 
             text-[32px] md:text-[32px] lg:text-[48px] xl:text-[70px] 2xl:text-[100px] 
-            tracking-[-0.07em] leading-[1.2] lg:leading-[1.1] xl:leading-[82%]  
+            tracking-[-0.07em] leading-[1.2] lg:leading-[1.1] xl:leading-[82%]  mx-[20px] md:mx-0
             lg:tracking-[-0.04em]"
             >
               {t("contacts.info.title")}
             </h1>
-            <div className="lg:mt-[39px] mt-[25px] space-y-3 md:block items-center text-center md:text-start flex flex-col">
+            <div className="lg:mt-[39px] mt-[25px] space-y-3 md:block items-center text-center md:text-start flex flex-col 2xl:w-[60%] xl:w-[80%] lg:w-[78%] mx-[20px] md:mx-0">
               <p
                 className=" uppercase 
               text-[12px] md:text-[14px] lg:text-[14px] 
               leading-[1.4] lg:leading-[1.3] 
               text-[#252526] 
-                lg:w-[370px]"
+                "
               >
                 {t("contacts.info.desc")}
               </p>
               <p
-                className="font-cofo uppercase 
+                className=" uppercase 
               text-[12px] md:text-[14px] lg:text-[14px] 
               leading-[1.4] lg:leading-[1.3] 
-              text-[#8C331B] font-semibold 
+              text-[#8C331B] font-cofo-medium
               "
               >
                 {t("contacts.info.contactUs")}
@@ -70,7 +70,7 @@ export const Info = () => {
 
           <OurContactsWithMap />
           <div className="border-e border-[#C7C7C7] flex flex-col h-full md:text-start  text-center  ">
-            <div className="2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] lg:pt-[58px] pt-[43px] flex-1 mx-[30px] md:mx-0">
+            <div className="2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] lg:pt-[58px] pt-[43px] flex-1 mx-[20px] md:mx-0">
               <h1
                 className=" uppercase 
               leading-[82%] lg:tracking-[-0.04em]  break-all

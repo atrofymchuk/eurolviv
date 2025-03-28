@@ -8,11 +8,11 @@ export default function MapImg() {
       <h4 className="text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-cofo-medium  text-[#6B6B6B] uppercase">
         {t("contacts.info.address")}
       </h4>
-      <p className="flex items-center text-[12px] font-cofo uppercase underline font-cofo-medium underline-offset-[18%] lg:text-[16px] lg:leading-[22.6px] lg:ps-[4px] pt-3 decoration-[6.5%]">
+      <p className="flex items-center text-[12px] font-cofo uppercase underline font-cofo-medium underline-offset-[18%] lg:text-[16px] lg:leading-[22.6px] lg:ps-[4px] pt-[12px] md:pt-[9px] decoration-[6.5%]">
         <CiLocationOn color="black" className="xl:w-[18px] xl:h-[18px] md:w-[16px] md:h-[16px] lg:w-[24px] lg:h-[24px]" />
         {t("contacts.info.addressDesc")}
       </p>
-      <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px]" />
+      <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] " />
     </div>
   );
 }
