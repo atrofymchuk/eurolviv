@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { useMemo } from "react";
@@ -10,9 +9,10 @@ type CardToProps = {
   classes: string;
   offer: string;
   url: string;
+  handleCardClick: (url: string) => void;
 };
 
-export const Card = ({ src, title, desc, classes, offer, url }: CardToProps) => {
+export const Card = ({ src, title, desc, classes, offer, url, handleCardClick }: CardToProps) => {
   const { t } = useTranslation();
 
   const translatedTexts = useMemo(
@@ -66,14 +66,14 @@ export const Card = ({ src, title, desc, classes, offer, url }: CardToProps) => 
       </p>
 
         <div className="md:mt-auto pt-[23px] flex lg:hidden ps-3.25 pb-5">
-          <Link
-            to={`/special-offers/${url}`}
+          <button
+            onClick={() => handleCardClick(url)}
             className="font-cofo-medium border border-[#8C331B] text-[#8C331B] px-7.75 py-2.5 rounded-full uppercase 
               text-[10px] sm:text-[12px] md:text-[14px]  inline-block
               hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition duration-300 ease-in-out"
           >
             {translatedTexts.details}
-          </Link>
+          </button>
         </div>
     </div>
   );

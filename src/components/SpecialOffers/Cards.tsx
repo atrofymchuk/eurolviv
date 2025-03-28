@@ -3,15 +3,13 @@ import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
 import cn from "classnames";
 import { useNavigate } from "react-router-dom";
-
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
   const { onOpenModal } = useModalStore();
   const navigate = useNavigate();
 
-  const handleCardClick = (url: string, e: React.MouseEvent) => {
-    e.preventDefault(); 
-    onOpenModal('specialOffer');
+  const handleCardClick = (url: string) => {
+    onOpenModal("specialOffer");
     navigate(`/special-offers/${url}`);
   };
 
@@ -26,9 +24,10 @@ export const Cards = () => {
           const isMiddleCard = index % 3 === 1;
           const isFirstInRowLg = index % 3 === 0;
           const isLastRowLg = index >= specialOffers.length - 3;
-          const isLastRowMd = specialOffers.length % 2 === 0
-            ? index >= specialOffers.length - 2
-            : index === specialOffers.length - 1;
+          const isLastRowMd =
+            specialOffers.length % 2 === 0
+              ? index >= specialOffers.length - 2
+              : index === specialOffers.length - 1;
           const isMdSecondColumn = index % 2 === 1 && specialOffers.length > 1;
 
           return (
@@ -43,8 +42,8 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b " : ""}
               `)}
             >
-              <div 
-                onClick={(e) => handleCardClick(el.url, e)}
+              <div
+                onClick={() => handleCardClick(el.url)}
                 className="w-full sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
               >
                 <Card
@@ -54,12 +53,12 @@ export const Cards = () => {
                   title={el.title}
                   offer={el.offer}
                   url={el.url}
+                  handleCardClick={handleCardClick}
                 />
               </div>
             </div>
           );
         })}
-        
       </div>
     </div>
   );
