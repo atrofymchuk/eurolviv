@@ -67,7 +67,11 @@ export const Card = ({ src, title, desc, classes, offer, url, handleCardClick }:
 
         <div className="md:mt-auto pt-[23px] flex lg:hidden ps-3.25 pb-5">
           <button
-            onClick={() => handleCardClick(url)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleCardClick(url);
+            }}
             className="font-cofo-medium border border-[#8C331B] text-[#8C331B] px-7.75 py-2.5 rounded-full uppercase 
               text-[10px] sm:text-[12px] md:text-[14px]  inline-block
               hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition duration-300 ease-in-out"
