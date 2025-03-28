@@ -1,9 +1,11 @@
 import { ConferenceServiceState } from "../types/types";
 import * as imgs from "./exportsImg";
 import * as icons from "./exportsIcons";
+
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
     {
+    
       previewImage: imgs.bigHall,
       title: "conferenceHallState.bigHall.title",
       size: "conferenceHallState.bigHall.desc",

@@ -29,6 +29,20 @@ export type TerraseT = {
   descTwo: string;
 };
 
+export type Room = {
+  type: string;
+  title: string;
+  description: string;
+  area: number;
+  guests: string;
+  header: RoomHeader;
+  about: RoomAbout;
+  icons: IconsState;
+  isLux: boolean;
+  suggestion: SuggestionT[];
+};
+
+
 export type ConferenceService = {
   previewImage: string;
   title: string;
@@ -77,18 +91,6 @@ export type RoomAbout = {
   ammentiesImages: string[];
 };
 
-export type Room = {
-  type: string;
-  title: string;
-  description: string;
-  area: number;
-  guests: string;
-  header: RoomHeader;
-  about: RoomAbout;
-  icons: IconsState;
-  isLux: boolean;
-  suggestion: SuggestionT[];
-};
 
 export type SuggestionT = {
   title: string;
