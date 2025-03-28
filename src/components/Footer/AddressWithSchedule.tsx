@@ -7,7 +7,7 @@ import { map } from "../../Constants/map";
 export const AddressWithSchedule = () => {
   const { t } = useTranslation();
   return (
-    <div className="space-y-4 flex flex-col lg:h-[473px] lg:w-[25.34%] h-fit lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 pt-6 lg:px-3 2xl-px-0 lg:items-center">
+    <div className="space-y-4 flex flex-col lg:h-[473px] w-full lg:w-[25.34%] h-fit lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 pt-6 lg:px-3 2xl-px-0 lg:items-center">
       <div>
         <div className="mb-0">
           <h4 className="text-[12px]   2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium">

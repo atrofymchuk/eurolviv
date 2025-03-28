@@ -34,10 +34,10 @@ export const HeaderComponent: React.FC<{HeaderInfo: HeaderComponentProps}> = ({ 
              {textHightlited}
           </span>
         </h4>
-        <h1 className="font-cofo xl:text-[198px] uppercase text-[64px] font-normal z-20 xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent w-full">
+        <h1 className="xl:text-[198px] uppercase text-[64px] font-normal z-20 xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent w-full">
           {title}
         </h1>
-        <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-full lg:max-w-[1200px] lg:pt-[46px] pt-[30px] w-full max-w-[335px] text-[14px] leading-[17.5px]">
+        <p className=" uppercase lg:text-[18px] lg:leading-[22px] lg:w-full lg:max-w-[1200px] lg:pt-[46px] pt-[30px] w-full max-w-[335px] text-[14px] leading-[17.5px]">
           {desc}
         </p>
         <button className="font-cofo font-extrabold uppercase z-20 bg-[#EDE8E5] text-black hover:cursor-pointer px-9 mt-8 py-3 rounded-4xl text-md">

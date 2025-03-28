@@ -12,7 +12,7 @@ const useNavbarStyles = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      setIsShowRooms(false);
+
     };
 
     window.addEventListener("scroll", handleScroll);

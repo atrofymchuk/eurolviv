@@ -15,7 +15,7 @@ import { social } from "../../Constants/Social";
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="relative text-white py-[47px] ps-7  overflow-hidden lg:h-[800px] h-[1600px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center">
+    <footer className="relative text-white py-[47px] ps-5  overflow-hidden lg:h-[800px] h-[1600px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center">
       <div className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10"></div>
 
       <div className="absolute top-[200px] left-0 w-full h-[2200px] lg:h-[calc(100%-200px)] footer-gradient z-1"></div>
@@ -27,7 +27,7 @@ export const Footer = () => {
           className="absolute inset-0 w-full h-full  z-0 "
         />
       </InViewWrapper>
-      <div className="lg:w-full max-w-[92.71%] ">
+      <div className="lg:w-full w-[100%] ">
         <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between w-full  ">
           <div className="lg:order-1 order-2 lg:w-[22.92%] lg:pt-[24px]">
             <div className="flex flex-col  h-fit justify-between     lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] lg:mt-0  mt-[35px] ">
@@ -40,7 +40,7 @@ export const Footer = () => {
                       {t("footer.conferenceServices")}
                     </li>
                     <li className="font-cofo-medium">
-                      {t("footer.restaurant")}
+                      {t("footer.restaurant")}  
                     </li>
                     <li className="font-cofo-medium">
                       {t("footer.specialOffers")}
@@ -48,7 +48,7 @@ export const Footer = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-col lg:mt-auto lg:mb-5 2xl:mb-8 w-fit lg:ms-0 ms-[20%] ">
+                <div className="flex flex-col lg:mt-auto lg:mb-5 2xl:mb-8  lg:ms-0 ms-[20%] ">
                   <div className="lg:mt-48">
                     <p className=" font-cofo-medium 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase text-[12px]">
                       {t("footer.socialMedia")}
@@ -88,7 +88,7 @@ export const Footer = () => {
                 {t("footer.getNews")}
               </h4>
 
-              <div className="w-full max-w-[415px] lg:max-w-[415px] flex flex-col items-center px-4">
+              <div className="w-full max-w-[415px] lg:max-w-[415px] flex flex-col items-center ">
                 <input
                   type="email"
                   placeholder={t("footer.email")}

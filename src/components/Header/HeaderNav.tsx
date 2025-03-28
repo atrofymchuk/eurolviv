@@ -38,8 +38,8 @@ export const HeaderNav = memo(({
 
  
   const handleMouseEnterRooms = useCallback(() => {
-    if (!scrolled) setIsShowRooms(true);
-  }, [scrolled, setIsShowRooms]);
+     setIsShowRooms(true);
+  }, [ setIsShowRooms]);
   
   const handleMouseLeaveRooms = useCallback(() => {
     setIsShowRooms(false);

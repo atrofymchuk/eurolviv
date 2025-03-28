@@ -14,14 +14,16 @@ export const RoofService = () => {
         {suggestion.map((item, index) => (
           <div
             key={index}
-            className={cn(`relative flex flex-col bg-[#252526] ${
-              index === 2
-                ? "lg:col-span-2 md:h-[1600px] h-[873px]"
-                : "md:h-[1173px] h-[873px]"
-            }`)}
+            className={cn(
+              `relative flex flex-col bg-[#252526] ${
+                index === 2
+                  ? "lg:col-span-2 md:h-[1600px] h-[873px]"
+                  : "md:h-[1173px] h-[873px]"
+              }`
+            )}
           >
             <div className="relative w-full h-full">
-              <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent"></div>
+              <div className={`${index === 2 ? "h-[2484px]" : ""} absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent`}></div>
               <img
                 src={item.img}
                 alt={item.url}
@@ -34,11 +36,13 @@ export const RoofService = () => {
             )}
 
             <div
-              className={cn(`absolute inset-0 flex flex-col items-center text-center mt-[138px] text-white z-10 p-4 ${
-                index === 2 ? "justify-center" : "justify-start"
-              }`)}
+              className={cn(
+                `absolute inset-0 flex flex-col items-center text-center mt-[123px] text-white z-10  ${
+                  index === 2 ? "justify-center" : "justify-start"
+                }`
+              )}
             >
-              <div className="flex flex-col items-center space-y-[29px]">
+              <div className="flex flex-col items-center ">
                 <div className="flex justify-center w-full">
                   <InViewWrapper>
                     <img src={ruffLogo} alt="" className="w-[135px] h-[18px]" />
@@ -48,33 +52,48 @@ export const RoofService = () => {
                   className={cn(`${
                     index === 2
                       ? "lg:text-[198px] max-w-[900px] text-[76px] md:text-[100px] sm:text-[80px] "
-                      : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] "
+                      : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] xl:h-[172px] lg:h-[162px]"
                   } 
- text-center uppercase leading-[104%] tracking-[-5%] 
+ text-center uppercase leading-[104%] tracking-[-5%] xl:mt-[29px] lg:mt-[19px]
       w-full lg:leading-[81%]`)}
                 >
                   {t(item.title)}
                 </h1>
 
-                <p className="uppercase font-semibold lg:text-[20px] text-[14px] lg:leading-[21px] leading-[12px] lg:pt-[19px]">
+                <p
+                  className={`uppercase font-cofo-medium lg:text-[20px] text-[14px] lg:leading-[21px] leading-[12px] ${
+                    index === 2 ? "mt-[61px]" : "mt-[29px]"
+                  }`}
+                >
                   {t(item.titleDesc)}
                 </p>
               </div>
 
               <div
-                className={cn(`flex flex-col items-center space-y-[20px] ${
-                  index === 2 ? "mt-10" : "mt-auto pb-14"
-                }`)}
+                className={cn(
+                  `flex flex-col items-center space-y-[20px] ${
+                    index === 2 ? "" : "mt-auto pb-[75px]"
+                  }`
+                )}
               >
-                <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[38px] pt-[19px] lg:w-[380px]">
-                  {t(item.desc) }
+                <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[32px] pt-[19px] lg:w-[380px] xl:w-[488p  x]">
+                  {t(item.desc)}
                 </p>
+                <div className={`flex justify-center ${index === 2 ? "gap-[16px]" : ""}`}>
+
                 <Link
                   to={item.url}
-                  className="uppercase lg:py-[12px] lg:mt-[20px] lg:px-[20px] rounded-full font-semibold text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
-                >
+                  className={`uppercase bg-[#8C331B] lg:py-[13px] lg:mt-[20px] lg:px-[27.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px] ${index === 2 ? "" : "hidden"}`}
+                  >
+                  {t("buttons.bookTable")}
+                </Link>
+                <Link
+                  to={item.url}
+                  className="uppercase lg:py-[13px] lg:mt-[20px] lg:px-[58.5px] rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
+                  >
                   {t("buttons.details")}
                 </Link>
+                  </div>
               </div>
             </div>
           </div>
