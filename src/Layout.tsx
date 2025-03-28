@@ -10,6 +10,7 @@ import { ConferenceService } from "./pages/ConferenceService";
 import Booking from "./pages/BookRoom";
 import RedirectToAdminPanel from "./components/utils/RedirectToAdminPanel";
 import { OnLoadingSpin } from "./components/utils/OnLoadingSpin";
+import { SpecialOffersModal } from "./components/Modals/SpecialOfferModal";
 
 export const Layout = () => {
   const location = useLocation();
@@ -47,7 +48,7 @@ export const Layout = () => {
         />
         <Route
           path="/special-offers/:offer"
-          element={<InfinityScrollPage pageKey="specialOffers" />}
+          element={<SpecialOffersModal /> }
         />
         <Route
           path="/terrase"
@@ -60,4 +61,3 @@ export const Layout = () => {
     </>
   );
 };
-
