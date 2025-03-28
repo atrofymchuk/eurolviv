@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { parking } from "../../store/exportsIcons";
-import { bedWithPet } from "../../store/exportsImg";
+import { dog } from "../../store/exportsImg";
 import { BookLink } from "../Buttons/BookLink";
 import cn from "classnames";
 export const MoreInfoSecondCol = ({
@@ -31,7 +31,7 @@ export const MoreInfoSecondCol = ({
 
         {isShowOtherInfo && (
           <img
-            src={bedWithPet}
+            src={dog}
             alt="imageOverlay"
             className="w-full  object-cover px-[11px] md:hidden h-[250px] "
           />

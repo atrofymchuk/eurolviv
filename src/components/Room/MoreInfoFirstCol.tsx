@@ -43,7 +43,7 @@ export const MoreInfoFirstCol = ({
       ) : (
         <img
           src={coffeeRoom}
-          alt="bedWithPet"
+          alt="dog"
           className="w-full 2xl:max-h-[512px] xl:max-h-[371px] lg:max-h-[300px] md:max-h-[250px] max-h-[276px] px-2 md:px-0  object-cover md:object-bottom object-[20%_80%]  "
         />
       )}

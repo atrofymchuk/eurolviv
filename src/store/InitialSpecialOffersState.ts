@@ -1,6 +1,6 @@
 import { SpecialOffers } from "../types/types";
 
-import { military, business, bedWithPet,  birthday,   wedding, photosession } from "./exportsImg";
+import { military, business,  birthday,   wedding, photosession, dog } from "./exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [
     {
       src: military,
@@ -35,7 +35,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
       ]
     },
     {
-      src: bedWithPet,
+      src: dog,
       url:'travel-with-pet',
       title: "specialOffersState.petFriendly.title",
       desc:'specialOffersState.petFriendly.desc',

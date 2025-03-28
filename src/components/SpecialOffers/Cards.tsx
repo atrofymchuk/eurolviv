@@ -1,23 +1,19 @@
 import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import cn from "classnames";
 
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
-  const {   onOpenModal } = useModalStore();
+  const { onOpenModal } = useModalStore();
 
-  const navigate = useNavigate();
 
-  const handleCardClick = (url: string) => {
-    navigate(`/special-offers/${url}`);
-    onOpenModal('specialOffer');
-  };
+
 
   return (
-    <div className="flex items-center justify-center px-[38px_40px]">
-      <div className="grid w-full max-w-[1720px] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10">
+    <div className="flex items-center justify-center px-[38px_40px] md:pb-[82px] ">
+      <div className="grid w-full max-w-[1720px] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10 md:pb-0">
         <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
         <div className="md:col-span-2 lg:col-span-1 lg:border-x border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
         <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
@@ -43,9 +39,10 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b " : ""}
               `)}
             >
-              <div
-                onClick={() => handleCardClick(el.url)}
-                className="w-full  p-3 sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[700px] xl:h-[650px] lg:h-[520px] md:h-[520px] h-[483px]"
+              <Link 
+                to={`/special-offers/${el.url}`}
+                onClick={() => onOpenModal('specialOffer')}
+                className="w-full   sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
               >
                 <Card
                   src={el.src}
@@ -53,8 +50,9 @@ export const Cards = () => {
                   desc={el.cardDesc}
                   title={el.title}
                   offer={el.offer}
+                  url={el.url}
                 />
-              </div>
+              </Link>
             </div>
           );
         })}

@@ -147,7 +147,7 @@ export  { default as barTerrase} from "../assets/Terrase/Aditionally/bar.webp";
 export  { default as celebratingTerrase} from "../assets/Terrase/Aditionally/celebrating.webp"; 
 
 //rooom page
-export  { default as bedWithPet} from "../assets/Rooms/AdditionaInfo/bedwithpet.webp"; 
+export  { default as dog} from "../assets/Rooms/AdditionaInfo/dog.webp"; 
 export  { default as coffeeRoom} from "../assets/Rooms/AdditionaInfo/coffee.webp"; 
 
 
