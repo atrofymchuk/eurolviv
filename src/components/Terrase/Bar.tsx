@@ -6,6 +6,7 @@ import {
   wineImgScnd,
 } from "../../store/exportsImg";
 import { useTranslation } from "react-i18next";
+import { InViewWrapper } from "../utils/InViewWrapper";
 
 export const BarComponent = () => {
   const { t } = useTranslation();
@@ -27,51 +28,62 @@ export const BarComponent = () => {
       </div>
       <div className="flex flex-wrap pt-[36px] md:pt-0">
         <div className="w-full md:w-1/2  xl:pt-[26px] xl:px-[30px_36px] border-y md:border-s border-[#B3B3B3] px-[10px_9px] pt-[10px]">
+        <InViewWrapper>
+
           <img
             src={barImg}
             alt="bar"
-            className=" xl:w-[883px] xl:h-[811px] lg:h-[495px]  h-full object-cover"
-          />
+            className=" xl:w-[883px] xl:h-[811px] lg:h-[495px] w-full h-[289px] object-cover"
+            />
+            </InViewWrapper>
           <h2 className="text-center text-[16px]  block underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">
             {t("terrase.bar.alcoholCard")}
           </h2>
         </div>
 
-        <div className="w-full md:w-1/2 border-t-0 md:border-t md:border-b-0  border-[#B3B3B3] md:border-s md:border-e">
+        <div className="w-full md:w-1/2 border-t-0 md:border-t border-b  border-[#B3B3B3] md:border-s md:border-e">
           <div className=" xl:pt-[26px] pt-[10px] w-full md:w-fit grid grid-cols-2 ">
             <div className=" md:w-fit xl:px-[31px_10px] px-[10px_3.5px]">
-              <img
-                src={cocktailImg}
-                alt="cocktail"
-                className=" md:w-[378px]  xl:h-[348px] object-cover  "
-              />
+              <InViewWrapper>
+                <img
+                  src={cocktailImg}
+                  alt="cocktail"
+                  className=" md:w-[378px]  xl:h-[348px] object-cover  "
+                />
+              </InViewWrapper>
             </div>
             <div className=" md:w-fit xl:px-[10px_25px] px-[3.5px_7.5px]">
-              <img
-                src={cocktailImgScnd}
-                alt="cocktail"
-                className=" md:w-[378px] xl:h-[348px] object-cover "
-              />
+              <InViewWrapper>
+                <img
+                  src={cocktailImgScnd}
+                  alt="cocktail"
+                  className=" md:w-[378px] xl:h-[348px] object-cover "
+                />
+              </InViewWrapper>
             </div>
           </div>
           <h2 className="text-center  text-[16px] underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">
             {t("terrase.bar.cocktailCard")}
           </h2>
 
-          <div className="grid grid-cols-2 xl:pt-[26px] pt-[10px] w-full md:w-fit border-t border-[#B3B3B3]">
+          <div className="grid grid-cols-2 xl:pt-[26px] pt-[10px] w-full md:w-fit border-t  border-[#B3B3B3]">
             <div className=" md:w-fit xl:px-[31px_10px] px-[10px_3.5px]">
-              <img
-                src={wineImg}
-                alt="cocktail"
-                className=" md:w-[378px]  xl:h-[348px] object-cover  "
-              />
+              <InViewWrapper>
+                <img
+                  src={wineImg}
+                  alt="cocktail"
+                  className=" md:w-[378px]  xl:h-[348px] object-cover  "
+                />
+              </InViewWrapper>
             </div>
             <div className=" md:w-fit xl:px-[10px_25px] px-[3.5px_7.5px]">
-              <img
+              <InViewWrapper>
+                <img
                 src={wineImgScnd}
                 alt="cocktail"
-                className=" md:w-[378px] xl:h-[348px] object-cover  "
-              />
+                  className=" md:w-[378px] xl:h-[348px] object-cover  "
+                />
+              </InViewWrapper>
             </div>
           </div>
           <h2 className="text-center  text-[16px] underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">

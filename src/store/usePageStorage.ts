@@ -44,6 +44,7 @@ const allPageSections: Record<string, React.FC[]> = {
     Components.TerraseHeader,
     Components.TerrasesContainer,
     Components.BarComponent,
+    Components.Dishes,
   ],
   rooms: [Components.HeaderRooms, Components.RoomsInfo, Components.Guarantee],
   specialOffers: [

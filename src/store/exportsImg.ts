@@ -99,7 +99,11 @@ export {default as wineImgScnd} from "../assets/Terrase/Bar/wine2.webp";
 export {default as cocktailImg} from "../assets/Terrase/Bar/cocktail.webp";   
 export {default as cocktailImgScnd} from "../assets/Terrase/Bar/cocktail2.webp";
 
-
+export {default as fish} from "../assets/Terrase/Menu/fish.webp";
+export {default as golubtsi} from "../assets/Terrase/Menu/golubtsi.webp";
+export {default as pasta} from "../assets/Terrase/Menu/pasta.webp";
+export {default as pie} from "../assets/Terrase/Menu/pie.webp";
+export {default as steak} from "../assets/Terrase/Menu/steak.webp";
 
 //About page
 export  { default as roomLux} from "../assets/About/2roomLux.webp";

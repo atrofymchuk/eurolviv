@@ -36,9 +36,9 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
       <div className="absolute w-full h-full -z-1">
         <div className="relative h-full md:max-w-[89.7%] max-w-[89.7%] mx-auto">
           <div className="h-full grid grid-cols-1 md:grid-cols-[49.87%_0.1%_50.03%]">
-            <div className="h-full border-s  border-[#B3B3B3]"></div>
-            <div className="h-1/3 border-s  border-[#B3B3B3]"></div>
-            <div className="h-full border-e md:border-x-0 md:border-e border-[#B3B3B3]"></div>
+            <div className="h-full border-x md:border-x-0 md:border-s  border-[#B3B3B3]"></div>
+            <div className="h-1/3 border-s border-[#B3B3B3]"></div>
+            <div className="h-full border-x  md:border-x-0 md:border-e border-[#B3B3B3]"></div>
           </div>
         </div>
       </div>

@@ -31,6 +31,7 @@ export { Karaoke } from "../components/Restaurant/Karaoke";
 export { TerrasesContainer } from "../components/Terrase/TerrasesContainer";
 export { TerraseHeader } from "../components/Terrase/Header";
 export { BarComponent } from "../components/Terrase/Bar";
+export { Dishes } from "../components/Terrase/Dishes";
 export { RoomsInfo } from "../components/Rooms/RoomsInfo";
 export { Guarantee } from "../components/Rooms/Guarantee";
 export { Header as HeaderRooms } from "../components/Rooms/Header";
