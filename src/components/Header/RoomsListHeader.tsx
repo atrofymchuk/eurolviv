@@ -14,7 +14,7 @@ export const RoomsListHeader = ({ roomType, roomTitle }: RoomsListHeaderToProps)
     <Link 
       to={`/rooms/${roomType}`} 
       className={cn(
-        "block px-[18px] py-3 backdrop-blur-[54.5px]  bg-white/26 font-cofo-medium   hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
+        "block px-[18px]  py-3 backdrop-blur-[54.5px]  bg-white/26 font-cofo-medium   hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
         "border-b border-[#FFFFFF33] last:border-b-0",
         "text-[#FFFFFF] hover:text-[#252526]"
       )}

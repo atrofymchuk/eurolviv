@@ -35,14 +35,14 @@ export function Header() {
     >
       <div
         className={cn(
-          "fixed top-0 left-0 right-0  mx-auto py-4 px-6 flex justify-between items-center  transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
+          "fixed top-0 left-0 right-0   mx-auto  flex justify-between items-center lg:h-[133px] h-[95px] transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
           {
             "bg-white text-black": scrolled,
             "text-white": !scrolled          }
         )}
       >
-        <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto">
-          <div className="flex items-center lg:space-x-4 justify-between w-full">
+        <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto lg:mx-[20px] xl:mx-auto ">
+          <div className="flex items-center xl:space-x-4 space-x-3  w-full " >
             <HeaderNav
               {...{
                 logo,
@@ -58,7 +58,7 @@ export function Header() {
                 isShowRooms,
               }}
             />
-            <div className="flex items-center lg:space-x-4">
+            <div className="flex items-center xl:space-x-5 lg:space-x-3 justify-between ">
               <div className={cn(`${rightMenu}`)}>
                 <ChangeLangButton
                   changeLanguage={changeLanguage}
@@ -103,7 +103,7 @@ export function Header() {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#a33d2e] text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] md:text-[14px] hover:cursor-pointer hidden lg:flex`,
+                  `uppercase bg-[#a33d2e] text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
                   {
                     "lg:flex hidden": scrolled,
                     flex: !scrolled,

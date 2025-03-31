@@ -21,7 +21,7 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
       className={cn(`flex items-center uppercase ${isMobile ? 'lg:hidden' : 'hidden lg:flex'}`)}
       onClick={() => changeLanguage()}
     >
-      <CiGlobe className="w-4 h-4 me-1" />
+      <CiGlobe className="w-4 h-4 lg:w-4.5 lg:h-4.5 me-1" />
       <div className="flex items-center">
         <span className={cn("hover:cursor-pointer text-[14px]", {
           "text-black": scrolled && currentLang === 'uk',

@@ -8,7 +8,7 @@ type HeaderSocialToProps = {
 
 export const HeaderSocial = ({styles}:HeaderSocialToProps ) =>{
 
-    return   <div className=" lg:flex hidden space-x-2 ">
+    return   <div className=" lg:flex hidden 2xl:ms-[30px] space-x-[9.5px] 2xl:me-[52px] ">
     <span className={cn(`rounded-full ${styles}`)}>
       <RiTelegram2Fill className="w-[37px] h-[37px] p-1" />
     </span>
