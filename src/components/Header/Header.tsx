@@ -58,7 +58,7 @@ export function Header() {
                 isShowRooms,
               }}
             />
-            <div className="flex items-center xl:space-x-5 lg:space-x-3 justify-between ">
+            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
               <div className={cn(`${rightMenu}`)}>
                 <ChangeLangButton
                   changeLanguage={changeLanguage}

@@ -113,57 +113,63 @@ export const HeaderNav = memo(
     );
 
     return (
-      <div className="flex    w-full me-0">
-        <div className="flex font-normal  lg:justify-end justify-around w-full ">
-          <button
-            className={cn(
-              `lg:hidden text-white text-2xl flex items-center gap-2`
-            )}
-            onClick={() => toggleMenu()}
-          >
-            <img
-              src={burgerMenu}
-              alt="Меню"
+      <div className="flex  relative  w-full me-0 h-full">
+        <div className="flex  lg:justify-end justify-center w-full  ">
+          <div className="lg:hidden w-1/3 items-center justify-center flex">
+            <button
               className={cn(
-                pathname === "/contacts" || scrolled ? "filter-invert-gray" : ""
+                ` text-white text-2xl flex items-center gap-2  ms-[18px]`
               )}
-            />
-            <span className={cn(` text-sm ${isActiveLink("/contacts")}`)}>
-              {t("header.menu")}
-            </span>
-          </button>
-
-          <Link to="/">
+              onClick={() => toggleMenu()}
+            >
+              <img
+                src={burgerMenu}
+                alt="menu"
+                className={cn(
+                  pathname === "/contacts" || scrolled
+                    ? "filter-invert-gray"
+                    : ""
+                )}
+              />
+              <span className={cn(` text-sm ${isActiveLink("/contacts")}`)}>
+                {t("header.menu")}
+              </span>
+            </button>
+          </div>
+          <Link to="/" className="w-1/3 lg:w-fit items-center justify-center flex">
             <InViewWrapper>
               <img
                 src={logo}
                 alt="logo"
                 className={cn(
-                  `duration-300 ${iconLogoStyle}   ${
-                    !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
-                  } 2xl:w-[203px] 2xl:h-[78px] xl:w-[120px] xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`
+                  `duration-300 ${iconLogoStyle} 
+                       ${
+                         !scrolled ? "w-[68px] h-[40px]" : "w-[82px] h-[48px]"
+                       } 2xl:w-[203px] 2xl:h-[78px] xl:w-[120px] xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`
                 )}
               />
             </InViewWrapper>
           </Link>
 
-          <Link
-            to="/booking"
-            className={cn(
-              `bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase  rounded-3xl hover:bg-[#922b1f]  self-center
-                font-cofo-medium  text-[10px] justify-end h-fit
-                ${scrolled ? "opacity-0" : ""}`,
-              {
-                "text-white": !scrolled,
-                "text-black": scrolled,
-              }
-            )}
-          >
-            {t("buttons.bookRoomArr.0")}
-            <span className="hidden lg:inline">
-              {t("buttons.bookRoomArr.1")}
-            </span>
-          </Link>
+          <div className="w-1/3 lg:fit items-center justify-center  lg:hidden flex">
+            <Link
+              to="/booking"
+              className={cn(
+                `w-fit bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase  rounded-3xl hover:bg-[#922b1f]  self-center
+              font-cofo-medium  text-[10px] justify-end h-fit
+              ${scrolled ? "opacity-0" : ""}`,
+                {
+                  "text-white": !scrolled,
+                  "text-black": scrolled,
+                }
+              )}
+            >
+              {t("buttons.bookRoomArr.0")}
+              <span className="hidden lg:inline">
+                {t("buttons.bookRoomArr.1")}
+              </span>
+            </Link>
+          </div>
 
           <nav
             className="hidden lg:flex 2xl:space-x-[13px] xl:space-x-3 text-center lg:space-x-1.5 w-full items-center justify-center lg:mx-[20px] 2xl:mx-[76px]"
