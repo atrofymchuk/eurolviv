@@ -118,7 +118,7 @@ export const HeaderNav = memo(
           <div className="lg:hidden w-1/3 items-center justify-center flex">
             <button
               className={cn(
-                ` text-white text-2xl flex items-center gap-2  ms-[18px]`
+                ` text-white text-2xl flex items-center gap-2 w-[94px]`
               )}
               onClick={() => toggleMenu()}
             >
