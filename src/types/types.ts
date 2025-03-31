@@ -25,8 +25,10 @@ export type TerraseT = {
   imgs: string[];
   title: string;
   titleTwo: string;
-  desc: string;
-  descTwo: string;
+  preview: string[]
+  descOne: {text:string, isBold?:boolean}[];
+  descTwo: {text:string, isBold?:boolean}[];
+  descThree: {text:string, isBold?:boolean}[];
 };
 
 export type Room = {

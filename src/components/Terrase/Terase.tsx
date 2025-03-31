@@ -1,87 +1,71 @@
 import { TerraseCard } from "./TerraseCard";
 import { TerraseT } from "../../types/types";
 import { useTranslation } from "react-i18next";
-
-import { mainFst, mainScd, mainTrd, mainFth } from "../../store/exportsImg";
-const main = [mainFst, mainScd, mainTrd, mainFth];
-
+import { FormatBoldText } from "../common/FormatBoldText";
+import { AbootSliderContainer } from "../Restaurant/AbootSliderContainer";
+import cn  from "classnames";
 type TerraseToProps = {
   terase: TerraseT;
   index: number;
 };
 
 export const Terrase = ({ terase, index }: TerraseToProps) => {
-  const { desc, descTwo, imgs, title, titleTwo } = terase;
-  const { t } = useTranslation()
-  const translatedDesc = t(desc);
-  let firstPart = translatedDesc;
-  let secondPart = "";
-  
-  if (index === 0) {
-    const splitIndex = translatedDesc.indexOf(".") + 1; 
-    if (splitIndex > 0 && splitIndex < translatedDesc.length) {
-      firstPart = translatedDesc.slice(0, splitIndex); 
-      secondPart = translatedDesc.slice(splitIndex).trim(); 
-    }
-  }
+  const { descOne, descTwo, descThree, title, preview } = terase;
+  const { t } = useTranslation();
 
   return (
     <>
-      <hr className="w-full border-[#B3B3B3AD] " />
 
-      <div className="max-w-[90.3%] w-full flex flex-col items-center border-[#B3B3B3AD] ">
-        <div className="border-x border-[#B3B3B3AD] grid grid-cols-[49.97%_50.03%] w-full">
-          <div className="flex-col flex items-center justify-center h-[420px] border-e  border-[#B3B3B3AD] ">
-            <div className="overflow-hidden w-full   flex flex-col items-center justify-center ">
-              <div>
-
-              <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] lg:text-[52px] md:text-[40px] text-[28px] leading-[94%] tracking-normal text-[#242425] w-full max-w-[506px] break-words whitespace-normal">
-                {t(title)}
-
-              </h1>
-              <p className="uppercase 2xl:text-[16px]  text-[14px]  font-semibold w-full 2xl:max-w-[586px] xl:max-w-[400px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px] pt-[30px] break-words whitespace-normal">
-                {index == 0 ? (
-                  <>
-                    <span className="text-[#8C331B]">{firstPart} &nbsp;</span>
-                    <span className="text-[#000000]">{secondPart}</span>
-                  </>
-                ) : (
-                  <span className="text-[#000000]">{t(desc) }</span>
-                )}
-              </p>
+      <div className="w-screen flex items-center justify-center">
+        <div className={cn(`md:max-w-[93.23%]  w-[89.7%]  flex flex-col items-center border-[#B3B3B3AD] border-b  ${index !== 0 ? "border-t" : ""}`)}>
+          <div className="border-x border-[#B3B3B3AD] grid grid-cols-1 md:grid-cols-[49.97%_50.03%] w-full">
+            <div
+              className={`h-[193px] border-b hidden border-e border-[#B3B3B3AD] ${
+                index === 0 ? " md:block" : "hidden"
+              }`}
+            ></div>
+            <div
+              className={`h-[193px] border-b hidden   border-[#B3B3B3AD] ${
+                index === 0 ? "md:block" : "hidden"
+              }`}
+            ></div>
+            <div className="flex-col flex items-center justify-center  xl:h-[691px] md:border-e  border-[#B3B3B3AD] ">
+              <div className="overflow-hidden w-full   flex flex-col items-center justify-center ">
+                <div className="lg:px-[58px_74px]  text-center md:text-left px-[18px] xl:py-[50px_33px] lg:py-[30px_20px] py-[50px_33px]">
+                  <h1
+                    className="px-10 md:px-0 uppercase  2xl:text-[100px] xl:text-[80px] lg:text-[52px] md:text-[40px] text-[32px] leading-[81%] 
+                  tracking-[-0.07em] text-[#242425] w-full max-w-[506px] whitespace-normal [text-wrap:balance]"
+                  >
+                    {t(title)}
+                  </h1>
+                  <div className="space-y-4 xl:w-[106%] 2xl:mt-[62px] mt-[27px]">
+                    <div className="leading-[100%]">
+                      <FormatBoldText desc={descOne} />
+                    </div>
+                    <div className="leading-[100%]">
+                      <FormatBoldText desc={descTwo} />
+                    </div>
+                    <div className="leading-[100%]">
+                      <FormatBoldText desc={descThree} />
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-          </div>
-          <div className="flex-col flex items-center justify-center h-[420px]">
-            <div>
-
-            <h1 className="uppercase 2xl:text-[36px] xl:text-[24px] lg:text-[24px] md:text-[18px] text-[18px] leading-[94%] tracking-[-2%] text-[#242425] xl:max-w-[580px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px]" >
-              {t(titleTwo)}
-            </h1>
-            <p className="uppercase 2xl:text-[16px] text-[14px] 2xl:max-w-[586px] xl:max-w-[400px] lg:max-w-[450px] md:max-w-[350px] max-w-[250px] pt-[30px] text-[#444444]">
-              <span className="text-[#444444]">{t(descTwo)}</span>
-            </p>
+            <div className="flex-col flex items-center justify-center ">
+              <div>
+                <div className="grid  grid-cols-2  overflow-hidden h-full">
+                  {preview.map((el, index) => (
+                    <TerraseCard key={index} el={el} index={index} />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center  relative items-center ">
-        <div className="max-w-[90.31%]   grid grid-cols-1 absolute  z-[-5] border-[#B3B3B3AD] border-x   w-full">
-          <div className="2xl:h-[600px] xl:h-[573px] lg:h-[900px] md:h-[900px] h-[900px] border- w-full  border-[#B3B3B3AD] "></div>
-        </div>
-        <hr className="w-full border-[#B3B3B3AD] " />
 
-        <div className="grid xl:grid-cols-4 grid-cols-2  overflow-hidden ">
-          {imgs.map((el, index) => (
-            <TerraseCard
-              key={index}
-              el={el}
-              index={index}
-              length={main.length}
-            />
-          ))}
-        </div>
-      </div>
+      <AbootSliderContainer slides={terase.imgs} isTerrase={true} />
     </>
   );
 };

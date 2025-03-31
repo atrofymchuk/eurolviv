@@ -1,25 +1,18 @@
 import { useState, useRef } from "react";
 import Slider from "react-slick";
-
+import cn from "classnames";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { InViewWrapper } from "../utils/InViewWrapper";
-import {
-  aboutRestaurant,
-  aboutRestaurantScd,
-  aboutRestaurantTrd,
-} from "../../store/exportsImg";
-import cn from "classnames";
-function AboutSlider() {
-  const slides = [
-    aboutRestaurant,
-    aboutRestaurantScd,
-    aboutRestaurantTrd,
-    aboutRestaurant,
-    aboutRestaurantScd,
-  ];
+
+interface AboutSliderProps {
+  slides: string[];
+}
+
+function AboutSlider({ slides }: AboutSliderProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
 
+  console.log(slides);
   const settings = {
     className: "center",
     centerMode: true,
@@ -44,9 +37,9 @@ function AboutSlider() {
   };
 
   return (
-    <div className="slider-container relative w-full flex items-center justify-center">
+    <div className="slider-container relative w-screen flex items-center justify-center">
       <button
-        className="absolute left-10 md:left-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute left-10 md:left-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px]  
                    lg:flex hidden items-center justify-center text-white hover:text-[#8C331B] hover:bg-white 
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickPrev()}
@@ -69,7 +62,7 @@ function AboutSlider() {
                 <img
                   src={el}
                   alt={`slide_${index}`}
-                  className="2xl:w-[1223px] 2xl:h-[675px] xl:w-[1000px] xl:h-[550px] lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[285px] h-[186px] mx-auto transition-all duration-300"
+                  className="2xl:w-[1223px] object-cover -z-10 2xl:h-[675px] xl:w-[1000px] xl:h-[550px] lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[285px] h-[186px] mx-auto transition-all duration-300"
                 />
               </InViewWrapper>
               <div
@@ -85,7 +78,7 @@ function AboutSlider() {
       </Slider>
 
       <button
-        className="absolute hidden md:right-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute hidden md:right-[21%] z-10  w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
                    lg:flex items-center justify-center text-white hover:text-[#8C331B] hover:bg-white
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickNext()}

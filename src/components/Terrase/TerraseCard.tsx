@@ -2,34 +2,19 @@ import cn from "classnames";
 type TerraseCardToProps = {
   index: number;
   el: string;
-  length: number;
 };
 
-export const TerraseCard = ({ index, el, length }: TerraseCardToProps) => {
-  const isFirstInRow = index % 2 === 0;
-  const isLastInRow = index % 2 !== 0;
-  const isBottomRow = index >= length - (length % 2 === 0 ? 2 : 1); 
-  const isFirstRow = index < 2; 
-  const isNotLastCard = index !== length - 1; 
-
+export const TerraseCard = ({ index, el }: TerraseCardToProps) => {
   return (
     <div
       key={index}
-      className={cn(`border-[#B3B3B3AD] xl:p-[10px] 
-        ${isFirstInRow ? "pr-2 sm:pr-3 md:pr-4 pb-2 " : ""}  
-        ${isLastInRow ? "pl-2 sm:pl-3 md:pl-4  pt-4" : ""}  
-        ${index === 0 ? "sm:pl-0 pt-4 xl:ps-0" : ""} 
-        ${index === length - 1 ? "sm:pr-0 pt-[8px]" : ""}
-        ${isBottomRow ? "pt-2 pb-4" : ""}
-        ${isFirstRow ? "border-b xl:border-b-0 pb-2" : ""}  
-        ${isNotLastCard ? "border-r" : ""}  
+      className={cn(`border-[#B3B3B3AD] border-t md:border-t-0 lg:py-[21px] p-[10px] ${
+        index === 0 ? "xl:px-[21px_22px]  lg:px-[16px_17px] md:border-e px-[10px_5px]" : "xl:px-[22px_21px] lg:px-[17px_16px] px-[5px_10px]" 
+      } 
+
       `)}
     >
-      <img
-        src={el}
-        alt=""
-        className="w-full 2xl:h-[546px] xl:h-[400px] lg:h-[400px] md:h-[400px] h-[300px] object-cover"
-      />
+      <img src={el} alt="" className="w-full h-full object-cover" />
     </div>
   );
 };

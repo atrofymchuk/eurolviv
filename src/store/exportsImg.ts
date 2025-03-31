@@ -77,6 +77,7 @@ export  { default as laungeTheatre} from "../assets/ConferenceService/laungeThea
 export  { default as negotiationTableLaunge} from "../assets/ConferenceService/negotiationTableLaunge.webp";
 
 //Terrase page
+export {default as preview} from "../assets/Terrase/MainTerrase/previewSecond.webp";
 export  { default as mainFst} from "../assets/Terrase/MainTerrase/previewFst.webp";
 export  { default as mainScd} from "../assets/Terrase/MainTerrase/previewScd.webp";
 export  { default as mainTrd} from "../assets/Terrase/MainTerrase/previewTrd.webp";
@@ -86,6 +87,19 @@ export  { default as upperFst} from "../assets/Terrase/UpperTerrase/previewFhd.w
 export  { default as upperScd} from "../assets/Terrase/UpperTerrase/previewScd.webp";
 export  { default as upperThd} from "../assets/Terrase/UpperTerrase/previewThd.webp";
 export  { default as upperFhd} from "../assets/Terrase/UpperTerrase/previewFhd.webp";
+export  { default as previewUpper} from "../assets/Terrase/UpperTerrase/preview.webp"
+
+export {default as lowerFst} from "../assets/Terrase/LowerTerrase/previewOne.webp";
+export {default as lowerScd} from "../assets/Terrase/LowerTerrase/previewTwo.webp";
+export {default as lowerTrd} from "../assets/Terrase/LowerTerrase/previewThree.webp";
+
+export {default as barImg} from "../assets/Terrase/Bar/bar.webp";   
+export {default as wineImg} from "../assets/Terrase/Bar/wine.webp";   
+export {default as wineImgScnd} from "../assets/Terrase/Bar/wine2.webp";   
+export {default as cocktailImg} from "../assets/Terrase/Bar/cocktail.webp";   
+export {default as cocktailImgScnd} from "../assets/Terrase/Bar/cocktail2.webp";
+
+
 
 //About page
 export  { default as roomLux} from "../assets/About/2roomLux.webp";

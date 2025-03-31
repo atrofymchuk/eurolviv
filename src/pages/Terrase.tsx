@@ -1,5 +1,5 @@
+import { BarComponent } from "../components/Terrase/Bar";
 import { ReviewsContainer } from "../components/Restaurant/ReviewsContainer";
-import { Additionally } from "../components/Terrase/Additionally";
 import { TerraseHeader } from "../components/Terrase/Header";
 import { TerrasesContainer } from "../components/Terrase/TerrasesContainer";
 
@@ -8,8 +8,8 @@ export const Terrase = () => {
     <div>
       <TerraseHeader />
       <TerrasesContainer />
-      <Additionally />
-      <ReviewsContainer  />
+      <BarComponent />
+      <ReviewsContainer />
     </div>
   );
 };
