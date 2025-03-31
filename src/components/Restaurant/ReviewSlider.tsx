@@ -48,13 +48,14 @@ export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(
           className={cn(
             `w-full ${
               isTerrasePage
-                ? " md:max-w-[95.16%] max-w-[95.31%] "
-                : " md:max-w-[96.60%] max-w-[89.1%]"
+                ? " md:w-[95.16%] w-[95.31%] "
+                : " md:w-[96.5%] w-[89.2%] sm:w-[89.1%] xl:w-[96.55%]"
             }  2xl:h-[458px] xl:h-[380px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#C7C7C7]`
           )}
         >
           <div className="slider-container overflow-visible">
             <Slider {...settings} ref={ref}>
+              
               {restaurantReviews.map((el) => (
                 <ReviewSliderCard
                   impression={t(el.impression)}

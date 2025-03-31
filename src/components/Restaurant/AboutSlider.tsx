@@ -46,7 +46,7 @@ function AboutSlider() {
   return (
     <div className="slider-container relative w-full flex items-center justify-center">
       <button
-        className="absolute left-10 md:left-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute left-10 md:left-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
                    lg:flex hidden items-center justify-center text-white hover:text-[#8C331B] hover:bg-white 
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickPrev()}
@@ -63,7 +63,7 @@ function AboutSlider() {
           return (
             <div
               key={index}
-              className="px-2 transition-all duration-300 slick-slide relative"
+              className="px-2 lg:px-[17.5px] transition-all duration-300 slick-slide relative"
             >
               <InViewWrapper>
                 <img
@@ -85,7 +85,7 @@ function AboutSlider() {
       </Slider>
 
       <button
-        className="absolute hidden md:right-[20%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
+        className="absolute hidden md:right-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 
                    lg:flex items-center justify-center text-white hover:text-[#8C331B] hover:bg-white
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickNext()}

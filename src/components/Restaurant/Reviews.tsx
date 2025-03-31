@@ -9,7 +9,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
   return (
     <>
     <div className="flex flex-col items-center justify-center ">
-      <div className={cn(`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'md:max-w-[93.2%] max-w-[89.1%]'} grid-cols-1 border-[#C7C7C7] border-x border-b lg:border-b-0 `)}>
+      <div className={cn(`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'md:max-w-[93.1%] max-w-[89.1%]'} grid-cols-1 border-[#C7C7C7] border-x border-b lg:border-b-0 `)}>
         <div className="2xl:ps-[78px] xl:ps-[68px] lg:ps-[58px] lg:h-[490px] h-[337px] flex flex-col justify-center lg:text-start text-center">
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] md:text-[26px] lg:text-[26px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ">
             {t('reviews.about.0')} {isTerrasePage ? t('reviews.about.1') : t('reviews.about.2')}
@@ -22,7 +22,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
               {t('reviews.desc2')}
             </p>
 
-            <button className=" hover:cursor-pointer uppercase bg-[#8C331B] text-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] hover:bg-[#FFFFFF] lg:px-[21.5px] lg:py-[10px] px-[18px] py-[10px] rounded-full h-fit lg:text-[16px] text-[12px] ">
+            <button className="font-cofo-medium hover:cursor-pointer uppercase bg-[#8C331B] text-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] hover:bg-[#FFFFFF] lg:px-[21.5px] lg:py-[10px] px-[18px] py-[10px] rounded-full h-fit lg:text-[16px] text-[12px] ">
               {t('buttons.bookTable')}
             </button>
           </div>

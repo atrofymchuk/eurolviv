@@ -13,7 +13,7 @@ export const RestaurantHeader = () => {
         <img
           src={headerRestaurant}
           alt="headerImg"
-          className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
+          className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover  z-[-10]"
         />
       </InViewWrapper>
       <div className="flex flex-col items-center relative">
@@ -34,11 +34,11 @@ export const RestaurantHeader = () => {
           <button
             onClick={() => onOpenModal("menu")}
             className="font-cofo-medium uppercase text-white bg-[#8C331B] text-[12px] md:text-[13px] lg:text-[14px] 
-         hover:cursor-pointer md:px-[69.5px] md:py-[13px] px-[60px] py-[12.5px] rounded-full text-md hover:text-[#8C331B] hover:bg-white"
+         hover:cursor-pointer md:px-[69.5px] md:py-[13px] px-[70px] py-[11px] rounded-full text-md hover:text-[#8C331B] hover:bg-white"
           >
             {t("restaurant.menu.menu")}
           </button>
-          <button className="font-cofo-medium uppercase  py-[12.5px] border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer md:px-[19.5px] md:py-[13px] rounded-4xl  md:text-[13px] lg:text-[14px] text-[12px] ">
+          <button className="font-cofo-medium uppercase px-[10px] py-[10px] border border-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer md:px-[19.5px] md:py-[13px] rounded-4xl  md:text-[13px] lg:text-[14px] text-[12px] ">
             {t("buttons.bookTable")}
           </button>
         </div>

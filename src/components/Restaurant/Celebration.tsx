@@ -9,7 +9,7 @@ export const Celebration = () => {
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-full md:border-x border-[#B3B3B3] md:border-t ">
         <div className="lg:h-[616px]  hidden md:flex justify-end  "></div>
 
-        <div className="lg:h-[616px] h-[454px] flex border-[#B3B3B3] border-x  flex-col items-center lg:justify-end justify-center text-center lg:pb-[27px]">
+        <div className="lg:h-[616px] flex border-[#B3B3B3] border-x  flex-col items-center lg:justify-end justify-end  lg:oy-0 py-[65px_57px] text-center lg:pb-[27px]">
           <span className="font-blessed  block text-center leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] xl:inline xl:pb-[22px] pb-[7px]">
             Ruff
           </span>
@@ -26,7 +26,7 @@ export const Celebration = () => {
           </div>
           <button
             onClick={() => onOpenModal("menu")}
-            className="uppercase lg:text-[14px] text-[12px] font-cofo-medium bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[25px] py-[12.5px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
+            className="uppercase lg:text-[14px] text-[12px] font-cofo-medium bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[25px] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
           >
             {t("buttons.celebrationMenu")}
           </button>
@@ -34,21 +34,21 @@ export const Celebration = () => {
         <div className="md:flex hidden  border-[#B3B3B3]"></div>
       </div>
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 border-x md:border-b-0   border-y border-[#B3B3B3] w-full">
-        <div className="flex items-center justify-center lg:px-[14px_12px] md:px-[12px_10px] xl:px-[24px_20px] md:py-3.25 xl:py-5 lg:py-3 py-[17px_22px] px-[18px_16px]">
+        <div className="flex items-center justify-center lg:px-[14px_12px] md:px-[12px_10px] xl:px-[24px_20px] md:py-3.25 xl:py-[23px_26px] lg:py-3 py-[17px_22px] px-[18px_16px]">
           <img
             src={weddingFst}
             alt=""
             className="w-full md:h-full   h-[310px]  2xl:max-h-[620px] xl:max-h-[520px] lg:max-h-[460px] object-cover"
           />
         </div>
-        <div className="flex items-center justify-center lg:px-[14px_14px] md:px-[12px_10px] xl:px-5 md:border-x border-y md:border-y-0 border-[#B3B3B3] px-[17px_17px] md:py-3.25 lg:py-3 xl:py-5 py-[20px_22px] ">
+        <div className="flex items-center justify-center lg:px-[14px_14px] md:px-[12px_10px] xl:px-5 md:border-x border-y md:border-y-0 border-[#B3B3B3] px-[17px_17px] md:py-3.25 lg:py-3 xl:py-[23px_26px] py-[20px_22px] ">
           <img
             src={weddingScd}
             alt=""
             className="w-full md:h-full    2xl:max-h-[620px]  xl:max-h-[520px] lg:max-h-[460px] h-[392px] object-cover"
           />
         </div>
-        <div className="flex items-center justify-center lg:px-[14px_12px] xl:px-[20px_14px] md:px-[12px_10px] xl:py-5  lg:py-3 md:py-3.25 py-[20px_22px] px-[18px_15px]">
+        <div className="flex items-center justify-center lg:px-[14px_12px] xl:px-[20px_14px] md:px-[12px_10px] xl:py-[23px_26px]  lg:py-3 md:py-3.25 py-[20px_22px] px-[18px_15px]">
           <img
             src={weddingTrd}
             alt=""

@@ -27,7 +27,7 @@ export const AboutRestaurant = () => {
                 </span>
             </div>
 
-            <div className="lg:space-y-6 space-y-3 lg:pt-[45px] pt-[22px]  mb-8">
+            <div className="lg:space-y-6 space-y-3 lg:pt-[45px] pt-[22px]   md:mb-0 mb-8">
               <p className="uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
                 {t("restaurant.about.desc.first.0")}
                 <span className="font-cofo-medium">
@@ -64,14 +64,14 @@ export const AboutRestaurant = () => {
 
         <div className="md:border-e border-x md:border-x-0 border-t md:border-t-0 border-[#B3B3B3]  md:border-b ">
           <div className="flex items-center justify-center ">
-            <div className="md:border-e border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[14px] lg:pb-[19px] pt-[10px] pb-[13px] md:px-2 px-[10px_3px]">
+            <div className="md:border-e border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[14px] lg:pb-[19px] pt-[10px] pb-[13px] lg:px-[20px] md:px-2 px-[10px_3px]">
               <img
                 src={aboutImageFst}
                 alt=""
                 className=" w-full h-full   object-cover"
               />
             </div>
-            <div className=" border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[15px] lg:pb-[19px] pt-[10px] pb-[13px] md:px-2 px-[3px_10px]">
+            <div className=" border-[#B3B3B3] border-b w-full lg:px-[20px] flex items-center justify-center lg:pt-[15px] lg:pb-[19px] pt-[10px] pb-[13px] md:px-2 px-[3px_10px]">
               <img
                 src={aboutImageScd}
                 alt=""
@@ -79,11 +79,11 @@ export const AboutRestaurant = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center lg:pt-[12px] lg:pb-[26px] pt-[10px]">
+          <div className="flex items-center px-2.5 lg:px-[20px] justify-center lg:pt-[12px] lg:pb-[26px] pt-[10px] xl:py-[20px_26px]">
             <img
               src={aboutImageTrd}
               alt=""
-              className=" w-full h-full px-2.5 object-cover "
+              className=" w-full h-full  object-cover md:max-h-[292px]"
             />
           </div>
         </div>
