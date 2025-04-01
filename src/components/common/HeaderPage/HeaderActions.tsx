@@ -12,17 +12,20 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
   const { t } = useTranslation();
   
   return (
-    <div className="flex flex-col items-center mt-8 gap-1.75">
+    <div className="flex flex-col items-center  gap-1.75">
       {showBookButton && (
-        <BookLink className="text-[#252526] bg-[#EDE8E5]" to="/booking">
+        <BookLink className="lg:px-[34.5px] lg:py-[13.5px] px-[19px] lg:mt-[43px] py-[11px] text-[#252526] mt-[30px] bg-[#EDE8E5]" to="/booking">
+          <span className="lg:px-[47px] lg:py-[13px] px-[19px] py-[11px]">
+
           {t("buttons.book")}
+          </span>
         </BookLink>
       )}
 
       {showOrderButton && (
         <button
           onClick={onOrderClick}
-          className="uppercase bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit md:px-[34.5px] md:py-[13.5px]
+          className="uppercase mt-8 bg-[#EDE8E5] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit md:px-[34.5px] md:py-[13.5px]
            px-[19px] py-[11px] rounded-full font-cofo-medium text-[12px] hover:cursor-pointer "
         >
           {t("buttons.order")}
@@ -30,7 +33,7 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       )}
 
       {showConferenceMenuButton && (
-        <button className="uppercase hover:bg-[#EDE8E5] hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border w-fit lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
+        <button className="uppercase mt-8 hover:bg-[#EDE8E5] hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border w-fit lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
           {t("buttons.conferenceMenu")}
         </button>
       )}

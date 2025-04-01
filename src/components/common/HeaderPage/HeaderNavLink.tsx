@@ -11,4 +11,4 @@ export const HeaderNavLink: React.FC<HeaderNavLinkProps> = ({ to, text }) => {
       <BsArrowLeft /> {text}
     </Link>
   );
-}; 
+};

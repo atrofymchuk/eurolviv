@@ -93,11 +93,11 @@ export {default as lowerFst} from "../assets/Terrase/LowerTerrase/previewOne.web
 export {default as lowerScd} from "../assets/Terrase/LowerTerrase/previewTwo.webp";
 export {default as lowerTrd} from "../assets/Terrase/LowerTerrase/previewThree.webp";
 
-export {default as barImg} from "../assets/Terrase/Bar/bar.webp";   
-export {default as wineImg} from "../assets/Terrase/Bar/wine.webp";   
-export {default as wineImgScnd} from "../assets/Terrase/Bar/wine2.webp";   
-export {default as cocktailImg} from "../assets/Terrase/Bar/cocktail.webp";   
-export {default as cocktailImgScnd} from "../assets/Terrase/Bar/cocktail2.webp";
+export {default as barImg} from "../assets/Terrase/bar/bar.webp";   
+export {default as wineImg} from "../assets/Terrase/bar/wine.webp";   
+export {default as wineImgScnd} from "../assets/Terrase/bar/wine2.webp";   
+export {default as cocktailImg} from "../assets/Terrase/bar/cocktail.webp";   
+export {default as cocktailImgScnd} from "../assets/Terrase/bar/cocktail2.webp";
 
 export {default as fish} from "../assets/Terrase/Menu/fish.webp";
 export {default as golubtsi} from "../assets/Terrase/Menu/golubtsi.webp";

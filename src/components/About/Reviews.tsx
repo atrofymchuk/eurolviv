@@ -64,7 +64,7 @@ export const Rewies = () => {
         </div>
       </div>
 
-      <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between  z-50">
+      <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between  z-10">
         <button
           className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-15  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
           onClick={() => sliderRef.current?.slickPrev()}

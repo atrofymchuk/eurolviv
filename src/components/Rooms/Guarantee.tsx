@@ -8,23 +8,18 @@ export const Guarantee = () => {
 
   return (
     <div className="w-full flex flex-col items-center md:items-start relative">
-
-      <div className="h-[1600px] md:border-s  -z-1 w-full mx-auto border-[#C7C7C7] border-t lg:border-t-0 absolute max-w-[89.58%] self-center">
-        
-    </div>
-
+      <div className="h-[1600px] md:border-s  -z-1 w-full mx-auto border-[#C7C7C7] border-t lg:border-t-0 absolute max-w-[89.58%] self-center"></div>
 
       <div className="md:max-w-[94.79%] max-w-[89.6%] md:border-e border-x md:border-x-0 border-[#C7C7C7] lg:w-full">
         <div className="grid   justify-center md:justify-start  grid-cols-[1fr]   border-[#C7C7C7] ">
           <div className="  lg:border-x-0 border-[#C7C7C7] ">
             <div className="flex flex-col xl:items-end md:items-center  2xl:pt-[81px] xl:pt-[60px] lg:pt-[50px] pt-[49px] 2xl:pb-[48px] xl:pb-[40px] pb-[16px] px-[14px] md:px-0">
-              
               <h1 className="font-cofo text-[32px] 2xl:block uppercase sm:text-[42px] 2xl:text-[100px] xl:text-[70px] leading-[104%] tracking-[-0.07em] 2xl:leading-[81px] 2xl:tracking-[-0.04em] xl:w-[900px] 2xl:w-[1350px] ">
                 <span className="hidden md:block">
                   {t("rooms.guarantee.heading.0")}
                 </span>
                 <span className="block md:hidden whitespace-nowrap">
-                  {t("rooms.guarantee.headingMobile.0")}
+                  {t("rooms.guarantee.headingMobile.0")}FSDFS
                 </span>
               </h1>
 
@@ -45,7 +40,6 @@ export const Guarantee = () => {
         </div>
 
         <div className="relative grid md:grid-cols-[55.88%_44.12%]   grid-cols-[1fr] 2xl:justify-normal xl:justify-center justify-center w-full ">
-        
           <div className="  border-[#C7C7C7] 2xl:border-0">
             <img
               src={eurohotel}
@@ -76,7 +70,8 @@ export const Guarantee = () => {
 
               <button
                 onClick={() => onOpenModal("order")}
-                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] 2xl:w-fit self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl font-cofo-medium 2xl:text-base xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3 "
+                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px]  2xl:w-fit self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
+                font-cofo-medium 2xl:text-base xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3  "
               >
                 {t("buttons.bookRoomArr.0")}
                 <span className="2xl:inline hidden font-cofo-medium">

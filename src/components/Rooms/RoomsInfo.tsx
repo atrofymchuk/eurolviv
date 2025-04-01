@@ -26,7 +26,7 @@ export const RoomsInfo = () => {
                   <h1 className="mb-[24px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                     {t("rooms.about.heading.3")}
                   </h1>
-                  <div className="flex  items-center">
+                  <div className="flex  items-center lg:gap-[30px]">
                     <p className="lg:text-[16px] md:text-[14px] sm:text-[12px] leading-[20px] text-[#252526] uppercase  max-w-[412px]">
                       {t("rooms.about.desc")}
                     </p>
@@ -34,7 +34,10 @@ export const RoomsInfo = () => {
                       className="text-[#FFFFFF] bg-[#8C331B]"
                       to={"/booking"}
                     >
+                      <span className="lg:px-[28px] lg:py-[13px] px-[19px] lg:mt-[43px] py-[11px] ">
+
                       {t("buttons.book")}
+                      </span>
                     </BookLink>
                   </div>
                 </div>
@@ -52,12 +55,12 @@ export const RoomsInfo = () => {
                   {t("rooms.about.heading.4")}
                 </span>
               </h1>
-              <div className="flex flex-col text-center mt-[24px] items-center px-6">
+              <div className="flex flex-col text-center  items-center px-6 mt-[24px] md:mt-[0px]">
                 <p className="text-[12px] leading-[15px] text-[#252526] uppercase">
                   {t("rooms.about.desc")}
                 </p>
                 <BookLink
-                  className="text-[#FFFFFF] bg-[#8C331B]"
+                  className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px]"
                   to={"/booking"}
                 >
                   {t("buttons.book")}
@@ -65,7 +68,7 @@ export const RoomsInfo = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 pt-[43px] ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 pt-[20px] lg:pt-[33px] ">
             {rooms.map((room, index) => (
               <RoomInfoCard
                 key={room.type}
