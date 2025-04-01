@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
+import { processTitle } from "../../utils/ProccessTitle";
 
 type RoomInfoCard = {
   room: Room;
@@ -14,7 +15,8 @@ type RoomInfoCard = {
 export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   const isFirstInRow = index % 3 === 0;
   const isLastInRow = (index + 1) % 3 === 0;
-  const {t} = useTranslation()
+  const { t } = useTranslation();
+  const processedTitle = processTitle(t(room.title));
 
   return (
     <div
@@ -28,13 +30,13 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
         lg:p-[15px]`)}
     >
       <div className="">
-        <div className="items-center flex justify-center">      
+        <div className="items-center flex justify-center">
           <InViewWrapper>
             <img
               src={room.header.previewImage}
               alt={room.title}
-            className="2xl:w-[530px] 2xl:h-[416px] xl:w-[480px] xl:h-[380px] lg:w-[420px] lg:h-[340px] md:w-[360px] md:h-[280px] w-full h-full   object-cover"
-          />
+              className="2xl:w-[530px] 2xl:h-[416px] xl:w-[480px] xl:h-[380px] lg:w-[420px] lg:h-[340px] md:w-[360px] md:h-[280px] w-full  h-[232px]  object-cover"
+            />
           </InViewWrapper>
         </div>
 
@@ -43,7 +45,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             <div className="flex items-center">
               <img src={square} alt="square" className="lg:w-4.5  w-4" />
               <p className="font-cofo uppercase 2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
-                {t("rooms.about.area")}: {room.area}
+                {t("rooms.about.area")}: {room.area}M²
               </p>
             </div>
             <div className="flex items-center">
@@ -57,10 +59,10 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
           <div className="flex justify-center items-center h-full">
             <div className="flex flex-col text-center items-center justify-between h-full 2xl:max-h-[200px] xl:max-h-[180px] lg:max-h-[160px] md:max-h-[140px] max-h-[125px] w-full 2xl:max-w-[472px] xl:max-w-[440px] lg:max-w-[400px] md:max-w-[340px]">
               <div className="flex-1 flex flex-col justify-start w-full">
-                <h1 className="font-cofo uppercase 2xl:text-[40px] xl:text-[28px] lg:text-[32px] md:text-[28px] text-[24px] 2xl:leading-[36px] xl:leading-[32px] lg:leading-[28px] md:leading-[24px] leading-[22px] tracking-[-0.06em] font-cofo-medium">
-                  {t(room.title)}
+                <h1 className="font-cofo uppercase 2xl:text-[40px] xl:text-[28px] lg:text-[32px] md:text-[28px] text-[24px] leading-[85%] tracking-[-0.06em] font-cofo-medium whitespace-pre-line">
+                  {processedTitle}
                 </h1>
-                <p className="uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:leading-[21px] xl:leading-[19px] lg:leading-[17px] md:leading-[15px] leading-[14px] mt-[15px] tracking-[-0.04em] text-[#6B6B6B]">
+                <p className="uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:leading-[21px] xl:leading-[19px] lg:leading-[17px] md:leading-[15px] leading-[14px] mt-[15px] tracking-[-0.04em] text-[#6B6B6B] ">
                   {t(room.description)}
                 </p>
               </div>

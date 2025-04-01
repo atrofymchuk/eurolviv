@@ -63,7 +63,10 @@ export const RoomsInfo = () => {
                   className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px]"
                   to={"/booking"}
                 >
+                  <span className="lg:px-[8px] lg:py-[13px] px-[4.2px] lg:mt-[43px] py-[9.5px] ">
+
                   {t("buttons.book")}
+                  </span>
                 </BookLink>
               </div>
             </div>
