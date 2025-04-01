@@ -17,10 +17,10 @@ export const Mission = () => {
             <h1 className="uppercase text-[32px] md:text-[48px] lg:text-[64px] xl:text-[100px] tracking-[-0.03em] leading-[80%] px-2">
               {t("about.mission.heading.1")}
             </h1>
-            <p className="uppercase max-w-[801px] mx-auto text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] pt-12 px-4 xl:px-0">
+            <p className="uppercase max-w-[801px] mx-auto text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] lg:pt-[29px] pt-[47px] px-4 xl:px-0">
               {t("about.mission.desc.0")}
             </p>
-            <p className="uppercase max-w-[801px] mx-auto text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] pt-5 px-4 xl:px-0">
+            <p className="uppercase max-w-[801px] mx-auto text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] pt-5 px-4 lg:pb-4 pb-[37px] xl:px-0">
               {t("about.mission.desc.1")}
             </p>
           </div>

@@ -13,27 +13,27 @@ export const Rewies = () => {
   return (
     <section className="bg-[#A47762] flex-col   flex justify-center items-center  ">
       <div className="flex flex-col items-center border-x border-[#C7C7C7]  overflow-x-hidden xl:px-0 w-[89.68%] ">
-        <div className="grid xl:grid-cols-2 grid-cols-1  w-full   pe-4">
-          <div className="xl:col-span-1 pt-10 xl:pt-[109px] flex flex-col">
+        <div className="grid xl:grid-cols-2 grid-cols-1 overflow-y-hidden  w-full lg:pe-4">
+          <div className="xl:col-span-1 pt-[58px] xl:pt-[109px] flex flex-col">
             <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5]  xl:leading-[160px]">
               <span className="xl:hidden block text-[32px] lg:text-[80px] leading-[96%]">
                 {t("reviews.title")} {t("reviews.heading")}
               </span>
-              <span className="hidden xl:block text-[32px] xl:text-[150px] leading-[96%] 2xl:text-[198px]">
+              <span className="hidden xl:block text-[32px] xl:text-[150px] text-start md:ps-[25px] tracking-[-0.09em] leading-[81%] 2xl:text-[198px]">
                 {t("reviews.title")}
               </span>
               <span className="xl:hidden block lg:text-[80px]  text-[32px] leading-[96%]">
                 {t("reviews.heading2")}
               </span>
             </h1>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start xl:pb-10 items-center xl:items-end">
-              <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4 px-4  xl:ps-[39px] xl:pt-[38px] text-center xl:text-left">
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start  items-center xl:mt-[38px] ">
+              <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4 px-4 2xl:w-[424px]  xl:ps-[39px]  text-center xl:text-left">
                 {t("reviews.desc")}
               </p>
 
               <Link
                 to={"/booking"}
-                className="uppercase text-[#A47762]  font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit  xl:px-[22.5px] xl:py-[10px] py-[10px] px-[14px] rounded-full -0 hover:cursor-pointer text-[12px] xl:text-[16px]"
+                className="uppercase text-[#A47762]  mt-[30px] lg:mt-0 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit  xl:px-[22.5px] xl:py-[10px] py-[10px] px-[14px] rounded-full -0 hover:cursor-pointer text-[12px] xl:text-[16px]"
               >
                 {t("buttons.bookRoom")}
               </Link>
@@ -56,7 +56,7 @@ export const Rewies = () => {
         <div className="absolute w-[89.68%] border-x border-[#C7C7C7] h-[700px]  overflow-y-hidden"></div>
 
         <div className="absolute inset-0 flex justify-center ">
-          <div className="relative w-[80.79%] ">
+          <div className="relative w-[80.79%] md:w-[85.79%]">
             <div className="absolute inset-0 w-full ">
               <ReviewSlider reviews={reviews} ref={sliderRef} />
             </div>
@@ -64,7 +64,7 @@ export const Rewies = () => {
         </div>
       </div>
 
-      <div className="flex max-w-[89.58%] w-screen  border-x border-[#C7C7C7]  justify-between  z-50">
+      <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between  z-50">
         <button
           className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-15  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
           onClick={() => sliderRef.current?.slickPrev()}

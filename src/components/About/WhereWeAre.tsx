@@ -10,13 +10,13 @@ export const WhereWeAre = () => {
   const {places, infrastructure} = usePagesInfoStore();
   
   return (
-    <section className="flex flex-col font-cofo">
-      <div className="grid lg:grid-cols-[1fr_1fr] max-w-[89.58%] mx-auto w-full container-fluid border border-t-0 border-[#c7c7c7]">
+    <section className="flex flex-col font-cofo " >
+      <div className="grid lg:grid-cols-[48%_52%] max-w-[89.58%] mx-auto w-full container-fluid border border-t-0 border-[#c7c7c7] ">
         <LocationInfo t={t} />
         <MapSection />
       </div>
 
-      <div className="grid lg:grid-cols-2 w-full  border border-[#c7c7c7] border-t-0 container-fluid max-w-[89.58%] mx-auto">
+      <div className="grid lg:grid-cols-[48%_52%] w-full  border border-[#c7c7c7] border-t-0 container-fluid max-w-[89.58%] mx-auto lg:pb-[93px] pb-[48px]">
         <InfrastructureSection t={t} />
         <PlacesNearbySection t={t} places={places} infrastructure={infrastructure} />
       </div>
