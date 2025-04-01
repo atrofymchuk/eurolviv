@@ -55,8 +55,8 @@ export const Layout = () => {
           </>}
         />
         <Route
-          path="/terrase"
-          element={<InfinityScrollPage pageKey="terrase" />}
+          path="/terrace"
+          element={<InfinityScrollPage pageKey="terrace" />}
         />
         <Route path="/booking" element={<Booking />} />
       </Routes>

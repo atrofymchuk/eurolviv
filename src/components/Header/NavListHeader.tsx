@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import cn from "classnames"
 
-type RoomsListHeaderToProps = {
-  roomType: string;
-  roomTitle: string;
+type NavListHeaderToProps = {
+  path: string;
+  title: string;
 }
 
-export const RoomsListHeader = ({ roomType, roomTitle }: RoomsListHeaderToProps) => {
+  export const NavListHeader = ({ path, title }: NavListHeaderToProps) => {
   const { t } = useTranslation();
 
   return (
     <Link 
-      to={`/rooms/${roomType}`} 
+      to={path} 
       className={cn(
         "block px-[18px]  py-3 backdrop-blur-[54.5px]  bg-white/26 font-cofo-medium   hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
         "border-b border-[#FFFFFF33] last:border-b-0",
@@ -20,7 +20,7 @@ export const RoomsListHeader = ({ roomType, roomTitle }: RoomsListHeaderToProps)
       )}
     >
       <span className="text-inherit uppercase text-[16px]">
-        {t(roomTitle)}
+        {t(title)}
       </span>
     </Link>
   );

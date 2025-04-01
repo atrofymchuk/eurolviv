@@ -19,7 +19,6 @@ export const InfinityScrollPage: React.FC<InfinityScrollPageProps> = ({ pageKey 
       { threshold: 1 }
     );
 
-    // Store the current observerRef value in a variable within the effect
     const currentRef = observerRef.current;
 
     if (currentRef) {

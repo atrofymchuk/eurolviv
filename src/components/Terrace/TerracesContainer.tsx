@@ -1,5 +1,5 @@
 import { useRoomStore } from "../../store/useRoomsStore";
-import { Terrase } from "./Terase";
+import { Terrase } from "./Terace";
 export const TerrasesContainer = () => {
   const { terases } = useRoomStore();
 

@@ -40,7 +40,7 @@ const allPageSections: Record<string, React.FC[]> = {
     Components.Celebration,
     Components.ReviewsContainer,
   ],
-  terrase: [
+  terrace: [
     Components.TerraseHeader,
     Components.TerrasesContainer,
     Components.BarComponent,

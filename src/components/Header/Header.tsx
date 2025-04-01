@@ -38,11 +38,12 @@ export function Header() {
           "fixed top-0 left-0 right-0   mx-auto  flex justify-between items-center lg:h-[133px] h-[95px] transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
           {
             "bg-white text-black": scrolled,
-            "text-white": !scrolled          }
+            "text-white": !scrolled,
+          }
         )}
       >
         <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto lg:mx-[20px] xl:mx-auto ">
-          <div className="flex items-center xl:space-x-4 space-x-3  w-full " >
+          <div className="flex items-center xl:space-x-4 space-x-3  w-full ">
             <HeaderNav
               {...{
                 logo,

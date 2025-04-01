@@ -1,4 +1,4 @@
-import { TerraseCard } from "./TerraseCard";
+import { TerraseCard } from "./TerraceCard";
 import { TerraseT } from "../../types/types";
 import { useTranslation } from "react-i18next";
 import { FormatBoldText } from "../common/FormatBoldText";
