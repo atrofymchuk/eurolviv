@@ -105,6 +105,12 @@ export {default as pasta} from "../assets/Terrase/Menu/pasta.webp";
 export {default as pie} from "../assets/Terrase/Menu/pie.webp";
 export {default as steak} from "../assets/Terrase/Menu/steak.webp";
 
+
+export {default as tableWithFlowers} from "../assets/Terrase/Celebration/tableWithFlowers.webp";
+export {default as table} from "../assets/Terrase/Celebration/table.webp";
+export {default as tableTwo} from "../assets/Terrase/Celebration/table2.jpg";
+export {default as pink} from "../assets/Terrase/Celebration/pink.webp";
+
 //About page
 export  { default as roomLux} from "../assets/About/2roomLux.webp";
 export  { default as terasse} from "../assets/About/terrase.webp";

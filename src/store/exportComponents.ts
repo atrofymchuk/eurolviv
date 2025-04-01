@@ -35,3 +35,4 @@ export { Dishes } from "../components/Terrase/Dishes";
 export { RoomsInfo } from "../components/Rooms/RoomsInfo";
 export { Guarantee } from "../components/Rooms/Guarantee";
 export { Header as HeaderRooms } from "../components/Rooms/Header";
+export { Services } from "../components/Terrase/Services";
