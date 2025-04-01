@@ -11,6 +11,7 @@ import Booking from "./pages/BookRoom";
 import RedirectToAdminPanel from "./components/utils/RedirectToAdminPanel";
 import { OnLoadingSpin } from "./components/utils/OnLoadingSpin";
 import { SpecialOffersModal } from "./components/Modals/SpecialOfferModal";
+import { ScrollToTop } from "./components/utils/ScrollOnTop";
 
 export const Layout = () => {
   const location = useLocation();
@@ -27,7 +28,7 @@ export const Layout = () => {
   return (
     <>
       {!isBookingPage && <Header />}
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Routes>
         <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
         <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />
