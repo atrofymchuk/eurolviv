@@ -12,7 +12,6 @@ function AboutSlider({ slides }: AboutSliderProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
 
-  console.log(slides);
   const settings = {
     className: "center",
     centerMode: true,
