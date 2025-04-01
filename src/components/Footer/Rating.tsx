@@ -13,7 +13,7 @@ export const Rating = () =>{
             className="lg:mt-8.5"
           />
           <div className="flex-col ms-2">
-            <p className="lg:text-[18px] text-[12px] lg:mb-2 font-cofo uppercase">
+            <p className="lg:text-[18px] text-[12px] lg:mb-2 font-cofo-medium uppercase">
               Booking.com
             </p>
             <p className="lg:text-[18px] text-[#999999] text-[12px] font-cofo uppercase">

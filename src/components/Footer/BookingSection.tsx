@@ -6,37 +6,39 @@ import cn from "classnames";
 export const BookingSection = () => {
   const { t } = useTranslation();
   return (
-    <div className="space-y-3  flex flex-col lg:h-[473px] h-[200px] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]    pe-10 order-4 lg:order-3 lg:px-3 2xl-px-0 pt-[24px] lg:w-[27.02%]  lg:items-center">
+    <div className="space-y-3  flex flex-col lg:h-[473px] h-[200px] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+     pe-10 order-4 lg:order-3 lg:px-3 2xl-px-0 pt-[17px] lg:w-[25.02%]  lg:items-center" >
       <div>
         <h4 className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo mb-0 uppercase lg:w-[255px] w-[160px] text-[12px] font-cofo-medium ">
           {t("footer.booking")}
         </h4>
 
-        <p className="uppercase text-[#999999] text-cofo 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-2 mb-6 text-[12px]">
+        <p className="uppercase text-[#999999] text-cofo 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-1.5 lg:mb-5 mb-[17px] text-[12px] ">
           {t("footer.bookingTime")}
         </p>
-        <ul className="lg:space-y-4 space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase leading-[18px] text-[12px] ">
+
+        <ul className="lg:space-y-[14px] leading-[100%] space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
           <li>+38 (032) 242-31-60</li>
           <li>+38 (093) 242-31-60</li>
           <li>+38 (093) 348-31-12</li>
         </ul>
-        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-3 leading-[15px] mt-[21px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-semibold lg:leading-[22px]">
+        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:leading-[22px]">
           info@eurohotel.lviv.ua
         </p>
-        <div className="lg:mt-[36px] mt-8 mb-0">
+        <div className="lg:mt-[29px] mt-8 mb-0">
           <p className="uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-3">
             {t("footer.restaurant")}/{t("footer.terrace")}
           </p>
 
-          <ul className="lg:space-y-4 space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase lg:leading-[18px]  leading-[15px] text-[12px]">
+          <ul className="lg:space-y-[14px] space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase lg:leading-[100%] text-[12px]">
             <li>+38 (073) 242-40-02</li>
             <li>+38 (093) 348-31-14</li>
           </ul>
-          <div className="lg:mt-auto mt-0 ">
-            <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-semibold lg:leading-[22px] leading-[15px] mt-[10px] text-[12px]">
+          <div className="lg:mt-[10px] mt-0 ">
+            <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:leading-[22px] leading-[15px] lg:mt-0 mt-[21px] text-[12px]">
               restaurant@eurohotel.lviv.ua
             </p>
-            <div className="flex lg:space-x-4 space-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] lg:mt-[17px] mt-6  ">
+            <div className="flex lg:space-x-4 space-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] lg:mt-[30px] mt-6  ">
               <span
                 className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >

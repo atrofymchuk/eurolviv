@@ -4,16 +4,17 @@ import { useTranslation } from "react-i18next";
 import { navigate } from "../../store/exportsIcons";
 import { Link } from "react-router-dom";
 import { map } from "../../Constants/map";
+
 export const AddressWithSchedule = () => {
   const { t } = useTranslation();
   return (
-    <div className="space-y-4 flex flex-col lg:h-[473px] w-full lg:w-[25.34%] h-fit lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 pt-6 lg:px-3 2xl-px-0 lg:items-center">
+    <div className="space-y-4 flex flex-col lg:h-[473px] w-full lg:w-[24%] h-fit lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 pt-[17px]  lg:px-3 2xl-px-0 lg:items-center">
       <div>
         <div className="mb-0">
-          <h4 className="text-[12px]   2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium">
+          <h4 className="text-[12px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
           </h4>
-          <p className="flex font-cofo-medium items-center 2xl:text-[18px] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase underline  lg:pt-[15px] underline-offset-[18%] lg:leading-[22.6px] lg:ps-[4px] pt-3 decoration-[6.5%]">
+          <p className="flex font-cofo-medium items-center 2xl:text-[18px] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline    lg:pt-[15px] underline-offset-4 lg:leading-[22.6px] lg:ps-[4px] pt-3 decoration-[6.5%]">
             <img
               src={navigate}
               className="filter-invert-white  "
@@ -33,16 +34,20 @@ export const AddressWithSchedule = () => {
         <h4 className="text-[12px] font-cofo-medium uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] m-0 xl:mt-[63px] lg:mt-[63px] mt-[44px] font-cofo ">
           {t("footer.reception")}
         </h4>
-        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] lg:mt-[6px] lg:leading-[22px]">
+        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] mb-[17px] lg:mt-[6px] ">
           {t("footer.receptionTime")}
         </p>
-        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] mb-[7px] text-[12px] font-cofo lg:no-underline underline leading-[15px] lg:leading-[22px]">
-          +38 (073) 242-40-02
-        </p>
-        <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] mb-0  font-cofo text-[12px] lg:no-underline underline leading-[15px] lg:leading-[22px]">
-          +38 (093) 242-40-02
-        </p>
 
+        <ul className="space-y-[7px]">
+
+        <li className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] leading-[100%]  text-[12px] font-cofo lg:no-underline underline ">
+          +38 (073) 242-40-02
+        </li>
+        <li className="2xl:text-[18px] xl:text-[16px] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline ">
+          +38 (093) 242-40-02
+        </li>
+
+        </ul>
         <div className="flex flex-col space-x-3 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[15px]  mt-[20px]  ">
           <p className="2xl:text-[18px] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline  lg:leading-[22px] font-cofo-medium">
             reception@eurohotel.lviv.ua
@@ -77,8 +82,10 @@ export const AddressWithSchedule = () => {
             </span>
           </div>
         </div>
-        <p className="uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
-        2xl:mt-29 xl:mt-18  lg:mt-29 lg:block hidden">
+        <p
+          className="uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
+        2xl:mt-29 xl:mt-18  lg:mt-29 lg:block hidden"
+        >
           {t("footer.publicOffer")}
         </p>
       </div>

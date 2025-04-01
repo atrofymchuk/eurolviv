@@ -8,7 +8,7 @@ export const Guarantee = () => {
 
   return (
     <div className="w-full flex flex-col items-center md:items-start relative">
-      <div className="h-[1600px] md:border-s  -z-1 w-full mx-auto border-[#C7C7C7] border-t lg:border-t-0 absolute max-w-[89.58%] self-center"></div>
+      <div className="h-[1000px] md:border-s  -z-1 w-full mx-auto border-[#C7C7C7] border-t lg:border-t-0 absolute max-w-[89.58%] self-center"></div>
 
       <div className="md:max-w-[94.79%] max-w-[89.5%] md:border-e border-x md:border-x-0 border-[#C7C7C7] lg:w-full">
         <div className="grid   justify-center md:justify-start  grid-cols-[1fr]   border-[#C7C7C7] ">
