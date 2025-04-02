@@ -137,7 +137,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   </InViewWrapper>
                 </div>
 
-                <div className=" lg:mt-[28px]  lg:w-full md:w-full w-[259px] flex flex-col h-[150px]">
+                <div className=" lg:mt-[28px]  lg:w-full md:w-full w-[259px] flex flex-col h-[150px] ">
                   <div className="flex items-center justify-center">
                     <h4
                       className={cn(

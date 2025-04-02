@@ -95,7 +95,7 @@ export const AboutHome = () => {
               </Link>
             </div>
 
-            <div className="relative flex  justify-start self-start  md:order-none order-1 ">
+            <div className="relative flex w-[89.07%] md:w-full  justify-start self-start  md:order-none order-1 ">
               <div className="md:absolute top-0 left-0  pt-[20px] xl:pt-[50px] w-full md:w-fit  px-[14px_10px]">
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">
                   {t("home.about.quality.0")}
