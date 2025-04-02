@@ -21,7 +21,7 @@ export { default as safeBrown } from "./../assets/icons/Rooms/LivingRoomBrown/sa
 export { default as kettleBrown } from "./../assets/icons/Rooms/LivingRoomBrown/kettle.svg";
 export { default as conditionBrown } from "./../assets/icons/Rooms/LivingRoomBrown/condition.svg";
 export { default as tvBrown } from "./../assets/icons/Rooms/LivingRoomBrown/tv.svg";
-export { default as phoneBrown } from "./../assets/icons/rooms/LivingRoomBrown/phone.svg";
+export { default as phoneBrown } from "./../assets/icons/Rooms/LivingRoomBrown/phone.svg";
 export { default as wifiBrown } from "./../assets/icons/Rooms/LivingRoomBrown/wifi.svg";
 export { default as balconyBrown } from "./../assets/icons/Rooms/LivingRoomBrown/balcony.svg";
 export { default as sofaBrown } from "./../assets/icons/Rooms/LivingRoomBrown/sofa.svg";
