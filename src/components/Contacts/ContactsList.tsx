@@ -35,7 +35,7 @@ export const ContactList = ({
             {subtitle}
           </p>
         )}
-        <div className={cn("lg:space-y-2.25 space-y-1 w-fit", { "lg:mt-[21px] md:mt-1": !subtitle })}>
+        <div className={cn("lg:space-y-2.25 space-y-1 w-fit", { "lg:mt-[21px] md:mt-1 mt-[4px]": !subtitle })}>
           {phones.map((phone, index) => (
             <p
               key={index}
