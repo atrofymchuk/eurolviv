@@ -61,7 +61,7 @@ export const SpecialOffersSlider = forwardRef<
               index !== specialOffers.length - 1 ? "border-r-0" : ""
             }`
             ,{
-              "border-s-0 lg:border-s ": currentSlide === index,
+              "border-s-0 ": currentSlide === index,
             },
             {
               "border-e-0 ":  specialOffers.length -1,
@@ -77,7 +77,7 @@ export const SpecialOffersSlider = forwardRef<
                 )}
               />
               <div
-                className={cn(`absolute max-w-[80%]  `, {
+                className={cn(`absolute max-w-[80%] md:max-w-full `, {
                   "md:pe-0 pe-[20%]": index === 0,
                 })}
               >
