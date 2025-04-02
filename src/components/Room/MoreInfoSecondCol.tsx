@@ -21,7 +21,7 @@ export const MoreInfoSecondCol = ({
     >
       <div
         className={cn(
-          `flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[27px] lg:ps-[17px] md:ps-[10px] ${
+          `flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[17px] md:ps-[10px] ${
             isShowOtherInfo
               ? "2xl:h-[512px] lg:h-[300px] xl:h-[371px] "
               : "ps-[10px] 2xl:h-[512px] lg:h-[300px] xl:h-[371px] md:h-[250px] " 

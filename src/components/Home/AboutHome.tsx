@@ -103,7 +103,7 @@ export const AboutHome = () => {
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">
                   {t("home.about.quality.1")}
                 </h1>
-                <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] xl:translate-x-1/4 h-fit">
+                <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] xl:translate-x-1/4 2xl:translate-x-42 h-fit">
                   {t("home.about.quality.2")}
                 </h1>
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">

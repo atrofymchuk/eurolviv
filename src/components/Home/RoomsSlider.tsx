@@ -22,8 +22,8 @@ type RoomsSliderProps = {
 
 export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
   ({ sliderProps }, ref) => {
-    const [currentSlide, setCurrentSlide] = useState(()=>{
-      if(window.innerWidth <= 640){
+    const [currentSlide, setCurrentSlide] = useState(() => {
+      if (window.innerWidth <= 640) {
         return 0;
       }
       return 1;
@@ -62,7 +62,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
             slidesToShow: 1.2,
             centerPadding: "12%",
             variableWidth: true,
-            loop: false
+            loop: false,
           },
         },
         {
@@ -91,9 +91,12 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
     const settings = { ...defaultSettings };
 
     return (
-        <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px] ms-[calc(5.93%)] h-full" >
-        <Slider {...settings} className="overflow-visible flex items-center justify-center home-room-slider" ref={ref}>
-          
+      <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px] ms-[calc(5.93%)] h-full">
+        <Slider
+          {...settings}
+          className="overflow-visible flex items-center justify-center home-room-slider"
+          ref={ref}
+        >
           {sliderProps.map((el, index) => {
             const isActive = index === currentSlide;
 
@@ -102,16 +105,18 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                 key={index}
                 className={cn(
                   " px-3",
-                  "flex flex-col items-center justify-center self-center place-content-center  h-full",
+                  "flex flex-col items-center justify-center self-center place-content-center transition-all duration-500 h-full",
                   {
-                    "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit": isActive,
-                    "2xl:h-[780px] xl:h-[670px] lg:h-[600px] md:h-[400px] h-fit": !isActive,
+                    "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit":
+                      isActive,
+                    "2xl:h-[780px] xl:h-[670px] lg:h-[600px] md:h-[400px] h-fit":
+                      !isActive,
                   }
                 )}
               >
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-500   md:w-full   ",
+                    "overflow-hidden transition-all duration-500   md:w-full   "
                   )}
                 >
                   <InViewWrapper>
@@ -133,7 +138,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                 </div>
 
                 <div className=" lg:mt-[28px]  lg:w-full md:w-full w-[259px] flex flex-col h-[150px]">
-                  <div className="flex items-center justify-center" >
+                  <div className="flex items-center justify-center">
                     <h4
                       className={cn(
                         "2xl:text-[32px] 2xl:w-2/3 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em]  mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"

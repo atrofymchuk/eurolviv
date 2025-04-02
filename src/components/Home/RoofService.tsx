@@ -80,7 +80,7 @@ export const RoofService = () => {
                   }`
                 )}
               >
-                <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[32px] pt-[19px] lg:w-[380px] xl:w-[488p  x]">
+                <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[32px] pt-[19px] lg:w-[380px] xl:w-[488px]">
                   {t(item.desc)}
                 </p>
                 <div
@@ -90,7 +90,7 @@ export const RoofService = () => {
                 >
                   <Link
                     to={item.url}
-                    className={`uppercase bg-[#8C331B] lg:py-[13px] l lg:px-[27.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px] ${
+                    className={`uppercase bg-[#8C331B] lg:py-[11px]  lg:px-[29.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF]  lg:text-[16px] text-[12px] py-[12px] px-[17px] ${
                       index === 2 ? "" : "hidden"
                     }`}
                   >
@@ -98,7 +98,10 @@ export const RoofService = () => {
                   </Link>
                   <Link
                     to={item.url}
-                    className="uppercase lg:py-[13px]  lg:px-[58.5px] rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
+                    className={cn(`uppercase  rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:text-[16px] text-[12px] `, {
+                      "lg:py-[11px]  lg:px-[32px]": index !== 2,
+                      "lg:py-[13px]  lg:px-[59.5px]": index === 2,
+                    })}
                   >
                     {t("buttons.details")}
                   </Link>

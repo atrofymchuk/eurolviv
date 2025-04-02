@@ -41,7 +41,9 @@ export const SpecialOffers = () => {
               </div>
             </div>
           </div>
-      <div className=" justify-between gap-4 my-[24px] hidden lg:flex">
+      <div className={cn(` justify-between gap-4 my-[24px] xl:my-[42px] hidden lg:flex`, {
+        "lg:hidden": !isHome
+      })}>
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
                     text-[#8C331B] bg-white rounded-full border border-[#8C331B] transition hover:bg-[#8C331B] hover:text-white"
@@ -71,7 +73,12 @@ export const SpecialOffers = () => {
           <IoIosArrowRoundForward className="w-3/4 h-3/4" />
         </button>
       </div>  
-      <div className="h-[50px] ">
+      <div className={cn(`h-[50px] md:h-[45px] `, {
+        "h-[75px]": !isHome
+      },
+      {
+        "sm:hidden md:block lg:hidden": isHome
+      })}>
 
       </div>
         </div>

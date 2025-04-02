@@ -80,7 +80,7 @@ export const ComfortsBlock = memo(
                 className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
               2xl:h-[512px] md:h-[260px] lg:h-[311px]
                   2xl:ps-[36px] xl:ps-[14px]  
-                lg:pt-[50px] xl:pt-[120px] 2xl:pt-[78px] md:pt-[45px] "
+                lg:pt-[50px] xl:pt-[20px] 2xl:pt-[78px] md:pt-[45px] "
               >
                 <ul>
                   {renderedIcons}
