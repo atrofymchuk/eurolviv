@@ -10,7 +10,7 @@ type RoomInfoCard = {
   room: Room;
   length: number;
   index: number;
-};
+}
 
 export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   const isFirstInRow = index % 3 === 0;

@@ -515,7 +515,7 @@ export const initialRoomsState: RoomsState = {
           title: "roomsState.standartBigBedBalcony.suggestion.0.title",
           size: "roomsState.standartBigBedBalcony.suggestion.0.size",
           desc: "roomsState.standartBigBedBalcony.suggestion.0.desc",
-          img: imgs.standartBigBedPreview,
+          img: imgs.semiLuxPreview,
           type: "standart-big-bed",
         },
         {
@@ -539,7 +539,7 @@ export const initialRoomsState: RoomsState = {
       header: {
         previewImage: imgs.standartTwoBedAndBalconyPreview,
         title: "roomsState.standartTwoBedBalcony.header.title",
-        size: `roomsState.standartTwoBedBalcony.header.size`,
+        size: "roomsState.standartTwoBedBalcony.header.size",
         description: "roomsState.standartTwoBedBalcony.header.description",
         count: 33,
         view: "roomsState.standartTwoBedBalcony.header.view",
@@ -711,6 +711,10 @@ export const initialRoomsState: RoomsState = {
           {
             src: icons.sofaBrown,
             text: "roomsState.semiLux.icons.ammentiesInRoom.sofa",
+          },
+          {
+            src: icons.teakit,
+            text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.teakit",
           },
           {
             src: icons.cabinetBrown,
@@ -982,10 +986,7 @@ export const initialRoomsState: RoomsState = {
             src: icons.sofa,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.sofa",
           },
-          {
-            src: icons.armChair,
-            text: "roomsState.luxImperial.icons.ammentiesInRoom.armChair",
-          },
+
           {
             src: icons.balcony,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.balcony",
@@ -994,10 +995,7 @@ export const initialRoomsState: RoomsState = {
             src: icons.carpet,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.carpet",
           },
-          {
-            src: icons.wardrobe,
-            text: "roomsState.luxImperial.icons.ammentiesInRoom.wardrobe",
-          },
+      
           {
             src: icons.cabinet,
             text: "roomsState.luxImperial.icons.ammentiesInRoom.table",
@@ -1034,6 +1032,10 @@ export const initialRoomsState: RoomsState = {
           {
             src: icons.balconyBrown,
             text: "roomsState.luxImperial.icons.bedRoom.balcony",
+          },
+          {
+            src: icons.wardrobeBrown,
+            text: "roomsState.luxImperial.icons.bedRoom.wardrobe",
           },
           {
             src: icons.carpetBrown,  

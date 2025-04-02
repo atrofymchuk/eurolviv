@@ -13,17 +13,17 @@ export const ComfortsBlock = memo(
         <li
           key={index}
           className={cn(
-            `flex items-center gap-1  ${style.text} uppercase font-cofo`
+            `flex items-center gap-x-[14px]  ${style.text} uppercase `
           )}
         >
           <InViewWrapper>
             <img
               src={item.src}
               alt="icon"
-              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8"
+              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
             />
           </InViewWrapper>
-          <p className="text-[14px] sm:text-[12px] xl:text-[16px] leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5]">
+          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[20px] ">
             {t(item.text)}
           </p>
         </li>
@@ -48,7 +48,7 @@ export const ComfortsBlock = memo(
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
                 <h1
                   className={cn(`uppercase ${style.headerColor} font-cofo text-[32px] 
-              lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[104%] 
+              lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[100%] 
               2xl:mb-[51px] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
               break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
                 >
@@ -73,7 +73,7 @@ export const ComfortsBlock = memo(
               className="md:border-x border-[#C7C7C7]
               flex  md:justify-center 
               md:items-center xl:py-[89px] lg:py-[45px]
-              py-6 md:py-8  h-full ps-[8px] md:ps-[4px]
+              py-6 md:py-8  h-full ps-[8px] md:ps-[4px] lg:ps-0
               "
             >
               <div
@@ -82,7 +82,7 @@ export const ComfortsBlock = memo(
                   2xl:ps-[36px] xl:ps-[14px]  
                 lg:pt-[50px] xl:pt-[120px] 2xl:pt-[78px] md:pt-[45px] "
               >
-                <ul className="space-y-2 sm:space-y-3 md:space-y-1 lg:space-y-2 xl:space-y-2">
+                <ul>
                   {renderedIcons}
                 </ul>
               </div>
@@ -92,7 +92,6 @@ export const ComfortsBlock = memo(
               className="flex flex-col items-center justify-center 
                md:py-8 lg:py-0 md:px-0 
               xl:pt-[130px]
-              
                 pb-[28px]
                md:pb-0"
             >
@@ -103,14 +102,13 @@ export const ComfortsBlock = memo(
                  2xl:h-[510px]
                 w-full p-2.5 md:p-0
                 lg:pt-[110px]   xl:pt-0  md:pt-[45px] 2xl:pt-[10px]"
-                
               >
                 <InViewWrapper>
                   <img
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
-                     2xl:h-[512px]  xl:h-[380px]  lg:h-[311px] md:w-full md:h-[260px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                     2xl:h-[512px]  xl:h-[380px] object-[0%_95%]  lg:h-[311px] md:w-full md:h-[260px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
                     ${imgStyle.ammentiesImageScd}`)}
                   />
                   <img

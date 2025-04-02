@@ -12,7 +12,7 @@ export const RoomsInfo = () => {
         <div className="grid  grid-cols-1  ">
           <div className="space-y-[11px] px-5">
             <div className="lg:block hidden mt-[114px]">
-              <h1 className="uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+              <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                 <span className="text-[#8C331B]">
                   {t("rooms.about.heading.0")}
                 </span>
@@ -20,10 +20,10 @@ export const RoomsInfo = () => {
               </h1>
               <div className="flex flex-col items-end ">
                 <div className="w-fit space-y-[11px]">
-                  <h1 className="uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+                  <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                     {t("rooms.about.heading.2")}
                   </h1>
-                  <h1 className="mb-[24px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+                  <h1 className="mb-[24px] xl:mb-[43px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                     {t("rooms.about.heading.3")}
                   </h1>
                   <div className="flex  items-center lg:gap-[30px]">

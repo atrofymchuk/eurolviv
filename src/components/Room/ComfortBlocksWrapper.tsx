@@ -10,38 +10,35 @@ export const ComfortsBlocksWrapper = ({
   icons,
   room,
 }: ComfortsBlockToProps) => {
-  const {t} = useTranslation()
-  if(!icons || !room) return null;
+  const { t } = useTranslation();
+  if (!icons || !room) return null;
 
   const commonProps = {
     imgStyle: {
       ammentiesImageFst: room.about.ammetiveImgStyleFst,
-      ammentiesImageScd: room.about.ammetiveImgStyleScd
+      ammentiesImageScd: room.about.ammetiveImgStyleScd,
     },
     images: room.about.ammentiesImages,
   };
 
   const standardStyle = {
     bgColor: "bg-[#EDE8E5]",
-    text: 'text-[#6B6B6B]',
-    headerColor: 'text-black'
+    text: "text-[#6B6B6B]",
+    headerColor: "text-black",
   };
 
   const luxStyle = {
     bgColor: "bg-[#A47762]",
-    text: 'text-[#E1E1E1]',
-    headerColor: 'text-white'
+    text: "text-[#E1E1E1]",
+    headerColor: "text-white",
   };
-
 
   return (
     <div className="">
-
-      
       {room.isLux ? (
         <>
           <ComfortsBlock
-            title={t('room.comfortBlock.title')}
+            title={t("room.comfortBlock.title")}
             icons={icons.ammentiesInRoom}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}
@@ -50,7 +47,7 @@ export const ComfortsBlocksWrapper = ({
 
           {icons.bedRoom && (
             <ComfortsBlock
-              title={t('room.comfortBlock.title2')}
+              title={t("room.comfortBlock.title2")}
               icons={icons.bedRoom}
               {...commonProps}
               images={[commonProps.images[2], commonProps.images[3]]}
@@ -59,7 +56,7 @@ export const ComfortsBlocksWrapper = ({
           )}
 
           <ComfortsBlock
-            title={t('room.comfortBlock.title3')}
+            title={t("room.comfortBlock.title3")}
             icons={icons.bathRoom}
             {...commonProps}
             images={[commonProps.images[4], commonProps.images[5]]}
@@ -69,15 +66,15 @@ export const ComfortsBlocksWrapper = ({
       ) : (
         <>
           <ComfortsBlock
-            title={t('room.comfortBlock.title4')}
+            title={t("room.comfortBlock.title4")}
             icons={icons.ammentiesInRoom}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}
             style={standardStyle}
           />
-          
+
           <ComfortsBlock
-            title={t('room.comfortBlock.title3')}
+            title={t("room.comfortBlock.title3")}
             icons={icons.bathRoom}
             {...commonProps}
             images={[commonProps.images[2], commonProps.images[3]]}

@@ -7,6 +7,7 @@ import { HeaderRoomInfo } from "./HeaderRoomInfo";
 import { HeaderDescription } from "./HeaderDescription";
 import { PageHeaderProps } from "../../../types/headerTypes";
 import cn from "classnames";
+import { processTitle } from "../../../utils/ProccessTitle";
 export const PageHeader: React.FC<PageHeaderProps> = ({
   backgroundImage,
   mobileSrc,
@@ -62,7 +63,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
         {size && (
           <p className={cn(`uppercase w-[90%] md:w-[60%] xl:w-[40%] lg:leading-[35px] lg:text-[36px] text-[20px] font-cofo-medium leading-[25px] xl:pt-[46px] md:text-[32px] lg:pt-[30px] pt-[17px]`)}>
-            {t(size)}
+           {processTitle(t(size))}
           </p>
         )}
 

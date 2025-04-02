@@ -24,7 +24,7 @@ export const MoreInfoSecondCol = ({
           isShowOtherInfo ? "2xl:h-[512px] lg:h-[300px] xl:h-[371px]" : "ps-[10px] 2xl:h-[662px] lg:h-[384px] xl:h-[521px]"
         }`)}
       >
-          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] lg:pb-[20px] md:pb-[15px] hidden md:block">
+          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] lg:pb-[20px] md:pb-[15px]  block md:hidden">
             {t("room.moreInfo.title")}
           </h1>
      
