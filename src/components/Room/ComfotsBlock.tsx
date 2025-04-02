@@ -13,7 +13,7 @@ export const ComfortsBlock = memo(
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[14px]  ${style.text} uppercase `
+            `flex items-center gap-x-[14px]  ${style.text} uppercase 2xl:w-[93%]`
           )}
         >
           <InViewWrapper>
@@ -23,7 +23,7 @@ export const ComfortsBlock = memo(
               className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
             />
           </InViewWrapper>
-          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[20px] ">
+          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[20px]  ">
             {t(item.text)}
           </p>
         </li>

@@ -713,7 +713,7 @@ export const initialRoomsState: RoomsState = {
             text: "roomsState.semiLux.icons.ammentiesInRoom.sofa",
           },
           {
-            src: icons.teakit,
+            src: icons.teakitBrown,
             text: "roomsState.luxTwoRooms.icons.ammentiesInRoom.teakit",
           },
           {

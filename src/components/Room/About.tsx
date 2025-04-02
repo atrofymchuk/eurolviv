@@ -73,7 +73,7 @@ export const About = memo(
             </div>
           </div>
 
-          <div className="flex   order-5 md:order-none h-full w-full">
+          <div className="flex order-5 md:order-none h-full w-full">
             <AboutRoomTitle nameRoom={nameRoom} />
           </div>
 
@@ -108,8 +108,7 @@ export const About = memo(
             >
               <p
                 className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]
-              leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5] xl:leading-[24px]
-              tracking-[-0.02em] sm:tracking-[-0.03em] xl:tracking-[-0.04em]
+                tracking-[-0.04em] leading-[120%]
               text-[#8C331B] uppercase"
               >
                 {t(pOne)}
@@ -117,8 +116,8 @@ export const About = memo(
 
               <p
                 className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]
-              leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[1.5] xl:leading-[24px]
-              tracking-[-0.02em] sm:tracking-[-0.03em] xl:tracking-[-0.04em]
+             leading-[120%]
+              tracking-[-0.04em]
               text-[#444444] uppercase"
               >
                 {t(pTwo)}

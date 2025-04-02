@@ -14,31 +14,44 @@ export const MoreInfoSecondCol = ({
   return (
     <div
       className={cn(
-        `flex flex-col  lg:py-20 md:py-10 items-center ${
-          isShowOtherInfo ? "justify-start pb-[41px]" : ""
+        `flex flex-col  md:py-10 items-center ${
+          isShowOtherInfo ? "justify-start pb-[41px] lg:py-20  " : "lg:pt-42 xl:pt-58 md:pt-32"
         } h-full`
       )}
     >
       <div
-        className={cn(`flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[27px] lg:ps-[17px] md:ps-[10px] ${
-          isShowOtherInfo ? "2xl:h-[512px] lg:h-[300px] xl:h-[371px]" : "ps-[10px] 2xl:h-[662px] lg:h-[384px] xl:h-[521px]"
-        }`)}
+        className={cn(
+          `flex flex-col md:items-center justify-between   gap-2 w-full   2xl:ps-[41px]  md:h-full  xl:ps-[27px] lg:ps-[17px] md:ps-[10px] ${
+            isShowOtherInfo
+              ? "2xl:h-[512px] lg:h-[300px] xl:h-[371px] "
+              : "ps-[10px] 2xl:h-[512px] lg:h-[300px] xl:h-[371px] md:h-[250px] " 
+          }`
+        )}
       >
-          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase font-cofo xl:pb-[51px] lg:pb-[20px] md:pb-[15px]  block md:hidden">
-            {t("room.moreInfo.title")}
-          </h1>
-     
+        <h1
+          className={cn(
+            ` text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase `,
+            {
+              "block md:hidden xl:pb-[51px] lg:pb-[20px] md:pb-[15px] pt-[54px]":
+                !isShowOtherInfo,
+              "md:block hidden xl:pb-[51px] lg:pb-[20px] md:pb-[15px]":
+                isShowOtherInfo,
+            }
+          )}
+        >
+          {t("room.moreInfo.title")}
+        </h1>
 
         {isShowOtherInfo && (
           <img
             src={dog}
             alt="imageOverlay"
-            className="w-full  object-cover px-[11px] md:hidden h-[250px] "
+            className="w-full  object-cover px-[10px_6px] md:hidden h-[250px] "
           />
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo  md:hidden block px-5 mt-[42px]">
+          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo  md:hidden block px-[10px] lg:px-5 mt-[42px]">
             {t("room.moreInfo.title")}
           </h1>
         )}
@@ -46,14 +59,16 @@ export const MoreInfoSecondCol = ({
         <ul
           className={cn(
             `flex flex-col 2xl:gap-2 gap-0.5 pt-[44px] md:pt-0  w-full ${
-              isShowOtherInfo ? "md:px-0 px-[11px] " : ""
+              isShowOtherInfo ? "md:px-0 px-[10px] " : ""
             }`
           )}
         >
           {availableService.map((item) => (
             <li
               key={item.src}
-              className="text-white text-[14px] md:text-[14px] lg:text-[14px] 2xl:text-[20px] uppercase leading-[150%]  items-center gap-1.5 flex"
+              className={cn(
+                `text-white text-[14px] md:text-[14px] lg:text-[14px] 2xl:text-[20px] uppercase   items-center gap-0.75 flex`
+              )}
             >
               <img
                 src={item.src}
