@@ -105,7 +105,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                 key={index}
                 className={cn(
                   " px-3",
-                  "flex flex-col items-center justify-center self-center place-content-center transition-all duration-500 h-full",
+                  "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full",
                   {
                     "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit":
                       isActive,
