@@ -64,7 +64,7 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
               </span>
             </p>
             </div>
-            <div className="text-center flex items-center justify-center pt-[37px] relative">
+            <div className="text-center flex items-center justify-center pt-[12px] lg:pt-[37px] relative">
             <Link
               to="/conference-service"
               className="w-fit font-cofo-medium px-5 py-2.5 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase text-[12px]"

@@ -32,7 +32,7 @@ export const ConferenceService = () => {
             </h1>
             <p
               className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] xl:text-[20px] text-[#252526] leading-[120%]
-             2xl:w-[644px] xl:w-[540px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
+             2xl:w-[640px] xl:w-[540px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
             >
               {t("home.conferenceService.desc")}
             </p>

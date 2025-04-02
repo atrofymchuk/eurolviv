@@ -9,7 +9,7 @@ export const RoofService = () => {
   const { suggestion } = usePagesInfoStore();
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full  justify-center hidden md:flex">
       <div className="grid w-full lg:grid-cols-2 grid-cols-1">
         {suggestion.map((item, index) => (
           <div
@@ -23,7 +23,11 @@ export const RoofService = () => {
             )}
           >
             <div className="relative w-full h-full">
-              <div className={`${index === 2 ? "h-[2484px]" : ""} absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent`}></div>
+              <div
+                className={`${
+                  index === 2 ? "h-[2484px] " : ""
+                } absolute inset-0  bg-gradient-to-b from-[#252526] to-transparent`}
+              ></div>
               <img
                 src={item.img}
                 alt={item.url}
@@ -32,12 +36,12 @@ export const RoofService = () => {
             </div>
 
             {index === 2 && (
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[91%] border-x border-[#AEAEAE3D] pointer-events-none"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-[91%] border-x border-[#AEAEAE3D] pointer-events-none z-1"></div>
             )}
 
             <div
               className={cn(
-                `absolute inset-0 flex flex-col items-center text-center mt-[123px] text-white z-10  ${
+                `absolute inset-0 flex flex-col items-center text-center mt-[123px] text-white z-2  ${
                   index === 2 ? "justify-center" : "justify-start"
                 }`
               )}
@@ -71,7 +75,7 @@ export const RoofService = () => {
 
               <div
                 className={cn(
-                  `flex flex-col items-center space-y-[20px] ${
+                  `flex flex-col items-center space-y-[40px] ${
                     index === 2 ? "" : "mt-auto pb-[75px]"
                   }`
                 )}
@@ -79,21 +83,26 @@ export const RoofService = () => {
                 <p className="uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] max-w-[232px] lg:max-w-full leading-[14px] lg:pt-[32px] pt-[19px] lg:w-[380px] xl:w-[488p  x]">
                   {t(item.desc)}
                 </p>
-                <div className={`flex justify-center ${index === 2 ? "gap-[16px]" : ""}`}>
-
-                <Link
-                  to={item.url}
-                  className={`uppercase bg-[#8C331B] lg:py-[13px] lg:mt-[20px] lg:px-[27.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px] ${index === 2 ? "" : "hidden"}`}
+                <div
+                  className={`flex h-fit justify-center ${
+                    index === 2 ? "gap-x-[16px]" : ""
+                  }`}
+                >
+                  <Link
+                    to={item.url}
+                    className={`uppercase bg-[#8C331B] lg:py-[13px] l lg:px-[27.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px] ${
+                      index === 2 ? "" : "hidden"
+                    }`}
                   >
-                  {t("buttons.bookTable")}
-                </Link>
-                <Link
-                  to={item.url}
-                  className="uppercase lg:py-[13px] lg:mt-[20px] lg:px-[58.5px] rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
+                    {t("buttons.bookTable")}
+                  </Link>
+                  <Link
+                    to={item.url}
+                    className="uppercase lg:py-[13px]  lg:px-[58.5px] rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
                   >
-                  {t("buttons.details")}
-                </Link>
-                  </div>
+                    {t("buttons.details")}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
