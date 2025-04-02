@@ -113,7 +113,12 @@
     width: 269px !important;
   }
   .roomslider > .slick-list >.slick-track>.slick-slide   {
-
+    width: 269px !important;
+    margin-right: 0px !important; 
+    margin-left: 0px !important; 
+  }
+  .home-room-slider > .slick-list >.slick-track>.slick-slide    {
+    /* width: 269px !important; */
     margin-right: 0px !important; 
     margin-left: 0px !important; 
   }
