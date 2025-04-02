@@ -14,19 +14,19 @@ export const AboutHome = () => {
             <p className=" lg:text-[14px] xl:text-[16px] uppercase 2xl:w-[256px]  font-cofo-medium 2xl:text-[16px] text-[12px]  ">
               {t("home.about.aboutRooms.0")}
             </p>
-            <p className=" lg:text-[14px] xl:text-[16px]   uppercase 2xl:w-[256px]  font-cofo-medium 2xl:text-[16px] text-[12px]  ">
+            <p className=" lg:text-[14px] xl:text-[16px]   uppercase 2xl:w-[229px]  font-cofo-medium 2xl:text-[16px] text-[12px]  ">
               {t("home.about.aboutRooms.1")}
             </p>
           </div>
           
-          <div className="p-5 px-[14px] flex space-x-[14px] md:hidden">
+          <div className="p-4 ps-[14px] flex  md:hidden">
             <div>
-              <p className="md:text-[14px] uppercase font-cofo-medium text-[10px]">
+              <p className="md:text-[14px] uppercase font-cofo-medium text-[10px] pe-[2px]">
                 {t("home.about.aboutRooms.0")}
               </p>
             </div>
             <div>
-              <p className="md:text-[14px] uppercase font-cofo-medium text-[10px] w-[90%]">
+              <p className="md:text-[14px] uppercase font-cofo-medium text-[10px]  pe-[15px]">
                 {t("home.about.aboutRooms.1")}
               </p>
             </div>
@@ -55,7 +55,7 @@ export const AboutHome = () => {
 
         <div className="border-x   border-[#C7C7C7] ps-[14px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-5 xl:pb-0">
-            <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[81%] tracking-tight">
+            <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[90%] tracking-tight">
               {t("home.about.heading").split(" ").slice(0, -1).join(" ")}
               <br />
               <span className="md:whitespace-nowrap">

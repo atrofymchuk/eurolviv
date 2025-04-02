@@ -21,18 +21,17 @@ export const HeaderHome = () => {
       ></div>
 
       <div className="absolute inset-0 flex flex-col  items-center justify-center text-center text-white z-10">
-        <h4 className="font-cofo uppercase leading-[22.68px] font-semibold underline text-sm decoration-transparent xl:mb-4">
+        <h4 className=" uppercase leading-[22.68px] font-cofo-medium underline text-[12px] decoration-transparent lg:text-[18px] ">
           {t("global.createdFor")}
           <span className="normal-case font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
             {t("global.whereTo")}
           </span>
         </h4>
-        <h1 className="nor font-cofo xl:text-[198px] uppercase text-[64px] font-normal z-20  2xl:text-[289px]  xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+        <h1 className=" xl:text-[198px] uppercase text-[64px] font-normal z-20  2xl:text-[289px]  leading-[100%] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
         </h1>
-        <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[46px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px]  ">
-        Простір, що огортає теплом. Місто, яке надихає. 
-        Євроготель — ваша особлива історія львівських вражень
+        <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[6px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px]  ">
+          {t("home.header.description")}
         </p>
       </div>
     </div>

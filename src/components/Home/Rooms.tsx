@@ -12,7 +12,7 @@ export const RoomsHome = () => {
 
   return (
     <div className="flex flex-col bg-[#A47762] relative items-center md:items-stretch overflow-x-hidden overflow-y-hidden ">
-      <div className="grid -z-1 absolute md:grid-cols-[5.2%_19%_34.7%_25.8%] grid-cols-[89.07%]  lg:h-[1580px] md:h-[1000px] sm:h-[797px] h-[767px] md:items-start justify-center md:justify-start w-full  ">
+      <div className="grid z-1 absolute md:grid-cols-[5.2%_19%_34.7%_25.8%] grid-cols-[89.07%]  lg:h-[1580px] md:h-[1000px] sm:h-[797px] h-[767px] md:items-start justify-center md:justify-start w-full  ">
         <div className="w-full h-full border-[#C29986] hidden md:block"></div>
         <div className="w-full h-full border-e border-x md:border-x-0 border-[#C29986] "></div>
         <div className="w-full h-full border-x border-[#C29986] hidden md:block"></div>
