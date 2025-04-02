@@ -8,7 +8,7 @@ import { useRoomStore } from "../../store/useRoomsStore";
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
   const { t } = useTranslation();
-  const { rooms } = useRoomStore();
+  const {  sliderProps  } = useRoomStore();
 
 
   return (
@@ -75,7 +75,7 @@ export const RoomsHome = () => {
 
       <div className="relative max-w-screen z-0 mt-30 md:mt-0 xl:mt-27">
         <div className="z-10 2xl:h-[700px] xl:h-[650px] lg:h-[570px] md:h-[500px] h-[450px]">
-          <RoomsSlider ref={sliderRef}  rooms={rooms}/>
+          <RoomsSlider ref={sliderRef}  sliderProps={sliderProps}/>
         </div>
       </div>
       <div className="h-[64px] w-full hidden md:flex">

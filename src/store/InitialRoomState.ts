@@ -1251,4 +1251,14 @@ export const initialRoomsState: RoomsState = {
       ],
     },
   ],
+  sliderProps: [
+    {type: "lux-elegant",area: 60,guests: '2',src: imgs.luxElegantPreview, title: "roomsState.luxElegant.title"},
+    {type: "lux-two-rooms",area: 38,guests: '2+2',src: imgs.luxTwoRoomsPreview, title: "roomsState.luxTwoRooms.title"},
+    {type: "lux-imperial",area: 60,guests: '2',src: imgs.luxImperiumPreview, title: "roomsState.luxImperial.title"},
+    {type: "semi-lux",area: 22,guests: '2+2',src: imgs.semiLuxPreview, title: "roomsState.semiLux.title"},
+    {type: "standart-two-bed",area: 18,guests: '2',src: imgs.standartTwoBedPreview, title: "roomsState.standartTwoBed.title"},
+    {type: "standart-big-bed-and-balcony",area: 18,guests: '2',src: imgs.standartBigBedAndBalconyPreview, title: "roomsState.standartBigBedBalcony.title"},
+    {type: "standart-big-bed",area: 18,guests: '2',src: imgs.standartBigBedPreview, title: "roomsState.standartBigbed.title"},
+    {type: "standart-single",area: 15,guests: '1',src: imgs.standartSinglePreview, title: "roomsState.standartSingle.title"},
+  ],
 };

@@ -115,9 +115,11 @@ export type IconsState = {
 
 export type RoomsState = {
   rooms: Room[];
+  sliderProps: {area: number, guests: string, src: string, title: string, type: string}[];
 };
 export type RoomsItitialState = {
   rooms: Room[];
+  sliderProps: {area: number, guests: string, src: string, title: string, type: string}[];
   halls: ConferenceService[];
   terases: TerraseT[];
 };

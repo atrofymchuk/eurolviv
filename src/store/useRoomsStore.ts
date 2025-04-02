@@ -8,5 +8,6 @@ import { RoomsItitialState } from "../types/types";
 export const useRoomStore = create<RoomsItitialState>(() => ({
   rooms: initialRoomsState.rooms,
   terases:initialTerraseState.terases,
-  halls:initialCoferenceHallState.halls
+  halls:initialCoferenceHallState.halls,
+  sliderProps: initialRoomsState.sliderProps
 }));
