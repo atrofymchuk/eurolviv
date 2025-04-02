@@ -55,7 +55,7 @@ export const AboutHome = () => {
 
         <div className="border-x   border-[#C7C7C7] ps-[14px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-5 xl:pb-0">
-            <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[90%] tracking-tight">
+            <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[90%] tracking-[-7%]">
               {t("home.about.heading").split(" ").slice(0, -1).join(" ")}
               <br />
               <span className="md:whitespace-nowrap">
@@ -95,8 +95,8 @@ export const AboutHome = () => {
               </Link>
             </div>
 
-            <div className="relative flex w-[89.07%] md:w-full  justify-start self-start  md:order-none order-1 ">
-              <div className="md:absolute top-0 left-0  pt-[20px] xl:pt-[50px] w-full md:w-fit  px-[14px_10px]">
+            <div className="relative flex  md:w-full  justify-start self-start  md:order-none order-1 ">
+              <div className="md:absolute top-0 left-0 max-w-[89.07%] pt-[20px] xl:pt-[50px] w-full md:w-fit  px-[14px_10px]">
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">
                   {t("home.about.quality.0")}
                 </h1>

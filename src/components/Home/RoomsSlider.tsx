@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { forwardRef, useState } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { squareWhite, guestWhite } from "../../store/exportsIcons";
@@ -28,6 +28,14 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
       }
       return 1;
     });
+    
+    const [isIOS, setIsIOS] = useState(false);
+    
+    useEffect(() => {
+      // Перевірка на iOS пристрої
+      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      setIsIOS(isIOSDevice);
+    }, []);
 
     const { t } = useTranslation();
 
@@ -40,6 +48,8 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
       centerMode: true,
       initialSlide: currentSlide,
       centerPadding: "0",
+      swipeToSlide: true,
+      touchThreshold: 10,
       beforeChange: (_: number, newIndex: number) => setCurrentSlide(newIndex),
       responsive: [
         {
@@ -90,8 +100,61 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
 
     const settings = { ...defaultSettings };
 
+    // Додаємо CSS для iOS пристроїв
+    useEffect(() => {
+      if (!isIOS) return;
+      
+      // Створюємо стильовий елемент
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .ios-slider-fix .slick-track {
+          display: flex !important;
+          align-items: center !important;
+          width: 100% !important;
+          transform-style: preserve-3d !important;
+        }
+        
+        .ios-slider-fix .slick-slide {
+          height: auto !important;
+          float: none !important;
+          max-width: 100vw !important;
+          transform: translateZ(0) !important;
+          -webkit-transform: translateZ(0) !important;
+          backface-visibility: hidden !important;
+          perspective: 1000 !important;
+        }
+        
+        .ios-slider-fix .slick-list {
+          overflow: visible !important;
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+          /* CSS specific to iOS devices */
+          .slick-track {
+            width: auto !important;
+            transform: translate3d(0, 0, 0) !important;
+            -webkit-transform: translate3d(0, 0, 0) !important;
+          }
+          
+          .slick-slide {
+            width: auto !important;
+            margin: 0 10px !important;
+          }
+        }
+      `;
+      
+      document.head.appendChild(style);
+      
+      return () => {
+        document.head.removeChild(style);
+      };
+    }, [isIOS]);
+
     return (
-      <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px] ms-[calc(5.93%)] h-full">
+      <div className={cn(
+        "overflow-visible 2xl:w-[97%] xl:ms-[70px] ms-[calc(5.93%)] h-full",
+        { "ios-slider-fix": isIOS }
+      )}>
         <Slider
           {...settings}
           className="overflow-visible flex items-center justify-center home-room-slider"
@@ -105,7 +168,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                 key={index}
                 className={cn(
                   " px-3",
-                  "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full",
+                  "flex items-center justify-center self-center place-content-center transition-all duration-500 h-full",
                   {
                     "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit":
                       isActive,
@@ -116,20 +179,20 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
               >
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-500   md:w-full   "
+                    "overflow-hidden transition-all duration-500 md:w-full max-w-full"
                   )}
                 >
                   <InViewWrapper>
                     <img
                       src={el.src}
-                      alt={`room $`}
+                      alt={`room ${index}`}
                       className={cn(
-                        "object-cover  transition-transform duration-700  h-[168px] w-full",
+                        "object-cover transition-transform duration-700 h-[168px] w-full",
                         { "": isActive },
                         {
                           "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] ":
                             isActive,
-                          "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px]  ":
+                          "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] ":
                             !isActive,
                         }
                       )}
@@ -137,11 +200,11 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   </InViewWrapper>
                 </div>
 
-                <div className=" lg:mt-[28px]  lg:w-full md:w-full w-[259px] flex flex-col h-[150px] ">
+                <div className=" lg:mt-[28px] lg:w-full md:w-full w-[259px] flex flex-col h-[150px] ">
                   <div className="flex items-center justify-center">
                     <h4
                       className={cn(
-                        "2xl:text-[32px] 2xl:w-2/3 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em]  mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
+                        "2xl:text-[32px] 2xl:w-2/3 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
                       )}
                     >
                       {t(el.title)}
@@ -175,7 +238,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     </div>
                   </div>
 
-                  <div className="lg:mt-[34px] mt-auto  flex justify-center transition-all duration-500">
+                  <div className="lg:mt-[34px] mt-auto flex justify-center transition-all duration-500">
                     {isActive && (
                       <Link
                         to={`/rooms/${el.type}`}
