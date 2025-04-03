@@ -10,16 +10,17 @@ import cn from "classnames";
 
 type SpecialOffersSliderToProps = {
   ref: Slider | null;
+  isHome: boolean;
 };
 
 export const SpecialOffersSlider = forwardRef<
   Slider,
   SpecialOffersSliderToProps
->((_, ref) => {
+>(({isHome}, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { specialOffers } = useSpecialOffersStore();
   const { t } = useTranslation();
-  
+
   const settings = {
     speed: 800,
     slidesToShow: 4,
@@ -36,8 +37,10 @@ export const SpecialOffersSlider = forwardRef<
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          centerPadding: "30px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "0px",
+          variableWidth: true,
         },
       },
       {
@@ -53,20 +56,27 @@ export const SpecialOffersSlider = forwardRef<
 
   return (
     <div className="relative">
-      <Slider {...settings} ref={ref} className="special-offers-slider w-screen">
+      <Slider
+        {...settings}
+        ref={ref}
+        className="special-offers-slider w-screen"
+      >
         {specialOffers.map((el, index) => (
           <div
             key={index}
-            className={cn(`border lg:p-5 md:p-4 p-3.5 h-[426px] md:h-[540px] lg:h-[668px] border-t border-[#C7C7C7] relative   ${
-              index !== specialOffers.length - 1 ? "border-r-0" : ""
-            }`
-            ,{
-              "border-s-0 ": currentSlide === index,
-            },
-            {
-              "border-e-0 ":  specialOffers.length -1,
-            }
-          )}
+            className={cn(
+              `border lg:p-5 md:p-4 p-3.5 h-[426px] md:h-[540px] lg:h-[668px] border-t border-[#C7C7C7] relative   ${
+                index !== specialOffers.length - 1 ? "border-r-0" : ""
+              }`,
+              {
+                "border-s lg:border-s ": currentSlide === index,
+              },{
+                "border-s-0 ": isHome && currentSlide === index
+              },
+              {
+                "border-e-0 ": specialOffers.length - 1,
+              }
+            )}
           >
             <InViewWrapper className="relative">
               <img
@@ -110,7 +120,6 @@ export const SpecialOffersSlider = forwardRef<
           </div>
         ))}
       </Slider>
-      
     </div>
   );
 });
