@@ -33,7 +33,7 @@ export const Room = () => {
       key="moreInfo"
     />,
     <SpecialOffers key="specialOffers" />,
-    <Suggestion key="suggestion" suggestion={room?.suggestion || []} />,
+    <Suggestion key="suggestion" suggestion={room?.suggestion} />,
   ];
 
   const loadMore = useCallback(() => {
