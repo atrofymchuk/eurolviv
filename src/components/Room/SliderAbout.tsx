@@ -22,6 +22,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
     const handleNext = useCallback(() => {
       swiperRef.current?.slideNext();
     }, []);
+    
 
     return (
       <div>
@@ -55,7 +56,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
                     src={img}
                     alt="room image"
                     className={cn(
-                      `${swiperImagesStyle} w-full h-full object-cover`
+                      `${swiperImagesStyle} w-full h-full object`
                     )}
                   />
                 </InViewWrapper>

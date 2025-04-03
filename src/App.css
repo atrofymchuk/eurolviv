@@ -123,10 +123,10 @@
     margin-left: 0px !important; 
   }
   
-  .hall > .slick-list > .slick-track>.slick-slide{
+ /* .hall > .slick-list > .slick-track>.slick-slide{
     max-width: fit-content !important;
 
-  }
+  }  */
   .review > .slick-list >.slick-track>.slick-active  {
     width: 299px !important;
 

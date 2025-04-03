@@ -20,7 +20,7 @@ export const ConferenceMenuCard = ({
       xl:pt-[28px] lg:text-[24px] lg:tracking-[-7%] lg:leading-[104%] lg:pt-[20px] ">
         {text}
       </p>
-    <ViewMenuButton className="2xl:mt-[25px] xl:mt-[24px] lg:mt-[20px] " />
+    <ViewMenuButton className="2xl:mt-[25px] xl:mt-[24px] lg:mt-[20px] text-[16px]" />
     </div>
   );
 };

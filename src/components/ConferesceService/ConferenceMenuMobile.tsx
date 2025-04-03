@@ -31,7 +31,7 @@ export const ConferenceMenuMobileCard = ({
         }}
       />
 
-      <div className="absolute flex flex-col items-center justify-center space-y-[44px] mt-[55px] sm:mt-[65px] md:mt-[80px] md:space-y-[64px]">
+      <div className="absolute flex flex-col items-center justify-center gap-y-[44px] mt-[55px] sm:mt-[65px] md:mt-[80px] md:gap-y-[64px]">
         {menuSections.map((section, index) => (
           <div
             key={index}

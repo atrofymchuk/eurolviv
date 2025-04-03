@@ -17,7 +17,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.bigHall.about.pTwo",
       },
       price: { hour: 800, day: 3000 },
-      swiperImages: [imgs.bigHallTheathre, imgs.hallH, imgs.bigHall],
+      swiperImages: [imgs.bigHall,imgs.bigHallTheathre, imgs.hallH, ],
       showcaseSwiperImages: [
         imgs.pLetterImg,
         imgs.pLetter,

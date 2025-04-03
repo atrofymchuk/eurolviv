@@ -27,30 +27,31 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     arrows: false,
     variableWidth: true,
-    beforeChange: (_oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
+    beforeChange: (_oldIndex: number, newIndex: number) =>
+      setCurrentSlide(newIndex),
 
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           variableWidth: true,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           variableWidth: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           variableWidth: true,
           rows: 1,
         },
@@ -59,15 +60,18 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         breakpoint: 480,
         settings: {
           slidesToScroll: 1,
-          variableWidth: true,
-          rows: 1,
+          slidesToShow: 1.3,
+          centerMode: true,
+          rows: 2,
+          centerPadding: "0",
         },
       },
     ],
   };
 
+  console.log(currentSlide, totalSlidesMobile);
   return (
-    <div className="relative flex justify-center lg:ms-[71px]">
+    <div className="relative flex justify-center lg:ms-[71px] ms-[calc(5%)]">
       {currentSlide > 0 && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
@@ -83,18 +87,18 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         <div className="w-full">
           <Slider ref={sliderRef} {...settings} className="hall">
             {images.map((slide, index) => (
-              <div key={index} className="pe-5">
+              <div key={index} className="pe-[6.5px] lg:pe-5">
                 <div className="relative">
-                  <img 
-                    src={slide} 
-                    alt={`Slide ${index}`} 
-                    className="object-cover rounded-lg
+                  <img
+                    src={slide}
+                    alt={`Slide ${index}`}
+                    className="object-cover 
                       w-[280px] h-[180px]
-                      sm:w-[300px] sm:h-[200px]
-                      md:w-[320px] md:h-[220px]
-                      lg:w-[400px] lg:h-[280px]
-                      xl:w-[450px] xl:h-[320px]
-                      2xl:w-[500px] 2xl:h-[350px]"
+                      sm:w-[320px] sm:h-[300px]
+                      md:w-[380px] md:h-[320px]
+                      lg:w-[450px] lg:h-[380px]
+                      xl:w-[550px] xl:h-[420px]
+                      2xl:w-[835px] 2xl:h-[556px]"
                   />
                 </div>
               </div>
@@ -103,10 +107,12 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         </div>
       </div>
 
-      {(isMobile ? currentSlide < totalSlidesMobile - 1 : currentSlide + 2 < images.length) && (
+      {(isMobile
+        ? Math.round(currentSlide + 1) < totalSlidesMobile
+        : currentSlide + 2 < images.length) && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                     right-5 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
+                     right-16 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickNext()}
         >

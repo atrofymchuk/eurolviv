@@ -49,8 +49,8 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
             <SliderAbout imageSlider={item.swiperImages} isConference={true} />
           </div>
         </div>
-        <div className="flex flex-col lg:items-start md:justify-start justify-center items-center border-t lg:border-s-0 2xl:px-[41px] border-[#C7C7C7] 2xl:w-auto flex-1">
-          <div className="lg:flex flex-col w-[79.1%] flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0 h-auto lg:w-auto">
+        <div className="flex flex-col lg:items-start md:justify-start justify-center items-center border-t lg:border-s-0 2xl:px-[38px]  2xl:w-auto border-[#C7C7C7] flex-1">
+          <div className="lg:flex flex-col w-[79.1%] h-full flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto">
             <div className="lg:hidden">
               <RoomInfo
                 area={item.area}
@@ -60,8 +60,9 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
             </div>
 
             <RoomDescription pOne={item.about.pOne} pTwo={item.about.pTwo} />
-
-            <ContactInfo />
+            <div className="flex self-start h-full justify-between">
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </div>

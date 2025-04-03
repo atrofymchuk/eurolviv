@@ -33,13 +33,13 @@ export const AboutHeader = () => {
       <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
       </h1>
-      <h4 className="font-cofo md:text-[18px] text-[14px] font-medium uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-4 mt-7.5">
+      <h4 className="font-cofo md:text-[18px] text-[14px] uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
         {t("about.header.desc.0")}
         <span className="xl:block font-cofo-medium text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
           {t("about.header.desc.1")}
         </span>
       </h4>
-      <BookLink className="text-[#252526] mt-4 bg-[#EDE8E5]" to={"/booking"}>{t("buttons.book")}</BookLink>
+      <BookLink className="text-[#252526] mt-4 xl:mt-[33px]   bg-[#EDE8E5] xl:px-[47px]" to={"/booking"}>{t("buttons.book")}</BookLink>
     </div>
   );
 };

@@ -58,7 +58,7 @@ export  { default as pet} from '../assets/icons/About/pet.svg';
 export  { default as reception} from '../assets/icons/About/reception.svg'; 
 export  { default as roomService} from '../assets/icons/About/roomService.svg';
 export  { default as car} from '../assets/icons/About/car.svg';
-export  { default as breakfast} from '../assets/icons/About/breakfast.svg';
+export  { default as breakfast} from '../assets/icons/Rooms/Living Room/cup.svg';
 export  { default as ironingChlothes} from '../assets/icons/About/ironingChlothes.svg';
 export  { default as washingMachine} from '../assets/icons/About/washingMachine.svg';
 export  { default as guest} from '../assets/icons/Rooms/guests.svg';
