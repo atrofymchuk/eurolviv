@@ -84,3 +84,6 @@ export  { default as calendar} from '../assets/icons/Modal/calendar.svg';
 export  { default as guestAmmenties} from '../assets/icons/Rooms/guestAmmenties.svg';
 
 export  { default as location} from '../assets/icons/Contacts/Location.svg';
+export  { default as menu} from '../assets/icons/Menu.svg';
+export {default as calendarBooking} from '../assets/icons/Calendar.svg';
+export {default as callUs} from '../assets/icons/phone.svg';

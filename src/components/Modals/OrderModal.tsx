@@ -75,7 +75,7 @@ const OrderModal = ({
 
 
   return (
-    <div className="bg-white  lg:w-[504px] lg:h-fit h-screen  relative flex flex-col justify-center p-[37px] pt-0 items-center">
+    <div className="bg-white  lg:w-[504px] lg:h-fit  relative flex flex-col justify-center p-[37px]  items-center">
       <button
         className="absolute top-4 right-4 text-2xl hover:cursor-pointer"
         onClick={onCloseGlobalModal}

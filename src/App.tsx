@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { registerServiceWorker } from "./utils/registerServiceWorker";
 import { Layout } from "./Layout";
 
-const App= () =>{
+const App = () => {
   registerServiceWorker();
 
   return (
@@ -11,4 +11,5 @@ const App= () =>{
     </Router>
   );
 }
-export default App
+
+export default App;

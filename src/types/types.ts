@@ -128,6 +128,7 @@ export interface ModalStore {
   isOpenOrder: boolean;
   isOpenMenuModal: boolean;
   isOpenSpecialOfferModal: boolean;
+  activeModal: string | null;
   onOpenModal: (modal: string) => void;
   onCloseGlobalModal: () => void;
 }

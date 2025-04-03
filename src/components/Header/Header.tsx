@@ -10,7 +10,12 @@ import { Link } from "react-router-dom";
 import { RiArrowDownSLine } from "react-icons/ri";
 import cn from "classnames";
 
-export function Header() {
+interface HeaderProps {
+  menuOpen: boolean;
+  setMenuOpen: (value: boolean) => void;
+}
+
+export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { rooms } = useRoomStore();
   const {
@@ -57,6 +62,8 @@ export function Header() {
                 changeLanguage,
                 rooms,
                 isShowRooms,
+                menuOpen,
+                setMenuOpen,
               }}
             />
             <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
