@@ -72,7 +72,7 @@ export const RoomsHome = () => {
       </div>
 
       <div className="relative max-w-screen z-0 mb-[34px] md:mb-0 mt-19 md:mt-0 xl:mt-10 2xl:mb-[121px] xl:mb-[30px]">
-        <div className="z-10 2xl:h-[720px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[327px]">
+        <div className="z-10 2xl:h-[720px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[357px]">
           <RoomsSlider ref={sliderRef} sliderProps={sliderProps} />
         </div>
       </div>

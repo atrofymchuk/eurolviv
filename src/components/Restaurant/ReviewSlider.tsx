@@ -46,11 +46,11 @@ export const ReviewSlider = forwardRef<Slider, ReviewSliderToProps>(
       <div className="flex flex-col md:items-end items-center justify-end w-full overflow-hidden">
         <div
           className={cn(
-            `w-full ${
+            `${
               isTerrasePage
                 ? " md:w-[95.16%] w-[95.31%] "
-                : " md:w-[96.5%] w-[89.2%] sm:w-[89.1%] xl:w-[96.55%]"
-            }  2xl:h-[458px] xl:h-[380px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#C7C7C7]`
+                : " md:w-[96.5%] w-[89.2%] sm:w-[89.1%] xl:w-[96.55%] "
+            }  2xl:h-[458px] xl:h-[380px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#C7C7C7] `
           )}
         >
           <div className="slider-container overflow-visible">

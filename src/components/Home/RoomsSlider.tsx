@@ -91,7 +91,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
     const settings = { ...defaultSettings };
 
     return (
-      <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px] ms-[calc(5.93%)] h-full">
+      <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px]  ms-[calc(5.93%)] h-full">
         <Slider
           {...settings}
           className="overflow-visible flex items-center justify-center home-room-slider"
