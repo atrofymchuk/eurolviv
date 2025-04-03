@@ -1,6 +1,5 @@
 import { CiGlobe } from "react-icons/ci";
 import i18n from "../../i18n";
-import { useEffect } from "react";
 import cn from "classnames";
 
 type changeLanguageToProps = {
@@ -12,29 +11,33 @@ type changeLanguageToProps = {
 export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeLanguageToProps) => {
   const currentLang = i18n.language;
   
-  useEffect(() => {
-    console.log("ChangeLangButton scrolled:", scrolled, "currentLang:", currentLang);
-  }, [scrolled, currentLang]);
+  const getTextColor = (lang: string) => {
+    if (isMobile) {
+      return currentLang === lang ? "text-[#252526]" : "text-[#ADADAD]";
+    }
+    if (scrolled) {
+      return currentLang === lang ? "text-black" : "text-[#ADADAD]";
+    }
+    return currentLang === lang ? "text-white" : "text-[#ADADAD]";
+  };
 
   return (
     <button
       className={cn(`flex items-center uppercase ${isMobile ? 'lg:hidden' : 'hidden lg:flex'}`)}
       onClick={() => changeLanguage()}
     >
-      <CiGlobe className="w-4 h-4 lg:w-4.5 lg:h-4.5 me-1" />
+      <CiGlobe className={cn("w-4 h-4 lg:w-4.5 lg:h-4.5 me-1", getTextColor(currentLang))} />
       <div className="flex items-center">
-        <span className={cn("hover:cursor-pointer text-[14px]", {
-          "text-black": scrolled && currentLang === 'uk',
-          "text-white": !scrolled && currentLang === 'uk',
-          "text-[#ADADAD]": !scrolled && currentLang !== 'uk',
-          "font-cofo-medium ": currentLang === 'uk',
+        <span className={cn("hover:cursor-pointer text-[14px]", getTextColor(currentLang), {
+          "font-cofo-medium": currentLang === 'uk'
         })}>UK</span>
-        <span >/</span>
-        <span className={cn("hover:cursor-pointer text-[14px]", {
-          "text-white": !scrolled && currentLang === 'en',
-          "text-[#ADADAD]": !scrolled && currentLang !== 'en',
-          "text-black": scrolled && currentLang === 'en',
-          "font-cofo-medium": currentLang === 'en',
+        <span className={cn( {
+          "text-[#252526]": isMobile,
+          "text-white": !isMobile && !scrolled,
+          "text-black": !isMobile && scrolled
+        })}>/</span>
+        <span className={cn("hover:cursor-pointer text-[14px]", getTextColor('en'), {
+          "font-cofo-medium": currentLang === 'en'
         })}>ENG</span>
       </div>
     </button>

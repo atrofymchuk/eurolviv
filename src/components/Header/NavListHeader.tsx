@@ -14,12 +14,12 @@ type NavListHeaderToProps = {
     <Link 
       to={path} 
       className={cn(
-        "block px-[18px]  py-3 backdrop-blur-[54.5px]  bg-white/26 font-cofo-medium   hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
+        "block px-[18px]  lg:py-3 py-1 text-black backdrop-blur-[54.5px]  tracking-tighter md:tracking-normal  lg:bg-white/26 font-cofo-medium  md:text-white hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
         "border-b border-[#FFFFFF33] last:border-b-0",
         "text-[#FFFFFF] hover:text-[#252526]"
       )}
     >
-      <span className="text-inherit uppercase text-[16px]">
+      <span className="text-inherit uppercase lg:text-[16px] text-[12px]">
         {t(title)}
       </span>
     </Link>

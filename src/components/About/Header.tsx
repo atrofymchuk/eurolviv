@@ -39,7 +39,12 @@ export const AboutHeader = () => {
           {t("about.header.desc.1")}
         </span>
       </h4>
-      <BookLink className="text-[#252526] mt-4 xl:mt-[33px]   bg-[#EDE8E5] xl:px-[47px]" to={"/booking"}>{t("buttons.book")}</BookLink>
+      <BookLink
+        className="text-[#252526] mt-4 xl:mt-[33px]   bg-[#EDE8E5] xl:px-[47px]"
+        to={"/booking"}
+      >
+        {t("buttons.book")}
+      </BookLink>
     </div>
   );
 };

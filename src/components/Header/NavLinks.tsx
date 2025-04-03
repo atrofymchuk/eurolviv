@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useCallback, useMemo } from "react";
 import cn from "classnames";
-import { NavListHeader } from "./NavListHeader";
 import { Room } from "../../types/types";
+import { IoIosArrowDown } from "react-icons/io";
+import { useDropdownMenu } from "../Hooks/useDropdownMenu";
+import { renderDropdownMenu } from "../utils/renderDropdownMenu";
 
 type NavLinksProps = {
   navLinks: Array<{ path: string; label: string }>;
@@ -15,6 +17,7 @@ type NavLinksProps = {
   handleMouseEnterRestaurant?: () => void;
   handleMouseLeaveRestaurant?: () => void;
   isShowRestaurant?: boolean;
+  isMobile?: boolean;
 };
 
 type DropdownItem = {
@@ -34,38 +37,29 @@ export const NavLinks = ({
   handleMouseEnterRestaurant,
   handleMouseLeaveRestaurant,
   isShowRestaurant = false,
+  isMobile = false,
 }: NavLinksProps) => {
   const restaurantLinks = useMemo<DropdownItem[]>(
     () => [
       { key: "restaurant", path: "/restaurant", title: "footer.restaurant" },
       { key: "terrace", path: "/terrace", title: "footer.terrace" },
-      { key: "karaoke", path: "/restaurant", title: "restaurant.karaoke.title" },
+      {
+        key: "karaoke",
+        path: "/restaurant",
+        title: "restaurant.karaoke.title",
+      },
     ],
     []
   );
 
-  const renderDropdownMenu = useCallback(
-    (items: DropdownItem[], isVisible: boolean) => {
-      if (!isVisible) return null;
-
-      return (
-        <div className="absolute -left-5 top-full pt-4">
-          <div className="w-fit">
-            <div className="flex flex-col rounded-lg overflow-hidden">
-              {items.map((item) => (
-                <NavListHeader
-                  key={item.key}
-                  path={item.path}
-                  title={item.title}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      );
-    },
-    []
-  );
+  const { toggleHandle } = useDropdownMenu({
+    isShowRooms,
+    isShowRestaurant,
+    handleMouseEnterRooms,
+    handleMouseLeaveRooms,
+    handleMouseEnterRestaurant,
+    handleMouseLeaveRestaurant,
+  });
 
   const renderNavLinks = useCallback(() => {
     return navLinks.map(({ path, label }) => {
@@ -78,39 +72,67 @@ export const NavLinks = ({
             }))
           : [];
 
+      const isDropdown = path === "/rooms" || path === "/restaurant";
+
       return (
         <div
           key={path}
           className="relative"
           onMouseEnter={
-            path === "/rooms"
+            !isMobile && path === "/rooms"
               ? handleMouseEnterRooms
-              : path === "/restaurant"
+              : !isMobile && path === "/restaurant"
               ? handleMouseEnterRestaurant
               : undefined
           }
           onMouseLeave={
-            path === "/rooms"
+            !isMobile && path === "/rooms"
               ? handleMouseLeaveRooms
-              : path === "/restaurant"
+              : !isMobile && path === "/restaurant"
               ? handleMouseLeaveRestaurant
               : undefined
           }
         >
-          <Link
-            to={path}
-            className={cn(
-              "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[12px]",
-              isActiveLink(path)
+          <div className="flex items-center">
+            <Link
+              to={path}
+              className={cn(
+                "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[14px] hover:text-[#8C331B] transition-colors",
+                !isMobile && isActiveLink(path),
+                "xl:text-inherit text-[#252526]"
+              )}
+              onClick={() => !isDropdown && setMenuOpen(false)}
+            >
+              {label}
+            </Link>
+            {isMobile && isDropdown && (
+              <button onClick={() => toggleHandle(path)} className="ml-2">
+                <IoIosArrowDown
+                  color="black"
+                  className={cn(
+                    "transition-transform",
+                    (path === "/rooms" && isShowRooms) ||
+                      (path === "/restaurant" && isShowRestaurant)
+                      ? "rotate-180"
+                      : ""
+                  )}
+                />
+              </button>
             )}
-            onClick={() => setMenuOpen(false)}
-          >
-            {label}
-          </Link>
+          </div>
 
-          {path === "/rooms" && renderDropdownMenu(roomItems, isShowRooms)}
+          {path === "/rooms" &&
+            renderDropdownMenu({
+              items: roomItems,
+              isVisible: isShowRooms,
+              isMobile,
+            })}
           {path === "/restaurant" &&
-            renderDropdownMenu(restaurantLinks, isShowRestaurant)}
+            renderDropdownMenu({
+              items: restaurantLinks,
+              isVisible: isShowRestaurant,
+              isMobile,
+            })}
         </div>
       );
     });
@@ -126,7 +148,8 @@ export const NavLinks = ({
     handleMouseLeaveRestaurant,
     isShowRestaurant,
     restaurantLinks,
-    renderDropdownMenu,
+    isMobile,
+    toggleHandle,
   ]);
 
   return <>{renderNavLinks()}</>;

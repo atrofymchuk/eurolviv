@@ -14,7 +14,7 @@ type DesktopNavigationProps = {
   handleMouseLeaveRestaurant: () => void;
   isShowRestaurant: boolean;
   setIsShowRestaurant: (value: boolean) => void;
-};
+}
 
 export const DesktopNavigation = ({
   navLinks,
