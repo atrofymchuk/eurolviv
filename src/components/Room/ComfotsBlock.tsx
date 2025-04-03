@@ -4,7 +4,7 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { ComfortsBlockToProps } from "../../types/entity";
 import cn from "classnames";
 export const ComfortsBlock = memo(
-  ({ title, imgStyle, icons, images, style }: ComfortsBlockToProps) => {
+  ({ title, imgStyle, icons, images, style, isOtherLux }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
 
     const renderedIcons = useMemo(() => {
@@ -13,7 +13,7 @@ export const ComfortsBlock = memo(
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[14px]  ${style.text} uppercase 2xl:w-[93%]`
+            `flex items-center gap-x-[3px]  ${style.text} uppercase 2xl:w-[93%] w-full`
           )}
         >
           <InViewWrapper>
@@ -33,7 +33,7 @@ export const ComfortsBlock = memo(
     if (!icons) return null;
 
     return (
-      <div className={cn(`${style.bgColor}`)}>
+      <div className={cn(`${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.1)]`)}>
         <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
           <div
             className="grid  
@@ -41,7 +41,7 @@ export const ComfortsBlock = memo(
             md:grid-cols-[35.67%_30.65%_33.76%]
             items-center justify-center 
             border-x border-[#C7C7C7]
-            md:max-w-[90.83%]  w-full max-w-[79.5%]
+            md:max-w-[90.83%]  w-full max-w-[81.9%]
             "
           >
             <div className="flex flex-col  ps-[8px] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
@@ -61,7 +61,7 @@ export const ComfortsBlock = memo(
                       src={images[0]}
                       alt="room image"
                       className={cn(
-                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-full object-cover ${imgStyle.ammentiesImageFst}`
+                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover ${imgStyle.ammentiesImageFst}`
                       )}
                     />
                   </InViewWrapper>
@@ -77,7 +77,7 @@ export const ComfortsBlock = memo(
               "
             >
               <div
-                className="w-[90%] sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
+                className=" sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
               2xl:h-[512px] md:h-[260px] lg:h-[311px]
                   2xl:ps-[36px] xl:ps-[14px]  
                 lg:pt-[50px] xl:pt-[20px] 2xl:pt-[78px] md:pt-[45px] "
@@ -101,23 +101,28 @@ export const ComfortsBlock = memo(
                 xl:h-[411px]  
                  2xl:h-[510px]
                 w-full p-2.5 md:p-0
-                lg:pt-[110px]   xl:pt-0  md:pt-[45px] 2xl:pt-[10px]"
+                lg:pt-[110px] xl:pt-0  md:pt-[45px] 2xl:pt-[10px]"
               >
                 <InViewWrapper>
                   <img
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
-                     2xl:h-[512px]  xl:h-[380px] object-[0%_95%]  lg:h-[311px] md:w-full md:h-[260px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                     2xl:h-[512px]  xl:h-[380px] lg:h-[311px] md:w-full md:h-[262px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
                     ${imgStyle.ammentiesImageScd}`)}
                   />
-                  <img
-                    src={images[0]}
+                  
+                 { isOtherLux && <img
+                    src={isOtherLux ? images[1] :  images[0]}
                     alt="room image"
-                    className="md:hidden w-full 
-                    h-[230px] sm:h-[250px] md:h-[300px] 
-                    object-cover"
-                  />
+                    className={cn(`md:hidden w-full 
+                    h-[262px] sm:h-[250px] md:h-[300px]  ${imgStyle.ammentiesImageScd}
+                    object-cover`)}
+                  />}
+
+                  {!isOtherLux && <img src={images[0]} alt=""  className={cn(`md:hidden w-full  ${imgStyle.ammentiesImageScd}
+                    h-[262px] sm:h-[250px] md:h-[300px] 
+                    object-cover`)} />}
                 </InViewWrapper>
               </div>
             </div>

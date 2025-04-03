@@ -9,12 +9,12 @@ export const MoreInfo = () => {
   const { roomType } = useParams();
   const isShowOtherInfo =
     roomType === "lux" ||
-    roomType === "lux-two-room" ||
+    roomType === "lux-two-rooms" ||
     roomType === "semi-lux";
   const { amenities, availableService } = usePagesInfoStore();
   return (
     <div className="flex flex-col items-center md:items-start md:ps-[7.45%] bg-[#A47762] ">
-      <div className="md:max-w-[90.83%] max-w-[79.5%] w-full justify-center items-center md:items-start md:justify-center border-x border-[#C7C7C7]">
+      <div className="md:max-w-[90.83%]  max-w-[81.9%] w-full justify-center items-center md:items-start md:justify-center border-x border-[#C7C7C7]">
         <div className="grid grid-cols-1 md:grid-cols-[35.59%_30.65%_33.76%] w-full">
           <div
             className={cn(

@@ -22,7 +22,7 @@ export const BarComponent = () => {
           {t("terrase.bar.title")} ruff
         </h1>
 
-        <p className="text-center mt-2 leading-[120%] uppercase xl:text-[20px] text-[12px]  pt-[22px] pb-[28px] md:w-1/3 mx-auto">
+        <p className="text-center mt-2 leading-[120%] uppercase xl:text-[20px] text-[12px]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">
           {t("terrase.bar.desc")}
         </p>
       </div>

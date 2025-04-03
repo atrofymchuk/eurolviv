@@ -10,7 +10,7 @@ export const RoomsInfo = () => {
     <div className="w-full flex-col flex items-center ">
       <div className=" border-x border-[#C7C7C7] mx-auto w-full max-w-[89.58%] box-border container-fluid  fluid-container">
         <div className="grid  grid-cols-1  ">
-          <div className="space-y-[11px] px-5">
+          <div className="space-y-[11px] px-2">
             <div className="lg:block hidden mt-[114px]">
               <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
                 <span className="text-[#8C331B]">

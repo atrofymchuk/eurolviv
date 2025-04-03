@@ -31,7 +31,11 @@ export const ComfortsBlocksWrapper = ({
     bgColor: "bg-[#A47762]",
     text: "text-[#E1E1E1]",
     headerColor: "text-white",
+    
   };
+
+  const isOtherLux = room.type === 'semi-lux' 
+  const isLuxElegant = room.type === 'lux-elegant' || room.type === 'lux-imperial'
 
   return (
     <div className="">
@@ -40,6 +44,7 @@ export const ComfortsBlocksWrapper = ({
           <ComfortsBlock
             title={t("room.comfortBlock.title")}
             icons={icons.ammentiesInRoom}
+            isOtherLux={isOtherLux}
             {...commonProps}
             images={[commonProps.images[0], commonProps.images[1]]}
             style={luxStyle}
@@ -49,6 +54,8 @@ export const ComfortsBlocksWrapper = ({
             <ComfortsBlock
               title={t("room.comfortBlock.title2")}
               icons={icons.bedRoom}
+              isLuxElegant={isLuxElegant}
+              
               {...commonProps}
               images={[commonProps.images[2], commonProps.images[3]]}
               style={standardStyle}
@@ -69,17 +76,20 @@ export const ComfortsBlocksWrapper = ({
             title={t("room.comfortBlock.title4")}
             icons={icons.ammentiesInRoom}
             {...commonProps}
+            isOtherLux={isOtherLux}
             images={[commonProps.images[0], commonProps.images[1]]}
             style={standardStyle}
           />
-
+      
           <ComfortsBlock
             title={t("room.comfortBlock.title3")}
             icons={icons.bathRoom}
+            isOtherLux={isOtherLux}
             {...commonProps}
             images={[commonProps.images[2], commonProps.images[3]]}
             style={standardStyle}
           />
+        
         </>
       )}
     </div>

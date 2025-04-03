@@ -46,7 +46,7 @@ export const MoreInfoSecondCol = ({
           <img
             src={dog}
             alt="imageOverlay"
-            className="w-full  object-cover px-[10px_6px] md:hidden h-[250px] "
+            className="w-full  object-cover px-[10px_6px] md:hidden h-[262px] "
           />
         )}
 

@@ -21,12 +21,11 @@ export const HeaderTitle: React.FC<HeaderTitleProps> = ({
     return (
       <h1
         className={cn(
-          `${baseClasses} whitespace-pre-line font-cofo xl:text-[198px] lg:text-[100px] md:text-[80px] flex flex-col text-[48px] font-normal xl:leading-[154.83px] leading-[80%] tracking-[-0.1em] pt-[12px]`
+          `${baseClasses} xl:text-[198px] lg:text-[100px] md:text-[80px] flex flex-col text-[48px] font-normal xl:leading-[154.83px] leading-[80%] tracking-[-0.1em] pt-[12px] gap-0`
         )}
       >
-        <span>{titleParts[0]}-</span>
-        <br />
-        <span>{titleParts.slice(1).join(" ")}</span>
+        <span className="block">{titleParts[0]}-</span>
+        <span className="block">{titleParts.slice(1).join(" ")}</span>
       </h1>
     );
   }
