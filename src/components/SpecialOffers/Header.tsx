@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-center bg-[#252526] 2xl:pt-[117px] xl:pt-[102px] lg:pt-[93px] md:pt-[80px] pt-[73px]   px-[38px_40px]">
       <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[1720px] ">
-        <div className=" border-x  lg:border-e-0 border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-6 lg:pt-[96px] lg:pl-[31px] ">
+        <div className="   lg:border-e-0 border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-6 lg:pt-[96px] lg:pl-[31px] ">
           <h1
             className="uppercase  text-white lg:leading-[91%] leading-[82%] tracking-[-0.1em] 
             text-[48px] md:text-[64px] lg:text-[120px] xl:text-[150px] 2xl:text-[198px] z-1"
