@@ -1,6 +1,7 @@
 import { t } from "i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { headerHome } from "../../store/exportsImg";
+// import { HeaderBookingForm } from "../common/HeaderPage/HeaderBookingForm";
 export const HeaderHome = () => {
   return (
     <div className="w-full relative">
@@ -33,7 +34,9 @@ export const HeaderHome = () => {
         <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[6px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px]  ">
           {t("home.header.description")}
         </p>
+      {/* <HeaderBookingForm /> */}
       </div>
+
     </div>
   );
 };

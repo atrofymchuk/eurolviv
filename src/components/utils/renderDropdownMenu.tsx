@@ -12,12 +12,14 @@ type RenderDropdownMenuProps = {
   items: DropdownItem[];
   isVisible: boolean;
   isMobile?: boolean;
+  setMenuOpen?: (value: boolean) => void;
 };
 
 export const renderDropdownMenu = ({
   items,
   isVisible,
   isMobile = false,
+  setMenuOpen,
 }: RenderDropdownMenuProps): ReactNode => {
   if (!isVisible) return null;
 
@@ -35,6 +37,7 @@ export const renderDropdownMenu = ({
               key={item.key}
               path={item.path}
               title={item.title}
+              setMenuOpen={setMenuOpen}
             />
           ))}
         </div>

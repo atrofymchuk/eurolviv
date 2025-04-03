@@ -5,10 +5,17 @@ import cn from "classnames"
 type NavListHeaderToProps = {
   path: string;
   title: string;
+  setMenuOpen?: (value: boolean) => void;
 }
 
-  export const NavListHeader = ({ path, title }: NavListHeaderToProps) => {
+export const NavListHeader = ({ path, title, setMenuOpen }: NavListHeaderToProps) => {
   const { t } = useTranslation();
+
+  const handleClick = () => {
+    if (setMenuOpen) {
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <Link 
@@ -18,6 +25,7 @@ type NavListHeaderToProps = {
         "border-b border-[#FFFFFF33] last:border-b-0",
         "text-[#FFFFFF] hover:text-[#252526]"
       )}
+      onClick={handleClick}
     >
       <span className="text-inherit uppercase lg:text-[16px] text-[12px]">
         {t(title)}

@@ -101,7 +101,12 @@ export const NavLinks = ({
                 !isMobile && isActiveLink(path),
                 "xl:text-inherit text-[#252526]"
               )}
-              onClick={() => !isDropdown && setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+                if (!isDropdown) {
+                  setMenuOpen(false);
+                }
+              }}
             >
               {label}
             </Link>
@@ -126,12 +131,14 @@ export const NavLinks = ({
               items: roomItems,
               isVisible: isShowRooms,
               isMobile,
+              setMenuOpen,
             })}
           {path === "/restaurant" &&
             renderDropdownMenu({
               items: restaurantLinks,
               isVisible: isShowRestaurant,
               isMobile,
+              setMenuOpen,
             })}
         </div>
       );

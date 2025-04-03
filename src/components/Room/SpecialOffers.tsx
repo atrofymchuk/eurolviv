@@ -18,7 +18,7 @@ export const SpecialOffers = () => {
       <div
         className={cn(
           `container-fluid z-50 relative ${
-            isHome ? "w-[89.05%] md:w-[91.06%]" : "w-[79.4%] md:w-[85.06%]"
+            isHome ? "w-[89.05%] md:w-[91.06%]" : "w-[81.9%] md:w-[85.06%]"
           } `
         )}
       >

@@ -99,6 +99,7 @@ export const MobileNavigation = ({
             <BookLink
               to="/booking"
               className=" bg-[#A47762] text-white uppercase font-cofo-medium text-[10px] px-[6.25px] py-[6px] mt-[22px] "
+              onClick={() => setMenuOpen(false)}
             >
               {t("buttons.book")}
             </BookLink>
