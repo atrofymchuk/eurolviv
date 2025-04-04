@@ -83,6 +83,8 @@ export const MobileNavigation = ({
             <IoClose
               size={32}
               color="#C7C7C7"
+              onClick={() => setMenuOpen(false)}
+
               className="cursor-pointer"
             />
           </div>
