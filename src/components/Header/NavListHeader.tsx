@@ -25,15 +25,13 @@ export const NavListHeader = ({
     <Link
       to={path}
       className={cn(
-        "block px-[18px]  lg:py-3 py-1 text-black backdrop-blur-[54.5px]  tracking-tighter md:tracking-normal  lg:bg-white/26 font-cofo-medium  md:text-white hover:bg-[#C7C7C7] transition-colors whitespace-nowrap text-left",
+        "block md:px-[18px] text-[12px]  lg:py-3 py-0 text-[#6B6B6B] md:backdrop-blur-[54.5px] pe-[40px]  md:bg-white/26   md:text-white hover:bg-[#C7C7C7] lg:font-cofo-medium md:transition-colors md:whitespace-nowrap text-left",
         "border-b border-[#FFFFFF33] last:border-b-0",
-        "text-[#FFFFFF] hover:text-[#252526]"
+        "text-[#6B6B6B] md:text-[#FFFFFF] md:hover:text-[#252526]"
       )}
       onClick={handleClick}
     >
-      <span className="text-inherit uppercase lg:text-[16px] text-[12px]">
-        {t(title)}
-      </span>
+      <span className=" uppercase lg:text-[16px] text-[12px] ">{t(title)}</span>
     </Link>
   );
 };

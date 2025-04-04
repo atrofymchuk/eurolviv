@@ -7,9 +7,10 @@ import cn from "classnames";
 type SocialIconsProps = {
   type: "hotel" | "restaurant";
   className?: string;
+  isBottomColor?: boolean;
 };
 
-export const SocialIcons = ({ type, className }: SocialIconsProps) => {
+export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIconsProps) => {
   const socialLinks = type === "hotel" ? social.hotel : social.restaurant;
 
   return (
@@ -19,7 +20,7 @@ export const SocialIcons = ({ type, className }: SocialIconsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          `rounded-full hover:cursor-pointer bg-[#A47762] lg:p-1.5 p-1`
+          `rounded-full hover:cursor-pointer ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} lg:p-1.5 p-1`
         )}
       >
         <FaInstagram
@@ -32,7 +33,7 @@ export const SocialIcons = ({ type, className }: SocialIconsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          `rounded-full hover:cursor-pointer bg-[#A47762] lg:p-1.5 p-1`
+          `rounded-full hover:cursor-pointer ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} lg:p-1.5 p-1`
         )}
       >
         <RiTelegram2Fill
@@ -45,7 +46,7 @@ export const SocialIcons = ({ type, className }: SocialIconsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          `rounded-full hover:cursor-pointer bg-[#A47762] lg:p-1.5 p-1`
+          `rounded-full hover:cursor-pointer ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} lg:p-1.5 p-1`
         )}
       >
         <FaWhatsapp
@@ -58,7 +59,7 @@ export const SocialIcons = ({ type, className }: SocialIconsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          `rounded-full hover:cursor-pointer text-white bg-[#A47762] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`
+          `rounded-full hover:cursor-pointer text-white ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`
         )}
       >
         <svg

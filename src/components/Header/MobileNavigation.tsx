@@ -7,6 +7,7 @@ import { Logo } from "./Logo";
 import { IoClose } from "react-icons/io5";
 import { BookLink } from "../Buttons/BookLink";
 import { SocialIcons } from "./SocialIcons";
+import { useEffect } from "react";
 
 type MobileNavigationProps = {
   menuOpen: boolean;
@@ -45,6 +46,18 @@ export const MobileNavigation = ({
 }: MobileNavigationProps) => {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   if (!menuOpen) return null;
 
   return (
@@ -64,10 +77,11 @@ export const MobileNavigation = ({
               className="w-full self-start justify-start "
               iconClassName="w-[99px] h-[54px]"
               isMobile={true}
+              onClick={() => setMenuOpen(false)}
+
             />
             <IoClose
               size={32}
-              onClick={() => setMenuOpen(false)}
               color="#C7C7C7"
               className="cursor-pointer"
             />
@@ -107,7 +121,7 @@ export const MobileNavigation = ({
         </div>
 
         <div className="mt-[30px]">
-          <div className="w-full flex flex-col items-start space-y-6">
+          <div className="w-full flex flex-col items-start space-y-7">
             <div>
               <h4 className="text-[12px]  font-cofo-medium text-[#252526] uppercase ">
                 {t("footer.reception")}
@@ -118,7 +132,7 @@ export const MobileNavigation = ({
               <p className="text-[#252526] text-sm">+38 (073) 242 40 02</p>
             </div>
 
-            <SocialIcons type="hotel" />
+              <SocialIcons type="hotel"  />
           </div>
 
           <div className="mb-[40px]">
@@ -132,7 +146,7 @@ export const MobileNavigation = ({
               <p className="text-[#252526] text-sm">+38 (093) 348 31 14</p>
             </div>
 
-            <SocialIcons type="restaurant" className="mt-[30px]" />
+            <SocialIcons type="restaurant" className="mt-[30px]" isBottomColor={true} />
           </div>
         </div>
       </div>

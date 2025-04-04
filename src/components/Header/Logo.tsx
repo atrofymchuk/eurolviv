@@ -9,11 +9,12 @@ type LogoProps = {
   className?: string;
   isMobile?: boolean;
   iconClassName?: string;
+  onClick?: () => void;
 };
 
-export const Logo = ({ logo, iconLogoStyle, scrolled, className, iconClassName, isMobile }: LogoProps) => {
+export const Logo = ({ logo, iconLogoStyle, scrolled, className, iconClassName, isMobile, onClick }: LogoProps) => {
   return (
-    <Link to="/" className={cn(" lg:w-fit items-center justify-center flex w-1/3", className)}>
+    <Link to="/" className={cn(" lg:w-fit items-center justify-center flex w-1/3", className)} onClick={onClick}>
       <InViewWrapper>
         <img
           src={logo}

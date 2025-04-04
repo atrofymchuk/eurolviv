@@ -26,12 +26,12 @@ export const renderDropdownMenu = ({
   return (
     <div
       className={cn(
-        "absolute -left-2 top-full pt-4",
+        "absolute -left-2 top-full lg:pt-4 mb-5 md:mb-0",
         isMobile && "relative left-0 top-0 pt-2"
       )}
     >
       <div className="w-fit">
-        <div className="flex flex-col rounded-lg overflow-hidden">
+        <div className="flex flex-col rounded-lg overflow-hidden md:gap-0 gap-[8px] bg-[#FFFFFF]/51%">
           {items.map((item) => (
             <NavListHeader
               key={item.key}
@@ -44,4 +44,4 @@ export const renderDropdownMenu = ({
       </div>
     </div>
   );
-}; 
+};
