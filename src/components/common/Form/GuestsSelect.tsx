@@ -1,7 +1,7 @@
 import { Control, Controller, FieldErrors } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { FormData } from "../../../../types/headerTypes";
+import { FormData } from "../../../types/headerTypes";
 
 interface GuestsSelectProps {
   control: Control<FormData>;
@@ -25,7 +25,7 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
             <select
               {...field}
               className={cn(
-                "w-full p-3 ps-0 text-white border-b border-[#969696] cursor-pointer text-[10px] lg:text-[16px]",
+                "w-full p-[7px] lg:p-3 ps-0 text-white border-b border-[#969696] cursor-pointer text-[10px] lg:text-[16px]",
                 errors.guests && "border-red-500 border"
               )}
             >

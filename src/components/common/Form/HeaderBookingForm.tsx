@@ -3,10 +3,10 @@ import "react-datepicker/dist/react-datepicker.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 
-import "./styles.css";
-import { DatePickerField } from "./Form/DatePickerField";
-import { GuestsSelect } from "./Form/GuestsSelect";
-import { BookButton } from "./Form/BookButton";
+import "../HeaderPage/styles.css";
+import { DatePickerField } from "./DatePickerField";
+import { GuestsSelect } from "./GuestsSelect";
+import { BookButton } from "./BookButton";
 import { FormData } from "../../../types/headerTypes";
 import { formSchema } from "../../../schemas/bookRoom";
 import { useTranslation } from "react-i18next";
@@ -40,7 +40,7 @@ export const HeaderBookingForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col lg:flex-row gap-4  py-[17px_15px] mt-[85px] bg-white/26 backdrop-blur-[14.3px] lg:py-[29px_39px] lg:px-[35px_34px] rounded-2xl lg:max-w-3xl mx-auto lg:w-full w-[91%]"
+      className="flex flex-col lg:flex-row gap-4  py-[17px_15px] lg:mt-[85px] mt-[59px] bg-white/26 backdrop-blur-[14.3px] lg:py-[29px_39px] lg:px-[35px_34px] rounded-2xl lg:max-w-3xl mx-auto lg:w-full w-[91%]"
     >
       <div className="lg:flex-row gap-4 w-full text-start ">
         <div className="flex gap-x-[3px] lg:gap-x-[11px] px-[20px_11px] lg:px-0">
@@ -62,7 +62,7 @@ export const HeaderBookingForm = () => {
         </div>
         <div className="">
 
-        <p className="text-white uppercase mt-[21px] lg:text-[16px] md:font-cofo-medium text-[10px] ps-[20px] lg:ps-0" >
+        <p className="text-white uppercase lg:mt-[21px] mt-[12px]  lg:text-[16px] md:font-cofo-medium text-[10px] ps-[20px] lg:ps-0" >
           {t("home.header.bookingForm.gusts.title")}
         </p>
 
