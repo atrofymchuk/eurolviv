@@ -15,18 +15,19 @@ import { social } from "../../Constants/Social";
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="relative text-white py-[47px] ps-4  lg:ps-0 overflow-hidden lg:h-[750px] md:h-[1400px] h-[1360px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center pt-[53px] lg:pt-[133px]">
+    <footer className="relative text-white py-[47px] ps-4  lg:ps-0 overflow-hidden lg:h-[900px]  md:h-[1400px] h-[1360px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center pt-[53px] lg:pt-[133px]">
       <div className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10"></div>
 
-      <div className="absolute top-[200px] left-0 w-full h-[2200px] lg:h-[calc(100%-200px)] footer-gradient z-1"></div>
+      <div className="absolute top-[200px] left-0 w-full h-[1379px] lg:h-[calc(100%-200px)] footer-gradient z-1"></div>
 
       <InViewWrapper>
         <img
           src={footer}
           alt="Background"
-          className="absolute inset-0 w-full h-full  z-0 "
+          className="absolute inset-0 w-full h-[120%] z-0 "
         />
       </InViewWrapper>
+      
       <div className="lg:w-full w-[100%] ">
         <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between w-full   ">
           <div className="lg:order-1 order-2  lg:w-[21.9%] lg:pt-[17px] flex flex-col lg:items-center  lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] ">
@@ -86,10 +87,9 @@ export const Footer = () => {
             <div className="w-full flex flex-col lg:ps-[32px] ">
               <div>
                 <div className="flex flex-col items-center">
-
-                <h4 className="text-lg font-cofo-medium lg:text-[24px]  text-[20px] leading-[108%] font-cofo px-4 tracking-[-0.05em] lg:max-w-[420px] xl:max-w-[479px] max-w-[315px] lg:text-start text-center w-full">
-                  {t("footer.getNews")}
-                </h4>
+                  <h4 className="text-lg font-cofo-medium lg:text-[24px]  text-[20px] leading-[108%] font-cofo px-4 tracking-[-0.05em] lg:max-w-[420px] xl:max-w-[479px] max-w-[315px] lg:text-start text-center w-full">
+                    {t("footer.getNews")}
+                  </h4>
                 </div>
 
                 <div className="w-full  lg:max-w-[479px] flex flex-col items-center ">

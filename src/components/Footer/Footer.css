@@ -11,6 +11,6 @@
   border-image: linear-gradient(270deg, #242425 0%, #6D7984 100%);
 }
   .footer-gradient{
-    background: linear-gradient(180deg, #242425 0%, rgba(0, 0, 0, 0) 97.05%);
+    background: linear-gradient(180deg,#242425,#0000 97.05%)
 
   }
