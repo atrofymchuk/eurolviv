@@ -25,10 +25,10 @@ export type TerraseT = {
   imgs: string[];
   title: string;
   titleTwo: string;
-  preview: string[]
-  descOne: {text:string, isBold?:boolean}[];
-  descTwo: {text:string, isBold?:boolean}[];
-  descThree: {text:string, isBold?:boolean}[];
+  preview: string[];
+  descOne: { text: string; isBold?: boolean }[];
+  descTwo: { text: string; isBold?: boolean }[];
+  descThree: { text: string; isBold?: boolean }[];
 };
 
 export type Room = {
@@ -43,7 +43,6 @@ export type Room = {
   isLux: boolean;
   suggestion: SuggestionT[];
 };
-
 
 export type ConferenceService = {
   previewImage: string;
@@ -93,7 +92,6 @@ export type RoomAbout = {
   ammentiesImages: string[];
 };
 
-
 export type SuggestionT = {
   title: string;
   type: string;
@@ -115,11 +113,23 @@ export type IconsState = {
 
 export type RoomsState = {
   rooms: Room[];
-  sliderProps: {area: number, guests: string, src: string, title: string, type: string}[];
+  sliderProps: {
+    area: number;
+    guests: string;
+    src: string;
+    title: string;
+    type: string;
+  }[];
 };
 export type RoomsItitialState = {
   rooms: Room[];
-  sliderProps: {area: number, guests: string, src: string, title: string, type: string}[];
+  sliderProps: {
+    area: number;
+    guests: string;
+    src: string;
+    title: string;
+    type: string;
+  }[];
   halls: ConferenceService[];
   terases: TerraseT[];
 };
@@ -147,9 +157,8 @@ export interface Reviews {
 }
 
 export interface RestaurantReview {
-  id:number
-  text: string;
-  impression: string;
+  id: number;
+  img: string;
 }
 
 export interface ReviewSliderProps {
@@ -174,19 +183,22 @@ export interface MenuItem {
   grams: string;
 }
 
-
-
-
 export interface PagesInfo {
-hotelInfo:{icon:string,text:string}[]
-services:{icon:string,text:string}[]
-concepts:{title:string[],img:string,alt:string,text:string}[]
-places:string[][]
-infrastructure:string[][]
-reviews:Reviews
-suggestion:{img:string,title:string,titleDesc:string,desc:string,url:string}[]
-restaurantReviews:RestaurantReview[]
-amenities:Icon[]
-availableService:Icon[]
-cards:{src:string,title:string,text:string}[]
-} 
+  hotelInfo: { icon: string; text: string }[];
+  services: { icon: string; text: string }[];
+  concepts: { title: string[]; img: string; alt: string; text: string }[];
+  places: string[][];
+  infrastructure: string[][];
+  reviews: Reviews;
+  suggestion: {
+    img: string;
+    title: string;
+    titleDesc: string;
+    desc: string;
+    url: string;
+  }[];
+  restaurantReviews: RestaurantReview[];
+  amenities: Icon[];
+  availableService: Icon[];
+  cards: { src: string; title: string; text: string }[];
+}

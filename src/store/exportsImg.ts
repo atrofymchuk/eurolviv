@@ -162,6 +162,11 @@ export  { default as weddingTrd} from "../assets/Restaurant/Celebrate/WED3.webp"
 export  { default as karaokeFst} from "../assets/Restaurant/Karaoke/Fst.webp"; 
 export  { default as karaokeScd} from "../assets/Restaurant/Karaoke/Scnd.webp"; 
 
+export  { default as reviewFst} from "../assets/Restaurant/Rewiews/review_1.webp"; 
+export  { default as reviewScd} from "../assets/Restaurant/Rewiews/review_2.webp"; 
+export  { default as reviewTrd} from "../assets/Restaurant/Rewiews/review_3.webp"; 
+export  { default as reviewFth} from "../assets/Restaurant/Rewiews/review_4.webp";      
+export  { default as reviewFve} from "../assets/Restaurant/Rewiews/review_5.webp";      
 
 export  { default as coffe} from "../assets/Restaurant/Menu/Coffe.webp"; 
 export  { default as meat} from "../assets/Restaurant/Menu/meat.webp"; 

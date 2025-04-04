@@ -8,8 +8,8 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
   const { t } = useTranslation()
   return (
     <>
-    <div className="flex flex-col items-center justify-center ">
-      <div className={cn(`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'md:max-w-[93.1%] max-w-[89.1%]'} grid-cols-1 border-[#C7C7C7] border-x border-b lg:border-b-0 `)}>
+    <div className="flex flex-col items-center justify-center  ">
+      <div className={cn(`w-full grid  ${isTerrasePage ? 'max-w-[90.31%]':'md:max-w-[93.1%] max-w-[89.1%]'} grid-cols-1 border-[#B3B3B3] border-x lg:border-b-0 `)}>
         <div className="2xl:ps-[78px] xl:ps-[68px] lg:ps-[58px] lg:h-[490px] h-[337px] flex flex-col justify-center lg:text-start text-center">
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] md:text-[26px] lg:text-[26px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ">
             {t('reviews.about.0')} {isTerrasePage ? t('reviews.about.1') : t('reviews.about.2')}
