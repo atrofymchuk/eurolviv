@@ -33,7 +33,7 @@ export const Layout = () => {
     <>
       {!isBookingPage && <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
       <ScrollToTop />
-      <div className="relative pb-[70px]">
+      <div className="relative lg:pb-0 pb-[70px]  ">
         <Routes>
           <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
           <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />

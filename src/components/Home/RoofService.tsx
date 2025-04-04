@@ -58,8 +58,8 @@ export const RoofService = () => {
                       ? "lg:text-[198px] max-w-[900px] text-[76px] md:text-[100px] sm:text-[80px] "
                       : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] xl:h-[172px] lg:h-[162px]"
                   } 
- text-center uppercase leading-[104%] tracking-[-5%] xl:mt-[29px] lg:mt-[19px]
-      w-full lg:leading-[81%]`)}
+                   text-center uppercase leading-[104%] tracking-[-5%] xl:mt-[29px] lg:mt-[19px]
+                w-full lg:leading-[81%]`)}
                 >
                   {t(item.title)}
                 </h1>
@@ -98,9 +98,9 @@ export const RoofService = () => {
                   </Link>
                   <Link
                     to={item.url}
-                    className={cn(`uppercase  rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:text-[16px] text-[12px] `, {
-                      "lg:py-[11px]  lg:px-[32px]": index !== 2,
-                      "lg:py-[13px]  lg:px-[59.5px]": index === 2,
+                    className={cn(`uppercase  rounded-full font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:text-[16px] px-[10px] text-[12px] `, {
+                      "md:py-[11px]  lg:px-[32px]": index !== 2,
+                      "md:py-[13px]  lg:px-[59.5px] px-[40px]": index === 2,
                     })}
                   >
                     {t("buttons.details")}

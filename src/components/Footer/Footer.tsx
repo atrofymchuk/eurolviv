@@ -48,8 +48,8 @@ export const Footer = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-col lg:mt-auto lg:mb-5 2xl:mb-8  lg:ms-0 ms-[20%] ">
-                  <div className="lg:mt-44.25">
+                <div className="flex flex-col lg:mt-auto   lg:ms-0 ms-[20%] ">
+                  <div className="lg:mt-40">
                     <p className=" font-cofo-medium 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase text-[12px]">
                       {t("footer.socialMedia")}
                     </p>
@@ -73,7 +73,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="uppercase underline  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-y-21 xl:translate-y-10.25 translate-y-26  lg:block hidden">
+            <p className="uppercase underline  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-y-33 xl:translate-y-23.5 translate-y-40.5  lg:block hidden">
               {t("footer.privacyPolicy")}
             </p>
           </div>
