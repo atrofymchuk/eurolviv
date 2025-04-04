@@ -90,7 +90,7 @@ export const HeaderNav = memo(
             scrolled={scrolled} 
           />
 
-          <MobileBookingButton scrolled={scrolled} />
+          <MobileBookingButton scrolled={scrolled} pathname={pathname}  changeLanguage={changeLanguage}/>
 
           <DesktopNavigation
             navLinks={navLinks}

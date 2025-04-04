@@ -23,7 +23,7 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
 
   return (
     <button
-      className={cn(`flex items-center uppercase ${isMobile ? 'lg:hidden' : 'hidden lg:flex'}`)}
+      className={cn(`flex items-center uppercase ${isMobile ? 'lg:hidden' : 'lg:flex'}`)}
       onClick={() => changeLanguage()}
     >
       <CiGlobe className={cn("w-4 h-4 lg:w-4.5 lg:h-4.5 me-1", getTextColor(currentLang))} />

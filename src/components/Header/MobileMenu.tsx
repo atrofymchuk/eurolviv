@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import burgerMenu from "../../assets/icons/burgerMenu.svg";
 import { Link } from "react-router-dom";
+import { ChangeLangButton } from "./ChangeLangButton";
 
 type MobileMenuButtonProps = {
   toggleMenu: () => void;
@@ -41,28 +42,42 @@ export const MobileMenuButton = ({
 
 type MobileBookingButtonProps = {
   scrolled: boolean;
+  pathname: string;
+  changeLanguage: () => void;
 };
 
-export const MobileBookingButton = ({ scrolled }: MobileBookingButtonProps) => {
+export const MobileBookingButton = ({
+  scrolled,
+  pathname,
+  changeLanguage,
+}: MobileBookingButtonProps) => {
   const { t } = useTranslation();
 
   return (
     <div className="w-1/3 lg:fit items-center justify-center lg:hidden flex">
-      <Link
-        to="/booking"
-        className={cn(
-          `w-fit bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl hover:bg-[#922b1f] self-center
+      {pathname === "/" ? (
+        <ChangeLangButton
+          changeLanguage={changeLanguage}
+          isMobile={false}
+          scrolled={scrolled}
+        />
+      ) : (
+        <Link
+          to="/booking"
+          className={cn(
+            `w-fit bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl hover:bg-[#922b1f] self-center
           font-cofo-medium text-[10px] justify-end h-fit
           ${scrolled ? "opacity-0" : ""}`,
-          {
-            "text-white": !scrolled,
-            "text-black": scrolled,
-          }
-        )}
-      >
-        {t("buttons.bookRoomArr.0")}
-        <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>
-      </Link>
+            {
+              "text-white": !scrolled,
+              "text-black": scrolled,
+            }
+          )}
+        >
+          {t("buttons.bookRoomArr.0")}
+          <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>
+        </Link>
+      )}
     </div>
   );
-}; 
+};
