@@ -4,7 +4,7 @@ import {
   aboutImageScd,
   aboutImageTrd,
 } from "../../store/exportsImg";
-import "./restaurant.css";
+
 export const AboutRestaurant = () => {
   const { t } = useTranslation();
   return (

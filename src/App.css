@@ -28,21 +28,6 @@
 .special-offers-slider > .slick-list >.slick-track>.slick-current .slick-slide .slick-slide   {
   width: 589px !important;
 }
-/* .home-slider > .slick-list >.slick-track>.slick-slide > div > div  {
-  width: fit-content !important;
-
-
-}
-.home-slider > .slick-list >.slick-track>.slick-slide > div   {
-  width: fit-content !important;
-
-
-}
-.home-slider > .slick-list >.slick-track>.slick-slide    {
-  width: fit-content !important;
-
-
-} */
 
 .roomslider > .slick-list >.slick-track>.slick-slide >div  {
   width: 509px !important;
@@ -123,13 +108,26 @@
     margin-left: 0px !important; 
   }
   
- /* .hall > .slick-list > .slick-track>.slick-slide{
-    max-width: fit-content !important;
 
-  }  */
   .review > .slick-list >.slick-track>.slick-active  {
     width: 299px !important;
 
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .lg\:font-cofo-medium {
+      font-family: 'CoFoSans-Medium', sans-serif;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lg\:font-cofo-medium {
+      font-family: 'CoFoSans', sans-serif;
+  }
+  .md\:font-cofo-medium {
+    font-family: 'CoFoSans-Medium', sans-serif;
   }
 }
 

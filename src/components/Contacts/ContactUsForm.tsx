@@ -1,11 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FormInput } from "./FormInput";
-
+import { schema } from "../../schemas/contactUs";
 interface FormData {
   name: string;
   email: string;
@@ -15,17 +14,7 @@ interface FormData {
 export default function ContactUsForm() {
   const { t } = useTranslation();
 
-  const schema = yup.object().shape({
-    name: yup
-      .string()
-      .required(t("validation.name"))
-      .min(2, t("validation.nameShort")),
-    email: yup
-      .string()
-      .email(t("validation.emailInvalid"))
-      .required(t("validation.email")),
-    message: yup.string().required(t("validation.message")),
-  });
+
 
   const {
     register,
@@ -57,7 +46,7 @@ export default function ContactUsForm() {
         <form
           onSubmit={handleSubmit(onSubmit, (err) => {
             Object.values(err).forEach((error) => {
-              toast.error(error.message);
+              toast.error(error?.message ? t(error.message) : t("validation.genericError"));
             });
           })}
           className="lg:space-y-[14px] lg:pt-[31px] pt-[22px] space-y-1.5 flex flex-col items-center md:items-start w-full"
