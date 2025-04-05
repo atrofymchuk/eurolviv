@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import {
-  champagneAboutSlider,
   mirrorAboutSlider,
+  champagneAboutSlider,
   bathroomAboutSlider,
   bedroomAboutSlider,
 } from "../../store/exportsImg";
@@ -15,10 +15,10 @@ import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
 const slides = [
+  mirrorAboutSlider,
   champagneAboutSlider,
   bathroomAboutSlider,
   bedroomAboutSlider,
-  mirrorAboutSlider,
 ];
 
 const ImageSlider = () => {
