@@ -13,9 +13,10 @@ type HallCardProps = {
     capacity: string;
   };
   index: number;
+  isEng: boolean;
 };
 
-export const HallCard = ({ hall, index }: HallCardProps) => {
+export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
   const { t } = useTranslation();
   return (
     <div className={`flex flex-col items-center justify-center w-fit h-fit pb-20 ${index !== 1 ? '-translate-y-6' : ''} `}>
@@ -44,7 +45,7 @@ export const HallCard = ({ hall, index }: HallCardProps) => {
         <div className="flex items-center justify-center space-x-1">
           <img src={guest} alt="guestico" className="w-4 h-4" />
           <p className="uppercase text-sm sm:text-xs md:text-[12px] lg:text-lg 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[#252526]">
-            {t("home.conferenceService.capacity")}: {t(hall.capacity).slice(0, -2) + "."}
+            {t("home.conferenceService.capacity")}: { isEng ? t(hall.capacity) : t(hall.capacity).slice(0, -2) + "."}
           </p>
         </div>
         {index === 1 && (

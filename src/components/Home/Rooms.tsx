@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
 import { useRoomStore } from "../../store/useRoomsStore";
+
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
   const { t } = useTranslation();
@@ -47,7 +48,7 @@ export const RoomsHome = () => {
                   <Link
                     to="/rooms"
                     className="uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
-                       bg-[#EDE8E5] whitespace-nowrap 2xl:px-[19px] 2xl:py-[11px] xl:px-[20px] xl:py-[12px] lg:px-[18px] lg:py-[10px]  py-[12.5px] px-[14.5px] 
+                       bg-[#EDE8E5] whitespace-nowrap  lg:w-[170px] h-[46px] py-[12.5px] px-[14.5px] 
                     rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px]  text-[12px]"
                   >
                     {t("buttons.viewRooms")}

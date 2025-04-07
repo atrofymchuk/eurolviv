@@ -27,7 +27,7 @@ export const BookingSection = () => {
         </p>
         <div className="lg:mt-[29px] mt-8 mb-0">
           <p className="uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-3">
-            {t("footer.restaurant")}/{t("footer.terrace")}
+            {t("contacts.info.restaurand/terrase")}
           </p>
 
           <ul className="lg:space-y-[14px] space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase lg:leading-[100%] text-[12px]">

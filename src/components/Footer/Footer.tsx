@@ -27,12 +27,12 @@ export const Footer = () => {
           className="absolute inset-0 w-full h-[120%] z-0 "
         />
       </InViewWrapper>
-      
+
       <div className="lg:w-full w-[100%] ">
         <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between w-full   ">
-          <div className="lg:order-1 order-2  lg:w-[21.9%] lg:pt-[17px] flex flex-col lg:items-center  lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] ">
-            <div className="flex flex-col  h-fit justify-between lg:mt-0  mt-[35px]  ">
-              <div className="grid grid-cols-2  lg:grid-cols-1  h-full lg:h-fit  ">
+          <div className="lg:order-1 order-2  lg:w-[21.9%] lg:pt-[17px] flex flex-col lg:items-center lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] ">
+            <div className="flex flex-col  h-full justify-between lg:mt-0  mt-[35px]  ">
+              <div className="lg:flex lg:flex-col justify-between h-full grid grid-cols-2  lg:grid-cols-1   ">
                 <div className="space-y-3 lg:w-full w-[180px]">
                   <ul className="lg:space-y-[11px] space-y-[7px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase  underline lg:no-underline tracking-[0.09em] ">
                     <li className="font-cofo-medium">{t("footer.about")}</li>
@@ -43,6 +43,7 @@ export const Footer = () => {
                     <li className="font-cofo-medium">
                       {t("footer.restaurant")}
                     </li>
+                    <li className="font-cofo-medium">{t("footer.terrace")}</li>
                     <li className="font-cofo-medium">
                       {t("footer.specialOffers")}
                     </li>
@@ -50,7 +51,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="flex flex-col lg:mt-auto   lg:ms-0 ms-[20%] ">
-                  <div className="lg:mt-40">
+                  <div className="mt-auto">
                     <p className=" font-cofo-medium 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase text-[12px]">
                       {t("footer.socialMedia")}
                     </p>
@@ -86,8 +87,8 @@ export const Footer = () => {
           <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col items  lg:pt-[17px]">
             <div className="w-full flex flex-col lg:ps-[32px] ">
               <div>
-                <div className="flex flex-col items-center">
-                  <h4 className="text-lg font-cofo-medium lg:text-[24px]  text-[20px] leading-[108%] font-cofo px-4 tracking-[-0.05em] lg:max-w-[420px] xl:max-w-[479px] max-w-[315px] lg:text-start text-center w-full">
+                <div className="flex flex-col items-center md:items-start">
+                  <h4 className="text-lg font-cofo-medium lg:text-[24px]  text-[20px] leading-[108%] font-cofo px-4 md:px-0 tracking-[-0.05em] lg:max-w-[420px] xl:max-w-[479px] max-w-[315px] lg:text-start text-center w-full">
                     {t("footer.getNews")}
                   </h4>
                 </div>

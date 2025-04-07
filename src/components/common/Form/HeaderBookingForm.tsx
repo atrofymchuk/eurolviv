@@ -49,7 +49,7 @@ export const HeaderBookingForm = () => {
             control={control}
             errors={errors}
             label="home.header.bookingForm.checkIn"
-            placeholderKey="home.header.bookingForm.chooseDate"
+            placeholderKey="home.header.bookingForm.chooseDateIn"
           />
 
           <DatePickerField
@@ -57,7 +57,7 @@ export const HeaderBookingForm = () => {
             control={control}
             errors={errors}
             label="home.header.bookingForm.checkOut"
-            placeholderKey="home.header.bookingForm.chooseDate"
+            placeholderKey="home.header.bookingForm.chooseDateOut"
           />
         </div>
         <div className="">

@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import { useRoomStore } from "../../store/useRoomsStore";
 import { HallList } from "./HallList";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import { ConferenceServiceSlider } from "./ConferenceServiceSlider";
+import cn from "classnames";
 export const ConferenceService = () => {
+  const { t, i18n } = useTranslation();
   const { halls } = useRoomStore();
+
+  const isEng = i18n.language === "en";
+
   return (
     <div className="flex flex-col items-center relative  bg-[#EDE8E5]  w-full overflow-y-hidden overflow-x-hidden">
       <div className="absolute grid grid-cols-[89.07%] h-full w-full justify-center md:grid-cols-[29.69%_30.16%_29.74%] z-0 overflow-y-hidden">
@@ -25,8 +30,14 @@ export const ConferenceService = () => {
               {t("home.conferenceService.heading")}
             </p>
             <h1
-              className="uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] 
-            2xl:text-[185px] text-[#252526] leading-[81%] tracking-[-7%] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1"
+              className={cn(
+                `uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] 
+             text-[#252526] leading-[81%] tracking-[-7%] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1`,
+                {
+                  "2xl:text-[170px]": isEng,
+                  "2xl:text-[185px]": !isEng,
+                }
+              )}
             >
               {t("home.conferenceService.title")}
             </h1>
@@ -39,7 +50,9 @@ export const ConferenceService = () => {
             <div className=" text-center flex items-center justify-center xl:mb-[48px] lg:mb-[32px] md:mb-[24px]">
               <Link
                 to="/conference-service"
-                className="w-fit md:py-[10px] md:px-[16.5px] bg-[#8c331b] block px-4.25 py-2.5 text-[12px]  xl:text-[16px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium"
+                className={`w-fit md:py-[10px] md:px-[16.5px] bg-[#8c331b] block px-4.25 py-2.5 text-[12px]  xl:text-[16px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${
+                  isEng ? "lg:w-[165px]" : ""
+                }`}
               >
                 {t("buttons.viewHalls")}
               </Link>
@@ -48,7 +61,7 @@ export const ConferenceService = () => {
           <div className=""></div>
         </div>
         <div className="h-full hidden md:block">
-          <HallList halls={halls} />
+          <HallList halls={halls} isEng={isEng} />
         </div>
       </div>
       <div className="h-full block md:hidden max-w-screen mt-[46px] mb-[75px]">

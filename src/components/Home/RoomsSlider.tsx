@@ -179,7 +179,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     {isActive && (
                       <Link
                         to={`/rooms/${el.type}`}
-                        className="border border-[#FFFFFF] uppercase text-[12px] xl:text-[16px] font-cofo-medium w-fit px-[20.5px] py-[10px] xl:px-[28.5px] xl:py-[12px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
+                        className="border border-[#FFFFFF] uppercase text-[12px] xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px]  rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
                       >
                         {t("buttons.details")}
                       </Link>

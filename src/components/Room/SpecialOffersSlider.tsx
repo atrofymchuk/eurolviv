@@ -16,7 +16,7 @@ type SpecialOffersSliderToProps = {
 export const SpecialOffersSlider = forwardRef<
   Slider,
   SpecialOffersSliderToProps
->(({isHome}, ref) => {
+>(({ isHome }, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { specialOffers } = useSpecialOffersStore();
   const { t } = useTranslation();
@@ -70,8 +70,9 @@ export const SpecialOffersSlider = forwardRef<
               }`,
               {
                 "border-s lg:border-s ": currentSlide === index,
-              },{
-                "border-s-0 ": isHome && currentSlide === index
+              },
+              {
+                "border-s-0 ": isHome && currentSlide === index,
               },
               {
                 "border-e-0 ": specialOffers.length - 1,
@@ -92,10 +93,15 @@ export const SpecialOffersSlider = forwardRef<
                 })}
               >
                 <p
-                  className={cn(`lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] flex xl:ms-4.5 xl:mt-4.5  ms-3 mt-3 w-fit
+                  className={cn(
+                    `lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] flex xl:ms-4.5 xl:mt-4.5  ms-3 mt-3 w-fit
         uppercase lg:w-fit border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] md:leading-[16px] xl:py-[12px] z-10  
         md:py-[11px] py-[7px] px-[12px] xl:px-[16px] md:px-[10px] rounded-full font-cofo-medium lg:text-[16px] md:text-[13px] 
-        text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance]`)}
+        text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
+                    {
+                      "me-44": index === 0,
+                    }
+                  )}
                 >
                   {t(el.offer)}
                 </p>
@@ -108,11 +114,11 @@ export const SpecialOffersSlider = forwardRef<
             <p className="uppercase text-[10px] w-[219px] pt-[13px] text-[#8F8F8F] md:text-[14px] lg:text-[16px] md:leading-[15px] lg:leading-[17px] leading-[11px] md:w-[300px] lg:w-fit">
               {t(el.cardDesc)}
             </p>
-            <div className="text-start w-full  lg:mb-4 md:mb-3 mb-2 mt-auto">
+            <div className="flex flex-col text-start w-full lg:mb-4 md:mb-3 mb-2 mt-auto">
               <Link
                 to="/special-offers"
-                className="mt-auto font-cofo-medium border border-[#8C331B] text-[#8C331B] px-5.75 py-2.5 xl:px-7.25 xl:py-3 rounded-full uppercase text-[12px] md:text-[14px] xl:text-[16px]
-                 hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition-colors duration-300 font-cofo"
+                className="mt-auto inline-flex items-center justify-center font-cofo-medium border border-[#8C331B] text-[#8C331B] px-5.75 py-2.5 xl:px-7.25 xl:py-3 rounded-full uppercase text-[12px] md:text-[14px] xl:text-[16px]
+                 hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition-colors duration-300 lg:w-[170px] lg:h-[46px]"
               >
                 {t("buttons.details")}
               </Link>

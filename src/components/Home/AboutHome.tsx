@@ -56,10 +56,10 @@ export const AboutHome = () => {
         <div className="border-x   border-[#C7C7C7] ps-[14px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-5 xl:pb-0">
             <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[90%] tracking-[-7%]">
-              {t("home.about.heading").split(" ").slice(0, -1).join(" ")}
+              {t("home.about.heading.0")}
               <br />
               <span className="md:whitespace-nowrap">
-                {t("home.about.heading").split(" ").slice(-1)}
+                {t("home.about.heading.1")}
               </span>
             </h1>
           </div>
