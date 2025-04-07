@@ -70,7 +70,7 @@ export const Guarantee = () => {
 
               <button
                 onClick={() => onOpenModal("order")}
-                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px]  2xl:w-fit self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
+                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px]  self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
                 font-cofo-medium 2xl:text-base xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3  "
               >
                 {t("buttons.bookRoomArr.0")}

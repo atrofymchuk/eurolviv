@@ -17,7 +17,7 @@ export const Location = () => {
           <img src={location} alt="location" />
           {t("contacts.info.addressDesc")}
         </p>
-        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px]" />
+        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] lg:w-[197px] w-[178px] text-center" />
       </div>
 
       <div className="relative w-full lg:h-full h-[332px] mt-[18px]">

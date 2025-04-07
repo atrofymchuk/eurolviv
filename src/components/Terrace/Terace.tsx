@@ -13,6 +13,8 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
   const { descOne, descTwo, descThree, title, preview } = terase;
   const { t } = useTranslation();
 
+  const isLowerTerrase = index === 2;
+
   return (
     <>
 
@@ -40,7 +42,7 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
                   </h1>
                   <div className="space-y-4 xl:w-[106%] 2xl:mt-[62px] mt-[27px]">
                     <div className="leading-[100%]">
-                      <FormatBoldText desc={descOne} />
+                      <FormatBoldText desc={descOne} isLowerTerrase={isLowerTerrase} />
                     </div>
                     <div className="leading-[100%]">
                       <FormatBoldText desc={descTwo} />

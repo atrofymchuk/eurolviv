@@ -1,5 +1,5 @@
 import { ViewMenuButton } from "../Buttons/ViewMenu";
-
+import { useTranslation } from "react-i18next";
 type ConferenceMenuCardToProps = {
   img: string;
   text: string;
@@ -9,6 +9,7 @@ export const ConferenceMenuCard = ({
   img,
   text,
 }: ConferenceMenuCardToProps) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center ">
       <img
@@ -20,7 +21,9 @@ export const ConferenceMenuCard = ({
       xl:pt-[28px] lg:text-[24px] lg:tracking-[-7%] lg:leading-[104%] lg:pt-[20px] ">
         {text}
       </p>
-    <ViewMenuButton className="2xl:mt-[25px] xl:mt-[24px] lg:mt-[20px] text-[16px]" />
+    <ViewMenuButton className="2xl:mt-[25px] xl:mt-[24px] lg:mt-[20px] lg:text-[16px] lg:w-[209px] " >
+      {t("buttons.viewMenuButton")}
+    </ViewMenuButton>
     </div>
   );
 };

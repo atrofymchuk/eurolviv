@@ -26,9 +26,9 @@ export type TerraseT = {
   title: string;
   titleTwo: string;
   preview: string[];
-  descOne: { text: string; isBold?: boolean }[];
-  descTwo: { text: string; isBold?: boolean }[];
-  descThree: { text: string; isBold?: boolean }[];
+  descOne: { text: string; isBold?: boolean, isEng?: boolean }[];
+  descTwo: { text: string; isBold?: boolean, isEng?: boolean }[];
+  descThree: { text: string; isBold?: boolean, isEng?: boolean }[];
 };
 
 export type Room = {
@@ -61,6 +61,10 @@ export type ConferenceService = {
   };
   swiperImages: string[];
   showcaseSwiperImages: string[];
+  viewShowcaseSwiperImages: {
+    ua: string[];
+    eng: string[];
+  };
   icons: { src: string; text: string }[];
 };
 
@@ -148,12 +152,27 @@ export interface Review {
   name: string;
   country: string;
   flag: string;
+  textUa: string;
+  textEn: string;
   text: string;
 }
 
 export interface Reviews {
-  ua: Review[];
-  abroad: Review[];
+  ua: Array<{
+    id: number;
+    name: string;
+    country: string;
+    flag: string;
+    textUa: string;
+    textEn: string;
+  }>;
+  abroad: Array<{
+    id: number;
+    name: string;
+    country: string;
+    flag: string;
+    text: string;
+  }>;
 }
 
 export interface RestaurantReview {

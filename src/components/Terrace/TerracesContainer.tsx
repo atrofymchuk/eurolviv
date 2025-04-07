@@ -12,7 +12,7 @@ export const TerrasesContainer = () => {
             className="flex flex-col items-center justify-center relative  max-w-screen"
             key={index}
           >
-            <Terrase terase={el} index={index} />
+            <Terrase terase={el} index={index} isTerrase={true} />
           </div>
         ))}
       </div>

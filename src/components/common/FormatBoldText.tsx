@@ -1,20 +1,33 @@
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 
+interface TextItem {
+  text: string;
+  isBold?: boolean;
+  isEng?: boolean;
+}
+
 export const FormatBoldText = ({
   desc,
+  isLowerTerrase,
 }: {
-  desc: { text: string; isBold?: boolean }[];
+  desc: TextItem[];
+  isLowerTerrase?: boolean;
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEng = i18n.language === "en";
+
   return (
     <>
-      {desc.map((item: { text: string; isBold?: boolean }, index: number) => (
+      {desc.map((item: TextItem, index: number) => (
         <span
           key={index}
           className={cn(
             item.isBold && "font-cofo-medium",
-            `text-[12px] uppercase text-[#444444] 2xl:text-[18px] md:leading-[120%] leading-[100%] `
+            isEng && item.isEng === true && "hidden",
+            isLowerTerrase && !isEng && index === 4 && "hidden",
+
+            `text-[12px] uppercase text-[#444444] 2xl:text-[18px] md:leading-[120%] leading-[100%]`
           )}
         >
           {t(item.text)}

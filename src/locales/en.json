@@ -7,7 +7,7 @@
     },
     "home":{
         "header":{
-            "description":"The place filled with warmth. The city that uplifts. Eurohotel is your gateway to unforgettable experiences in Lviv.",
+            "description":"The place filled with warmth. The city that uplifts. Eurohotel is your gateway to unforgettable experiences in Lviv.",
             "bookingForm":{
                 "chooseDateIn":"check-in",
                 "chooseDateOut":"check-out",
@@ -45,14 +45,14 @@
         },
         "roofService":{
             "restaurant":{
-                "title":"Restaurant ",
+                "title":"Restaurant ",
                 "titleDesc":"A Taste of Heaven",
-                "desc":"The eighth floor offers sweeping views of the old city, while the chef’s kitchen serves up fresh culinary delights.Signature cocktails and a chic interior round out the experience."
+                "desc":"The eighth floor offers sweeping views of the old city, while the chef’s kitchen serves up fresh culinary delights.Signature cocktails and a chic interior round out the experience."
             },
             "karaoke":{ 
                 "title":"Karaoke Lounge",    
                 "titleDesc":"A Bright Night Pulse",
-                "desc":"Your unwind-and-enjoy spot. Hookah, your favorite tunes, and a laid-back vibe. A place where evenings turn unforgettable and emotions run wild"
+                "desc":"Your unwind-and-enjoy spot. Hookah, your favorite tunes, and a laid-back vibe. A place where evenings turn unforgettable and emotions run wild"
             },
             "terrace":{ 
                 "title":"rooftop terrace",
@@ -66,107 +66,113 @@
     },
     "about":{
             "header":{
-                "desc":["Простір, що огортає теплом. Місто, яке надихає. ", "Євроготель — ваша особлива історія львівських вражень"]
+                "desc":["The place filled with warmth. The city that uplifts. ", "Eurohotel is your gateway to unforgettable experiences in Lviv."]
             },
             "about":{
-                "title":["Євроготель-","Історія гостинності"],
-                "year":"1973 році",
-                "desc":["Розташований в самому серці Львова, Євроготель поєднує традиції ","з сучасною вишуканістю"],
-                "photoDesc":["Історія цих стін починається ще в ", " коли тут був відкритий готель, що став символом своєї епохи. Тут зупинялися зірки культового фільму «ДʼАртаньян і три мушкетери», відпочивала творча еліта, народжувалися нові традиції.", "Сучасний Євроготель розпочав свою історію після масштабної реконструкції 2007 року. Сьогодні він дарує своїм гостям неповторну атмосферу старого міста разом із бездоганним сервісом європейського рівня."]
+                "title":["EUROHOTEL-","A LEGACY OF HOSPITALITY"],
+                "year":"1973 ",
+                "desc":["Located in the heart of Lviv, Eurohotel blends timeless ","tradition with modern elegance."],
+                "photoDesc":["The hotel’s story began in ", "when it first opened its doors and quickly became a symbol of its era. Over the years, it has hosted stars from the iconic film D'Artagnan and the Three Musketeers, welcomed creative minds, and set the stage for new traditions.", "After a major renovation in 2007, Eurohotel began a new chapter. Today, it offers guests the charm of the old city with top-tier European service."]
             },
             "advantages":{
-                "title":"інформація про готель",
-                "title2":"послуги та зручності",
-                "services":["номерів: 100","номери для гостей з інвалідністю","pet-friendly","міський паркінг поруч","конференц-зали","ресторан","караоке-лаунж","літня тераса на даху"],
-                "servises2":["цілодобова стійка рецепції","цілодобовий рум-сервіс","трансфер","сніданок","кондиціонер","безкоштовний Wi-Fi","прання","прасування"]
+                "title":"HOTEL INFORMATION",
+                "title2":"SERVICES & AMENITIES",
+                "services":["Rooms: 100","Accessible rooms for guests with disabilities","pet-friendly","Public parking nearby","Conference halls","Restaurant","Karaoke lounge","Rooftop summer terrace"],
+                "servises2":["24/7 front desk","24/7 room service","Transfer","Breakfast","Air conditioning","Free Wi-Fi","Laundry service","Ironing service"]
             },
             "mission":{
-                "title":"місія",
-                "heading":["елегантність,","переосмислена по-новому"],
-                "desc":["У Євроготелі ми створили простір, де діловий ритм сучасності переплітається з неквапливою грацією старого Львова","Ми віримо в гостинність, яка промовляє просто до серця та в бездоганний сервіс, що передбачає ваші потреби",  "Ми створені, щоб закохати вас у Львів, і наша найбільша винагорода —зустрічати гостей, що повертаються до нас знову і знову" ,"ми створили простір, де діловий ритм сучасності переплітається з неквапливою грацією старого Львова"]
+                "title":"MISSION",
+                "heading":["ELEGANCE, REDEFINED,",""],
+                "desc":["At Eurohotel, we’ve created a space where the dynamic rhythm of modern business blends seamlessly with the timeless charm of old Lviv.",
+                  "We believe in hospitality that speaks directly to the heart and service that anticipates your every need.","We are created to fall in love with Lviv, and our greatest reward is welcoming guests who return to us again and again",
+                  "We’re here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."]
             },
             "concepts":{
     
-                "title":"досконалість",
-                "heading":["у кожній деталі"],
-                "desc":"наші концепції",
+                "title":"PERFECTION",
+                "heading":["IN EVERY DETAIL"],
+                "desc":"of our concept",
                 "frstCard":{
-                    "title":["комфорт", "без компромісів"],
-                    "desc":"Стиль, комфорт і увага до деталей — у кожному номері. Тут час ніби сповільнюється, даруючи момент спокою серед міської метушні і наповнюючи кожну мить гармонією"
+                    "title":["Comfort without ", "compromise"],
+                    "desc":"Style, comfort, and attention to detail define each room. Here, time seems to slow down, offering a moment of peace amid the city’s hustle and bustle and filling every moment with harmony."
                 },
                 "secondCard":{
-                    "title":["краєвиди,", "що надихають"],
-                    "desc":"У панорамному ресторані RUFF та з тераси місто відкривається по-новому. Тут, під львівським небом, локальні смаки набувають сучасного звучання, а панорама міста стає найкращим акомпанементом до вашого відпочинку"
+                    "title":["Inspiring ,", "views"],
+                    "desc":"The panoramic RUFF restaurant and terrace reveal the city in a whole new light. Here, under the Lviv sky, local flavors take on a modern twist, and the cityscape becomes the perfect backdrop for your relaxation."
                 },
                 "thirdCard":{
-                    "title":["настав час для", "бізнес-справ?"],
-                    "desc":"Натхненні ідеї народжуються саме тут. Наші конференц-зали поєднують продуманий простір та бездоганний сервіс, щоб ви могли сфокусуватися на справах. Ділові зустрічі, зігріті львівською гостинністю"
+                    "title":["Time for", "business?"],
+                    "desc":"This is where fresh ideas take shape. Our conference halls are designed with care and paired with impeccable service, so you can focus on what truly matters. Hold your meetings in Lviv’s welcoming spirit."
                 },
                 "fourthCard":{
-                    "title":["вечірня", "енергетика"],
-                    "desc":"Стильний караоке-лаунж – місце, де кожен вечір вирує життям, пульсує енергією вечірнього міста, запрошуючи розділити радість моменту. Тут музика об’єднує, а спогади стають особливими"
+                    "title":["Evening ", "vibes"],
+                    "desc":"Our stylish karaoke lounge is where every night buzzes with energy. Beating with the rhythm of the city, it welcomes you to embrace the moment. It’s a place where music brings people together, and memories last a lifetime."
                 }   
             },
             "whereWeAre":{
-                "title":"розташування",
-                "desc":["Вул. Тершаковців 6А, Львів, 79005, Україна","Серце міста", "- історичний центр Львова знаходиться на відстані всього лиш кроку від нашого готелю.","Оцінка наших гостей за відмінне розташування - 9,2."],
-                "rating":"Оцінка наших гостей за відмінне розташування - 9,2.",
-                "infrastructureTitle":"Інфраструктура",
-                "placesTitle":"Навколо готелю",
-                "infrastructureDesc":"Зручне розташування поруч із головними пам’ятками, культурними осередками, ресторанами та магазинами.",
-                "whatIsClose":"Що поблизу?",
+                "title":"LOCATION",
+                "desc":["6A Tershakovtsiv Str., Lviv, 79005, Ukraine","The heart of the city", " - the historic center of Lviv—is just a step away from our hotel.","Our guests rate our location highly with a score of 9.2."],
+                "rating":"Our guests rate our location highly with a score of 9.2.",
+                "infrastructureTitle":"INFRASTRUCTURE",
+                "placesTitle":"Hotel surroundings",
+                "infrastructureDesc":"Conveniently located near major attractions, cultural landmarks, restaurants, and shops.",
+                "whatIsClose":"nearby?",
                 "places":{
-                    "heading":"Головні визначні місця",
-                    "title":["Музей “Івана Георгія Пінзеля”", "800 m"],
-                    "title2":["Музей-заповідник “Личаківський цвинтар”", "1.1 km"],
-                    "title3":["Площа Галицька та Храм Св. Андрія", "1 km"],
-                    "title4":["Військовий цвинтар “Марсове поле”", "1.3 km"],
-                    "title5":["Це́рква Пресвято́ї Євхари́стії", "1.3 km"],
-                    "title6":["Львівський історичний музей", "1.1 km"],
-                    "title7":["Площа Ринок", "1.2 km"],
-                    "title8":["Оперний театр", "1.7 km"]            
+                    "heading":"Major attractions",
+                    "title":["Johann Georg Pinsel Sculpture Museum", "800 m"],
+                    "title2":["Lychakiv Cemetery Museum-Reserve", "1.1 km"],
+                    "title3":["Halytska Square & St. Andrew’s Church", "1 km"],
+                    "title4":["Mars Field Military Cemetery", "1.3 km"],
+                    "title5":["Church of the Holy Eucharist", "1.3 km"],
+                    "title6":["Lviv Historical Museum", "1.1 km"],
+                    "title7":["Rynok Square", "1.2 km"],
+                    "title8":["Lviv Opera House", "1.7 km"]            
                 },
                 "infrastructure":{
-                    "title":["Нова пошта відділення № 31", "150 m"],
-                    "title2":["Супермаркет", "130 m"],
-                    "title3":["Аптека", "170 m"],
-                    "title4":["Стоматологічна клініка", "30 m"],
-                    "title5":["Обмін валют", "120 m"],
-                    "title6":["ЛНУ ветеринарної медицини та біотехнологій ім.С. Ґжицького", "290 m"],
-                    "title7":["ЛНМУ ім. Д. Галицького", "750 m"],
-                    "title8":["ТЦ “Роксолана”", "800 m"]
+                    "title":["Nova Poshta Branch #31", "150 m"],
+                    "title2":["Supermarket", "130 m"],
+                    "title3":["Pharmacy", "170 m"],
+                    "title4":["Dental clinic", "30 m"],
+                    "title5":["Dental clinic", "120 m"],
+                    "title6":["Lviv National University of Veterinary Medicine and Biotechnologies", "290 m"],
+                    "title7":["Danylo Halytsky Lviv National Medical University", "750 m"],
+                    "title8":["Roksolana Shopping Mall", "800 m"]
                 }
             }
     },
     "reviews":{
-            "title":"Відгуки",
-            "desc":"100 номерів, де кожна деталь творить особливу естетику. Від стандартних кімнат до люксів — незмінно висока якість сервісу.",
-            "heading":"наших ",
-            "heading2":"гостей",
-            "review":"відгук",
-    
-            "about":["Про", "терасу", "ресторан"],
-            "desc2":"Історія нашого ресторану пишеться вашими враженнями. Дякуємо, що ділитеся ними."
+            "title":"Reviews",
+            "desc":"100 rooms, where each detail creates a unique aesthetic. From standard rooms to luxury suites, consistently high service quality.",
+            "heading":"from ",
+            "heading2":"our guests",
+            "review":"review",
+            "reviewAbout":"guest",
+            "about":["About", "the", "restaurant"],
+            "desc2":"The story of our restaurant is shaped by your experiences.Thank you for sharing them with us."
     },
     "rooms":{
-            "rooms":"Номери",
+            "rooms":"rooms",
             "header":{
-                "title":"номери",
-                "desc":"Ми цінуємо вашу довіру і робимо все, щоб ваше перебування стало для вас теплим і незабутнім досвідом"
+                "title":"rooms",
+                "desc":"We value your trust and do our best to make your stay a warm and unforgettable experience."
             },
             "about":{
-                "heading":["100 номерів"," кожен з яких" ," продуманий до найменших" ," деталей", " дрібниць"],
-                "desc":"Забронюйте номер безпосередньо на сайті та гарантовано отримайте найкращу ціну прямо зараз",
-                "area":"площа",
-                "guests":"гостей"
+                "heading":["100 ROOMS"," EACH CAREFULLY" ," DESIGNED TO THE SMALLEST" ,"DETAIL"],
+                "desc":"Book directly on our website and get the best price guaranteed right now",
+                "area":"area",
+                "guests":"guests"
             },
             "guarantee":{
-                "heading":["гарантія найкращої ціни","при бронюванні"],
-                "headingMobile":["гарантія найкращої ", " ціни при", " бронюванні"],
-                "imgHeading":"бронюйте безпосередньо — отримуйте більше!",
-                "list":["Ми гарантуємо найвигідніший тариф при бронюванні безпосередньо у нас.","Якщо ви знайдете кращу пропозицію протягом 24 годин після бронювання, ми зрівняємо ціну та запропонуємо вам ще вигідніші умови або ж приємні бонуси.","Обирайте пряме бронювання — економте більше та насолоджуйтеся привілеями!"],
-                "onOurSite":"на нашому сайті"
+                "heading":["BEST PRICE GUARANTEE","WHEN BOOKING"],
+                "headingMobile":["BEST PRICE", " GUARANTEE", " WHEN BOOKING"],
+                "imgHeading":"Book directly—get more!",
+                "list":["We guarantee the best rate when you book directly with us."," If you find a better offer within 24 hours of booking, we will match the price or offer even better conditions or exclusive bonuses.","Choose direct booking, save more, and enjoy extra privileges!"],
+                "onOurSite":"ON OUR WEBSITE"
             }
+            
+
+           
+            
     },
     "header":{
             "about":"About Us",
@@ -183,8 +189,8 @@
         "about":"Home",
         "rooms":"Rooms",
         "conferenceServices":"",
-        "restaurant":"RUFF Restaurant",
-        "terrace":"RUFF Terrace",
+        "restaurant":"Restaurant",
+        "terrace":"Terrace",
         "specialOffers":"Special Offers",
         "contacts":"Контакти",
         "socialMedia":"We are on social media",
@@ -203,95 +209,96 @@
     },
     "room":{
         "header":{
-            "count":"кількість номерів",
-            "view":"вид з номера",
-            "arriveTime":"час заїзду",
-            "leaveTime":"час виїзду"
+            "count":"Quantity of rooms",
+            "view":"view",
+            "arriveTime":"check-in time",
+            "leaveTime":"check-out time"
         },
         "about":{
-            "area":"площа номера ",
-            "count":"кількість кімнат ",
-            "guests":"кількість гостей "
+            "area":"area",
+            "count":"rooms",
+            "guests":"guests"
         },
         "comfortBlock":{
-            "title":"зручності у вітальні",
-            "title2":"зручності в спальні",
-            "title3":"ванна кімната",
-            "title4":"зручності в номері"
+            "title":"Living room amenities",
+            "title2":"Bedroom amenities",
+            "title3":"Bathroom",
+            "title4":"Room Amenities"
         },
         "moreInfo":{
-            "title":"доступні платні послуги",
-            "title2":"додаткове місце в номері",
-            "parking":"міський паркінг знаходиться навпроти готелю. Попередня резервація місць не передбачена.",
-            "amenties":["спальне місце на дивані","доступне дитяче ліжечко","дитина до 6 років безкоштовно","старше 6 років  – 700 UAH/доба","сніданок включено","max – 2 особи"],
-            "availableService":["прання","прасування","цілодобовий рум-сервіс","pet-friendly"]
+            "title":"Available paid services",
+            "title2":"Extra bed",
+            "parking":"City parking is located opposite the hotel.Reservation of parking spots is not required.",
+            "amenties":["Sleeping area on the sofa","Children’s bed available","Children under 6 years old stay free","Children over 6 years old – 700 UAH/night",
+            "Breakfast included","Max. 2 persons"],
+            "availableService":["Laundry","Ironing","24-hour room service","pet-friendly"]
         },
         "roomNavigation":"Номери"
     },
     "contacts":{
     "header":{
         "desc":"",
-        "title":"КОНТАКТИ"
+        "title":"CONTACTS"
     },
     "info":{
-        "title":"як нас знайти?",
-        "desc":"Шукаєте ідеальне місце для відпочинку, бізнесу чи святкових подій у Львові?",
-        "contactUs":"Зв'яжіться з нами будь-яким зручним способом",
-        "socialMedia":"Ми в соціальних мережах",
-        "reception":"рецепція",
-        "booking":"відділ бронювання та конференц-сервісу",
-        "bookingDesc":"будні з 9:00 до 18:00",
-        "receptionPhone":"Цілодобово",
+        "title":"HOW TO FIND US?",
+        "desc":"Looking for the perfect place for relaxation, business, or special events in Lviv?",
+        "contactUs":"We’re here for you—reach out however you prefer.",
+        "socialMedia":"We are on social media",
+        "reception":"Reception",
+        "booking":"Booking & Conference Services",
+        "bookingDesc":"Weekdays from 09:00 to 18:00",
+        "receptionPhone":"24/7",
         "book":"відділ бронювання",
         "restaurand/terrase":"Restaurant/Terrace",
-        "address":"адреса",
-        "addressDesc":"вул.Тершаковців 6А, Львів, 79005, Україна",
+        "address":"Address:",
+        "addressDesc":"6A Tershakovtsiv Str., Lviv, 79005, Ukraine",
         "contactWithUs":"Зв'яжіться з нами будь-яким зручним способом",
-        "contactWithUsDesc":"Ми цінуємо вашу думку!",
-        "headingContactUs":"зв'яжіться з нами",
-        "review":"Якщо ви бажаєте залишити відгук чи поділитися враженнями від перебування в нашому готелі, будь ласка, напишіть нам.",
-        "writeUs":"Напишіть нам",
-        "name":"Ваше ім'я",
-        "email":"Ваш email",
-        "message":"Ваше повідомлення",
+        "contactWithUsDesc":"We value your feedback!",
+        "headingContactUs":"CONTACT US",
+        "review":"If you’d like to leave a review or share your experience with us, please write to us.",
+        "writeUs":"WRITE TO US",
+        "name":"Your name",
+        "email":"Your email",
+        "message":"Your message",
         "send":"SEND",
-        "partners":"партнерам",
-        "partnersText":["Ми відкриті до співпраці у нових цікавих проектах. Надішліть свою пропозицію на ", "info@eurohotel.lviv.ua,"," і ми обов'язково з вами зв'яжемося."],
-        "career":"кар'єра",
-        "careerText":["Якщо ви бажаєте створювати атмосферу гостинності – ми чекаємо саме на вас! Надсилайте резюме  на ","info@eurohotel.lviv.ua,"," і станьте частиною нашої команди."]
+        "partners":"PARTNERSHIPS",
+        "partnersText":["We are open to collaboration on new exciting projects. Send us your proposal at ", "info@eurohotel.lviv.ua",", and we will get back to you."],
+        "career":"CAREERS",
+        "careerText":["If you love creating a warm and welcoming atmosphere, we’d love to have you on our team! Send your CV to ","info@eurohotel.lviv.ua"," and become part of our hospitality family."]
      
     },
     "location":{
-        "locationTitle":"локація",
-        "eurohotel":"Євроготель",
-        "contactUs":"Зв'яжіться з нами будь-яким зручним способом"
+        "locationTitle":"LOCATION",
+        "eurohotel":"EUROHOTEL",
+        "contactUs":"CONTACT US"
         
     }
     },
     "conferenceService":{
     "header":{
-        "title":"конференц-сервіс",
-        "desc":"ділові зустрічі які надихають"
+        "title":"CONFERENCE SERVICES",
+        "desc":"Business meetings that spark new possibilities"
     }    ,
     "about":{
-        "area":"площа",
-        "roomFloor":"поверх",
-        "capacity":"вмістимість залу",
-        "contact":"контакти"
+        "area":"Area",
+        "roomFloor":"Floor",
+        "capacity":"Capacity",
+        "contact":"contacts"
     },
     "equipment":{
-        "title":["обладнання", "у вартості:"],
-        "price":"вартість:",
-        "day":"день",
-        "hour":"година"
+        "title":["included", "у equipment:"],
+        "price":"Rates:",
+        "day":"full day",
+        "hour":"hourly"
     },
     "conferenceMenu":{
-        "title":"додайте смаку у вашій події", 
-        "desc":"конференц-меню",
+        "title":"Add flavor to your event", 
+        "desc":"EVENT CATERING MENU",
         "menu":{
-            "title":"обіди та вечері",
-            "title1":"фуршет",
-            "title2":"каво-перерви"
+            "title":"LUNCHES AND DINNERS",
+            "title1":"BUFFET",
+            "title2":"COFFEE BREAKS"
         }
     
         
@@ -300,34 +307,36 @@
     },
     "restaurant":{
             "header":{
-                "title":"Ресторан",
-                "desc":"на гастрономічній висоті",
+                "title":"Restaurant",
+                "desc":"A Taste of Heaven",
                 "price":"вартість банкету"
             },
             "menu":{
-                "menu":"Меню",  
-                "title":["Меню, що балансує між традиціями","та сучасністю"],
-                "desc":"ретельно підібрана винна карта доповнює смакову гармонію."
+                "menu":"Menu",  
+                "title":["A perfect balance of ","tradition and innovation"],
+                "desc":"A carefully selected wine list complements the taste harmony."
             },
             "about":{
-                "title":"Про ресторан",
-                "title2":"{Р’УФ}",
+                "title":"About the Restaurant",
+                "title2":"",
                 "desc":{
-                    "first":["панорамний ресторан на ", "8 поверсі ", "Євроготелю. Звідси Львів постає у своїй первозданній красі - старовинні дахи складаються в неповторну мозаїку, а небо стає частиною інтерʼєру."],
-                    "second":["Ресторан вміщує 115 гостей", ", в меню — найкращі рецепти ", "європейської та української кухні ", "від класики до авторських інтерпретацій.", "А щоранку, коли місто лише прокидається, ми зустрічаємо вас неперевершеними сніданками з панорамою Львова."],
-                    "third":["Для наших маленьких гостей", "— особливе дитяче меню, для ділових зустрічей — збалансовані бізнес-ланчі, а для гурманів — сезонні гастрономічні відкриття."],
-                    "fourh":["Авторські коктейлі в RUFF {Р’УФ} натхненні неповторним характером міста, а"," вишукані страви", " смакують по-особливому — адже навколо такий краєвид! "]
+
+
+                    "first":["Perched on the ", "8th floor ", " of Eurohotel, RUFF is a panoramic restaurant where Lviv unfolds in all its timeless beauty. The historic rooftops form an amazing mosaic, and the sky becomes part of the ambiance."],
+                    "second":["With seating for 115 guests ", "RUFF offers a menu that celebrates the finest ", "European and Ukrainian cuisine— ", "honoring classic flavors while embracing bold, contemporary interpretations. Every morning, as the city awakens, we welcome you with exceptional breakfasts paired with stunning skyline views."],
+                    "third":["For our youngest guests, we’ve created a special kids’ menu. ","For business meetings, balanced lunch options. And for true gourmets—seasonal culinary delights."],
+                    "fourh":["Our signature cocktails ","are inspired by Lviv’s unique spirit, while"," exquisite dishes ","taste even better against the backdrop of this stunning panorama "]
                 }
             },
             "karaoke":{
-                "title":"караоке-лаунж",
-                "desc":["караоке лаунж RUFF ", "підхоплює вас на хвилі музики й підносить іще вище. Професійне обладнання і величезна колекція пісень чекають своїх зірок, а атмосферу релаксу доповнюють запашні кальяни.", "Панорамні вікна пропонують найкращий у місті фон для музичних експериментів — тут ваш голос звучить у дуеті з краєвидом вечірнього Львова."],
-                "karaokeTime":"караоке: пт-нд з 20:00"
+                "title":"Karaoke Lounge",
+                "desc":["RUFF Karaoke Lounge ", "lets you ride the wave of music and takes you even higher. With top-notch equipment and a vast song collection, it’s the perfect spot for aspiring stars, while the soothing aroma of hookahs adds to the laid-back vibe.", "The panoramic windows offer the best view in the city, setting the stage for musical experiments—your voice harmonizes with the breathtaking views of evening Lviv."],
+                "karaokeTime":"Fri-Sun from 8:00 PM"
     
             },
             "celebration":{
-                "title":"святкування та події",
-                "desc":["У RUFF кожне святкування набуває особливого шарму. Весілля, ювілей, корпоратив чи хрестини — простір ресторану легко трансформується під ваш формат, зберігаючи свою родзинку — панораму старого Львова за вікнами.", "Основна бенкетна зала на 8-му поверсі вміщує до 80 гостей, а стильний лаунж з караоке — до 40. Ми подбаємо про кожну деталь, щоб ваше свято було бездоганним"]
+                "title":"Celebrations & Events",
+                "desc":["At RUFF, every event finds its perfect sound. Whether it’s a wedding, anniversary, corporate gathering, or christening, the restaurant’s space can be easily transformed to suit your needs, all while keeping its signature— the panoramic view of Old Lviv just outside the window.", "The main banquet hall on the 8th floor accommodates up to 80 guests, while the stylish karaoke lounge fits up to 40. We’ll take care of every detail to make sure your celebration is flawless."]
             },
             "reviews":{
                 "title":"відгуки",
@@ -337,46 +346,46 @@
     "terrase":{
         "header":{
             "title":"Ruff",
-            "title2":"тераса",
-            "desc":"Трирівневий простір на даху Євроготелю"
+            "title2":"Terrace",
+            "desc":"The RUFF Terraces are a three-level rooftop space at Eurohotel"
         },
         "about":{
             "title":"Про терасу",
             "desc":["На терасі панує особлива атмосфера: вдень тут можна годинами спостерігати за містом, ввечері — насолоджуватися спілкуванням під зоряним небом.", "Тут подають вишукані страви та авторські коктейлі, грає жива музика — не дивно, що сюди так хочеться повертатись!"]
         },
         "bar":{
-            "title":"Бар",
+            "title":"ruff bar",
             "title2":"Напої",
-            "desc":"Коктейлі, що дивують! Якісні інгредієнти, ідеальний баланс смаків і подача, яку ви запамʼятаєте — грайливий акцент кожного вечора.",
-            "alcoholCard":"алкогольна карта",
-            "cocktailCard":"коктельна карта",
-            "wineCard":"винна карта"
+            "desc":"Cocktails that wow! Top-notch ingredients and perfectly balanced flavors.",
+            "alcoholCard":"Alcohol menu",
+            "cocktailCard":"Cocktail menu  ",
+            "wineCard":"Wine menu "
         },
         "dishes":{
     
-          "heading":"Меню",
-            "title":"Страви RUFF",
-            "desc":"Нове, несподіване прочитання класики, яке точно потішить ваші смакові рецептори!"
+          "heading":"Menu",
+            "title":"RUFF Dishes",
+            "desc":"Our menu dishes out a bold, unexpected twist on classics that'll thrill your taste buds!"
           },
           "celebration":{
             "heading":"Ruff",
-            "title":"Святкування",
-            "title2":"та події",
-            "desc":"На нашій терасі кожна подія набуває нового виміру стилю"
+            "title":"Celebrations",
+            "title2":"",
+            "desc":"An excellent spot to toast achievements in the warmth of good company!"
                 }
     
     },
     "specialOffers":{
-        "title":"спеціальні",
-        "desc":"Обирайте найкраще для свого відпочинку – комфортні номери, вигідні тарифи, особливі бонуси та незабутні враження чекають на вас у самому серці Львова.",
-        "desc2":"пропозиції",
+        "title":"SPECIAL",
+        "desc":"Choose the best for your stay—comfortable rooms, great rates, special bonuses, and unforgettable experiences await you in the heart of Lviv.",
+        "desc2":"OFFERS",
         "card":{
             "title":["деталі пропозиції", "умови пропозиції"]
         }
     },
     "specialOfferModal":{
         "contacts":{
-            "title":"контакти"
+            "title":"contacts"
         }
     },
     
@@ -412,25 +421,25 @@
     
     "terasesState": {
         "mainTerrase":{
-          "title": "основна тераса",
-          "desc": ["Основна тераса RUFF ","вміщує 152 гостя "," й відкриває"," панораму міста на 360 градусів."," Стильний бар, жива музика щовихідних, виступи діджеїв — усе це наповнює простір життям і динамікою. Та головна окраса — це заходи сонця!"],
-          "descTwo":["Завдяки, ","перголі та панорамним вікнам "," тут добре і в мʼякому сонячному світлі, і під ритм крапель дощу. Коктейлі мають присмак свободи, а вечори пролітають на одному подиху"," під музику і мерехтіння вогнів міста"],
-          "descTree":["Тут панує особлива атмосфера, ","подають вишукані страви та авторські коктейлі","-не дивно, що сюди так хочеться повертатися!"],
+          "title": "Main Terrace",
+          "desc": ["The main RUFF terrace ","seats 152 guests "," and "," boasts a 360-degree city view."," A sleekbar, live music every weekend, and DJ sets bring the space to life with energy and buzz. But the real star? Those stunning sunsets!"],
+          "descTwo":["With a ","pergola and panoramic windows, ","it’s a delight whether bathed in gentle sunshineor serenaded by rain. Cocktails taste like freedom, and evenings fly by in a flash withmusic and the glow of city lights."],
+          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"],
           "titleTwo": "Святкуйте життя, смакуйте миті під неповторним львівським небом!"
         },
         "upperTerrase":{
-          "title": "верхня тераса",
-          "desc": ["Верхня тераса — ","це 45 місць на найвищій точці даху ","Євроготелю, звідки відкривається приголомшливий вид на місто."],
+          "title": "Upper Terrace",
+          "desc": ["The upper terrace sits atop Eurohotel’s "," roof with 45 seats and a stunning city vista."],
           "titleTwo": "Ідеальний простір для особливих подій у вузькому колі — від теплих зустрічей до приватних святкувань під відкритим небом.",
-          "descTwo": ["Вдень тут можна годинами спостерігати за містом, ввечері- ","насолоджуватися спілкуванням під  зоряним небом."],
-          "descThree":["Ідеальний простір для особливих подій"," у вузькому колі — від теплих зустрічей до приватних святкувань під відкритим небом."]
+          "descTwo": ["By day, you can watch the city for hours, by night, it’s all about go od company ","under a starry sky."],
+          "descThree":["A flawless setting for special moments with close company"," —think warm get-togethersor private parties beneath the stars."]
         },
         "lowerTerrase":{
-          "title": "нижня тераса",
-          "desc": ["Нижня тераса Євроготелю — затишний простір під відкритим небом."," 23 місця для незабутніх зустрічей"," з видом Високий замок, мʼякі лінії, продумане освітлення і ледь чутний шепіт вітру — тут кожна деталь працює"," на атмосферу затишку і розслаблення."],
-          "descTwo": ["Чудове місце ","для невеликих компаній,"," де можна насолоджуватися моментом і ", "краєвидом старого міста."],
+          "title": "Lower Terrace",
+          "desc": ["The lower terrace is "," Eurohotel's cozy outdoor nook."," Offering"," 23 seats with a view of Lviv High Castle, "," it blends soft design, smart lighting, and the faint rustle of the wind—every touch adds to the relaxed, inviting feel."],
+          "descTwo": ["A great pick ","for small groups ","looking to soak in the moment and the ", "old city's charm."],
           "titleTwo": "Чудове місце для невеликих компаній, де можна насолоджуватися моментом і краєвидом старого міста.",
-          "descThree":["Святкуйте життя, смакуйте миті під ", "неповторним львівським небом!"]
+          "descThree":["Celebrate life and savor moments ", "Lviv's unforgettable sky!"]
         }
       },
     
@@ -440,36 +449,35 @@
             "desc":"Hall",
             "capacity":"up to 40 people",
             "about":{
-                "pOne":"Функціональний і затишний зал створений для продуктивної роботи та комфортного спілкування. Завдяки стильному дизайну, двом плазмовим екранам та продуманому освітленню простір ідеально підходить для тренінгів, зустрічей та нарад.",
-                "pTwo":"зал розташований поруч з великим конференц-залом та лаунж-зоною, що створює додаткові можливості для організації подій, поділу учасників для роботи в кількох групах одночасно або паралельних сесіях."
-            },
+                "pOne":"Designed for productivity and seamless communication, this functional yet cozy space features a stylish interior, two plasma screens, and well-planned lighting—ideal for training sessions, meetings, and board discussions.",
+                "pTwo":"Located next to the Grand Conference Hall and lounge area, this setup offers added flexibility for event planning, group breakouts, and parallel team sessions."
+              },
             "icons":{
-                "screen":"2 плазмові екрани",
-                "soundSystem":"звукова система",
-                "notebook":"ноутбук",
-                "paper":"блок паперу",
-                "presenter":"презентер",
-                "flipchart":"фліпчарт"
+                "screen":"2 plasma screens",
+                "soundSystem":"Sound system",
+                "notebook":"Laptop",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote",
+                "flipchart":"Flipchart"
             }
         },
         "bigHall":{
-            "title":"Grand Conference ",
+            "title":"Grand Conference",
             "desc":"Hall",
             "capacity":"up to 100 people",
             "about":{
-                "pOne":"Простір у класичному дизайні, що поєднує елегантний стиль, затишну  атмосферу  та сучасні  можливості  для організації успішних заходів у центрі міста Львів: від ділових зустрічей до великих конференцій чи презентацій.",
-                "pTwo":"Різні варіанти розсадки дозволяють підлаштувати зал під будь-який формат події, а розташування  поруч з лаунж-зоною забезпечить швидкий та професійний кейтеринг ваших каво-перерв."
+                "pOne":"A sophisticated space with a classic design that blends elegance, coziness, and modern functionality. Perfectly suited for hosting everything from private business meetings to large conferences and presentations in the heart of Lviv.",
+                "pTwo":"Flexible seating arrangements allow you to tailor the setup to your event’s needs, while the lounge area next door ensures smooth and professional catering for coffee breaks."
             },
             "icons":{
-                "projector":"проєктор",
-    
-                "screen":"екран",
-                "soundSystem":"звукова система",
-                "notebook":"ноутбук",
-                "paper":"блок паперу",
-                "presenter":"презентер",
-                "flipchart":"фліпчарт",
-                "microphone":"2 мікрофони"
+                "projector":"Projector",
+                "screen":"Screen",
+                "soundSystem":"Sound system",
+                "notebook":"Laptop",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote",
+                "flipchart":"Flipchart",
+                "microphone":"2 microphones"
     
             }
         },
@@ -478,18 +486,16 @@
             "desc":"Lounge",
             "capacity":"up to 30 people",
             "about":{
-                "pOne":"Затишний лаунж на першому поверсі — ідеальне місце для невеликих ділових зустрічей, переговорів чи тренінгів. Тут ви можете зібратись командою для підведення підсумків у комфортній неформальній атмосфері. ",
-                "pTwo":"Елегантний інтер’єр та зручне розташування поруч з двома іншими конференц-залами створюють ідеальні умови для ефективної роботи та організації каво-перерв."
+                "pOne":"This cozy lounge on the first floor is the perfect setting for small business meetings, negotiations, or workshops. It’s an ideal space to gather your team for a recap in a comfortable, informal atmosphere.",
+                "pTwo":"The elegant interior and convenient location next to two other conference rooms create the perfect conditions for productive work and seamless coffee breaks."
             },
             "icons":{
-                "projector":"проєктор",
-                "notebook":"ноутбук",
-                "screen":"екран",
-                "flipchart":"фліпчарт",
-                "soundSystem":"звукова система",
-                "paper":"блок паперу",
-                "presenter":"презентер",
-                "microphone":"2 мікрофони"
+                "projector":"Portable projector",
+                "notebook":"Laptop",
+                "screen":"Portable screen",
+                "flipchart":"Flipchart",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote"
             }
         }
         
@@ -498,502 +504,503 @@
     "roomsState":{
         "standartSingle":{
             "title":"STANDART single",
-            "desc":"Оптимальний вибір для ділової подорожі",
+            "desc":"The perfect choice for a business trip",
             "header":{
                 "title":"STANDART ",
                 "size":"single",
-                "description":"Оптимальний вибір для ділової подорожі",
-                "view":"У двір"
+                "description":"The perfect choice for a business trip",
+                "view":"courtyard view"
             },
             "about":{
-                "pOne":"Одномісний номер – відмінний вибір для ділових поїздок. Стильний дизайн і продуманий простір забезпечують комфорт для продуктивної роботи та відновлення сил",
-                "pTwo":"Лаконічний та затишний номер дарує тишу та приватність. Вікна номеру виходять у внутрішній двір готелю. Кожна деталь створена, щоб ви могли працювати ефективно й відпочивати безтурботно.",
-                "betText":"односпальне ліжко (90*190 см)"
+                "pOne":"The single room is an excellent choice for business trips. Its stylish design and thoughtful layout provide comfort for both productive work and relaxation.",
+                "pTwo":"The minimalist and cozy room offers tranquility and privacy. The windows overlook the hotel’s inner courtyard. Every detail is designed to help you work efficiently and unwind effortlessly.",
+                "bedText":"single bed (90*190 cm)"
             },
             "icons":{
                 "ammentiesInRoom":{
-                    "bed":"односпальне ліжко (90*190 см)",
-                    "table":"робочий стіл",
-                    "carpet":"килимове покриття",
-                    "minibar":"мінібар",
-                    "safe":"сейф",
-                    "kettle":"електрочайник",
-                    "condition":"кондиціонер",
-                    "tv":"LCD TV 43 дюйми",
-                    "phone":"телефон"
+                    "bed":"Single bed (90×190 cm)",
+                    "table":"work desk",
+                    "carpet":"carpet",
+                    "minibar":"minibar",
+                    "safe":"safe",
+                    "kettle":"electric kettle",
+                    "condition":"air conditioner",
+                    "tv":"43 LCD TV",
+                    "phone":"telephone",
+                    "wifi":"WI-fi"
                 },
                 "bathRoom":{
-                    "shower":"душова",
-                    "wc":"туалет",
-                    "showerGigi":"гігієнічний душ",
-                    "hairDryer":"фен",
-                    "towels":"рушники",
-                    "bathRobe":"халати",
-                    "slippers":"капці",
-                    "cosmetic":"готельна косметика"
+                    "shower":"shower",
+                    "wc":"toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"hairdryer",
+                    "towels":"towels",
+                    "bathRobe":"bathrobes",
+                    "slippers":"slippers",
+                    "cosmetic":"hotel cosmetic"
                 }
             },
             "suggestion":[
-             {   "title":"стандарт",
-                "size":"з великим ліжком",
-                "desc":"Комфорт та зручність для вашого відпочинку"
+             {   "title":"STANDARd",
+                "size":"DOUBLE",
+                "desc":"Comfort and convenience for your stay"
             },{
                 "title":"стандарт",
-                "size":"з великим ліжком ТА БАЛКОНОМ",
-                "desc":"Ритм міста поруч, затишок усередині"
+                "size":"double with balcony",
+                "desc":"Urban energy outside, peaceful comfort inside"
             }
             ]
         },
         "standartBigbed":{
             "title":"STANDART DOUBLE",
-            "desc":"Комфорт та зручність для вашого відпочинку",
+            "desc":"Comfort and convenience for your stay",
             "header":{
                 "title":"STANDART ",
                 "size":"DOUBLE",
-                "description":"Комфорт та зручність для вашого відпочинку",
-                "view":"У двір"
+                "description":"Comfort and convenience for your stay",
+                "view":"courtyard view"
             },
             "about":{
-                "pOne":"Сучасний та водночас елегантний номер, створений для вашого комфорту під час відпочинку чи роботи. В номері зручне двоспальне ліжко та функціональне робоче місце. ",
-                "pTwo":"Номер стане чудовим вибором як для одномісного розміщення під час бізнес-поїздки, так і для романтичного відпочинку. Вікна номеру виходять у внутрішній двір готелю.",
+                "pOne":"A modern yet elegant room, ideal for both work and leisure. It features a cozy double bed and a functional workspace.",
+                "pTwo":"This room is a perfect choice for single occupancy during a business trip and a romantic getaway. The windows overlook the hotel’s inner courtyard.",
                 "bedText":"двоспальне ліжко (160*200 см)"
             },
             "icons":{
                 "ammentiesInRoom":{
-                    "bed":"двоспальне ліжко (160*200 см)",
-                    "table":"робочий стіл",
-                    "carpet":"килимове покриття",
-                    "minibar":"мінібар",
-                    "safe":"сейф",
-                    "kettle":"електрочайник",
-                    "airConditioner":"кондиціонер",
-                    "tv":"LCD TV 43 дюйми",
-                    "phone":"телефон",
+                    "bed":"Double bed (160×200 cm)",
+                    "table":"work desk",
+                    "carpet":"carpet",
+                    "minibar":"minibar",
+                    "safe":"safe",
+                    "kettle":"electric kettle",
+                    "airConditioner":"air conditioner",
+                    "tv":"43\" LCD TV",
+                    "phone":"telephone",
                     "wifi":"WI-fi"
-    
+
                 },
                 "bathRoom":{
-                    "shower":"душова",
-                    "wc":"туалет",
-                    "showerGigi":"гігієнічний душ",
-                    "hairDryer":"фен",
-                    "towels":"рушники",
-                    "bathRobe":"халати",
-                    "slippers":"капці",
-                    "cosmetic":"готельна косметика"
+                    "shower":"shower",
+                    "wc":"toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"hairdryer",
+                    "towels":"towels",
+                    "bathRobe":"bathrobes",
+                    "slippers":"slippers",
+                    "cosmetic":"hotel cosmetic"
                 }
             },
             "suggestion":[
                 {
                     "title":"STANDART ",
                     "size":"SINGLE",
-                    "desc":"Оптимальний вибір для ділової подорожі"
+                    "desc":"The perfect choice for a business trip"
                 },
                 {
                     "title":"стандарт",
-                    "size":"з великим ліжком ТА БАЛКОНОМ",
-                    "desc":"Ритм міста поруч, затишок усередині"
+                    "size":"double with balcony",
+                    "desc":"Urban energy outside, peaceful comfort inside"
                 }
             ]
         },
         "standartTwoBed":{
             "title":"STANDART  TWIN",
-            "desc":"Тиша і зручність в центрі ділового міста",
+            "desc":"Quiet and comfort in the city’s business core",
             "header":{
                     "title":"STANDART ",
                     "size":"TWIN",
-                    "description":"Тиша і зручність в центрі ділового міста",
-                    "view":"У двір"
+                    "description":"Quiet and comfort in the city’s business core",
+                    "view":"courtyard view"
                 },
                 "about":{
-                    "pOne":"Номер, створений для балансу між роботою та відпочинком. Простір та затишок дозволяють зосередитись на важливих справах і водночас знайти час і для відпочинку.",
-                    "pTwo":"Бездоганний вибір для колег у відрядженні або ж друзів-мандрівників. Вікна номеру виходять у внутрішній двір готелю, що додає відчуття усамітнення й тиші.",
+                    "pOne":"A room designed for the perfect balance between work and relaxation. Its spacious and cozy atmosphere allows you to focus on important tasks while still finding time to unwind.",
+                    "pTwo":"An excellent choice for colleagues on a business trip or friends traveling together. The windows overlook the hotel’s inner courtyard, offering a sense of privacy and tranquility.",
                     "bedText":"два односпальні ліжка (90*190 см)"
                 },
                 "icons":{
                     "ammentiesInRoom":{
-                        "bed":"два односпальні ліжка (90*190 см)",
-                        "table":"робочий стіл",
-                        "carpet":"килимове покриття",
-                        "minibar":"мінібар",
-                        "safe":"сейф",
-                        "kettle":"електрочайник",
-                        "condition":"кондиціонер",
-                        "tv":"LCD TV 43 дюйми",
-                        "phone":"телефон",
+                        "bed":"Two single beds (90×190 cm)",
+                        "table":"work desk",
+                        "carpet":"carpet",
+                        "minibar":"minibar",
+                        "safe":"safe",
+                        "kettle":"electric kettle",
+                        "condition":"air conditioner",
+                        "tv":"43\" LCD TV",
+                        "phone":"telephone",
                         "wifi":"WI-fi"
     
                     },
                     "bathRoom":{
-                        "shower":"душова",
-                        "wc":"туалет",
-                        "showerGigi":"гігієнічний душ",
-                        "hairDryer":"фен",
-                        "towels":"рушники",
-                        "bathRobe":"халати",
-                        "slippers":"капці",
-                        "cosmetic":"готельна косметика"
+                        "shower":"shower",
+                        "wc":"toilet",
+                        "showerGigi":"Bidet shower",
+                        "hairDryer":"hairdryer",
+                        "towels":"towels",
+                        "bathRobe":"bathrobes",
+                        "slippers":"slippers",
+                        "cosmetic":"hotel cosmetic"
                     }
                 },
                 "suggestion":[
                     {
-                        "title":"стандарт",
-                        "size":"з великим ліжком",
-                        "desc":"Комфорт та зручність для вашого відпочинку"
+                        "title":"STANDARd",
+                        "size":"DOUBLE",
+                        "desc":"Comfort and convenience for your stay"
                     },
                     {
                         "title":"STANDART TWIN ",
                         "size":"with balcony",
-                        "desc":"Відчуйте гармонію між стилем та бездоганним комфортом"
+                        "desc":"Experience the harmony between style and comfort"
                     }
                 ]
             },
             "standartBigBedBalcony": {
                 "title": "STANDART double with balcony",
-                "desc": "Ритм міста поруч, затишок усередині",
+                "desc": "Urban energy outside, peaceful comfort inside",
                 "header": {
                   "title": "STANDART",
                   "size": "double with balcony",
-                  "description": "Ритм міста поруч, затишок усередині",
-                  "view": "на вулицю"
+                  "description": "Urban energy outside, peaceful comfort inside",
+                  "view": "street view"
                 },
                 "about": {
-                  "pOne": "Затишний номер з балконом, з якого відкривається красивий вид на Храм Святої Трійці. В номері зручне двоспальне ліжко та продумане робоче місце для вашого комфорту.",
-                  "pTwo": "Сучасний інтер’єр та чудова панорама міста подарують вам приємні спогади, а зручне розташування в центрі Львова дозволить легко дістатися до основних пам’яток.",
+                  "pOne": "A cozy room with a balcony offering a beautiful view of the Holy Trinity Church. The room features a comfortable double bed and a well-designed workspace for your convenience.",
+                  "pTwo": "The modern interior and stunning city panorama will create memorable experiences, while the central location in Lviv ensures easy access to major attractions.",
                   "bedText": "двоспальне ліжко (160*200 см)"
                 },
                 "icons": {
                   "ammentiesInRoom": {
-                    "bed": "двоспальне ліжко (160*200 см)",
-                    "balcony": "балкон",    
-                    "table": "робочий стіл",
-                    "carpet": "килимове покриття",
-                    "minibar": "мінібар",
-                    "safe": "сейф",
-                    "kettle": "електрочайник",
-                    "condition": "кондиціонер",
-                    "tv": "LCD TV 43 дюйми",
-                    "phone": "телефон",
+                    "bed": "Double bed (160×200 cm)",
+                    "balcony": "balcony",    
+                    "table": "work desk",
+                    "carpet": "carpet",
+                    "minibar": "minibar",
+                    "safe": "safe",
+                    "kettle": "electric kettle",
+                    "condition": "air conditioner",
+                    "tv": "43\" LCD TV",
+                    "phone": "telephone",
                     "wifi": "WI-fi"
                   },
                   "bathRoom": {
-                    "shower": "душова",
-                    "wc": "туалет",
-                    "showerGigi": "гігієнічний душ",
-                    "hairDryer": "фен",
-                    "towels": "рушники",
-                    "bathRobe": "халати",
-                    "slippers": "капці",
-                    "cosmetic": "готельна косметика"
+                    "shower": "shower",
+                    "wc": "toilet",
+                    "showerGigi": "Bidet shower",
+                    "hairDryer": "hairdryer",
+                    "towels": "towels",
+                    "bathRobe": "bathrobes",
+                    "slippers": "slippers",
+                    "cosmetic": "hotel cosmetic"
                   }
                 },
                 "suggestion": [
                   {
                     "title": "JUNIOR SUITE",
                     "size": "",
-                    "desc": "Номер, де кожна деталь має значення"
+                    "desc": "A room where every detail matters"
                   },
                   {
                     "title": "Suite",
                     "size": "",
-                    "desc": "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова"
+                    "desc": "Comfort that welcomes you in the center of Lviv"
                   }
                 ]
               },
               "semiLux": {
                 "title": "JUNIOR SUITE",
-                "desc": "Номер, де кожна деталь має значення ",
+                "desc": "A room where every detail matters",
                 "header": {
                   "title": "JUNIOR SUITE",
-                  "description": "Номер, де кожна деталь має значення ",
-                  "view": "у двір"
+                  "description": "A room where every detail matters",
+                  "view": "courtyard view"
                 },
                 "about": {
-                  "pOne": "Просторий та затишний номер зі зручним двоспальним ліжком та диваном, що забезпечує за необхідності 2 додаткові спальні місця для гостей, які подорожують з сім'єю.",
-                  "pTwo": "Поєднання елегантності та функціональності робить цей номер ідеальним вибором для будь-якої подорожі. Вікна номеру виходять у тихий внутрішній двір готелю.",
+                  "pOne": "A spacious and cozy room with a comfortable double bed and a sofa that provides 2 additional sleeping spaces for guests traveling with their family.",
+                  "pTwo": "The blend of elegance and functionality makes this room the perfect choice for any trip. The windows overlook the quiet inner courtyard of the hotel.",
                   "bedText": "двоспальне ліжко (160*200 см) / 2 односпальні ліжка (90*190 см)"
                 },
                 "icons": {
                   "ammentiesInRoom": {
-                    "bed": "двоспальне ліжко (160*200 см) / 2 односпальні ліжка (90*190 см)",
-                    "sofa": "диван-ліжко",
-                    "table": "робочий стіл",
-                    "carpet": "килимове покриття",
-                    "minibar": "мінібар",
-                    "safe": "сейф",
-                    "kettle": "електрочайник",
-                    "condition": "кондиціонер",
-                    "tv": "LCD TV 43 дюйми",
-                    "phone": "телефон",
-                    "wifi": "WI-fi"
+                    "bed": "Double bed (160×200 cm) / Two single beds (90×190 cm) ",
+                    "sofa": "Sofa bed",
+                    "table": "work desk",
+                    "carpet": "Carpet",
+                    "minibar": "Minibar",
+                    "safe": "Safe",
+                    "kettle": "Electric kettle",
+                    "condition": "Air conditioner",
+                    "tv": "52\" LCD TV",
+                    "phone": "Telephone",
+                    "wifi": "Wi-Fi"
                   },
                   "bathRoom": {
-                    "shower": "душова",
-                    "wc": "туалет",
-                    "showerGigi": "гігієнічний душ",
-                    "hairDryer": "фен",
-                    "towels": "рушники",
-                    "bathRobe": "халати",
-                    "slippers": "капці",
-                    "cosmetic": "готельна косметика"
+                    "shower": "Shower",
+                    "wc": "Toilet",
+                    "showerGigi": "Bidet shower",
+                    "hairDryer": "Hairdryer",
+                    "towels": "Towels",
+                    "bathRobe": "Bathrobes",
+                    "slippers": "Slippers",
+                    "cosmetic": "Hotel cosmetic"
                   }
                 },
                 "suggestion": [
                   {
                     "title": "DELUXE SUITE",
                     "size": "elegant",
-                    "desc": "Номер, де кожна деталь має значення"
+                    "desc": "Comfort and service at a European level"
                   },
                   {
                     "title": "Suite",
                     "size": "",
-                    "desc": "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова"
+                    "desc": "Comfort that welcomes you in the center of Lviv"
                   }
                 ]
               },
               "standartTwoBedBalcony": {
                 "type": "standart-two-bed-balcony",
                 "title": "STANDART TWIN with balcony",
-                "desc": "Відчуйте гармонію між стилем та комфортом",
+                "desc": "Experience the harmony between style and comfort",
                 "header": {
                   "title": "STANDART TWIN",
                   "size": "with balcony",
-                  "description": "Відчуйте гармонію між стилем та бездоганним комфортом",
-                  "view": "у двір"
+                  "description": "Experience the harmony between style and comfort",
+                  "view": "street view"
                 },
                 "about": {
-                  "pOne": "Комфортабельний номер з балконом зачарує вас чудовим видом на Храм Святої Трійці. У номері два окремих ліжка, робоче місце та все необхідне для вашого приємного перебування.",
-                  "pTwo": "Інтер’єр цього номера поєднує елегантність та сучасний стиль, а розташування в самому центрі Львова дозволяє легко дістатись до найвідоміших пам’яток міста.",
+                  "pOne": "A comfortable room with a balcony showcasing the charm of the Holy Trinity Church. It features two separate beds, a workspace, and everything you need for a pleasant stay.",
+                  "pTwo": "The interior blends elegance with modern style, while the central location in Lviv makes it easy to reach the city’s most famous landmarks.",
                   "rooms": 1,
               
                   "bedText": "Односпальне ліжко (90*190 см)"
                 },
                 "icons": {
                   "ammentiesInRoom": {
-                    "bed":"Два односпальні ліжка (90*190 см)",
-                    "balcony":"Балкон",
-                    "table":"Робочий стіл",
-                    "carpet":"Килимове покриття",
-                    "minibar":"Мінібар",
-                    "safe":"Сейф",
-                    "kettle":"Електрочайник",
-                    "condition":"Кондиціонер",
-                    "tv":"LCD TV 43 дюйми",
-                    "phone":"Телефон",
+                    "bed":"Two single beds (90×190 cm)",
+                    "balcony":"Balcony",
+                    "table":"work desk",
+                    "carpet":"Carpet",
+                    "minibar":"Minibar",
+                    "safe":"Safe",
+                    "kettle":"Electric kettle",
+                    "condition":"Air conditioner",
+                    "tv":"43\" LCD TV",
+                    "phone":"Telephone",
                     "wifi":"Wi-Fi"
                   },
                   "bathRoom": {
-                    "shower":"Душова",
-                    "wc":"Туалет",
-                    "showerGigi":"Гігієнічний душ",
-                    "hairDryer":"Фен",
-                    "towels":"Рушники",
-                    "bathRobe":"Халати",
-                    "slippers":"Капці",
-                    "cosmetic":"Готельна косметика" 
+                    "shower":"Shower",
+                    "wc":"Toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"Hairdryer",
+                    "towels":"Towels",
+                    "bathRobe":"Bathrobes",
+                    "slippers":"Slippers",
+                    "cosmetic":"Hotel cosmetic" 
                   }
                 },
                 "suggestion": [
                   {
                     "title": "JUNIOR SUITE",
                     "size": "",
-                    "desc": "Номер, де кожна деталь має значення"
+                    "desc": "A room where every detail matters"
                   },
                   {
                     "title": "Suite",
                     "size": "",
-                    "desc": "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова"
+                    "desc": "Comfort that welcomes you in the center of Lviv"
                   }
                 ]
               },
               "luxTwoRooms": {
                 "type": "lux-two-rooms",
                 "title": "Suite",
-                "desc": "Затишок, який зустрічає вас в центрі Львова",
+                "desc": "Comfort that welcomes you in the center of Lviv",
                 "header": {
-                  "previewImage": "luxTwoRoomsPreview",
-                  "title": "Suite",
-                  "description": "Класика з душею - затишок, який зустрічає вас в історичному центрі Львова",
+                    "previewImage": "luxTwoRoomsPreview",
+                    "title": "Suite",
+                  "description": "Comfort that welcomes you in the center of Lvivh",
                   "view": "на вулицю"
                 },
                 "about": {
-                  "pOne": "Двокімнатний просторий номер з балконом, зручним робочим місцем і зоною для відпочинку стане ідеальним вибором для тих, хто цінує високий рівень комфортного проживання.",
-                  "pTwo": "Диван з функцією ліжка створює можливість для розміщення сім’ї або ж перетворює номер на затишне місце для перезавантаження після ділових зустрічей.",
+                  "pOne": "A spacious two-room suite with a balcony, a cozy workspace, and a relaxing lounge area—perfect for those who value comfort at its finest.",
+                  "pTwo": "The sofa with a bed function allows for family accommodation or transforms the room into a cozy space to recharge after business meetings.",
                   "bedText": "Особливо широке ліжко (180*200)"
                 },
                 "icons":{
                     "ammentiesInRoom":{
-                    "sofa":"диван-ліжко",
-                    "armChair":"м'яке крісло",
-                    "balcony":"балкон",
-                    "carpet":"килимове покриття",
-                    "table":"робочий стіл",
-                    "wardrobe":"гардеробна",
-                    "condition":"кондиціонер",
-                    "tv":"LCD TV 52 дюйми",
-                    "minibar":"мінібар",
-                    "kettle":"електрочайник",
-                    "teakit":"чайний набір",
-                    "phone":"телефон",
-                    "wifi":"WI-fi",
-                    "safe":"сейф"
+                    "sofa":"Sofa bed",
+                    "armChair":"Armchair",
+                    "balcony":"Balcony",
+                    "carpet":"Carpet",
+                    "table":"work desk",
+                    "wardrobe":"Walk-in wardrobe",
+                    "condition":"Air conditioner",
+                    "tv":"52\" LCD TV",
+                    "minibar":"Minibar",
+                    "kettle":"Electric kettle",
+                    "teakit":"Tea set",
+                    "phone":"Telephone",
+                    "wifi":"Wi-Fi",
+                    "safe":"Safe"
                     },
                     "bedRoom":{
-                        "bed":"Особливо широке ліжко (180*200)",
-                        "balcony":"балкон",
-                        "carpet":"килимове покриття",
-                        "condition":"кондиціонер",
-                        "tv":"LCD TV 52 дюйми",
-                        "phone":"телефон",
-                        "wifi":"WI-fi"
+                        "bed":"Extra-wide bed (180x200 cm)",
+                        "balcony":"Balcony",
+                        "carpet":"Carpet",
+                        "condition":"Air conditioner",
+                        "tv":"52\" LCD TV",
+                        "phone":"Telephone",
+                        "wifi":"Wi-Fi"
                     },
                     "bathRoom":{
-                        "shower":"душова/ванна",
-                        "wc":"туалет",
-                        "showerGigi":"гігієнічний душ",
-                        "hairDryer":"фен",
-                        "towels":"рушники",
-                        "bathRobe":"халати",
-                        "slippers":"капці",
-                        "cosmetic":"готельна косметика"
+                        "shower":"Shower/Bathtub",
+                        "wc":"Toilet",
+                        "showerGigi":"Bidet shower",
+                        "hairDryer":"Hairdryer",
+                        "towels":"Towels",
+                        "bathRobe":"Bathrobes",
+                        "slippers":"Slippers",
+                        "cosmetic":"Hotel cosmetic"
                     }
                 },
                 "suggestion":[
                     {
                         "title":"JUNIOR SUITE",
                         "size":"",
-                        "desc":"Номер, де кожна деталь має значення"
+                        "desc":"A room where every detail matters"
                     },
                     {
                         "title":"DELUXE SUITE",
                         "size":"IMPERIAL",
-                        "desc":"для гостей, які цінують винятковість"
+                        "desc":"For guests who value unparalleled luxury"
                     }
                 ]
               },
               "luxImperial": {
                   "type": "lux-imperial",
                   "title": "DELUXE SUITE imperial",
-                  "desc": "Для гостей, які цінують винятковість",
+                  "desc": "For guests who value unparalleled luxury",
                   "header": {
                     "title": "DELUXE SUITE ",
                     "size": "imperial",
-                    "description": "Для гостей, які цінують винятковість",
-                    "view": "на вулицю"
+                    "description": "For guests who value unparalleled luxury",
+                    "view": "street view"
                   },
                   "about": {
-                    "pOne": "Елегантний  двокімнатний номер з балконом, створений для справжніх поціновувачів розкішного відпочинку. Тут кожна деталь сприяє незабутньому перебуванню.",
-                    "pTwo": "Простора спальня з вишуканим комфортабельним ліжком, особлива ванна кімната та затишна вітальня - ваш ідеальний вибір для важливих подій чи особливих моментів."
+                    "pOne": "An elegant two-room suite with a balcony, designed for true connoisseurs of luxurious relaxation. Every detail here ensures an unforgettable stay.",
+                    "pTwo": "A spacious bedroom with a refined, comfortable bed, a sophisticated bathroom, and a cozy living room—perfect for memorable occasions and special moments."
                   },
                   "icons": {
                     "ammentiesInRoom": {
-                      "sofa": "відпочивальна зона",
-                      "balcony": "балкон",
-                      "carpet": "килимове покриття",
-                      "table": "робочий стіл",
-                      "condition": "кондиціонер",
-                      "tv": "LCD TV 52 дюйми",
-                      "minibar": "мінібар",
-                      "kettle": "електрочайник",
-                      "teakit": "чайний набір",
-                      "phone": "телефон",
-                      "wifi": "WI-fi",
-                      "safe": "сейф"
+                      "sofa": "Relaxation area",
+                      "balcony": "Balcony",
+                      "carpet": "Carpet",
+                      "table": "Work desk",
+                      "condition": "Air conditioner",
+                      "tv": "52\" LCD TV",
+                      "minibar": "Minibar",
+                      "kettle": "Electric kettle",
+                      "teakit": "Tea set",
+                      "phone": "Telephone",
+                      "wifi": "Wi-Fi",
+                      "safe": "Safe"
                     },
                     "bedRoom": {
-                      "bed": "кругле ліжко",
-                      "balcony": "2 балкони",
-                      "carpet": "килимове покриття",
-                      "wardrobe": "гардеробна",
-                      "condition": "кондиціонер",
+                      "bed": "Round bed",
+                      "balcony": "2 Balconies",
+                      "carpet": "Carpet",
+                      "wardrobe": "Walk-in wardrobe",
+                      "condition": "Air conditioner",
                       "tv": "LCD TV",
-                      "wifi": "WI-fi",
-                      "phone": "телефон"
+                      "wifi": "Wi-Fi",
+                      "phone": "Telephone"
                     },
                     "bathRoom": {
-                      "shower": "ванна",
-                      "wc": "туалет",
-                      "showerGigi": "гігієнічний душ",
-                      "hairDryer": "фен",
-                      "towels": "рушники",
-                      "bathRobe": "халати",
-                      "slippers": "капці",
-                      "cosmetic": "готельна косметика"
+                      "shower": "Bathtub",
+                      "wc": "toilet",
+                      "showerGigi": "Bidet shower",
+                      "hairDryer": "hairdryer",
+                      "towels": "towels",
+                      "bathRobe": "bathrobes",
+                      "slippers": "slippers",
+                      "cosmetic": "hotel cosmetic"
                     }
                   },
                   "suggestion": [
                     {
                       "title": "DELUXE SUITE",
                       "size": "elegant",
-                      "desc": "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій"
+                      "desc": "Comfort and service at a European level"
                     },
                     {
                       "title": "Suite",
                       "size": "",
-                      "desc": "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова"
+                      "desc": "Comfort that welcomes you in the center of Lviv"
                     }
                   ]
                 },
                 "luxElegant": {
                     "type": "lux-elegant",
                     "title": "DELUXE SUITE elegant",
-                    "desc": "Комфорт та сервіс європейського рівня ",
+                    "desc": "Comfort and service at a European level",
                     "header": {
                       "title": "DELUXE SUITE ",
                       "size": "elegant",
-                      "description": "Комфорт та сервіс європейського рівня в поєднанні з теплом львівських традицій",
-                      "view": "на вулицю"
+                      "description": "Comfort and service at a European level",
+                      "view": "street view"
                     },
                     "about": {
-                      "pOne": "Двокімнатний просторий номер з балконом, зручним робочим місцем і зоною для відпочинку стане ідеальним вибором для тих, хто цінує високий рівень комфортного проживання.",
-                      "pTwo": "Унікальні елементи інтер’єру та вишукані меблі створюють особливу атмосферу комфорту та стилю. З кімнат відкривається чудовий вид, а балкон додає простору для відпочинку та натхнення.",
+                      "pOne": "A spacious two-room suite filled with warm hues, offering an atmosphere of coziness and elegant luxury. Every moment here feels like a small celebration for the soul.",
+                      "pTwo": "Unique interior elements and exquisite furniture create a special ambiance of comfort and style. The rooms offer a stunning view, while the balcony adds extra space for relaxation and inspiration.",
                       "bedText": "односпальне ліжко (90*190 см)"
                     },
                     "icons": {
                       "ammentiesInRoom": {
-                        "sofa": "відпочивальна зона",
-                        "balcony": "балкон",
-                        "carpet": "килимове покриття",
-                        "condition": "кондиціонер",
-                        "tv": "LCD TV 55 дюйми",
-                        "minibar": "мінібар",
-                        "kettle": "електрочайник",
-                        "teakit": "чайний набір",
-                        "phone": "телефон",
-                        "wifi": "WI-fi",
-                        "safe": "сейф"
+                        "sofa": "Relaxation area",
+                        "balcony": "Balcony",
+                        "carpet": "Carpet",
+                        "condition": "Air conditioner",
+                        "tv": "55\" LCD TV",
+                        "minibar": "Minibar",
+                        "kettle": "Electric kettle",
+                        "teakit": "Tea set",
+                        "phone": "Telephone",
+                        "wifi": "Wi-Fi",
+                        "safe": "Safe"
                       },
                       "bedRoom": {
-                        "bed": "ліжко (180*200)",
-                        "balcony": "2 балкони",
-                        "carpet": "килимове покриття",
-                        "wardrobe": "гардеробна",
-                        "condition": "кондиціонер",
-                        "tv": "LCD TV 43 дюйми",
-                        "wifi": "WI-fi",
-                        "phone": "телефон"
+                        "bed": "Extra-wide bed (180x200 cm)",
+                        "balcony": "2 Balconies",
+                        "carpet": "Carpet",
+                        "wardrobe": "Walk-in wardrobe",
+                        "condition": "Air conditioner",
+                        "tv": "43\" LCD TV",
+                        "wifi": "Wi-Fi",
+                        "phone": "Telephone"
                       },
                       "bathRoom": {
-                        "shower": "душ",
-                        "wc": "туалет",
-                        "showerGigi": "гігієнічний душ",
-                        "hairDryer": "фен",
-                        "towels": "рушники",
-                        "bathRobe": "халати",
-                        "slippers": "капці",
-                        "cosmetic": "готельна косметика"
+                        "shower": "Bathtub",
+                        "wc": "Toilet",
+                        "showerGigi": "Bidet shower",
+                        "hairDryer": "Hairdryer",
+                        "towels": "Towels",
+                        "bathRobe": "Bathrobes",
+                        "slippers": "Slippers",
+                        "cosmetic": "Hotel cosmetic"
                       }
                     },
                     "suggestion": [
                       {
                         "title": "DELUXE SUITE",
                         "size": "imperial",
-                        "desc": "Для гостей, які цінують винятковість"
+                        "desc": "For guests who value unparalleled luxury"
                       },
                       {
                         "title": "Suite",
                         "size": "",
-                        "desc": "Класика з душею-затишок, який зустрічає вас в історичному центрі Львова"
+                        "desc": "Comfort that welcomes you in the center of Lviv"
                       }
                     ]
                   }
@@ -1123,21 +1130,24 @@
            
             
             "buttons":{
+              "restaurantMenu":"menu",
                 "send":"SEND",
-            "celebrationMenu":"бенкетне меню",
-            "view":"переглянути",
-            "menu":"меню",
+            "celebrationMenu":"Banquet menu",
+            "view":"view",
+            "menu":"view menu",
             "bookTable":"Book a table",
-            "viewMenu":"переглянути меню",
+            "viewMenu":"Event catering menu",
+            "viewMenuButton":"View menu",
             "details":"learn more",
             "viewRooms":"View rooms",
             "viewHalls":"View venues"  ,
-            "viewRoom":"переглянути номер"  ,
-            "book":"забронювати",
+            "seeMore":"see more",
+            "viewRoom":"View details"  ,
+            "book":"Book now",
             "conferenceMenu":"конференц-меню",
-            "order":"замовити подію",
-            "bookRoom":"забронювати номер",
-            "bookRoomArr":["забронювати"," номер"],
+            "order":"book an event",
+            "bookRoom":"Book a room",
+            "bookRoomArr":["book"," now"],
             "route":"Get directions"
             },
             "phoneBottomMenu":{

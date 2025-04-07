@@ -21,12 +21,12 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
   return (
     <div
       key={room.type}
-      className={cn(`lg:border lg:border-s-0 border-[#C7C7C7]  
+      className={cn(`lg:border lg:border-s-0 border-[#C7C7C7]  border-x
         ${isFirstInRow ? "lg:ps-[20px] p-4" : "p-4"}  
         ${isLastInRow ? "lg:pe-[20px] lg:border-e-0 border-t" : "border-t"} 
         ${index < length - 3 ? "lg:border-b-0 border-t" : ""} 
         ${index % 2 === 0 ? " border-e" : ""}
-        ${index === length - 1 ? "md:col-span-2 border-e-0 lg:col-span-1 " : ""}
+        ${index === length - 1 ? "md:col-span-2 md:border-e-0 lg:col-span-1 " : ""}
         lg:p-[15px]`)}
     >
       <div className="">
@@ -69,7 +69,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
 
               <Link
                 to={`/rooms/${room.type}`}
-                className="uppercase 2xl:py-[10px] xl:py-[9px] lg:py-[8px] py-[8px] 2xl:mb-5 2xl:px-[18.5px] xl:px-[18px] lg:px-[16px] px-[14.5px]  xl:text-[16px] lg:text-[14px] text-[12px] border rounded-full text-[#A47762] hover:bg-[#A47762] hover:text-white font-cofo font-cofo-medium transition-colors"
+                className="uppercase 2xl:py-[10px] xl:py-[9px] lg:py-[8px] py-[8px] 2xl:mb-5 lg:px-[16px] px-[14.5px]  xl:text-[16px] lg:text-[14px] lg:w-[218px] text-[12px] border rounded-full text-[#A47762] hover:bg-[#A47762] hover:text-white font-cofo font-cofo-medium transition-colors"
               >
                 {t("buttons.viewRoom")}
               </Link>

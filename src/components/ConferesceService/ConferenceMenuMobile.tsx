@@ -22,7 +22,11 @@ export const ConferenceMenuMobileCard = ({
 
   return (
     <div className="flex flex-col items-center relative">
-      <img src={img} alt="" className="w-screen h-[432px] sm:h-[500px] md:h-[600px] object-cover" />
+      <img
+        src={img}
+        alt=""
+        className="w-screen h-[432px] sm:h-[500px] md:h-[600px] object-cover"
+      />
       <div
         className="absolute inset-0"
         style={{
@@ -40,7 +44,9 @@ export const ConferenceMenuMobileCard = ({
             <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-7%] leading-[104%]  text-center">
               {t(section.titleKey)}
             </p>
-            <ViewMenuButton />
+            <ViewMenuButton className="w-[170px]">
+              {t("buttons.viewMenuButton")}
+            </ViewMenuButton>
           </div>
         ))}
       </div>

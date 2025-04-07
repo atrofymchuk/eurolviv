@@ -18,7 +18,7 @@ export const AddressWithSchedule = () => {
           <p className="flex gap-x-[7px] font-cofo-medium items-center 2xl:text-[18px] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline    lg:pt-[15px] underline-offset-4 lg:leading-[22.6px] lg:ps-[0px] pt-3 decoration-[6.5%]">
             <img
               src={navigate}
-              className="filter-invert-white  "
+              className="filter-invert-white"
               alt="location"
             />
             <span>{t("footer.addressDesc")}</span>
@@ -26,8 +26,8 @@ export const AddressWithSchedule = () => {
           <Link
             target="_blank"
             to={map.address}
-            className="inline-flex w-fit uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[20.5px] lg:py-[11.5px] lg:text-[14px] text-[12px] rounded-full
-              font-cofo-medium  mt-5  lg:mt-[35px] lg:w-[223px] justify-center    hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
+            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[20.5px] lg:py-[11.5px] lg:text-[14px] text-[12px] rounded-full
+              font-cofo-medium  mt-5  lg:mt-[35px] lg:w-[223px] justify-center  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}
           </Link>

@@ -55,7 +55,7 @@ export const MoreInfoFirstCol = ({
         <BookLink
           to="/booking"
           className=" 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors    xl:mt-auto
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors lg:w-[204px] text-center   xl:mt-auto
         lg:mt-9
         md:mt-4
         mt-10

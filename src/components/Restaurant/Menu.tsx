@@ -4,7 +4,8 @@ import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 
 export const Menu = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  const isEng = i18n.language === "en";
   const { onOpenModal } = useModalStore();
   return (
     <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto border-x border-[#B3B3B3] border-t md:border-t-0">
@@ -34,10 +35,10 @@ export const Menu = () => {
             </p>
             <button
               onClick={() => onOpenModal("menu")}
-              className="font-cofo-medium uppercase text-[#8C331B] border-[#8C331B] border hover:cursor-pointer hover:bg-[#8C331B] hover:text-white rounded-full
-               lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[13px] py-[9.25px] px-[14.25px]  lg:px-[17.5px]"
+              className="font-cofo-medium uppercase text-[#8C331B] lg:w-[209px] border-[#8C331B] border hover:cursor-pointer hover:bg-[#8C331B] hover:text-white rounded-full
+               lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[10px] py-[9.25px] px-[14.25px]   w-[171px]"
             >
-              {t("buttons.viewMenu")}
+              {isEng ?  t("buttons.restaurantMenu"):t("buttons.viewMenu") }
             </button>
           </div>
           <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden   border-[#B3B3B3]  lg:ps-2.25 "></div>

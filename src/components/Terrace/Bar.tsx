@@ -19,7 +19,7 @@ export const BarComponent = () => {
           </span>
         </h4>
         <h1 className="text-center  uppercase leading-[81%] xl:text-[233px] text-[64px] tracking-[-0.09em]">
-          {t("terrase.bar.title")} ruff
+          {t("terrase.bar.title")}
         </h1>
 
         <p className="text-center mt-2 leading-[120%] uppercase xl:text-[20px] text-[12px]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">

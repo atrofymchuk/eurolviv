@@ -18,7 +18,9 @@ export const RoomDescription = memo(({ pOne, pTwo }: RoomDescriptionProps) => {
       <p className="2xl:text-[20px] text-[12px] sm:text-[14px] pt-[24px] md:text-[14px] lg:text-[14px] xl:text-[16px] leading-[120.1%] tracking-[-0.04%] text-[#444444] h-fit uppercase xl:w-[90%] lg:flex hidden">
         {t(pTwo)}
       </p>
-      <ViewMenuButton className="xl:mt-[50px] lg:mt-[37px] text-[14px] hidden lg:flex" />
+      <ViewMenuButton className="xl:mt-[50px] lg:mt-[37px] text-[14px] hidden lg:flex" >
+        {t("buttons.viewMenu")}
+      </ViewMenuButton>
     </div>
   );
 });

@@ -4,7 +4,9 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { BookLink } from "../Buttons/BookLink";
 
 export const AboutHeader = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+const isEng = i18n.language === "en";
 
   return (
     <div className="relative w-full lg:h-[1186px] h-[821px] flex items-center justify-center flex-col">
@@ -35,7 +37,7 @@ export const AboutHeader = () => {
       </h1>
       <h4 className="font-cofo md:text-[18px] text-[14px] uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
         {t("about.header.desc.0")}
-        <span className="xl:block font-cofo-medium text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden">
+        <span className={`${isEng ? "" : " font-cofo-medium"} xl:block text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden`}>
           {t("about.header.desc.1")}
         </span>
       </h4>

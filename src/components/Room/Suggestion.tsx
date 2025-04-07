@@ -59,7 +59,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                 </p>
                 <Link
                   to={`/rooms/${type}`}
-                  className="uppercase lg:py-[12px] lg:mt-[48px] mt-[20px] lg:px-[30px] rounded-full font-cofo-medium
+                  className="uppercase lg:py-[12px] lg:mt-[48px] mt-[20px] lg:px-[30px] rounded-full font-cofo-medium lg:w-[179px] text-center
                   md:px-[26px] md:py-[12px]
                  border-[0.5px] text-[#FFFFFF] lg:leading-[20px] lg:text-[16px] text-[12px] leading-[15px] py-[12px] px-[17px]"
                 >

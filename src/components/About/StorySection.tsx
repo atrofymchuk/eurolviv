@@ -2,8 +2,11 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { sectionAbout } from "../../store/exportsImg";
 
+import cn from "classnames";
 export const StorySection = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+  const isEng = i18n.language === "en";
 
   return (
     <section className="flex justify-center items-center flex-col w-full ">
@@ -21,19 +24,21 @@ export const StorySection = () => {
           </h1>
           <div className="flex flex-col lg:items-end  items-center">
             <div
-              className="flex flex-col items-center lg:items-start text-xs
-             sm:text-sm md:text-base lg:text-lg 2xl:text-[20px] text-[#252526]
-              uppercase md:mt-3.5 mb-5 "
+              className={cn(
+                "flex flex-col items-center lg:items-start text-xs uppercase  mb-5 ",
+                isEng ? "lg:translate-x-1/8" : ""
+              )}
             >
               <h1
-                className="text-[32px]  md:text-[48px] lg:text-[60px] 2xl:text-[100px] font-normal 
-leading-[24px] sm:leading-[28px] md:leading-[36px] lg:leading-[72px] 2xl:leading-[81px] 
-tracking-[-0.017em] uppercase text-[#242425] text-center w-full lg:text-end"
+                className={cn(
+                  "text-[32px]  md:text-[48px] lg:text-[60px] leading-[81%] tracking-[-0.07em] 2xl:text-[100px] whitespace-nowrap",
+                 
+                )}
               >
                 {t("about.about.title.1")}
               </h1>
 
-              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 lg:pt-0 text-[12px] leading-[120%]">
+              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 lg:pt-5 text-[12px] leading-[120%]">
                 {t("about.about.desc.0")}
               </p>
               <p className="w-full block xl:text-[20px] lg:text-[18px] text-[12px] leading-[120%]">

@@ -63,8 +63,8 @@ export const Dishes = ({
           <div className="flex justify-center">
             <button
               onClick={() => onOpenModal("menu")}
-              className={`uppercase  xl:text-[14px]  w-fit 
-          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${content.isMenu ? "xl:px-[37px] xl:py-[10.5px] px-[32px] py-[10px] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] bg-[#8C331B]" : "px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] text-[#8C331B] border border-[#8C331B]"}`}
+              className={`uppercase  xl:text-[14px]  lg:w-[175px]
+          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${content.isMenu ? "xl:px-[20px] lg:w-[122px]  xl:py-[10.5px] px-[32px] py-[10px] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] bg-[#8C331B]" : "px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] text-[#8C331B] border border-[#8C331B]"}`}
             >
               {t(content.button)}
             </button>

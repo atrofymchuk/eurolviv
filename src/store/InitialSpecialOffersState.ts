@@ -1,110 +1,131 @@
 import { SpecialOffers } from "../types/types";
 
-import { military, business,  birthday,   wedding, photosession, dog } from "./exportsImg";
+import {
+  military,
+  business,
+  birthday,
+  wedding,
+  photosession,
+  dog,
+} from "./exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [
-    {
-      src: military,
-      url:'military',
-      title: "specialOffersState.tarifForMilitary.title",
-      desc:'specialOffersState.tarifForMilitary.desc',
-      cardDesc: "specialOffersState.tarifForMilitary.cardDesc",
-      offer: "specialOffersState.tarifForMilitary.offer",
-      classes: "object-[1%_50%]",
-      discount:'-20%',
-      details:['specialOffersState.tarifForMilitary.details.0','specialOffersState.tarifForMilitary.details.1',
-        'specialOffersState.tarifForMilitary.details.2'
-      ],
-      conditions:['specialOffersState.tarifForMilitary.conditions.0','specialOffersState.tarifForMilitary.conditions.1']
-    },
-    {
-      src: business,
-      url:'business',
-      title: "specialOffersState.businessTarifDay.title",
-      desc:'specialOffersState.businessTarifDay.desc',
-      cardDesc: "specialOffersState.businessTarifDay.cardDesc",
-      offer: "specialOffersState.businessTarifDay.offer",
-      classes: "object-[50%_45%]",
-      discount:'-50%',
-      details:['specialOffersState.businessTarifDay.details.0',
-        'specialOffersState.businessTarifDay.details.1',
-        'specialOffersState.businessTarifDay.details.2'
-      ],
-      conditions:['specialOffersState.businessTarifDay.conditions.0',
-        'specialOffersState.businessTarifDay.conditions.1',
-        'specialOffersState.businessTarifDay.conditions.2'
-      ]
-    },
-    {
-      src: dog,
-      url:'travel-with-pet',
-      title: "specialOffersState.petFriendly.title",
-      desc:'specialOffersState.petFriendly.desc',
-      cardDesc: "specialOffersState.petFriendly.cardDesc",
-      offer: "specialOffersState.petFriendly.offer",
-      classes: "object-[60%_45%]",
-      details:['specialOffersState.petFriendly.details.0',
-        'specialOffersState.petFriendly.details.1',
-        'specialOffersState.petFriendly.details.2',
-        'specialOffersState.petFriendly.details.3'
-      ],
-      conditions:['specialOffersState.petFriendly.conditions.0',
-        'specialOffersState.petFriendly.conditions.1',
-        'specialOffersState.petFriendly.conditions.2'
-      ]
-    },
-    {
-      src: photosession,
-      url:'photossession',
-      title: "specialOffersState.photoSession.title",
-      desc:'specialOffersState.photoSession.desc',
-      cardDesc: "specialOffersState.photoSession.cardDesc",
-      offer: "specialOffersState.photoSession.offer",
-      classes: "object-[50%_0%]",
-      details:['specialOffersState.photoSession.details.0',
-        'specialOffersState.photoSession.details.1',
-        'specialOffersState.photoSession.details.2'
-      ],  
-      conditions:['specialOffersState.photoSession.conditions.0',
-        'specialOffersState.photoSession.conditions.1',
-        'specialOffersState.photoSession.conditions.2',
-        'specialOffersState.photoSession.conditions.3'
-      ]
-    },
-    {
-      src: wedding,
-      url:'newly-weeds',
-      title: "specialOffersState.newlyweds.title",
-      desc:'specialOffersState.newlyweds.desc',
-      cardDesc: "specialOffersState.newlyweds.cardDesc",
-      offer: "specialOffersState.newlyweds.offer",
-      classes: "object-[50%_0%]",
-      details:['specialOffersState.newlyweds.details.0',
-        'specialOffersState.newlyweds.details.1',
-        'specialOffersState.newlyweds.details.2',
-        'specialOffersState.newlyweds.details.3'
-      ],
-      conditions:['specialOffersState.newlyweds.conditions.0',
-        'specialOffersState.newlyweds.conditions.1',
-        'specialOffersState.newlyweds.conditions.2',
-        'specialOffersState.newlyweds.conditions.3'
-      ]
-    },
-    {
-      src: birthday,
-      url:'birthday',
-      title: "specialOffersState.birthday.title",
-      desc:'specialOffersState.birthday.desc',
-      cardDesc: "specialOffersState.birthday.cardDesc",
-      offer: "specialOffersState.birthday.offer",
-      classes: "object-[50%_0%]",
-      discount:'-20%',
-      details:['specialOffersState.birthday.details.0',
-        'specialOffersState.birthday.details.1',
-      ],
-      conditions:['specialOffersState.birthday.conditions.0',
-        'specialOffersState.birthday.conditions.1',
-        'specialOffersState.birthday.conditions.2'
-      ]
-
-    },
-  ];
+  {
+    src: military,
+    url: "military",
+    title: "specialOffersState.tarifForMilitary.title",
+    desc: "specialOffersState.tarifForMilitary.desc",
+    cardDesc: "specialOffersState.tarifForMilitary.cardDesc",
+    offer: "specialOffersState.tarifForMilitary.offer",
+    classes: "object-[1%_50%]",
+    discount: "-20%",
+    details: [
+      "specialOffersState.tarifForMilitary.details.0",
+      "specialOffersState.tarifForMilitary.details.1",
+      "specialOffersState.tarifForMilitary.details.2",
+    ],
+    conditions: [
+      "specialOffersState.tarifForMilitary.conditions.0",
+      "specialOffersState.tarifForMilitary.conditions.1",
+    ],
+  },
+  {
+    src: business,
+    url: "business",
+    title: "specialOffersState.businessTarifDay.title",
+    desc: "specialOffersState.businessTarifDay.desc",
+    cardDesc: "specialOffersState.businessTarifDay.cardDesc",
+    offer: "specialOffersState.businessTarifDay.offer",
+    classes: "object-[50%_45%]",
+    discount: "-50%",
+    details: [
+      "specialOffersState.businessTarifDay.details.0",
+      "specialOffersState.businessTarifDay.details.1",
+      "specialOffersState.businessTarifDay.details.2",
+    ],
+    conditions: [
+      "specialOffersState.businessTarifDay.conditions.0",
+      "specialOffersState.businessTarifDay.conditions.1",
+      "specialOffersState.businessTarifDay.conditions.2",
+    ],
+  },
+  {
+    src: dog,
+    url: "travel-with-pet",
+    title: "specialOffersState.petFriendly.title",
+    desc: "specialOffersState.petFriendly.desc",
+    cardDesc: "specialOffersState.petFriendly.cardDesc",
+    offer: "specialOffersState.petFriendly.offer",
+    classes: "object-[60%_45%]",
+    details: [
+      "specialOffersState.petFriendly.details.0",
+      "specialOffersState.petFriendly.details.1",
+      "specialOffersState.petFriendly.details.2",
+      "specialOffersState.petFriendly.details.3",
+    ],
+    conditions: [
+      "specialOffersState.petFriendly.conditions.0",
+      "specialOffersState.petFriendly.conditions.1",
+      "specialOffersState.petFriendly.conditions.2",
+    ],
+  },
+  {
+    src: photosession,
+    url: "photossession",
+    title: "specialOffersState.photoSession.title",
+    desc: "specialOffersState.photoSession.desc",
+    cardDesc: "specialOffersState.photoSession.cardDesc",
+    offer: "specialOffersState.photoSession.offer",
+    classes: "object-[50%_0%]",
+    details: [
+      "specialOffersState.photoSession.details.0",
+      "specialOffersState.photoSession.details.1",
+      "specialOffersState.photoSession.details.2",
+    ],
+    conditions: [
+      "specialOffersState.photoSession.conditions.0",
+      "specialOffersState.photoSession.conditions.1",
+      "specialOffersState.photoSession.conditions.2",
+      "specialOffersState.photoSession.conditions.3",
+    ],
+  },
+  {
+    src: wedding,
+    url: "newly-weeds",
+    title: "specialOffersState.newlyweds.title",
+    desc: "specialOffersState.newlyweds.desc",
+    cardDesc: "specialOffersState.newlyweds.cardDesc",
+    offer: "specialOffersState.newlyweds.offer",
+    classes: "object-[50%_0%]",
+    details: [
+      "specialOffersState.newlyweds.details.0",
+      "specialOffersState.newlyweds.details.1",
+      "specialOffersState.newlyweds.details.2",
+      "specialOffersState.newlyweds.details.3",
+    ],
+    conditions: [
+      "specialOffersState.newlyweds.conditions.0",
+      "specialOffersState.newlyweds.conditions.1",
+      "specialOffersState.newlyweds.conditions.2",
+      "specialOffersState.newlyweds.conditions.3",
+    ],
+  },
+  {
+    src: birthday,
+    url: "birthday",
+    title: "specialOffersState.birthday.title",
+    desc: "specialOffersState.birthday.desc",
+    cardDesc: "specialOffersState.birthday.cardDesc",
+    offer: "specialOffersState.birthday.offer",
+    classes: "object-[50%_0%]",
+    discount: "-20%",
+    details: [
+      "specialOffersState.birthday.details.0",
+      "specialOffersState.birthday.details.1",
+    ],
+    conditions: [
+      "specialOffersState.birthday.conditions.0",
+      "specialOffersState.birthday.conditions.1",
+      "specialOffersState.birthday.conditions.2",
+    ],
+  },
+];

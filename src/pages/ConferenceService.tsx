@@ -24,6 +24,7 @@ export const ConferenceService = () => {
     <RoomSliderContainer
       key={cn(`slider-${index}`)}
       images={el.showcaseSwiperImages}
+      viewShowcaseSwiperImages={el.viewShowcaseSwiperImages}
     />,
   ]);
 

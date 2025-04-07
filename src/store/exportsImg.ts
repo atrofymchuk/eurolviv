@@ -135,6 +135,11 @@ export  { default as coffee} from "../assets/ConferenceService/Menu/coffee.webp"
 export  { default as headerConference} from "../assets/ConferenceService/BigHall.webp";
 export  { default as headerConferenceMobile} from "../assets/ConferenceService/hallPhone.webp";
 
+export {default as uShape} from "../assets/ConferenceService/engHall/ushape.webp";
+export {default as board} from "../assets/ConferenceService/engHall/board.webp";
+export {default as class} from "../assets/ConferenceService/engHall/class.webp";
+export {default as theater} from "../assets/ConferenceService/engHall/theater.webp";
+
 
 //contacts page 
 export  { default as hotelContacts} from "../assets/Contacts/hotel.webp"; 

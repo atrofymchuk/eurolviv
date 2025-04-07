@@ -60,7 +60,7 @@ export const Advantages = () => {
                 </li>
               ))}
             </ul>
-              <BookLink className="hidden lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] lg:mt-[25px]" to={"/booking"}>{t("buttons.bookRoom")}</BookLink>
+              <BookLink className="hidden lg:w-[204px] justify-center lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] lg:mt-[25px]" to={"/booking"}>{t("buttons.bookRoom")}</BookLink>
           </div>
         </div>
 

@@ -16,7 +16,7 @@ type HallSliderProps = {
 };
 
 export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const settings = {
     dots: false,
@@ -35,6 +35,8 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
       },
     ],
   };
+
+  const isEng = i18n.language === "en";
 
   return (
     <div className="w-full ms-[7%] z-10">
@@ -60,9 +62,9 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
               <img src={guest} alt="" className="w-[14px] h-[14px]" />
               <span>
 
-              {t("home.conferenceService.capacity")}: {t(hall.capacity).slice(0, -2) + "."}
+              {t("home.conferenceService.capacity")}: {isEng ? t(hall.capacity) : t(hall.capacity).slice(0, -2) + "."}
               </span>
-            </p>
+              </p>
             </div>
             <div className="text-center flex items-center justify-center pt-[12px] lg:pt-[37px] relative">
             <Link

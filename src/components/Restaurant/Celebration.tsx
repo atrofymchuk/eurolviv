@@ -26,7 +26,7 @@ export const Celebration = () => {
           </div>
           <button
             onClick={() => onOpenModal("menu")}
-            className="uppercase lg:text-[14px] text-[12px] font-cofo-medium bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] lg:px-[25px] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
+            className="uppercase lg:text-[14px] lg:w-[175px] text-[12px] font-cofo-medium bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] w-[160px] hover:text-[#8C331B] border border-[#8C331B] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
           >
             {t("buttons.celebrationMenu")}
           </button>

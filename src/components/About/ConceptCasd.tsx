@@ -38,7 +38,7 @@ export const ConceptCasd = ({title, img, alt, text, index}: {title: string[], im
             {t(text)}
           </p>
           <div className="mt-auto">
-            <DetailsLink to={"/booking"}>{t("buttons.details")}</DetailsLink>
+            <DetailsLink to={"/booking"}>{t("buttons.seeMore")}</DetailsLink>
           </div>
         </div>
       </div>

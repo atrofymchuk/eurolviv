@@ -18,7 +18,7 @@ export const initialTerraseState: TerrasesInitialState = {
         { text: "terasesState.mainTerrase.descTwo.0" },
         { text: "terasesState.mainTerrase.descTwo.1", isBold: true },
         { text: "terasesState.mainTerrase.descTwo.2" },
-        { text: "terasesState.mainTerrase.descTwo.3", isBold: true },
+        { text: "terasesState.mainTerrase.descTwo.3", isBold: true, isEng: true },
       ],
       titleTwo: "terasesState.mainTerrase.titleTwo",
       descThree: [
@@ -34,7 +34,7 @@ export const initialTerraseState: TerrasesInitialState = {
       descOne: [
         { text: "terasesState.upperTerrase.desc.0" },
         { text: "terasesState.upperTerrase.desc.1", isBold: true },
-        { text: "terasesState.upperTerrase.desc.2" },
+        { text: "terasesState.upperTerrase.desc.2", isEng: true },
       ],
       titleTwo: "terasesState.upperTerrase.titleTwo",
       descTwo: [
@@ -55,6 +55,7 @@ export const initialTerraseState: TerrasesInitialState = {
         { text: "terasesState.lowerTerrase.desc.1", isBold: true },
         { text: "terasesState.lowerTerrase.desc.2" },
         { text: "terasesState.lowerTerrase.desc.3", isBold: true },
+        { text: "terasesState.lowerTerrase.desc.4",  },
       ],
       titleTwo: "terasesState.lowerTerrase.titleTwo",
       descTwo: [

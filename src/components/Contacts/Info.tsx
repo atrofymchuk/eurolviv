@@ -73,8 +73,8 @@ export const Info = () => {
             <div className="2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] lg:pt-[58px] pt-[43px] flex-1 mx-[20px] md:mx-0">
               <h1
                 className=" uppercase 
-              leading-[82%] lg:tracking-[-0.04em]  break-all
-              text-[32px]  lg:text-[48px] xl:text-[70px] 2xl:text-[100px]  tracking-[-0.07em] "
+              leading-[82%] lg:tracking-[-0.04em] 
+                text-[32px]  lg:text-[48px] xl:text-[70px] 2xl:text-[100px]  tracking-[-0.07em] 2xl:w-[567px] "
               >
                 {t("contacts.info.headingContactUs")}
               </h1>

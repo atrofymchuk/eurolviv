@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { karaokeFst, karaokeScd } from "../../store/exportsImg";
+import cn from "classnames";
 export const Karaoke = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  const isEng = i18n.language === "en";
   return (
     <div className="flex flex-col items-center">
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 md:w-[93.16%] w-[89.067%] mx-auto border-x border-[#B3B3B3] border-t ">
@@ -13,7 +15,9 @@ export const Karaoke = () => {
             <h1 className="uppercase 2xl:text-[100px] xl:text-[86px] text-[#252526] lg:text-[72px] md:text-[48px] text-[64px] leading-[81%] 2xl:max-w-[605px]  lg:max-w-[350px] xl:max-w-[400px] md:max-w-[250px] max-w-[299px] tracking-[-7%] xl:pt-1.5 ">
               {t("restaurant.karaoke.title")}
             </h1>
-            <div className="xl:space-y-5  h-full  xl:mt-[34px] flex flex-col 2xl:max-w-[555px] md:max-w-[250px] max-w-[299px] lg:max-w-[350px] xl:max-w-[400px] ">
+            <div className= {cn(` h-full  xl:mt-[34px] flex flex-col 2xl:max-w-[555px] md:max-w-[250px] max-w-[299px] lg:max-w-[350px] xl:max-w-[400px]`,{
+              "xl:space-y-5":!isEng
+            })} >
             
               <p className="inline uppercase text-[#252526] xl:text-[18px] xl:leading-[22.6px] lg:text-[16px] text-[12px] md:order-none order-3 ">
                 <span className="lg:font-cofo-medium">

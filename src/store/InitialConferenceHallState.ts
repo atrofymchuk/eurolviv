@@ -4,59 +4,7 @@ import * as icons from "./exportsIcons";
 
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
-
     {
-      previewImage: imgs.smallHallPreview,
-      title: "conferenceHallState.smallHall.title",
-      size: "conferenceHallState.smallHall.desc",
-      area: "75M²",
-      floor: 1,
-      capacity: "conferenceHallState.smallHall.capacity",
-      about: {
-        pOne: "conferenceHallState.smallHall.about.pOne",
-        pTwo: "conferenceHallState.smallHall.about.pTwo",
-      },
-      price: { hour: 1000, day: 5000 },
-      swiperImages: [
-        imgs.smallHallPreview,
-        imgs.pLetterSmall,
-        imgs.theathreSmall,
-        imgs.negotiationTableSmall,
-      ],
-      showcaseSwiperImages: [
-        imgs.pLetterSmall,
-        imgs.pLetter,
-        imgs.theathreSmall,
-        imgs.theathre,
-        imgs.negotiationTableSmall,
-        imgs.negotiationTable,
-      ],
-      icons: [
-        {
-          src: icons.screen,
-          text: "conferenceHallState.smallHall.icons.screen",
-        },
-        {
-          src: icons.soundSystem,
-          text: "conferenceHallState.smallHall.icons.soundSystem",
-        },
-        {
-          src: icons.notebook,
-          text: "conferenceHallState.smallHall.icons.notebook",
-        },
-        { src: icons.paper, text: "conferenceHallState.smallHall.icons.paper" },
-        {
-          src: icons.presenter,
-          text: "conferenceHallState.smallHall.icons.presenter",
-        },
-        {
-          src: icons.flipchart,
-          text: "conferenceHallState.smallHall.icons.flipchart",
-        },
-      ],
-    },
-    {
-    
       previewImage: imgs.bigHall,
       title: "conferenceHallState.bigHall.title",
       size: "conferenceHallState.bigHall.desc",
@@ -68,17 +16,23 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.bigHall.about.pTwo",
       },
       price: { hour: 800, day: 3000 },
-      swiperImages: [imgs.bigHall,imgs.bigHallTheathre, imgs.hallH, ],
+      swiperImages: [imgs.bigHall, imgs.bigHallTheathre, imgs.hallH],
       showcaseSwiperImages: [
         imgs.pLetterImg,
-        imgs.pLetter,
         imgs.hallH,
-        imgs.classRoom,
         imgs.bigHallTheathre,
-        imgs.theathre,
         imgs.bigHallTheathre,
-        imgs.negotiationTable,
       ],
+      viewShowcaseSwiperImages: {
+        ua: [
+          imgs.pLetter,
+          imgs.classRoom,
+          imgs.theathre,
+          imgs.board,
+        ],
+        eng: [imgs.uShape, imgs.class, imgs.theater, imgs.board],
+      },
+
       icons: [
         {
           src: icons.projector,
@@ -109,6 +63,57 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       ],
     },
 
+    {
+      previewImage: imgs.smallHallPreview,
+      title: "conferenceHallState.smallHall.title",
+      size: "conferenceHallState.smallHall.desc",
+      area: "75M²",
+      floor: 1,
+      capacity: "conferenceHallState.smallHall.capacity",
+      about: {
+        pOne: "conferenceHallState.smallHall.about.pOne",
+        pTwo: "conferenceHallState.smallHall.about.pTwo",
+      },
+      price: { hour: 1000, day: 5000 },
+      swiperImages: [
+        imgs.smallHallPreview,
+        imgs.pLetterSmall,
+        imgs.theathreSmall,
+        imgs.negotiationTableSmall,
+      ],
+      showcaseSwiperImages: [
+        imgs.pLetterSmall,
+        imgs.theathreSmall,
+        imgs.negotiationTableSmall,
+      ],
+      viewShowcaseSwiperImages: {
+        ua: [imgs.pLetter, imgs.theathre, imgs.negotiationTable],
+        eng: [imgs.uShape, imgs.theater, imgs.board],
+      },
+      icons: [
+        {
+          src: icons.screen,
+          text: "conferenceHallState.smallHall.icons.screen",
+        },
+        {
+          src: icons.soundSystem,
+          text: "conferenceHallState.smallHall.icons.soundSystem",
+        },
+        {
+          src: icons.notebook,
+          text: "conferenceHallState.smallHall.icons.notebook",
+        },
+        { src: icons.paper, text: "conferenceHallState.smallHall.icons.paper" },
+        {
+          src: icons.presenter,
+          text: "conferenceHallState.smallHall.icons.presenter",
+        },
+        {
+          src: icons.flipchart,
+          text: "conferenceHallState.smallHall.icons.flipchart",
+        },
+      ],
+    },
 
     {
       previewImage: imgs.laungePreview,
@@ -127,30 +132,30 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         imgs.laungeTheatre,
         imgs.negotiationTableLaunge,
       ],
-      showcaseSwiperImages: [
-        imgs.laungeTheatre,
-        imgs.theathre,
-        imgs.negotiationTableLaunge,
-        imgs.negotiationTable,
-      ],
+      showcaseSwiperImages: [imgs.laungeTheatre, imgs.negotiationTableLaunge],
+      viewShowcaseSwiperImages: {
+        ua: [imgs.theathre, imgs.negotiationTable],
+        eng: [imgs.theater, imgs.board],
+      },
       icons: [
+        {
+          src: icons.projector,
+          text: "conferenceHallState.launge.icons.projector",
+        },
+        { src: icons.paper, text: "conferenceHallState.launge.icons.paper" },
         { src: icons.screen, text: "conferenceHallState.launge.icons.screen" },
         {
-          src: icons.soundSystem,
-          text: "conferenceHallState.launge.icons.soundSystem",
+          src: icons.flipchart,
+          text: "conferenceHallState.launge.icons.flipchart",
         },
         {
           src: icons.notebook,
           text: "conferenceHallState.launge.icons.notebook",
         },
-        { src: icons.paper, text: "conferenceHallState.launge.icons.paper" },
+     
         {
           src: icons.presenter,
           text: "conferenceHallState.launge.icons.presenter",
-        },
-        {
-          src: icons.flipchart,
-          text: "conferenceHallState.launge.icons.flipchart",
         },
       ],
     },

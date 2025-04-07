@@ -18,13 +18,13 @@ export const AboutRestaurant = () => {
               {t("restaurant.about.title")}
             </p>
             <div className="md:flex md:items-center md:gap-2">
-                <h1 className="uppercase tracking-[-7%] leading-[81%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px]">
-                    ruff
-                </h1>
-                <span className="2xl:text-[64px] lg:tracking-[-6%] text-[32px] flex items-center mt-auto justify-center md:justify-start">
-                    {t("restaurant.about.title2")}
-                    <span className="md:inline-flex hidden">&nbsp;-</span>
-                </span>
+              <h1 className="uppercase tracking-[-7%] leading-[81%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px]">
+                ruff
+              </h1>
+              <span className="2xl:text-[64px] lg:tracking-[-6%] text-[32px] flex items-center mt-auto justify-center md:justify-start">
+                {t("restaurant.about.title2")}
+                <span className="md:inline-flex hidden">&nbsp;-</span>
+              </span>
             </div>
 
             <div className="lg:space-y-6 space-y-3 lg:pt-[45px] pt-[22px]   md:mb-0 mb-8">
@@ -46,9 +46,7 @@ export const AboutRestaurant = () => {
                 {t("restaurant.about.desc.second.3")}
               </p>
               <p className="md:block hidden uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
-                <span className="font-cofo lg:font-cofo-medium">
-                  {t("restaurant.about.desc.third.0")}
-                </span>
+                <span className="">{t("restaurant.about.desc.third.0")}</span>
                 {t("restaurant.about.desc.third.1")}
               </p>
               <p className="md:block hidden uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
@@ -56,7 +54,10 @@ export const AboutRestaurant = () => {
                   {t("restaurant.about.desc.fourh.0")}
                 </span>
                 {t("restaurant.about.desc.fourh.1")}
-                {t("restaurant.about.desc.fourh.2")}
+                <span className="font-cofo-medium">
+                  {t("restaurant.about.desc.fourh.2")}
+                </span>
+                {t("restaurant.about.desc.fourh.3")}
               </p>
             </div>
           </div>
@@ -91,10 +92,8 @@ export const AboutRestaurant = () => {
         <div className="border-x border-b border-[#B3B3B3] flex flex-col items-center justify-center py-[27px]   lg:mb-10 md:text-start text-center md:hidden  ">
           <div className="2xl:w-[635px] w-[299px]">
             <p className="uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
-              <span className="lg:font-cofo-medium">
-                {t("restaurant.about.desc.third.0")}
-              </span>
-              —{t("restaurant.about.desc.third.1")}
+              <span className="">{t("restaurant.about.desc.third.0")}</span>—
+              {t("restaurant.about.desc.third.1")}
             </p>
 
             <p className="uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px]  leading-[22.6px] mt-2">

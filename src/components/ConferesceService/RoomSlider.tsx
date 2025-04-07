@@ -3,9 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-
 interface RoomSliderProps {
   images: string[];
+  viewShowcaseSwiperImages: {
+    ua: string[];
+    eng: string[];
+  };
 }
 
 export const RoomSlider = memo(({ images }: RoomSliderProps) => {
@@ -20,6 +23,8 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+
 
   const totalSlidesMobile = Math.ceil(images.length / 2);
 
@@ -102,6 +107,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
                   />
                 </div>
               </div>
+             
             ))}
           </Slider>
         </div>

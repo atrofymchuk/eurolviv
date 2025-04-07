@@ -84,7 +84,7 @@ export const MoreInfoSecondCol = ({
           <BookLink
             to="/booking"
             className=" 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10 lg:w-[204px] text-center
         lg:mt-9
         md:mt-4
         mt-10
@@ -109,7 +109,7 @@ export const MoreInfoSecondCol = ({
             <BookLink
               to="/booking"
               className={cn(` 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors lg:w-[204px] text-center  xl:mt-10
         lg:mt-9
         md:mt-4
         mt-10

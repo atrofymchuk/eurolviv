@@ -12,7 +12,7 @@ export default function MapImg() {
         <CiLocationOn color="black" className="xl:w-[18px] xl:h-[18px] md:w-[16px] md:h-[16px] lg:w-[24px] lg:h-[24px]" />
         {t("contacts.info.addressDesc")}
       </p>
-      <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] " />
+      <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] lg:w-[197px] w-[178px] text-center" />
     </div>
   );
 }

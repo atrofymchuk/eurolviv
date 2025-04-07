@@ -6,7 +6,7 @@ import { InfrastructureSection } from "./InfrastructureSection";
 import { PlacesNearbySection } from "./PlacesNearlySection";
 
 export const WhereWeAre = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const {places, infrastructure} = usePagesInfoStore();
   
   return (
@@ -18,7 +18,7 @@ export const WhereWeAre = () => {
 
       <div className="grid lg:grid-cols-[48%_52%] w-full  border border-[#c7c7c7] border-t-0 container-fluid max-w-[89.58%] mx-auto lg:pb-[93px] pb-[48px]">
         <InfrastructureSection t={t} />
-        <PlacesNearbySection t={t} places={places} infrastructure={infrastructure} />
+        <PlacesNearbySection t={t} i18n={i18n} places={places} infrastructure={infrastructure} />
       </div>
     </section>
   );
