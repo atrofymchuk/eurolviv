@@ -51,10 +51,10 @@ export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
               to={item.path}
               target={item.external ? "_blank" : undefined}
               rel={item.external ? "noopener noreferrer" : undefined}
-              className="flex-1 flex border-r border-[#C29986] flex-col items-center p-3.5 gap-[7.5px] justify-center py-[15px] hover:bg-[#8C331B] transition-colors whitespace-nowrap px-[13px] last:border-r-0"
+              className="flex-1 flex border-r border-[#C29986] flex-col items-center p-3.5 justify-center py-[15px] hover:bg-[#8C331B] transition-colors whitespace-nowrap px-[13px] last:border-r-0"
             >
               {item.icon}
-              <span className="text-[10px] mt-1 uppercase font-cofo-medium">
+              <span className="text-[10px] mt-[7px] uppercase font-cofo-medium">
                 {item.label}
               </span>
             </Link>
@@ -65,7 +65,7 @@ export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
               className="flex-1 flex p-3.5 border-r border-[#C29986] flex-col items-center justify-center py-[15px] hover:bg-[#8C331B] transition-colors whitespace-nowrap last:border-r-0"
             >
               {item.icon}
-              <span className="text-[10px] mt-1 uppercase font-cofo-medium">
+              <span className="text-[10px] mt-[7px] uppercase font-cofo-medium">
                 {item.label}
               </span>
             </button>

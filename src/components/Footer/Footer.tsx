@@ -15,7 +15,7 @@ import { social } from "../../Constants/Social";
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="relative text-white py-[47px] ps-4  lg:ps-0 overflow-hidden lg:h-[900px]  md:h-[1400px] h-[1360px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center pt-[53px] lg:pt-[133px]">
+    <footer className="relative text-white py-[47px] ps-4  lg:ps-0 overflow-hidden lg:h-[900px]  md:h-[1400px] h-[1380px] z-20  flex flex-col lg:flex-row items-center  lg:items-start lg:justify-center pt-[53px] lg:pt-[133px]">
       <div className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10"></div>
 
       <div className="absolute top-[200px] left-0 w-full h-[1379px] lg:h-[calc(100%-200px)] footer-gradient z-1"></div>
