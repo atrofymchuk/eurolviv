@@ -30,7 +30,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
     isActiveLink,
   } = useNavbarStyles();
 
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { changeLanguage } = useLanguage();
 
   const isEng = i18n.language === "en";
@@ -49,10 +49,8 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           }
         )}
       >
-                
         <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto lg:mx-[20px] xl:mx-auto ">
           <div className="flex items-center xl:space-x-4 space-x-3  w-full  justify-between">
-   
             <HeaderNav
               {...{
                 logo,
@@ -71,14 +69,13 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               }}
             />
             <div className={cn(`${rightMenu} me-0 hidden lg:flex`)}>
-                <ChangeLangButton
-                  changeLanguage={changeLanguage}
-                  isMobile={false}
-                  scrolled={scrolled}
-                />
-              </div>
+              <ChangeLangButton
+                changeLanguage={changeLanguage}
+                isMobile={false}
+                scrolled={scrolled}
+              />
+            </div>
             <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
-              
               <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { ContactList } from "./ContactsList";
 import MapImg from "./MapImg";
-
+import { social } from "../../Constants/Social";
 export const OurContactsWithMap = () => {
   const { t } = useTranslation();
 
@@ -28,7 +28,7 @@ export const OurContactsWithMap = () => {
           title={t("contacts.info.restaurand/terrase")}
           phones={["+38 (073) 242-40-02", "+38 (093) 348-31-14"]}
           email="restaurant@eurohotel.lviv.ua"
-          instagramLink="https://www.instagram.com/ruff.lviv?igsh=MWg0OHV1enBreWdh"
+          instagramLink={social.restaurant.instagram}
           className="md:order-3 order-2 xl:mt-[55px] lg:mt-[30px] pt-[18px] lg:pt-0"
         />
 

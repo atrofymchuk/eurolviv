@@ -5,10 +5,12 @@ import Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
 import { useRoomStore } from "../../store/useRoomsStore";
+import cn from "classnames";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  const isEng = i18n.language === "en";
   const { sliderProps } = useRoomStore();
 
   return (
@@ -47,9 +49,11 @@ export const RoomsHome = () => {
                 <div className="flex justify-center items-center  ">
                   <Link
                     to="/rooms"
-                    className="uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
-                       bg-[#EDE8E5] whitespace-nowrap  lg:w-[170px] h-[46px] py-[12.5px] px-[14.5px] 
-                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px]  text-[12px]"
+                    className={cn(`uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
+                       bg-[#EDE8E5] whitespace-nowrap lg:px-5.25  h-[46px] py-[12.5px] px-[14.5px] 
+                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px]  text-[12px]`, {
+                      "lg:w-[170px]": isEng,
+                    })}
                   >
                     {t("buttons.viewRooms")}
                   </Link>

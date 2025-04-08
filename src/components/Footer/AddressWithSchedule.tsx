@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { navigate } from "../../store/exportsIcons";
 import { Link } from "react-router-dom";
 import { map } from "../../Constants/map";
+import { social } from "../../Constants/Social";
 
 export const AddressWithSchedule = () => {
   const { t } = useTranslation();
@@ -53,20 +54,20 @@ export const AddressWithSchedule = () => {
               reception@eurohotel.lviv.ua
             </p>
             <div className="lg:mt-[32px] mt-[19px] flex space-x-4">
-              <span className="bg-white rounded-full hover:cursor-pointer">
+              <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
                   className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
                   color="#45525F"
                 />
-              </span>
+              </Link>
 
-              <span className="bg-white rounded-full hover:cursor-pointer">
+              <Link to={social.hotel.whatsapp} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <FaWhatsapp
                   color="#45525E"
                   className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
                 />
-              </span>
-              <span className=" rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
+              </Link>
+              <Link to={social.hotel.whatsapp} target="_blank" className=" rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
                 <svg
                   width="26"
                   height="26"
@@ -79,7 +80,7 @@ export const AddressWithSchedule = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </span>
+              </Link>
             </div>
           </div>
         </div>

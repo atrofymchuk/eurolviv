@@ -28,8 +28,8 @@ export const Footer = () => {
         />
       </InViewWrapper>
 
-      <div className="lg:w-full w-[100%] ">
-        <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between w-full   ">
+      <div className="lg:w-full w-[100%]">
+        <div className="relative z-10 flex flex-col lg:flex-row lg:justify-between w-full">
           <div className="lg:order-1 order-2  lg:w-[21.9%] lg:pt-[17px] flex flex-col lg:items-center lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] ">
             <div className="flex flex-col  h-full justify-between lg:mt-0  mt-[35px]  ">
               <div className="lg:flex lg:flex-col justify-between h-full grid grid-cols-2  lg:grid-cols-1   ">
@@ -56,9 +56,9 @@ export const Footer = () => {
                       {t("footer.socialMedia")}
                     </p>
                     <div className="flex space-x-4 text-xl lg:mt-[25px] mt-4 ">
-                      <span className="rounded-full hover:cursor-pointer">
+                      <Link to={social.hotel.facebook} target="_blank" className="rounded-full hover:cursor-pointer">
                         <FaFacebook className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]" />
-                      </span>
+                      </Link>
                       <Link
                         to={social.hotel.instagram}
                         target="_blank"
@@ -75,9 +75,9 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="uppercase underline  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-y-33 xl:translate-y-23.5 translate-y-40.5  lg:block hidden">
+            {/* <p className="uppercase underline  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-y-33 xl:translate-y-23.5 translate-y-40.5  lg:block hidden">
               {t("footer.privacyPolicy")}
-            </p>
+            </p> */}
           </div>
 
           <AddressWithSchedule />

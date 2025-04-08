@@ -3,6 +3,8 @@ import { RiTelegram2Fill } from "react-icons/ri";
 import { Rating } from "./Rating";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
+import { Link } from "react-router-dom";
+import { social } from "../../Constants/Social";
 export const BookingSection = () => {
   const { t } = useTranslation();
   return (
@@ -39,31 +41,31 @@ export const BookingSection = () => {
               restaurant@eurohotel.lviv.ua
             </p>
             <div className="flex lg:space-x-4 space-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] lg:mt-[30px] mt-6  ">
-              <span
+              <Link to={social.restaurant.instagram} target="_blank"
                 className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <FaInstagram
                   color="white"
                   className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
                 />
-              </span>
-              <span
+              </Link>
+              <Link to={social.restaurant.telegram} target="_blank"
                 className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <RiTelegram2Fill
                   color="white"
                   className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
                 />
-              </span>
-              <span
+              </Link>
+              <Link to={social.restaurant.whatsapp} target="_blank"
                 className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `)}
               >
                 <FaWhatsapp
                   color="white"
                   className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
                 />
-              </span>
-              <span
+              </Link>
+              <Link to={social.restaurant.viber} target="_blank"
                 className={cn(`rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`)}
               >
                 <svg
@@ -78,7 +80,7 @@ export const BookingSection = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </span>
+              </Link>
             </div>
           </div>
         </div>

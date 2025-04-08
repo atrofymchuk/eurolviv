@@ -90,7 +90,7 @@ export const RoofService = () => {
                 >
                   <Link
                     to={item.url}
-                    className={`uppercase bg-[#8C331B] lg:py-[11px]  lg:px-[29.5px] rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:w-[226px]  lg:text-[16px] text-[12px] py-[12px] px-[17px] ${
+                    className={`uppercase bg-[#8C331B] lg:py-[11px]   rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:w-[226px]  lg:text-[16px] text-[12px] py-[12px] px-[17px] ${
                       index === 2 ? "" : "hidden"
                     }`}
                   >
@@ -99,8 +99,8 @@ export const RoofService = () => {
                   <Link
                     to={item.url}
                     className={cn(`uppercase  rounded-full  font-cofo-medium text-[#252526] bg-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:text-[16px] px-[10px] text-[12px] `, {
-                      "md:py-[11px]  lg:w-[171px] lg:px-[32px]": index !== 2,
-                      "lg:w-[226px] md:py-[11px]  lg:px-[59.5px] px-[40px]": index === 2,
+                      "md:py-[11px]  lg:w-[171px] ": index !== 2,
+                      "lg:w-[226px] md:py-[11px]  ": index === 2,
                     })}
                   >
                     {t("buttons.details")}

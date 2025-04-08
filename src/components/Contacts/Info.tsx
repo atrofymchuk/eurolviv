@@ -4,7 +4,7 @@ import ContactUsForm from "./ContactUsForm";
 import { OurContactsWithMap } from "./OurContactsWithMap";
 import { ContactUs } from "./ContactUs";
 import { Link } from "react-router-dom";
-
+import { social } from "../../Constants/Social";
 export const Info = () => {
   const { t } = useTranslation();
 
@@ -48,7 +48,8 @@ export const Info = () => {
               <div className="flex space-x-4 text-lg">
                 <Link
                   className="rounded-full hover:cursor-pointer transition-transform hover:scale-110"
-                  to=""
+                  to={social.hotel.facebook}
+                  target="_blank"
                 >
                   <FaFacebook
                     className="w-[30px] h-[30px] md:w-[33px] md:h-[33px] lg:w-[37px] lg:h-[37px]"
@@ -56,7 +57,8 @@ export const Info = () => {
                   />
                 </Link>
                 <Link
-                  to="https://www.instagram.com/eurohotel.lviv?igsh=MWFoeGg1bHhlc3pxeA=="
+                  to={social.hotel.instagram}
+                  target="_blank"
                   className="rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 transition-transform hover:scale-110"
                 >
                   <FaInstagram
