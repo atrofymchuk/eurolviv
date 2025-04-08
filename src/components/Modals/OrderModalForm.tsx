@@ -9,7 +9,7 @@ import { FormData } from "./OrderModal";
    
     export default function OrderModalForm({register}: {register: UseFormRegister<FormData>}) {
   const { t } = useTranslation()
-  return <div className="lg:pt-[18px] space-y-[8px] lg:w-[436px]">
+  return <div className="lg:pt-[18px] space-y-[8px] lg:w-[436px] pt-[8px] ">
   <input
     type="text"
     {...register("name")}
@@ -33,11 +33,11 @@ import { FormData } from "./OrderModal";
 
   <div className="relative w-full">
     <select
-      className="w-full font-cofo py-[14px] lg:text-[14px] text-[12px] px-[25px] rounded-full outline-none bg-[#C2C2C242] uppercase appearance-none pr-10 text-[#7C7C7C]"
+      className="w-full font-cofo py-[14px] lg:text-[14px] text-[12px] px-[25px]  rounded-full outline-none bg-[#C2C2C242] uppercase appearance-none pr-10 text-[#7C7C7C]"
       {...register("guests")}
     >
       <option value="" className="text-[#7C7C7C]">
-        Кількість осіб
+        {t("orderModal.guests")}
       </option>
       <option className="font-cofo" value="1">
         1

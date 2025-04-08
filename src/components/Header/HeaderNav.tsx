@@ -75,8 +75,8 @@ export const HeaderNav = memo(
     );
 
     return (
-      <div className="flex relative w-full me-0 h-full">
-        <div className="flex lg:justify-end justify-center w-full">
+      <div className="flex relative  me-0 h-full w-full lg:w-auto">
+         <div className="flex  lg:justify-between justify-center w-full ">
           <MobileMenuButton
             toggleMenu={toggleMenu}
             scrolled={scrolled}
@@ -84,13 +84,13 @@ export const HeaderNav = memo(
             isActiveLink={isActiveLink}
           />
           
-          <Logo 
+         <Logo 
             logo={logo} 
             iconLogoStyle={iconLogoStyle} 
             scrolled={scrolled} 
           />
 
-          <MobileBookingButton scrolled={scrolled} pathname={pathname}  changeLanguage={changeLanguage}/>
+         <MobileBookingButton scrolled={scrolled} pathname={pathname}  changeLanguage={changeLanguage}/>
 
           <DesktopNavigation
             navLinks={navLinks}

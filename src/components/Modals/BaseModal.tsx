@@ -18,7 +18,7 @@
         className="fixed mx-auto max-w-[90%]  overflow-y-auto w-fit"
         overlayClassName="fixed inset-0 bg-black/49 z-51  flex items-center justify-center min-h-screen"
       >
-        <div className="bg-white w-full  overflow-y-auto relative flex flex-col lg:justify-center px-5 items-center">
+        <div className="bg-white w-full  overflow-y-auto relative flex flex-col lg:justify-center lg:px-0 px-5 items-center">
         
           {isOpenMenuModal && <ModalMenu onCloseGlobalModal={onCloseGlobalModal} />}
           {isOpenOrder && <OrderModal onCloseGlobalModal={onCloseGlobalModal} />}

@@ -5,7 +5,7 @@ import {
   calendarBooking,
   menu,
   callUs,
-  location,
+  locationWhite,
 } from "../../store/exportsIcons";
 import { useModalStore } from "../../store/useModalStore";
 
@@ -34,7 +34,7 @@ export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
       action: () => onOpenModal("contacts"),
     },
     {
-      icon: <img src={location} alt="location" />,
+      icon: <img src={locationWhite} alt="location" />,
       label: t("phoneBottomMenu.route"),
       path: map.address,
       external: true,

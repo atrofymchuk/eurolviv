@@ -114,7 +114,7 @@ export const MobileNavigation = ({
 
             <BookLink
               to="/booking"
-              className=" bg-[#A47762] text-white uppercase font-cofo-medium text-[10px] px-[6.25px] py-[6px] mt-[22px] "
+              className="w-[107px] text-center bg-[#A47762] text-white uppercase font-cofo-medium text-[10px] px-[6.25px] py-[6px] mt-[22px] "
               onClick={() => setMenuOpen(false)}
             >
               {t("buttons.book")}
@@ -138,13 +138,11 @@ export const MobileNavigation = ({
           </div>
 
           <div className="mb-[40px]">
-            <div>
+            <div className="space-y-[10px]">
               <h4 className="text-[12px]  font-cofo-medium text-[#252526] uppercase mt-[44px]">
                 {t("footer.restaurant")}/{t("footer.terrace")}
               </h4>
-              <p className="text-[12px] text-[#8F8F8F] uppercase   mt-1 mb-[14px]">
-                {t("contacts.info.receptionPhone")}
-              </p>
+             
               <p className="text-[#252526] text-sm">+38 (093) 348 31 14</p>
             </div>
 

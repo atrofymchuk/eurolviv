@@ -55,11 +55,11 @@ export const SpecialOffersModal = () => {
               className="w-full h-[351px] md:max-h-[50vh] xl:h-[70vh] object-cover object-center rounded-t-lg"
             />
           </InViewWrapper>
-          <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10">
+          <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10 ">
             <h1 className="text-[32px] lg:text-[70px] text-[#FFFFFF80] tracking-[-0.07em]">
               {t(data.discount || "")}
             </h1>
-            <div className="flex flex-col items-center justify-center  md:mt-auto">
+            <div className="flex flex-col items-center justify-center  md:mt-auto  gap-y-[20px]">
               <h1
                 className={cn(
                   `uppercase text-white text-[32px] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${

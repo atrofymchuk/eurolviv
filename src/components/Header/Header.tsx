@@ -30,8 +30,10 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
     isActiveLink,
   } = useNavbarStyles();
 
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
   const { changeLanguage } = useLanguage();
+
+  const isEng = i18n.language === "en";
 
   return (
     <header
@@ -47,8 +49,10 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           }
         )}
       >
+                
         <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto lg:mx-[20px] xl:mx-auto ">
-          <div className="flex items-center xl:space-x-4 space-x-3  w-full ">
+          <div className="flex items-center xl:space-x-4 space-x-3  w-full  justify-between">
+   
             <HeaderNav
               {...{
                 logo,
@@ -66,14 +70,15 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 setMenuOpen,
               }}
             />
-            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
-              <div className={cn(`${rightMenu}`)}>
+            <div className={cn(`${rightMenu} me-0 hidden lg:flex`)}>
                 <ChangeLangButton
                   changeLanguage={changeLanguage}
                   isMobile={false}
                   scrolled={scrolled}
                 />
               </div>
+            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
+              
               <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -111,10 +116,11 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#a33d2e] text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
+                  `uppercase bg-[#a33d2e]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
                   {
                     "lg:flex hidden": scrolled,
                     flex: !scrolled,
+                    "lg:w-[145px]": isEng,
                   }
                 )}
               >
@@ -123,7 +129,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   .map((word, index) => (
                     <span
                       className={cn(
-                        `uppercase ${index === 1 ? "lg:flex hidden" : ""}`,
+                        `uppercase ${index === 1 ? "lg:flex hidden " : ""}`,
                         {
                           "lg:flex hidden": scrolled,
                           flex: !scrolled,

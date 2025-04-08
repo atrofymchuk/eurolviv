@@ -349,17 +349,13 @@
             "title2":"Terrace",
             "desc":"The RUFF Terraces are a three-level rooftop space at Eurohotel"
         },
-        "about":{
-            "title":"Про терасу",
-            "desc":["На терасі панує особлива атмосфера: вдень тут можна годинами спостерігати за містом, ввечері — насолоджуватися спілкуванням під зоряним небом.", "Тут подають вишукані страви та авторські коктейлі, грає жива музика — не дивно, що сюди так хочеться повертатись!"]
-        },
         "bar":{
             "title":"ruff bar",
-            "title2":"Напої",
-            "desc":"Cocktails that wow! Top-notch ingredients and perfectly balanced flavors.",
-            "alcoholCard":"Alcohol menu",
-            "cocktailCard":"Cocktail menu  ",
-            "wineCard":"Wine menu "
+            "title2":"Drinks",
+            "desc":"Cocktails that wow! Top-notch ingredients and perfectly balanced flavors.",
+            "alcoholCard":"Alcohol menu",
+            "cocktailCard":"Cocktail menu  ",
+            "wineCard":"Wine menu "
         },
         "dishes":{
     
@@ -380,7 +376,7 @@
         "desc":"Choose the best for your stay—comfortable rooms, great rates, special bonuses, and unforgettable experiences await you in the heart of Lviv.",
         "desc2":"OFFERS",
         "card":{
-            "title":["деталі пропозиції", "умови пропозиції"]
+            "title":["Offer details", "Terms & conditions"]
         }
     },
     "specialOfferModal":{
@@ -390,31 +386,31 @@
     },
     
     "orderModal":{
-        "title":["замовити ","подію"],
-        "date":"Дата заходу",
-        "contactPerson":"КОНТАКТНА ОСОБА",
-        "phone":"НОМЕР ТЕЛЕФОНУ",
+        "title":["order an ","event"],
+        "date":"Event Date",
+        "contactPerson":"CONTACT PERSON",
+        "phone":"PHONE NUMBER",
         "email":"EMAIL",
-        "guests":"КІЛЬКІСТЬ ГОСТЕЙ",
-        "needRooms":"ПОТРІБНІ НОМЕРИ",
+        "guests":"Number of Guests",
+        "needRooms":"Need Rooms",
         "send":"SEND",
-        "placeholder":"номер телефону",
-        "isGuestRooms":"чи потрібні номери для гостей? ",
+        "placeholder":"PHONE NUMBER",
+        "isGuestRooms":"Do you need hotel rooms for guests? ",
         "errors":{
-            "tel":"Введіть номер телефону",
-            "tel2":"Некоректний номер телефону",
-            "email":"Введіть email",
-            "email2":"Некоректний email",
-            "name":"Введіть контактну особу",
-            "date":"Виберіть дату",
-            "name2":"Ім'я не може бути порожнім",
-            "guests":"Оберіть кількість гостей",
-            "needRooms":"Оберіть кількість номерів"
+            "tel":"Enter phone number",
+            "tel2":"Invalid phone number",
+            "email":"Enter email",
+            "email2":"Invalid email",
+            "name":"Enter contact person",
+            "date":"Select date",
+            "name2":"Name cannot be empty",
+            "guests":"Select number of guests",
+            "needRooms":"Select number of rooms"
         },
         "toast":{
-            "success":"Форма успішно надіслана!",
-            "error":"Щось пішло не так, спробуйте ще раз",
-            "errorDate":"Виберіть коректну дату"
+            "success":"Form sent successfully",
+            "error":"Something went wrong, please try again",
+            "errorDate":"Select a valid date"
         }
     
     },
@@ -424,13 +420,11 @@
           "title": "Main Terrace",
           "desc": ["The main RUFF terrace ","seats 152 guests "," and "," boasts a 360-degree city view."," A sleekbar, live music every weekend, and DJ sets bring the space to life with energy and buzz. But the real star? Those stunning sunsets!"],
           "descTwo":["With a ","pergola and panoramic windows, ","it’s a delight whether bathed in gentle sunshineor serenaded by rain. Cocktails taste like freedom, and evenings fly by in a flash withmusic and the glow of city lights."],
-          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"],
-          "titleTwo": "Святкуйте життя, смакуйте миті під неповторним львівським небом!"
+          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"]
         },
         "upperTerrase":{
           "title": "Upper Terrace",
           "desc": ["The upper terrace sits atop Eurohotel’s "," roof with 45 seats and a stunning city vista."],
-          "titleTwo": "Ідеальний простір для особливих подій у вузькому колі — від теплих зустрічей до приватних святкувань під відкритим небом.",
           "descTwo": ["By day, you can watch the city for hours, by night, it’s all about go od company ","under a starry sky."],
           "descThree":["A flawless setting for special moments with close company"," —think warm get-togethersor private parties beneath the stars."]
         },
@@ -438,7 +432,6 @@
           "title": "Lower Terrace",
           "desc": ["The lower terrace is "," Eurohotel's cozy outdoor nook."," Offering"," 23 seats with a view of Lviv High Castle, "," it blends soft design, smart lighting, and the faint rustle of the wind—every touch adds to the relaxed, inviting feel."],
           "descTwo": ["A great pick ","for small groups ","looking to soak in the moment and the ", "old city's charm."],
-          "titleTwo": "Чудове місце для невеликих компаній, де можна насолоджуватися моментом і краєвидом старого міста.",
           "descThree":["Celebrate life and savor moments ", "Lviv's unforgettable sky!"]
         }
       },
@@ -545,7 +538,7 @@
                 "size":"DOUBLE",
                 "desc":"Comfort and convenience for your stay"
             },{
-                "title":"стандарт",
+                "title":"STANDARd",
                 "size":"double with balcony",
                 "desc":"Urban energy outside, peaceful comfort inside"
             }
@@ -722,7 +715,7 @@
                 },
                 "icons": {
                   "ammentiesInRoom": {
-                    "bed": "Double bed (160×200 cm) / Two single beds (90×190 cm) ",
+                    "bed": "Double bed (160×200 cm) / Two single beds (90×190 cm) ",
                     "sofa": "Sofa bed",
                     "table": "work desk",
                     "carpet": "Carpet",
@@ -825,8 +818,7 @@
                 },
                 "about": {
                   "pOne": "A spacious two-room suite with a balcony, a cozy workspace, and a relaxing lounge area—perfect for those who value comfort at its finest.",
-                  "pTwo": "The sofa with a bed function allows for family accommodation or transforms the room into a cozy space to recharge after business meetings.",
-                  "bedText": "Особливо широке ліжко (180*200)"
+                  "pTwo": "The sofa with a bed function allows for family accommodation or transforms the room into a cozy space to recharge after business meetings."
                 },
                 "icons":{
                     "ammentiesInRoom":{
@@ -1012,119 +1004,119 @@
               "modalTitle":"отримайте додаткову знижку",
                 "tarifForMilitary":{
                     "title": "Military Rate",
-                    "desc": "Ми щиро вдячні нашим військовим за те, що маємо можливість надалі працювати, адже завдяки їхній відвазі ми можемо продовжувати нашу місію та дарувати гостинність.",
+                    "desc": "Our heartfelt thanks go to our military, whose courage enables us to keep doing what we do best: offering warm hospitality.",
                     "cardDesc": "We are sincerely grateful to our military for the opportunity to continue working.",
                     "offer": "-20% off accommodation for military personnel",
                     "details": [
-                      "знижка доступна для військовослужбовців ЗСУ, Нацгвардії, прикордонників, СБУ, ветеранів та учасників АТО/ООС",
-                      "20% знижки від вартості базового тарифу",
-                      "для отримання знижки необхідно пред’явити дійсний військовий квиток або посвідчення учасника бойових дій при заселенні"
+                      "Discount available for service members of the Ukrainian Armed Forces, National Guard, border guards, Security Service of Ukraine members, veterans, and participants of ATO/JFO",
+                      "20% off the standard rate",
+                      "To receive the discount, a valid military ID or combatant certificate must be presented upon check-in"
                     ],
                     "conditions": [
-                      "тариф діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей",
-                      "знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері"
+                      "This rate applies for direct bookings via phone or at the reception, only for individual guests",
+                      "Discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room"
                     ]
                   },
                   "businessTarifDay":{
                     "title": "Business Daytime Rate",
-                    "desc": "Коротка зупинка для бізнесу чи натхнення? Обирайте наш денний бізнес-тариф з 50% знижкою на проживання та відчуйте комфорт, затишок і зручність у самому центрі Львова.",
+                    "desc": "Looking for a short stopover for business or inspiration? Choose our business daytime rate with a 50% discount on accommodation and enjoy comfort, coziness, and convenience in the heart of Lviv.",
                     "cardDesc": "A short stopover for business or inspiration? Choose our daily business rate with 50% off",
                     "offer": "-50% off the business daytime rate",
                     "details": [
-                      "проживання в номерах категорії Стандарт та Стандарт з балконом не більше 8 годин в період від 06:00 до 18:00 того ж дня",
-                      "50% знижки на проживання від вартості базового тарифу",
-                      "у вартість проживання не включено сніданок"
+                      "Accommodation in Standard and Standard with Balcony rooms for up to 8 hours, between 06:00 and 18:00 on the same day",
+                      "50% off the accommodation price from the basic rate",
+                      "Breakfast not included in the accommodation cost"
                     ],
                     "conditions": [
-                      "пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей",
-                      "знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері",
-                      "у святкові дні та періоди високої завантаженості готелю дана пропозиція може бути недоступна"
+                      "Available for direct bookings by phone or at the reception for individual guests only",
+                      "This discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room",
+                      "This offer may not be available on holidays or during high occupancy periods"
                     ]
                   },
                   "petFriendly":{
                     "title": "Travel with Your Pet",
-                    "desc": "Наш пакет створений для того, щоб ваш улюбленець відчував себе як вдома. Ми забезпечуємо комфортні умови для перебування з тваринами, включаючи спеціальні зручності та подарунки для пухнастих друзів.",
+                    "desc": "Our package is designed to make sure your furry friend feels right at home. We provide comfortable conditions for staying with pets, including special amenities and gifts for your four-legged companions.",
                     "cardDesc": "Our package is designed to make your pet feel at home.",
                     "offer": "Pet accommodation rules",
                     "details": [
-                      "в номері на вашого чотирилапого друга чекатиме зручна лежанка, миски для їжі та води і речі першої необхідності",
-                      "Комплімент від нашого партнера- ласощі та іграшка для вашого улюбленця",
-                      "можливість розмістити до двох тварин одночасно у номері",
-                      "вартість перебування – 500 UAH/доба за одну тварину"
+                      "Your pet will be welcomed with a cozy bed, food and water bowls, and essential items in the room",
+                      "A complimentary treat and toy for your pet from our partner",
+                      "You can bring up to two pets with you in the room",
+                      "Accommodation fee: 500 UAH per pet, per day"
                     ],
                     "conditions": [
-                      "можливе проживання гостей з собачками декоративних порід вагою до 10 кг",
-                      "обовʼязкова наявність ветеринарного паспорта з актуальними щепленнями",
-                      "пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції лише для індивідуальних гостей"
+                      "Accommodation is available for small dog breeds up to 10 kg",
+                      "A valid veterinary passport with up-to-date vaccinations is required",
+                      "This offer is available for direct bookings by phone or at the reception for individual guests only"
                     ]
                   },
                   "photoSession":{
                     "title": "Photoshoot",
-                    "desc": "Шукаєте стильну локацію для найкращих фото? Eurohotel запрошує вас скористатися унікальною можливістю та провести фотосесію у вишуканій атмосфері",
+                    "desc": "Looking for a stylish location for stunning photos? Eurohotel invites you to enjoy a unique opportunity and capture your photos in an elegant setting.",
                     "cardDesc": "Looking for a stylish location for the best photos? Eurohotel invites you to take advantage of a unique opportunity",
                     "offer": "Photoshoot",
                     "details": [
-                      "3000 UAH - фотосесія в номері категорії Люкс, тривалість до 3 год.",
-                      "4000 UAH— фотосесія в номері категорії Люкс покращений, тривалість до 3 год.",
-                      "у вартість включено: номер для проведення фотосесії на 3 год. та доступ до готельного лобі для фотосесії"
+                      "3,000 UAH — photoshoot in a Suite Room, up to 3 hour",
+                      "4,000 UAH — photoshoot in a Deluxe Suite Room, up to 3 hours",
+                      "Included in the price: room for the photoshoot for up to 3 hours and access to the hotel lobby for additional photo opportunities"
                     ],
                     "conditions": [
-                      "обов`язкове попереднє бронювання - за 3 дні до дати фотосесії",
-                      "оплата здійснюється під час підтвердження бронювання",
-                      "при скасуванні бронювання менше ніж за 24 години вартість не повертається",
-                      "при тривалості фотосесії понад 3 год - здійснюється повна оплата вартості номера"
+                      "Advance booking required, at least 3 days before the photoshoot date",
+                      "Payment is due at the time of booking confirmation",
+                      "Cancellations made less than 24 hours in advance are non-refundable",
+                      "For photoshoots lasting more than 3 hours, the full room rate is charged"
                     ]
                   },
                   "newlyweds":{
                     "title": "A Gift for Newlyweds",
-                    "desc": "Ваш ідеальний початок спільного життя! Подаруйте собі незабутній відпочинок після найважливішого дня святкування. Нехай цей день залишить лише найсолодші спогади!",
+                    "desc": "The perfect start to your life together! Indulge in a memorable retreat after your most special celebration.  Let the sweetest memories stay with you forever!",
                     "cardDesc": "Your perfect start to your life together! Treat yourself to an unforgettable vacation after the most important day of celebration ",
                     "offer": "A Gift for Newlyweds",
                     "details": [
-                      "безкоштовне проживання в номері категорії Напівлюкс або Люкс (залежно від наявності доступних категорій номерів)",
-                      "комплімент від готелю - пляшка ігристого та солодкий десерт",
-                      "пізнє виселення з готелю (надається за умови наявності вільного номеру на момент проживання гостей )",
-                      "бонус на майбутнє - знижка 15% на проживання під час святкування наступної річниці в готелі"
+                      "Complimentary stay in a Junior Suite or Suite (subject to availability)",
+                      "A special gift from the hotel—a bottle of sparkling wine and a sweet treat",
+                      "Late check-out (provided a room is available on the departure day)",
+                      "A future bonus—15% off your stay when celebrating your first anniversary at the hotel"
                     ],
                     "conditions": [
-                      "проживання у подарунок надається за умови святкування весілля у ресторані RUFF",
-                      "бронювання номеру слід підтвердити не пізніше ніж за 7 днів до дати святкування весілля",
-                      "бонусна знижка 15% діє для проживання під час святкування першої річниці шлюбу та надається за умови прямого бронювання через готель",
-                      "знижка не сумується з іншими акціями чи спеціальними пропозиціями та не поширюється на додаткові місця в номері"
+                      "Complimentary stay is available when hosting a wedding reception at RUFF restaurant",
+                      "Room reservation must be confirmed at least 7 days before the wedding date",
+                      "The 15% anniversary discount applies to a stay during the first wedding anniversary and is available only for direct bookings through the hotel",
+                      "The discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room"
                     ]
                   },
                   "birthday":{
                     "title": "Birthday Celebrations",
-                    "desc": "Відсвяткуйте свій особливий день у затишній атмосфері Eurohotel! Ми підготували для вас приємний сюрприз, щоб зробити ваше свято ще яскравішим і незабутнім",
+                    "desc": "Celebrate your special day in the cozy ambiance of Eurohotel! We’ve got a special surprise to make your celebration even more memorable.",
                     "cardDesc": "Celebrate your special day in the cozy atmosphere of Eurohotel! ",
                     "offer": "-20% on your birthday",
                     "discount": "-20%",
                     "details": [
-                      "знижка 20 % від вартості базового тарифу на проживання в будь-якому номері у день вашого народження",
-                      "комплімент від готелю - святковий подарунок для іменинника"
+                      "20% off the base rate for any room on your birthday",
+                      "A special gift from the hotel for the birthday guest"
                     ],
                     "conditions": [
-                      "пропозиція діє лише в день вашого народження",
-                      "знижка не сумується з іншими акціями чи спеціальними пропозиціями",
-                      "пропозиція діє для прямих бронювань по телефону або ж на стійці рецепції"
+                      "The offer is valid only on your birthday",
+                      "The discount cannot be combined with other promotions or special offers",
+                      "Available for direct bookings via phone or at the reception desk only"
                     ]
     
                   }
             },
             "validation":{
-              "name":"Ім'я є обов'язковим",
-              "email":"Email є обов'язковим",
-              "emailInvalid":"Email не є корректним",
-              "message":"Повідомлення є обов'язковим",
-              "success":"Повідомлення надіслано успішно",
-              "nameShort":"Ім'я занадто коротке",
-              "contactUsSuccsses":"Повідомлення надіслано успішно",
-              "contactUsError":"Повідомлення не надіслано",
+              "name":"Name is required",
+              "email":"Email is required",
+              "emailInvalid":"Email is not valid",
+              "message":"Message is required",
+              "success":"Message sent successfully",
+              "nameShort":"Name is too short",
+              "contactUsSuccsses":"Message sent successfully",
+              "contactUsError":"Message not sent",
               
-              "genericError":"Щось пішло не так",
-              "checkIn":"Оберіть дату заїзду",
-              "checkOut":"Оберіть дату виїзду",
-              "guests":"Оберіть кількість гостей"
+              "genericError":"Something went wrong",
+              "checkIn":"Select check-in date",
+              "checkOut":"Select check-out date",
+              "guests":"Select number of guests"
     
             },
            
@@ -1151,10 +1143,10 @@
             "route":"Get directions"
             },
             "phoneBottomMenu":{
-              "callUs":"Телефон",
-              "route":"Маршрут",
-              "book":"Забронювати стіл",
-              "menu":"Меню"
+              "callUs":"Call Us",
+              "route":"directions",
+              "book":"book a table",
+              "menu":"Menu"
               
             }
     }
