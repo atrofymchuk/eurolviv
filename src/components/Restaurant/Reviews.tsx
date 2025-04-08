@@ -18,7 +18,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
             {t('reviews.title')} {t('reviews.heading')} <br /> {t('reviews.heading2')}
           </h1>
           <div className="flex items-center lg:flex-row flex-col  xl:space-x-[138px] lg:space-x-[80px]   lg:space-y-0 space-y-[24px] lg:mt-[37px]">
-            <p className="text-[#242425] 2xl:text-[16px]  md:text-[14px] text-[12px] uppercase 2xl:w-[323px] w-[265px] ">
+            <p className="text-[#242425] 2xl:text-[16px]  md:text-[14px] text-[12px] uppercase 2xl:w-[320px] w-[265px] ">
               {t('reviews.desc2')}
             </p>
 

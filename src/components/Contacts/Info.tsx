@@ -24,7 +24,7 @@ export const Info = () => {
             <div className="lg:mt-[39px] mt-[25px] space-y-3 md:block items-center text-center md:text-start flex flex-col 2xl:w-[60%] xl:w-[80%] lg:w-[78%] mx-[20px] md:mx-0">
               <p
                 className=" uppercase 
-              text-[12px] md:text-[14px] lg:text-[14px] 
+              text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px]
               leading-[1.4] lg:leading-[1.3] 
               text-[#252526] 
                 "
@@ -33,7 +33,7 @@ export const Info = () => {
               </p>
               <p
                 className=" uppercase 
-              text-[12px] md:text-[14px] lg:text-[14px] 
+              text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px]
               leading-[1.4] lg:leading-[1.3] 
               text-[#8C331B] font-cofo-medium
               "

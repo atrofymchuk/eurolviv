@@ -29,10 +29,10 @@ export const Rating = ({openPdf, path}: {openPdf: (path: string) => void, path: 
         </div>
         <div className="flex justify-between mt-[65px]">
           
-        <p className=" uppercase underline  lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
+        <p className=" uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
         {t("footer.privacyPolicy")}
         </p>
-        <p onClick={() => openPdf(path)} className=" uppercase underline  lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
+        <p onClick={() => openPdf(path)} className=" uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
         {t("footer.publicOffer")}
         </p>
         </div>

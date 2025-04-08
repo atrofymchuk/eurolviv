@@ -43,7 +43,12 @@ export const AboutRestaurant = () => {
                 <span className="font-cofo-medium">
                   {t("restaurant.about.desc.second.2")}
                 </span>
+                <span>
                 {t("restaurant.about.desc.second.3")}
+                </span>
+                <span>
+                {t("restaurant.about.desc.second.4")}
+                </span>
               </p>
               <p className="md:block hidden uppercase text-[#252526] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px] leading-[22.6px]">
                 <span className="">{t("restaurant.about.desc.third.0")}</span>

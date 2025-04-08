@@ -86,7 +86,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
         </div>
         <p
           onClick={()=>openPdf(path)}
-          className=" absolute uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
+          className=" absolute uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] cursor-pointer xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
          -bottom-34 lg:block hidden"
         >
           {t("footer.publicOffer")}

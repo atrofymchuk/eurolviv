@@ -213,7 +213,7 @@ export interface PagesInfo {
     img: string;
     title: string;
     titleDesc: string;
-    desc: string;
+    desc: string[];
     url: string;
   }[];
   restaurantReviews: RestaurantReview[];

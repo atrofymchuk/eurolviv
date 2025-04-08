@@ -19,7 +19,7 @@ export const Header = () => {
             {t("specialOffers.desc2")}
           </h1>
           <p
-            className="relative uppercase 2xl:ps-2 xl:ps-1.5 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-tight 2xl:pt-[51px] xl:pt-[40px] lg:pt-[34px] pt-[20px] 2xl:w-[80%] md:w-[65%] lg:w-[100%]"
+            className="relative uppercase text-[#BDBDC0] 2xl:ps-2 xl:ps-1.5 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-tight 2xl:pt-[51px] xl:pt-[40px] lg:pt-[34px] pt-[20px] 2xl:w-[80%] md:w-[65%] lg:w-[100%]"
           >
             {t("specialOffers.desc")}
           </p>

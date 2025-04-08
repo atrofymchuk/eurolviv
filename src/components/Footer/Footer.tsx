@@ -92,7 +92,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="absolute uppercase underline  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34  lg:block hidden">
+            <p className="absolute uppercase underline cursor-pointer  lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34  lg:block hidden">
               {t("footer.privacyPolicy")}
             </p>
           </div>

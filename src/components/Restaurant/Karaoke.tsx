@@ -5,7 +5,7 @@ export const Karaoke = () => {
   const { t,i18n } = useTranslation();
   const isEng = i18n.language === "en";
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" id="karaoke">
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 md:w-[93.16%] w-[89.067%] mx-auto border-x border-[#B3B3B3] border-t ">
         <div className="flex flex-col 2xl:ps-[52px] xl:ps-[48px] lg:ps-[32px] md:ps-[24px]  justify-center 2xl:h-[561px]  md:my-0 my-[32px_19px]">
           <div className="flex items-center md:items-start  flex-col justify-center  text-center md:text-start ">

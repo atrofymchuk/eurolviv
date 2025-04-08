@@ -45,7 +45,7 @@ export const NavLinks = ({
       { key: "terrace", path: "/terrace", title: "footer.terrace" },
       {
         key: "karaoke",
-        path: "/restaurant",
+        path: "/restaurant/#karaoke",
         title: "restaurant.karaoke.title",
       },
     ],

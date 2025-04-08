@@ -190,8 +190,8 @@
         "about":"Home",
         "rooms":"Rooms",
         "conferenceServices":"",
-        "restaurant":"Restaurant",
-        "terrace":"Terrace",
+        "restaurant":"Restaurant ruff",
+        "terrace":"Terrace ruff",
         "specialOffers":"Special Offers",
         "contacts":"Контакти",
         "socialMedia":"We are on social media",
@@ -347,7 +347,7 @@
     "terrase":{
         "header":{
             "title":"Ruff",
-            "title2":"Terrace",
+            "title2":"Terrace ",
             "desc":"The RUFF Terraces are a three-level rooftop space at Eurohotel"
         },
         "bar":{
