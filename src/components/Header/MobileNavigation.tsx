@@ -25,6 +25,7 @@ type MobileNavigationProps = {
   handleMouseLeaveRestaurant: () => void;
   isShowRestaurant: boolean;
   iconLogoStyle: string;
+  pathname: string;
 };
 
 export const MobileNavigation = ({
@@ -43,6 +44,7 @@ export const MobileNavigation = ({
   handleMouseEnterRestaurant,
   handleMouseLeaveRestaurant,
   isShowRestaurant,
+  pathname
 }: MobileNavigationProps) => {
   const { t } = useTranslation();
 
@@ -78,7 +80,7 @@ export const MobileNavigation = ({
               iconClassName="w-[99px] h-[54px]"
               isMobile={true}
               onClick={() => setMenuOpen(false)}
-
+              pathname={pathname}
             />
             <IoClose
               size={32}
