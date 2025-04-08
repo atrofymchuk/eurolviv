@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import ruffLogo from "../../assets/ruffLogo.svg";
 import defaultLogo from "../../assets/logo.svg";
+import terraseLogo from "../../assets/terraseLogo.svg";
 
 const useNavbarStyles = () => {
   const location = useLocation();
@@ -49,9 +50,13 @@ const useNavbarStyles = () => {
 
     if (
       location.pathname === "/restaurant" ||
-      location.pathname === "/terrase"
+      location.pathname === "/terrace"
     ) {
-      logo = ruffLogo;
+      if (location.pathname === "/terrace") {
+        logo = terraseLogo;
+      } else {
+        logo = ruffLogo;
+      }
       styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
       iconLogoStyle = scrolled ? "" : "invert";
       rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";

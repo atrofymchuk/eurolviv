@@ -88,6 +88,7 @@ export const HeaderNav = memo(
             logo={logo} 
             iconLogoStyle={iconLogoStyle} 
             scrolled={scrolled} 
+            pathname={pathname}
           />
 
          <MobileBookingButton scrolled={scrolled} pathname={pathname}  changeLanguage={changeLanguage}/>
