@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import { map } from "../../Constants/map";
 import { social } from "../../Constants/Social";
 
-export const AddressWithSchedule = () => {
+export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => void, path: string}) => {
   const { t } = useTranslation();
 
   return (
     <div className="space-y-4 flex flex-col lg:h-[473px] w-full lg:w-[24.2%] h-full lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 pt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full rrelatives">
         <div className="mb-0 w-[332px]">
           <h4 className="text-[12px] uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
@@ -84,13 +84,14 @@ export const AddressWithSchedule = () => {
             </div>
           </div>
         </div>
-      </div>
-        {/* <p
-          className="uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
-        2xl:mt-29 xl:mt-18  lg:mt-29 lg:block hidden"
+        <p
+          onClick={()=>openPdf(path)}
+          className=" absolute uppercase underline lg:leading-[20px] underline-offset-[18%] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] lg:tracking-[0.06em] 
+         -bottom-34 lg:block hidden"
         >
           {t("footer.publicOffer")}
-        </p> */}
+        </p>
+      </div>
     </div>
   );
 };

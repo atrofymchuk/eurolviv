@@ -7,7 +7,7 @@
     },
     "home":{
         "header":{
-            "description":"The place filled with warmth. The city that uplifts. Eurohotel is your gateway to unforgettable experiences in Lviv.",
+            "description":["The place filled with warmth. The city that uplifts. "," Eurohotel is your gateway to unforgettable experiences in Lviv."],
             "bookingForm":{
                 "chooseDateIn":"check-in",
                 "chooseDateOut":"check-out",
@@ -25,7 +25,7 @@
         "about":{
             "title":"about us",
             "aboutRooms":["100 rooms blending modern vibes with classic charm—elegant, understated, and super comfy","Lviv’s top spots—Rynok Square and the historic downtown—just a short stroll away", "Stunning Lviv views from the RUFF restaurant and the rooftop summer terrace"],
-            "heading":["A PLACE WHERE YOU FEEL"," TRULY SPECIAL"],
+            "heading":["A PLACE WHERE","   YOU FEEL "," TRULY SPECIAL"],
             "desc":["Refined interiors, a cozy vibe, and breathtaking views of the old city.", "Discover Lviv in all its glory! Here, beauty and comfort come together seamlessly to create memories you won’t forget.", "We’ve blended Lviv’s authentic charm with European elegance so you can savor every second of your stay."],
             "quality":["TOP-NOTCH ","QUALITY ","AND ", "SERVICE "]
         },
@@ -38,14 +38,14 @@
         },
         "conferenceService":{   
             "title":"CONFERENCE SERVICES",
-            "desc":"From business breakfasts to full-on conferences—flawless service for any professional event",
+            "desc":["From business breakfasts to full-on conferences","—flawless service for any professional event"],
             "heading":"Your Place for Winning Meetings",
             "area":"area",
             "capacity":"capacity"
         },
         "roofService":{
             "restaurant":{
-                "title":"Restaurant ",
+                "title":"Restaurant",
                 "titleDesc":"A Taste of Heaven",
                 "desc":"The eighth floor offers sweeping views of the old city, while the chef’s kitchen serves up fresh culinary delights.Signature cocktails and a chic interior round out the experience."
             },
@@ -82,7 +82,7 @@
             },
             "mission":{
                 "title":"MISSION",
-                "heading":["ELEGANCE, REDEFINED,",""],
+                "heading":["ELEGANCE, REDEFINED",""],
                 "desc":["At Eurohotel, we’ve created a space where the dynamic rhythm of modern business blends seamlessly with the timeless charm of old Lviv.",
                   "We believe in hospitality that speaks directly to the heart and service that anticipates your every need.","We are created to fall in love with Lviv, and our greatest reward is welcoming guests who return to us again and again",
                   "We’re here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."]
@@ -179,6 +179,7 @@
             "rooms":"rooms",
             "conferenceServices":"conference services",
             "restaurant":"restaurant",
+            "pet":"Pet accommodation rules",
             "specialOffers":"special offers",
             "contacts":"contacts",
             "callUs":"Call Us",
@@ -375,6 +376,7 @@
         "title":"SPECIAL",
         "desc":"Choose the best for your stay—comfortable rooms, great rates, special bonuses, and unforgettable experiences await you in the heart of Lviv.",
         "desc2":"OFFERS",
+        "pet":"Pet accommodation rules",
         "card":{
             "title":["Offer details", "Terms & conditions"]
         }

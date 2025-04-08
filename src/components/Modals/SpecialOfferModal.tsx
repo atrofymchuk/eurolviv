@@ -15,8 +15,20 @@ export const SpecialOffersModal = () => {
   const navigate = useNavigate();
   const { onCloseGlobalModal, isOpenSpecialOfferModal } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { offer } = useParams();
+  const isPetOffer = offer?.includes("pet");
+  const isEng = i18n.language === "en";
+
+  const pdfDocuments = {
+    pathPublicOffer: isEng
+      ? "/Pet Accommodation Rules.pdf"
+      : "/Правила_проживання_гостей_з_домашніми_тваринами.pdf",
+  };
+
+  const handleOpenPdf = (path: string) => {
+    window.open(`/documents/${path}`, "_blank");
+  };
 
   const handleCloseModal = () => {
     onCloseGlobalModal();
@@ -72,6 +84,16 @@ export const SpecialOffersModal = () => {
               <p className="uppercase md:w-3/5 text-white text-[12px] md:text-[16px] leading-[15px] md:leading-[22px]">
                 {t(data.desc)}
               </p>
+              {isPetOffer && (
+                <button
+                  onClick={() => handleOpenPdf(pdfDocuments.pathPublicOffer)}
+                  className={cn(`bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] rounded-full uppercase text-[#A47762] font-cofo-medium lg:text-[16px]`, {
+                    "lg:w-[280px]": isEng,
+                  })}
+                >
+                  {t("specialOffers.pet")}
+                </button>
+              )}
             </div>
           </div>
         </div>

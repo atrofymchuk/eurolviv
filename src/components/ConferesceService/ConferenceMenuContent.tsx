@@ -11,14 +11,17 @@ export const ConferenceMenuContent = () => {
       {
         img: food,
         text: t("conferenceService.conferenceMenu.menu.title"),
+        pdf: 'Бенкетне меню.pdf',
       },
       {
         img: sandwich,
         text: t("conferenceService.conferenceMenu.menu.title1"),
+        pdf: 'Фуршетне меню.pdf',
       },
       {
         img: coffee,
         text: t("conferenceService.conferenceMenu.menu.title2"),
+        pdf: 'Каво-перерва.pdf',
       },
     ],
     [t]
@@ -34,7 +37,7 @@ export const ConferenceMenuContent = () => {
 
       <div className="hidden items-center 2xl:space-x-[24px] xl:space-x-[20px] lg:space-x-[16px] lg:flex px-5 pb-[126px] lg:pb-[100px]">
         {imageArray.map((el, index) => (
-          <ConferenceMenuCard key={index} img={el.img} text={el.text} />
+          <ConferenceMenuCard key={index} img={el.img} text={el.text} pdf={el.pdf} />
         ))}
       </div>
 

@@ -51,7 +51,7 @@ export const RoomsHome = () => {
                     to="/rooms"
                     className={cn(`uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
                        bg-[#EDE8E5] whitespace-nowrap lg:px-5.25  h-[46px] py-[12.5px] px-[14.5px] 
-                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px]  text-[12px]`, {
+                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] lg:w-[234px]  text-[12px] w-[178px]`, {
                       "lg:w-[170px]": isEng,
                     })}
                   >

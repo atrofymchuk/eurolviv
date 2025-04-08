@@ -1,9 +1,10 @@
 import { visa, mastercard, rating } from "../../store/exportsIcons";
-
-export const Rating = () =>{
+import { useTranslation } from "react-i18next";
+export const Rating = ({openPdf, path}: {openPdf: (path: string) => void, path: string}) =>{
+  const { t } = useTranslation();
     return(
         
-        <div className="lg:hidden block mt-[61px]">
+        <div className="lg:hidden block mt-[61px] h-full">
         <div className="flex items-center">
           <img
             src={rating}
@@ -26,7 +27,15 @@ export const Rating = () =>{
           <img src={visa} alt="Visa" className="h-6" />
           <img src={mastercard} alt="Mastercard" className="h-6" />
         </div>
-
+        <div className="flex justify-between mt-[65px]">
+          
+        <p className=" uppercase underline  lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
+        {t("footer.privacyPolicy")}
+        </p>
+        <p onClick={() => openPdf(path)} className=" uppercase underline  lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
+        {t("footer.publicOffer")}
+        </p>
+        </div>
       
       </div>       
     )

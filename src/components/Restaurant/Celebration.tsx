@@ -1,8 +1,7 @@
-import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
+import { ViewMenuButton } from "../Buttons/ViewMenu";
 export const Celebration = () => {
-  const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center mx-auto md:w-[93.16%] w-[89.067%] border-[#B3B3B3] md:border-b">
@@ -24,12 +23,12 @@ export const Celebration = () => {
               {t("restaurant.celebration.desc.1")}
             </p>
           </div>
-          <button
-            onClick={() => onOpenModal("menu")}
-            className="uppercase lg:text-[14px] lg:w-[175px] text-[12px] font-cofo-medium bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] w-[160px] hover:text-[#8C331B] border border-[#8C331B] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
+          <ViewMenuButton
+            pdf="Бенкетне меню.pdf"
+            className="uppercase lg:text-[14px] lg:w-[175px] text-[12px] font-cofo-medium bg-[#8C331B] lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
           >
             {t("buttons.celebrationMenu")}
-          </button>
+          </ViewMenuButton>
         </div>
         <div className="md:flex hidden  border-[#B3B3B3]"></div>
       </div>

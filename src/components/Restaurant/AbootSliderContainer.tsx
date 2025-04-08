@@ -36,7 +36,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
       <div className="absolute w-full h-full -z-1 flex items-center justify-center">
         <div
           className={cn(`relative h-full m `, {
-            "md:w-[93.23%] w-[89.7%]": !isTerrase,
+            "md:w-[93.1%] w-[89.7%]": !isTerrase,
             "md:w-[89.7%] w-[89.9%]": isTerrase,
           })}
         >

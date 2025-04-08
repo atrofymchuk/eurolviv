@@ -34,7 +34,7 @@ export const ConceptCasd = ({title, img, alt, text, index}: {title: string[], im
               className="w-[200px] h-[191px] object-cover xl:mt-[22px] xl:mb-[22px] my-4"
             />
           </InViewWrapper>
-          <p className="text-[14px]  flex-grow  leading-[101%]   xl:text-[16px]  2xl:text-[18px] [text-wrap:balance]">
+          <p className="text-[14px]    leading-[101%]   xl:text-[16px]  2xl:text-[18px] ">
             {t(text)}
           </p>
           <div className="mt-auto">

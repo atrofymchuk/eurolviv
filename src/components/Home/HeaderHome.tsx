@@ -31,9 +31,12 @@ export const HeaderHome = () => {
           </h4>
           <h1 className=" xl:text-[198px] uppercase text-[48px] font-normal z-20  2xl:text-[289px]  leading-[100%] tracking-[-0.1em] text-center underline decoration-transparent ">
             {t("global.eurohotel")}
+            
           </h1>
-          <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px] lg:w-[635px] lg:pt-[6px] pt-[30px] w-[335px]  text-[14px] leading-[17.5px] hidden md:block ">
-            {t("home.header.description")}
+          <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px]  lg:pt-[6px] pt-[30px]   text-[14px] leading-[17.5px] hidden md:block ">
+            {t("home.header.description.0")}
+            <br />
+            {t("home.header.description.1")}
           </p>
           <HeaderBookingForm />
         </div>

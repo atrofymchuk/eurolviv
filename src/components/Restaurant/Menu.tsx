@@ -36,7 +36,7 @@ export const Menu = () => {
             <button
               onClick={() => onOpenModal("menu")}
               className="font-cofo-medium uppercase text-[#8C331B] lg:w-[209px] border-[#8C331B] border hover:cursor-pointer hover:bg-[#8C331B] hover:text-white rounded-full
-               lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[10px] py-[9.25px] px-[14.25px]   w-[171px]"
+               lg:text-[16px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[10px] py-[9.25px] px-[10.25px]   w-[171px]"
             >
               {isEng ?  t("buttons.restaurantMenu"):t("buttons.viewMenu") }
             </button>

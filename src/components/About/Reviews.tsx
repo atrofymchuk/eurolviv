@@ -28,8 +28,8 @@ export const Rewies = () => {
                 {t("reviews.heading2")}
               </span>
             </h1>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-start  items-center xl:mt-[38px] ">
-              <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4 px-4 2xl:w-[424px]  xl:ps-[39px]  text-center xl:text-left">
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-[24px] text-start  items-center xl:mt-[38px] ">
+                <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4  2xl:w-[444px]  xl:ps-[39px]  text-center xl:text-left">
                 {t("reviews.desc")}
               </p>
 

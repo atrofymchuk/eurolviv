@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { previewImg } from "../../store/exportsImg";
+import cn from "classnames";
 export const AboutHome = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+  const isEng = i18n.language === "en";
 
   return (
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">
@@ -39,8 +41,8 @@ export const AboutHome = () => {
         </div>
 
         <div className="md:flex hidden border-[#C7C7C7] md:border-e  border-x md:border-x-0 md:border-s-0 xl:justify-start   lg:items-center p-4  border-b">
-          <div className=" md:w-[80%] lg:w-[60%] lg:mb-2">
-            <p className="lg:text-[14px] uppercase 2xl:w-[210px] xl:w-[200px] font-cofo-medium xl:text-[16px] text-[12px]  tracking-[0%] 2xl:ms-[44px]  md:text-[12px] p-2 lg:p-0">
+          <div className=" md:w-[80%] lg:w-[0%] lg:mb-2">
+            <p className="lg:text-[14px] uppercase 2xl:w-[240px] xl:w-[200px] font-cofo-medium xl:text-[16px] text-[12px]  tracking-[0%] 2xl:ms-[44px]  md:text-[12px] p-2 lg:p-0">
               {t("home.about.aboutRooms.2")}
             </p>
           </div>
@@ -59,10 +61,10 @@ export const AboutHome = () => {
               <span className="tracking-[-7%]">
               {t("home.about.heading.0")} 
               </span>
-              <span className="tracking-[-10%]">
+              <span className="lg:tracking-[-10%]">
                 {t("home.about.heading.1")}
               </span>
-              <br />
+              <br className="hidden md:block"/>
               <span className="md:whitespace-nowrap">
                 {t("home.about.heading.2")}
               </span>
@@ -108,7 +110,9 @@ export const AboutHome = () => {
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">
                   {t("home.about.quality.1")}
                 </h1>
-                <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] xl:translate-x-1/4 2xl:translate-x-42 h-fit">
+                <h1 className={cn(`md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] xl:translate-x-1/4 2xl:translate-x-42 h-fit`, {
+                  "2xl:translate-x-78": isEng,
+                })}>
                   {t("home.about.quality.2")}
                 </h1>
                 <h1 className="md:whitespace-nowrap  sm:text-[32px] inline md:block  xl:text-xl 2xl:text-2xl uppercase 2xl:text-[100px] xl:text-[70px] leading-[84%] text-[32px] md:text-[32px]  tracking-[-10%] text-[#242425]">
