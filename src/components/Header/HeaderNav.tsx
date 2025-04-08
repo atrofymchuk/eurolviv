@@ -125,6 +125,7 @@ export const HeaderNav = memo(
           handleMouseEnterRestaurant={handleMouseEnterRestaurant}
           handleMouseLeaveRestaurant={handleMouseLeaveRestaurant}
           isShowRestaurant={isShowRestaurant}
+          pathname={pathname}
         />
       </div>
     );
