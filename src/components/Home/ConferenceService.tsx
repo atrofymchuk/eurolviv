@@ -12,14 +12,14 @@ export const ConferenceService = () => {
 
   return (
     <div className="flex flex-col items-center relative  bg-[#EDE8E5]  w-full overflow-y-hidden overflow-x-hidden">
-      <div className="absolute grid grid-cols-[89.07%] h-full w-full justify-center md:grid-cols-[29.69%_30.16%_29.74%] z-0 overflow-y-hidden">
+      <div className="absolute grid grid-cols-[89.07%] h-full w-full justify-center md:grid-cols-[29.69%_30.16%_30.4%] z-0 overflow-y-hidden">
         <div className=" border-s border-[#B3B3B3]   2xl:h-[1102px] xl:h-[820px] lg:h-[750px] md:h-[600px]"></div>
 
         <div className=" border-s md:border-x border-[#B3B3B3]  h-[1500px]"></div>
 
         <div className=" border-e border-[#B3B3B3]  2xl:h-[1102px] xl:h-[850px] lg:h-[750px] md:h-[600px]"></div>
       </div>
-      <div className="w-[89.1%]">
+      <div className="w-[89.7%]">
         <div className="grid grid-cols-1 md:grid-cols-[29.69%_30.16%_29.74%]   w-full justify-center">
           <div className=" "></div>
           <div className="text-center flex flex-col  items-center justify-center  2xl:mt-33 mt-[76px]">
@@ -31,7 +31,7 @@ export const ConferenceService = () => {
             </p>
             <h1
               className={cn(
-                `uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] 
+                `uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] text-center 
              text-[#252526] leading-[81%] tracking-[-7%] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1`,
                 {
                   "2xl:text-[170px]": isEng,

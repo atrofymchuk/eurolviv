@@ -53,13 +53,18 @@ export const AboutHome = () => {
           </p>
         </div>
 
-        <div className="border-x   border-[#C7C7C7] ps-[14px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
+        <div className="border-x   border-[#C7C7C7] ps-[14px] lg:ps-[48px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-5 xl:pb-0">
-            <h1 className="md:whitespace-nowrap text-[32px] sm:text-[28px]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] leading-[90%] tracking-[-7%]">
-              {t("home.about.heading.0")}
+            <h1 className="md:whitespace-nowrap text-[32px] xl:space-y-[11px] sm:text-[28px] leading-[81%]  md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] tracking-[-7%]">
+              <span className="tracking-[-7%]">
+              {t("home.about.heading.0")} 
+              </span>
+              <span className="tracking-[-10%]">
+                {t("home.about.heading.1")}
+              </span>
               <br />
               <span className="md:whitespace-nowrap">
-                {t("home.about.heading.1")}
+                {t("home.about.heading.2")}
               </span>
             </h1>
           </div>
