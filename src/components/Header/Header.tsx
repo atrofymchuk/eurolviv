@@ -68,15 +68,16 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 setMenuOpen,
               }}
             />
-            <div className={cn(`${rightMenu} me-0 hidden lg:flex`)}>
-              <ChangeLangButton
-                changeLanguage={changeLanguage}
-                isMobile={false}
-                scrolled={scrolled}
-              />
-            </div>
-            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between hidden lg:flex">
-              <div className="relative">
+            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between  hidden lg:flex">
+              <div className={cn(`relative flex items-center `, {
+                "space-x-5": !isEng,
+                "space-x-[115px]": isEng,
+              })}>
+                <ChangeLangButton
+                  changeLanguage={changeLanguage}
+                  isMobile={false}
+                  scrolled={scrolled}
+                />
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}
                   className={cn(
@@ -91,7 +92,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
 
                 {isDropdownOpen && (
                   <div
-                    className="absolute right-0 mt-2  bg-white text-black rounded shadow-lg py-2 font-cofo-medium w-[200px]"
+                    className="absolute right-0 mt-2 top-full bg-white text-black rounded shadow-lg py-2 font-cofo-medium w-[200px]"
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     {["+380 99 123 45 67", "+380 97 765 43 21"].map(

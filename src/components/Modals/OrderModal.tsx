@@ -58,10 +58,10 @@ const OrderModal = ({
   return (
     <div className="bg-white  lg:w-[504px] lg:h-fit  relative flex flex-col justify-center lg:p-[37px] py-[48px_28px]  items-center px-[7px]">
       <button
-        className="absolute top-4 right-4 text-2xl hover:cursor-pointer"
+        className="absolute lg:top-4 lg:right-4 top-1.5 -right-3 text-2xl hover:cursor-pointer"
         onClick={onCloseGlobalModal}
       >
-        <IoClose />
+        <IoClose className="w-[32px] h-[32px]"/>
       </button>
       <div className="lg:items-center flex flex-col">
         <h2 className="lg:mb-[25px]  text-center lg:text-[48px] text-[32px] leading-[30px]  lg:leading-[39px] lg:w-[337px] lg:pt-[30px] items-center lg:tracking-[-0.07em] uppercase text-[#252526]">

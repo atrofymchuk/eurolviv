@@ -4,7 +4,7 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { ComfortsBlockToProps } from "../../types/entity";
 import cn from "classnames";
 export const ComfortsBlock = memo(
-  ({ title, imgStyle, icons, images, style, isOtherLux }: ComfortsBlockToProps) => {
+  ({ title,  icons, images, style,  }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
 
     const renderedIcons = useMemo(() => {
@@ -61,7 +61,7 @@ export const ComfortsBlock = memo(
                       src={images[0]}
                       alt="room image"
                       className={cn(
-                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover ${imgStyle.ammentiesImageFst}`
+                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover `
                       )}
                     />
                   </InViewWrapper>
@@ -100,29 +100,26 @@ export const ComfortsBlock = memo(
                 lg:h-[441px]  
                 xl:h-[411px]  
                  2xl:h-[510px]
-                w-full p-2.5 md:p-0
-                lg:pt-[110px] xl:pt-0  md:pt-[45px] 2xl:pt-[10px]"
+                w-full px-2.5 md:p-0
+                lg:pt-[110px] xl:pt-0   md:pt-[45px] 2xl:pt-[10px]"
               >
                 <InViewWrapper>
                   <img
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
-                     2xl:h-[512px]  xl:h-[380px] lg:h-[311px] md:w-full md:h-[262px] w-[250px] object-cover 2xl:px-[24px] lg:px-[17px] md:px-[14px]
-                    ${imgStyle.ammentiesImageScd}`)}
+                     2xl:h-[512px]  xl:h-[380px] lg:h-[311px] md:w-full object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                    `)}
                   />
                   
-                 { isOtherLux && <img
-                    src={isOtherLux ? images[1] :  images[0]}
+              <img
+                    src={images[2]}
                     alt="room image"
-                    className={cn(`md:hidden w-full 
-                    h-[262px] sm:h-[250px] md:h-[300px]  ${imgStyle.ammentiesImageScd}
-                    object-cover`)}
-                  />}
-
-                  {!isOtherLux && <img src={images[0]} alt=""  className={cn(`md:hidden w-full  ${imgStyle.ammentiesImageScd}
+                    className={cn(`md:hidden w-full object-cover object-bottom
                     h-[262px] sm:h-[250px] md:h-[300px] 
-                    object-cover`)} />}
+                    `)}
+                  />
+
                 </InViewWrapper>
               </div>
             </div>

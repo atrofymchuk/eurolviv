@@ -5,14 +5,18 @@ export  { default as standartSinglePreview} from "../assets/Rooms/StandartSingle
 export  { default as standartSingleBedroomFst} from "../assets/Rooms/StandartSingle/bedroom.webp";
 export  { default as standartSingleBedroomScd} from "../assets/Rooms/StandartSingle/bedroomTwo.webp";
 export  { default as standartSingleAmmenties} from "../assets/Rooms/StandartSingle/ammenties.webp";
+export  { default as ammentiesPng} from "../assets/Rooms/StandartSingle/ammenties.png";
+export {    default as ammentiesFst} from "../assets/Rooms/StandartSingle/ammentieFst.png";
 
 export  { default as standartBigBedPreview} from "../assets/Rooms/StandartWithBigBed/preview.webp";
 export  { default as standartBigBedFst} from "../assets/Rooms/StandartWithBigBed/bedroom.webp";
 export  { default as standartBigBedScd} from "../assets/Rooms/StandartWithBigBed/bedroomTwo.webp";
+export {    default as ammentiesBigBedFst} from "../assets/Rooms/StandartWithBigBed/ammentieBigBed.png";
 
 export  { default as standartTwoBedPreview} from "../assets/Rooms/StandartWithTwoBeds/preview.webp";
 export  { default as standartTwoBedFst} from "../assets/Rooms/StandartWithTwoBeds/bedrom.webp";
 export  { default as standartTwoBedScd} from "../assets/Rooms/StandartWithTwoBeds/bedroomTwo.webp";
+export {    default as ammentiesTwoBedFst} from "../assets/Rooms/StandartWithTwoBeds/ammentiesTwoBeds.png";
 
 export  { default as standartBigBedAndBalconyPreview} from "../assets/Rooms/StandartWithBigBedAndBalcony/preview.webp";
 export  { default as standartBigBedAndBalconyBedroomFst} from "../assets/Rooms/StandartWithBigBedAndBalcony/bedroom.webp";
@@ -43,14 +47,17 @@ export  { default as luxImperiumBedRoomFst} from "../assets/Rooms/LuxImpreial/be
 export  { default as luxImperiumBedRoomScd} from "../assets/Rooms/LuxImpreial/bedroom2.webp";
 export  { default as luxImperiumBathRoomFst} from "../assets/Rooms/LuxImpreial/bathroom.webp";
 export  { default as luxImperiumBathRoomScd} from "../assets/Rooms/LuxImpreial/bathroom2.webp";
+export {    default as ammentiesLuxImperium} from "../assets/Rooms/LuxImpreial/ammentieTwo.png";
+export {    default as ammentiesLuxImperiumFst} from "../assets/Rooms/LuxImpreial/ammentieFr.png";
+export {    default as ammentiesLuxImperiumScd} from "../assets/Rooms/LuxImpreial/ammentieSix.png";
 
 export  { default as luxElegantPreview} from "../assets/Rooms/LuxElegant/preview.webp";
 export  { default as luxElegantBathRoomFst} from "../assets/Rooms/LuxElegant/bathroom.webp";
-export  { default as luxElegantBathRoomScd} from "../assets/Rooms/LuxElegant/bathroom2.webp";
-export  { default as luxElegantBedRoomFst} from "../assets/Rooms/LuxElegant/bedroom.webp";
-export  { default as luxElegantBedRoomScd} from "../assets/Rooms/LuxElegant/bedroom2.webp";
-export  { default as luxElegantLivingRoomFst} from "../assets/Rooms/LuxElegant/livingroom.webp";
-export  { default as luxElegantLivingRoomScd} from "../assets/Rooms/LuxElegant/livingroom2.webp";
+export  { default as luxElegantBathRoomScd} from "../assets/Rooms/LuxElegant/bathroom2.png";
+export  { default as luxElegantBedRoomFst} from "../assets/Rooms/LuxElegant/bedroom.png";
+export  { default as luxElegantBedRoomScd} from "../assets/Rooms/LuxElegant/bedroom2.png";
+export  { default as luxElegantLivingRoomFst} from "../assets/Rooms/LuxElegant/livingroom.png";
+export  { default as luxElegantLivingRoomScd} from "../assets/Rooms/LuxElegant/livingroom2.png";
 
 export  { default as ammenties} from "../assets/Rooms/StandartAbout/amenities.webp";
 export  { default as standartBathRoomFst} from "../assets/Rooms/StandartAbout/bathRoom.webp";

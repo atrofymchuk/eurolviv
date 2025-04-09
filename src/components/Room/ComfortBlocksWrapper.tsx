@@ -18,7 +18,7 @@ export const ComfortsBlocksWrapper = ({
       ammentiesImageFst: room.about.ammetiveImgStyleFst,
       ammentiesImageScd: room.about.ammetiveImgStyleScd,
     },
-    images: room.about.ammentiesImages,
+    mobileImages: room.about.ammentiesMobileImages
   };
 
   const standardStyle = {
@@ -34,8 +34,6 @@ export const ComfortsBlocksWrapper = ({
     
   };
 
-  const isOtherLux = room.type === 'semi-lux' 
-  const isLuxElegant = room.type === 'lux-elegant' || room.type === 'lux-imperial'
 
   return (
     <div className="">
@@ -44,9 +42,8 @@ export const ComfortsBlocksWrapper = ({
           <ComfortsBlock
             title={t("room.comfortBlock.title")}
             icons={icons.ammentiesInRoom}
-            isOtherLux={isOtherLux}
             {...commonProps}
-            images={[commonProps.images[0], commonProps.images[1]]}
+            images={[room.about.ammentiesImages[0], room.about.ammentiesImages[1], room.about.ammentiesMobileImages[0]]}
             style={luxStyle}
           />
 
@@ -54,10 +51,8 @@ export const ComfortsBlocksWrapper = ({
             <ComfortsBlock
               title={t("room.comfortBlock.title2")}
               icons={icons.bedRoom}
-              isLuxElegant={isLuxElegant}
-              
               {...commonProps}
-              images={[commonProps.images[2], commonProps.images[3]]}
+              images={[room.about.ammentiesImages[2], room.about.ammentiesImages[3], room.about.ammentiesMobileImages[1]]}
               style={standardStyle}
             />
           )}
@@ -66,7 +61,7 @@ export const ComfortsBlocksWrapper = ({
             title={t("room.comfortBlock.title3")}
             icons={icons.bathRoom}
             {...commonProps}
-            images={[commonProps.images[4], commonProps.images[5]]}
+            images={[room.about.ammentiesImages[4], room.about.ammentiesImages[5], room.about.ammentiesMobileImages[2]]}
             style={standardStyle}
           />
         </>
@@ -76,17 +71,15 @@ export const ComfortsBlocksWrapper = ({
             title={t("room.comfortBlock.title4")}
             icons={icons.ammentiesInRoom}
             {...commonProps}
-            isOtherLux={isOtherLux}
-            images={[commonProps.images[0], commonProps.images[1]]}
+            images={[room.about.ammentiesImages[0], room.about.ammentiesImages[1], room.about.ammentiesMobileImages[0]]}
             style={standardStyle}
           />
       
           <ComfortsBlock
             title={t("room.comfortBlock.title3")}
             icons={icons.bathRoom}
-            isOtherLux={isOtherLux}
             {...commonProps}
-            images={[commonProps.images[2], commonProps.images[3]]}
+            images={[room.about.ammentiesImages[2], room.about.ammentiesImages[3], room.about.ammentiesMobileImages[1]]}
             style={standardStyle}
           />
         

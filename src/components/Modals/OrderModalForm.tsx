@@ -55,7 +55,7 @@ import { FormData } from "./OrderModal";
     <IoIosArrowDown className="absolute right-5 top-1/2 transform -translate-y-1/2 text-[#252526] text-xl pointer-events-none" />
   </div>
 
-  <div className="flex items-center gap-2 text-sm justify-center text-[#A47762] lg:mt-[25px] lg:mb-[39px] lg:p-0 pt-[10px] pb-[8px]">
+  <div className="flex items-center gap-2 text-sm justify-center text-[#A47762] lg:mt-[25px] lg:mb-[39px] lg:p-0 pt-[16px] pb-[19px] ">
     <input
       type="checkbox"
       {...register("needRooms")}

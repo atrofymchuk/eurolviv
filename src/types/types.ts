@@ -94,6 +94,7 @@ export type RoomAbout = {
   ammetiveImgStyleFst: string;
   ammetiveImgStyleScd: string;
   ammentiesImages: string[];
+  ammentiesMobileImages: string[];
 };
 
 export type SuggestionT = {

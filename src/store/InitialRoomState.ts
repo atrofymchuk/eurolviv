@@ -41,10 +41,15 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleScd: "",
 
         ammentiesImages: [
+          imgs.ammentiesFst,
           imgs.standartSingleAmmenties,
-          imgs.standartBedRoomTwo,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
+        ],
+        ammentiesMobileImages: [
+          imgs.standartSingleAmmenties,
+          imgs.standartBathRoomFst,
+          
         ],
         bedText: "roomsState.standartSingle.about.bedText",
       },
@@ -171,10 +176,14 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleScd: "object-[0%_100%]",
 
         ammentiesImages: [
-          imgs.ammenties,
-          imgs.standartBigBedScd,
+          imgs.ammentiesBigBedFst,
+          imgs.ammentiesPng,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
+        ],
+        ammentiesMobileImages: [
+          imgs.ammentiesPng,
+          imgs.standartBathRoomFst,
         ],
         bedText: "roomsState.standartBigbed.about.bedText",
       },
@@ -296,10 +305,14 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleFst: "object-[0%_20%]",
         ammetiveImgStyleScd: "object-[0%_100%]",
         ammentiesImages: [
-          imgs.ammenties,
-          imgs.standartTwoBedScd,
+          imgs.ammentiesTwoBedFst,
+          imgs.ammentiesPng,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
+        ],
+        ammentiesMobileImages: [
+          imgs.ammentiesPng,
+          imgs.standartBathRoomFst,
         ],
         bedText: "roomsState.standartTwoBed.about.bedText",
       },
@@ -424,10 +437,14 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleFst: "object-[65%_20%]",
         ammetiveImgStyleScd: "object-[0%_100%]",
         ammentiesImages: [
-          imgs.ammenties,
           imgs.standartBigBedAndBalconyBedroomScd,
+          imgs.ammentiesPng,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
+        ],
+        ammentiesMobileImages: [
+          imgs.ammentiesPng,
+          imgs.standartBathRoomFst,
         ],
         bedText: "roomsState.standartBigBedBalcony.about.bedText",
       },
@@ -552,8 +569,8 @@ export const initialRoomsState: RoomsState = {
         rooms: 1,
         swiperImagesStyle: "object-[0%_100%]",
         swiperImages: [
-          imgs.standartTwoBedAndBalconyBedroomScd,
           imgs.standartTwoBedAndBalconyBedroomFst,
+          imgs.standartTwoBedAndBalconyBedroomScd,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
         ],
@@ -561,10 +578,15 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleFst: "object-[65%_20%]",
         ammetiveImgStyleScd: "object-[0%_100%]",
         ammentiesImages: [
-          imgs.ammenties,
-          imgs.standartBigBedAndBalconyBedroomScd,
+          imgs.standartTwoBedAndBalconyBedroomFst,
+          imgs.ammentiesPng,
           imgs.standartBathRoomFst,
           imgs.standartBathRoomSnd,
+        ],  
+        ammentiesMobileImages: [
+          imgs.ammentiesPng,
+          imgs.standartBathRoomSnd,
+
         ],
         bedText: "roomsState.standartTwoBedBalcony.about.bedText",
       },
@@ -696,8 +718,12 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleScd: "object-[0%_100%]",
         ammentiesImages: [
           imgs.semiLuxBedroomScd,
-          imgs.ammenties,
+          imgs.ammentiesPng,
           imgs.semiLuxBathroomFst,
+          imgs.semiLuxBathroomScd,
+        ],
+        ammentiesMobileImages: [
+          imgs.ammentiesPng,
           imgs.semiLuxBathroomScd,
         ],
         bedText: "roomsState.semiLux.about.bedText",
@@ -820,6 +846,11 @@ export const initialRoomsState: RoomsState = {
           imgs.luxTwoRoomsBedroomScd,
           imgs.luxTwoRoomsBathRoomFst,
           imgs.luxTwoRoomsBathRoomScd,
+        ],
+        ammentiesMobileImages: [
+          imgs.luxTwoRoomsLivingRoomFst,
+          imgs.luxTwoRoomsBedroomFst,
+          imgs.luxTwoRoomsBathRoomFst,
         ],
         bedText: "roomsState.luxTwoRooms.about.bedText",
       },
@@ -972,12 +1003,17 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleFst: "object-[70%_100%]",
         ammetiveImgStyleScd: "object-[70%_100%]",
         ammentiesImages: [
-          imgs.luxImperiumlivigRoomFst,
           imgs.luxImperiumlivigRoomScd,
-          imgs.luxImperiumBedRoomScd,
+          imgs.ammentiesLuxImperium,
           imgs.luxImperiumBedRoomFst,
+          imgs.ammentiesLuxImperiumFst,
           imgs.luxImperiumBathRoomFst,
-          imgs.luxImperiumBathRoomScd,
+          imgs.ammentiesLuxImperiumScd,
+        ],
+        ammentiesMobileImages: [
+          imgs.luxImperiumlivigRoomScd,
+          imgs.ammentiesLuxImperiumFst,
+          imgs.luxImperiumBathRoomFst,
         ],
         bedText: "roomsState.luxImperial.about.bedText",
       },
@@ -1129,12 +1165,18 @@ export const initialRoomsState: RoomsState = {
         ammetiveImgStyleFst: "object-[5%_100%]",
         ammetiveImgStyleScd: "object-[30%_100%]",
         ammentiesImages: [
-          imgs.luxElegantLivingRoomScd,
           imgs.luxElegantLivingRoomFst,
+          imgs.luxElegantLivingRoomScd,
           imgs.luxElegantBedRoomFst,
           imgs.luxElegantBedRoomScd,
           imgs.luxElegantBathRoomFst,
           imgs.luxElegantBathRoomScd,
+        ],
+        ammentiesMobileImages: [
+          imgs.luxElegantLivingRoomScd,
+          imgs.luxElegantBedRoomFst,
+          imgs.luxElegantBathRoomFst,
+
         ],
         bedText: "roomsState.luxElegant.about.bedText",
       },
