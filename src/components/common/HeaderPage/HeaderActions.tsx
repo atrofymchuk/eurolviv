@@ -9,12 +9,12 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
   customButton,
   onOrderClick,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   
   return (
     <div className="flex flex-col items-center  gap-1.75">
       {showBookButton && (
-        <BookLink className="lg:px-[34.5px] lg:py-[13.5px] px-[19px] lg:mt-[43px] text-center py-[11px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to="/booking">
+        <BookLink className="lg:px-[34.5px] lg:py-[13.5px] px-[19px] lg:mt-[43px] text-center py-[11px] w-[171px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to="/booking">
 
           {t("buttons.book")}
         </BookLink>
@@ -23,7 +23,7 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       {showOrderButton && (
         <button
           onClick={onOrderClick}
-          className="uppercase mt-[30px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit md:px-[34.5px] md:py-[13.5px]
+          className="uppercase mt-[30px] lg:mt-[43px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit md:px-[34.5px] md:py-[13.5px]
            px-[19px] py-[11px] rounded-full font-cofo-medium text-[12px] hover:cursor-pointer lg:w-[204px] "
         >
           {t("buttons.order")}

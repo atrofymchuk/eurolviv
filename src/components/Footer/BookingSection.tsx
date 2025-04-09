@@ -9,7 +9,7 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
   const { t } = useTranslation();
   return (
     <div
-      className="space-y-3 flex flex-col lg:h-[473px] h-[200px] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+      className="gap-y-3 flex flex-col lg:h-[473px] h-[200px] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
      pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 pt-[17px] lg:w-[25.02%] lg:items-center"
     >
       <div className="h-full flex flex-col lg:justify-between">
@@ -22,32 +22,32 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
             {t("footer.bookingTime")}
           </p>
 
-          <ul className="lg:space-y-[14px] leading-[100%] space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+          <ul className="lg:gap-y-[7px] gap-y-[7px]  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
             <li>+38 (032) 242-31-60</li>
             <li>+38 (093) 242-31-60</li>
             <li>+38 (093) 348-31-12</li>
           </ul>
-          <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:leading-[22px]">
+          <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium ">
             info@eurohotel.lviv.ua
           </p>
           <div className="lg:mt-[29px] mt-8 mb-0">
-            <p className="uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-3">
+            <p className="uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px]">
               {t("contacts.info.restaurand/terrase")}
             </p>
 
-            <ul className="lg:space-y-[14px] leading-[100%] space-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+            <ul className="lg:gap-y-[7px] gap-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
             <li>+38 (073) 242-40-02</li>
               <li>+38 (093) 348-31-14</li>
             </ul>
             <div className="lg:mt-[10px] mt-0 flex flex-col">
-              <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:leading-[22px] leading-[15px] lg:mt-0 mt-[21px] text-[12px]">
+              <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
                 restaurant@eurohotel.lviv.ua
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex lg:space-x-4 space-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-auto">
+        <div className="flex lg:gap-x-4 gap-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-auto">
           <Link
             to={social.restaurant.instagram}
             target="_blank"

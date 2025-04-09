@@ -110,7 +110,7 @@ export const SpecialOffersModal = () => {
         </div>
 
         <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526]">
-          <div className="flex flex-col justify-center border-black/90 border-e px-4 col-span-2 md:col-span-1  ">
+          <div className="flex flex-col justify-center  px-4 col-span-2 md:col-span-1  ">
             <h1 className="text-[24px] lg:text-[48px] text-white uppercase md:ps-6">
               {t("specialOfferModal.contacts.title")}
             </h1>

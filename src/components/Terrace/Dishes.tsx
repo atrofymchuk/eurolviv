@@ -3,7 +3,7 @@ import { useModalStore } from "../../store/useModalStore";
 import "swiper/css";
 import "swiper/css/pagination";
 import { SwiperSlider } from "./Swiper";
-
+import cn from "classnames";
 export const Dishes = ({
   slides,
   content,
@@ -18,13 +18,14 @@ export const Dishes = ({
     isMenu?: boolean;
   };
 }) => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
   const { onOpenModal } = useModalStore();
+  const isEng = i18n.language === "en";
 
   return (
     <div className="w-full overflow-x-hidden overflow-y-hidden h-fit">
       <div
-        className={`relative mx-auto w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ${
+        className={`relative mx-auto w-[89.7%] lg:w-[93.25%] border-x md:border-x-0 border-[#B3B3B3] ${
           content.isMenu ? "" : "lg:pb-[149px] pb-[59px]"
         }`}
       >
@@ -60,11 +61,14 @@ export const Dishes = ({
         </div>
 
         <div className="md:border-x border-[#B3B3B3]">
-          <div className="flex justify-center">
+            <div className={cn(`flex justify-center ${content.isMenu ? "pb-[40px] lg:pb-[30px]" : " pb-[48px] lg:pb-[37px]"}`)}>
             <button
               onClick={() => onOpenModal("menu")}
-              className={`uppercase  xl:text-[14px]  lg:w-[175px]
-          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${content.isMenu ? "xl:px-[20px] lg:w-[122px]  xl:py-[10.5px] px-[32px] py-[10px] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B] bg-[#8C331B]" : "px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] text-[#8C331B] border border-[#8C331B]"}`}
+              className={cn(`uppercase  xl:text-[14px]  
+          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${content.isMenu ? "xl:px-[20px] lg:w-[122px]  xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B]" : "border-[#8C331B] border text-[#8C331B] px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] "},`,{
+            "lg:w-[175px]":isEng && content.isMenu,
+            "lg:w-[122px]":!isEng && content.isMenu,
+          })}
             >
               {t(content.button)}
             </button>

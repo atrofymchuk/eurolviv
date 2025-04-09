@@ -24,8 +24,6 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
-
   const totalSlidesMobile = Math.ceil(images.length / 2);
 
   const settings = {
@@ -74,12 +72,11 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     ],
   };
 
-  console.log(currentSlide, totalSlidesMobile);
   return (
     <div className="relative flex justify-center lg:ms-[71px] ms-[calc(5%)]">
       {currentSlide > 0 && (
         <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
+          className="w-[35px] h-[35px]  lg:w-[60px] lg:h-[60px] flex items-center justify-center 
                      left-5 lg:left-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickPrev()}
@@ -107,7 +104,6 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
                   />
                 </div>
               </div>
-             
             ))}
           </Slider>
         </div>
@@ -117,7 +113,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         ? Math.round(currentSlide + 1) < totalSlidesMobile
         : currentSlide + 2 < images.length) && (
         <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
+          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-30 flex items-center justify-center 
                      right-16 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={() => sliderRef.current?.slickNext()}

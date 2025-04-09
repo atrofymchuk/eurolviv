@@ -11,10 +11,10 @@ export const Mission = () => {
             <h1 className="uppercase text-[#8C331B] font-cofo-medium text-sm md:text-base lg:text-lg xl:text-2xl leading-[30px] px-2">
               {t("about.mission.title")}
             </h1>
-            <h1 className="uppercase text-[32px] md:text-[48px] lg:text-[64px] xl:text-[100px] tracking-[-0.03em] leading-[100%] px-2">
+            <h1 className="uppercase text-[32px] md:text-[48px] lg:text-[64px] xl:text-[100px] tracking-[-0.04em] lg:tracking-[-7%] lg:leading-[81%] leading-[94%] px-2">
               {t("about.mission.heading.0")}
             </h1>
-            <h1 className="uppercase text-[32px] md:text-[48px] lg:text-[64px] xl:text-[100px] tracking-[-0.03em] leading-[80%] px-2">
+            <h1 className="uppercase text-[32px] md:text-[48px] lg:text-[64px] xl:text-[100px] tracking-[-0.04em] lg:tracking-[-7%] lg:leading-[81%] leading-[94%] px-2">
               {t("about.mission.heading.1")}
             </h1>
             <p className="uppercase max-w-[801px] mx-auto text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] lg:pt-[29px] pt-[47px] px-4 xl:px-0">

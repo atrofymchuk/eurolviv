@@ -5,10 +5,10 @@ export const Celebration = () => {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center mx-auto md:w-[93.16%] w-[89.067%] border-[#B3B3B3] md:border-b">
-      <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-full md:border-x border-[#B3B3B3] md:border-t ">
+      <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 w-full border-x border-[#B3B3B3] md:border-t ">
         <div className="lg:h-[616px]  hidden md:flex justify-end  "></div>
 
-        <div className="lg:h-[616px] flex border-[#B3B3B3] border-x  flex-col items-center lg:justify-end justify-end  lg:oy-0 py-[65px_57px] text-center lg:pb-[27px]">
+        <div className="lg:h-[616px] flex border-[#B3B3B3] md:border-x  flex-col items-center lg:justify-end justify-end  lg:oy-0 py-[65px_57px] text-center lg:pb-[27px]">
           <span className="font-blessed  block text-center leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] xl:inline xl:pb-[22px] pb-[7px]">
             Ruff
           </span>
@@ -25,7 +25,9 @@ export const Celebration = () => {
           </div>
           <ViewMenuButton
             pdf="Бенкетне меню.pdf"
-            className="uppercase lg:text-[14px] lg:w-[175px] text-[12px] font-cofo-medium bg-[#8C331B] lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B] py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
+            className="uppercase lg:text-[14px] lg:w-[175px]!  text-[12px] font-cofo-medium bg-[#8C331B]
+             lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B]
+              py-[10px] px-[23px]  lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
           >
             {t("buttons.celebrationMenu")}
           </ViewMenuButton>

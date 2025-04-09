@@ -10,11 +10,12 @@ export const ConferenceMenu = () => {
         <div className="hidden lg:flex border-[#C7C7C7] lg:w-full w-[calc(100%-7.5%)]"></div>
       </div>
 
-      <div className="w-full text-center z-10 flex flex-col items-center justify-center pt-[83px] sm:pt-[50px] lg:pt-[120px] xl:pt-[130px] 2xl:pt-[150px]">
-        <p className="uppercase text-[#242425] text-[14px] lg:text-[24px] font-cofo-medium tracking-[-0.05em] lg:w-full w-[257px]">
+      <div className="w-full text-center z-10 flex flex-col items-center justify-center pt-[73px] sm:pt-[50px] lg:pt-[120px] xl:pt-[130px] 2xl:pt-[150px]">
+          <p className="uppercase text-[#242425] text-[14px] lg:text-[24px] font-cofo-medium tracking-[-0.05em] lg:w-full w-[257px]  ">
           {t("conferenceService.conferenceMenu.title")}
         </p>
-        <h1 className="uppercase text-[32px] sm:text-[42px] md:text-[62px] lg:text-[100px] leading-[87%] tracking-tight lg:w-full w-[257px] sm:w-[400px]  pb-[53px] pt-[12px]">
+          <h1 className="uppercase text-[32px] sm:text-[42px]   md:text-[62px] lg:text-[100px]  lg:leading-[87%] leading-[87%] tracking-[-9%] 
+          lg:w-full w-[257px] sm:w-[400px]  lg:pb-[53px] pb-[23px] pt-[12px] lg:pt-[13px]">
           {t("conferenceService.conferenceMenu.desc")}
         </h1>
       </div>

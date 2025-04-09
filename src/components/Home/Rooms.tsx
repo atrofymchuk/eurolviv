@@ -41,7 +41,8 @@ export const RoomsHome = () => {
             <div className="flex md:flex-row lg:ps-[80px]  md:ps-[60px] flex-col text-start items-center  md:items-start  2xl:items-start relative 2xl:h-[200px] xl:h-[190px] lg:h-[180px] md:h-[150px] sm:h-[130px] ">
               <div className="md:absolute flex md:flex-row items-center flex-col pt-[16px] md:pt-[35px]  space-y-[30px] md:space-y-0 text-center md:text-start md:gap-[20px] xl:gap-x-[75px]">
                 <p
-                  className="uppercase  2xl:w-[433px] xl:w-[400px] lg:w-[330px] md:w-[350px] sm:w-[285px]  w-[] 2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px]  
+                  className="uppercase  2xl:w-[433px] xl:w-[400px] px-[24px] lg:w-[330px] md:w-[350px] sm:w-[285px] lg:px-0 
+                   2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px]  
                 text-[12px]  text-[#E9E9E9] "
                 >
                   {t("home.rooms.desc")}
@@ -50,8 +51,8 @@ export const RoomsHome = () => {
                   <Link
                     to="/rooms"
                     className={cn(`uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
-                       bg-[#EDE8E5] whitespace-nowrap lg:px-5.25  h-[46px] py-[12.5px] px-[14.5px] 
-                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] lg:w-[234px]  text-[12px] w-[178px]`, {
+                       bg-[#EDE8E5] whitespace-nowrap lg:px-5.25 h-[42px]  lg:h-[46px] py-[12.5px] px-[14.5px] 
+                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] lg:w-[234px]   text-[12px] w-[178px]`, {
                       "lg:w-[170px]": isEng,
                     })}
                   >
@@ -69,7 +70,7 @@ export const RoomsHome = () => {
               {t("home.rooms.forWhat.0")}
             </span>
             <br />
-            <span className="absolute xl:-translate-x-[50px]  md:-translate-x-[50px]">
+            <span className="absolute xl:-translate-x-[80px]  md:-translate-x-[50px]">
               {t("home.rooms.forWhat.1")}
             </span>
           </h1>

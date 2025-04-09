@@ -13,7 +13,9 @@ export const Navigation = forwardRef<Slider>((_, ref) => {
         
       >
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 bg-white hover:text-white mt-[26px] ms-[20px] mb-[44px] md:ms-[88px] xl:mt-[17px] xl:mb-[72px]"
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px]  flex items-center justify-center
+           text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 bg-white
+            hover:text-white mt-[26px] ms-[20px] mb-[44px] md:ms-[88px] xl:mt-[59px] xl:mb-[36px]"
           onClick={() => {
             if (ref && typeof ref !== 'function' && ref.current) {
               ref.current.slickPrev();
@@ -24,7 +26,7 @@ export const Navigation = forwardRef<Slider>((_, ref) => {
         </button>
 
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] flex items-center justify-center text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 hover:text-white mt-[26px] me-[20px] mb-[44px] md:me-[102px] xl:mb-[72px] xl:mt-[17px] xl:me-[137px]"
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] flex items-center xl:mt-[59px] justify-center text-[#8C331B] border border-[#8C331B] hover:bg-[#8C331B] rounded-full z-20 hover:text-white mt-[26px] me-[20px] mb-[44px] md:me-[102px] xl:mb-[36px]  xl:me-[137px]"
           onClick={() => {
             if (ref && typeof ref !== 'function' && ref.current) {
               ref.current.slickNext();

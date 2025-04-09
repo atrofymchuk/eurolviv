@@ -87,7 +87,6 @@ export const HeaderNav = memo(
          <Logo 
             logo={logo} 
             iconLogoStyle={iconLogoStyle} 
-            scrolled={scrolled} 
             pathname={pathname}
           />
 

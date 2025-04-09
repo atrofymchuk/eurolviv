@@ -8,13 +8,13 @@ export const Menu = () => {
   const isEng = i18n.language === "en";
   const { onOpenModal } = useModalStore();
   return (
-    <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto border-x border-[#B3B3B3] border-t md:border-t-0">
+    <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto md:border-x border-[#B3B3B3] border-t md:border-t-0">
       <div>
         <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] md:h-full h-[521px] grid-cols-1">
-          <div className="lg:w-full md:flex  hidden lg:justify-end border-t border-[#B3B3B3]"></div>
+          <div className="lg:w-full md:flex  hidden lg:justify-end border-t md:border-s border-[#B3B3B3]"></div>
 
-          <div className="2xl:h-[375px] xl:h-[305px] lg:h-[265px] flex  md:border-x md:border-t  flex-col  border-[#B3B3B3] items-center lg:justify-end text-center lg:pb-[70px] md:pb-[50px] pb-[10px] pt-[55px] lg:pt-0 ">
-            <span className="font-blessed xl:font-extrabold block text-center text-[16px] xl:text-[36px] lg:text-[32px] lg:leading-[25.2px] leading-[94%] xl:inline lg:pb-[19px]">
+          <div className="2xl:h-[375px] xl:h-[305px] lg:h-[265px] flex  border-x md:border-t  flex-col  border-[#B3B3B3] items-center lg:justify-end text-center lg:pb-[70px] md:pb-[50px] pb-[10px] pt-[55px] lg:pt-0 ">
+            <span className="font-blessed block text-center text-[16px] xl:text-[36px] lg:text-[32px] lg:leading-[25.2px] leading-[94%] xl:inline lg:pb-[19px]">
               {t("restaurant.menu.menu")}
             </span>
             <h1 className="uppercase 2xl:text-[64px] lg:text-[54px]  leading-[94%] text-[32px] mt-[9px]  tracking-[-7%] md:whitespace-nowrap ">
@@ -28,8 +28,9 @@ export const Menu = () => {
 
           <MenuSmallWidth className="flex md:hidden" />
 
-          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden  lg:justify-end  lg:pe-2.25"></div>
-          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] flex  md:border-x flex-col  border-[#B3B3B3] text-center  items-center">
+          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden md:border-s border-x border-[#B3B3B3]  lg:justify-end  lg:pe-2.25"></div>
+          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] flex  border-x md:border-x-0 md:border-e flex-col  border-[#B3B3B3] text-center  items-center">
+            
             <p className="uppercase text-[#888888] px-5 lg:text-[16px] sm:text-[14px] text-[12px]  lg:leading-[120%] xl:w-[359px]  md:pt-[39px]">
               {t("restaurant.menu.desc")}
             </p>

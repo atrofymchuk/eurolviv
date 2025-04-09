@@ -1,11 +1,10 @@
 import cn from "classnames";
-import { memo } from "react";
 
 type GridBordersProps = {
   isOnTop: boolean;
 };
 
-export const GridBorders = memo(({ isOnTop }: GridBordersProps) => {
+export const GridBorders = ({ isOnTop }: GridBordersProps) => {
   return (
     <>
       <div
@@ -36,4 +35,4 @@ export const GridBorders = memo(({ isOnTop }: GridBordersProps) => {
       ></div>
     </>
   );
-}); 
+};

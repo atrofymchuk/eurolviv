@@ -16,7 +16,7 @@ export const InfrastructureSection = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.infrastructureDesc")}
         </p>
       </div>
-      <div className=" justify-center  self-center mt-12 hidden lg:flex">
+      <div className=" justify-center  self-center mt-12 hidden lg:flex xl:pb-[40px]">
         <InViewWrapper>
           <img src={hotel} alt="hotel" className=" w-[760px] h-[582px]" />
         </InViewWrapper>

@@ -75,7 +75,6 @@ export const MobileNavigation = ({
             <Logo
               logo={logo}
               iconLogoStyle={iconLogoStyle}
-              scrolled={scrolled}
               className="w-full self-start justify-start "
               iconClassName="w-[99px] h-[54px]"
               isMobile={true}

@@ -38,24 +38,24 @@ export const initialCoferenceHallState: ConferenceServiceState = {
           src: icons.projector,
           text: "conferenceHallState.bigHall.icons.projector",
         },
-        {
-          src: icons.notebook,
-          text: "conferenceHallState.bigHall.icons.notebook",
-        },
         { src: icons.screen, text: "conferenceHallState.bigHall.icons.screen" },
-        {
-          src: icons.flipchart,
-          text: "conferenceHallState.bigHall.icons.flipchart",
-        },
         {
           src: icons.soundSystem,
           text: "conferenceHallState.bigHall.icons.soundSystem",
         },
-        { src: icons.paper, text: "conferenceHallState.bigHall.icons.paper" },
         {
           src: icons.presenter,
           text: "conferenceHallState.bigHall.icons.presenter",
         },
+        {
+          src: icons.notebook,
+          text: "conferenceHallState.bigHall.icons.notebook",
+        },
+        {
+          src: icons.flipchart,
+          text: "conferenceHallState.bigHall.icons.flipchart",
+        },
+        { src: icons.paper, text: "conferenceHallState.bigHall.icons.paper" },
         {
           src: icons.microphone,
           text: "conferenceHallState.bigHall.icons.microphone",

@@ -15,11 +15,13 @@ export const RoomsInfo = () => {
         <div className="grid  grid-cols-1  ">
           <div className="space-y-[11px] px-2 border-x border-[#C7C7C7] ">
             <div className="lg:block hidden mt-[114px]">
-              <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+              <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em]">
                 <span className="text-[#8C331B]">
                   {t("rooms.about.heading.0")},
                 </span>
-                 {t("rooms.about.heading.1")}
+                <span className="text-[#252526]">
+                  {t("rooms.about.heading.1")}
+                </span>
               </h1>
               <div className={cn("flex flex-col  ", {
                 "items-center": isEng,
@@ -27,11 +29,11 @@ export const RoomsInfo = () => {
               {
                 "items-end": !isEng,
               })}>
-                <div className="w-fit space-y-[11px]">
-                  <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+                <div className="w-fit">
+                  <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] tracking-[-0.04em] lg:leading-none text-[#252526]">
                     {t("rooms.about.heading.2")}
                   </h1>
-                  <h1 className="mb-[24px] xl:mb-[43px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] lg:leading-[81px] md:leading-[65px] sm:leading-[50px] tracking-[-0.04em]">
+                  <h1 className="mb-[24px] xl:mb-[43px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em] text-[#252526]">
                     {t("rooms.about.heading.3")}
                   </h1>
                   <div className="flex  items-center lg:gap-x-[30px]">
@@ -39,7 +41,7 @@ export const RoomsInfo = () => {
                       {t("rooms.about.desc")}
                     </p>
                     <BookLink
-                      className="text-[#FFFFFF] bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px]  py-[11px] lg:w-[204px] flex justify-center "
+                      className="text-[#FFFFFF] bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px]  py-[11px] lg:w-[204px] flex justify-center lg:h-[44px] h-[40px]"
                       to={"/booking"}
                     >
 

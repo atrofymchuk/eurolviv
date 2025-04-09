@@ -21,7 +21,7 @@ export const ConferenceMenuCard = ({
         alt=""
         className="2xl:w-[540px] 2xl:h-[609px] object-cover "
       />
-      <p className="uppercase text-[#242425] 2xl:text-[48px] 2xl:tracking-[-7%] 2xl:leading-[104%] 2xl:pt-[36px] xl:text-[42px] xl:tracking-[-7%] xl:leading-[104%] 
+      <p className="uppercase text-[#242425] 2xl:text-[48px] 2xl:tracking-[-7%] 2xl:leading-[104%] 2xl:pt-[36px] xl:text-[42px] 
       xl:pt-[28px] lg:text-[24px] lg:tracking-[-7%] lg:leading-[104%] lg:pt-[20px] ">
         {text}
       </p>

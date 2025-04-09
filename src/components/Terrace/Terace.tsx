@@ -3,7 +3,8 @@ import { TerraseT } from "../../types/types";
 import { useTranslation } from "react-i18next";
 import { FormatBoldText } from "../common/FormatBoldText";
 import { AbootSliderContainer } from "../Restaurant/AbootSliderContainer";
-import cn  from "classnames";
+import cn from "classnames";
+
 type TerraseToProps = {
   terase: TerraseT;
   index: number;
@@ -17,9 +18,14 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
 
   return (
     <>
-
       <div className="w-screen flex items-center justify-center">
-        <div className={cn(`md:max-w-[93.23%]  w-[89.7%]  flex flex-col items-center border-[#B3B3B3AD] border-b  ${index !== 0 ? "border-t" : ""}`)}>
+        <div
+          className={cn(
+            `md:w-[93.23%]  w-[89.7%]  flex flex-col items-center border-[#B3B3B3AD] border-b  ${
+              index !== 0 ? "border-t" : ""
+            }`
+          )}
+        >
           <div className="border-x border-[#B3B3B3AD] grid grid-cols-1 md:grid-cols-[49.97%_50.03%] w-full">
             <div
               className={`h-[193px] border-b hidden border-e border-[#B3B3B3AD] ${
@@ -42,7 +48,10 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
                   </h1>
                   <div className="space-y-4 xl:w-[106%] 2xl:mt-[62px] mt-[27px]">
                     <div className="leading-[100%]">
-                      <FormatBoldText desc={descOne} isLowerTerrase={isLowerTerrase} />
+                      <FormatBoldText
+                        desc={descOne}
+                        isLowerTerrase={isLowerTerrase}
+                      />
                     </div>
                     <div className="leading-[100%]">
                       <FormatBoldText desc={descTwo} />
@@ -50,6 +59,21 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
                     <div className="leading-[100%]">
                       <FormatBoldText desc={descThree} />
                     </div>
+                    {index === 0 && (
+                      <div className="leading-[100%] lg:flex hidden mt-[39px]">
+                        <p className="text-[#444444] uppercase lg:text-[18px] leading-[120%]">
+                          <span className="font-cofo-medium">
+                            {t("terasesState.mainTerrase.hookan")}
+                            <br />
+                          </span>
+                          <span className=" ">
+                            {t("terasesState.mainTerrase.hookanTime.0")}
+                            <br />
+                            {t("terasesState.mainTerrase.hookanTime.1")}
+                          </span>
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

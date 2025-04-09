@@ -6,8 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import {
   mirrorAboutSlider,
-  champagneAboutSlider,
+  luxTwoRoomsPreview,
   bathroomAboutSlider,
+  champagneAboutSlider,
   bedroomAboutSlider,
 } from "../../store/exportsImg";
 
@@ -15,10 +16,11 @@ import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
 const slides = [
-  mirrorAboutSlider,
+    mirrorAboutSlider,
   champagneAboutSlider,
-  bathroomAboutSlider,
   bedroomAboutSlider,
+  bathroomAboutSlider,
+  luxTwoRoomsPreview,
 ];
 
 const ImageSlider = () => {
@@ -56,9 +58,17 @@ const ImageSlider = () => {
     <div className="relative w-full flex justify-center ">
       <Slider {...settings} ref={slideRef} className={cn(`w-full h-full  img`)}>
         {slides.map((image, index) => {
+          const totalSlides = slides.length;
           const isActive = activeSlide === index;
-          const isSide = Math.abs(activeSlide - index) === 1;
-          const isEdge = Math.abs(activeSlide - index) > 1;
+          
+          const normalizedDiff = Math.min(
+            Math.abs(activeSlide - index),
+            Math.abs(activeSlide - index + totalSlides),
+            Math.abs(activeSlide - index - totalSlides)
+          );
+          
+          const isSide = normalizedDiff === 1;
+          const isEdge = normalizedDiff > 1;
 
           return (
             <InViewWrapper key={index}>
@@ -84,13 +94,13 @@ const ImageSlider = () => {
       </Slider>
 
       <button
-        className="xl:absolute left-40 -bottom-20    xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+        className="xl:absolute left-40 -bottom-20  xl:bottom-4  xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
         onClick={() => slideRef.current?.slickPrev()}
       >
         <HiArrowLongLeft className="w-[32px] h-[32px]" />
       </button>
       <button
-        className="xl:absolute right-40 -bottom-20 xl:block justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+        className="xl:absolute right-40 -bottom-20 xl:block  xl:bottom-4 justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
         onClick={() => slideRef.current?.slickNext()}
       >
         <HiArrowLongRight

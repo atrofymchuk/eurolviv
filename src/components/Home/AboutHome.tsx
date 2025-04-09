@@ -57,7 +57,7 @@ export const AboutHome = () => {
 
         <div className="border-x   border-[#C7C7C7] ps-[14px] lg:ps-[48px]  flex flex-col mt 2xl:h-[307px] xl:pb-[43px]  2xl:pt-0 xl:pt-0 md:pt-10  pt-[10px]">
           <div className="2xl:mt-[90px] xl:mt-[85px] pb-5 xl:pb-0">
-            <h1 className="md:whitespace-nowrap text-[32px] xl:space-y-[11px] sm:text-[28px] leading-[81%]  md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] tracking-[-7%]">
+            <h1 className="md:whitespace-nowrap text-[32px] xl:space-y-[11px] sm:text-[28px] leading-[81%]   md:text-[36px] lg:text-[48px] xl:text-[76px] 2xl:text-[100px]  uppercase text-[#242425] tracking-[-7%]">
               <span className="tracking-[-7%]">
               {t("home.about.heading.0")} 
               </span>
@@ -73,11 +73,11 @@ export const AboutHome = () => {
         </div>
         <div className="md:flex hidden -z-1 flex-col relative border-s md:border-s-0  2xl:border-s-0 xl:border-s-0 items-center lg:items-start 2xl:items-start xl:items-start border-e border-[#C7C7C7] "></div>
 
-        <div className=" 2xl:h-[720px] xl:h-[610px] border-[#C7C7C7] md:col-span-2 md:border-e  border-x border-b md:border-b-0 pb-[10px] md:pb-0">
+        <div className=" 2xl:h-[720px] xl:h-[610px] border-[#C7C7C7] md:col-span-2 md:border-e  border-x border-b md:border-b-0 pb-[10px] md:pb-0 md:px-0 md:pe-5  px-[10px_9px]">
           <img
             src={previewImg}
             alt=""
-            className="2xl:w-[1080px] xl:w-[980px] 2xl:h-[720px] xl:h-[610px] md:h-[400px] lg:h-[440px] w-full md:px-0 md:pe-5  px-[10px_9px]"
+            className="2xl:w-[1080px] xl:w-[980px] 2xl:h-[720px] xl:h-[610px] md:h-[400px] lg:h-[440px] w-full "
           />
         </div>
 
@@ -123,10 +123,10 @@ export const AboutHome = () => {
           </div>
         </div>
 
-        <div className="border-[#C7C7C7] flex-1 lg:ms-[50px] xl:ms-[100px] h-[50px] md:flex hidden"></div>
-        <div className="border-x border-[#C7C7C7] flex-1 lg-[100px] h-[50px] md:flex hidden"></div>
-        <div className="border-e border-[#C7C7C7] flex-1 lg:pe-[50px] p-5 h-[50px] md:flex hidden"></div>
-        <div className="border-e border-[#C7C7C7]  h-[50px] md:flex hidden"></div>
+        <div className="border-[#C7C7C7] flex-1 lg:ms-[50px] xl:ms-[100px] h-[50px] lg:h-[125px] md:flex hidden"></div>
+        <div className="border-x border-[#C7C7C7] lg:h-[125px]  flex-1 lg-[100px] h-[50px] md:flex hidden"></div>
+        <div className="border-e border-[#C7C7C7] lg:h-[125px]  flex-1 lg:pe-[50px] p-5 h-[50px] md:flex hidden"></div>
+        <div className="border-e border-[#C7C7C7] lg:h-[125px]   h-[50px] md:flex hidden"></div>
       </div>
 
       <div className="md:grid md:grid-cols-[24.2%_34.7%_25.8%_15.3%]  hidden"></div>

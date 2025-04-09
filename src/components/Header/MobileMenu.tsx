@@ -66,13 +66,15 @@ export const MobileBookingButton = ({
           to="/booking"
           className={cn(
             `w-fit bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl hover:bg-[#922b1f] self-center
-          font-cofo-medium text-[10px] justify-end h-fit
-          ${scrolled ? "opacity-0" : ""}`,
+          font-cofo-medium text-[10px] justify-end h-fit`,
             {
               "text-white": !scrolled,
               "text-black": scrolled,
+              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": scrolled || pathname === "/about" || pathname === "/rooms"
             }
           )}
+          aria-disabled={scrolled}
+          onClick={(e) => scrolled && e.preventDefault()}
         >
           {t("buttons.bookRoomArr.0")}
           <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>

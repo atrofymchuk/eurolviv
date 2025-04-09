@@ -82,16 +82,24 @@ export  { default as mainFst} from "../assets/Terrase/MainTerrase/previewFst.web
 export  { default as mainScd} from "../assets/Terrase/MainTerrase/previewScd.webp";
 export  { default as mainTrd} from "../assets/Terrase/MainTerrase/previewTrd.webp";
 export  { default as mainFth} from "../assets/Terrase/MainTerrase/previewFth.webp";
+export  { default as mainPreviewSlider} from "../assets/Terrase/MainTerrase/previewSlider.png";
+export  { default as mainPreviewSliderTwo} from "../assets/Terrase/MainTerrase/previewSliderTwo.png";
 
 export  { default as upperFst} from "../assets/Terrase/UpperTerrase/previewFhd.webp";
 export  { default as upperScd} from "../assets/Terrase/UpperTerrase/previewScd.webp";
 export  { default as upperThd} from "../assets/Terrase/UpperTerrase/previewThd.webp";
 export  { default as upperFhd} from "../assets/Terrase/UpperTerrase/previewFhd.webp";
 export  { default as previewUpper} from "../assets/Terrase/UpperTerrase/preview.webp"
+export  { default as previewSlider} from "../assets/Terrase/UpperTerrase/previewSlider.png"
+export  { default as previewSliderTwo} from "../assets/Terrase/UpperTerrase/previewSliderTwo.png"
+export  { default as previewSliderThree} from "../assets/Terrase/UpperTerrase/previewSliderThree.png"
 
 export {default as lowerFst} from "../assets/Terrase/LowerTerrase/previewOne.webp";
 export {default as lowerScd} from "../assets/Terrase/LowerTerrase/previewTwo.webp";
 export {default as lowerTrd} from "../assets/Terrase/LowerTerrase/previewThree.webp";
+export {default as lowerFstTs} from "../assets/Terrase/LowerTerrase/previewOne.png";
+export {default as lowerScdTs} from "../assets/Terrase/LowerTerrase/previewTwo.png";
+export {default as lowerTrdTs} from "../assets/Terrase/LowerTerrase/previewThree.png";
 
 export {default as barImg} from "../assets/Terrase/bar/bar.webp";   
 export {default as wineImg} from "../assets/Terrase/bar/wine.webp";   
@@ -155,6 +163,9 @@ export  { default as headerHome} from "../assets/Home/header.webp";
 export  { default as restaurant} from "../assets/Restaurant/homePreview.webp"; 
 export  { default as karaoke} from "../assets/Restaurant/Karaoke/Fst.webp"; 
 export  { default as terasseHome} from "../assets/Terrase/homePreview.webp"; 
+
+export  { default as restaurantMobile} from "../assets/Home/ruff/restaurant.png"; 
+export  { default as terasseHomeMobile} from "../assets/Home/ruff/terrase.png"; 
 
 //restaurant page
 export  { default as headerRestaurant} from "../assets/Restaurant/header.webp"; 

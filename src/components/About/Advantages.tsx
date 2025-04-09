@@ -19,7 +19,7 @@ export const Advantages = () => {
             <h1 className="uppercase text-[32px] xl:text-[48px] tracking-[-0.05em] leading-[100%] md:w-2/3 text-[#FFFFFF] pt-[34px] xl:pt-[86px]">
               {t("about.advantages.title")}
             </h1>
-            <ul className="uppercase pt-[29px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl space-y-[2px] gap-[6px] lg:gap-[9px]">
+            <ul className="uppercase pt-[29px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl gap-y-[4px] gap-[6px] lg:gap-[9px]">
               {hotelInfo.map(({ icon, text }, index) => (
                 <li
                   key={index}
@@ -50,7 +50,7 @@ export const Advantages = () => {
             <h1 className="uppercase text-[32px]  xl:text-[48px] tracking-[-0.05em] leading-[100%] w-full md:w-2/3 text-[#FFFFFF] md:pt-[18px] xl:pt-[86px] xl:text-left">
               {t("about.advantages.title2")}
             </h1>
-            <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] space-y-[2px] ">
+            <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] gap-y-[4px] ">
               {services.map(({ icon, text }, index) => (
                 <li key={index} className="flex items-center  gap-[6px] lg:gap-[9px]">
                   <InViewWrapper>

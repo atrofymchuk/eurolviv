@@ -181,14 +181,6 @@ export const hotelInfo= [
   export const reviews: Reviews = {
     ua: [
       {
-        id: 1,
-        name: "Anna",
-        country: "Україна",
-        flag: "🇺🇦",
-        textUa: "комфортні світлі номери, розташування супер, 10 хв прогулянки і ти в центрі, чудовий ресторан на 8 поверсі, смачні сніданки з прекрасним краєвидом",
-        textEn:"Comfortable, bright rooms with a perfect location—just a 10-minute walk to the city center. The restaurant on the 8th floor is fantastic, with delicious breakfasts and a stunning view."
-      },
-      {
         id: 2,
         name: "Tetiana",
         country: "Україна",
@@ -196,6 +188,15 @@ export const hotelInfo= [
         textUa: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
         textEn:"Śniadanie w takim miejscu i jeszcze szampon! Żadnej rewelacji. Mama była podekscytowana. Widok na cały Lwów! Pięknie świeciło święciło. Nie było ruchu. Żadnych środowych marzeń"
       },
+      {
+        id: 1,
+        name: "Anna",
+        country: "Україна",
+        flag: "🇺🇦",
+        textUa: "комфортні світлі номери, розташування супер, 10 хв прогулянки і ти в центрі, чудовий ресторан на 8 поверсі, смачні сніданки з прекрасним краєвидом",
+        textEn:"Comfortable, bright rooms with a perfect location—just a 10-minute walk to the city center. The restaurant on the 8th floor is fantastic, with delicious breakfasts and a stunning view."
+      },
+    
       {
         id: 3,
         name: "Svetlana",

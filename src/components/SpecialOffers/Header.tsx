@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 export const Header = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center bg-[#252526] 2xl:pt-[133px] xl:pt-[102px] lg:pt-[133px]  pt-[95px]    px-[38px_40px]">
       <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[1720px] ">
@@ -18,9 +18,7 @@ export const Header = () => {
           >
             {t("specialOffers.desc2")}
           </h1>
-          <p
-            className="relative uppercase text-[#BDBDC0] 2xl:ps-2 xl:ps-1.5 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-tight 2xl:pt-[51px] xl:pt-[40px] lg:pt-[34px] pt-[20px] 2xl:w-[80%] md:w-[65%] lg:w-[100%]"
-          >
+          <p className="relative uppercase text-[#BDBDC0] 2xl:ps-2 xl:ps-1.5 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-tight 2xl:pt-[51px] xl:pt-[40px] lg:pt-[34px] pt-[20px] 2xl:w-[80%] md:w-[65%] lg:w-[100%]">
             {t("specialOffers.desc")}
           </p>
         </div>
@@ -28,7 +26,7 @@ export const Header = () => {
         <div className="border-x border-[#515151]  2xl:pt-[250px] 2xl:ps-[25px]  lg:flex hidden flex-col lg:justify-center lg:pt-34 xl:pt-52 2xl:pb-[101px] xl:pb-[101px] lg:pb-[90px] ">
           <h1
             className="uppercase  text-white leading-[91%] tracking-[-0.1em] lg:flex hidden 
-            xl:text-[150px] 2xl:text-[198px] 2xl:ps-[25px] lg:ps-[25px] lg:text-[120px] "
+            xl:text-[150px] 2xl:text-[198px] 2xl:ps-[55px] lg:ps-[25px] lg:text-[120px] "
           >
             {t("specialOffers.desc2")}
           </h1>

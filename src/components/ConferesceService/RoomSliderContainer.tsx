@@ -15,10 +15,8 @@ export const RoomSliderContainer = ({ images, viewShowcaseSwiperImages }: RoomSl
   
   const showcaseImages = isEng ? viewShowcaseSwiperImages.eng : viewShowcaseSwiperImages.ua;
   
-  // Створюємо копію масиву images
   const mergedImages = [...images];
   
-  // Вставляємо зображення через один, починаючи з індексу 1
   showcaseImages.forEach((image, index) => {
     const insertPosition = index * 2 + 1;
     if (insertPosition <= mergedImages.length) {

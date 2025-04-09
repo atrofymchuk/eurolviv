@@ -70,14 +70,14 @@ export const Rewies = () => {
 
       <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between  z-10">
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-5  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-[29px] lg:mb-[72px]"
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-5  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-2 lg:mb-[72px]"
           onClick={() => sliderRef.current?.slickPrev()}
         >
           <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
         </button>
 
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-5 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-[29px] lg:me-[39px]"
+          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-5 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-2 lg:me-[39px]"
           onClick={() => sliderRef.current?.slickNext()}
         >
           <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />

@@ -28,7 +28,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.rating")}
         </p>
         <div className="flex justify-center lg:justify-start mb-[4px]">
-          <RouteButton className="mt-6 xl:mt-[50px] lg:w-[223px] text-center"/>
+          <RouteButton className="mt-6 xl:mt-[50px] lg:w-[223px] text-center w-[171px] "/>
         </div>
       </div>
     </div>

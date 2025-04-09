@@ -1,16 +1,18 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { mainFst, headerRestaurant } from "../../store/exportsImg";
+import { restaurantMobile, terasseHomeMobile } from "../../store/exportsImg";
 export const RoofServiceMobile = () => {
   const { t } = useTranslation();
   const suggestion = [
     {
-        img: headerRestaurant,
-        title: "footer.terrace",
+      title: "footer.restaurant",
+
+        img: restaurantMobile,
       },
     {
-      img: mainFst,
-      title: "footer.restaurant",
+      img: terasseHomeMobile,
+      title: "footer.terrace",
+
     },
     
   ];
@@ -26,7 +28,10 @@ export const RoofServiceMobile = () => {
               <div
                 className={`absolute inset-0  bg-gradient-to-b from-[#252526] to-transparent`}
               ></div>
-              <img src={item.img} className="w-full 2 object-cover lg:h-[650px] h-[362px]" />
+              <img 
+                src={item.img} 
+                className="w-full lg:h-[650px] h-[362px] object-cover object-center" 
+              />
             </div>
 
             <div
@@ -35,7 +40,7 @@ export const RoofServiceMobile = () => {
             >
               <div className="flex flex-col items-center ">
                 <h1
-                  className={ "text-[24px] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-10%] xl:mt-[29px] lg:mt-[19px] w-full underline " } >
+                  className={ "text-[24px] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-10%] xl:mt-[29px] lg:mt-[19px] w-full underline  " } >
                   {t(item.title).split(' ').map((word, index) => (
                     <span key={index} className="block">
                       {word}

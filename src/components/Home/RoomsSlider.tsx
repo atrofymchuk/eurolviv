@@ -43,7 +43,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
       beforeChange: (_: number, newIndex: number) => setCurrentSlide(newIndex),
       responsive: [
         {
-          breakpoint: 1280, // xl
+          breakpoint: 1280, 
           settings: {
             slidesToShow: 1.4,
             centerPadding: "25%",
@@ -104,8 +104,8 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
               <div
                 key={index}
                 className={cn(
-                  " px-3",
-                  "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full",
+                  "px-2 lg:px-5",
+                  "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full w-fit",
                   {
                     "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit":
                       isActive,
@@ -116,20 +116,20 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
               >
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-500   md:w-full   "
+                    "overflow-hidden transition-all duration-500   w-fit   "
                   )}
                 >
                   <InViewWrapper>
                     <img
                       src={el.src}
-                      alt={`room $`}
+                      alt={`room ${el.title}`}
                       className={cn(
                         "object-cover  transition-transform duration-700  h-[168px] md:w-full  w-[259px]",
-                        { "": isActive },
+                        { "2xl:w-[589px]": isActive },
                         {
                           "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] ":
                             isActive,
-                          "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px]  ":
+                          "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] 2xl:w-[475px]  ":
                             !isActive,
                         }
                       )}
@@ -137,7 +137,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   </InViewWrapper>
                 </div>
 
-                <div className=" lg:mt-[28px]  lg:w-full md:w-full w-[259px] flex flex-col h-[150px]">
+                <div className=" lg:mt-[28px]  lg:w-full   w-[259px] flex flex-col h-[150px]">
                   <div className="flex items-center justify-center">
                     <h4
                       className={cn(
@@ -176,10 +176,14 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   </div>
 
                   <div className="lg:mt-[34px] mt-auto  flex justify-center transition-all duration-500">
-                    {isActive && (
+                    { (
                       <Link
                         to={`/rooms/${el.type}`}
-                        className="border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px]  rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300"
+                        className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px]  rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                          {
+                            "md:hidden": !isActive
+                          }
+                        )}
                       >
                         {t("buttons.details")}
                       </Link>

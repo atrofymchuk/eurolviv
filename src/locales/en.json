@@ -47,17 +47,17 @@
             "restaurant":{
                 "title":"Restaurant",
                 "titleDesc":"A Taste of Heaven",
-                "desc":"The eighth floor offers sweeping views of the old city, while the chef’s kitchen serves up fresh culinary delights.Signature cocktails and a chic interior round out the experience."
+                "desc":["The eighth floor offers sweeping views of the old city,"," while the chef’s kitchen serves up fresh culinary delights.","Signature cocktails and a chic interior"," round out the experience."]
             },
             "karaoke":{ 
                 "title":"Karaoke Lounge",    
                 "titleDesc":"A Bright Night Pulse",
-                "desc":"Your unwind-and-enjoy spot. Hookah, your favorite tunes, and a laid-back vibe. A place where evenings turn unforgettable and emotions run wild"
+                "desc":["Your unwind-and-enjoy spot."," Hookah, your favorite tunes, and a laid-back vibe."," A place where evenings turn unforgettable"," and emotions run wild"]
             },
             "terrace":{ 
                 "title":"rooftop terrace",
                 "titleDesc":"Relish the Vibe under Lviv’s Open Sky",
-                "desc":"Here, nights come alive with tunes, and sunsets splash the horizon with shades that match your mood."
+                "desc":["Here, nights come alive with tunes,"," and sunsets splash the horizon"," with shades that match your mood."]
             }
         },
         "specialOffers":{
@@ -422,7 +422,9 @@
           "title": "Main Terrace",
           "desc": ["The main RUFF terrace ","seats 152 guests "," and "," boasts a 360-degree city view."," A sleekbar, live music every weekend, and DJ sets bring the space to life with energy and buzz. But the real star? Those stunning sunsets!"],
           "descTwo":["With a ","pergola and panoramic windows, ","it’s a delight whether bathed in gentle sunshineor serenaded by rain. Cocktails taste like freedom, and evenings fly by in a flash withmusic and the glow of city lights."],
-          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"]
+          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"],
+      "hookan":""
+
         },
         "upperTerrase":{
           "title": "Upper Terrace",
