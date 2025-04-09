@@ -49,10 +49,10 @@ export const StorySection = () => {
                 </span>
               </h1>
 
-              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 tracking-[-7%]  lg:pt-5 leading-[81%] text-[12px] lg:leading-[120%]">
+              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 tracking-[-7%]  lg:pt-5  text-[12px] leading-[120%]">
                 {t("about.about.desc.0")}
               </p>
-              <p className="w-full block xl:text-[20px]  lg:text-[18px] text-[12px] tracking-[-7%] leading-[81%] lg:leading-[120%]">
+              <p className="w-full block xl:text-[20px]  lg:text-[18px] text-[12px] tracking-[-7%]  leading-[120%]">
                 {t("about.about.desc.1")}
               </p>
             </div>

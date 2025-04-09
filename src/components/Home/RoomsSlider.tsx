@@ -107,9 +107,9 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   "px-2 lg:px-5",
                   "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full w-fit",
                   {
-                    "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-fit":
+                    "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-[327px]":
                       isActive,
-                    "2xl:h-[780px] xl:h-[670px] lg:h-[600px] md:h-[400px] h-fit":
+                    "2xl:h-[780px] xl:h-[670px] lg:h-[600px] md:h-[400px]  h-[327px]":
                       !isActive,
                   }
                 )}
@@ -137,8 +137,8 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   </InViewWrapper>
                 </div>
 
-                <div className=" lg:mt-[28px]  lg:w-full   w-[259px] flex flex-col h-[150px]">
-                  <div className="flex items-center justify-center">
+                <div className=" lg:mt-[28px]  lg:w-full   w-[259px] flex flex-col h-[167px]">
+                  <div className="flex items-center justify-center ">
                     <h4
                       className={cn(
                         "2xl:text-[32px] 2xl:w-2/3 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em]  mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"

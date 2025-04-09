@@ -36,7 +36,7 @@ export const PlacesNearbySection = ({
         ))}
       </ul>
 
-      <div className="flex justify-center lg:hidden my-6  ">
+      <div className="flex justify-center lg:hidden mt-6  ">
           <InViewWrapper >
           <img src={hotel} alt="hotel" className="w-full pb" />
         </InViewWrapper>
