@@ -42,7 +42,7 @@ export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#A47762] text-white lg:hidden z-20 h-fit border-t-0">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#A47762] text-white lg:hidden z-20  border-t-0">
       <div className="flex justify-between items-stretch h-full m-0 p-0">
         {menuItems.map((item, index) =>
           item.path ? (
