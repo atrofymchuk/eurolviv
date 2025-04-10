@@ -9,7 +9,7 @@ export const MenuPC = ({className}:MenuPCToProps) =>{
     return(
 
         <>
-        <div className={cn(`flex  md:justify-end space-x-[5px] md:border-s md:border-e border-[#B3B3B3]  md:pe-2.25 ${className}`)}>
+        <div className={cn(`flex  md:justify-end space-x-[5px]   border-[#B3B3B3]  md:pe-2.25 ${className}`)}>
             <InViewWrapper>
             <img
               src={coffe}

@@ -9,7 +9,7 @@ export const MenuSmallWidth = ({ className }: MenuSmallWidthToProps) => {
   return (
     <div
       className={cn(
-        `flex flex-row w-full   justify-center border-x border-[#B3B3B3] space-x-[5px] gap-x-[5px]  ${className}`
+        `flex flex-row w-full   justify-center border-x border-[#B3B3B3] gap-x-[2px]  ${className}`
       )}
     >
       <InViewWrapper>

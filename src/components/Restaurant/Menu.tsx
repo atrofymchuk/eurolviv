@@ -2,18 +2,21 @@ import { MenuPC } from "./MenuPC";
 import { MenuSmallWidth } from "./MenuSmallWidth";
 import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
+import cn from "classnames";
 
 export const Menu = () => {
   const { t,i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const { onOpenModal } = useModalStore();
   return (
-    <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto md:border-x border-[#B3B3B3] border-t md:border-t-0">
+    <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto md:border-x border-[#B3B3B3] border-t ">
       <div>
-        <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] md:h-full h-[521px] grid-cols-1">
-          <div className="lg:w-full md:flex  hidden lg:justify-end border-t md:border-s border-[#B3B3B3]"></div>
+        <div className={cn(`grid  md:h-full h-[521px] grid-cols-1`,
+          isEng ? "md:grid-cols-[35.1%_30%_35.6%]" : "md:grid-cols-[35.7%_28.8%_35.1%]"
+        )} >
+          <div className="lg:w-full md:flex  hidden lg:justify-end   border-[#B3B3B3]"></div>
 
-          <div className="2xl:h-[375px] xl:h-[305px] lg:h-[265px] flex  border-x md:border-t  flex-col  border-[#B3B3B3] items-center lg:justify-end text-center lg:pb-[70px] md:pb-[50px] pb-[10px] pt-[55px] lg:pt-0 ">
+          <div className="2xl:h-[375px] xl:h-[305px] lg:h-[265px] flex  border-x   flex-col  border-[#B3B3B3] items-center lg:justify-end text-center lg:pb-[70px] md:pb-[50px] pb-[10px] pt-[55px] lg:pt-0 ">
             <span className="font-blessed block text-center text-[16px] xl:text-[36px] lg:text-[32px] lg:leading-[25.2px] leading-[94%] xl:inline lg:pb-[19px]">
               {t("restaurant.menu.menu")}
             </span>
@@ -22,14 +25,14 @@ export const Menu = () => {
               {t("restaurant.menu.title.1")}
             </h1>
           </div>
-          <div className="md:flex hidden border-t  border-[#B3B3B3] "></div>
+          <div className="md:flex hidden    "></div>
 
           <MenuPC className="md:flex hidden " />
 
           <MenuSmallWidth className="flex md:hidden" />
 
-          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden md:border-s border-x border-[#B3B3B3]  lg:justify-end  lg:pe-2.25"></div>
-          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] flex  border-x md:border-x-0 md:border-e flex-col  border-[#B3B3B3] text-center  items-center">
+          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden  border-x md:border-x-0  border-[#B3B3B3]  lg:justify-end  "></div>
+          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] flex  border-x   flex-col  border-[#B3B3B3] text-center  items-center">
             
             <p className="uppercase text-[#888888] px-5 lg:text-[16px] sm:text-[14px] text-[12px]  lg:leading-[120%] xl:w-[359px]  md:pt-[39px]">
               {t("restaurant.menu.desc")}
@@ -42,7 +45,7 @@ export const Menu = () => {
               {isEng ?  t("buttons.restaurantMenu"):t("buttons.viewMenu") }
             </button>
           </div>
-          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden   border-[#B3B3B3]  lg:ps-2.25 "></div>
+          <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden   border-[#B3B3B3]   "></div>
         </div>
       </div>
     </div>
