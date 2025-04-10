@@ -27,12 +27,12 @@ export const MenuPC = ({className}:MenuPCToProps) =>{
             />
             </InViewWrapper>
           </div>
-          <div className={cn(`flex  border-[#B3B3B3]  md:ps-2.25  ${className}`)}>
+          <div className={cn(`flex  md:ps-2.25   ${className}`)}>
             <InViewWrapper>
             <img
               src={meat}
               alt=""
-              className="lg:w-[306px] xl:w-[386px] xl:h-[586px]   2xl:w-[457px] 2xl:h-[686px]  lg:h-[486px] md:w-[240px] md:h-[300px] w-[97px] h-[146px] object-cover"
+              className="lg:w-[306px] xl:w-[386px] xl:h-[586px]   2xl:w-[457px] 2xl:h-[686px]  lg:h-[486px] md:w-[240px] md:h-[300px] w-[97px] h-[146px] object-cover "
             />
             </InViewWrapper>
           </div>
