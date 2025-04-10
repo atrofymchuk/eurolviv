@@ -99,7 +99,7 @@ export const NavLinks = ({
               className={cn(
                 "uppercase 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[14px] hover:text-[#8C331B] transition-colors md:font-cofo-medium",
                 !isMobile && isActiveLink(path),
-                "xl:text-inherit text-[#252526]"
+                isMobile && "xl:text-inherit text-[#252526]"
               )}
               onClick={() => {
                 setMenuOpen(false);

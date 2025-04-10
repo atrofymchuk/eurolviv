@@ -46,18 +46,28 @@ export const Footer = () => {
             <div className="flex flex-col  h-full justify-between lg:mt-0  mt-[35px]  ">
               <div className="lg:flex lg:flex-col justify-between h-full grid grid-cols-2  lg:grid-cols-1   ">
                 <div className="space-y-3 lg:w-full w-[180px]">
-                  <ul className="lg:space-y-[11px] space-y-[7px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase  underline lg:no-underline tracking-[0.09em] ">
-                    <li className="font-cofo-medium">{t("footer.about")}</li>
-                    <li className="font-cofo-medium">{t("footer.rooms")}</li>
+                  <ul className="lg:space-y-[11px] space-y-[7px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase underline lg:no-underline tracking-[0.09em]">
                     <li className="font-cofo-medium">
-                      {t("footer.conferenceServices")}
+                      <Link to="/about" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.about")}</Link>
                     </li>
                     <li className="font-cofo-medium">
-                      {t("footer.restaurant")}
+                      <Link to="/rooms" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.rooms")}</Link>
                     </li>
-                    <li className="font-cofo-medium">{t("footer.terrace")}</li>
                     <li className="font-cofo-medium">
-                      {t("footer.specialOffers")}
+                      <Link to="/conference-service" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
+                        {t("footer.conferenceServices")}
+                      </Link>
+                    </li>
+                    <li className="font-cofo-medium">
+                      <Link to="/restaurant" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.restaurant")}</Link>
+                    </li>
+                    <li className="font-cofo-medium">
+                      <Link to="/terrace" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.terrace")}</Link>
+                    </li>
+                    <li className="font-cofo-medium">
+                      <Link to="/special-offers" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
+                        {t("footer.specialOffers")}
+                      </Link>
                     </li>
                   </ul>
                 </div>

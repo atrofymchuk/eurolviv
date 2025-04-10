@@ -32,7 +32,7 @@ export const MobileMenuButton = ({
             pathname === "/contacts" || scrolled ? "filter-invert-gray" : ""
           )}
         />
-        <span className={cn(` text-sm ${isActiveLink("/contacts")}`)}>
+        <span className={cn(`uppercase text-[12px] ${isActiveLink("/contacts")}`)}>
           {t("header.menu")}
         </span>
       </button>
