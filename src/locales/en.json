@@ -116,7 +116,7 @@
                 "infrastructureTitle":"INFRASTRUCTURE",
                 "placesTitle":"Hotel surroundings",
                 "infrastructureDesc":"Conveniently located near major attractions, cultural landmarks, restaurants, and shops.",
-                "whatIsClose":"nearby?",
+                "whatIsClose":"nearby",
                 "places":{
                     "heading":"Major attractions",
                     "title":["Johann Georg Pinsel Sculpture Museum", "800 m"],

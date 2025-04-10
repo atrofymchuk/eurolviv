@@ -13,7 +13,6 @@ export const ConferenceMenuCard = ({
   pdf
 }: ConferenceMenuCardToProps) => {
   const { t } = useTranslation();
-  console.log(text)
   return (
     <div className="flex flex-col items-center ">
       <img

@@ -186,7 +186,7 @@ export const hotelInfo= [
         country: "Україна",
         flag: "🇺🇦",
         textUa: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
-        textEn:"Śniadanie w takim miejscu i jeszcze szampon! Żadnej rewelacji. Mama była podekscytowana. Widok na cały Lwów! Pięknie świeciło święciło. Nie było ruchu. Żadnych środowych marzeń"
+        textEn:"Great location, clean rooms, and delicious breakfasts with a wide variety of options for both adults and kids. It’s also great to have an open terrace where you can enjoy a tasty dinner late into the night."
       },
       {
         id: 1,
@@ -202,7 +202,7 @@ export const hotelInfo= [
         name: "Svetlana",
         country: "Україна",
         flag: "🇺🇦",
-        textUa: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
+        textUa: "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно",
         textEn:"Great location, clean rooms, and delicious breakfasts with a wide variety of options for both adults and kids. It’s also great to have an open terrace where you can enjoy a tasty dinner late into the night."
       },
     ],

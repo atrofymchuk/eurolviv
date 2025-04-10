@@ -56,14 +56,12 @@ export const Rewies = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full flex flex-col items-center h-[500px] md:h-[400px] overflow-x-hidden overflow-y-hidden">
+      <div className="relative w-full flex flex-col items-center h-[500px] md:h-[470px] lg:h-[400px]  overflow-x-hidden overflow-y-hidden">
         <div className="absolute w-[89.68%] border-x border-[#C7C7C7] h-[700px]  overflow-y-hidden"></div>
 
         <div className="absolute inset-0 flex justify-center ">
           <div className="relative w-[80.79%] md:w-[85.79%]">
-            <div className="absolute inset-0 w-full ">
               <ReviewSlider reviews={reviews} ref={sliderRef} />
-            </div>
           </div>
         </div>
       </div>

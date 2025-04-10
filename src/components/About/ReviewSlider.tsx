@@ -6,13 +6,11 @@ import { useTranslation } from "react-i18next";
 
 const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
   const {t } = useTranslation()
+  const windowWidth = window.innerWidth;
   const settings = {
     initialSlide: 0,
-    slidesToScroll: 1, 
     speed: 500,
     variableWidth: true,
-    infinite:true,
-    useTransform: false,
     arrows:false, 
     responsive: [
       {
@@ -39,12 +37,13 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
       {
         breakpoint: 768, 
         settings: {
-           
           rows: 2,
+          slidesToShow: 2,
           centerMode: true,
-
+          variableWidth: true,
         },
       },
+ 
       {
         breakpoint: 640, 
         settings: {
@@ -72,7 +71,7 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
 
   return (
     <div className="z-20  w-screen top-0 left-0">
-      <Slider {...settings} ref={ref} className="w-[calc(100% + 100px)] mt-10 review md:me-0 -me-[40px] sm:-me-40">
+      <Slider {...settings} ref={ref} className={`w-[calc(100% + 100px)] mt-10 review md:me-0  ${windowWidth < 400 ? '-me-[40px]' : 'me-[10px] sm:me-0'} sm:-me-40`}>
         {mixedReviews.map((review, index) => (
           <div key={index} className="mt-2.5 lg:me-4  ">
             <ReviewCard review={review} reviewHeader={t("reviews.review")}/>
