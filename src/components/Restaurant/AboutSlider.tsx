@@ -36,7 +36,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
   };
 
   return (
-    <div className="slider-container relative w-screen flex items-center justify-center">
+    <div className="slider-container relative w-screen flex items-center justify-center ">
       <button
         className="absolute left-10 md:left-[21%] z-10 w-[35px] h-[35px] lg:w-[60px] lg:h-[60px]  
                    lg:flex hidden items-center justify-center text-white hover:text-[#8C331B] hover:bg-white 
