@@ -11,8 +11,8 @@ export const Menu = () => {
   return (
     <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto md:border-x border-[#B3B3B3] border-t ">
       <div>
-        <div className={cn(`grid  md:h-full h-[521px] grid-cols-1`,
-          isEng ? "md:grid-cols-[35.1%_30%_35.6%]" : "md:grid-cols-[35.7%_28.8%_35.1%]"
+        <div className={cn(`grid  md:h-full h-[521px] md:grid-cols-[35.7%_28.8%_35.1%] grid-cols-1`,
+          isEng ? "" : ""
         )} >
           <div className="lg:w-full md:flex  hidden lg:justify-end   border-[#B3B3B3]"></div>
 
