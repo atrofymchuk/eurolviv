@@ -1,12 +1,16 @@
-import Slider from "react-slick";
+import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
 import { forwardRef, useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Navigation, EffectCoverflow } from "swiper/modules";
+import type { Swiper } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 import { squareWhite, guestWhite } from "../../store/exportsIcons";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import './HallList.css'
 
 type Room = {
   title: string;
@@ -20,9 +24,9 @@ type RoomsSliderProps = {
   sliderProps: Room[];
 };
 
-export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
+export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
   ({ sliderProps }, ref) => {
-    const [currentSlide, setCurrentSlide] = useState(() => {
+    const [activeIndex, setActiveIndex] = useState(() => {
       if (window.innerWidth <= 640) {
         return 0;
       }
@@ -31,117 +35,121 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
 
     const { t } = useTranslation();
 
-    const defaultSettings = {
-      infinite: true,
-      speed: 800,
-      arrows: false,
-      slidesToShow: 3.2,
-      slidesToScroll: 1,
-      centerMode: true,
-      initialSlide: currentSlide,
-      centerPadding: "0",
-      beforeChange: (_: number, newIndex: number) => setCurrentSlide(newIndex),
-      responsive: [
-        {
-          breakpoint: 1280, 
-          settings: {
-            slidesToShow: 1.4,
-            centerPadding: "25%",
-          },
-        },
-        {
-          breakpoint: 1024, // lg
-          settings: {
-            slidesToShow: 1.2,
-            centerPadding: "20%",
-          },
-        },
-        {
-          breakpoint: 768, // md
-          settings: {
-            slidesToShow: 1.2,
-            centerPadding: "12%",
-            variableWidth: true,
-            loop: false,
-          },
-        },
-        {
-          breakpoint: 640, // sm
-          settings: {
-            slidesToShow: 1,
-            centerPadding: "5%",
-            centerMode: false,
-            infinite: false,
-            variableWidth: true,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: "0",
-            centerMode: false,
-            infinite: false,
-            variableWidth: true,
-          },
-        },
-      ],
-    };
-
-    const settings = { ...defaultSettings };
-
     return (
-      <div className="overflow-visible 2xl:w-[97%] xl:ms-[70px]  ms-[calc(5.93%)] h-full">
-        <Slider
-          {...settings}
-          className="overflow-visible flex items-center justify-center home-room-slider"
-          ref={ref}
+      <div className="overflow-hidden w-full h-full absolute ">
+        <SwiperComponent
+          modules={[Navigation, EffectCoverflow]}
+          effect="coverflow"
+          grabCursor={true}
+          initialSlide={activeIndex}
+          slidesOffsetBefore={0}
+          centeredSlides={true}
+          spaceBetween={10}
+          slidesPerView={1}
+          width={window.innerWidth <= 640 ? window.innerWidth : undefined}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 0,
+            slideShadows: false,
+          }}
+          className="2xl:h-[650px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[407px] " 
+          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onSwiper={(swiper) => {
+            if (ref) {
+              if (typeof ref === 'function') {
+                ref(swiper);
+              } else {
+                ref.current = swiper;
+              }
+            }
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: "auto",
+              spaceBetween: 10,
+              slidesOffsetBefore: 40,
+              centeredSlides: false,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+              centeredSlides: true,
+            },
+            640: { 
+              slidesPerView: 1,
+              spaceBetween: 5,
+              centeredSlides: true,
+            },
+            768: { 
+              spaceBetween: 10,
+              centeredSlides: true,
+            },
+            1024: { 
+              spaceBetween: 15,
+              centeredSlides: true,
+              slidesPerView: 2.5,
+              initialSlide: 1,
+            },
+            1280: {
+              slidesPerView: 3.2,
+              spaceBetween: 10,
+              slidesOffsetBefore: 0,
+              centeredSlides: true,
+              initialSlide: 1,
+            },
+            1536: { 
+              slidesPerView: 3.4,
+              spaceBetween: 20,
+              slidesOffsetBefore: 0,
+              centeredSlides: true,
+              initialSlide: 1,
+            }
+          }}
         >
           {sliderProps.map((el, index) => {
-            const isActive = index === currentSlide;
+            const isActive = index === activeIndex;
 
             return (
-              <div
-                key={index}
-                className={cn(
-                  "px-2 lg:px-5",
-                  "flex  items-center justify-center self-center place-content-center transition-all duration-500 h-full w-fit",
+              <SwiperSlide key={index} className="h-full flex justify-center items-center">
+                <div className={cn(
+                  " transition-all duration-500 ",
                   {
-                    "z-10 2xl:h-[800px] xl:h-[650px] lg:h-[600px] h-[327px]":
-                      isActive,
-                    "2xl:h-[780px] xl:h-[670px] lg:h-[600px] md:h-[400px]  h-[327px]":
-                      !isActive,
+                    "2xl:w-[589px] xl:w-[420px] lg:w-[450px] md:w-[380px] w-full ": isActive,
+                    "2xl:w-[475px] xl:w-[380px] lg:w-[400px] md:w-[350px] w-full ": !isActive
                   }
-                )}
-              >
-                <div
-                  className={cn(
-                    "overflow-hidden transition-all duration-500   w-fit   "
-                  )}
-                >
-                  <InViewWrapper>
-                    <img loading="lazy"
-                      src={el.src}
-                      alt={`room ${el.title}`}
-                      className={cn(
-                        "object-cover  transition-transform duration-700  h-[168px] md:w-full  w-[259px]",
-                        { "2xl:w-[589px]": isActive },
-                        {
-                          "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] ":
-                            isActive,
-                          "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] 2xl:w-[475px]  ":
-                            !isActive,
-                        }
-                      )}
-                    />
-                  </InViewWrapper>
+                )}>
+                  <img 
+                    loading="lazy"
+                    src={el.src}
+                    style={{
+                      objectFit: "cover",
+                      transition: "transform 0.7s ease-in-out",
+                      width: "100% !important",
+                    }}
+                    alt={`room ${el.title}`}
+                    className={cn(
+                      "object-cover transition-transform duration-700 w-full! ",
+                      {
+                        "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] h-[168px]": isActive,
+                        "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] h-[168px]": !isActive
+                      }
+                    )}
+                  />
                 </div>
 
-                <div className=" lg:mt-[28px]  lg:w-full   w-[259px] flex flex-col h-[167px]">
-                  <div className="flex items-center justify-center ">
+                <div className={cn(
+                  "flex flex-col h-[167px]",
+                  {
+                    "2xl:w-[589px] xl:w-[420px] lg:w-[450px] md:w-[380px] w-[280px]": isActive,
+                    "2xl:w-[475px] xl:w-[380px] lg:w-[400px] md:w-[350px] w-[259px]": !isActive
+                  }
+                )}>
+                  <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[24px] lg:pt-[20px] md:pt-[16px] pt-[12px]">
                     <h4
                       className={cn(
-                        "2xl:text-[32px] 2xl:w-2/3 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em]  mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
+                        "2xl:text-[32px] 2xl:w-3/4 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
                       )}
                     >
                       {t(el.title)}
@@ -175,11 +183,11 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     </div>
                   </div>
 
-                  <div className="lg:mt-[34px] mt-auto  flex justify-center transition-all duration-500">
-                    { (
+                  <div className="lg:mt-[34px] mt-auto flex justify-center transition-all duration-500">
+                    {(
                       <Link
                         to={`/rooms/${el.type}`}
-                        className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px]  rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                        className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
                           {
                             "md:hidden": !isActive
                           }
@@ -190,10 +198,10 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     )}
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             );
           })}
-        </Slider>
+        </SwiperComponent>
       </div>
     );
   }

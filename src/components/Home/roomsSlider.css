@@ -1,0 +1,36 @@
+.about-home-image-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.about-home-image {
+  object-fit: contain !important;
+  max-height: 100% !important;
+  margin: auto !important;
+}
+
+@media (min-width: 768px) {
+  .about-home-image-container {
+    min-height: 400px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-home-image-container {
+    min-height: 440px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-home-image-container {
+    min-height: 610px !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-home-image-container {
+    min-height: 720px !important;
+  }
+} 
