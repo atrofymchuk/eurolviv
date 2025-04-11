@@ -13,7 +13,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
   return (
     <div className="pe-8 space-y-1 flex flex-col ">
       <div className="flex items-center gap-1">
-        <img
+        <img loading="lazy"
           src={floor}
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
@@ -24,7 +24,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
         </p>
       </div>
       <div className="flex items-center gap-1">
-        <img
+        <img loading="lazy"
           src={squareBrown}
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
@@ -35,7 +35,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
         </p>
       </div>
       <div className="flex gap-1 items-center md:items-start">
-        <img
+        <img loading="lazy"
           src={guestBrown}
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "

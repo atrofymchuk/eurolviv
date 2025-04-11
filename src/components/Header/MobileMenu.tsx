@@ -25,7 +25,7 @@ export const MobileMenuButton = ({
         className={cn(` text-white text-2xl flex items-center gap-2 w-[94px]`)}
         onClick={toggleMenu}
       >
-        <img
+        <img loading="lazy"
           src={burgerMenu}
           alt="menu"
           className={cn(

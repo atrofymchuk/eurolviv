@@ -9,7 +9,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
       <div className="xl:ms-[52px]">
         <p className="uppercase flex items-center lg:items-start justify-center lg:justify-start">
           <InViewWrapper>
-            <img src={navigate} alt="navigate" className="mr-[1.5px]" />
+            <img loading="lazy" src={navigate} alt="navigate" className="mr-[1.5px]" />
           </InViewWrapper>
           <span className="underline text-[#8C331B] font-cofo-medium text-[12px] xl:text-lg">
             {t("about.whereWeAre.desc.0")}

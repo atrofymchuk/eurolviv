@@ -9,7 +9,7 @@ export const InfrastructureSection = ({ t }: { t: TFunction }) => {
         <h2 className="text-[#8C331B] xl:text-[24px] font-cofo-medium text-[12px] text-center xl:text-left mt-6 uppercase tracking-[-0.05em]">
           {t("about.whereWeAre.infrastructureTitle")}
         </h2>
-        <h1 className="uppercase text-3xl xl:text-[100px]  lg:pt-[26px] text-center xl:text-left leading-[81%] tracking-[-7%] w-2/3 pt-[6px]">
+        <h1 className="uppercase text-3xl xl:text-[100px]  lg:pt-[26px] text-center xl:text-left leading-[81%] tracking-[-0.07em] w-2/3 pt-[6px]">
           {t("about.whereWeAre.placesTitle")}
         </h1>
         <p className="text-[#252526] text-[12px] xl:text-[18px] pt-[18px] lg:pt-[78px] text-center lg:text-left uppercase lg:w-[73%] tracking-[-0.001em] leading-[120%] sm:w-[80%] ">
@@ -18,7 +18,7 @@ export const InfrastructureSection = ({ t }: { t: TFunction }) => {
       </div>
       <div className=" justify-center  self-center mt-12 hidden lg:flex xl:pb-[40px]">
         <InViewWrapper>
-          <img src={hotel} alt="hotel" className=" w-[760px] h-[582px]" />
+          <img loading="lazy" src={hotel} alt="hotel" className=" w-[760px] h-[582px]" />
         </InViewWrapper>
       </div>
     </div>

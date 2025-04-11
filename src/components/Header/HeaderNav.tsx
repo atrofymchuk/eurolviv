@@ -76,7 +76,7 @@ export const HeaderNav = memo(
 
     return (
       <div className="flex relative  me-0 h-full w-full lg:w-auto">
-         <div className="flex  lg:justify-between justify-center w-full ">
+         <div className="flex  lg:justify-between justify-center w-full xl:gap-x-[50px] lg:gap-x-[50px] ">
           <MobileMenuButton
             toggleMenu={toggleMenu}
             scrolled={scrolled}

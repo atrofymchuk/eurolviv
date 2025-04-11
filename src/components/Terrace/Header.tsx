@@ -8,7 +8,7 @@ export const TerraseHeader = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
-      <img
+      <img loading="lazy"
         src={
           "https://www.figma.com/file/utxDpDAE3Ua28t2GxjQihO/image/afb341a54c55d79be5eaec708addc0b9c51c319a"
         }

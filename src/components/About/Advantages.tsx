@@ -26,7 +26,7 @@ export const Advantages = () => {
                   className="flex items-center gap-1.5 lg:self-end "
                 >
                   <InViewWrapper>
-                    <img className="xl:w-[38px] xl:h-[38px] w-[20px] h-[20px]" src={icon} alt={text} />
+                    <img loading="lazy" className="xl:w-[38px] xl:h-[38px] w-[20px] h-[20px]" src={icon} alt={text} />
                   </InViewWrapper>
                   {t(text)}
                 </li>
@@ -37,7 +37,7 @@ export const Advantages = () => {
 
         <div className="lg:hidden flex justify-center py-[32px_73px]  px-[16px] w-full">
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={advantages}
               alt="advantages"
               className=" h-[311px] w-full"
@@ -54,7 +54,7 @@ export const Advantages = () => {
               {services.map(({ icon, text }, index) => (
                 <li key={index} className="flex items-center  gap-[6px] lg:gap-[9px]">
                   <InViewWrapper>
-                    <img className=" xl:w-[38px] xl:h-[38px] w-[20px] h-[20px] " src={icon} alt={text} />
+                    <img loading="lazy" className=" xl:w-[38px] xl:h-[38px] w-[20px] h-[20px] " src={icon} alt={text} />
                   </InViewWrapper>
                   {t(text)}
                 </li>
@@ -66,7 +66,7 @@ export const Advantages = () => {
 
         <div className="hidden lg:flex  h-full justify-center items-center p-4">
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={advantages}
               alt="advantages"
               className="w-[95%] h-auto max-w-[400px] xl:max-w-[496px] max-h-[400px] xl:max-h-[509px] object-contain"

@@ -120,7 +120,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                   )}
                 >
                   <InViewWrapper>
-                    <img
+                    <img loading="lazy"
                       src={el.src}
                       alt={`room ${el.title}`}
                       className={cn(
@@ -154,7 +154,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                     )}
                   >
                     <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px]">
-                      <img
+                      <img loading="lazy"
                         src={squareWhite}
                         alt=""
                         className="w-[18px] h-[18px]"
@@ -164,7 +164,7 @@ export const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(
                       </p>
                     </div>
                     <div className="flex gap-[3px] lg:gap-2 items-center">
-                      <img
+                      <img loading="lazy"
                         src={guestWhite}
                         alt=""
                         className="w-[18px] h-[18px]"

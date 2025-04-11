@@ -30,7 +30,7 @@ export const MoreInfoSecondCol = ({
       >
         <h1
           className={cn(
-            ` text-white text-[32px]  tracking-[-7%] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase `,
+            ` text-white text-[32px]  tracking-[-0.07em] xl:text-[42px] 2xl:text-[48px] leading-[104%] uppercase `,
             {
               "block md:hidden xl:pb-[51px] lg:pb-[20px] md:pb-[15px] pt-[54px]":
                 !isShowOtherInfo,
@@ -43,7 +43,7 @@ export const MoreInfoSecondCol = ({
         </h1>
 
         {isShowOtherInfo && (
-          <img
+          <img loading="lazy"
             src={dog}
             alt="imageOverlay"
             className="w-full  object-cover px-[10px_6px] md:hidden h-[262px] "
@@ -51,7 +51,7 @@ export const MoreInfoSecondCol = ({
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[32px]  tracking-[-7%] xl:text-[48px] leading-[104%] uppercase font-cofo  md:hidden block px-[10px] lg:px-5 mt-[42px]">
+          <h1 className="text-white text-[32px]  tracking-[-0.07em] xl:text-[48px] leading-[104%] uppercase font-cofo  md:hidden block px-[10px] lg:px-5 mt-[42px]">
             {t("room.moreInfo.title")}
           </h1>
         )}
@@ -70,7 +70,7 @@ export const MoreInfoSecondCol = ({
                 `text-white text-[14px] md:text-[14px] lg:text-[14px] 2xl:text-[20px] uppercase   items-center gap-0.75 flex`
               )}
             >
-              <img
+              <img loading="lazy"
                 src={item.src}
                 alt={t(item.text)}
                 className="2xl:w-9 2xl:h-9 lg:w-6 lg:h-6 md:w-5 md:h-5 w-6 h-6"
@@ -98,7 +98,7 @@ export const MoreInfoSecondCol = ({
         )}
         <div className="mt-auto">
           <p className="text-white text-[16px] 2xl:text-[20px] md:text-[12px] lg:text-[14px] uppercase leading-[104%] md:flex hidden gap-1">
-            <img
+            <img loading="lazy"
               src={parking}
               alt="parking"
               className="2xl:w-9 2xl:h-9 lg:w-6 lg:h-6 md:w-6 md:h-6 w-6 h-6"

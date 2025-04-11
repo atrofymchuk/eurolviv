@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, memo } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, memo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,24 +17,44 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
   const sliderRef = useRef<Slider | null>(null);
 
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>;
+    
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsMobile(window.innerWidth <= 768);
+      }, 150);
     };
+    
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
-  const totalSlidesMobile = Math.ceil(images.length / 2);
+  const totalSlidesMobile = useMemo(() => Math.ceil(images.length / 2), [images.length]);
 
-  const settings = {
+  const handleBeforeChange = useCallback((_oldIndex: number, newIndex: number) => {
+    setCurrentSlide(newIndex);
+  }, []);
+
+  const handlePrevClick = useCallback(() => {
+    sliderRef.current?.slickPrev();
+  }, []);
+
+  const handleNextClick = useCallback(() => {
+    sliderRef.current?.slickNext();
+  }, []);
+
+  const settings = useMemo(() => ({
     dots: false,
     infinite: false,
     speed: 500,
     slidesToScroll: 2,
     arrows: false,
     variableWidth: true,
-    beforeChange: (_oldIndex: number, newIndex: number) =>
-      setCurrentSlide(newIndex),
+    beforeChange: handleBeforeChange,
 
     responsive: [
       {
@@ -70,7 +90,13 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         },
       },
     ],
-  };
+  }), [handleBeforeChange]);
+
+  const showNextButton = useMemo(() => {
+    return isMobile
+      ? Math.round(currentSlide + 1) < totalSlidesMobile
+      : currentSlide + 2 < images.length;
+  }, [currentSlide, images.length, isMobile, totalSlidesMobile]);
 
   return (
     <div className="relative flex justify-center lg:ms-[71px] ms-[calc(5%)]">
@@ -79,7 +105,8 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
           className="w-[35px] h-[35px]  lg:w-[60px] lg:h-[60px] flex items-center justify-center 
                      left-5 lg:left-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
-          onClick={() => sliderRef.current?.slickPrev()}
+          onClick={handlePrevClick}
+          aria-label="Previous slide"
         >
           <IoIosArrowRoundBack className="w-3/4 h-3/4" />
         </button>
@@ -91,9 +118,12 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
             {images.map((slide, index) => (
               <div key={index} className="pe-[6.5px] lg:pe-5">
                 <div className="relative">
-                  <img
+                  <img 
                     src={slide}
                     alt={`Slide ${index}`}
+                    width={835} 
+                    height={556}
+                    loading={index < 4 ? "eager" : "lazy"}
                     className="object-cover 
                       w-[280px] h-[180px]
                       sm:w-[320px] sm:h-[300px]
@@ -109,14 +139,13 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
         </div>
       </div>
 
-      {(isMobile
-        ? Math.round(currentSlide + 1) < totalSlidesMobile
-        : currentSlide + 2 < images.length) && (
+      {showNextButton && (
         <button
           className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-30 flex items-center justify-center 
                      right-16 lg:right-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
-          onClick={() => sliderRef.current?.slickNext()}
+          onClick={handleNextClick}
+          aria-label="Next slide"
         >
           <IoIosArrowRoundForward className="w-3/4 h-3/4" />
         </button>

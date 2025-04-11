@@ -62,7 +62,7 @@ export const SpecialOffersModal = () => {
         <div className="relative w-full">
           <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%] to-[#252526]"></div>
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={data.src}
               className="w-full h-[351px] md:max-h-[50vh] xl:h-[70vh] object-cover object-center rounded-t-lg"
             />

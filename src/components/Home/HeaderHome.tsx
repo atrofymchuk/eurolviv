@@ -8,7 +8,7 @@ export const HeaderHome = () => {
     <div>
       <div className="w-full relative">
         <InViewWrapper>
-          <img
+          <img loading="lazy"
             src={headerHome}
             alt="preview"
             className="object-cover w-full xl:h-[1171px] lg:h-[900px] md:h-[650px] h-[469px]"

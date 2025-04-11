@@ -25,13 +25,16 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
       <>
         {mobileSrc ? (
           <>
-            <img
+            <img 
+            fetchPriority="high"
               src={backgroundImage}
               alt="header background"
               className="object-cover w-full h-full lg:block hidden"
               style={{ objectPosition }}
             />
             <img
+            fetchPriority="high"
+
               src={mobileSrc}
               alt="header background mobile"
               className="object-cover w-full h-full lg:hidden block"
@@ -40,6 +43,7 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
           </>
         ) : (
           <img
+            fetchPriority="high"
             src={backgroundImage}
             alt="headerImg"
             className="absolute inset-0 w-full h-full object-cover"

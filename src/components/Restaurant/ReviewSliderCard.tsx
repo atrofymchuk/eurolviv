@@ -8,7 +8,7 @@ export const ReviewSliderCard = ({ img }: { img: string }) => {
     lg:border-b-0 md:h-[254px] border-[#B3B3B3] xl:h-[458px] overflow-hidden "
     >
       <div className=" h-full lg:px-[18px] p-[9px] lg:py-[19px_18px] flex items-center  ">
-        <img src={img} alt="review" className="w-full h-full " />
+        <img loading="lazy" src={img} alt="review" className="w-full h-full " />
       </div>
     </div>
   );

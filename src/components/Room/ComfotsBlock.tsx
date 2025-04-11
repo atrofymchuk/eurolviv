@@ -17,7 +17,7 @@ export const ComfortsBlock = memo(
           )}
         >
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={item.src}
               alt="icon"
               className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
@@ -57,7 +57,7 @@ export const ComfortsBlock = memo(
 
                 <div className="hidden md:flex justify-center items-center w-full xl:px-[21px] lg:px-[14px] md:px-[10px]">
                   <InViewWrapper>
-                    <img
+                    <img loading="lazy"
                       src={images[0]}
                       alt="room image"
                       className={cn(
@@ -104,7 +104,7 @@ export const ComfortsBlock = memo(
                 lg:pt-[110px] xl:pt-0   md:pt-[45px] 2xl:pt-[10px]"
               >
                 <InViewWrapper>
-                  <img
+                  <img loading="lazy"
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
@@ -112,7 +112,7 @@ export const ComfortsBlock = memo(
                     `)}
                   />
                   
-              <img
+              <img loading="lazy"
                     src={images[2]}
                     alt="room image"
                     className={cn(`md:hidden w-full object-cover object-bottom

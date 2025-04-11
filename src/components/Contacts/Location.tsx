@@ -14,7 +14,7 @@ export const Location = () => {
           {t("contacts.location.locationTitle")}
         </h1>
         <p className="flex items-center text-[12px] font-cofo-medium uppercase underline  underline-offset-[22%] lg:text-[18px] lg:leading-[22.6px] lg:ps-[4px] lg:mt-[22px] mt-[11.5px] decoration-[6.5%]">
-          <img src={location} alt="location" />
+          <img loading="lazy" src={location} alt="location" />
           {t("contacts.info.addressDesc")}
         </p>
         <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] lg:w-[197px] w-[178px] text-center" />
@@ -30,7 +30,7 @@ export const Location = () => {
           </p>
         </div>
         <InViewWrapper>
-          <img
+          <img loading="lazy"
             src={mapContacts}
             alt="map"
             className="w-full h-full object-cover object-center grayscale"

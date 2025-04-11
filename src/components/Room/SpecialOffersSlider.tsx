@@ -81,7 +81,7 @@ export const SpecialOffersSlider = forwardRef<
             )}
           >
             <InViewWrapper className="relative">
-              <img
+              <img loading="lazy"
                 src={el.src}
                 alt={t(el.title)}
                 className={cn(

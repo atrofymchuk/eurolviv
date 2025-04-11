@@ -65,7 +65,7 @@ export const SwiperSlider = ({ slides }: { slides: string[] }) => {
               className="dish-slide sm:w-auto sm:h-auto 2xl:w-[548px] xl:w-[448px] xl:h-[420px] w-[283px] h-[269px]
                  md:h-[300px] 2xl:h-[521px] lg:w-[350px] md:w-[300px] pe-5  md:pe-5 lg:pe-1 xl:pe-5 2xl:pe-0"
             >
-              <img
+              <img loading="lazy"
                 src={slide}
                 alt={slide}
                 className="w-full h-full object-cover"

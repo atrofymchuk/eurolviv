@@ -143,7 +143,7 @@ export { default as aboutImageTrd } from "../assets/Restaurant/about3.webp";
 export { default as food } from "../assets/ConferenceService/Menu/food.webp";
 export { default as sandwich } from "../assets/ConferenceService/Menu/sandwich.webp";
 export { default as coffee } from "../assets/ConferenceService/Menu/coffee.webp";
-export { default as headerConference } from "../assets/ConferenceService/BigHall.webp";
+export { default as headerConference } from "../assets/ConferenceService/hallH.webp";
 export { default as headerConferenceMobile } from "../assets/ConferenceService/hallPhone.webp";
 
 export { default as uShape } from "../assets/ConferenceService/engHall/ushape.webp";

@@ -5,23 +5,31 @@
     src: url(./assets//fonts/CoFoSans-Regular.ttf) ;
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
   
 .font-cofo{
   font-family: CoFoSans;
+  font-display: swap;
 }
 body{
   font-family: 'CoFoSans';
+  font-display: swap;
+
 }
 @font-face {
     font-family: Blessed;
     src: url(./assets//fonts/BlessedScript-Regular.otf) ;
     font-weight: normal;
     font-style: normal;
+  font-display: swap;
+
   }
   
 .font-blessed{
   font-family: Blessed;
+  font-display: swap;
+
 }
 
 @font-face {
@@ -29,8 +37,12 @@ body{
     src: url(./assets//fonts/CoFoSans-Medium.ttf) ;
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
+
 }
 
 .font-cofo-medium{
   font-family: 'CoFoSans-Medium';
+  font-display: swap;
+
 }

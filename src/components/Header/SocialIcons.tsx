@@ -25,7 +25,7 @@ export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIcon
       >
         <FaInstagram
           color="white"
-          className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
+          className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] "
         />
       </Link>
       <Link
@@ -33,12 +33,12 @@ export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIcon
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          `rounded-full hover:cursor-pointer ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} lg:p-1.5 p-1`
+          `rounded-full  hover:cursor-pointer ${isBottomColor ? "bg-[#8C331B]" : "bg-[#A47762]"} lg:p-1.5 p-1`
         )}
       >
         <RiTelegram2Fill
           color="white"
-          className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
+          className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] "
         />
       </Link>
       <Link

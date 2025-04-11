@@ -29,7 +29,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
               <div className="relative">
                 <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent"></div>
                 <InViewWrapper>
-                  <img
+                  <img loading="lazy"
                     src={img}
                     alt={type}
                     className="lg:w-full lg:h-[654px] object-cover"

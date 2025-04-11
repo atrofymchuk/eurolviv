@@ -18,10 +18,10 @@ export const AboutRestaurant = () => {
               {t("restaurant.about.title")}
             </p>
             <div className="md:flex md:items-center md:gap-2">
-              <h1 className="uppercase tracking-[-7%] leading-[81%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px]">
+              <h1 className="uppercase tracking-[-0.07em] leading-[81%] pt-[8px] lg:pt-[12px] text-[#242425] text-[64px] 2xl:text-[100px]">
                 ruff
               </h1>
-              <span className="2xl:text-[64px] lg:tracking-[-6%] text-[32px] flex items-center mt-auto justify-center md:justify-start">
+              <span className="2xl:text-[64px] lg:tracking-[-0.07em] text-[32px] flex items-center mt-auto justify-center md:justify-start">
                 {t("restaurant.about.title2")}
                 <span className="md:inline-flex hidden">&nbsp;-</span>
               </span>
@@ -71,14 +71,14 @@ export const AboutRestaurant = () => {
         <div className="md:border-e border-x md:border-x-0 border-t md:border-t-0 border-[#B3B3B3]  md:border-b ">
           <div className="flex items-center justify-center ">
             <div className="md:border-e border-[#B3B3B3] border-b w-full flex items-center justify-center lg:pt-[14px] lg:pb-[19px] pt-[10px] pb-[13px] lg:px-[20px] md:px-2 px-[10px_3px]">
-              <img
+              <img loading="lazy"
                 src={aboutImageFst}
                 alt=""
                 className=" w-full h-full   object-cover"
               />
             </div>
             <div className=" border-[#B3B3B3] border-b w-full lg:px-[20px] flex items-center justify-center lg:pt-[15px] lg:pb-[19px] pt-[10px] pb-[13px] md:px-2 px-[3px_10px]">
-              <img
+              <img loading="lazy"
                 src={aboutImageScd}
                 alt=""
                 className=" w-full h-full  object-cover"
@@ -86,7 +86,7 @@ export const AboutRestaurant = () => {
             </div>
           </div>
           <div className="flex items-center px-2.5 lg:px-[20px] justify-center lg:pt-[12px] lg:pb-[26px] pt-[10px] xl:py-[20px_26px]">
-            <img
+            <img loading="lazy"
               src={aboutImageTrd}
               alt=""
               className=" w-full h-full  object-cover md:max-h-[292px]"

@@ -28,7 +28,7 @@ export const ConceptCasd = ({title, img, alt, text, index}: {title: string[], im
             {t(title[1])}
           </h1>
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={img}
               alt={alt}
               className="w-[200px] h-[191px] object-cover xl:mt-[22px] xl:mb-[22px] my-4"

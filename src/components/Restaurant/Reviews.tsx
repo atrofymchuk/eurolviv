@@ -14,7 +14,7 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] md:text-[26px] lg:text-[26px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ">
             {t('reviews.about.0')} {t('reviews.about.2')}
           </span>
-          <h1 className="uppercase lg:w-[892px]  text-[#242425] 2xl:text-[100px] xl:text-[90px] lg:leading-[87px] leading-[94%] xl:pt-[17px] pt-[6px] lg:text-[84px] md:text-[48px] text-[32px] tracking-[-7%] pb-[24px] lg:pb-0 ">
+          <h1 className="uppercase lg:w-[892px]  text-[#242425] 2xl:text-[100px] xl:text-[90px] lg:leading-[87px] leading-[94%] xl:pt-[17px] pt-[6px] lg:text-[84px] md:text-[48px] text-[32px] tracking-[-0.07em] pb-[24px] lg:pb-0 ">
             {t('reviews.title')} {t('reviews.heading')} <br /> {t('reviews.heading2')}
           </h1>
           <div className=" flex items-center lg:flex-row flex-col  xl:space-x-[188px] lg:space-x-[80px]   lg:space-y-0 space-y-[24px] lg:mt-[37px]">

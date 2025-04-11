@@ -43,7 +43,7 @@ export const About = memo(
             <div className="  text-[#8C331B] ">
               <div className="2xl:space-y-1.5 2xl:pt-[2.8rem] lg:pt-[1.4rem] ">
                 <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center   ">
-                  <img
+                  <img loading="lazy"
                     src={houseBrown}
                     alt="houseicon"
                     className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
@@ -52,7 +52,7 @@ export const About = memo(
                   <span className="font-cofo-medium">&nbsp;{area} М²</span>
                 </p>
                 <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center ">
-                  <img
+                  <img loading="lazy"
                     src={squareBrown}
                     alt="houseicon"
                     className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
@@ -61,7 +61,7 @@ export const About = memo(
                   <span className="font-cofo-medium">&nbsp;{rooms}</span>
                 </p>
                 <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center">
-                  <img
+                  <img loading="lazy"
                     src={guestBrown}
                     alt="houseicon"
                     className="pe-2 w-[22px] h-[22px] 2xl:w-fit"

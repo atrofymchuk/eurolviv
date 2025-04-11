@@ -37,7 +37,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
 
   return (
     <header
-      className=" fixed inset-0 z-50 h-fit flex items-center justify-center "
+      className=" fixed inset-0 z-50 h-fit flex items-center justify-center max-w-screen "
       onMouseLeave={() => setIsShowRooms(false)}
     >
       <div
@@ -49,8 +49,8 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           }
         )}
       >
-        <div className="w-full xl:w-[92.71%] flex items-center justify-center mx-auto lg:mx-[20px] xl:mx-auto ">
-          <div className="flex items-center xl:space-x-4 space-x-3  w-full  justify-between">
+        <div className="w-full xl:w-[92.71%] flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
+          <div className="flex items-center xl:space-x-4 space-x-3  w-full h-full justify-between">
             <HeaderNav
               {...{
                 logo,
@@ -68,8 +68,8 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 setMenuOpen,
               }}
             />
-            <div className=" items-center xl:space-x-5 lg:space-x-3 justify-between  hidden lg:flex">
-              <div className={cn(`relative flex items-center `, {
+            <div className=" items-center 2xl:space-x-5 lg:space-x-3 justify-between  hidden lg:flex">
+              <div className={cn(`relative flex items-center xl:pt-[22px] `, {
                 "space-x-5": !isEng,
                 "space-x-[115px]": isEng,
               })}>
@@ -81,10 +81,10 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}
                   className={cn(
-                    `whitespace-nowrap uppercase hidden xl:flex items-center space-x-1 font-cofo-medium hover:cursor-pointer ${rightMenu}`
+                    `whitespace-nowrap uppercase  hidden xl:flex items-center space-x-1 font-cofo-medium hover:cursor-pointer ${rightMenu}`
                   )}
                 >
-                  <span>{t("header.callUs")}</span>
+                  <span className="2xl:text-[16px] xl:text-[14px]">{t("header.callUs")}</span>
                   <span>
                     <RiArrowDownSLine />
                   </span>
@@ -114,7 +114,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#a33d2e]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
+                  `uppercase bg-[#a33d2e] xl:mt-[22px]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
                   {
                     "lg:flex hidden": scrolled,
                     flex: !scrolled,
@@ -127,7 +127,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   .map((word, index) => (
                     <span
                       className={cn(
-                        `uppercase ${index === 1 ? "lg:flex hidden " : ""}`,
+                        `uppercase ${index === 1 ? "2xl:flex hidden 2xl:text-[14px] xl:text-[12px]" : ""}`,
                         {
                           "lg:flex hidden": scrolled,
                           flex: !scrolled,

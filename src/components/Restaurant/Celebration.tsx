@@ -12,7 +12,7 @@ export const Celebration = () => {
           <span className="font-blessed  block text-center leading-[70%] text-[16px] xl:text-[36px] lg:leading-[25.2px] xl:inline xl:pb-[22px] pb-[7px]">
             Ruff
           </span>
-          <h1 className="uppercase lg:w-fit w-[217px] md:w-[317px] xl:text-[100px] lg:text-[54px] md:text-[44px]   md:leading-[81%] leading-[94%]   text-[32px] tracking-[-7%] lg:whitespace-nowrap   ">
+          <h1 className="uppercase lg:w-fit w-[217px] md:w-[317px] xl:text-[100px] lg:text-[54px] md:text-[44px]   md:leading-[81%] leading-[94%]   text-[32px] tracking-[-0.07em] lg:whitespace-nowrap   ">
             {t("restaurant.celebration.title")}
           </h1>
           <div className="lg:space-y-4 space-y-4 lg:mt-[37px] mt-[24px]">
@@ -36,21 +36,21 @@ export const Celebration = () => {
       </div>
       <div className="grid md:grid-cols-[35.7%_28.8%_35.6%] grid-cols-1 border-x md:border-b-0   border-y border-[#B3B3B3] w-full">
         <div className="flex items-center justify-center lg:px-[14px_12px] md:px-[12px_10px] xl:px-[24px_20px] md:py-3.25 xl:py-[23px_26px] lg:py-3 py-[17px_22px] px-[18px_16px]">
-          <img
+          <img loading="lazy"
             src={weddingFst}
             alt=""
             className="w-full md:h-full   h-[310px]  2xl:max-h-[620px] xl:max-h-[520px] lg:max-h-[460px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center lg:px-[14px_14px] md:px-[12px_10px] xl:px-5 md:border-x border-y md:border-y-0 border-[#B3B3B3] px-[17px_17px] md:py-3.25 lg:py-3 xl:py-[23px_26px] py-[20px_22px] ">
-          <img
+          <img loading="lazy"
             src={weddingScd}
             alt=""
             className="w-full md:h-full    2xl:max-h-[620px]  xl:max-h-[520px] lg:max-h-[460px] h-[392px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center lg:px-[14px_12px] xl:px-[20px_14px] md:px-[12px_10px] xl:py-[23px_26px]  lg:py-3 md:py-3.25 py-[20px_22px] px-[18px_15px]">
-          <img
+          <img loading="lazy"
             src={weddingTrd}
             alt=""
             className="w-full md:h-full  2xl:max-h-[620px]  xl:max-h-[520px] lg:max-h-[460px] max-h-[316px] object-cover"

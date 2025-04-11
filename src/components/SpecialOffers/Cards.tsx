@@ -14,8 +14,8 @@ export const Cards = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-[38px_40px] md:pb-[82px] ">
-      <div className="grid w-full max-w-[1720px] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10 md:pb-0">
+    <div className="flex items-center justify-center  md:pb-[82px] ">
+      <div className="grid w-[89.58%] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10 md:pb-0">
         <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
         <div className="md:col-span-2 lg:col-span-1 lg:border-x border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
         <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>

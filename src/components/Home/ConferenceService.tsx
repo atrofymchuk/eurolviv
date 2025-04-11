@@ -25,14 +25,14 @@ export const ConferenceService = () => {
           <div className="text-center flex flex-col  items-center justify-center  2xl:mt-33 mt-[76px]">
             <p
               className="mt-[10px] md:mt-0 uppercase text-[12px] md:text-[16px] lg:text-[18px] xl:text-[20px] 
-            2xl:text-[24px] text-[#252526] tracking-[-5%] font-cofo-medium"
+            2xl:text-[24px] text-[#252526] tracking-[-0.05em] font-cofo-medium"
             >
               {t("home.conferenceService.heading")}
             </p>
             <h1
               className={cn(
                 `uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] text-center 
-             text-[#252526] leading-[81%] tracking-[-7%] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1`,
+             text-[#252526] leading-[81%] tracking-[-0.07em] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1`,
                 {
                   "2xl:text-[170px]": isEng,
                   "2xl:text-[185px]": !isEng,

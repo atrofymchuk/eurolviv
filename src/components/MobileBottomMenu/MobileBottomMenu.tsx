@@ -19,22 +19,22 @@ export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
 
   const menuItems = [
     {
-      icon: <img src={menu} alt="menu" />,
+      icon: <img loading="lazy" src={menu} alt="menu" />,
       label: t("phoneBottomMenu.menu"),
       action: () => setMenuOpen(true),
     },
     {
-      icon: <img src={calendarBooking} alt="calendar" />,
+      icon: <img loading="lazy" src={calendarBooking} alt="calendar" />,
       label: t("phoneBottomMenu.book"),
       action: () => onOpenModal("order"),
     },
     {
-      icon: <img src={callUs} alt="call" />,
+      icon: <img loading="lazy" src={callUs} alt="call" />,
       label: t("phoneBottomMenu.callUs"),
       action: () => onOpenModal("contacts"),
     },
     {
-      icon: <img src={locationWhite} alt="location" />,
+      icon: <img loading="lazy" src={locationWhite} alt="location" />,
       label: t("phoneBottomMenu.route"),
       path: map.address,
       external: true,

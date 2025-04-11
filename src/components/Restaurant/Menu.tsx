@@ -20,7 +20,7 @@ export const Menu = () => {
             <span className="font-blessed block text-center text-[16px] xl:text-[36px] lg:text-[32px] lg:leading-[25.2px] leading-[94%] xl:inline lg:pb-[19px]">
               {t("restaurant.menu.menu")}
             </span>
-            <h1 className="uppercase 2xl:text-[64px] lg:text-[54px]  leading-[94%] text-[32px] mt-[9px]  tracking-[-7%] md:whitespace-nowrap ">
+            <h1 className="uppercase 2xl:text-[64px] lg:text-[54px]  leading-[94%] text-[32px] mt-[9px]  tracking-[-0.07em] md:whitespace-nowrap ">
               {t("restaurant.menu.title.0")} <br />
               {t("restaurant.menu.title.1")}
             </h1>

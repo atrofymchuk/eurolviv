@@ -18,7 +18,7 @@ const isEng = i18n.language === "en";
         }}
       ></div>
       <InViewWrapper>
-        <img
+        <img loading="lazy"
           src={headerAbout}
           alt="headerImg"
           className="absolute inset-0 w-full h-full object-cover object-[20%_40%] "

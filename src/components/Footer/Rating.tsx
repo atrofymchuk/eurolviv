@@ -6,7 +6,7 @@ export const Rating = ({openPdf, path}: {openPdf: (path: string) => void, path: 
         
         <div className="lg:hidden block mt-[61px] h-full">
         <div className="flex items-center">
-          <img
+          <img loading="lazy"
             src={rating}
             alt="rating"
             width={42}
@@ -24,8 +24,8 @@ export const Rating = ({openPdf, path}: {openPdf: (path: string) => void, path: 
         </div>
 
         <div className="flex mt-6 space-x-3">
-          <img src={visa} alt="Visa" className="h-6" />
-          <img src={mastercard} alt="Mastercard" className="h-6" />
+          <img loading="lazy" src={visa} alt="Visa" className="h-6" />
+          <img loading="lazy" src={mastercard} alt="Mastercard" className="h-6" />
         </div>
         <div className="flex justify-between mt-[65px]">
           

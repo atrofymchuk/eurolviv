@@ -41,7 +41,7 @@ export const Guarantee = () => {
 
         <div className="relative grid md:grid-cols-[55.88%_44.12%]   grid-cols-[1fr] 2xl:justify-normal xl:justify-center justify-center w-full ">
           <div className="  border-[#C7C7C7] 2xl:border-0 px-[14px] md:px-0">
-            <img
+            <img loading="lazy"
               src={eurohotel}
               alt="eurohotel"
               className="w-full h-full object-cover "

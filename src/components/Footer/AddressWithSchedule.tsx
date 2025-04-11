@@ -10,14 +10,14 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
   const { t } = useTranslation();
 
   return (
-    <div className="gap-y-4 flex flex-col lg:h-[473px] w-full lg:w-[24.2%] h-full lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 mt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
+    <div className="gap-y-4 flex flex-col lg:h-[473px] w-full lg:w-[24.2%] h-full lg:border-e mt-[34px] xl:pt-[17px] [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:mt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
       <div className="flex flex-col h-full rrelatives">
-        <div className="mb-0 w-[332px]">
+        <div className="mb-0 xl:max-w-[332px]">
           <h4 className="text-[12px] uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
           </h4>
           <p className="flex gap-x-[7px] font-cofo-medium items-center 2xl:text-[18px] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline  lg:mt-[15px] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
-            <img
+            <img loading="lazy"
               src={navigate}
               className="filter-invert-white"
               alt="location"

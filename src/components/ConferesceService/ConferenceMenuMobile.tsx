@@ -22,7 +22,7 @@ export const ConferenceMenuMobileCard = ({
 
   return (
     <div className="flex flex-col items-center relative">
-      <img
+      <img loading="lazy"
         src={img}
         alt=""
         className="w-screen h-[432px] sm:h-[500px] md:h-[600px] object-cover"
@@ -41,10 +41,10 @@ export const ConferenceMenuMobileCard = ({
             key={index}
             className={`space-y-[13px] sm:space-y-[16px] md:space-y-[18px] flex flex-col items-center w-full `}
           >
-            <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-7%] leading-[104%]  text-center">
+            <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-0.07em] leading-[104%]  text-center">
               {t(section.titleKey)}
             </p>
-            <ViewMenuButton className="w-[170px]">
+            <ViewMenuButton className="w-[170px] bg-white">
               {t("buttons.viewMenuButton")}
             </ViewMenuButton>
           </div>

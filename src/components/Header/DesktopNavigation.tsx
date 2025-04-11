@@ -1,6 +1,5 @@
 import { NavLinks } from "./NavLinks";
 import { Room } from "../../types/types";
-import { useTranslation } from "react-i18next";
 import cn from "classnames";
 
 type DesktopNavigationProps = {
@@ -16,7 +15,7 @@ type DesktopNavigationProps = {
   handleMouseLeaveRestaurant: () => void;
   isShowRestaurant: boolean;
   setIsShowRestaurant: (value: boolean) => void;
-}
+  }
 
 export const DesktopNavigation = ({
   navLinks,
@@ -32,14 +31,9 @@ export const DesktopNavigation = ({
   isShowRestaurant,
   setIsShowRestaurant,
 }: DesktopNavigationProps) => {
-  const { i18n } = useTranslation();
-  const isEng = i18n.language === "en";
   return (
     <nav
-      className={cn("hidden lg:flex 2xl:space-x-[13px] xl:space-x-3 text-center lg:space-x-1.5 items-center", {
-        "lg:ms-[50px]": !isEng,
-        "lg:me-[10px]": isEng,
-      })}
+      className={cn("hidden lg:flex 2xl:space-x-[13px] xl:space-x-2.25  lg:space-x-1.5 items-center  xl:pt-[22px]")}
       onClick={() => {
         setIsShowRooms(false);
         setIsShowRestaurant(false);

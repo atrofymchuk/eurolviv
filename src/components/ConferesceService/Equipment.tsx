@@ -13,7 +13,7 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
     <div className="flex  bg-[#F2EFEC] justify-center flex-1 2xl:h-[231px] w-full">
       <div className="grid grid-cols-1  py-[41px] lg:py-0 lg:grid-cols-[21%_42%_37%] lg:w-full w-[79.1%]   border-[#D9D9D9] border-x lg:border-x-0  box-border">
         <div className="  border-[#D9D9D9] flex items-center 2xl:ps-[71px] ps-[10px] md:ps-[20px] md:p-6 lg:pb-10 ">
-          <h1 className="uppercase text-[24px] sm:text-[24px] md:text-[32px] lg:text-[32px] xl:text-[38px]  2xl:text-[40px] leading-[100%] tracking-[-0.05em] text-[#8C331B]  ">
+          <h1 className="pb-[10px] uppercase text-[24px] sm:text-[24px] md:text-[32px] lg:text-[32px] xl:text-[38px]  2xl:text-[40px] leading-[100%] tracking-[-0.05em] text-[#8C331B]  ">
             {t("conferenceService.equipment.title.0")} <br />
             {t("conferenceService.equipment.title.1")}
           </h1>
@@ -28,7 +28,7 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
               className="flex items-center gap-x-2.5 gap-y-[3px]"
               >
                 <div className="flex items-center gap-x-2.5 gap-y-[3px]">
-                <img
+                <img loading="lazy"
                   src={icon.src}
                   alt={icon.text}
                   className="w-[22px] h-[22px]  md:w-[22px] md:h-[22px] lg:w-6 lg:h-6 xl:w-[30px] xl:h-[30px]"
@@ -48,7 +48,7 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
               className="flex items-center gap-y-[3px]"
               >
                 <div className="flex items-center gap-x-[14px] gap-y-[3px]">
-                <img
+                <img loading="lazy"
                   src={icon.src}
                   alt={icon.text}
                   className="w-[22px] h-[22px]  md:w-[22px] md:h-[22px] lg:w-6 lg:h-6 xl:w-[30px] xl:h-[30px]"

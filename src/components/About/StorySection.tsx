@@ -49,10 +49,10 @@ export const StorySection = () => {
                 </span>
               </h1>
 
-              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 tracking-[-7%]  lg:pt-5  text-[12px] leading-[120%]">
+              <p className="w-full block xl:text-[20px] lg:text-[18px] md:pt-4 pt-6 tracking-[-0.07em]  lg:pt-5  text-[12px] leading-[120%]">
                 {t("about.about.desc.0")}
               </p>
-              <p className="w-full block xl:text-[20px]  lg:text-[18px] text-[12px] tracking-[-7%]  leading-[120%]">
+              <p className="w-full block xl:text-[20px]  lg:text-[18px] text-[12px] tracking-[-0.07em]  leading-[120%]">
                 {t("about.about.desc.1")}
               </p>
             </div>
@@ -63,7 +63,7 @@ export const StorySection = () => {
 
         <div className=" flex justify-center items-center w-full border-[#C7C7C7] border-b md:p-4 p-3">
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={sectionAbout}
               alt="Reception"
               className="w-full md:max-h-[543px] max-h-[133px] object-cover object-[0%_35%] "

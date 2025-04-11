@@ -56,7 +56,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
               )}
               placeholderText={placeholder}
             />
-            <img
+            <img loading="lazy"
               src={calendarBooking}
               alt="calendar"
               className="absolute lg:left-3 left-1.25 top-1/2 transform -translate-y-1/2 lg:w-[19px] lg:h-[19px] w-[12px] h-[12px] cursor-pointer"

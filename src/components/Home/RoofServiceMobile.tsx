@@ -28,7 +28,7 @@ export const RoofServiceMobile = () => {
               <div
                 className={`absolute inset-0  bg-gradient-to-b from-[#252526] to-transparent`}
               ></div>
-              <img 
+              <img loading="lazy" 
                 src={item.img} 
                 className="w-full lg:h-[650px] h-[362px] object-cover object-center" 
               />
@@ -40,7 +40,7 @@ export const RoofServiceMobile = () => {
             >
               <div className="flex flex-col items-center ">
                 <h1
-                  className={ "text-[24px] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-10%] xl:mt-[29px] lg:mt-[19px] w-full underline  " } >
+                  className={ "text-[24px] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-0.1em] xl:mt-[29px] lg:mt-[19px] w-full underline  " } >
                   {t(item.title).split(' ').map((word, index) => (
                     <span key={index} className="block">
                       {word}

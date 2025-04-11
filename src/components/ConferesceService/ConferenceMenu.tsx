@@ -14,7 +14,7 @@ export const ConferenceMenu = () => {
           <p className="uppercase text-[#242425] text-[14px] lg:text-[24px] font-cofo-medium tracking-[-0.05em] lg:w-full w-[257px]  ">
           {t("conferenceService.conferenceMenu.title")}
         </p>
-          <h1 className="uppercase text-[32px] sm:text-[42px]   md:text-[62px] lg:text-[100px]  lg:leading-[87%] leading-[87%] tracking-[-9%] 
+          <h1 className="uppercase text-[32px] sm:text-[42px]   md:text-[62px] lg:text-[100px]  lg:leading-[87%] leading-[87%] tracking-[-0.09em] 
           lg:w-full w-[257px] sm:w-[400px]  lg:pb-[53px] pb-[23px] pt-[12px] lg:pt-[13px]">
           {t("conferenceService.conferenceMenu.desc")}
         </h1>

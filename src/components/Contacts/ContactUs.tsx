@@ -39,7 +39,7 @@ export const ContactUs = () => {
         </div>
         <div className=" lg:mt-[60px] lg:mb-10 mt-[40px] px-[16px] md:px-0">
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={hotelContacts}
               alt="hotel"
               className="w- lobject-cover "

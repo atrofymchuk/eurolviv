@@ -52,7 +52,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
                 w-full flex items-center justify-center h-full"
               >
                 <InViewWrapper>
-                  <img
+                  <img loading="lazy"
                     src={img}
                     alt="room image"
                     className={cn(

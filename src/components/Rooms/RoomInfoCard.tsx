@@ -32,7 +32,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
       <div className="">
         <div className="items-center flex justify-center">
           <InViewWrapper>
-            <img
+            <img loading="lazy"
               src={room.header.previewImage}
               alt={room.title}
               className="2xl:w-[530px] 2xl:h-[416px] xl:w-[480px] xl:h-[380px] lg:w-[420px] lg:h-[340px] md:w-[360px] md:h-[280px] w-full  h-[232px]  object-cover"
@@ -43,13 +43,13 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
         <div className="2xl:h-[297px] xl:h-[280px] lg:h-[260px] md:h-[220px] h-[191px]">
           <div className="flex justify-between mx-auto 2xl:pt-[19px] xl:pt-[17px] lg:pt-[15px] md:pt-[12px] pt-[10.5px] 2xl:px-6.75 xl:px-5 lg:px-4 md:px-3   items-center">
             <div className="flex items-center">
-              <img src={square} alt="square" className="lg:w-4.5  w-4" />
+              <img loading="lazy" src={square} alt="square" className="lg:w-4.5  w-4" />
               <p className="font-cofo uppercase 2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
                 {t("rooms.about.area")}: {room.area}M²
               </p>
             </div>
             <div className="flex items-center">
-              <img src={guest} alt="square" className="lg:w-4.5  w-4" />
+              <img loading="lazy" src={guest} alt="square" className="lg:w-4.5  w-4" />
               <p className="font-cofo uppercase 2xl:text-[16px] xl:text-[15px] sm:ps-[11.62px] lg:text-[14px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
                 {t("rooms.about.guests")}: {room.guests}
               </p>

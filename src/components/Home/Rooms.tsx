@@ -9,37 +9,53 @@ import cn from "classnames";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const { sliderProps } = useRoomStore();
 
   return (
     <div className="flex flex-col bg-[#A47762] relative items-center md:items-stretch overflow-x-hidden overflow-y-hidden ">
-      <div className="grid z-0 absolute md:grid-cols-[5.2%_19%_34.7%_25.8%] grid-cols-[89.07%]  lg:h-[1580px] md:h-[1000px] sm:h-[797px] h-[767px] md:items-start justify-center md:justify-start w-full  ">
+      {/* <div className="grid z-0 absolute md:grid-cols-[5.2%_19%_34.7%_25.8%] grid-cols-[89.07%]  lg:h-[1580px] md:h-[1000px] sm:h-[797px] h-[767px] md:items-start justify-center md:justify-start w-full  ">
         <div className="w-full h-full border-[#C29986] hidden md:block"></div>
         <div className="w-full h-full border-e border-x md:border-x-0 border-[#C29986] "></div>
         <div className="w-full h-full border-x border-[#C29986] hidden md:block"></div>
         <div className="w-full h-full border-e border-[#C29986] hidden md:block"></div>
-      </div>
+      </div> */}
 
-      <div className="grid  items-center justify-center md:grid-cols-[24.7%_45.1%_30.2%] w-full lg:h-[350px] h-[300px] md:h-[350px] grid-cols-[89.07%]   ">
-        <div className="flex flex-col w-full h-full md:justify-center  lg:translate-y-[50px] ">
-          <div className="z-4">
-            <h1
-              className="text-center  2xl:text-[198px] xl:text-[150px] pt-[65px] lg:text-[120px] md:text-[100px] sm:text-[80px] text-[48px] 
+      <div className=" w-full lg:h-[350px] h-[300px] md:h-[350px] grid-cols-[89.07%] grid  lg:flex flex-col justify-center   ">
+        <h1
+          className="text-center lg:ps-[59px] flex-col lg:flex-row flex lg:justify-between justify-center
+          items-center lg:items-start
+            lg:w-[calc(100vw-14.3vw)] 
+            w-full
+            text-[48px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[150px] 2xl:text-[198px]
             uppercase tracking-[-0.1em] 
-             text-[#EDE8E5] xl:text-start lg:text-start md:text-center leading-[81.5%] xl:ps-[59px] lg:ps-[75px] md:ps-[55px]  z-4"
-            >
-              {t("home.rooms.rooms")}
-            </h1>
-            <div className="md:hidden pt-[30px] flex flex-col items-center justify-center text-center w-full">
-              <h1 className="uppercase   text-[24px] leading-[90%] tracking-[-7%] relative whitespace-nowrap text-[#EDE8E5]">
-                <span className=" ">{t("home.rooms.forWhat.0")}</span>
-                <span className="">{t("home.rooms.forWhat.1")}</span>
-              </h1>
-            </div>
+            text-[#EDE8E5] md:text-center lg:text-start xl:text-start 
+            leading-[81.5%] 
+            2xl:gap-x-[50px]
+            gap-y-[30px]
+            lg:gap-y-0
+            mt-[65px] 
+            lg:mt-0
+            z-20"
+        >
+          <span className="tracking-[-0.09em] text-[48px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[150px] 2xl:text-[198px] [@media(min-width:1540px)and(max-width:1700px)]:text-[170px]">
+            {t("home.rooms.rooms")}
+          </span>
+
+          <span className="flex lg:flex-col text-[24px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[80px] 2xl:text-[100px]  tracking-[-0.09em] gap-y-[7px] leading-[81%] uppercase">
+            <span className="leading-[81%] w-auto ">
+              {t("home.rooms.forWhat.0")} &nbsp;
+            </span>
+            <span className="leading-[81%] ps-0 sm:ps-0 md:ps-12 lg:ps-24 xl:ps-36 2xl:ps-[205px]  w-auto ">
+              {t("home.rooms.forWhat.1")}
+            </span>
+          </span>
+        </h1>
+        <div className="flex flex-col w-full h-full items-center lg:items-start md:justify-center   ">
+          <div className="z-4 ">
             <div className="flex md:flex-row lg:ps-[80px]  md:ps-[60px] flex-col text-start items-center  md:items-start  2xl:items-start relative 2xl:h-[200px] xl:h-[190px] lg:h-[180px] md:h-[150px] sm:h-[130px] ">
-              <div className="md:absolute flex md:flex-row items-center flex-col pt-[16px] md:pt-[35px]  space-y-[30px] md:space-y-0 text-center md:text-start md:gap-[20px] xl:gap-x-[75px]">
+              <div className="md:absolute flex md:flex-row items-center flex-col pt-[16px] md:pt-[35px]  space-y-[30px] md:space-y-0 text-center md:text-start md:gap-[20px] xl:gap-x-[60px]">
                 <p
                   className="uppercase  2xl:w-[433px] xl:w-[400px] px-[24px] lg:w-[330px] md:w-[350px] sm:w-[285px] lg:px-0 
                    2xl:text-[16px] xl:text-[15px] lg:text-[14px] md:text-[13px]  
@@ -50,11 +66,14 @@ export const RoomsHome = () => {
                 <div className="flex justify-center items-center  ">
                   <Link
                     to="/rooms"
-                    className={cn(`uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
+                    className={cn(
+                      `uppercase text-center block text-[#242425] font-cofo-medium hover:bg-black hover:text-[#EDE8E5]
                        bg-[#EDE8E5] whitespace-nowrap lg:px-5.25 h-[42px]  lg:h-[46px] py-[12.5px] px-[14.5px] 
-                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] lg:w-[234px]   text-[12px] w-[178px]`, {
-                      "lg:w-[170px]": isEng,
-                    })}
+                    rounded-full hover:cursor-pointer 2xl:text-[16px] lg:text-[15px] lg:w-[234px]   text-[12px] w-[178px]`,
+                      {
+                        "lg:w-[170px]": isEng,
+                      }
+                    )}
                   >
                     {t("buttons.viewRooms")}
                   </Link>
@@ -64,17 +83,7 @@ export const RoomsHome = () => {
           </div>
         </div>
         <div className="hidden md:flex"></div>
-        <div className="hidden md:flex h-full flex-col justify-center pe-[50px] xl:-translate-y-[45px] 2xl:-translate-y-[55px] lg:-translate-y-[30px] md:-translate-y-[67px] 2xl:-translate-x-[115px]">
-          <h1 className="uppercase 2xl:text-[100px] xl:text-[80px] lg:text-[60px] md:text-[55px] sm:text-[50px] text-[40px] leading-[81%] tracking-[-9%] relative whitespace-nowrap text-[#EDE8E5]">
-            <span className="absolute  xl:-translate-x-[280px] lg:-translate-x-[200px] md:-translate-x-[150px] ">
-              {t("home.rooms.forWhat.0")}
-            </span>
-            <br />
-            <span className="absolute xl:-translate-x-[80px]  md:-translate-x-[50px]">
-              {t("home.rooms.forWhat.1")}
-            </span>
-          </h1>
-        </div>
+      
       </div>
 
       <div className="relative max-w-screen z-0 mb-[34px] md:mb-0 mt-19 md:mt-0 xl:mt-10 2xl:mb-[121px] xl:mb-[30px]">

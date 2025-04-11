@@ -72,7 +72,7 @@ const ImageSlider = () => {
 
           return (
             <InViewWrapper key={index}>
-              <img
+              <img loading="lazy"
                 src={image}
                 alt={`slide_${index}`}
                 className={cn(`w-full max-w-[500px]  object-cover  transition-all duration-500  px-2

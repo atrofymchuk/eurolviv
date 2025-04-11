@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 export const Header = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex items-center justify-center bg-[#252526] 2xl:pt-[133px] xl:pt-[102px] lg:pt-[133px]  pt-[95px]    px-[38px_40px]">
-      <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[1720px] ">
+    <div className="flex items-center justify-center bg-[#252526] 2xl:pt-[133px] xl:pt-[102px] lg:pt-[133px]  pt-[95px]    ">
+      <div className="grid w-full  lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start max-w-[89.58%] mx-auto ">
         <div className="   border-x lg:border-e-0 border-[#515151] flex flex-col items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-6 lg:pt-[96px] lg:pl-[31px] ">
           <h1
             className="uppercase  text-white lg:leading-[91%] leading-[82%] tracking-[-0.1em] 

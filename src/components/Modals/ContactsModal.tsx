@@ -40,7 +40,7 @@ export const ContactsModal = () => {
             <div key={index} className="flex items-start gap-3">
               <div className="bg-[#A47762] rounded-full p-1.5 flex items-center justify-center">
                 <Link to={`tel:${contact.phone}`}>
-                  <img src={contact.icon} alt="callUs"  />
+                  <img loading="lazy" src={contact.icon} alt="callUs"  />
                 </Link>
               </div>
               <div className="gap-[6px]">

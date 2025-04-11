@@ -15,7 +15,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pOne: "conferenceHallState.bigHall.about.pOne",
         pTwo: "conferenceHallState.bigHall.about.pTwo",
       },
-      price: { hour: 800, day: 3000 },
+      price: { hour: 5000, day: 1000 },
       swiperImages: [imgs.bigHall, imgs.bigHallTheathre, imgs.hallH],
       showcaseSwiperImages: [
         imgs.pLetterImg,
@@ -96,18 +96,20 @@ export const initialCoferenceHallState: ConferenceServiceState = {
           text: "conferenceHallState.smallHall.icons.screen",
         },
         {
-          src: icons.soundSystem,
-          text: "conferenceHallState.smallHall.icons.soundSystem",
-        },
-        {
           src: icons.notebook,
           text: "conferenceHallState.smallHall.icons.notebook",
         },
-        { src: icons.paper, text: "conferenceHallState.smallHall.icons.paper" },
         {
           src: icons.presenter,
           text: "conferenceHallState.smallHall.icons.presenter",
         },
+        {
+          src: icons.soundSystem,
+          text: "conferenceHallState.smallHall.icons.soundSystem",
+        },
+        
+        { src: icons.paper, text: "conferenceHallState.smallHall.icons.paper" },
+       
         {
           src: icons.flipchart,
           text: "conferenceHallState.smallHall.icons.flipchart",

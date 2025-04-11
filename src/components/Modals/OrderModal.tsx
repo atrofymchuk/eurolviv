@@ -91,7 +91,7 @@ const OrderModal = ({
               {t("orderModal.date")}
             </label>
             <div className="bg-[#A47762] rounded-full p-2 w-fit mb-[6px] lg:mb-[0px]">
-              <img
+              <img loading="lazy"
                 className="text-xl cursor-pointer"
                 src={calendar}
                 onClick={() => setIsDatePickerOpen(!isDatePickerOpen)}

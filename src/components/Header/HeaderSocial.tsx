@@ -8,29 +8,29 @@ type HeaderSocialToProps = {
   styles: string;
 };
 
-export const HeaderSocial = ({ styles }: HeaderSocialToProps) => {
+export const  HeaderSocial = ({ styles }: HeaderSocialToProps) => {
   return (
-    <div className=" lg:flex hidden 2xl:ms-[30px] space-x-[9.5px] 2xl:me-[52px] ">
+    <div className=" lg:flex hidden  space-x-[9.5px]  xl:pt-[25px]">
       <Link
         to={social.hotel.telegram}
         target="_blank"
-        className={cn(`rounded-full ${styles}`)}
+        className={cn(`2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] rounded-full ${styles}`)}
       >
-        <RiTelegram2Fill className="w-[37px] h-[37px] p-1" />
+        <RiTelegram2Fill className="2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1" />
       </Link>
 
       <Link
         to={social.hotel.whatsapp}
         target="_blank"
-        className={cn(`rounded-full ${styles} `)}
+        className={cn(`2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] rounded-full ${styles} `)}
       >
-        <FaWhatsapp className="w-[37px] h-[37px]  p-1 " />
+        <FaWhatsapp className="2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1 " />
       </Link>
       <Link
         to={social.hotel.viber}
         target="_blank"
         className={cn(
-          ` rounded-full  p-1 px-1.5 flex text-center items-center ${styles}`
+          `2xl:w-[37px] 2xl:h-[37px] rounded-full xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1 px-1.5 flex text-center items-center ${styles}`
         )}
       >
         <svg

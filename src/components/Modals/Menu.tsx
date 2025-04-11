@@ -31,7 +31,7 @@ export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: 
               </p>
             </div>
             <InViewWrapper>
-              <img
+              <img loading="lazy"
                 src={item.previewImage}
                 alt={item.title}
                 className="lg:w-full max object-cover max-w-[280px]"
