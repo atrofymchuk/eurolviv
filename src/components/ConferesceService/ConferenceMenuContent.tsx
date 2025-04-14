@@ -29,7 +29,7 @@ export const ConferenceMenuContent = () => {
 
   return (
     <div className="relative flex items-center justify-center ">
-      <div className="grid absolute lg:grid-cols-[21%_42%_37%] grid-cols-1 lg:h-[1000px] h-full z-[-1] w-full">
+      <div className="grid absolute lg:grid-cols-[20.5%_42.9%_35%] grid-cols-1 lg:h-[870px] h-full z-[-1] w-full">
         <div className="w-full  border-[#C7C7C7]"></div>
         <div className="w-full lg:border-x hidden lg:flex border-[#C7C7C7]"></div>
         <div className="w-full hidden lg:flex border-[#C7C7C7]"></div>

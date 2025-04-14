@@ -28,9 +28,9 @@ export const initialCoferenceHallState: ConferenceServiceState = {
           imgs.pLetter,
           imgs.classRoom,
           imgs.theathre,
-          imgs.board,
+          imgs.negotiationTable,
         ],
-        eng: [imgs.uShape, imgs.class, imgs.theater, imgs.board],
+        eng: [imgs.uShape40max, imgs.class40max, imgs.theater, imgs.board40max],
       },
 
       icons: [
@@ -87,7 +87,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         imgs.negotiationTableSmall,
       ],
       viewShowcaseSwiperImages: {
-        ua: [imgs.pLetter, imgs.theathre, imgs.negotiationTable],
+        ua: [imgs.pMax20, imgs.theathreMax30, imgs.negotiationTableMax25],
         eng: [imgs.uShape, imgs.theater, imgs.board],
       },
       icons: [
@@ -136,8 +136,8 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       ],
       showcaseSwiperImages: [imgs.laungeTheatre, imgs.negotiationTableLaunge],
       viewShowcaseSwiperImages: {
-        ua: [imgs.theathre, imgs.negotiationTable],
-        eng: [imgs.theater, imgs.board],
+        ua: [imgs.theathreMax30, imgs.negotiationTableMax20],
+        eng: [imgs.theater30max, imgs.board20max],
       },
       icons: [
         {

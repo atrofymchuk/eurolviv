@@ -21,7 +21,7 @@ export const RoomTitle = memo(({ title, size, isOnTop }: RoomTitleProps) => {
         )}
       >
         <h1 className="uppercase 2xl:text-[100px] text-[32px] text-[#242425] sm:text-[40px] md:text-[58px] lg:text-[64px] 2xl:leading-[81%] xl:text-[72px]
-        md:whitespace-nowrap 2xl:font-normal flex flex-col lg:tracking-[-0.03em] tracking-[-0.07em] leading-[90%] overflow-visible  2xl:mt-0 ">
+        md:whitespace-nowrap 2xl:font-normal flex flex-col lg:tracking-[-0.05em] tracking-[-0.07em] leading-[90%] overflow-visible  2xl:mt-0 ">
           <span className="order-1 2xl:order-2 inline w-fit">
             {t(title)}
           </span>

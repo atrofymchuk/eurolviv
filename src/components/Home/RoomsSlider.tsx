@@ -102,7 +102,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             1536: { 
               slidesPerView: 3.4,
               spaceBetween: 20,
-              slidesOffsetBefore: 0,
+              slidesOffsetBefore: -40,
               centeredSlides: true,
               initialSlide: 1,
             }

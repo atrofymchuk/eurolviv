@@ -439,7 +439,7 @@
 
 "conferenceHallState":{
     "smallHall":{
-        "title":"конференц-зал",
+        "title":"конференц - зал",
         "desc":"малий",
         "capacity":"до 40 осіб",
         "about":{
@@ -456,7 +456,7 @@
         }
     },
     "bigHall":{
-        "title":"конференц-зал",
+        "title":"конференц - зал",
         "desc":"великий",
         "capacity":"до 100 осіб",
         "about":{

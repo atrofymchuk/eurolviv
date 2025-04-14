@@ -2,35 +2,21 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { previewImg } from "../../store/exportsImg";
 import cn from "classnames";
-import { useEffect, useState } from "react";
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 import "./roomsSlider.css";
 
 export const AboutHome = () => {
   const { t,i18n } = useTranslation();
   const isEng = i18n.language === "en";
-  const [isCustomWidth, setIsCustomWidth] = useState(false);
+  const isCustomWidth = useCustomWidth(1500, 1700);
   
-  useEffect(() => {
-    const checkWidth = () => {
-      const width = window.innerWidth;
-      setIsCustomWidth(width >= 1500 && width <= 1700);
-    };
-    
-    checkWidth();
-    window.addEventListener('resize', checkWidth);
-    
-    return () => {
-      window.removeEventListener('resize', checkWidth);
-    };
-  }, []);
-
   return (
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">
       <div className="grid md:grid-cols-[24.2%_34.7%_25.8%_15.3%] grid-cols-[89.07%]  justify-center md:justify-stretch   mx-0 w-full">
         <div className="md:flex hidden border-[#C7C7C7]  border-b"></div>
         <div className="md:border-x flex flex-col border-x  xl:flex-row justify-around items-center space-y-2 2xl:space-y-0 xl:space-y-0 border-[#C7C7C7]   border-b">
           
-          <div className="  md:flex hidden flex-col md:flex-row lg:h-[168px] items-center 2xl:gap-[100px] py-4 gap-[10px] px-2   ">
+          <div className="  md:flex hidden flex-col md:flex-row lg:h-[168px] items-center  px-2   ">
             <p className=" lg:text-[14px] xl:text-[16px] uppercase 2xl:w-[256px]  font-cofo-medium 2xl:text-[16px] text-[12px]  ">
               {t("home.about.aboutRooms.0")}
             </p>
@@ -99,7 +85,7 @@ export const AboutHome = () => {
             loading="lazy"
             src={previewImg}
             alt=""
-            className="about-home-image"
+            className=""
           />
         </div>
 

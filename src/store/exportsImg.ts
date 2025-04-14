@@ -66,10 +66,15 @@ export { default as bigHallTheathre } from "../assets/ConferenceService/BigHallT
 export { default as hallH } from "../assets/ConferenceService/hallH.webp";
 export { default as pLetterImg } from "../assets/ConferenceService/pLetterImg.webp";
 
-export { default as pLetter } from "../assets/ConferenceService/pLetter.webp";
-export { default as classRoom } from "../assets/ConferenceService/class.webp";
-export { default as theathre } from "../assets/ConferenceService/theathre.webp";
-export { default as negotiationTable } from "../assets/ConferenceService/negotiationTable.webp";
+export { default as pLetter } from "../assets/ConferenceService/uaHall/pLetter.webp";
+export { default as classRoom } from "../assets/ConferenceService/uaHall/class.webp";
+export { default as theathre } from "../assets/ConferenceService/uaHall/theathre.webp";
+export { default as negotiationTable } from "../assets/ConferenceService/uaHall/negotiationTable.webp";
+export { default as negotiationTableMax20 } from "../assets/ConferenceService/uaHall/negotiationTableMax20.webp";
+export { default as negotiationTableMax25 } from "../assets/ConferenceService/uaHall/negotiationTableMax25.webp";
+export { default as pMax20 } from "../assets/ConferenceService/uaHall/pMax20.webp";
+export { default as theathreMax30 } from "../assets/ConferenceService/uaHall/theathreMax30.webp";
+
 
 export { default as smallHallPreview } from "../assets/ConferenceService/smallHallPreview.webp";
 export { default as pLetterSmall } from "../assets/ConferenceService/pLetterSmall.webp";
@@ -150,6 +155,12 @@ export { default as uShape } from "../assets/ConferenceService/engHall/ushape.we
 export { default as board } from "../assets/ConferenceService/engHall/board.webp";
 export { default as class } from "../assets/ConferenceService/engHall/class.webp";
 export { default as theater } from "../assets/ConferenceService/engHall/theater.webp";
+export {default as uShape40max} from "../assets/ConferenceService/engHall/uShpeMax40.webp";
+export {default as class40max} from "../assets/ConferenceService/engHall/class40Max.webp";
+export {default as board40max} from "../assets/ConferenceService/engHall/Board40Max.webp";
+export {default as board20max} from "../assets/ConferenceService/engHall/board20Max.webp";
+export {default as theater30max} from "../assets/ConferenceService/engHall/theater30Max.webp";
+
 
 //contacts page
 export { default as hotelContacts } from "../assets/Contacts/hotel.webp";

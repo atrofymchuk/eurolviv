@@ -4,7 +4,7 @@ export const ConferenceMenu = () => {
   const { t } = useTranslation();
   return (
     <div className="relative w-full flex flex-col ">
-      <div className="absolute h-[400px] z-[-1] grid w-full lg:grid-cols-[21%_42%_37%] grid-cols-1  ">
+      <div className="absolute h-[400px] z-[-1] grid w-full lg:grid-cols-[20.5%_42.9%_35%] grid-cols-1  ">
         <div className=" border-[#C7C7C7] border-x lg:border-x-0 lg:w-full w-[79.1%] mx-auto lg:mx-0"></div>
         <div className="lg:border-x hidden lg:flex border-[#C7C7C7] lg:w-full w-[calc(100%-7.5%)]"></div>
         <div className="hidden lg:flex border-[#C7C7C7] lg:w-full w-[calc(100%-7.5%)]"></div>

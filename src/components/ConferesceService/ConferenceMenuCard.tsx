@@ -18,13 +18,21 @@ export const ConferenceMenuCard = ({
       <img loading="lazy"
         src={img}
         alt=""
-        className="2xl:w-[540px] 2xl:h-[609px] xl:w-[440px] xl:h-[509px] lg:w-[340px] lg:h-[409px]  md:w-[240px] md:h-[300px]  object-cover "
+        className="object-cover
+          w-[64vw] h-[80vw]
+          md:w-[23.44vw] md:h-[29.3vw]
+          lg:w-[24.61vw] lg:h-[28.4vw]
+          xl:w-[26.92vw] xl:h-[28.51vw]
+          2xl:w-[28.13vw] 2xl:h-[31.72vw]"
       />
-      <p className="uppercase text-[#242425] 2xl:text-[48px] 2xl:tracking-[-0.07em] 2xl:leading-[104%] 2xl:pt-[36px] xl:text-[42px] 
-      xl:pt-[28px] lg:text-[24px] lg:tracking-[-0.07em] lg:leading-[104%] lg:pt-[20px] ">
+      <p className="uppercase text-[#242425] 
+        text-[4.8vw] tracking-[-0.07em] leading-[104%] pt-[2.4vw]
+        lg:text-[1.67vw] lg:tracking-[-0.07em] lg:leading-[104%] lg:pt-[1.39vw]
+        xl:text-[2.19vw] xl:pt-[1.46vw]
+        2xl:text-[2.5vw] 2xl:tracking-[-0.07em] 2xl:leading-[104%] 2xl:pt-[1.88vw]">
         {text}
       </p>
-    <ViewMenuButton className="2xl:mt-[25px] xl:mt-[24px] lg:mt-[20px] lg:text-[16px] lg:w-[209px] bg-[white] " pdf={pdf} >
+    <ViewMenuButton className="mt-[2.4vw] lg:mt-[1.39vw] xl:mt-[1.25vw] 2xl:mt-[1.3vw] lg:text-[1.11vw] lg:w-[14.52vw] lg:bg-white " pdf={pdf} >
       {t("buttons.viewMenuButton")}
     </ViewMenuButton>
     </div>

@@ -44,7 +44,7 @@ export const ConferenceMenuMobileCard = ({
             <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-0.07em] leading-[104%]  text-center">
               {t(section.titleKey)}
             </p>
-            <ViewMenuButton className="w-[170px] bg-white">
+            <ViewMenuButton className="w-[170px] ">
               {t("buttons.viewMenuButton")}
             </ViewMenuButton>
           </div>
