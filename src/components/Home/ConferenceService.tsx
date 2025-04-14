@@ -44,7 +44,7 @@ export const ConferenceService = () => {
             </h1>
             <p
               className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] lg:mt-[20px] xl:text-[1.2vw]  2xl:text-[1.1vw] text-[#252526] leading-[120%]
-             2xl:w-[640px] xl:w-[560px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
+             2xl:w-[55vw] xl:w-[560px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
             >
               {t("home.conferenceService.desc.0")}
               <br className="hidden md:block" />
@@ -53,7 +53,7 @@ export const ConferenceService = () => {
             <div className=" text-center flex items-center justify-center xl:mb-[48px] lg:mb-[32px] md:mb-[24px]">
               <Link
                 to="/conference-service"
-                className={`  bg-[#8c331b] flex items-center w-[160px] h-[40px] justify-center text-center text-[12px] xl:w-[165px] xl:text-[14px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${
+                className={`  bg-[#8c331b] flex items-center w-[160px] h-[40px] justify-center text-center text-[12px] xl:w-[165px] 2xl:w-[10.42vw] 2xl:h-[2.4vw] 2xl:text-[.73vw] xl:text-[14px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${
                   isEng ? "lg:w-[165px]" : ""
                 }`}
               >

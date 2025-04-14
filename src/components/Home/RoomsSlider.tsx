@@ -34,10 +34,10 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
     });
 
     const { t } = useTranslation();
-    const isCustomWidth = useCustomWidth(1530, 1700)
+    const isCustomWidth = useCustomWidth(1530, 1700);
 
     return (
-        <div className="overflow-hidden w-full h-full absolute flex items-center justify-center mt-[40px] xl:mt-[50px] hall-list">
+      <div className="overflow-hidden w-full h-full absolute flex items-center justify-center mt-[40px] xl:mt-[50px] hall-list">
         <SwiperComponent
           modules={[Navigation, EffectCoverflow]}
           effect="coverflow"
@@ -55,7 +55,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             modifier: 0,
             slideShadows: false,
           }}
-          className="2xl:h-[750px] xl:h-[750px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[357px] flex items-center"
+          className=" 2xl:h-[39.06vw] xl:h-[750px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[357px] flex items-center"
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           onSwiper={(swiper) => {
             if (ref) {
@@ -159,10 +159,10 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                     <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px] ">
                       <h4
                         className={cn(
-                          "2xl:text-[32px]  2xl:w-3/4 lg:w-4/5 xl:text-[26px]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
+                          "2xl:text-[32px]   lg:w-4/5 xl:text-[26px]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
                           {
-                            "xl:w-[90%] w-[75%]": t(el.title).length > 15,
-                            "!w-[50%] lg:w-fit!": index === 1
+                            " xl:w-[90%] w-[75%]": t(el.title).length > 15,
+                            "!w-[50%] lg:w-fit!": index === 1,
                           }
                         )}
                       >
@@ -204,10 +204,10 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                         <Link
                           to={`/rooms/${el.type}`}
                           className={cn(
-                            `border border-[#FFFFFF] uppercase text-[12px] xl:w-[150px] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                            `border border-[#FFFFFF] uppercase text-[12px] xl:w-[150px] 2xl:w-[8.9vw] 2xl:h-[2.4vw] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
                             {
                               "md:hidden": !isActive,
-                              "xl:w-[170px] xl:h-[47px]": isCustomWidth
+                              "xl:w-[170px] xl:h-[47px]": isCustomWidth,
                             }
                           )}
                         >

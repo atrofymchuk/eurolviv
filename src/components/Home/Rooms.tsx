@@ -13,7 +13,8 @@ export const RoomsHome = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const { sliderProps } = useRoomStore();
-  const isCustomWidth = useCustomWidth(1530, 1700)
+  const isCustomWidth = useCustomWidth(1530, 1700);
+  const isUltraHd = useCustomWidth(2000, 4500);
 
   return (
     <div className="flex flex-col bg-[#A47762] relative items-center md:items-stretch overflow-x-hidden overflow-y-hidden ">
@@ -29,7 +30,7 @@ export const RoomsHome = () => {
           className="text-center lg:ps-[4.1vw] flex-col lg:flex-row flex lg:justify-between justify-center
           items-center lg:items-start
             lg:w-[calc(100vw-14.3vw)] 
-            2xl:w-[calc(100vw-15vw)] 
+            2xl:w-[calc(100vw-14vw)] 
             w-full
             text-[12.8vw] sm:text-[10.42vw] md:text-[9.77vw] lg:text-[8.33vw] xl:text-[7.81vw] 2xl:text-[10.31vw]
             uppercase tracking-[-0.1em] 
@@ -50,7 +51,7 @@ export const RoomsHome = () => {
             <span className="leading-[81%] w-auto">
               {t("home.rooms.forWhat.0")} &nbsp;
             </span>
-            <span className="leading-[81%] xl:ps-[13.88vw] 2xl:ps-[10.3vw] lg:ps-[11vw]  w-auto">
+            <span className="leading-[81%] self-end xl:ps-[13.88vw] 2xl:ps-[11vw] lg:ps-[11vw]  w-auto">
               {t("home.rooms.forWhat.1")}
             </span>
           </span>
@@ -77,7 +78,6 @@ export const RoomsHome = () => {
                        md:h-[3.1vw]
                        w-[178px]
                        h-[42px]
-                       max-w-[234px]
                        lg:px-[1.39vw] lg:py-[0.83vw]
                        2xl:h-[2.4vw] 2xl:w-[12.25vw]
                        xl:w-[12vw]
@@ -103,13 +103,22 @@ export const RoomsHome = () => {
       </div>
 
       <div className="max-w-screen relative z-0  md:mb-0 mt-[17vw] md:mt-[0] xl:mb-[1.56vw] w-full  md:h-[500px] mb-[70px]  h-[407px] ">
-        <div className={`z-10 absolute  2xl:h-[750px]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px] w-full ${isCustomWidth ? "xl:h-[620px]" : "xl:h-[570px]"} `}>
+        <div
+          className={`z-10 absolute   2xl:h-[35vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px] w-full ${
+            isCustomWidth ? "xl:h-[620px]" : "xl:h-[570px]"
+          } `}
+        >
           <RoomsSlider ref={sliderRef} sliderProps={sliderProps} />
         </div>
       </div>
 
       <div className="h-[17.07vw] w-full hidden md:flex">
-        <div className={`hidden md:flex w-full justify-between 2xl:translate-y-[.0vw] lg:-translate-y-[1.94vw] md:-translate-y-[2.93vw] ${isCustomWidth ? "xl:-translate-y-[2vw]" : "xl:-translate-y-[3vw]"}`}>
+        <div
+          className={`hidden md:flex w-full justify-between lg:-translate-y-[1.94vw] md:-translate-y-[2.93vw] ${
+            isCustomWidth ? "xl:-translate-y-[2vw]" : "xl:-translate-y-[3vw]"
+          }
+         ${isUltraHd ? "2xl:translate-y-[3vw]" : " 2xl:translate-y-[.0vw]"}`}
+        >
           <button
             className={`2xl:w-[3.23vw] 2xl:h-[3.23vw] xl:w-[3.02vw] xl:h-[3.02vw] lg:w-[3.75vw] lg:h-[3.75vw] md:w-[4.69vw] md:h-[4.69vw] flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[6.93vw] 2xl:ms-[3.8vw] md:ms-[5.86vw] lg:ms-[4.17vw] 2xl:mb-[2.29vw] xl:mb-[2.08vw] lg:mb-[2.5vw]`}
             onClick={() => sliderRef.current?.slidePrev()}

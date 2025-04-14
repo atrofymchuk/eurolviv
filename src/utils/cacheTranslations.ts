@@ -39,24 +39,38 @@ export const cacheTranslation = async (lang: string, data: Record<string, string
   store.put(JSON.parse(JSON.stringify(data)), lang);
 };
 
-export const fetchTranslation = async (lang: string): Promise<Record<string, string>> => {
-  const cachedTranslation = await getCachedTranslation(lang);
-  if (cachedTranslation) {
-    console.log(`✅ Get translation from cache: ${lang}`);
-    return cachedTranslation;
-  }
+// export const fetchTranslation = async (lang: string): Promise<Record<string, string>> => {
+//   const cachedTranslation = await getCachedTranslation(lang);
+//   if (cachedTranslation) {
+//     console.log(`✅ Get translation from cache: ${lang}`);
+//     return cachedTranslation;
+//   }
 
+//   try {
+//     const module = await import(`./../locales/${lang}.json`);
+//     const data = module.default || module; 
+
+//     console.log(data);
+
+//     await cacheTranslation(lang, data);
+
+//     return data;
+//   } catch (error) {
+//     console.error(error);
+//     return {}; 
+//   }
+// };
+
+
+
+export const fetchTranslation = async (lang: string): Promise<Record<string, string>> => {
   try {
     const module = await import(`./../locales/${lang}.json`);
-    const data = module.default || module; 
-
-    console.log(data);
-
-    await cacheTranslation(lang, data);
-
+    const data = module.default || module;
+    console.log(`✅ Loaded translation without cache: ${lang}`);
     return data;
   } catch (error) {
     console.error(error);
-    return {}; 
+    return {};
   }
-};
+}

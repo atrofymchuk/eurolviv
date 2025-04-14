@@ -14,10 +14,13 @@ i18n
       uk: { translation: uk }
     },
     fallbackLng: "en",
+    // detection: {
+    //   order: ["localStorage", "navigator"],
+    //   caches: ["localStorage"]
+    // },
     detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"]
-    },
+     order: ["navigator"]
+   },
     interpolation: { escapeValue: false }
   });
 
