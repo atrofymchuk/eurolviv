@@ -19,6 +19,9 @@ export const AboutHome = () => {
             text-[3.2vw] 
               md:text-[1.17vw]
               lg:text-[0.97vw] 
+              xl:w-[189px]
+              lg:w-[169px]
+
               xl:text-[0.83vw] 2xl:text-[.83vw]
                font-cofo-medium   ">
               {t("home.about.aboutRooms.0")}
@@ -27,6 +30,9 @@ export const AboutHome = () => {
             text-[3.2vw] 
               md:text-[1.17vw]
               lg:text-[0.97vw] 
+              xl:w-[169px]
+              lg:w-[159px]
+
               xl:text-[0.83vw] 2xl:text-[.83vw]
                uppercase 2xl:w-[229px]  font-cofo-medium  ">
               {t("home.about.aboutRooms.1")}
@@ -61,6 +67,7 @@ export const AboutHome = () => {
               lg:text-[0.97vw] 
               xl:text-[0.83vw] 2xl:text-[.83vw] 
               xl:w-[10.42vw]
+              lg:w-[129px]
               p-[0.53vw]
                2xl:w-[12vw] 2xl:ms-[2.29vw]
                lg:p-0">
