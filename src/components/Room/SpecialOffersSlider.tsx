@@ -81,7 +81,8 @@ export const SpecialOffersSlider = forwardRef<
             )}
           >
             <InViewWrapper className="relative">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src={el.src}
                 alt={t(el.title)}
                 className={cn(
@@ -89,14 +90,18 @@ export const SpecialOffersSlider = forwardRef<
                 )}
               />
               <div
-                className={cn(`absolute  md:max-w-full `, {
-                  "md:pe-0  max-w-[80%]": index === 0 ,
-                },
-              {
-                "md:pe-0 pe-[20%] ": index === 0 && !isEng,
-              },{
-                "md:pe-0 pe-[10%] ": isEng,
-              })}
+                className={cn(
+                  `absolute  md:max-w-full `,
+                  {
+                    "md:pe-0  max-w-[80%]": index === 0,
+                  },
+                  {
+                    "md:pe-0 pe-[20%] ": index === 0 && !isEng,
+                  },
+                  {
+                    "md:pe-0 pe-[10%] ": isEng,
+                  }
+                )}
               >
                 <p
                   className={cn(
@@ -105,7 +110,7 @@ export const SpecialOffersSlider = forwardRef<
         md:py-[11px] py-[7px] px-[12px] xl:px-[16px] md:px-[10px] rounded-full font-cofo-medium lg:text-[16px] md:text-[13px] 
         text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
                     {
-                      "xl:me-44": index === 0,
+                      "xl:me-[5vw] 2xl:me-[8vw]": index === 0,
                     }
                   )}
                 >

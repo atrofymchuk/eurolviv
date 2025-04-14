@@ -6,17 +6,12 @@ import cn from "classnames";
 import { GridBorders } from "./GridBorders";
 import { RoomTitle } from "./RoomTitle";
 import { RoomDescription } from "./RoomDescription";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
 type AboutToProps = {
   item: ConferenceService;
   isOnTop: boolean;
 };
 
-
 export const About = memo(({ item, isOnTop }: AboutToProps) => {
-
-  const isCustomWidth = useCustomWidth(1500, 1700)
-  
   return (
     <div className="flex flex-col">
       <div
@@ -32,7 +27,7 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
           } border-b 2xl:border-b-0 border-[#C7C7C7] flex-col h-full justify-center p-2.5 2xl:p-0 xl:items-center
           order-2 lg:order-none`)}
         >
-          <div className="text-[#8C331B] hidden lg:flex 2xl:mb-15 xl:mb-4 lg:mb-2">
+        <div className="text-[#8C331B] hidden lg:flex 2xl:mb-[1.6vw] xl:mb-4 lg:mb-2">
             <RoomInfo
               area={item.area}
               capacity={item.capacity}
@@ -52,10 +47,16 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
             <SliderAbout imageSlider={item.swiperImages} isConference={true} />
           </div>
         </div>
-        <div className={cn("flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[38px_93px]  2xl:w-auto border-[#C7C7C7] flex-1", {
-          "2xl:!px-[38px_33px]": isCustomWidth
-        })}>
-          <div className={cn("lg:flex flex-col w-[79.1%] h-full   flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto")}>
+        <div
+          className={cn(
+            "flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[2vw_4.8vw] xl:px-[1.5vw_2vw] lg:px-[2vw_4.8vw] md:px-[2vw_4.8vw]  2xl:w-auto border-[#C7C7C7] flex-1"
+          )}
+        >
+          <div
+            className={cn(
+              "lg:flex flex-col w-[79.1%] h-full   flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto"
+            )}
+          >
             <div className="lg:hidden">
               <RoomInfo
                 area={item.area}

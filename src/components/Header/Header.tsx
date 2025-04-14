@@ -49,7 +49,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           }
         )}
       >
-        <div className="w-full xl:w-[92.71%] flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
+        <div className="w-full xl:w-[92vw] flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
           <div className="flex items-center xl:space-x-4 space-x-3  w-full h-full justify-between">
             <HeaderNav
               {...{
@@ -69,10 +69,12 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               }}
             />
             <div className=" items-center 2xl:space-x-5 lg:space-x-3 justify-between  hidden lg:flex">
-              <div className={cn(`relative flex items-center xl:pt-[22px] `, {
-                "space-x-5": !isEng,
-                "space-x-[115px]": isEng,
-              })}>
+              <div
+                className={cn(`relative flex items-center xl:pt-[22px] `, {
+                  "space-x-5 2xl:me-[2.6vw] ": !isEng,
+                  "space-x-[115px]": isEng,
+                })}
+              >
                 <ChangeLangButton
                   changeLanguage={changeLanguage}
                   isMobile={false}
@@ -84,7 +86,14 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                     `whitespace-nowrap uppercase  hidden xl:flex items-center space-x-1 font-cofo-medium hover:cursor-pointer ${rightMenu}`
                   )}
                 >
-                  <span className="2xl:text-[16px] xl:text-[14px]">{t("header.callUs")}</span>
+                  <span
+                    className={cn(`2xl:text-[0.83vw] xl:text-[14px]`, {
+                      "text-white": !scrolled,
+                      "text-[#252526]": scrolled,
+                    })}
+                  >
+                    {t("header.callUs")}
+                  </span>
                   <span>
                     <RiArrowDownSLine />
                   </span>
@@ -92,7 +101,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
 
                 {isDropdownOpen && (
                   <div
-                    className="absolute right-0 mt-2 top-full bg-white text-black rounded shadow-lg py-2 font-cofo-medium w-[200px]"
+                    className="absolute right-0 mt-2 top-full bg-white text-black rounded shadow-lg py-2 font-cofo-medium  "
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     {["+380 99 123 45 67", "+380 97 765 43 21"].map(
@@ -114,7 +123,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#a33d2e] xl:mt-[22px]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[14px] hover:cursor-pointer hidden lg:flex`,
+                  `uppercase bg-[#8C331B] xl:mt-[22px]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[0.88vw] hover:cursor-pointer hidden lg:flex`,
                   {
                     "lg:flex hidden": scrolled,
                     flex: !scrolled,
@@ -127,7 +136,11 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   .map((word, index) => (
                     <span
                       className={cn(
-                        `uppercase ${index === 1 ? "2xl:flex hidden 2xl:text-[14px] xl:text-[12px]" : ""}`,
+                        `uppercase ${
+                          index === 1
+                            ? "2xl:flex hidden 2xl:text-[0.88vw] xl:text-[12px]"
+                            : ""
+                        }`,
                         {
                           "lg:flex hidden": scrolled,
                           flex: !scrolled,

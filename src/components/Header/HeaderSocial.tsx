@@ -10,7 +10,7 @@ type HeaderSocialToProps = {
 
 export const  HeaderSocial = ({ styles }: HeaderSocialToProps) => {
   return (
-    <div className=" lg:flex hidden  space-x-[9.5px]  xl:pt-[25px]">
+    <div className=" lg:flex hidden  space-x-[9.5px]  xl:pt-[25px] 2xl:me-[2.6vw] ">
       <Link
         to={social.hotel.telegram}
         target="_blank"

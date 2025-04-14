@@ -17,15 +17,15 @@ export const RoomTitle = memo(({ title, size, isOnTop }: RoomTitleProps) => {
         className={cn(
           `${
             isOnTop ? " lg:border-x border-x" : "lg:border-x border-x"
-          } 2xl:ps-[39px] xl:ps-[24px] lg:ps-[20px] md:ps-[14px]  items-center  flex 2xl:block border-[#C7C7C7] 2xl:p-[35px] xl:p-[28px] lg:p-[24px] md:p-[18px] w-full relative h-full ps-[10px]`
+          } 2xl:ps-[2vw] xl:ps-[1.7vw] lg:ps-[1.9vw] md:ps-[1.8vw] items-center flex 2xl:block border-[#C7C7C7] 2xl:p-[1.8vw] xl:p-[2vw] lg:p-[2.2vw] md:p-[2.4vw] w-full relative h-full ps-[2.2vw]`
         )}
       >
-        <h1 className="uppercase 2xl:text-[100px] text-[32px] text-[#242425] sm:text-[40px] md:text-[58px] lg:text-[64px] 2xl:leading-[81%] xl:text-[72px]
-        md:whitespace-nowrap 2xl:font-normal flex flex-col lg:tracking-[-0.05em] tracking-[-0.07em] leading-[90%] overflow-visible  2xl:mt-0 ">
+        <h1 className="uppercase text-[7.1vw] sm:text-[7.5vw] md:text-[7.6vw] lg:text-[6vw] xl:text-[5.25vw] 2xl:text-[5.2vw] text-[#242425] 
+        md:whitespace-nowrap 2xl:font-normal flex flex-col lg:tracking-[-0.05em] tracking-[-0.07em] leading-[90%] 2xl:leading-[81%] overflow-visible 2xl:mt-0 ">
           <span className="order-1 2xl:order-2 inline w-fit">
             {t(title)}
           </span>
-          <span className="order-1 2xl:order-2 inline w-fit 2xl:pt-2.5">
+          <span className="order-1 2xl:order-2 inline w-fit 2xl:pt-[0.5vw]">
             {t(size)}
           </span>
         </h1>

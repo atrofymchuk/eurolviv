@@ -42,7 +42,7 @@ export const SpecialOffers = () => {
               <h1
                 className="uppercase text-[32px]  sm:text-[38px] md:text-[48px] lg:text-[100px] leading-[90%] lg:tracking-[-0.04em] relative z-50
                 lg:w-full   xl:whitespace-nowrap 
-              w-[244px]  "
+              w-[244px]"
               >
                 {t("home.specialOffers.title")}
               </h1>

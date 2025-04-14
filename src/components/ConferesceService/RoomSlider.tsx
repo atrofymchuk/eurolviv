@@ -18,14 +18,14 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
-    
+
     const handleResize = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setIsMobile(window.innerWidth <= 768);
       }, 150);
     };
-    
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -33,11 +33,17 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     };
   }, []);
 
-  const totalSlidesMobile = useMemo(() => Math.ceil(images.length / 2), [images.length]);
+  const totalSlidesMobile = useMemo(
+    () => Math.ceil(images.length / 2),
+    [images.length]
+  );
 
-  const handleBeforeChange = useCallback((_oldIndex: number, newIndex: number) => {
-    setCurrentSlide(newIndex);
-  }, []);
+  const handleBeforeChange = useCallback(
+    (_oldIndex: number, newIndex: number) => {
+      setCurrentSlide(newIndex);
+    },
+    []
+  );
 
   const handlePrevClick = useCallback(() => {
     sliderRef.current?.slickPrev();
@@ -47,50 +53,53 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     sliderRef.current?.slickNext();
   }, []);
 
-  const settings = useMemo(() => ({
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToScroll: 2,
-    arrows: false,
-    variableWidth: true,
-    beforeChange: handleBeforeChange,
+  const settings = useMemo(
+    () => ({
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToScroll: 2,
+      arrows: false,
+      variableWidth: true,
+      beforeChange: handleBeforeChange,
 
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToScroll: 2,
-          variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToScroll: 2,
+            variableWidth: true,
+          },
         },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToScroll: 2,
-          variableWidth: true,
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToScroll: 2,
+            variableWidth: true,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToScroll: 2,
-          variableWidth: true,
-          rows: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToScroll: 2,
+            variableWidth: true,
+            rows: 1,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToScroll: 1,
-          slidesToShow: 1.3,
-          centerMode: true,
-          rows: 2,
-          centerPadding: "0",
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 1.3,
+            centerMode: true,
+            rows: 2,
+            centerPadding: "0",
+          },
         },
-      },
-    ],
-  }), [handleBeforeChange]);
+      ],
+    }),
+    [handleBeforeChange]
+  );
 
   const showNextButton = useMemo(() => {
     return isMobile
@@ -118,10 +127,10 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
             {images.map((slide, index) => (
               <div key={index} className="pe-[6.5px] lg:pe-5">
                 <div className="relative">
-                  <img 
+                  <img
                     src={slide}
                     alt={`Slide ${index}`}
-                    width={835} 
+                    width={835}
                     height={556}
                     loading={index < 4 ? "eager" : "lazy"}
                     className="object-cover 
@@ -141,7 +150,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
 
       {showNextButton && (
         <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-[6vw] flex items-center justify-center 
+          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-[5.1vw] flex items-center justify-center 
                      right-[17vw] lg:right-[13vw] z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={handleNextClick}
