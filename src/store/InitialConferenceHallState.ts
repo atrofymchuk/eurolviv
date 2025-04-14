@@ -14,6 +14,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       about: {
         pOne: "conferenceHallState.bigHall.about.pOne",
         pTwo: "conferenceHallState.bigHall.about.pTwo",
+        pMobile: "conferenceHallState.bigHall.about.pMobile",
       },
       price: { hour: 5000, day: 1000 },
       swiperImages: [imgs.bigHall, imgs.bigHallTheathre, imgs.hallH],
@@ -73,6 +74,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       about: {
         pOne: "conferenceHallState.smallHall.about.pOne",
         pTwo: "conferenceHallState.smallHall.about.pTwo",
+        pMobile: "conferenceHallState.smallHall.about.pMobile",
       },
       price: { hour: 1000, day: 5000 },
       swiperImages: [
@@ -127,6 +129,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
       about: {
         pOne: "conferenceHallState.launge.about.pOne",
         pTwo: "conferenceHallState.launge.about.pTwo",
+        pMobile: "conferenceHallState.launge.about.pMobile",
       },
       price: { hour: 800, day: 3000 },
       swiperImages: [
@@ -144,15 +147,15 @@ export const initialCoferenceHallState: ConferenceServiceState = {
           src: icons.projector,
           text: "conferenceHallState.launge.icons.projector",
         },
-        { src: icons.paper, text: "conferenceHallState.launge.icons.paper" },
         { src: icons.screen, text: "conferenceHallState.launge.icons.screen" },
-        {
-          src: icons.flipchart,
-          text: "conferenceHallState.launge.icons.flipchart",
-        },
         {
           src: icons.notebook,
           text: "conferenceHallState.launge.icons.notebook",
+        },
+        { src: icons.paper, text: "conferenceHallState.launge.icons.paper" },
+        {
+          src: icons.flipchart,
+          text: "conferenceHallState.launge.icons.flipchart",
         },
      
         {

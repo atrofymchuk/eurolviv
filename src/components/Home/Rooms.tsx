@@ -29,6 +29,7 @@ export const RoomsHome = () => {
           className="text-center lg:ps-[4.1vw] flex-col lg:flex-row flex lg:justify-between justify-center
           items-center lg:items-start
             lg:w-[calc(100vw-14.3vw)] 
+            2xl:w-[calc(100vw-15vw)] 
             w-full
             text-[12.8vw] sm:text-[10.42vw] md:text-[9.77vw] lg:text-[8.33vw] xl:text-[7.81vw] 2xl:text-[10.31vw]
             uppercase tracking-[-0.1em] 
@@ -49,7 +50,7 @@ export const RoomsHome = () => {
             <span className="leading-[81%] w-auto">
               {t("home.rooms.forWhat.0")} &nbsp;
             </span>
-            <span className="leading-[81%] xl:ps-[13.88vw] 2xl:ps-[10.68vw] lg:ps-[11vw]  w-auto">
+            <span className="leading-[81%] xl:ps-[13.88vw] 2xl:ps-[10.3vw] lg:ps-[11vw]  w-auto">
               {t("home.rooms.forWhat.1")}
             </span>
           </span>
@@ -79,10 +80,10 @@ export const RoomsHome = () => {
                        max-w-[234px]
                        lg:px-[1.39vw] lg:py-[0.83vw]
                        2xl:h-[2.4vw] 2xl:w-[12.25vw]
-                       xl:w-[10.81vw]
+                       xl:w-[12vw]
                        xl:h-[2.7vw]
                        2xl:text-[0.83vw]
-                       xl:text-[0.7vw]
+                       xl:text-[0.8vw]
                        text-[12px] 
                        rounded-full hover:cursor-pointer
                        flex items-center justify-center`,

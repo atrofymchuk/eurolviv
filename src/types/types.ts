@@ -58,6 +58,7 @@ export type ConferenceService = {
   about: {
     pOne: string;
     pTwo: string;
+    pMobile: string;
   };
   swiperImages: string[];
   showcaseSwiperImages: string[];

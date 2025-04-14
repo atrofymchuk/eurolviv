@@ -9,9 +9,10 @@ import { RoomDescription } from "./RoomDescription";
 type AboutToProps = {
   item: ConferenceService;
   isOnTop: boolean;
+  index: number;
 };
 
-export const About = memo(({ item, isOnTop }: AboutToProps) => {
+export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
   return (
     <div className="flex flex-col">
       <div
@@ -41,7 +42,7 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
         <div className="border-e border-[#C7C7C7] 2xl:flex hidden"></div>
       </div>
 
-      <div className="grid flex-col lg:grid-cols-[63.5%_36.5%] h-auto grid-cols-1 order-7 lg:order-none ">
+      <div className="grid flex-col lg:grid-cols-[63.5%_36.5%] h-auto grid-cols-1  order-7 lg:order-none ">
         <div className="h-full border-[#C7C7C7] 2xl:border-e 2xl:border-t overflow-hidden">
           <div>
             <SliderAbout imageSlider={item.swiperImages} isConference={true} />
@@ -49,12 +50,12 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
         </div>
         <div
           className={cn(
-            "flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[2vw_4.8vw] xl:px-[1.5vw_2vw] lg:px-[2vw_4.8vw] md:px-[2vw_4.8vw]  2xl:w-auto border-[#C7C7C7] flex-1"
+            "flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[2vw_4.8vw] xl:px-[2vw_1vw] lg:px-[2vw_4.8vw]   2xl:w-auto border-[#C7C7C7] flex-1"
           )}
         >
           <div
             className={cn(
-              "lg:flex flex-col w-[79.1%] h-full   flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto"
+              "lg:flex flex-col  h-full  w-[79.1%] flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto"
             )}
           >
             <div className="lg:hidden">
@@ -65,7 +66,7 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
               />
             </div>
 
-            <RoomDescription pOne={item.about.pOne} pTwo={item.about.pTwo} />
+            <RoomDescription pOne={item.about.pOne} pTwo={item.about.pTwo}  isOnTop={isOnTop} index={index} pMobile={item.about.pMobile} />
           </div>
         </div>
       </div>

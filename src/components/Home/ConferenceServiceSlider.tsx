@@ -17,7 +17,7 @@ type HallSliderProps = {
 
 export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
   const { t, i18n } = useTranslation();
-
+  const mapArray = [halls[1], halls[0], halls[2]];
   const settings = {
     dots: false,
     infinite: true,
@@ -39,41 +39,54 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
   const isEng = i18n.language === "en";
 
   return (
-    <div className="w-full ms-[7%] z-10">
+    <div className="w-full ms-[8%] z-10">
       <Slider {...settings}>
-        {halls.map((hall, index) => (
+        {mapArray.map((hall, index) => (
           <div key={index} className="pe-[13px]">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={hall.previewImage}
               alt={hall.title}
-              className="w-[275px] h-[173px]"
+              className="w-[69vw] h-[46vw]"
             />
             <h4 className="text-center uppercase font-cofo-medium text-[18px] leading-[106.8%] tracking-[-0.05em] mt-[13px]">
               {t(hall.title)} {t(hall.size)}
             </h4>
             <div className="flex flex-col items-center justify-center mt-[11px] gap-y-[6px]">
-            <p className="text-center uppercase flex items-center space-x-[3px] text-[12px] ">
-              <img loading="lazy" src={square} alt="" className="w-[14px] h-[14px]" />
-              <span>
-              {t("home.conferenceService.area")}: {hall.area}
-              </span>
-            </p>
               <p className="text-center uppercase flex items-center space-x-[3px] text-[12px] ">
-              <img loading="lazy" src={guest} alt="" className="w-[14px] h-[14px]" />
-              <span>
-
-              {t("home.conferenceService.capacity")}: {isEng ? t(hall.capacity) : t(hall.capacity).slice(0, -2) + "."}
-              </span>
+                <img
+                  loading="lazy"
+                  src={square}
+                  alt=""
+                  className="w-[14px] h-[14px]"
+                />
+                <span>
+                  {t("home.conferenceService.area")}: {hall.area}
+                </span>
+              </p>
+              <p className="text-center uppercase flex items-center space-x-[3px] text-[12px] ">
+                <img
+                  loading="lazy"
+                  src={guest}
+                  alt=""
+                  className="w-[14px] h-[14px]"
+                />
+                <span>
+                  {t("home.conferenceService.capacity")}:{" "}
+                  {isEng
+                    ? t(hall.capacity)
+                    : t(hall.capacity).slice(0, -2) + "."}
+                </span>
               </p>
             </div>
             <div className="text-center flex items-center justify-center pt-[12px] lg:pt-[37px] relative">
-            <Link
-              to="/conference-service"
-              className="w-fit font-cofo-medium px-5 py-2.5 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase text-[12px]"
-            >
-              {t("buttons.details")}
-            </Link>
-          </div>
+              <Link
+                to="/conference-service"
+                className="w-fit font-cofo-medium px-5 py-2.5 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase text-[12px]"
+              >
+                {t("buttons.details")}
+              </Link>
+            </div>
           </div>
         ))}
       </Slider>

@@ -22,7 +22,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
     const handleNext = useCallback(() => {
       swiperRef.current?.slideNext();
     }, []);
-    
+ 
 
     return (
       <div>
@@ -30,19 +30,21 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           className={cn(`relative z-10 
           ${
             isConference
-              ? "h-full"
-              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[590px] 2xl:h-[522px]"
+              ? "h-full "
+              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[590px] 2xl:h-[33vw]"
           }`)}
         >
           <Swiper
             modules={swiperModules}
-            className={`mySwiper 
+            className={`mySwiper slider-about
             ${
               isConference
-                ? "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[540px] 2xl:h-[623px]"
-                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[522px]"
+                ? "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[520px] 2xl:h-[33vw]"
+                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[33vw]"
             }`}
             loop
+            slidesPerView={1}
+            spaceBetween={0}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {imageSlider.map((img) => (
@@ -65,7 +67,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </Swiper>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px]  xl:w-[60px] xl:h-[60px] flex items-center justify-center 
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px]  2xl:w-[60px] 2xl:h-[60px] xl:w-[54px] xl:h-[54px] flex items-center justify-center 
                      left-5 lg:left-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handlePrev}
@@ -74,7 +76,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </button>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] xl:w-[60px] xl:h-[60px] flex items-center justify-center 
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] 2xl:w-[60px] 2xl:h-[60px] xl:w-[54px] xl:h-[54px] flex items-center justify-center 
                      right-5 lg:right-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handleNext}

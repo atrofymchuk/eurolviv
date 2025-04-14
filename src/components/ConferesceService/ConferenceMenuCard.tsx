@@ -32,7 +32,7 @@ export const ConferenceMenuCard = ({
         2xl:text-[2.5vw] 2xl:tracking-[-0.07em] 2xl:leading-[104%] 2xl:pt-[1.88vw]">
         {text}
       </p>
-    <ViewMenuButton className="mt-[2.4vw] lg:mt-[1.39vw] xl:mt-[1.25vw] 2xl:mt-[1.3vw] lg:text-[1.11vw] lg:w-[14.52vw] lg:bg-white " pdf={pdf} >
+    <ViewMenuButton className="mt-[2.4vw] lg:mt-[1.39vw] xl:mt-[1.25vw] 2xl:w-[10.9vw] 2xl:h-[2.4vw] 2xl:mt-[1.3vw] 2xl:text-[0.73vw] lg:text-[1.11vw] lg:w-[14.52vw] lg:bg-white " pdf={pdf} >
       {t("buttons.viewMenuButton")}
     </ViewMenuButton>
     </div>

@@ -9,7 +9,6 @@ export const AboutHome = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const isCustomWidth = useCustomWidth(1530, 1700);
-  const isMobileWidth = useCustomWidth(390, 414);
   const isMobileWidthSecondary = useCustomWidth(414, 480);
 
   return (
@@ -91,7 +90,7 @@ export const AboutHome = () => {
         <div className="border-b border-[#C7C7C7] md:flex hidden"></div>
 
         <div className="border-[#C7C7C7] md:border-e-0 border-x md:border-x-0 ps-[3vw] pt-[4vw]  2xl:border-e-0 xl:border-e-0 lg:border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col lg:items-center ">
-          <p className="text-[2.7vw] md:text-[2vw] lg:text-[1.7vw]   uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ">
+          <p className=" md:text-[2vw] lg:text-[1.7vw]   uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ">
             {t("home.about.title")}
           </p>
         </div>
@@ -135,7 +134,7 @@ export const AboutHome = () => {
 
         <div className="flex flex-row md:flex-col  justify-center md:justify-start border-x md:border-x-0 md:border-e border-[#C7C7C7] ">
           <div className="    flex flex-col md:flex-col items-center">
-            <div className="flex flex-col 2xl:px-[1.56vw_1vw] 2xl:space-y-[1vw] xl:space-y-[1.1vw] xl:px-[1.5vw_1.5vw] md:space-y-2 space-y-3 md:order-none order-2 px-[3.8vw_2.8vw] pt-[6.7vw] md:pt-0 ">
+            <div className="flex flex-col 2xl:px-[1.56vw_1vw] 2xl:space-y-[1vw] xl:space-y-[1.1vw] xl:px-[1.2vw_1.5vw] md:space-y-2 space-y-3 md:order-none order-2 px-[3.8vw_2.8vw] pt-[6.7vw] md:pt-0 ">
               <p
                 className={cn(
                   `uppercase font-cofo tracking-[-0.04em] font-normal text-[#444444]
@@ -153,7 +152,7 @@ export const AboutHome = () => {
               <p
                 className="uppercase font-cofo tracking-[-0.04em] font-normal text-[#8C331B]
                 text-[3.2vw]
-                w-[90%]
+                w-[93%] 
                 lg:w-auto
                 sm:text-[2.08vw]
                 md:text-[1.17vw]
@@ -186,7 +185,7 @@ export const AboutHome = () => {
             </div>
 
             <div className="relative flex  md:w-full  justify-start self-start  md:order-none order-1 ">
-              <div className="md:absolute top-0 left-0 max-w-[89.07%] pt-[5.4vw]  xl:pt-[2.6vw] xl:ps-[1.5vw] w-full md:w-fit   px-[3.8vw_2.2vw]">
+              <div className="md:absolute top-0 left-0 max-w-[89.07%] pt-[5.4vw]  xl:pt-[2.6vw] xl:ps-[1vw] w-full md:w-fit   px-[3.8vw_2.2vw]">
                 <h1
                   className={cn(
                     "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
@@ -205,7 +204,7 @@ export const AboutHome = () => {
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[8.5vw] 2xl:text-[5.21vw] 2xl:translate-x-42",
+                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[9vw] 2xl:text-[5.21vw] 2xl:translate-x-42",
                     {
                       "2xl:translate-x-78": isEng,
                     }

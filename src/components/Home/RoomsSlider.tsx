@@ -37,7 +37,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
     const isCustomWidth = useCustomWidth(1530, 1700)
 
     return (
-        <div className="overflow-hidden w-full h-full absolute flex items-center justify-center mt-[40px] xl:mt-[50px]">
+        <div className="overflow-hidden w-full h-full absolute flex items-center justify-center mt-[40px] xl:mt-[50px] hall-list">
         <SwiperComponent
           modules={[Navigation, EffectCoverflow]}
           effect="coverflow"
@@ -69,13 +69,14 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
           breakpoints={{
             320: {
               slidesPerView: "auto",
-              spaceBetween: 10,
+              spaceBetween: 15,
               slidesOffsetBefore: 30,
               centeredSlides: false,
             },
             480: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              spaceBetween: 15,
+
               centeredSlides: true,
             },
             640: {
@@ -120,9 +121,9 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                 <div className="flex flex-col items-center w-full h-full lg:h-auto">
                   <div
                     className={cn("transition-all duration-500", {
-                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-full ":
+                      "2xl:w-[30.7vw] xl:w-[30vw] lg:w-[34vw] md:w-[38vw] w-[69vw] ":
                         isActive,
-                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-full ":
+                      "2xl:w-[24.7vw] xl:w-[26vw] lg:w-[30vw] md:w-[34vw] w-[69vw] ":
                         !isActive,
                     })}
                   >
@@ -138,9 +139,9 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                       className={cn(
                         "object-cover transition-transform duration-700 w-full! flex flex-col items-center justify-center ",
                         {
-                          "2xl:h-[21.9vw] xl:h-[26vw] lg:h-[25vw] md:h-[28vw] h-[46vw]":
+                          "2xl:h-[21.9vw] xl:h-[25vw] lg:h-[25vw] md:h-[28vw] h-[46vw]":
                             isActive,
-                          "2xl:h-[16.7vw] xl:h-[22vw] lg:h-[21vw] md:h-[24vw] h-[46vw]":
+                          "2xl:h-[16.7vw] xl:h-[21vw] lg:h-[21vw] md:h-[24vw] h-[46vw]":
                             !isActive,
                         }
                       )}
@@ -149,9 +150,9 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
 
                   <div
                     className={cn("flex flex-col h-full lg:h-auto", {
-                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-[76.5vw]":
+                      "2xl:w-[30.7vw] xl:w-[30vw] lg:w-[34vw] md:w-[38vw] w-[69vw]":
                         isActive,
-                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-[70.8vw]":
+                      "2xl:w-[24.7vw] xl:w-[26vw] lg:w-[30vw] md:w-[34vw] w-[69vw]":
                         !isActive,
                     })}
                   >

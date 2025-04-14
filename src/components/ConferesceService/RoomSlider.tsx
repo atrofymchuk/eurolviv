@@ -138,7 +138,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
                       sm:w-[41.67vw] sm:h-[39.06vw]
                       md:w-[36.46vw] md:h-[30.77vw]
                       lg:w-[38.25vw] lg:h-[28.39vw]
-                      xl:w-[38.65vw] xl:h-[31.88vw]
+                      xl:w-[39.2vw] xl:h-[31.88vw]
                       2xl:w-[43.49vw] 2xl:h-[28.96vw]"
                   />
                 </div>
@@ -150,8 +150,8 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
 
       {showNextButton && (
         <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-[5.1vw] flex items-center justify-center 
-                     right-[17vw] lg:right-[13vw] z-10 text-[#8C331B] bg-white absolute top-1/2 
+          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-[6vw] flex items-center justify-center 
+                     right-[17vw] lg:right-[12vw] z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={handleNextClick}
           aria-label="Next slide"

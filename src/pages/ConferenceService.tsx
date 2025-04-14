@@ -15,7 +15,7 @@ export const ConferenceService = () => {
   const lastElementRef = useRef<HTMLDivElement | null>(null);
 
   const sections = halls.flatMap((el, index) => [
-    <About key={cn(`about-${index}`)} item={el} isOnTop={index === 0} />,
+    <About key={cn(`about-${index}`)} item={el} isOnTop={index === 0} index={index} />,
     <Equipment
       key={cn(`equipment-${index}`)}
       icons={el.icons}

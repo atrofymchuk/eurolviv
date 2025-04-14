@@ -21,7 +21,7 @@ export const ConferenceService = () => {
 
       
       <div className="w-[89.7%]">
-        <div className="grid grid-cols-1 md:grid-cols-[29.69%_30.16%_29.74%]   w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-[29.69%_30%_30.6%]   w-full justify-center">
           <div className=" "></div>
           <div className="text-center flex flex-col  items-center justify-center  2xl:mt-33 mt-[76px]">
             <p
@@ -33,7 +33,7 @@ export const ConferenceService = () => {
             <h1
               className={cn(
                 `uppercase text-[12.8vw] md:text-[8.23vw] lg:text-[8.96vw]  text-center 
-             text-[#252526] leading-[81%] tracking-[-0.07em] md:whitespace-nowrap md:mb-0 mt-[13px] xl:text-[9.57vw]   mb-[23px] z-1`,
+             text-[#252526] leading-[81%] tracking-[-0.07em] md:whitespace-nowrap md:mb-0 mt-[13px] xl:text-[9.57vw] mb-[23px] z-1`,
                 {
                   "2xl:text-[8.85vw]": isEng,
                   "2xl:text-[9.6vw]": !isEng,
@@ -53,7 +53,7 @@ export const ConferenceService = () => {
             <div className=" text-center flex items-center justify-center xl:mb-[48px] lg:mb-[32px] md:mb-[24px]">
               <Link
                 to="/conference-service"
-                className={`w-fit md:py-[10px] md:px-[16.5px] bg-[#8c331b] block px-4.25 py-2.5 text-[12px]  xl:text-[16px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${
+                className={`  bg-[#8c331b] flex items-center w-[160px] h-[40px] justify-center text-center text-[12px] xl:w-[165px] xl:text-[14px] hover:bg-[white] text-white hover:text-[#8C331B] border-[#8C331B] border rounded-full uppercase z-1 font-cofo-medium ${
                   isEng ? "lg:w-[165px]" : ""
                 }`}
               >

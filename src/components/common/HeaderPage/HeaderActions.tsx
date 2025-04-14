@@ -31,7 +31,7 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       )}
 
       {showConferenceMenuButton && (
-        <button className="uppercase  hover:bg-[#EDE8E5]  hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border w-fit lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
+        <button className="uppercase  hover:bg-[#EDE8E5]  hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border md:px-[30.5px] md:py-[12.5px] w-fit lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
           {t("buttons.conferenceMenu")}
         </button>
       )}
