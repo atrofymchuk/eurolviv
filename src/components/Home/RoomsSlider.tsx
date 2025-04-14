@@ -10,8 +10,8 @@ import { squareWhite, guestWhite } from "../../store/exportsIcons";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import './HallList.css'
-
+import "./HallList.css";
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 type Room = {
   title: string;
   area: number;
@@ -34,9 +34,10 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
     });
 
     const { t } = useTranslation();
+    const isCustomWidth = useCustomWidth(1530, 1700)
 
     return (
-      <div className="overflow-hidden w-full h-full absolute flex items-center justify-center">
+        <div className="overflow-hidden w-full h-full absolute flex items-center justify-center mt-[40px] xl:mt-[50px]">
         <SwiperComponent
           modules={[Navigation, EffectCoverflow]}
           effect="coverflow"
@@ -54,11 +55,11 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             modifier: 0,
             slideShadows: false,
           }}
-          className="2xl:h-[750px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[407px] flex items-center" 
+          className="2xl:h-[750px] xl:h-[750px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[357px] flex items-center"
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           onSwiper={(swiper) => {
             if (ref) {
-              if (typeof ref === 'function') {
+              if (typeof ref === "function") {
                 ref(swiper);
               } else {
                 ref.current = swiper;
@@ -69,7 +70,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             320: {
               slidesPerView: "auto",
               spaceBetween: 10,
-              slidesOffsetBefore: 40,
+              slidesOffsetBefore: 30,
               centeredSlides: false,
             },
             480: {
@@ -77,16 +78,16 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
               spaceBetween: 5,
               centeredSlides: true,
             },
-            640: { 
+            640: {
               slidesPerView: 1,
               spaceBetween: 5,
               centeredSlides: true,
             },
-            768: { 
+            768: {
               spaceBetween: 10,
               centeredSlides: true,
             },
-            1024: { 
+            1024: {
               spaceBetween: 15,
               centeredSlides: true,
               slidesPerView: 2.5,
@@ -94,34 +95,38 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             },
             1280: {
               slidesPerView: 3.2,
-              spaceBetween: 10,
+              spaceBetween: 20,
               slidesOffsetBefore: 0,
               centeredSlides: true,
               initialSlide: 1,
             },
-            1536: { 
+            1536: {
               slidesPerView: 3.4,
               spaceBetween: 40,
               slidesOffsetBefore: -40,
               centeredSlides: true,
               initialSlide: 1,
-            }
+            },
           }}
         >
           {sliderProps.map((el, index) => {
             const isActive = index === activeIndex;
 
             return (
-              <SwiperSlide key={index} className="h-full flex items-center justify-center">
-                <div className="flex flex-col items-center w-full h-auto">
-                  <div className={cn(
-                    "transition-all duration-500",  
-                    {
-                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-full ": isActive,
-                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-full ": !isActive
-                    }
-                  )}>
-                    <img 
+              <SwiperSlide
+                key={index}
+                className="h-full flex items-center justify-center"
+              >
+                <div className="flex flex-col items-center w-full h-full lg:h-auto">
+                  <div
+                    className={cn("transition-all duration-500", {
+                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-full ":
+                        isActive,
+                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-full ":
+                        !isActive,
+                    })}
+                  >
+                    <img
                       loading="lazy"
                       src={el.src}
                       style={{
@@ -131,26 +136,33 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                       }}
                       alt={`room ${el.title}`}
                       className={cn(
-                        "object-cover transition-transform duration-700 w-full! ",
+                        "object-cover transition-transform duration-700 w-full! flex flex-col items-center justify-center ",
                         {
-                          "2xl:h-[21.9vw] xl:h-[26vw] lg:h-[25vw] md:h-[28vw] h-[46vw]": isActive,
-                          "2xl:h-[16.7vw] xl:h-[22vw] lg:h-[21vw] md:h-[24vw] h-[46vw]": !isActive
+                          "2xl:h-[21.9vw] xl:h-[26vw] lg:h-[25vw] md:h-[28vw] h-[46vw]":
+                            isActive,
+                          "2xl:h-[16.7vw] xl:h-[22vw] lg:h-[21vw] md:h-[24vw] h-[46vw]":
+                            !isActive,
                         }
                       )}
                     />
                   </div>
 
-                  <div className={cn(
-                    "flex flex-col",
-                    {
-                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-[76.5vw]": isActive,
-                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-[70.8vw]": !isActive
-                    }
-                  )}>
-                    <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[24px] lg:pt-[20px] md:pt-[16px] ">
+                  <div
+                    className={cn("flex flex-col h-full lg:h-auto", {
+                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-[76.5vw]":
+                        isActive,
+                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-[70.8vw]":
+                        !isActive,
+                    })}
+                  >
+                    <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px] ">
                       <h4
                         className={cn(
-                          "2xl:text-[32px] w-[90%] 2xl:w-3/4 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
+                          "2xl:text-[32px]  2xl:w-3/4 lg:w-4/5 xl:text-[26px]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
+                          {
+                            "xl:w-[90%] w-[75%]": t(el.title).length > 15,
+                            "!w-[50%] lg:w-fit!": index === 1
+                          }
                         )}
                       >
                         {t(el.title)}
@@ -163,17 +175,19 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                       )}
                     >
                       <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px]">
-                        <img loading="lazy"
+                        <img
+                          loading="lazy"
                           src={squareWhite}
                           alt=""
-                          className="w-[18px] h-[18px]"
+                          className="object-cover w-[18px] h-[18px]"
                         />
                         <p className="uppercase text-[12px] lg:text-[14px] leading-[104%]">
                           {t("home.rooms.area")}: {el.area} M<sup>2</sup>
                         </p>
                       </div>
                       <div className="flex gap-[3px] lg:gap-2 items-center">
-                        <img loading="lazy"
+                        <img
+                          loading="lazy"
                           src={guestWhite}
                           alt=""
                           className="w-[18px] h-[18px]"
@@ -185,18 +199,20 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                     </div>
 
                     <div className="lg:mt-[34px] mt-auto flex justify-center transition-all duration-500">
-                      {(
+                      {
                         <Link
                           to={`/rooms/${el.type}`}
-                          className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                          className={cn(
+                            `border border-[#FFFFFF] uppercase text-[12px] xl:w-[150px] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
                             {
-                              "md:hidden": !isActive
+                              "md:hidden": !isActive,
+                              "xl:w-[170px] xl:h-[47px]": isCustomWidth
                             }
                           )}
                         >
                           {t("buttons.details")}
                         </Link>
-                      )}
+                      }
                     </div>
                   </div>
                 </div>

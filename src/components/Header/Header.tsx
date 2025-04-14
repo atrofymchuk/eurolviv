@@ -125,7 +125,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 className={cn(
                   `uppercase bg-[#8C331B] xl:mt-[22px]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[0.88vw] hover:cursor-pointer hidden lg:flex`,
                   {
-                    "lg:flex hidden": scrolled,
+                    "lg:flex ": scrolled,
                     flex: !scrolled,
                     "lg:w-[145px]": isEng,
                   }
@@ -138,7 +138,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                       className={cn(
                         `uppercase ${
                           index === 1
-                            ? "2xl:flex hidden 2xl:text-[0.88vw] xl:text-[12px]"
+                            ? "lg:flex hidden 2xl:text-[0.88vw] xl:text-[12px]"
                             : ""
                         }`,
                         {

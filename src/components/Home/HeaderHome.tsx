@@ -24,17 +24,17 @@ export const HeaderHome = () => {
         ></div>
 
         <div className="absolute inset-0 flex flex-col  items-center lg:justify-center justify-end text-center text-white z-10 mb-[32px] lg:mb-0">
-          <h4 className=" uppercase leading-[22.68px] font-cofo-medium underline text-[10px] decoration-transparent lg:text-[18px] ">
+          <h4 className=" uppercase  font-cofo-medium underline text-[10px] decoration-transparent lg:text-[18px] ">
             {t("global.createdFor")}
-            <span className="normal-case font-blessed xl:font-extrabold block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
+            <span className="normal-case font-blessed  block text-center text-[13px] xl:text-3xl ml-2 xl:inline">
               {t("global.whereTo")}
             </span>
           </h4>
-          <h1 className=" xl:text-[198px] uppercase text-[48px] font-normal z-20  2xl:text-[289px]  leading-[100%] tracking-[-0.1em] text-center underline decoration-transparent ">
+          <h1 className=" xl:text-[220px] uppercase text-[48px] font-normal z-20  2xl:text-[289px]  leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
             {t("global.eurohotel")}
             
           </h1>
-          <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px]  lg:pt-[6px] pt-[30px]   text-[14px] leading-[17.5px] hidden md:block ">
+          <p className="font-cofo uppercase lg:text-[18px] lg:leading-[22px]  2xl:pt-[31px] xl:mt-[6px] pt-[30px]   text-[14px] leading-[17.5px] hidden md:block ">
             {t("home.header.description.0")}
             <br />
             {t("home.header.description.1")}
