@@ -46,16 +46,16 @@ export const About = memo(({ item, isOnTop }: AboutToProps) => {
         <div className="border-e border-[#C7C7C7] 2xl:flex hidden"></div>
       </div>
 
-      <div className="grid flex-col lg:grid-cols-[63.5%_36.5%] h-auto grid-cols-1 order-7 lg:order-none">
+      <div className="grid flex-col lg:grid-cols-[63.5%_36.5%] h-auto grid-cols-1 order-7 lg:order-none ">
         <div className="h-full border-[#C7C7C7] 2xl:border-e 2xl:border-t overflow-hidden">
           <div>
             <SliderAbout imageSlider={item.swiperImages} isConference={true} />
           </div>
         </div>
-        <div className={cn("flex flex-col lg:items-start md:justify-start justify-center items-center border-t lg:border-s-0 2xl:px-[38px_93px]  2xl:w-auto border-[#C7C7C7] flex-1", {
+        <div className={cn("flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[38px_93px]  2xl:w-auto border-[#C7C7C7] flex-1", {
           "2xl:!px-[38px_33px]": isCustomWidth
         })}>
-          <div className={cn("lg:flex flex-col w-[79.1%] h-full flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto")}>
+          <div className={cn("lg:flex flex-col w-[79.1%] h-full   flex justify-center 2xl:items-center 2xl:w-fit lg:p-0 p-2.5 pb-[40px] pt-[22px] border-x lg:border-x-0 border-[#C7C7C7] 2xl:border-x-0  lg:w-auto")}>
             <div className="lg:hidden">
               <RoomInfo
                 area={item.area}

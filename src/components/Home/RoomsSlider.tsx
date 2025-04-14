@@ -36,7 +36,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
     const { t } = useTranslation();
 
     return (
-      <div className="overflow-hidden w-full h-full absolute ">
+      <div className="overflow-hidden w-full h-full absolute flex items-center justify-center">
         <SwiperComponent
           modules={[Navigation, EffectCoverflow]}
           effect="coverflow"
@@ -54,7 +54,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             modifier: 0,
             slideShadows: false,
           }}
-          className="2xl:h-[650px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[407px] " 
+          className="2xl:h-[750px] xl:h-[650px] lg:h-[570px] md:h-[500px] sm:h-[370px] h-[407px] flex items-center" 
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           onSwiper={(swiper) => {
             if (ref) {
@@ -101,7 +101,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             },
             1536: { 
               slidesPerView: 3.4,
-              spaceBetween: 20,
+              spaceBetween: 40,
               slidesOffsetBefore: -40,
               centeredSlides: true,
               initialSlide: 1,
@@ -112,90 +112,92 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             const isActive = index === activeIndex;
 
             return (
-              <SwiperSlide key={index} className="h-full flex justify-center items-center">
-                <div className={cn(
-                  " transition-all duration-500 ",
-                  {
-                    "2xl:w-[589px] xl:w-[420px] lg:w-[450px] md:w-[380px] w-full ": isActive,
-                    "2xl:w-[475px] xl:w-[380px] lg:w-[400px] md:w-[350px] w-full ": !isActive
-                  }
-                )}>
-                  <img 
-                    loading="lazy"
-                    src={el.src}
-                    style={{
-                      objectFit: "cover",
-                      transition: "transform 0.7s ease-in-out",
-                      width: "100% !important",
-                    }}
-                    alt={`room ${el.title}`}
-                    className={cn(
-                      "object-cover transition-transform duration-700 w-full! ",
-                      {
-                        "2xl:h-[420px] xl:h-[370px] lg:h-[320px] md:h-[290px] h-[168px]": isActive,
-                        "2xl:h-[320px] xl:h-[290px] lg:h-[260px] md:h-[230px] h-[168px]": !isActive
-                      }
-                    )}
-                  />
-                </div>
-
-                <div className={cn(
-                  "flex flex-col h-[167px]",
-                  {
-                    "2xl:w-[589px] xl:w-[420px] lg:w-[450px] md:w-[380px] w-[280px]": isActive,
-                    "2xl:w-[475px] xl:w-[380px] lg:w-[400px] md:w-[350px] w-[259px]": !isActive
-                  }
-                )}>
-                  <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[24px] lg:pt-[20px] md:pt-[16px] pt-[12px]">
-                    <h4
+              <SwiperSlide key={index} className="h-full flex items-center justify-center">
+                <div className="flex flex-col items-center w-full h-auto">
+                  <div className={cn(
+                    "transition-all duration-500",  
+                    {
+                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-full ": isActive,
+                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-full ": !isActive
+                    }
+                  )}>
+                    <img 
+                      loading="lazy"
+                      src={el.src}
+                      style={{
+                        objectFit: "cover",
+                        transition: "transform 0.7s ease-in-out",
+                        width: "100% !important",
+                      }}
+                      alt={`room ${el.title}`}
                       className={cn(
-                        "2xl:text-[32px] 2xl:w-3/4 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
+                        "object-cover transition-transform duration-700 w-full! ",
+                        {
+                          "2xl:h-[21.9vw] xl:h-[26vw] lg:h-[25vw] md:h-[28vw] h-[46vw]": isActive,
+                          "2xl:h-[16.7vw] xl:h-[22vw] lg:h-[21vw] md:h-[24vw] h-[46vw]": !isActive
+                        }
                       )}
-                    >
-                      {t(el.title)}
-                    </h4>
+                    />
                   </div>
 
-                  <div
-                    className={cn(
-                      "flex flex-col items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px]"
-                    )}
-                  >
-                    <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px]">
-                      <img loading="lazy"
-                        src={squareWhite}
-                        alt=""
-                        className="w-[18px] h-[18px]"
-                      />
-                      <p className="uppercase text-[12px] lg:text-[14px] leading-[104%]">
-                        {t("home.rooms.area")}: {el.area} M<sup>2</sup>
-                      </p>
-                    </div>
-                    <div className="flex gap-[3px] lg:gap-2 items-center">
-                      <img loading="lazy"
-                        src={guestWhite}
-                        alt=""
-                        className="w-[18px] h-[18px]"
-                      />
-                      <p className="uppercase text-[12px] lg:text-[14px] leading-[104%]">
-                        {t("home.rooms.guests")}: {el.guests}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="lg:mt-[34px] mt-auto flex justify-center transition-all duration-500">
-                    {(
-                      <Link
-                        to={`/rooms/${el.type}`}
-                        className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
-                          {
-                            "md:hidden": !isActive
-                          }
+                  <div className={cn(
+                    "flex flex-col",
+                    {
+                      "2xl:w-[30.7vw] xl:w-[32vw] lg:w-[34vw] md:w-[38vw] w-[76.5vw]": isActive,
+                      "2xl:w-[24.7vw] xl:w-[28vw] lg:w-[30vw] md:w-[34vw] w-[70.8vw]": !isActive
+                    }
+                  )}>
+                    <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[24px] lg:pt-[20px] md:pt-[16px] ">
+                      <h4
+                        className={cn(
+                          "2xl:text-[32px] w-[90%] 2xl:w-3/4 lg:w-4/5 xl:text-[26px] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500"
                         )}
                       >
-                        {t("buttons.details")}
-                      </Link>
-                    )}
+                        {t(el.title)}
+                      </h4>
+                    </div>
+
+                    <div
+                      className={cn(
+                        "flex flex-col items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px]"
+                      )}
+                    >
+                      <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px]">
+                        <img loading="lazy"
+                          src={squareWhite}
+                          alt=""
+                          className="w-[18px] h-[18px]"
+                        />
+                        <p className="uppercase text-[12px] lg:text-[14px] leading-[104%]">
+                          {t("home.rooms.area")}: {el.area} M<sup>2</sup>
+                        </p>
+                      </div>
+                      <div className="flex gap-[3px] lg:gap-2 items-center">
+                        <img loading="lazy"
+                          src={guestWhite}
+                          alt=""
+                          className="w-[18px] h-[18px]"
+                        />
+                        <p className="uppercase text-[12px] lg:text-[14px] leading-[104%]">
+                          {t("home.rooms.guests")}: {el.guests}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="lg:mt-[34px] mt-auto flex justify-center transition-all duration-500">
+                      {(
+                        <Link
+                          to={`/rooms/${el.type}`}
+                          className={cn(`border border-[#FFFFFF] uppercase text-[12px] text-center xl:text-[16px] font-cofo-medium w-fit lg:w-[170px] px-[20.5px] py-[10px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                            {
+                              "md:hidden": !isActive
+                            }
+                          )}
+                        >
+                          {t("buttons.details")}
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

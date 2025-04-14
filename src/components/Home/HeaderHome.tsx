@@ -1,9 +1,10 @@
-import { t } from "i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { headerHome } from "../../store/exportsImg";
 import { HeaderBookingForm } from "../common/Form/HeaderBookingForm";
 import { RoofServiceMobile } from "./RoofServiceMobile";
+import { useTranslation } from "react-i18next";
 export const HeaderHome = () => {
+  const {t} = useTranslation();
   return (
     <div>
       <div className="w-full relative">

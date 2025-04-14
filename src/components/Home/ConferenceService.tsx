@@ -31,22 +31,22 @@ export const ConferenceService = () => {
             </p>
             <h1
               className={cn(
-                `uppercase text-[48px] md:text-[62px] lg:text-[76px] xl:text-[100px] text-center 
-             text-[#252526] leading-[81%] tracking-[-0.07em] md:whitespace-nowrap md:mb-0 mt-[13px]  mb-[23px] z-1`,
+                `uppercase text-[12.8vw] md:text-[8.23vw] lg:text-[8.96vw] xl:text-[9.21vw] text-center 
+             text-[#252526] leading-[81%] tracking-[-0.07em] md:whitespace-nowrap md:mb-0 mt-[13px]   mb-[23px] z-1`,
                 {
-                  "2xl:text-[170px]": isEng,
-                  "2xl:text-[185px]": !isEng,
+                  "2xl:text-[8.85vw]": isEng,
+                  "2xl:text-[9.64vw]": !isEng,
                 }
               )}
             >
               {t("home.conferenceService.title")}
             </h1>
             <p
-              className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] xl:text-[20px] text-[#252526] leading-[120%]
+              className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] lg:mt-[20px] xl:text-[20px] text-[#252526] leading-[120%]
              2xl:w-[640px] xl:w-[540px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
             >
               {t("home.conferenceService.desc.0")}
-              <br className="hidden md:block"/>
+              <br className="hidden md:block" />
               {t("home.conferenceService.desc.1")}
             </p>
             <div className=" text-center flex items-center justify-center xl:mb-[48px] lg:mb-[32px] md:mb-[24px]">

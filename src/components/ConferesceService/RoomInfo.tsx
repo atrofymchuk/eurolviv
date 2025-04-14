@@ -11,7 +11,7 @@ type RoomInfoToProps = {
 export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) => {
   const { t } = useTranslation();
   return (
-    <div className="pe-8 space-y-1 flex flex-col ">
+      <div className="pe-8 space-y-1 flex flex-col ">
       <div className="flex items-center gap-1">
         <img loading="lazy"
           src={floor}

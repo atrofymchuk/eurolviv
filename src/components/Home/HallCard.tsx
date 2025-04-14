@@ -26,8 +26,8 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
           alt={hall.title}
           className={cn(
             index === 1
-              ? "2xl:w-[667px] 2xl:h-[445px] xl:w-[430px] xl:h-[327px] lg:w-[370px] lg:h-[290px] md:w-[300px] md:h-[233px] w-[334px] h-[223px]"
-              : "2xl:w-[382px] 2xl:h-[256px] xl:w-[339px] xl:h-[200px] lg:w-[250px] lg:h-[194px] md:w-[200px] md:h-[113px] w-[334px] h-[223px]"
+              ? "2xl:w-[36.7vw] 2xl:h-[23.2vw] xl:w-[31.4vw] xl:h-[23vw] lg:w-[34.3vw] lg:h-[23.2vw] md:w-[32.6vw] md:h-[18.1vw] w-[91.2vw] h-[60.9vw]"
+              : "2xl:w-[19.9vw] 2xl:h-[13.3vw] xl:w-[22.7vw] xl:h-[15.4vw] lg:w-[20.3vw] lg:h-[15.4vw] md:w-[22.4vw] md:h-[12.9vw] w-[91.2vw] h-[60.9vw]"
           )}
         />
       </InViewWrapper>
