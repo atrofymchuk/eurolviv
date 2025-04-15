@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+  .custom-md-font {
+    font-family: 'CoFoSans-Medium', sans-serif;
+  }
+} 

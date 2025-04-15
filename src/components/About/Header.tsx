@@ -25,24 +25,24 @@ const isEng = i18n.language === "en";
         />
       </InViewWrapper>
 
-      <h4 className="font-cofo text-[#FFFFFF] z-10  uppercase leading-[22.68px] font-cofo-medium lg:text-[18px] underline text-sm decoration-transparent items-center xl:mb-4">
+      <h4 className="font-cofo text-[#FFFFFF] z-10  uppercase leading-[22.68px] font-cofo-medium lg:text-[18px] underline text-[10px] decoration-transparent items-center xl:mb-5.25">
         {t("global.createdFor")}
-        <span className="font-blessed xl:font-extrabold normal-case block text-center text-[13px] xl:text-[32px] ml-2 xl:inline ">
+        <span className="font-blessed  normal-case block text-center text-[13px] xl:text-[32px] xl:inline ">
           {t("global.whereTo")}
         </span>
       </h4>
 
-      <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.1em] text-center underline decoration-transparent ">
+      <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] pt-[5px] lg:pt-0 leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
       </h1>
-      <h4 className="font-cofo md:text-[18px] text-[14px] uppercase w-[300px] lg:w-fit z-10  text-white leading-[22.68px] text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
+      <h4 className="font-cofo md:text-[18px] text-[14px] uppercase w-[300px] lg:w-fit z-10  text-white  text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
         {t("about.header.desc.0")}
-        <span className={`${isEng ? "" : " font-cofo-medium"} xl:block text-[18px] uppercase leading-[22.68px] text-center underline-offset-[from-font] decoration-none hidden`}>
+        <span className={`${isEng ? "" : " font-cofo-medium"} xl:block text-[18px] uppercase  text-center underline-offset-[from-font] decoration-none hidden`}>
           {t("about.header.desc.1")}
         </span>
       </h4>
       <BookLink
-        className="text-[#252526] mt-4 xl:mt-[33px]   bg-[#EDE8E5] xl:px-[47px] w-[171px] text-center lg:w-[204px]"
+        className="text-[#252526] mt-7.5 xl:mt-[33px] text-[12px]  bg-[#EDE8E5] xl:px-[47px] w-[171px] text-center lg:w-[204px]"
         to={"/booking"}
       >
         {t("buttons.book")}
