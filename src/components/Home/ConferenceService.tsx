@@ -21,7 +21,7 @@ export const ConferenceService = () => {
 
       
       <div className="w-[89.7%]">
-        <div className="grid grid-cols-1 md:grid-cols-[29.69%_30%_30.6%]   w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-[29.69%_33%_30.6%]   w-full justify-center">
           <div className=" "></div>
           <div className="text-center flex flex-col  items-center justify-center  2xl:mt-33 mt-[76px]">
             <p
@@ -43,8 +43,8 @@ export const ConferenceService = () => {
               {t("home.conferenceService.title")}
             </h1>
             <p
-              className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] lg:mt-[20px] xl:text-[1.2vw]  2xl:text-[1.1vw] text-[#252526] leading-[120%]
-             2xl:w-[55vw] xl:w-[560px] lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px]"
+              className="uppercase mb-[30px] xl:mb-6 text-[14px] md:text-[16px] lg:text-[18px] xl:mt-[33px] lg:mt-[20px] xl:text-[1.05vw]  2xl:text-[1.05vw] text-[#252526] leading-[120%]
+             2xl:w-full xl:w-full lg:w-[440px] md:w-[380px] w-[300px] z-2 2xl:mt-[62px] lg:whitespace-nowrap"
             >
               {t("home.conferenceService.desc.0")}
               <br className="hidden md:block" />

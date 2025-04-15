@@ -14,10 +14,9 @@
   background: linear-gradient(180deg,#242425,#0000 97.05%)
 }
 
-/* Стилі для фіксованої висоти, які допоможуть запобігти CLS */
 @media (max-width: 767px) {
   .footer-height-fixed {
-    min-height: 1380px !important;
+    min-height: 1400px !important;
   }
 }
 

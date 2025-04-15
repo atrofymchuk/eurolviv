@@ -10,6 +10,7 @@ export const AboutHome = () => {
   const isEng = i18n.language === "en";
   const isCustomWidth = useCustomWidth(1530, 1700);
   const isMobileWidthSecondary = useCustomWidth(414, 480);
+  const isMobileWidthThird = useCustomWidth(390, 413);
 
   return (
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">
@@ -49,19 +50,19 @@ export const AboutHome = () => {
             </p>
           </div>
 
-          <div className="p-4 ps-[14px] flex  md:hidden">
-            <div>
+          <div className={` py-[20px]  flex  md:hidden ${isMobileWidthSecondary ? "p-6" : "p-[14px]"}`}>
+            <div className="">
               <p className="md:text-[14px] uppercase font-cofo-medium text-[10px] pe-[2px] w-[90%]">
                 {t("home.about.aboutRooms.0")}
               </p>
             </div>
-            <div>
-              <p className={`md:text-[14px] uppercase font-cofo-medium text-[10px]  pe-[15px] ${isMobileWidthSecondary ? "w-[80%]" : "w-[90%]"}`}>
+            <div >
+              <p className={`md:text-[14px] uppercase font-cofo-medium text-[10px] ps-[10px] pe-[13px] ${isMobileWidthSecondary ? "w-[90%]" : "w-[99%]"} ${isMobileWidthThird ? "w-[95%]!" : ""}`}>
                 {t("home.about.aboutRooms.1")}
               </p>
             </div>
-            <div>
-              <p className={`md:text-[14px] uppercase font-cofo-medium text-[10px]  ${isMobileWidthSecondary ? "w-[80%]" : "w-[90%]"}`}>
+            <div className="flex justify-end">
+              <p className={`md:text-[14px] uppercase font-cofo-medium text-[10px]  ${isMobileWidthSecondary ? "w-[90%]" : "w-[95%]"}`}>
                 {t("home.about.aboutRooms.2")}
               </p>
             </div>

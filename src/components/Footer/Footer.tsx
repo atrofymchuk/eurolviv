@@ -28,20 +28,25 @@ export const Footer = () => {
 
   return (
     <div className="footer-height-fixed relative w-full overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10" style={{ minHeight: '200px' }}></div>
-      
-      <div className="absolute top-[200px] left-0 w-full footer-gradient z-[5]" 
-           style={{ height: 'calc(100% - 200px)' }}></div>
+      <div
+        className="absolute top-0 left-0 w-full h-[200px] bg-[#242425] z-10"
+        style={{ minHeight: "200px" }}
+      ></div>
+
+      <div
+        className="absolute top-[200px] left-0 w-full footer-gradient z-[5]"
+        style={{ height: "calc(100% - 200px)" }}
+      ></div>
 
       <InViewWrapper>
-        <img 
+        <img
           loading="lazy"
           src={footer}
           alt="Background"
           width="1920"
           height="1080"
           className="absolute top-0 left-0 w-full h-[120%] object-cover z-0"
-          style={{ minHeight: '1080px' }}
+          style={{ minHeight: "1080px" }}
         />
       </InViewWrapper>
 
@@ -54,24 +59,50 @@ export const Footer = () => {
                   <div className="space-y-3 lg:w-full w-[180px]">
                     <ul className="lg:space-y-[11px] space-y-[7px] 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase underline lg:no-underline tracking-[0.09em]">
                       <li className="font-cofo-medium">
-                        <Link to="/about" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.about")}</Link>
+                        <Link
+                          to="/about"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
+                          {t("footer.about")}
+                        </Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/rooms" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.rooms")}</Link>
+                        <Link
+                          to="/rooms"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
+                          {t("footer.rooms")}
+                        </Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/conference-service" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
+                        <Link
+                          to="/conference-service"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
                           {t("footer.conferenceServices")}
                         </Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/restaurant" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.restaurant")}</Link>
+                        <Link
+                          to="/restaurant"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
+                          {t("footer.restaurant")}
+                        </Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/terrace" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.terrace")}</Link>
+                        <Link
+                          to="/terrace"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
+                          {t("footer.terrace")}
+                        </Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/special-offers" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
+                        <Link
+                          to="/special-offers"
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
                           {t("footer.specialOffers")}
                         </Link>
                       </li>
@@ -96,7 +127,7 @@ export const Footer = () => {
                           target="_blank"
                           className="rounded-full hover:cursor-pointer"
                         >
-                          <img 
+                          <img
                             loading="lazy"
                             src={instagram}
                             alt="instagram"
@@ -137,9 +168,7 @@ export const Footer = () => {
                       placeholder={t("footer.email")}
                       className="bg-[#B5B5B52B] lg:py-[13px] lg:ps-[21px] w-full py-2.25 px-3 mb-2.5 rounded-full font-cofo mt-4.25 lg:mt-[22px]"
                     />
-                    <button
-                      className="bg-[#A47762] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] hover:text-[#A47762] py-2 px-6 rounded-full lg:text-[18px] block w-full font-cofo hover:cursor-pointer"
-                    >
+                    <button className="bg-[#A47762] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] hover:text-[#A47762] py-2 px-6 rounded-full lg:text-[18px] block w-full font-cofo hover:cursor-pointer">
                       {t("buttons.send")}
                     </button>
                   </div>

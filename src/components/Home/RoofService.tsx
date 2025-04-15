@@ -26,7 +26,7 @@ export const RoofService = () => {
               <div
                 className={`${
                   index === 2 ? "h-[2484px] " : ""
-                } absolute inset-0  bg-gradient-to-b from-[#252526] to-transparent`}
+                } absolute inset-0  bg-gradient-to-b bg-[#000000]/19`}
               ></div>
               <img loading="lazy"
                 src={item.img}

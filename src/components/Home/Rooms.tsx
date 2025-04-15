@@ -58,10 +58,10 @@ export const RoomsHome = () => {
         </h1>
         <div className="flex flex-col w-full h-full items-center lg:items-start lg:justify-center ">
           <div className="z-4 ">
-            <div className="flex md:flex-row lg:ps-[5.56vw] md:ps-[5.86vw] flex-col text-start items-center md:items-start 2xl:items-start relative 2xl:h-[10.42vw] xl:h-[9.9vw] lg:h-[12.5vw] md:h-[14.65vw] sm:h-[16.93vw]">
+            <div className="flex md:flex-row lg:ps-[5.56vw] 2xl:ps-[5.3vw] md:ps-[5.86vw] flex-col text-start items-center md:items-start 2xl:items-start relative 2xl:h-[10.42vw] xl:h-[9.9vw] lg:h-[12.5vw] md:h-[14.65vw] sm:h-[16.93vw]">
               <div className="md:absolute flex md:flex-row items-center flex-col pt-[4.27vw] md:pt-[3.42vw] xl:pt-[1.8vw]  space-y-[8vw] md:space-y-0 text-center md:text-start md:gap-[1.95vw] xl:gap-x-[3.13vw] md:hidden lg:flex">
                 <p
-                  className="uppercase 2xl:w-[22.55vw] xl:w-[20.83vw] px-[6.4vw] lg:w-[22.92vw] md:w-[34.18vw] sm:w-[37.11vw] lg:px-0 
+                  className="uppercase 2xl:w-[22vw] xl:w-[20.83vw] px-[6.4vw] lg:w-[22.92vw] md:w-[34.18vw] sm:w-[37.11vw] lg:px-0 
                   text-[3.2vw] sm:text-[2.08vw] md:text-[1.27vw] lg:text-[0.97vw] xl:text-[0.78vw] 2xl:text-[0.83vw]
                   text-[#E9E9E9]"
                 >
