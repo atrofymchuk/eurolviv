@@ -148,7 +148,7 @@
             "review":"review",
             "reviewAbout":"guest",
             "about":["About", "the", "restaurant"],
-            "desc2":"The story of our restaurant is shaped by your experiences.Thank you for sharing them with us."
+            "desc2":["The story of our restaurant is shaped by your experiences.","Thank you for sharing them with us."]
     },
     "rooms":{
             "rooms":"rooms",

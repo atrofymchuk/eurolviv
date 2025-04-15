@@ -3,22 +3,22 @@ import { ReviewSliderCard } from "./ReviewSliderCard";
 import { forwardRef } from "react";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 import cn from "classnames";
-
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 export const ReviewSlider = forwardRef<Slider>((_, ref) => {
   const { restaurantReviews } = usePagesInfoStore();
-  
+  const isCustomWidth = useCustomWidth(389, 410)
   const settings = {
     infinite: true,
     speed: 500,
     rows: 1,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     variableWidth: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           variableWidth: true,
         },
@@ -39,13 +39,16 @@ export const ReviewSlider = forwardRef<Slider>((_, ref) => {
     <div className="flex flex-col md:items-end items-center justify-end w-full overflow-hidden">
       <div
         className={cn(
-          " md:w-[96.5%] w-[89.1%] sm:w-[89.1%] xl:w-[96.55%] 2xl:h-[458px] xl:h-[458px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#B3B3B3] "
+          " md:w-[96.5%]  sm:w-[89.1%] xl:w-[96.6%] 2xl:w-[96.55%] 2xl:h-[458px] xl:h-[408px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#B3B3B3] ",{
+            "w-[89%]": !isCustomWidth,
+            "w-[89.4%]": isCustomWidth
+          }
         )}
       >
         <div className="slider-container overflow-visible">
           <Slider {...settings} ref={ref}>
-            {restaurantReviews.map((el) => (
-              <ReviewSliderCard img={el.img} key={el.id} />
+            {restaurantReviews.map((el, index) => (
+              <ReviewSliderCard img={el.img} key={el.id} index={index} />
             ))}
           </Slider>
         </div>
