@@ -207,7 +207,7 @@ export interface MenuItem {
 export interface PagesInfo {
   hotelInfo: { icon: string; text: string }[];
   services: { icon: string; text: string }[];
-  concepts: { title: string[]; img: string; alt: string; text: string }[];
+  concepts: { title: string[]; img: string; alt: string; text: string[] }[];
   places: string[][];
   infrastructure: string[][];
   reviews: Reviews;

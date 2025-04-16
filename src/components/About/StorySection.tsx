@@ -11,18 +11,20 @@ export const StorySection = () => {
   const isCustomWidth = useCustomWidth(1500, 1700);
   const isCustomMobile = useCustomWidth(390, 414);
   const isCustomSecondaryMobile = useCustomWidth(415, 440);
-  
+  const isCustomUltraHD = useCustomWidth(1950, 3000);
+
   return (
     <section className="flex justify-center items-center flex-col w-full ">
       <div className="fluid-container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-[74.42%_25.58%] items-center justify-center w-full max-w-[89.58%]">
         <div
-          className={`border-b  border-[#C7C7C7]
-         pt-[50px] sm:pt-[60px] md:pt-[100px] 2xl:pt-[130px]  2xl:h-[384px] p-4 lg:pb-0 
+          className={`border-b  border-[#C7C7C7] justify-end flex flex-col
+         pt-[50px] sm:pt-[60px] md:pt-[100px] 2xl:pt-[130px]  2xl:h-[20vw] p-4 lg:pb-0 
+         ${isCustomUltraHD ? "2xl:pe-[1.5vw]" : "2xl:pe-[1.2vw]"}
           text-center lg:text-left ${isCustomWidth ? "xl:h-[300px]" : "xl:h-[280px]"}`}
         >
           <h1
             className={cn(
-              `text-[8.53vw]  md:text-[48px] lg:text-[60px]  2xl:text-[100px] font-normal
+              `text-[8.53vw]  md:text-[48px] lg:text-[60px]  2xl:text-[5.208vw] font-normal
                     leading-[81%]   tracking-[-0.07em] uppercase text-[#242425]`,
               {
                 "xl:text-[80px]": isCustomWidth,
@@ -41,7 +43,7 @@ export const StorySection = () => {
             >
               <h1
                 className={cn(
-                  "text-[8.53vw]  md:text-[48px] lg:text-[60px] leading-[81%] tracking-[-0.07em] 2xl:text-[100px] whitespace-nowrap",
+                  "text-[8.53vw]  md:text-[48px] lg:text-[60px] leading-[81%] tracking-[-0.07em] 2xl:text-[5.208vw] whitespace-nowrap",
                   {
                     "xl:text-[79.5px]": isCustomWidth,
                     "xl:text-[65.4px] 2xl:self-auto xl:self-end": !isCustomWidth,

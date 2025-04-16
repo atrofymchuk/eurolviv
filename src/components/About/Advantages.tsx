@@ -5,28 +5,41 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 import { BookLink } from "../Buttons/BookLink";
-
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 export const Advantages = () => {
   const { t } = useTranslation();
-  const {hotelInfo,services} = usePagesInfoStore()
-
+  const { hotelInfo, services } = usePagesInfoStore();
+  const isCustomWidth = useCustomWidth(1500, 1700);
 
   return (
     <section className="flex justify-center items-center bg-[#A47762]  *:font-cofo">
-      <div className="container mx-auto border-x border-[#C29986] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 items-center xl:h-[684px] max-w-[89.58%] gap-0">
-        <div className="h-full  flex lg:justify-start sm:justify-center">
+      <div className={`container mx-auto border-x border-[#C29986] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 items-center 2xl:h-[35.625vw]  max-w-[89.58%] gap-0 ${isCustomWidth ? "xl:h-[584px]" : "xl:h-[500px]"}`}>
+        <div className="h-full  flex md:justify-start sm:justify-center">
           <div className="flex flex-col xl:ps-[21px] ps-[16px] sm:items-center  lg:items-start lg:text-start">
-            <h1 className="uppercase text-[32px] xl:text-[48px] tracking-[-0.05em] leading-[100%] md:w-2/3 text-[#FFFFFF] pt-[34px] xl:pt-[86px]">
+            <h1
+              className={`uppercase text-[8.533vw] md:text-[32px] 2xl:text-[2.5vw] tracking-[0.02em] lg:tracking-[-0.05em] leading-[100%] md:w-2/3 text-[#FFFFFF] pt-[34px] 2xl:pt-[4.479vw] xl:pt-[60px] ${
+                isCustomWidth ? "xl:text-[40px]" : "xl:text-[32px]"
+              }`}
+            >
               {t("about.advantages.title")}
             </h1>
-            <ul className="uppercase pt-[29px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] tracking-tighter xl:text-xl gap-y-[4px] gap-[6px] lg:gap-[9px]">
+            <ul
+              className={`uppercase pt-[29px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF] text-[3.733vw] 2xl:text-[1.042vw] xl:gap-y-1 gap-y-[2px] gap-[6px] 2xl:gap-[9px] ${
+                isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
+              }`}
+            >
               {hotelInfo.map(({ icon, text }, index) => (
                 <li
                   key={index}
                   className="flex items-center gap-1.5 lg:self-end "
                 >
                   <InViewWrapper>
-                    <img loading="lazy" className="xl:w-[38px] xl:h-[38px] w-[20px] h-[20px]" src={icon} alt={text} />
+                    <img
+                      loading="lazy"
+                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px] ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}`}
+                      src={icon}
+                      alt={text}
+                    />
                   </InViewWrapper>
                   {t(text)}
                 </li>
@@ -35,41 +48,72 @@ export const Advantages = () => {
           </div>
         </div>
 
-        <div className="lg:hidden flex justify-center py-[32px_73px]  px-[16px] w-full">
+        <div className="lg:hidden flex justify-center py-[32px_73px]  px-[16px_14px] w-full">
           <InViewWrapper>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={advantages}
               alt="advantages"
-              className=" h-[311px] w-full"
+              className=" h-[311px] w-[81.067vw]"
             />
           </InViewWrapper>
         </div>
 
         <div className="h-full  w-full lg:border-x  pb-[47px] lg:pb-0 border-[#C29986]">
-          <div className="flex flex-col ps-[16px] xl:ps-[45px] sm:items-center lg:items-start">
-            <h1 className="uppercase text-[32px]  xl:text-[48px] tracking-[-0.05em] leading-[100%] w-full md:w-2/3 text-[#FFFFFF] md:pt-[18px] xl:pt-[86px] xl:text-left">
-              {t("about.advantages.title2")}
+          <div className="flex flex-col ps-[16px] 2xl:ps-[45px] xl:ps-[2.515625vw] sm:items-center md:items-start">
+            <h1
+              className={`uppercase text-[8.533vw]  md:text-[32px]  2xl:text-[2.5vw] tracking-[-0.02em] lg:tracking-[-0.05em] leading-[100%]  md:w-2/3 text-[#FFFFFF] md:pt-[18px] 2xl:pt-[4.479vw] xl:pt-[60px] xl:text-left ${
+                isCustomWidth ? "xl:text-[40px]" : "xl:text-[32px]"
+              }`}
+            >
+              {t("about.advantages.title2").split(" ")[0]}<br className="lg:hidden"/> {t("about.advantages.title2").split(" ").slice(1).join(" ")}
             </h1>
-            <ul className="uppercase pt-[30px] xl:pt-[52px] text-[#FFFFFF] text-[14px] xl:text-[20px] gap-y-[4px] ">
+            <ul
+              className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF] text-[3.733vw] 2xl:text-[1.042vw]  xl:gap-y-1 gap-y-[2px] ${
+                isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
+              }`}
+            >
               {services.map(({ icon, text }, index) => (
-                <li key={index} className="flex items-center  gap-[6px] lg:gap-[9px]">
+                <li
+                  key={index}
+                  className="flex items-center  gap-x-[6px] lg:gap-[9px]"
+                >
                   <InViewWrapper>
-                    <img loading="lazy" className=" xl:w-[38px] xl:h-[38px] w-[20px] h-[20px] " src={icon} alt={text} />
+                    <img
+                      loading="lazy"
+                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px] ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}`}
+                      src={icon}
+                      alt={text}
+                    />
                   </InViewWrapper>
                   {t(text)}
                 </li>
               ))}
             </ul>
-              <BookLink className="hidden lg:w-[204px] justify-center lg:flex uppercase bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] lg:mt-[25px]" to={"/booking"}>{t("buttons.bookRoom")}</BookLink>
+            <BookLink
+              className={`hidden lg:w-[204px] lg:px-0 2xl:w-[10.625vw] 2xl:h-[2.292vw] items-center xl:p-0 justify-center lg:flex uppercase
+               bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] lg:mt-[25px] 2xl:mt-[1.302vw]
+               2xl:text-[0.729vw]!
+               ${isCustomWidth ? "xl:w-[204px]" : "xl:w-[14vw] xl:text-[12px]!"}
+               `}
+              to={"/booking"}
+            >
+              {t("buttons.bookRoom")}
+            </BookLink>
           </div>
         </div>
 
         <div className="hidden lg:flex  h-full justify-center items-center p-4">
           <InViewWrapper>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={advantages}
               alt="advantages"
-              className="w-[95%] h-auto max-w-[400px] xl:max-w-[496px] max-h-[400px] xl:max-h-[509px] object-contain"
+              className={`w-[95%] 2xl:w-[25.833vw] 2xl:max-w-none  2xl:h-[26.51vw] h-auto max-w-[400px] xl:max-h-none  max-h-[400px]  object-contain ${
+                isCustomWidth
+                  ? "xl:w-[496px] xl:h-[509px]"
+                  : "xl:w-[350px] xl:h-[350px]"
+              }`}
             />
           </InViewWrapper>
         </div>

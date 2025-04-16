@@ -247,7 +247,7 @@ export  const concepts = [
       ],
       img: roomLux,
       alt: "bedroom",
-      text: "about.concepts.frstCard.desc",
+      text: ["about.concepts.frstCard.desc.0", "about.concepts.frstCard.desc.1"],
     },
     {
       title: [
@@ -256,7 +256,7 @@ export  const concepts = [
       ],
       img: terasse,
       alt: "terrace",
-      text: "about.concepts.secondCard.desc",
+      text: ["about.concepts.secondCard.desc.0"],
     },
     {
       title: [
@@ -265,7 +265,7 @@ export  const concepts = [
       ],
       img: bussines,
       alt: "conference",
-      text: "about.concepts.thirdCard.desc",
+      text: ["about.concepts.thirdCard.desc.0", "about.concepts.thirdCard.desc.1", "about.concepts.thirdCard.desc.2", "about.concepts.thirdCard.desc.3"],
     },
     {
       title: [
@@ -274,6 +274,6 @@ export  const concepts = [
       ],
       img: bar,
       alt: "karaoke",
-      text: "about.concepts.fourthCard.desc",
+      text: ["about.concepts.fourthCard.desc.0", "about.concepts.fourthCard.desc.1", "about.concepts.fourthCard.desc.2",],
     },
   ];

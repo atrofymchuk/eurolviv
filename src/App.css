@@ -41,6 +41,17 @@
 }
 
 
+@media (width > 1529px) and (width < 1700px) {
+  .img > .slick-list >.slick-track>.slick-slide > div {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    height: 500px !important;
+    padding: 0px;
+  }
+  
+}
+
 @media (width > 1041px) {
   .roomslider > .slick-list {
       width: 2000px !important;
@@ -58,11 +69,6 @@
   overflow-y: hidden !important;
 }
 
-@media (width > 768px) {
-  
-
-}
-
 @media(max-width:1024px){
 
   .img > .slick-list >.slick-track>.slick-slide > div {
@@ -73,6 +79,16 @@
       }
 }
 
+
+@media (width > 1279px) and (width < 1529px) {
+  .img > .slick-list >.slick-track>.slick-slide > div {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    height: 400px;
+    padding: 0px;
+  }
+}
 
 
 @media (max-width: 768px) {

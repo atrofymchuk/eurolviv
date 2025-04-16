@@ -15,8 +15,9 @@ import {
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
-const slides = [
-    mirrorAboutSlider,
+import { useCustomWidth } from "../Hooks/useCustomWidth";
+  const slides = [
+  mirrorAboutSlider,
   champagneAboutSlider,
   bedroomAboutSlider,
   bathroomAboutSlider,
@@ -25,7 +26,7 @@ const slides = [
 
 const ImageSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
+const isCustomWidth = useCustomWidth(1500, 1700);
   const settings = {
     infinite: true,
     centerMode: true,
@@ -33,6 +34,20 @@ const ImageSlider = () => {
     slidesToShow: 3,
     arrows: false,
     responsive: [
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "11%",
+        },
+      },
+      {
+        breakpoint: 1530,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "8%",
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -44,7 +59,7 @@ const ImageSlider = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: "25%",
+          centerPadding: "22%",
         },
       },
     ],
@@ -60,32 +75,39 @@ const ImageSlider = () => {
         {slides.map((image, index) => {
           const totalSlides = slides.length;
           const isActive = activeSlide === index;
-          
+
           const normalizedDiff = Math.min(
             Math.abs(activeSlide - index),
             Math.abs(activeSlide - index + totalSlides),
             Math.abs(activeSlide - index - totalSlides)
           );
-          
+
           const isSide = normalizedDiff === 1;
           const isEdge = normalizedDiff > 1;
 
           return (
             <InViewWrapper key={index}>
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src={image}
                 alt={`slide_${index}`}
-                className={cn(`w-full max-w-[500px]  object-cover  transition-all duration-500  px-2
-              
-            `,
-            {
-                    "2xl:w-[510px] 2xl:h-[700px] xl:w-[390px] xl:h-[500px] w-[290px] lg:w-[350px] lg:h-[400px] md:h-[300px] max-h-full h-5/6 z-10 scale-[105%] lg:scale-[100%]":
+                className={cn(
+                  `w-full object-cover transition-all duration-500  px-2 lg:px-0`,
+                  {
+                    "2xl:w-[510px] 2xl:h-[574px]    lg:w-[350px] lg:h-[400px] md:h-[300px] h-full z-10 scale-[105%] lg:scale-[100%] ":
                       isActive,
-                    "2xl:w-[530px] 2xl:h-[353px] xl:w-[370px] xl:h-[253px] lg:w-[300px] lg:h-[213px] w-[231px] h-[154px] z-5":
+                    "2xl:w-[530px] 2xl:h-[353px]  lg:w-[300px] lg:h-[213px]  h-[154px] z-5 ":
                       isSide,
-                    "2xl:w-[514px] 2xl:h-[316px] xl:w-[370px] xl:h-[216px] w-[231px] h-[154px] lg:w-[250px] lg:h-[194px]":
+                    "2xl:w-[514px] 2xl:h-[316px]   h-[154px] lg:w-[250px] lg:h-[194px] ":
                       isEdge,
-                  }
+                      "xl:w-[40vw] xl:h-[500px]":isActive && isCustomWidth,
+                      "xl:w-[37vw] xl:h-[410px]":isActive && !isCustomWidth,
+                      "xl:w-[26.469vw] xl:h-[283px]":isSide && isCustomWidth,
+                      "xl:w-[26.469vw] xl:h-[253px]":isSide && !isCustomWidth,
+                      "xl:w-[27.469vw] xl:h-[246px]":isEdge && isCustomWidth,
+                      "xl:w-[27.469vw] xl:h-[216px]":isEdge && !isCustomWidth,
+
+                    }
                 )}
               />
             </InViewWrapper>
@@ -94,19 +116,21 @@ const ImageSlider = () => {
       </Slider>
 
       <button
-        className="xl:absolute left-40 -bottom-20  xl:bottom-4  xl:block justify-center text-[#8C331B]  hidden border-[#8C331B] w-[62px] h-[62px] bg-white p-3 rounded-full border z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+        className={`xl:absolute left-40 -bottom-20  2xl:bottom-[-0.5vw]  2xl:left-[8.5vw] xl:bottom-[0vw] xl:left-[8.7vw]
+          xl:flex  items-center justify-center text-[#8C331B]  hidden border-[#8C331B] 2xl:w-[62px] 2xl:h-[62px] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B]
+           hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}  
         onClick={() => slideRef.current?.slickPrev()}
       >
-        <HiArrowLongLeft className="w-[32px] h-[32px]" />
+        <HiArrowLongLeft className="2xl:w-[32px] 2xl:h-[32px] xl:w-[26px] xl:h-[26px] w-[22px] h-[22px]" />
       </button>
-      <button
-        className="xl:absolute right-40 -bottom-20 xl:block  xl:bottom-4 justify-center text-[#8C331B] hidden border-[#8C331B] bg-white p-3 rounded-full border w-[62px] h-[62px] z-20 hover:bg-[#8C331B] hover:cursor-pointer hover:text-white transition"
+      <button 
+        className={`xl:absolute right-40 -bottom-20 2xl:bottom-[-0.5vw] xl:flex 2xl:right-[8.5vw]  xl:right-[8.7vw]
+           items-center justify-center text-[#8C331B] hidden border-[#8C331B] 2xl:w-[62px] 2xl:h-[62px] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B] 
+         hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}
         onClick={() => slideRef.current?.slickNext()}
       >
         <HiArrowLongRight
-          width={36}
-          height={36}
-          className="w-[32px] h-[32px]"
+          className="2xl:w-[32px] 2xl:h-[32px] xl:w-[26px] xl:h-[26px] w-[22px] h-[22px]"
         />
       </button>
     </div>
