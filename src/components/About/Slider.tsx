@@ -38,7 +38,7 @@ const isCustomWidth = useCustomWidth(1500, 1700);
         breakpoint: 1700,
         settings: {
           slidesToShow: 3,
-          centerPadding: "11%",
+          centerPadding: "8%",
         },
       },
       {
@@ -94,11 +94,11 @@ const isCustomWidth = useCustomWidth(1500, 1700);
                 className={cn(
                   `w-full object-cover transition-all duration-500  px-2 lg:px-0`,
                   {
-                    "2xl:w-[510px] 2xl:h-[574px]    lg:w-[350px] lg:h-[400px] md:h-[300px] h-full z-10 scale-[105%] lg:scale-[100%] ":
+                    "2xl:w-[26.563vw] 2xl:h-[29.896vw]    lg:w-[350px] lg:h-[400px] md:h-[300px] h-full z-10 scale-[105%] lg:scale-[100%] ":
                       isActive,
-                    "2xl:w-[530px] 2xl:h-[353px]  lg:w-[300px] lg:h-[213px]  h-[154px] z-5 ":
+                    "2xl:w-[27.604vw] 2xl:h-[18.385vw]  lg:w-[300px] lg:h-[213px]  h-[154px] z-5 ":
                       isSide,
-                    "2xl:w-[514px] 2xl:h-[316px]   h-[154px] lg:w-[250px] lg:h-[194px] ":
+                    "2xl:w-[26.771vw] 2xl:h-[16.458vw]   h-[154px] lg:w-[250px] lg:h-[194px] ":
                       isEdge,
                       "xl:w-[40vw] xl:h-[500px]":isActive && isCustomWidth,
                       "xl:w-[37vw] xl:h-[410px]":isActive && !isCustomWidth,

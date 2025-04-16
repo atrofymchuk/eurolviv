@@ -94,19 +94,19 @@
                 "desc":"of our concept",
                 "frstCard":{
                     "title":["Comfort without ", "compromise"],
-                    "desc":"Style, comfort, and attention to detail define each room. Here, time seems to slow down, offering a moment of peace amid the city’s hustle and bustle and filling every moment with harmony."
+                    "desc":["Style, comfort, and attention to detail"," define each room. Here, time seems to slow down, offering a moment of peace amid the city’s hustle and bustle and filling every moment with harmony."]
                 },
                 "secondCard":{
-                    "title":["Inspiring ,", "views"],
-                    "desc":"The panoramic RUFF restaurant and terrace reveal the city in a whole new light. Here, under the Lviv sky, local flavors take on a modern twist, and the cityscape becomes the perfect backdrop for your relaxation."
+                    "title":["Inspiring,", "views"],
+                    "desc":["The panoramic RUFF restaurant and terrace reveal the city in a whole new light. Here, under the Lviv sky, local flavors take on a modern twist, and the cityscape becomes the perfect backdrop for your relaxation."]
                 },
                 "thirdCard":{
-                    "title":["Time for", "business?"],
-                    "desc":"This is where fresh ideas take shape. Our conference halls are designed with care and paired with impeccable service, so you can focus on what truly matters. Hold your meetings in Lviv’s welcoming spirit."
+                    "title":["Time for", " business?"],
+                    "desc":["This is where fresh ideas take shape."," Our conference halls are designed"," with care and paired with impeccable service," , " so you can focus on what truly matters. Hold your meetings in Lviv’s welcoming spirit."]
                 },
                 "fourthCard":{
                     "title":["Evening ", "vibes"],
-                    "desc":"Our stylish karaoke lounge is where every night buzzes with energy. Beating with the rhythm of the city, it welcomes you to embrace the moment. It’s a place where music brings people together, and memories last a lifetime."
+                    "desc":["Our stylish karaoke lounge","is where every night buzzes with energy."," Beating with the rhythm of the city, it welcomes you to embrace the moment. It’s a place where music brings people together, and memories last a lifetime."]
                 }   
             },
             "whereWeAre":{

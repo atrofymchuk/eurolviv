@@ -11,7 +11,7 @@ export const WhereWeAre = () => {
   
   return (
     <section className="flex flex-col font-cofo " >
-      <div className="grid lg:grid-cols-[48%_52%] max-w-[89.68%] mx-auto w-full container-fluid border border-t-0 border-[#c7c7c7] ">
+      <div className="grid lg:grid-cols-[48%_52%] max-w-[89.6%] mx-auto w-full container-fluid border border-t-0 border-[#c7c7c7] ">
         <LocationInfo t={t} />
         <MapSection />
       </div>

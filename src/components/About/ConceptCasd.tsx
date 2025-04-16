@@ -42,7 +42,7 @@ export const ConceptCasd = ({
           ${isSpecialMobileWidth ? " h-[112.667vw]" : "h-[124.667vw]"}
          ${isSpecialWidth ? "xl:h-[520px]" : "xl:h-[460px]"}`}
       >
-        <div className={`${index === 2 ? "*:inline w-[90%]" : ""}`}>
+        <div className={`${index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}>
 
         <h1
           className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] tracking-[-0.07em] font-cofo-medium ${
