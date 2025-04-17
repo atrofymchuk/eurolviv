@@ -32,22 +32,24 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
   return (
     <div
       className={`relative flex items-center lg:justify-end justify-center max-w-screen 2xl:h-[46.15vw]  lg:h-[650px] md:h-[570px] h-[360px] flex-col 
-        ${isCustomWidth ? "xl:h-[750px]" : 'xl:h-[620px]'}
+        ${isCustomWidth ? "xl:h-[58.594vw]" : 'xl:h-[48.438vw]'}
         ${
         isTerrase ? "w-full" : ""
       }`}
     >
       <div className="absolute w-full h-[660px] -z-1 flex items-end justify-center">
         <div
-          className={cn(`absolute h-[660px] xl:h-[1030px] 2xl:h-[46.15vw]  `, {
-            "2xl:w-[93.1%] xl:w-[93.2%] lg:w-[93.2%] md:w-[93.2%] w-[89.07%]": !isTerrase,
+          className={cn(`absolute h-[660px]  2xl:h-[46.15vw]  `, {
+            "xl:h-[48.5vw]": !isCustomWidth,
+            "xl:h-[50vw]": isCustomWidth,
+            "2xl:w-[93.2%] xl:w-[93.2%] lg:w-[93.2%] md:w-[93.2%] w-[89.07%]": !isTerrase,
             " xl:w-[93.25%] lg:w-[93.25%] md:w-[93.25%] w-[89.7%]": isTerrase,
             "h-[700px] w-[89.06%]!": isMobile,
           })}
         >
           <div className="h-full grid grid-cols-1  w-full md:grid-cols-[49.87%_0.1%_50.03%]">
             <div className="h-full border-x md:border-x-0 box-border md:border-s w-full  border-[#B3B3B3]"></div>
-            <div className="h-1/3 border-s md:border-s-0 border-[#B3B3B3] hidden md:block"></div>
+            <div className={` border-s  ${isTerrase ? " md:border-s" : " md:border-s-0"} h-3/3  border-[#B3B3B3] hidden md:block`}></div>
             <div className="h-full border-e hidden md:block  md:border-x-0 md:border-e border-[#B3B3B3]"></div>
           </div>
         </div>

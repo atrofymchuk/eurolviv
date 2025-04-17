@@ -159,9 +159,16 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                     <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px] ">
                       <h4
                         className={cn(
-                          "2xl:text-[32px]   lg:w-4/5 xl:text-[26px]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
+                          "2xl:text-[1.667vw]   lg:w-4/5 xl:text-[1.64vw]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
                           {
-                            " xl:w-[90%] w-[75%]": t(el.title).length > 15,
+                            " xl:w-[65%] w-[75%]": t(el.title).length > 15,
+                            "xl:w-[23vw]! w-[75%]":
+                              t(el.title).length > 20 &&
+                              t(el.title).length < 40,
+                            " xl:w-[55%] w-[75%]":
+                              t(el.title).length > 30 &&
+                              t(el.title).length < 40,
+                              
                             "!w-[50%] lg:w-fit!": index === 1,
                           }
                         )}

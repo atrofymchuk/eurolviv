@@ -29,7 +29,9 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
               {t('reviews.desc2.0')} <br /> {t('reviews.desc2.1')}
             </p>
 
-              <button className="font-cofo-medium w-[160px] lg:w-[208px] hover:cursor-pointer uppercase 2xl:w-[10.83vw] bg-[#8C331B] text-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B] hover:bg-[#FFFFFF]  lg:py-[10px] px-[12px] py-[10px] rounded-full h-fit 2xl:text-h[0.83vw] lg:text-[16px] text-[12px] ">
+              <button className="font-cofo-medium w-[160px] lg:w-[208px] hover:cursor-pointer 
+              uppercase 2xl:w-[10.83vw] bg-[#8C331B] text-[#FFFFFF] hover:text-[#8C331B] border border-[#8C331B]
+               hover:bg-[#FFFFFF]  lg:py-[10px] px-[12px] py-[10px] rounded-full h-fit 2xl:text-[0.83vw] lg:text-[16px] text-[12px] ">
               {t('buttons.bookTable')}
             </button>
           </div>

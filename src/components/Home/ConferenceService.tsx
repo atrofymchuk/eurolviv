@@ -4,13 +4,16 @@ import { HallList } from "./HallList";
 import { useTranslation } from "react-i18next";
 import { ConferenceServiceSlider } from "./ConferenceServiceSlider";
 import cn from "classnames";
+
 export const ConferenceService = () => {
   const { t, i18n } = useTranslation();
   const { halls } = useRoomStore();
 
   const isEng = i18n.language === "en";
 
+    const hallsForList = [halls[1], halls[0], halls[2]]
 
+    console.log(hallsForList)
   return (
     <div className="flex flex-col items-center relative  bg-[#EDE8E5]  w-full overflow-y-hidden overflow-x-hidden ">
       <div className="absolute grid grid-cols-[89.07%] h-full w-full justify-center md:grid-cols-[29.74%_30.3%_29.8%] z-0 overflow-y-hidden  ">
@@ -64,7 +67,7 @@ export const ConferenceService = () => {
           <div className=""></div>
         </div>
         <div className="h-full hidden md:block">
-          <HallList halls={halls} isEng={isEng} />
+         <HallList halls={hallsForList} isEng={isEng} />
         </div>
       </div>
       <div className="h-full block md:hidden max-w-screen mt-[46px] mb-[75px]">

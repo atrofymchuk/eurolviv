@@ -14,7 +14,10 @@ export const AboutRestaurant = () => {
       <div className="grid md:grid-cols-[41.82%_58.18%] w-full grid-cols-1 ">
         <div className="border-x border-b h-[33px] border-[#B3B3B3] lg:h-[53px]"></div>
         <div className="border-e md:border-b border-[#B3B3B3] lg:h-[53px]"></div>
-        <div className="border-x md:border-b border-[#B3B3B3] flex flex-col items-center 2xl:pt-[54px] xl:pt-[38px] 2xl:pb-[60px] xl:pb-[40px] md:text-start text-center">
+        <div
+          className="border-x md:border-b border-[#B3B3B3] flex flex-col items-center 2xl:pt-[54px]
+         xl:pt-[38px] 2xl:pb-[3.125vw] xl:pb-[40px] md:text-start text-center"
+        >
           <div
             className={`2xl:w-[33.07vw]  w-[299px] lg:w-[406px] ${
               isSpecialWidth ? "xl:w-[33.6vw]" : "xl:w-[34.07vw]"
@@ -26,7 +29,7 @@ export const AboutRestaurant = () => {
             <div className="md:flex md:items-center md:gap-2 pt-[8px] xl:pt-0 2xl:pt-[8px] ">
               <h1
                 className={`uppercase tracking-[-0.07em] leading-[81%]  text-[#242425] text-[64px] 2xl:text-[5.21vw] ${
-                  isSpecialWidth ? "xl:text-[86px]" : "xl:text-[68px] pt-2"
+                  isSpecialWidth ? "xl:text-[6.719vw]" : "xl:text-[5.313vw] pt-2"
                 }`}
               >
                 ruff
@@ -42,7 +45,7 @@ export const AboutRestaurant = () => {
             </div>
 
             <div
-              className={`2xl:space-y-5.5  space-y-3 2xl:pt-[42px]  pt-[22px]   md:mb-0 mb-8 ${
+              className={`2xl:space-y-5.5 space-y-3 2xl:pt-[42px]  pt-[22px] md:mb-0 mb-8 ${
                 isSpecialWidth
                   ? "xl:pt-[22px] xl:leading-normal xl:space-y-5"
                   : "xl:pt-[20px] xl:space-y-6"
@@ -52,7 +55,7 @@ export const AboutRestaurant = () => {
                 className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw] lg:text-[14px] md:text-[12px] text-[12px]  ${
                   isSpecialWidth
                     ? "xl:text-[15px] xl:w-[105%] xl:leading-normal"
-                    : "xl:text-[12.5px]"
+                    : "xl:text-[0.977vw]"
                 }`}
               >
                 {t("restaurant.about.desc.first.0")}
@@ -65,7 +68,7 @@ export const AboutRestaurant = () => {
                 className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
                   isSpecialWidth
                     ? "xl:text-[15px] xl:w-[100%] tracking-[-0.02em] xl:leading-normal"
-                    : "xl:text-[12.5px] xl:w-[105%]"
+                    : "xl:text-[0.977vw] xl:w-[105%]"
                 }`}
               >
                 <span className=" lg:font-cofo-medium">
@@ -83,16 +86,16 @@ export const AboutRestaurant = () => {
                 className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
                   isSpecialWidth
                     ? "xl:text-[15px] xl:leading-normal"
-                    : "xl:text-[12.5px] "
+                    : "xl:text-[0.977vw] "
                 }`}
               >
-                <span className="">{t("restaurant.about.desc.third.0")}</span>
+                <span>{t("restaurant.about.desc.third.0")}</span>
                 {t("restaurant.about.desc.third.1")}
               </p>
 
               <p
                 className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
-                  isSpecialWidth ? "xl:text-[15px]" : "xl:text-[12.5px]"
+                  isSpecialWidth ? "xl:text-[15px]" : "xl:text-[0.977vw]"
                 }`}
               >
                 <span className="font-cofo lg:font-cofo-medium">
@@ -109,7 +112,7 @@ export const AboutRestaurant = () => {
         </div>
 
         <div className="md:border-e border-x md:border-x-0 border-t md:border-t-0 border-[#B3B3B3]  md:border-b ">
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center">
             <div
               className={`md:border-e border-[#B3B3B3] border-b 2xl:px-[20px] w-full flex items-center justify-center lg:py-[14px_19px] 2xl:py-[14px_19px]   pt-[10px] pb-[13px]  md:px-2 px-[10px_3px] ${
                 isSpecialWidth
@@ -121,7 +124,7 @@ export const AboutRestaurant = () => {
                 loading="lazy"
                 src={aboutImageFst}
                 alt=""
-                className=" w-full h-full   object-cover"
+                className=" w-full h-full object-cover"
               />
             </div>
             <div
@@ -135,7 +138,7 @@ export const AboutRestaurant = () => {
                 loading="lazy"
                 src={aboutImageScd}
                 alt=""
-                className=" w-full h-full  object-cover"
+                className=" w-full h-full object-cover"
               />
             </div>
           </div>
@@ -150,8 +153,8 @@ export const AboutRestaurant = () => {
               loading="lazy"
               src={aboutImageTrd}
               alt=""
-              className={` w-full h-full  object-cover 2xl:max-h-[292px] xl:max-h-[250px] ${
-                isSpecialWidth ? "xl:max-h-[290px]" : "xl:max-h-[250px]"
+              className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[13.021vw] ${
+                isSpecialWidth ? "xl:h-[15.104vw]" : "xl:h-[17.021vw]"
               }`}
             />
           </div>
@@ -168,9 +171,7 @@ export const AboutRestaurant = () => {
               <span className="lg:font-cofo-medium">
                 {t("restaurant.about.desc.fourh.0")}
               </span>
-              <span className="">
-                {t("restaurant.about.desc.fourh.1")}
-              </span>
+              <span className="">{t("restaurant.about.desc.fourh.1")}</span>
               <span className="font-cofo-medium">
                 {t("restaurant.about.desc.fourh.2")}
               </span>
