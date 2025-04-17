@@ -65,10 +65,10 @@ export const StorySection = () => {
                 </span>
               </h1>
 
-              <p className={`w-[90%] block 2xl:text-[1.042vw] lg:text-[18px] md:pt-4 pt-6 tracking-[-0.07em]  lg:pt-5  text-[3.2vw] leading-[120%] ${isCustomWidth ? "xl:text-[16px]" : "xl:text-[14.5px]"}`}>
+              <p className={`w-[90%] block 2xl:text-[1.042vw] lg:text-[18px] md:pt-4 pt-6 tracking-[-0.07em]  lg:pt-5  text-[3.2vw] leading-[120%] ${isCustomWidth ? "xl:text-[1.25vw]" : "xl:text-[1.13vw]"}`}>
                 {t("about.about.desc.0")}
               </p>
-              <p className={`w-full block 2xl:text-[1.042vw]  lg:text-[18px] text-[3.2vw] tracking-[-0.07em]  leading-[120%] ${isCustomWidth ? "xl:text-[16px]" : "xl:text-[14.5px]"}`}>
+              <p className={`w-full block 2xl:text-[1.042vw]  lg:text-[18px] text-[3.2vw] tracking-[-0.07em]  leading-[120%] ${isCustomWidth ? "xl:text-[1.25vw]" : "xl:text-[1.13vw]"}`}>
                 {t("about.about.desc.1")}
               </p>
             </div>
@@ -89,9 +89,8 @@ export const StorySection = () => {
         </div>
 
         <div className="lg:border-s  border-[#C7C7C7] flex flex-col h-full text-xs sm:text-sm md:text-base  2xl:text-2xl font-normal tracking-[-0.01em] text-center lg:text-left">
-          <p className={`text-[3.2vw] sm:text-sm md:text-[14px]   2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[24px_0px] 
+          <p className={`text-[3.2vw] sm:text-sm md:text-[14px] xl:px-[8px_4px] xl:text-[1.09vw]  2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[24px_0px] 
             md:px-3 uppercase font-normal leading-[120%]
-            ${isCustomWidth ? "xl:px-[18px_4px] xl:text-[16px] " : "xl:px-[8px_4px] xl:text-[14px]"}
             `}>
             {t("about.about.photoDesc.0")}
             <span className="font-cofo-medium text-[#8C331B]">
@@ -102,11 +101,9 @@ export const StorySection = () => {
           <div className="flex border-y border-[#C7C7C7] flex-col mt-auto">
 
           <p
-            className={` custom-md-font p-[15px] pb-[20px]  2xl:px-[24px_4px] xl:pt-[20px] 
+            className={` custom-md-font p-[15px] pb-[20px]  2xl:px-[24px_4px] xl:pt-[20px]  xl:px-[8px_0px]  xl:text-[1.09vw]
               ${isCustomMobile ? "px-[18px]" : ""}
-              ${
-                isCustomWidth ? "xl:px-[18px_4px] xl:text-[16px]"  : "xl:px-[8px_0px]  xl:text-[14px] "
-              }
+            
               ${isCustomSecondaryMobile ? "px-[18px] " : ""}
                text-[3.2vw] sm:text-sm md:text-[14px]  pt-[26px]   2xl:text-[1.042vw] mt-auto leading-[120%] tracking-[-0.01em] uppercase text-[#8C331B] `}
           >

@@ -22,14 +22,14 @@ export const HeaderHome = () => {
         </InViewWrapper>
         
 
-        <div className="absolute inset-0 flex flex-col  items-center lg:justify-center justify-end text-center text-white z-10 mb-[32px] 2xl:mt-[8.33vw] xl:mt-[13vw] lg:mb-0">
+        <div className="absolute inset-0 flex flex-col  items-center lg:justify-center justify-end text-center text-white z-0 mb-[32px] 2xl:mt-[5vw] xl:mt-[13vw] lg:mb-0">
           <h4 className=" uppercase  font-cofo-medium underline text-[2.67vw] decoration-transparent 2xl:text-[0.94vw] xl:text-[1.41vw] ">
             {t("global.createdFor")}
             <span className="normal-case font-blessed  block text-center text-[3.47vw] xl:text-[2.02vw] ml-2 xl:inline">
               {t("global.whereTo")}
             </span>
           </h4>
-          <h1 className=" xl:text-[17vw] uppercase text-[12.8vw] font-normal z-20  2xl:text-[15.05vw]  leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
+          <h1 className=" xl:text-[17vw] uppercase text-[12.8vw] font-normal z-0  2xl:text-[15.05vw]  leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
             {t("global.eurohotel")}
             
           </h1>
