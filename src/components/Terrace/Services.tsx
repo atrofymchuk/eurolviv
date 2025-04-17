@@ -1,9 +1,9 @@
 import { Dishes } from "./Dishes";
 import {
-  tableWithFlowers,
+  tableThree,
   table,
   tableTwo,
-  pink,
+tableFrh,
   fish,
   golubtsi,
   pasta,
@@ -28,8 +28,8 @@ export const Services = () => {
     button: "buttons.celebrationMenu",
   };
 
-  const dishSlides = [table, pink, tableTwo, tableWithFlowers];
-  const slides = [fish, golubtsi, pasta, pie, steak];
+  const dishSlides = [table,tableTwo , tableThree, tableFrh];
+  const slides = [fish, steak, golubtsi,pie, pasta];
   return (
     <div>
       <div className="">

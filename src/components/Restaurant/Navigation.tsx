@@ -8,7 +8,7 @@ export const Navigation = forwardRef<Slider>((_, ref) => {
     <div className="flex flex-col md:items-end lg:justify-between  md:justify-end justify-center items-center ">
       <div
         className={cn(
-          `flex md:w-[96.55%] w-[89%]  xl:w-[96.6%] 2xl:w-[96.55%] justify-between lg:mt-0 border-b border-x  border-t  md:border-t-0 lg:border-t xl:border-t-0 border-[#B3B3B3] `
+          `flex md:w-[96.55%] w-[89%]  xl:w-[96.6%] 2xl:w-[96.6%] justify-between lg:mt-0 border-b border-x  border-t  md:border-t-0 lg:border-t xl:border-t-0 border-[#B3B3B3] `
         )}
         
       >

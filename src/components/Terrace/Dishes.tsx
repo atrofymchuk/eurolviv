@@ -18,7 +18,7 @@ export const Dishes = ({
     isMenu?: boolean;
   };
 }) => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { onOpenModal } = useModalStore();
   const isEng = i18n.language === "en";
 
@@ -37,13 +37,13 @@ export const Dishes = ({
           }`}
         >
           <h4 className="font-cofo-medium text-[#252526] leading-[22.68px] justify-center flex  xl:mb-3 mb-1.75">
-            <span className="font-blessed  text-center text-[16px] xl:text-[36px] lg:text-[20px] xl:inline xl:pt-4">
+            <span className="font-blessed  text-center text-[16px] 2xl:text-[36px] xl:text-[28px]  lg:text-[20px] xl:inline xl:pt-4">
               {t(content.heading)}
             </span>
           </h4>
           <h1
-            className={`text-center  uppercase leading-[81%] xl:text-[233px]  tracking-[-0.09em] lg:text-[100px] ${
-              content.isMenu ? "text-[64px]" : "text-[32px]"
+            className={`text-center  uppercase leading-[81%]   tracking-[-0.09em] xl:text-[160px] 2xl:text-[233px] ${
+              content.isMenu ? "text-[17.07vw]" : "text-[8.53vw]"
             }`}
           >
             {t(content.title)}
@@ -55,20 +55,41 @@ export const Dishes = ({
               {t(content.titleTwo)}
             </h1>
           )}
-          <p className="text-center leading-[120%] uppercase xl:text-[20px] text-[12px] lg:pt-[18px] pt-[22px] lg:pb-[30px] pb-[22px] md:w-1/3 w-8/9 mx-auto">
+          <p
+            className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] 
+          text-[3.20vw] lg:pt-[18px] 2xl:pt-[0.94vw] pt-[22px] lg:pb-[30px] 2xl:pb-[1.56vw] pb-[22px]  2xl:w-1/3 w-8/9 mx-auto
+          
+          ${content.isMenu ? "lg:w-[35%] 2xl:w-[30%]" : "lg:w-[45%] xl:w-[30%] 2xl:w-[25%]"}
+          `}
+          >
             {t(content.desc)}
           </p>
         </div>
 
         <div className="md:border-x border-[#B3B3B3]">
-            <div className={cn(`flex justify-center ${content.isMenu ? "pb-[40px] lg:pb-[30px]" : " pb-[48px] lg:pb-[37px]"}`)}>
+          <div
+            className={cn(
+              `flex justify-center ${
+                content.isMenu
+                  ? "2xl:pb-[10px] xl:pb-[10px] lg:pb-[30px]"
+                  : " pb-[48px] lg:pb-[37px] 2xl:pb-[10px]"
+              }`
+            )}
+          >
             <button
               onClick={() => onOpenModal("menu")}
-              className={cn(`uppercase  xl:text-[14px]  
-          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${content.isMenu ? "xl:px-[20px] lg:w-[122px]  xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#8C331B]" : "border-[#8C331B] border text-[#8C331B] px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] "},`,{
-            "lg:w-[175px]":isEng && content.isMenu,
-            "lg:w-[122px]":!isEng && content.isMenu,
-          })}
+              className={cn(
+                `uppercase  xl:text-[14px] 2xl:text-[0.73vw] 
+          rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${
+            content.isMenu
+              ? "xl:px-[20px] lg:w-[122px] 2xl:w-[6.35vw] xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B]  text-[#FFFFFF] hover:bg-[white] hover:text-[#8C331B] border border-[#8C331B]"
+              : "border-[#8C331B] hover:text-white border text-[#8C331B] px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] hover:bg-[#8C331B] "
+          },`,
+                {
+                  "lg:w-[175px]": isEng && content.isMenu,
+                  "lg:w-[122px]": !isEng && content.isMenu,
+                }
+              )}
             >
               {t(content.button)}
             </button>

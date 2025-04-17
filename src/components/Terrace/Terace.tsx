@@ -37,31 +37,49 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
                 index === 0 ? "md:block" : "hidden"
               }`}
             ></div>
-            <div className="flex-col flex items-center justify-center  xl:h-[691px] md:border-e  border-[#B3B3B3AD] ">
+            <div className="flex-col flex items-center justify-center   md:border-e   border-[#B3B3B3AD] ">
               <div className="overflow-hidden w-full   flex flex-col items-center justify-center ">
-                <div className="lg:px-[58px_74px]  text-center md:text-left px-[18px] xl:py-[50px_33px] lg:py-[30px_20px] py-[50px_33px]">
+                <div className="2xl:px-[3.02vw_3.85vw] xl:px-[35px_40px] text-center md:text-left px-[18px] 2xl:py-[50px_33px] lg:py-[30px_20px] py-[50px_33px]">
                   <h1
-                    className="px-10 md:px-0 uppercase  2xl:text-[100px] xl:text-[80px] lg:text-[52px] md:text-[40px] text-[32px] leading-[81%] 
-                  tracking-[-0.07em] text-[#242425] w-full max-w-[506px] whitespace-normal [text-wrap:balance]"
+                    className="px-10 md:px-0 uppercase  2xl:text-[5.21vw] xl:text-[5.25vw] lg:text-[52px] md:text-[40px] text-[32px] leading-[81%] 
+                  tracking-[-0.07em] text-[#242425] w-full 2xl:w-[506px] xl:w-[70%] whitespace-normal [text-wrap:balance]"
                   >
                     {t(title)}
                   </h1>
-                  <div className="space-y-4 xl:w-[106%] 2xl:mt-[62px] mt-[27px]">
-                    <div className="leading-[100%]">
+                  <div className="space-y-4 xl:w-[106%] 2xl:mt-[1.93vw] mt-[27px]">
+                    <div
+                      className={`leading-[100%]
+                       ${index === 2 ? "xl:w-[97%]  2xl:w-[96.7%]" : ""}
+                       ${index === 1 ? "xl:w-[85%] 2xl:w-[85%]" : ""}
+                       `}
+                    >
                       <FormatBoldText
                         desc={descOne}
                         isLowerTerrase={isLowerTerrase}
                       />
                     </div>
-                    <div className="leading-[100%]">
+                    <div
+                      className={`leading-[100%]
+                    ${index === 0 ? "xl:w-[95%] 2xl:w-[100%]" : ""}
+                      ${index === 1 ? "xl:w-[90%] 2xl:w-[90%]" : ""}
+                      ${index === 2 ? "xl:w-[90%] 2xl:w-[95%]" : ""}
+
+                      `}
+                    >
                       <FormatBoldText desc={descTwo} />
                     </div>
-                    <div className="leading-[100%]">
+                    <div
+                      className={`leading-[100%] 
+                       ${index === 0 ? " 2xl:w-[90%]" : ""}
+
+${index === 1 ? "xl:w-[85%] 2xl:w-[84%]" : ""}
+                      `}
+                    >
                       <FormatBoldText desc={descThree} />
                     </div>
                     {index === 0 && (
                       <div className="leading-[100%] lg:flex hidden mt-[39px]">
-                        <p className="text-[#444444] uppercase lg:text-[18px] leading-[120%]">
+                        <p className="text-[#444444] uppercase 2xl:text-[0.94vw] xl:text-[0.94vw] leading-[120%]">
                           <span className="font-cofo-medium">
                             {t("terasesState.mainTerrase.hookan")}
                             <br />
@@ -91,7 +109,7 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
         </div>
       </div>
 
-      <AbootSliderContainer slides={terase.imgs} isTerrase={true} />
+      <AbootSliderContainer slides={terase.imgs} isTerrase={true} index={index}/>
     </>
   );
 };

@@ -39,7 +39,7 @@ export const ReviewSlider = forwardRef<Slider>((_, ref) => {
     <div className="flex flex-col md:items-end items-center justify-end w-full overflow-hidden">
       <div
         className={cn(
-          " md:w-[96.5%]  sm:w-[89.1%] xl:w-[96.6%] 2xl:w-[96.55%] 2xl:h-[458px] xl:h-[408px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#B3B3B3] ",{
+          " md:w-[96.5%]  sm:w-[89.1%] xl:w-[96.6%] 2xl:w-[96.6%] 2xl:h-[458px] xl:h-[408px] lg:h-[350px] md:h-[254px]  h-fit md:border-x xl:border border-[#B3B3B3] ",{
             "w-[89%]": !isCustomWidth,
             "w-[89.4%]": isCustomWidth
           }

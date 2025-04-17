@@ -4,7 +4,7 @@ import * as imgs from "./exportsImg";
 export const initialTerraseState: TerrasesInitialState = {
   terases: [
     {
-      imgs: [imgs.mainFth,imgs.mainPreviewSlider, imgs.mainPreviewSliderTwo],
+      imgs: [imgs.mainPreviewSliderFst, imgs.mainPreviewSliderScd, imgs.mainPreviewSliderTrd],
       title: "terasesState.mainTerrase.title",
       preview: [imgs.mainFst, imgs.preview],
       descOne: [
@@ -47,7 +47,7 @@ export const initialTerraseState: TerrasesInitialState = {
       ],
     },
     {
-      imgs: [imgs.lowerFstTs, imgs.lowerScdTs, imgs.lowerTrdTs, ],
+      imgs: [imgs.lowerSlideFst, imgs.lowerSlideScd, imgs.lowerSlideTrd, ],
       title: "terasesState.lowerTerrase.title",
       preview: [imgs.lowerFst, imgs.lowerTrd,],
       descOne: [

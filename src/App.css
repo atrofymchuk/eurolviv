@@ -122,6 +122,10 @@
 }
 
 
+.dish-swiper > .swiper-wrapper > .swiper-slide {
+  width: fit-content !important;
+}
+
 @media screen and (min-width: 1024px) {
   .lg\:font-cofo-medium {
       font-family: 'CoFoSans-Medium', sans-serif;
@@ -140,5 +144,9 @@
 
 body{
   scroll-behavior: smooth;
+}
+
+.first-br-visible > br:first-of-type{
+  display: block;
 }
 

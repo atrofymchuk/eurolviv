@@ -19,20 +19,23 @@ export const FormatBoldText = ({
 
   return (
     <>
-      {desc.map((item: TextItem, index: number) => (
-        <span
-          key={index}
-          className={cn(
-            item.isBold && "font-cofo-medium",
-            isEng && item.isEng === true && "hidden",
-            isLowerTerrase && !isEng && index === 4 && "hidden",
+      {desc.map((item: TextItem, i: number) => {
+        return (
+          <span
+            key={i}
+            className={cn(
+              item.isBold && "font-cofo-medium",
+              isEng && item.isEng === true && "hidden",
+              isLowerTerrase && !isEng && i === 4 && "hidden",
 
-            `text-[12px] uppercase text-[#444444] 2xl:text-[18px] md:leading-[120%] leading-[100%]`
-          )}
-        >
-          {t(item.text)}
-        </span>
-      ))}
+              `text-[3.20vw] uppercase text-[#444444] 2xl:text-[0.94vw] xl:text-[0.96vw] md:leading-[120%] leading-[120%] first-br-visible`
+            )}
+          >
+            {t(item.text)}{" "}
+            {isLowerTerrase && i === 0 && <br className="hidden" />}
+          </span>
+        );
+      })}
     </>
   );
 };

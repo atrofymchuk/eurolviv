@@ -18,74 +18,80 @@ export const BarComponent = () => {
             {t("terrase.bar.title2")}
           </span>
         </h4>
-        <h1 className="text-center  uppercase leading-[81%] xl:text-[233px] text-[64px] tracking-[-0.09em]">
+        <h1 className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] text-[64px] tracking-[-0.09em]">
           {t("terrase.bar.title")}
         </h1>
 
-        <p className="text-center mt-2 leading-[120%] uppercase xl:text-[20px] text-[12px]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">
+        <p className="text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw] xl:w-[40%] 2xl:w-[30%] text-[3.20vw]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">
           {t("terrase.bar.desc")}
         </p>
       </div>
       <div className="flex flex-wrap pt-[36px] md:pt-0">
-        <div className="w-full md:w-[53.46%] xl:pt-[26px] xl:px-[30px_36px] border-y md:border-s border-[#B3B3B3] px-[10px_9px] pt-[10px]">
+        <div className="w-full md:w-[53.46%] xl:pt-[17px] xl:px-[16px_17px]  2xl:pt-[1.35vw] 2xl:px-[1.56vw_1.88vw] border-y md:border-s border-[#B3B3B3] px-[10px_9px] pt-[10px]">
           <InViewWrapper>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={barImg}
               alt="bar"
-              className="xl:w-[883px] xl:h-[811px] lg:h-[495px] w-full h-[289px] object-cover"
+              className="2xl:w-[46.99vw] 2xl:h-[42.24vw]  xl:w-[883px] xl:h-[46.09vw] lg:h-[495px] w-full h-[289px] object-cover"
             />
           </InViewWrapper>
-          <h2 className="text-center text-[16px]  block underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">
+          <h2 className="text-center text-[16px]  block underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
             {t("terrase.bar.alcoholCard")}
           </h2>
         </div>
 
         <div className="w-full md:w-[46.48%] border-t-0 md:border-t border-b border-[#B3B3B3] md:border-s md:border-e">
-          <div className=" xl:pt-[26px] pt-[10px] w-full md:w-fit grid grid-cols-2 ">
-            <div className=" md:w-fit xl:px-[31px_10px] px-[10px_3.5px]">
+          <div className=" 2xl:pt-[1.35vw] xl:pt-[17px] pt-[10px] w-full md:w-fit grid grid-cols-2 ">
+            <div className=" md:w-fit 2xl:px-[1.61vw_0.52vw]  xl:px-[17px_8px] px-[10px_3.5px]">
               <InViewWrapper>
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={cocktailImg}
                   alt="cocktail"
-                  className=" md:w-[378px]  xl:h-[348px] object-cover  "
+                  className=" md:w-[378px]  xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
-            <div className=" md:w-fit xl:px-[10px_25px] px-[3.5px_7.5px]">
+            <div className=" md:w-fit xl:px-[8px_17px] px-[3.5px_7.5px]">
               <InViewWrapper>
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={cocktailImgScnd}
                   alt="cocktail"
-                  className=" md:w-[378px] xl:h-[348px] object-cover "
+                  className=" md:w-[378px] xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
           </div>
-          <h2 className="text-center   text-[16px] underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">
+          <h2 className="text-center   text-[16px] underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
             {t("terrase.bar.cocktailCard")}
           </h2>
 
-          <div className="grid grid-cols-2 xl:pt-[26px] pt-[10px] w-full md:w-fit border-t  border-[#B3B3B3]">
-            <div className=" md:w-fit xl:px-[31px_10px] px-[10px_3.5px]">
+          <div className="grid grid-cols-2 2xl:pt-[1.35vw] xl:pt-[17px] pt-[10px] w-full md:w-fit border-t  border-[#B3B3B3]">
+            <div className=" md:w-fit xl:px-[17px_8px] 2xl:px-[1.61vw_0.52vw] px-[10px_3.5px]">
               <InViewWrapper>
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={wineImg}
                   alt="cocktail"
-                  className=" md:w-[378px]  xl:h-[348px] object-cover  "
+                  className=" md:w-[378px]  xl:h-[19.58vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
-            <div className=" md:w-fit xl:px-[10px_25px] px-[3.5px_7.5px]">
+            <div className=" md:w-fit xl:px-[8px_17px] px-[3.5px_7.5px]">
               <InViewWrapper>
-                <img loading="lazy"
+                <img
+                  loading="lazy"
                   src={wineImgScnd}
                   alt="cocktail"
-                  className=" md:w-[378px] xl:h-[348px] object-cover  "
+                  className=" md:w-[378px] xl:h-[19.58vw] 2xl:h-[18.13vw] 2xl:w-[19.72vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
           </div>
-          <h2 className="text-center   text-[16px] underline underline-2 xl:py-[25px_31px] py-[17px_18px] uppercase text-[#8C331B] xl:text-[30px] leading-[108%] tracking-[-0.05em] font-cofo-medium">
+          <h2 className="text-center 2xl:py-[1.49vw_1.61vw]   text-[16px] underline underline-2 xl:py-[20px_27px] py-[17px_18px]  xl:text-[1.72vw]
+          uppercase text-[#8C331B] 2xl:text-[1.25vw] leading-[108%] tracking-[-0.05em] font-cofo-medium">
             {t("terrase.bar.wineCard")}
           </h2>
         </div>
