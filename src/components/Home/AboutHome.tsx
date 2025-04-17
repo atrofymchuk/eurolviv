@@ -205,9 +205,9 @@ export const AboutHome = () => {
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[9vw] 2xl:text-[5.21vw] 2xl:translate-x-42",
+                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[9vw] 2xl:text-[5.21vw] 2xl:translate-x-[8.75vw]",
                     {
-                      "2xl:translate-x-78": isEng,
+                      "2xl:translate-x-[16.25vw]!": isEng,
                     }
                   )}
                 >
