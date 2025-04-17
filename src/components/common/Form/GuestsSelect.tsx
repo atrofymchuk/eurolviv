@@ -25,13 +25,14 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
             <select
               {...field}
               className={cn(
-                "w-full p-[7px] lg:p-3 ps-0 text-white border-b uppercase border-[#969696] cursor-pointer text-[10px] lg:text-[16px]",
+                "w-full p-[5px] lg:p-2 ps-0 text-white border-b uppercase border-[#969696] cursor-pointer text-[2vw] 2xl:text-[0.63vw]",
                 errors.guests && "border-red-500 border"
               )}
             >
               {[0, 1, 2, 3].map((index) => (
                 <option
                   key={index}
+                  className="text-black"
                   value={t(`home.header.bookingForm.gusts.options.${index}`)}
                 >
                   {t(`home.header.bookingForm.gusts.options.${index}`)}

@@ -40,10 +40,10 @@ export const HeaderBookingForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col lg:flex-row gap-4  py-[17px_15px] lg:mt-[85px] mt-[59px] bg-white/26 backdrop-blur-[14.3px] lg:py-[29px_39px] lg:px-[35px_34px] rounded-2xl lg:max-w-3xl mx-auto lg:w-full w-[91%]"
+      className="flex flex-col lg:flex-row gap-4  py-[17px_15px] 2xl:mt-[3.96vw] mt-[59px] bg-white/26 backdrop-blur-[14.3px] 2xl:py-[1.51vw_2.03vw] 2xl:px-[1.82vw_1.77vw] rounded-2xl 2xl:w-[40.26vw] lg:w-[773px] mx-auto  w-[91%]"
     >
       <div className="lg:flex-row gap-4 w-full text-start ">
-        <div className="flex gap-x-[3px] lg:gap-x-[11px] px-[20px_11px] lg:px-0">
+        <div className="flex gap-x-[3px] 2xl:gap-x-[0.57vw] px-[20px_11px] lg:px-0">
           <DatePickerField
             name="checkIn"
             control={control}
@@ -62,11 +62,11 @@ export const HeaderBookingForm = () => {
         </div>
         <div className="">
 
-        <p className="text-white uppercase lg:mt-[21px] mt-[12px]  lg:text-[16px] md:font-cofo-medium text-[10px] ps-[20px] lg:ps-0" >
+        <p className="text-white uppercase 2xl:mt-[1.09vw] lg:mt-[21px] mt-[12px]  2xl:text-[0.83vw] md:font-cofo-medium text-[2.67vw] ps-[20px] lg:ps-0" >
           {t("home.header.bookingForm.gusts.title")}
         </p>
 
-        <div className="flex gap-[11px] md:gap-[43px] flex-col md:flex-row">
+        <div className="flex gap-[11px] 2xl:gap-[2.24vw] flex-col md:flex-row">
           <div className="px-[19px_18px] lg:px-0 w-full">
 
           <GuestsSelect control={control} errors={errors} />

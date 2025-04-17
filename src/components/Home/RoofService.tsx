@@ -73,7 +73,7 @@ export const RoofService = () => {
                   </h1>
 
                   <p
-                    className={`uppercase font-cofo-medium lg:text-[20px] text-[14px] lg:leading-[21px] leading-[12px] ${
+                    className={`uppercase font-cofo-medium lg:text-[20px] text-[14px]  ${
                       index === 2 ? "mt-[61px]" : "mt-[29px]"
                     }`}
                   >
@@ -92,7 +92,7 @@ export const RoofService = () => {
                 {item.desc.map((desc, index) => (
                   <p
                     key={index}
-                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] ${
+                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px]  ${
                       index === 0 ? "mt-[32px]" : ""
                     }`}
                   >

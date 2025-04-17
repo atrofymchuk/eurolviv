@@ -11,8 +11,8 @@
             "bookingForm":{
                 "chooseDateIn":"check-in",
                 "chooseDateOut":"check-out",
-                "checkIn":"Check-in",
-                "checkOut":"Check-out",
+                "checkIn":"CHECK-IN",
+                "checkOut":"CHECK-OUT",
                 "guests":"Кількість гостей",
                 "book":"Забронювати номер",
                 "gusts":{

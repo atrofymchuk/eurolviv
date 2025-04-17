@@ -6,6 +6,7 @@ import { calendarBooking } from "../../../store/exportsIcons";
 import { DatePickerFieldProps } from "../../../types/headerTypes";
 import { useState, useRef } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { FormData } from "../../../types/headerTypes";
 
 export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   name,
@@ -23,8 +24,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
     return t(placeholderKey);
   };
   const [startDate, setStartDate] = useState<Date | string | null>(null);
-  const [placeholder] = useState<string>(getInputText());
-
+  
   const datePickerRef = useRef<DatePicker | null>(null);
 
   const handleIconClick = () => {
@@ -35,9 +35,9 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
 
   return (
     <div className="w-full">
-      <p className="text-white uppercase mb-3 lg:text-[16px] md:flex hidden">{t(label)}</p>
+      <p className="text-white uppercase mb-3 2xl:text-[0.83vw] md:flex hidden">{t(label)}</p>
       <Controller
-        name={name}
+        name={name as keyof FormData}
         control={control}
         render={({ field }) => (
           <div className="relative w-full controller-wrapper">
@@ -51,26 +51,26 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
               startDate={typeof startDate === "string" ? null : startDate}
               minDate={new Date()}
               className={cn(
-                "w-full ps-[26px] py-[7.5px] lg:py-[10px] lg:ps-[40px] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] lg:text-[16px]",
-                errors[name] && "border-red-500 border"
+                "w-full ps-[26px] py-[7.5px] 2xl:py-[0.52vw] 2xl:ps-[2.08vw] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] 2xl:text-[0.83vw]",
+                errors[name as keyof FormData] && "border-red-500 border"
               )}
-              placeholderText={placeholder}
+              placeholderText={getInputText()}
             />
             <img loading="lazy"
               src={calendarBooking}
               alt="calendar"
-              className="absolute lg:left-3 left-1.25 top-1/2 transform -translate-y-1/2 lg:w-[19px] lg:h-[19px] w-[12px] h-[12px] cursor-pointer"
+              className="absolute lg:left-3 left-2 top-1/2 transform -translate-y-1/2 2xl:w-[0.99vw] 2xl:h-[0.99vw] lg:w-[19px] lg:h-[19px] w-[3.2vw] h-[3.2vw] cursor-pointer"
               onClick={handleIconClick}
             />
             <span
               className="bg-white rounded-full lg:p-[7px] p-[2px]  absolute lg:right-2 right-1.25 top-1/2 transform -translate-y-1/2 cursor-pointer"
               onClick={handleIconClick}
             >
-              <FiChevronDown className="lg:w-[18px] lg:h-[18px] w-[16px] h-[16px]" color="#3D3D3D" />
+              <FiChevronDown className="lg:w-[18px] lg:h-[18px] w-[4.27vw] h-[4.27vw]" color="#3D3D3D" />
             </span>
-            {errors[name] && (
+            {errors[name as keyof FormData] && (
               <p className="text-red-500 text-sm mt-1">
-                {errors[name]?.message}
+                {errors[name as keyof FormData]?.message}
               </p>
             )}
           </div>

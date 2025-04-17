@@ -47,11 +47,12 @@ export const RoomsHome = () => {
             {t("home.rooms.rooms")}
           </span>
 
-          <span className="flex lg:flex-col text-[6.4vw] sm:text-[5.21vw] md:text-[4.88vw] lg:text-[5vw] xl:text-[4.17vw] 2xl:text-[5.21vw] tracking-[-0.09em] gap-y-[0.36vw] leading-[81%] uppercase">
+          <span className="flex lg:flex-col text-[6.4vw] sm:text-[5.21vw] md:text-[4.88vw] 
+           lg:text-[5vw] xl:text-[5.17vw] 2xl:text-[5.21vw] tracking-[-0.09em] gap-y-[0.36vw] leading-[81%] uppercase">
             <span className="leading-[81%] w-auto">
               {t("home.rooms.forWhat.0")} &nbsp;
             </span>
-            <span className="leading-[81%] self-end xl:ps-[13.88vw] 2xl:ps-[11vw] lg:ps-[11vw]  w-auto">
+            <span className="leading-[81%] self-end xl:ps-[10.7vw] 2xl:ps-[11vw] lg:ps-[11vw]  w-auto">
               {t("home.rooms.forWhat.1")}
             </span>
           </span>

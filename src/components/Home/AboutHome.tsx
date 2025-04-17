@@ -90,8 +90,8 @@ export const AboutHome = () => {
         </div>
         <div className="border-b border-[#C7C7C7] md:flex hidden"></div>
 
-        <div className="border-[#C7C7C7] md:border-e-0 border-x md:border-x-0 ps-[3vw] pt-[4vw]  2xl:border-e-0 xl:border-e-0 lg:border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col lg:items-center ">
-          <p className=" md:text-[2vw] lg:text-[1.7vw]   uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ">
+        <div className="border-[#C7C7C7] md:border-e-0 border-x md:border-x-0  pt-[4vw]  2xl:border-e-0 xl:border-e-0 lg:border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col lg:items-center ">
+          <p className=" md:text-[2vw] lg:text-[1.7vw]   uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ps-[3vw]">
             {t("home.about.title")}
           </p>
         </div>

@@ -175,6 +175,7 @@ export { default as footer } from "../assets/footer.webp";
 //home page
 export { default as previewImg } from "../assets/Home/preview.webp";
 export { default as headerHome } from "../assets/Home/header.webp";
+export { default as headerHomeMobile } from "../assets/Home/headerMobile.webp";
 export { default as restaurant } from "../assets/Restaurant/homePreview.webp";
 export { default as karaoke } from "../assets/Restaurant/Karaoke/Fst.webp";
 export { default as terasseHome } from "../assets/Terrase/homePreview.webp";

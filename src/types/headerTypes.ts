@@ -73,7 +73,7 @@ export type FormData = {
 };
 
 export interface DatePickerFieldProps {
-  name: "checkIn" | "checkOut";
+  name: string;
   control: Control<FormData>;
   errors: FieldErrors<FormData>;
   label: string;
