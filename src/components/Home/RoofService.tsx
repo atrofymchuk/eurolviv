@@ -22,13 +22,15 @@ export const RoofService = () => {
               }`
             )}
           >
-            <div className="relative w-full h-full">
+            <div className={`relative w-full h-full `}>
               <div
                 className={`${
-                  index === 2 ? "h-[2484px] " : ""
-                } absolute inset-0  bg-gradient-to-b bg-[#000000]/19`}
+                  index === 2 ? " " : ""
+                } absolute inset-0 bg-gradient-to-b
+                 ${index === 2 ? "from-[#252526] to-[#25252659] bg-[#000000]/10" : "from-[#25252620] to-[#25252659] bg-[#000000]/5"}`}
               ></div>
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src={item.img}
                 alt={item.url}
                 className="w-full h-full object-cover"
@@ -50,7 +52,8 @@ export const RoofService = () => {
                 <div>
                   <div className="flex justify-center w-full">
                     <InViewWrapper>
-                      <img loading="lazy"
+                      <img
+                        loading="lazy"
                         src={ruffLogo}
                         alt=""
                         className="w-[135px] h-[18px]"
@@ -89,7 +92,9 @@ export const RoofService = () => {
                 {item.desc.map((desc, index) => (
                   <p
                     key={index}
-                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] ${index === 0 ? "mt-[32px]" : ""}`}
+                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px] ${
+                      index === 0 ? "mt-[32px]" : ""
+                    }`}
                   >
                     {t(desc)}
                     <br />

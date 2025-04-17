@@ -27,7 +27,7 @@ export const RoomsHome = () => {
 
       <div className="w-full lg:h-[11.5vw] h-[70vw] md:h-[34.18vw] grid-cols-[89.07%] grid lg:flex flex-col justify-center 2xl:mt-[11.51vw] xl:mt-[13.38vw] lg:mt-[9.72vw]">
         <h1
-          className="text-center lg:ps-[4.1vw] flex-col lg:flex-row flex lg:justify-between justify-center
+          className="text-center lg:ps-[4.1vw] 2xl:ps-[3vw] flex-col lg:flex-row flex lg:justify-between justify-center
           items-center lg:items-start
             lg:w-[calc(100vw-14.3vw)] 
             2xl:w-[calc(100vw-14vw)] 
@@ -58,7 +58,7 @@ export const RoomsHome = () => {
         </h1>
         <div className="flex flex-col w-full h-full items-center lg:items-start lg:justify-center ">
           <div className="z-4 ">
-            <div className="flex md:flex-row lg:ps-[5.56vw] 2xl:ps-[5.3vw] md:ps-[5.86vw] flex-col text-start items-center md:items-start 2xl:items-start relative 2xl:h-[10.42vw] xl:h-[9.9vw] lg:h-[12.5vw] md:h-[14.65vw] sm:h-[16.93vw]">
+            <div className="flex md:flex-row lg:ps-[5.56vw] 2xl:ps-[4.15vw] md:ps-[5.86vw] flex-col text-start items-center md:items-start 2xl:items-start relative 2xl:h-[10.42vw] xl:h-[9.9vw] lg:h-[12.5vw] md:h-[14.65vw] sm:h-[16.93vw]">
               <div className="md:absolute flex md:flex-row items-center flex-col pt-[4.27vw] md:pt-[3.42vw] xl:pt-[1.8vw]  space-y-[8vw] md:space-y-0 text-center md:text-start md:gap-[1.95vw] xl:gap-x-[3.13vw] md:hidden lg:flex">
                 <p
                   className="uppercase 2xl:w-[22vw] xl:w-[20.83vw] px-[6.4vw] lg:w-[22.92vw] md:w-[34.18vw] sm:w-[37.11vw] lg:px-0 
@@ -104,7 +104,7 @@ export const RoomsHome = () => {
 
       <div className="max-w-screen relative z-0  md:mb-0 mt-[17vw] md:mt-[0] xl:mb-[1.56vw] w-full  md:h-[500px] mb-[70px]  h-[407px] ">
         <div
-          className={`z-10 absolute   2xl:h-[35vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px] w-full ${
+          className={`z-10 absolute   2xl:h-[36vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px]  mt-[40px] xl:mt-0 2xl:mt-[50px] w-full ${
             isCustomWidth ? "xl:h-[620px]" : "xl:h-[570px]"
           } `}
         >
