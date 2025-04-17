@@ -9,45 +9,45 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
   const { t } = useTranslation();
   return (
     <div
-      className="gap-y-3 flex flex-col lg:h-[473px] h-[200px] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
-     pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 pt-[17px] lg:w-[25.02%] lg:items-center"
+      className="gap-y-3 flex flex-col 2xl:h-[26.5vw] lg:h-[493px] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+     pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] lg:items-center"
     >
-      <div className="h-full flex flex-col lg:justify-between">
+      <div className="h-full flex flex-col ">
         <div>
-          <h4 className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo mb-0 uppercase lg:w-[255px] w-[160px] text-[12px] font-cofo-medium ">
+          <h4 className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo mb-0 uppercase 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px] text-[12px] font-cofo-medium ">
             {t("footer.booking")}
           </h4>
 
-          <p className="uppercase text-[#999999] text-cofo 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-1.5 lg:mb-5 mb-[17px] text-[12px] ">
+          <p className="uppercase text-[#999999] text-cofo 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-1.5 lg:mb-5.25 mb-[17px] text-[12px] ">
             {t("footer.bookingTime")}
           </p>
 
-          <ul className="lg:gap-y-[7px] gap-y-[7px]  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+          <ul className="lg:gap-y-[7px] gap-y-[7px] underline lg:no-underline underline-offset-2  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
             <li>+38 (032) 242-31-60</li>
             <li>+38 (093) 242-31-60</li>
             <li>+38 (093) 348-31-12</li>
           </ul>
-          <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium ">
+          <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium ">
             info@eurohotel.lviv.ua
           </p>
           <div className="lg:mt-[29px] mt-8 mb-0">
-            <p className="uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px]">
+            <p className="uppercase  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px]">
               {t("contacts.info.restaurand/terrase")}
             </p>
 
-            <ul className="lg:gap-y-[7px] gap-y-2 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+            <ul className="lg:gap-y-[7px] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
             <li>+38 (073) 242-40-02</li>
               <li>+38 (093) 348-31-14</li>
             </ul>
             <div className="lg:mt-[10px] mt-0 flex flex-col">
-              <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
+              <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
                 restaurant@eurohotel.lviv.ua
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex lg:gap-x-4 gap-x-1.75 text-xl 2xl:text-[18px] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-auto">
+          <div className="flex lg:gap-x-4 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-[30px]">
           <Link
             to={social.restaurant.instagram}
             target="_blank"

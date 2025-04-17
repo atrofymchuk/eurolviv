@@ -18,20 +18,20 @@ export const PlacesNearbySection = ({
   const isEng = i18n.language === "en";
 
   return (
-    <div className="p-4 xl:p-10 xl:pt-[44px] pt-[31px] border-b border-t lg:border-t-0 border-[#c7c7c7] flex flex-col min-h-full">
-      <h2 className="text-[#8C331B] text-[24px] xl:text-[40px] tracking-[-0.04em] leading-[100%] text-center xl:text-left uppercase">
+    <div className="p-4 ps-[17px] xl:p-7 2xl:pt-[2.292vw] pt-[31px] border-b border-t lg:border-t-0 border-[#c7c7c7] flex flex-col min-h-full justify-between">
+      <h2 className="text-[#8C331B] text-[6.4vw] xl:text-[2vw] 2xl:text-[2.083vw] tracking-[-0.04em] leading-[100%] text-center xl:text-left uppercase">
         {t("about.whereWeAre.whatIsClose")}
       </h2>
-      <ul className="grid mt-6 text-left uppercase lg:mt-[42px] space-y-[6px] lg:space-y-[17px]">
+      <ul className="grid mt-6 text-left uppercase 2xl:mt-[2.188vw] gap-y-[6px] xl:gap-y-[0.8vw] 2xl:gap-y-[0.885vw]">
         {infrastructure.map(([place, distance], index) => (
           <li
             key={index}
-            className="flex justify-between text-[12px] xl:text-[20px]"
+            className="flex justify-between text-[3.2vw]  xl:text-[1vw] 2xl:text-[1.042vw]"
           >
-            <span>{t(place)}</span>
-            <span className="text-[#8C331B] font-cofo-medium whitespace-nowrap my-auto text-[12px] xl:text-[20px]">
+            <span >{t(place)}</span>
+            <div className="text-[#8C331B] font-cofo-medium xl:text-[1vw] my-auto whitespace-nowrap   text-[3.2vw] 2xl:text-[1.042vw]  ">
               {t(distance)}
-            </span>
+            </div>
           </li>
         ))}
       </ul>
@@ -45,7 +45,7 @@ export const PlacesNearbySection = ({
 
       <h2
         className={cn(
-          "text-[#8C331B] text-[24px] uppercase xl:text-[40px] 2xl:w-[347px] leading-[100%] text-center xl:text-left ",
+          "text-[#8C331B] text-[6.4vw]  uppercase xl:text-[2vw] xl:w-[45%] 2xl:text-[2.083vw] 2xl:w-[18.068vw] leading-[100%] text-center xl:text-left ",
           {
             "": isEng,
             "": !isEng
@@ -54,14 +54,14 @@ export const PlacesNearbySection = ({
         >
         {t("about.whereWeAre.places.heading")}
       </h2>
-      <ul className="grid lg:mt-[42px] text-left uppercase lg:gap-y-[17px] mt-[26px] gap-y-[6px]">
+      <ul className="grid 2xl:mt-[2.188vw] text-left uppercase 2xl:gap-y-[0.885vw] mt-[26px] xl:gap-y-[0.8vw] gap-y-[6px]">
         {places.map(([place, distance], index) => (
           <li
           key={index}
-          className="flex justify-between text-sm xl:text-[20px] text-[12px]"
+          className="flex justify-between text-[3.2vw] 2xl:text-[1.042vw] xl:text-[1vw]  "
           >
-            <span>{t(place)}</span>
-            <span className="text-[#8C331B] font-cofo-medium whitespace-nowrap text-[12px] xl:text-[20px]">
+            <span className={`${index === 1 ? "w-[60%]" : ""}`}>{t(place)}</span>
+            <span className="text-[#8C331B] font-cofo-medium whitespace-nowrap  xl:text-[1vw] text-[3.2vw] 2xl:text-[1.042vw] my-auto">
               {t(distance)}
             </span>
           </li>

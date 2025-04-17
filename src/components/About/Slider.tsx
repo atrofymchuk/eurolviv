@@ -117,7 +117,7 @@ const isCustomWidth = useCustomWidth(1500, 1700);
 
       <button
         className={`xl:absolute left-40 -bottom-20  2xl:bottom-[-0.5vw]  2xl:left-[8.5vw] xl:bottom-[0vw] xl:left-[8.7vw]
-          xl:flex  items-center justify-center text-[#8C331B]  hidden border-[#8C331B] 2xl:w-[62px] 2xl:h-[62px] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B]
+          xl:flex  items-center justify-center text-[#8C331B]  hidden border-[#8C331B] 2xl:w-[3.229vw] 2xl:h-[3.229vw] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B]
            hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}  
         onClick={() => slideRef.current?.slickPrev()}
       >
@@ -125,7 +125,7 @@ const isCustomWidth = useCustomWidth(1500, 1700);
       </button>
       <button 
         className={`xl:absolute right-40 -bottom-20 2xl:bottom-[-0.5vw] xl:flex 2xl:right-[8.5vw]  xl:right-[8.7vw]
-           items-center justify-center text-[#8C331B] hidden border-[#8C331B] 2xl:w-[62px] 2xl:h-[62px] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B] 
+           items-center justify-center text-[#8C331B] hidden border-[#8C331B] 2xl:w-[3.229vw] 2xl:h-[3.229vw] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B] 
          hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}
         onClick={() => slideRef.current?.slickNext()}
       >

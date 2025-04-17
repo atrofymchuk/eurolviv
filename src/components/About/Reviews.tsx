@@ -8,60 +8,70 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 export const Rewies = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { reviews } = usePagesInfoStore();
   const isEng = i18n.language === "en";
-  
+
   return (
     <section className="bg-[#A47762] flex-col   flex justify-center items-center  ">
       <div className="flex flex-col items-center border-x border-[#C7C7C7]  overflow-x-hidden xl:px-0 w-[89.68%] ">
         <div className="grid xl:grid-cols-2 grid-cols-1 overflow-hidden  w-full lg:pe-4">
           <div className="xl:col-span-1 pt-[58px] xl:pt-[109px] flex flex-col">
-            <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5]  xl:leading-[160px]">
-              <span className="xl:hidden block text-[32px] lg:text-[80px] leading-[96%]">
+            <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5]  leading-[81%] ">
+              <span className="xl:hidden block text-[8.533vw] lg:text-[80px] leading-[100%] xl:leading-[96%]">
                 {t("reviews.title")} {t("reviews.heading")}
               </span>
-              <span className="hidden xl:block text-[32px] xl:text-[150px] text-start md:ps-[25px] tracking-[-0.09em] leading-[81%] 2xl:text-[198px]">
+              <span className="hidden xl:block text-[8.533vw]  xl:text-[11.719vw] text-start md:ps-[25px] xl:ps-[1.5vw] 2xl:ps-[1.302vw] tracking-[-0.09em] leading-[91%] 2xl:text-[10.313vw]">
                 {t("reviews.title")}
               </span>
-              <span className="xl:hidden block lg:text-[80px]  text-[32px] leading-[96%]">
+              <span className="xl:hidden block lg:text-[80px] xl:translate-y-[-10px] text-[8.533vw] leading-[100%] xl:leading-[96%]">
                 {t("reviews.heading2")}
               </span>
             </h1>
-            <div className="flex flex-col xl:flex-row gap-4 xl:gap-[24px] text-start  items-center xl:mt-[38px] ">
-                <p className="uppercase text-xs sm:text-sm md:text-lg xl:text-[16px] xl:leading-[16px] text-[#E9E9E9] pt-4  2xl:w-[444px]  xl:ps-[39px]  text-center xl:text-left">
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-[24px]  text-start xl:translate-y-[-10px]  items-center xl:mt-[38px] mt-[15px] ">
+              <p
+                className="uppercase  text-[3.2vw] sm:text-sm md:text-lg 2xl:text-[0.84vw] xl:text-[0.9vw] text-[#E9E9E9]  w-[78.133vw]
+                 2xl:w-[24.688vw] xl:w-[61%]  2xl:ps-[2.031vw] xl:ps-[2.302vw] text-center xl:text-left"
+              >
                 {t("reviews.desc")}
               </p>
 
               <Link
                 to={"/booking"}
-                className="uppercase text-[#A47762] lg:w-[234px] text-center mt-[30px] lg:mt-0 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] w-fit h-fit  xl:px-[22.5px] xl:py-[10px] py-[10px] px-[14px] rounded-full -0 hover:cursor-pointer text-[12px] xl:text-[16px]"
+                className="uppercase text-[#A47762] 2xl:w-[12.188vw] text-center  mt-[20px] lg:mt-0 xl:w-[17vw] xl:text-[1.094vw] 2xl:text-[0.833vw]
+                font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] 
+                w-[45.867vw]   xl:py-[10px] py-[10px]  rounded-full  hover:cursor-pointer text-[3.2vw] "
               >
                 {t("buttons.bookRoom")}
               </Link>
             </div>
           </div>
 
-          <div className="xl:col-span-1 xl:flex flex-col justify-center items-center hidden ">
-            <h2 className="uppercase text-5xl md:text-[80px] xl:text-[100px] xl:leading-[81px]  xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col">
-              <span className={cn(`relative left-[-30px] md:left-[-70px] xl:left-[-105px] 2xl:left-[0px]`, {
-                'hidden': isEng
-              })}>
+          <div className="xl:col-span-1 xl:flex flex-col justify-center items-center hidden">
+            <h2 className="uppercase text-5xl md:text-[80px] xl:text-[5.625vw] 2xl:text-[5.208vw]   xl:tracking-[-0.09em] text-[#EDE8E5] flex flex-col leading-[81%]">
+              <span
+                className={cn(
+                  `relative left-[-30px] leading-[81%] md:left-[-70px] xl:left-[-2.344vw] 2xl:left-[-1.563vw]`,
+                  {
+                    hidden: isEng,
+                  }
+                )}
+              >
                 {t("reviews.heading")}
               </span>
-              <span className="relative left-[30px] md:left-[70px] xl:left-[105px] 2xl:left-[220px]">
+              <span className="relative left-[30px] leading-[81%]  md:left-[70px] xl:left-[10.547vw] 2xl:left-[10.156vw]">
                 {t("reviews.reviewAbout")}
               </span>
             </h2>
           </div>
         </div>
       </div>
-      <div className="relative w-full flex flex-col items-center h-[500px] md:h-[470px] lg:h-[400px]  overflow-x-hidden overflow-y-hidden">
-        <div className="absolute w-[89.68%] border-x border-[#C7C7C7] h-[700px]  overflow-y-hidden"></div>
+      <div className="relative w-full  flex flex-col items-center h-[133.333vw] md:h-[470px] xl:h-[25.9vw] 2xl:h-[24.3vw]  overflow-x-hidden overflow-y-hidden">
+        <div className="absolute  w-[89.68%] border-x border-[#C7C7C7] h-[700px]  overflow-y-hidden"></div>
 
-        <div className="absolute inset-0 flex justify-center ">
-          <div className="relative w-[80.79%] md:w-[85.79%]">
-              <ReviewSlider reviews={reviews} ref={sliderRef} />
+        <div className="absolute inset-0 flex justify-center mt-[7.667vw] xl:mt-[4.271vw]">
+          <div className="relative w-[80.79%] md:w-[85.79%] h-full ">
+            <ReviewSlider reviews={reviews} ref={sliderRef} />
           </div>
         </div>
       </div>

@@ -10,13 +10,13 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
   const { t } = useTranslation();
 
   return (
-    <div className="gap-y-4 flex flex-col lg:h-[473px] w-full lg:w-[24.2%] h-full lg:border-e mt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:mt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
+    <div className="gap-y-4 flex flex-col lg:h-[473px] 2xl:h-[25.677vw] w-full lg:w-[24.2%] h-full lg:border-e mt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:mt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
       <div className="flex flex-col h-full rrelatives">
-        <div className="mb-0 xl:max-w-[332px]">
-          <h4 className="text-[12px] uppercase 2xl:text-[18px] xl:text-[16px] lg:text-[14px] font-cofo-medium ">
+        <div className="mb-0 2xl:w-[17.292vw]">
+          <h4 className="text-[12px] uppercase 2xl:text-[0.938vw] xl:text-[16px] 2xl:h-[1.2vw] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
           </h4>
-          <p className="flex gap-x-[7px] font-cofo-medium items-center 2xl:text-[18px] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline  lg:mt-[15px] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
+          <p className="flex gap-x-[7px] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline 2xl: lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
             <img loading="lazy"
               src={navigate}
               className="filter-invert-white"
@@ -28,32 +28,32 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
             target="_blank"
             to={map.address}
             className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[20.5px] lg:py-[11.5px] lg:text-[14px] text-[12px] rounded-full
-              font-cofo-medium  mt-5  lg:mt-[35px] lg:w-[223px] justify-center  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
+              font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] justify-center  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}
           </Link>
         </div>
-        <div className="mt-auto">
-          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[18px] xl:text-[16px] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo ">
+          <div className="2xl:mt-[3.333vw] xl:mt-[56px]">
+          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo ">
             {t("footer.reception")}
           </h4>
-          <p className="2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] mb-[17px] lg:mt-[6px] ">
+          <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] mb-[17px] lg:mt-[6px] ">
             {t("footer.receptionTime")}
           </p>
 
-          <ul className="gap  -y-[7px]">
-            <li className="2xl:text-[18px] xl:text-[16px] lg:text-[14px]   text-[12px] font-cofo lg:no-underline underline ">
+          <ul className="gap-y-[7px]">
+            <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   text-[12px] font-cofo lg:no-underline underline underline-offset-2 ">
               +38 (073) 242-40-02
             </li>
-            <li className="2xl:text-[18px] xl:text-[16px] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline ">
+            <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline underline-offset-2 ">
               +38 (093) 242-40-02
             </li>
           </ul>
-          <div className="flex flex-col gap-x-3 2xl:text-[18px] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[15px]  mt-[20px]  ">
-            <p className="2xl:text-[18px] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
+          <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[15px]  mt-[20px]  ">
+            <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
               reception@eurohotel.lviv.ua
             </p>
-            <div className="lg:mt-[26px] mt-[19px] flex gap-x-4">
+            <div className="lg:mt-[32px] mt-[19px] flex gap-x-4">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
                   className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"

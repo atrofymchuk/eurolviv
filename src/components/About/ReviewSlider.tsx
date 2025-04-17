@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 import { ReviewSliderProps } from "../../types/types";
 import { ReviewCard } from "./ReviewCard";
-import { forwardRef, memo, useMemo } from "react";
+import { forwardRef,  useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
+const ReviewSlider = forwardRef<Slider, ReviewSliderProps>(({ reviews }, ref) => {
   const {t } = useTranslation()
   const windowWidth = window.innerWidth;
   const settings = {
@@ -22,6 +22,13 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
       },
       {
         breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 1480,
         settings: {
           slidesToShow: 3,
           variableWidth: true,
@@ -53,11 +60,21 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 440,
         settings: {
           rows: 2,
           centerMode: true,
           variableWidth: true,
+          centerPadding: '8%',
+        },
+      },
+      {
+        breakpoint: 410,
+        settings: {
+          rows: 2,
+          centerMode: true,
+          variableWidth: true,
+          centerPadding: '13%',
         },
       },
     ],
@@ -70,17 +87,17 @@ const ReviewSlider = memo(forwardRef<Slider, ReviewSliderProps>(({ reviews }, re
     
 
   return (
-    <div className="z-20  w-screen top-0 left-0">
-      <Slider {...settings} ref={ref} className={`w-[calc(100% + 100px)] mt-10 review md:me-0  ${windowWidth < 400 ? '-me-[40px]' : 'me-[10px] sm:me-0'} sm:-me-40`}>
+    <div className="z-20  w-screen top-0 left-0 ">
+      <Slider {...settings} ref={ref} className={`w-[calc(100% + 100px)]  review md:me-0  ${windowWidth < 400 ? '-me-[40px]' : 'me-[10px] sm:me-0'} sm:-me-40`}>
         {mixedReviews.map((review, index) => (
-          <div key={index} className="mt-2.5 lg:me-4  ">
-            <ReviewCard review={review} reviewHeader={t("reviews.review")}/>
+          <div key={index} className=" lg:me-4  ">
+            <ReviewCard review={review} reviewHeader={t("reviews.review")} index={index}/>
           </div>
         ))}
       </Slider>
       
     </div>
   );
-}))
+})
 
 export default ReviewSlider;
