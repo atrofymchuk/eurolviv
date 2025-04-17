@@ -10,33 +10,32 @@ type HeaderSocialToProps = {
 
 export const  HeaderSocial = ({ styles }: HeaderSocialToProps) => {
   return (
-    <div className=" lg:flex hidden  space-x-[9.5px]  xl:pt-[25px] 2xl:me-[2.6vw] ">
+    <div className=" lg:flex hidden  space-x-[0.49vw]  2xl:pt-[1.15vw] xl:pt-[0.94vw] 2xl:me-[2.19vw] xl:me-[1.56vw] lg:me-[1.17vw]">
       <Link
         to={social.hotel.telegram}
         target="_blank"
-        className={cn(`2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] rounded-full ${styles}`)}
+        className={cn(`2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles}`)}
       >
-        <RiTelegram2Fill className="2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1" />
+        <RiTelegram2Fill className="2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1" />
       </Link>
 
       <Link
         to={social.hotel.whatsapp}
         target="_blank"
-        className={cn(`2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] rounded-full ${styles} `)}
+        className={cn(`2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles} `)}
       >
-        <FaWhatsapp className="2xl:w-[37px] 2xl:h-[37px] xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1 " />
+        <FaWhatsapp className="2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1 " />
       </Link>
       <Link
         to={social.hotel.viber}
-        target="_blank"
+         target="_blank"
         className={cn(
-          `2xl:w-[37px] 2xl:h-[37px] rounded-full xl:w-[30px] xl:h-[30px] lg:w-[26px] lg:h-[26px] p-1 px-1.5 flex text-center items-center ${styles}`
+          `2xl:w-[1.98vw] 2xl:h-[1.98vw] rounded-full xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1 px-1.5 xl:px-[0.4vw] 2xl:px-[0.3vw] flex text-center items-end ${styles}`
         )}
       >
-        <svg
-          width="26"
-          height="26"
+        <svg  
           viewBox="0 0 24 26"
+          className="2xl:p-[0.1vw] xl:p-[0.0vw] lg:p-[0.0vw]"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >

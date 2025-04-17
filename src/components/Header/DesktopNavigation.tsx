@@ -33,7 +33,7 @@ export const DesktopNavigation = ({
 }: DesktopNavigationProps) => {
   return (
     <nav
-      className={cn("hidden lg:flex 2xl:space-x-[13px] xl:space-x-2.25  lg:space-x-1.5 items-center  xl:pt-[22px] 2xl:me-[2.5vw]")}
+      className={cn("hidden lg:flex 2xl:gap-x-[0.68vw] xl:gap-[0.78vw] lg:gap-[.57vw] items-center  xl:pt-[18px] 2xl:pt-[1.15vw] 2xl:me-[3.96vw] xl:me-[3vw] lg:me-[1.17vw] ")}
       onClick={() => {
         setIsShowRooms(false);
         setIsShowRestaurant(false);

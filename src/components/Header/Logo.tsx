@@ -25,7 +25,7 @@ export const Logo = ({
     <Link
       to="/"
       className={cn(
-          " items-center justify-center flex w-1/3 h-full  2xl:w-[9.47vw] xl:w-[100px] lg:w-[80px] ",
+          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px] 2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw] ms-[2vw] lg:ms-0",
         className,
         {
           "lg:me-[94px]": pathname === "/restaurant",
@@ -41,7 +41,7 @@ export const Logo = ({
           className={cn(
             "duration-300",
             {
-              [`${iconLogoStyle} w-[68px] h-[40px] xl:w-[100px] 2xl:h-[4.3vw] 2xl:w-[15vw]  xl:h-[70px] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`]:
+              [`${iconLogoStyle} w-[18.13vw] h-[10.67vw] xl:w-[7.81vw] 2xl:h-[4.3vw] 2xl:w-[8vw]  xl:h-[5.47vw] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`]:
                 !isMobile,
               "w-[99px] h-[54px] filter invert": isMobile,
               "2xl:h-[91px]": pathname === "/terrace",

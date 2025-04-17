@@ -20,9 +20,9 @@ export const MobileMenuButton = ({
   const { t } = useTranslation();
 
   return (
-    <div className="lg:hidden w-1/3 items-center justify-center flex">
+    <div className="lg:hidden w-[33vw] items-center justify-center flex">
       <button
-        className={cn(` text-white text-2xl flex items-center gap-2 w-[94px]`)}
+        className={cn(` text-white text-2xl flex items-center gap-2 w-full ms-[6.4vw]`)}
         onClick={toggleMenu}
       >
         <img loading="lazy"
@@ -54,7 +54,7 @@ export const MobileBookingButton = ({
   const { t } = useTranslation();
 
   return (
-    <div className="w-1/3 lg:fit items-center justify-center lg:hidden flex">
+    <div className="w-[33vw] lg:fit items-center justify-end lg:hidden flex pe-[5.4vw]">
       {pathname === "/" ? (
         <ChangeLangButton
           changeLanguage={changeLanguage}

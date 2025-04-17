@@ -42,14 +42,14 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
     >
       <div
         className={cn(
-          "fixed top-0 left-0 right-0   mx-auto  flex justify-between items-center lg:h-[133px] h-[95px] transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
+          "fixed top-0 left-0 right-0     flex justify-between items-center 2xl:h-[6.93vw] lg:h-[9.08vw] h-[25.33vw] transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
           {
             "bg-white text-black": scrolled,
             "text-white": !scrolled,
           }
         )}
       >
-        <div className="w-full xl:w-[92vw] flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
+        <div className=" flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
           <div className="flex items-center xl:space-x-4 space-x-3  w-full h-full justify-between">
             <HeaderNav
               {...{
@@ -68,10 +68,10 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 setMenuOpen,
               }}
             />
-            <div className=" items-center 2xl:space-x-5 lg:space-x-3 justify-between  hidden lg:flex">
+            <div className=" items-center   hidden lg:flex ">
               <div
-                className={cn(`relative flex items-center xl:pt-[22px] `, {
-                  "space-x-5 2xl:me-[2.6vw] ": !isEng,
+                className={cn(`relative flex items-center xl:pt-[18px] 2xl:pt-[1.15vw] 2xl:me-[1.56vw] xl:me-[1.25vw] lg:me-[1.17vw]`, {
+                  "": !isEng,
                   "space-x-[115px]": isEng,
                 })}
               >
@@ -83,11 +83,11 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}
                   className={cn(
-                    `whitespace-nowrap uppercase  hidden xl:flex items-center space-x-1 font-cofo-medium hover:cursor-pointer ${rightMenu}`
+                    `whitespace-nowrap uppercase  hidden xl:flex items-center  font-cofo-medium hover:cursor-pointer ${rightMenu}`
                   )}
                 >
                   <span
-                    className={cn(`2xl:text-[0.83vw] xl:text-[14px]`, {
+                    className={cn(`2xl:text-[0.83vw] xl:text-[0.94vw]`, {
                       "text-white": !scrolled,
                       "text-[#252526]": scrolled,
                     })}
@@ -123,7 +123,9 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#8C331B] xl:mt-[22px]  text-white px-3 text-center items-center justify-center py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium text-[12px] 2xl:text-[0.88vw] hover:cursor-pointer hidden lg:flex`,
+                  `uppercase bg-[#8C331B] 2xl:mt-[1.3vw] xl:mt-[0.94vw]  text-white px-3 text-center items-center justify-center
+                   py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium lg:text-[0.98vw] text-[12px] 2xl:text-[0.73vw] 2xl:w-[9.95vw] 2xl:h-[2.03vw]
+                    hover:cursor-pointer hidden lg:flex`,
                   {
                     "lg:flex ": scrolled,
                     flex: !scrolled,
@@ -138,7 +140,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                       className={cn(
                         `uppercase ${
                           index === 1
-                            ? "lg:flex hidden 2xl:text-[0.88vw] xl:text-[12px]"
+                            ? "lg:flex hidden 2xl:text-[0.73vw] xl:text-[0.94vw] lg:text-[0.98vw]"
                             : ""
                         }`,
                         {

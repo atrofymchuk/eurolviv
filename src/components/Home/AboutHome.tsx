@@ -26,6 +26,8 @@ export const AboutHome = () => {
               xl:w-[13.2vw]
               lg:w-[15.8vw]
               2xl:w-[13.3vw]
+                              md:p-4
+                              lg:p-0
               xl:ps-[20px]
               2xl:ps-0
               xl:text-[0.83vw] 2xl:text-[.83vw]
@@ -39,6 +41,8 @@ export const AboutHome = () => {
               className={` 
             text-[3.2vw] 
               md:text-[1.17vw]
+                            md:p-4
+                            lg:p-0
               lg:text-[0.97vw] 
               lg:w-[14.8vw]
                 xl:pe-[20px] xl:w-[13vw]
@@ -79,6 +83,7 @@ export const AboutHome = () => {
               xl:text-[0.83vw] 2xl:text-[.83vw] 
               xl:w-[11.42vw]
               lg:w-[12vw]
+                            md:p-4
               p-[0.53vw]
                2xl:w-[11vw] 2xl:ms-[2.29vw]
                lg:p-0
@@ -128,7 +133,7 @@ export const AboutHome = () => {
         >
           <img loading="lazy" src={previewImg} alt="" className="z-1" />
         </div>
-        <div className="relavive lg:hidden">
+        <div className="relavive md:hidden">
           <hr className="w-screen absolute left-0 border-[#C7C7C7]  text-black bg-black lg:hidden"/>
 
         </div>

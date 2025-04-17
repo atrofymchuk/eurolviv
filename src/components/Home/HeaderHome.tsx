@@ -25,7 +25,7 @@ export const HeaderHome = () => {
         <div className="absolute inset-0 flex flex-col  items-center lg:justify-center justify-end text-center text-white z-0 mb-[32px] 2xl:mt-[5vw] xl:mt-[13vw] lg:mb-0">
           <h4 className=" uppercase  font-cofo-medium underline text-[2.67vw] decoration-transparent 2xl:text-[0.94vw] xl:text-[1.41vw] ">
             {t("global.createdFor")}
-            <span className="normal-case font-blessed  block text-center text-[3.47vw] xl:text-[2.02vw] ml-2 xl:inline">
+            <span className="normal-case font-blessed  block text-center text-[3.47vw] xl:text-[2.02vw] xl:inline">
               {t("global.whereTo")}
             </span>
           </h4>

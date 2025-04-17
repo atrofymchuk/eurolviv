@@ -23,12 +23,12 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
 
   return (
     <button
-      className={cn(`flex items-center uppercase ${isMobile ? 'lg:hidden' : 'lg:flex'}`)}
+      className={cn(`flex items-center  uppercase ${isMobile ? 'lg:hidden' : 'lg:flex 2xl:pe-[1.04vw] xl:pe-[0.78vw]'}`)}
       onClick={() => changeLanguage()}
     >
-      <CiGlobe className={cn("w-4 h-4 lg:w-4.5 lg:h-4.5 me-1", getTextColor(currentLang))} />
+      <CiGlobe className={cn("w-4 h-4 lg:w-[1.47vw] lg:h-[1.47vw] xl:w-[1.09vw] xl:h-[1.09vw] 2xl:w-[0.94vw] 2xl:h-[0.94vw] 2xl:me-[0.21vw] xl:me-[0.16vw] lg:me-[0.16vw] me-[1vw]", getTextColor(currentLang))} />
       <div className="flex items-center">
-        <span className={cn("hover:cursor-pointer text-[14px]", getTextColor(currentLang), {
+        <span className={cn("hover:cursor-pointer text-[14px] 2xl:text-[0.83vw] xl:text-[0.94vw] lg:text-[1.17vw]", getTextColor(currentLang), {
           "font-cofo-medium": currentLang === 'uk'
         })}>UK</span>
         <span className={cn( {
@@ -36,7 +36,7 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
           "text-white": !isMobile && !scrolled,
           "text-black": !isMobile && scrolled
         })}>/</span>
-        <span className={cn("hover:cursor-pointer text-[14px]", getTextColor('en'), {
+        <span className={cn("hover:cursor-pointer text-[14px] 2xl:text-[0.83vw] xl:text-[0.94vw] lg:text-[1.17vw]", getTextColor('en'), {
           "font-cofo-medium": currentLang === 'en'
         })}>ENG</span>
       </div>
