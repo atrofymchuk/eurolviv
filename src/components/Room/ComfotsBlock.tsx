@@ -13,17 +13,17 @@ export const ComfortsBlock = memo(
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[3px]  ${style.text} uppercase 2xl:w-[93%] w-full`
+            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw]  ${style.text} uppercase 2xl:w-[93%] w-full`
           )}
         >
           <InViewWrapper>
             <img loading="lazy"
               src={item.src}
               alt="icon"
-              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9"
+              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-[1.88vw] 2xl:h-[1.88vw]"
             />
           </InViewWrapper>
-          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[20px]  ">
+          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[1.04vw]  ">
             {t(item.text)}
           </p>
         </li>
@@ -33,7 +33,7 @@ export const ComfortsBlock = memo(
     if (!icons) return null;
 
     return (
-      <div className={cn(`${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.1)]`)}>
+      <div className={cn(`${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)]`)}>
         <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
           <div
             className="grid  
@@ -47,9 +47,9 @@ export const ComfortsBlock = memo(
             <div className="flex flex-col  ps-[8px] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
                 <h1
-                  className={cn(`uppercase ${style.headerColor} font-cofo text-[32px] 
-              lg:text-[32px] xl:text-[48px] lg:ms-[20px] leading-[100%] 
-              2xl:mb-[51px] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
+                  className={cn(`uppercase ${style.headerColor} font-cofo text-[1.67vw] 
+              lg:text-[32px] xl:text-[48px] 2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 
+              2xl:mb-[2.66vw] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
               break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
                 >
                   {title}
@@ -61,7 +61,7 @@ export const ComfortsBlock = memo(
                       src={images[0]}
                       alt="room image"
                       className={cn(
-                        `md:w-full 2xl:h-[512px]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover `
+                        `md:w-full 2xl:h-[26.67vw]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover `
                       )}
                     />
                   </InViewWrapper>
@@ -78,7 +78,7 @@ export const ComfortsBlock = memo(
             >
               <div
                 className=" sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
-              2xl:h-[512px] md:h-[260px] lg:h-[311px]
+              2xl:h-[26.67vw] md:h-[260px] lg:h-[311px]
                   2xl:ps-[36px] xl:ps-[14px]  
                 lg:pt-[50px] xl:pt-[20px] 2xl:pt-[78px] md:pt-[45px] "
               >
@@ -99,7 +99,7 @@ export const ComfortsBlock = memo(
                 className="sm
                 lg:h-[441px]  
                 xl:h-[411px]  
-                 2xl:h-[510px]
+                 2xl:h-[26.56vw]
                 w-full px-2.5 md:p-0
                 lg:pt-[110px] xl:pt-0   md:pt-[45px] 2xl:pt-[10px]"
               >
@@ -108,7 +108,7 @@ export const ComfortsBlock = memo(
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
-                     2xl:h-[512px]  xl:h-[380px] lg:h-[311px] md:w-full object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                     2xl:h-[26.67vw]  xl:h-[380px] lg:h-[311px] md:w-full object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
                     `)}
                   />
                   

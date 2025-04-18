@@ -31,7 +31,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           ${
             isConference
               ? "h-full "
-              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[590px] 2xl:h-[33vw]"
+              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[450px] 2xl:h-[27.19vw]"
           }`)}
         >
           <Swiper
@@ -40,7 +40,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
             ${
               isConference
                 ? "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[520px] 2xl:h-[33vw]"
-                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[33vw]"
+                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[450px] 2xl:h-[27.19vw]"
             }`}
             loop
             slidesPerView={1}
@@ -67,7 +67,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </Swiper>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px]  2xl:w-[60px] 2xl:h-[60px] xl:w-[54px] xl:h-[54px] flex items-center justify-center 2xl:left-[3.9vw] xl:left-[3.9vw]
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px]  2xl:w-[60px] 2xl:h-[60px] xl:w-[52px] xl:h-[52px] flex items-center justify-center 2xl:left-[3.9vw] xl:left-[3.9vw]
                      left-5 lg:left-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handlePrev}
@@ -76,7 +76,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           </button>
 
           <button
-            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] 2xl:w-[60px] 2xl:h-[60px] xl:w-[54px] xl:h-[54px] flex items-center justify-center 2xl:right-[1.7vw] xl:right-[1.7vw]
+            className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] 2xl:w-[60px] 2xl:h-[60px] xl:w-[52px] xl:h-[52px] flex items-center justify-center 2xl:right-[2.2vw] xl:right-[1.7vw]
                      right-5 lg:right-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handleNext}

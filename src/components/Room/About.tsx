@@ -37,34 +37,34 @@ export const About = memo(
           <div className="2xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-[109px] border-[#C7C7C7] order-5 md:order-none" />
           <div className="2xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-[109px] border-[#C7C7C7] order-6 md:order-none " />
           <div
-            className=" h-full border-t 2xl:h-[14rem] xl:h-[10rem]  md:border-e border-b md:border-b-0 border-[#C7C7C7] flex flex-col justify-end md:justify-start  p-2.5 2xl:p-0
-          2xl:items-center order-2 md:order-none "
+            className=" h-full border-t 2xl:h-[13.67vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] flex flex-col justify-end md:justify-center  p-2.5 2xl:p-0
+          lg:items-center order-2 md:order-none "
           >
             <div className="  text-[#8C331B] ">
-              <div className="2xl:space-y-1.5 2xl:pt-[2.8rem] lg:pt-[1.4rem] ">
-                <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center   ">
+              <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.33vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center ">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center    ">
                   <img loading="lazy"
                     src={houseBrown}
                     alt="houseicon"
-                    className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
+                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.area")}:
                   <span className="font-cofo-medium">&nbsp;{area} М²</span>
                 </p>
-                <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center ">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center ">
                   <img loading="lazy"
                     src={squareBrown}
                     alt="houseicon"
-                    className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
+                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.count")}:
                   <span className="font-cofo-medium">&nbsp;{rooms}</span>
                 </p>
-                <p className="flex uppercase 2xl:text-[20px] lg:text-[14px] xl:text-[18px] text-[12px] 2xl:leading-[25.2px] leading-[15px] items-center">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center">
                   <img loading="lazy"
                     src={guestBrown}
                     alt="houseicon"
-                    className="pe-2 w-[22px] h-[22px] 2xl:w-fit"
+                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.guests")}:
                   <span className="font-cofo-medium">&nbsp;{guests}</span>
@@ -103,11 +103,11 @@ export const About = memo(
           >
             <div
               className="flex flex-col 
-            gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-[24px]
-            px-4 sm:px-6 md:px-4 lg:pe-[40px] lg:ps-[20px] 2xl:ps-11 2xl:pe-[120px] xl:ps-8 xl:pe-[70px]"
+            gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-[1.88vw] 2xl:gap-[1.25vw]
+            px-4 sm:px-6 md:px-4 lg:pe-[40px] lg:ps-[20px] 2xl:ps-[2.29vw] 2xl:pe-[6.25vw] xl:ps-8 xl:pe-[4.9vw]"
             >
               <p
-                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]
+                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
                 tracking-[-0.04em] leading-[120%]
               text-[#8C331B] uppercase"
               >
@@ -115,7 +115,7 @@ export const About = memo(
               </p>
 
               <p
-                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px]
+                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
              leading-[120%]
               tracking-[-0.04em]
               text-[#444444] uppercase"
@@ -125,10 +125,11 @@ export const About = memo(
 
               <BookLink
                 to={"/booking"}
-                className="uppercase bg-[#8C331B] text-white w-fit 2xl:mt-[70px] xl:mt-[50px] mt-[69px] mb-[28px] md:mb-0
+                className="uppercase 2xl:text-[0.73vw] bg-[#8C331B] text-white w-fit 2xl:mt-[3.65vw] xl:mt-[3.91vw] 2xl:w-[10.63vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center  mt-[69px] mb-[28px] md:mb-0
             "
               >
-                {t("buttons.bookRoomArr.0")}{" "}
+                
+                {t("buttons.bookRoomArr.0")} &nbsp;
                 <span className="hidden md:inline">
                   {t("buttons.bookRoomArr.1")}
                 </span>
