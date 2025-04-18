@@ -18,7 +18,7 @@ export const OfferDetailsColumn = ({ title, items }:OfferDetailsColumnToProps) =
 
     <ul className="lg:space-y-[21px]  2xl:mt-[28px]  text-[#6B6B6B] 2xl:pb-5 mt-[27px]  space-y-[11px] ">
         {items.map((el)=>
-        <li className="uppercase flex items-start lg:gap-3 gap-x-2 xl:text-[16px] md:text-[14px] text-[12px] lg:leading-[20.4px]  lg:tracking-[-0.04em] text-[#6B6B6B]  w-[90%]">
+        <li className="uppercase flex items-start lg:gap-3 gap-x-2 xl:text-[16px] md:text-[14px] text-[12px] lg:leading-[20.4px]  lg:tracking-[-0.04em] text-[#6B6B6B]  w-[95%]">
         <img loading="lazy"
           src={list}
           alt={el}

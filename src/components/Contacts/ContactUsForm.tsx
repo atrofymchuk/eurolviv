@@ -37,9 +37,9 @@ export default function ContactUsForm() {
   };
 
   return (
-    <div className="flex flex-col items-center md:items-start md:justify-start 2xl:ps-[85px] xl:ps-[55px] md:ps-[30px] lg:pb-10 lg:pt-0 pb-[42px] pt-[50px] md:border-b-0 border-b border-[#C7C7C7]">
+    <div className="flex flex-col items-center md:items-start md:justify-start 2xl:ps-[4.43vw] xl:ps-[55px] md:ps-[30px] lg:pb-10 lg:pt-0 pb-[42px] pt-[50px] md:border-b-0 border-b border-[#C7C7C7]">
       <div className="flex flex-col items-center md:items-start w-[81%] xl:w-[82.8%]">
-        <h2 className="uppercase font-cofo-medium lg:text-[36px] md:text-[28px] text-[32px] leading-[108.6%] lg:tracking-[-0.05em]">
+        <h2 className="uppercase font-cofo-medium lg:text-[36px] 2xl:text-[1.88vw] md:text-[28px] text-[6.4vw] leading-[108.6%] lg:tracking-[-0.05em]">
           {t("contacts.info.writeUs")}
         </h2>
 
@@ -49,7 +49,7 @@ export default function ContactUsForm() {
               toast.error(error?.message ? t(error.message) : t("validation.genericError"));
             });
           })}
-          className="lg:space-y-[14px] lg:pt-[31px] pt-[22px] space-y-1.5 flex flex-col items-center md:items-start w-full"
+          className="lg:space-y-[14px] 2xl:pt-[1.61vw] lg:pt-[31px] pt-[22px] space-y-1.5 flex flex-col items-center md:items-start w-full"
         >
           <FormInput
             register={register}
@@ -72,7 +72,8 @@ export default function ContactUsForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="uppercase font-cofo-medium mt-[12px] 2xl:max-w-[523px] w-full text-sm py-[9px] text-[12px] xl:text-[16px] text-white border border-[#A47762] hover:text-[#A47762] hover:bg-white bg-[#A47762] rounded-full lg:py-[15px]"
+            className="uppercase font-cofo-medium mt-[12px] 2xl:max-w-[27.24vw] w-full text-sm py-[9px] text-[12px] xl:text-[16px] 
+            2xl:text-[0.83vw] text-white border border-[#A47762] hover:text-[#A47762] hover:bg-white bg-[#A47762] rounded-full lg:py-[15px]"
           >
             {isSubmitting ? t("buttons.sending") : t("buttons.send")}
           </button>

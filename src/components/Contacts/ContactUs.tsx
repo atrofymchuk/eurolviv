@@ -5,17 +5,18 @@ import { hotelContacts } from "../../store/exportsImg";
 export const ContactUs = () => {
   const { t } = useTranslation();
   return (
-    <div className="lg:mt-[50px] xl:px-[37px] md:px-[20px] w-full  flex-col flex text-center md:text-start md:border-e-0 md:border-b-0 border-e border-b border-[#C7C7C7]">
+    <div className="lg:mt-[50px] 2xl:mt-[2.6vw] 2xl:px-[1.93vw] xl:px-[1.88vw] md:px-[20px] w-full  flex-col flex text-center md:text-start md:border-e-0 md:border-b-0 border-e border-b border-[#C7C7C7]">
       <div className="md:pe-5 ">
         <h1
-          className="uppercase
-          2xl:text-[40px] 2xl:leading-[40px] xl:text-[32px] xl:leading-[32px]  lg:text-[24px] lg:leading-[24px] md:text-[20px] md:leading-[20px]  tracking-[-0.05em] text-[#252526] 
-          text-[24px] leading-[24px] pt-[41px] lg:pt-0
+          className="uppercase 
+          2xl:text-[2.08vw] 2xl:leading-[40px] xl:text-[32px]   lg:text-[24px] lg:leading-[24px] md:text-[20px] md:leading-[20px]  tracking-[-0.05em] text-[#252526] 
+          text-[6.4vw]  pt-[41px] lg:pt-0
           "
         >
           {t("contacts.info.partners")}
         </h1>
-        <p className="uppercase 2xl:text-[20px] text-[12px]   px-[18px] md:px-0 xl:w-[89%] xl:text-[16px]  lg:text-[14px]  md:text-[14px] leading-[125%]   lg:mt-[35px] text-[#6B6B6B] 2xl:max-w-[969px]  mt-[12px] ">
+        <p className="uppercase 2xl:text-[1.04vw] text-[3.2vw] 2xl:w-[85%]  px-[18px] md:px-0  xl:text-[1.09vw] 
+         lg:text-[14px]  md:text-[14px] leading-[125%] 2xl:mt-[1.82vw]  xl:w-[95%] lg:mt-[35px] text-[#6B6B6B]   mt-[12px] ">
           {t("contacts.info.partnersText.0")}
           <span className="font-cofo-medium text-[#252526]">
             {t("contacts.info.partnersText.1")}
@@ -24,12 +25,12 @@ export const ContactUs = () => {
         </p>
       </div>
 
-      <div className="lg:mt-[40px] flex-col flex text-center md:text-start justify-center items-center md:justify-start md:items-start lg:pb-0 pb-[19px]  ">
+      <div className="2xl:mt-[2.08vw]  lg:mt-[40px] flex-col flex text-center md:text-start justify-center items-center md:justify-start md:items-start lg:pb-0 pb-[19px]  ">
         <div className="md:pe-5">
-          <h1 className=" uppercase 2xl:text-[40px] 2xl:leading-[40px] xl:text-[32px] xl:leading-[32px] lg:text-[24px] lg:leading-[24px] md:text-[20px] md:leading-[20px] tracking-[-0.05em] text-[#252526] text-[24px] leading-[24px]  pt-[31px] lg:pt-0">
+          <h1 className=" uppercase 2xl:text-[2.08vw]  xl:text-[32px]  lg:text-[24px]  md:text-[20px]  tracking-[-0.05em] text-[#252526] text-[24px] leading-[24px]  pt-[31px] lg:pt-0">
             {t("contacts.info.career")}
           </h1>
-          <p className="uppercase px-[18px] md:px-0  leading-[125%] 2xl:text-[20px] xl:text-[16px] lg:text-[14px]  md:text-[14px]  text-[12px]  lg:mt-[35px] text-[#6B6B6B] 2xl:max-w-[969px]  mt-[12px] ">
+          <p className="uppercase px-[18px] md:px-0 xl:w-[100%] w-[101%]  leading-[125%] 2xl:text-[1.04vw] xl:text-[1.09vw] lg:text-[14px]  md:text-[14px]  text-[3.2vw] 2xl:mt-[1.82vw]  lg:mt-[35px] text-[#6B6B6B]    mt-[12px] ">
             {t("contacts.info.careerText.0")}
             <span className="font-cofo-medium text-[#252526]">
               {t("contacts.info.careerText.1")}
@@ -37,7 +38,7 @@ export const ContactUs = () => {
             {t("contacts.info.careerText.2")}
           </p>
         </div>
-        <div className=" lg:mt-[60px] lg:mb-10 mt-[40px] px-[16px] md:px-0">
+        <div className=" lg:mt-[60px] 2xl:mt-[3.13vw] lg:mb-10 mt-[40px] px-[16px] md:px-0">
           <InViewWrapper>
             <img loading="lazy"
               src={hotelContacts}

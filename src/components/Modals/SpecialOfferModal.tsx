@@ -51,12 +51,12 @@ export const SpecialOffersModal = () => {
       className="fixed inset-0 flex items-center justify-center overflow-auto"
       overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
     >
-      <div className="bg-white md:w-[76.51%] w-[91%] h-[97%] md:h-full  min-h-[80vh] max-h-[100vh] relative lg:overflow-hidden flex flex-col 2xl:justify-center md:p-[25px] p-[25px] items-center overflow-auto">
+      <div className="bg-white md:w-[76.51%] w-[91%] h-[97%] md:h-full  min-h-[80vh] max-h-[100vh] relative lg:overflow-hidden flex flex-col 2xl:justify-center md:p-[25px] p-[22px] items-center overflow-auto">
         <button
-          className="absolute top-0 right-0 text-3xl hover:cursor-pointer"
+          className="absolute top-0.5 right-0.5 text-3xl hover:cursor-pointer"
           onClick={handleCloseModal}
         >
-          <IoClose color="#8C331B" />
+          <IoClose color="#8C331B" className="w-[20px] h-[20px]" />
         </button>
 
         <div className="relative w-full">
@@ -74,14 +74,14 @@ export const SpecialOffersModal = () => {
             <div className="flex flex-col items-center justify-center  md:mt-auto  gap-y-[20px]">
               <h1
                 className={cn(
-                  `uppercase text-white text-[32px] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${
+                  `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${
                     data.url === "business" ? "md:w-2/3" : ""
                   }`
                 )}
               >
                 {t(data.title)}
               </h1>
-              <p className="uppercase md:w-3/5 text-white text-[12px] md:text-[16px] leading-[15px] md:leading-[22px]">
+              <p className="uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] leading-[15px] md:leading-[22px] w-[95%]">
                 {t(data.desc)}
               </p>
               {isPetOffer && (
@@ -109,13 +109,13 @@ export const SpecialOffersModal = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526]">
+        <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526] py-[27px]">
           <div className="flex flex-col justify-center  px-4 col-span-2 md:col-span-1  ">
             <h1 className="text-[24px] lg:text-[48px] text-white uppercase md:ps-6">
               {t("specialOfferModal.contacts.title")}
             </h1>
           </div>
-          <div className="flex flex-col md:justify-center justify-start px-4 py-4 col-span-2 md:col-span-1 ">
+          <div className="flex flex-col md:justify-center justify-start px-4 pt-4 col-span-2 md:col-span-1 ">
             <ul className="space-y-1 lg:space-y-2 ">
               <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
                 +38 (073) 242 40 02
