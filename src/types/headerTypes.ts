@@ -29,7 +29,7 @@ export interface PageHeaderProps {
     mobileSrc?: string;
     objectPosition?: string;
     wrapInView?: boolean;
-    gradientStyle?: "dark" | "light" | "contacts";
+    gradientStyle?: "dark" | "light" | "contacts" | "home";
   }
   
   export interface HeaderTitleProps {

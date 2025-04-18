@@ -21,7 +21,7 @@ export const HeaderTitle: React.FC<HeaderTitleProps> = ({
     return (
       <h1
         className={
-          `${baseClasses}  xl:text-[198px] lg:text-[100px] md:text-[80px] flex flex-col text-[48px]  xl:leading-[154.83px] leading-[80%] tracking-[-0.1em] pt-[12px] gap-0`
+          `${baseClasses}  2xl:text-[10.31vw] xl:text-[11.72vw] lg:text-[100px] md:text-[80px] flex flex-col text-[48px]  xl:leading-[154.83px] leading-[80%] tracking-[-0.1em] pt-[12px] gap-0 `
         }
       >
         <span className="block ">{titleParts[0]}-</span>
@@ -32,8 +32,8 @@ export const HeaderTitle: React.FC<HeaderTitleProps> = ({
 
   return (
     <h1
-      className={cn(`${baseClasses} 2xl:text-[198px] xl:text-[150px] lg:text-[120px] md:text-[100px] sm:text-[80px]  [font-display:swap]
-        ${isBiggerText ? "text-[68px]" : "text-[48px]"} 
+      className={cn(`${baseClasses} 2xl:text-[10.31vw] xl:text-[11.72vw] lg:text-[120px] md:text-[100px] sm:text-[80px]  [font-display:swap] 2xl:pt-[1.09vw]  
+        ${isBiggerText ? "text-[17.07vw]" : "text-[48px]"} 
         [text-wrap:balance] w-[90%] leading-[77%] tracking-[-0.1em]`)}
     >
       {title}

@@ -14,6 +14,8 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
       case "light":
       case "contacts":
         return "bg-[linear-gradient(2.57deg,rgba(255,255,255,0)_0.95%,#FFFFFF_95.83%)]";
+      case "home":
+        return "";
       case "dark":
       default:
         return "bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#252526_0%,rgba(37,37,38,0)_50.36%,#252526_100%)]";

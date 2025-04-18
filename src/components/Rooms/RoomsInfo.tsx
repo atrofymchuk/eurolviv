@@ -13,9 +13,9 @@ export const RoomsInfo = () => {
     <div className="w-full flex-col flex items-center ">
       <div className=" lg:border-x border-[#C7C7C7] mx-auto w-full max-w-[89.58%] box-border container-fluid  fluid-container">
         <div className="grid  grid-cols-1  ">
-          <div className="space-y-[11px] px-2 border-x border-[#C7C7C7] ">
-            <div className="lg:block hidden mt-[114px]">
-              <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em]">
+          <div className="space-y-[11px] px-2 2xl:px-[1.04vw] border-x lg:border-x-0 border-[#C7C7C7] ">
+            <div className="lg:block hidden 2xl:mt-[5.94vw] xl:mt-[6.94vw] lg:mt-[6vw]">
+              <h1 className="uppercase 2xl:text-[5.21vw] xl:text-[5vw] lg:text-[4.69vw] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em]">
                 <span className="text-[#8C331B]">
                   {t("rooms.about.heading.0")},
                 </span>
@@ -27,21 +27,21 @@ export const RoomsInfo = () => {
                 "items-center": isEng,
               },
               {
-                "items-end": !isEng,
+                "": !isEng,
               })}>
-                <div className="w-fit">
-                  <h1 className="uppercase lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] tracking-[-0.04em] lg:leading-none text-[#252526]">
+                <div className="w-full 2xl:ms-[0.9vw] xl:ms-[.4vw] lg:ps-[9vw]">
+                  <h1 className="uppercase 2xl:text-[5.21vw] xl:text-[5vw] lg:text-[4.69vw] md:text-[80px] sm:text-[60px] leading-[81%] tracking-[-0.04em] lg:leading-none text-[#252526]">
                     {t("rooms.about.heading.2")}
                   </h1>
-                  <h1 className="mb-[24px] xl:mb-[43px] uppercase font-cofo lg:text-[100px] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em] text-[#252526]">
+                  <h1 className="mb-[24px]  xl:mb-[43px] uppercase font-cofo 2xl:text-[5.21vw] xl:text-[5vw] lg:text-[4.69vw] md:text-[80px] sm:text-[60px] leading-[81%] lg:leading-none tracking-[-0.04em] text-[#252526]">
                     {t("rooms.about.heading.3")}
                   </h1>
                   <div className="flex  items-center lg:gap-x-[30px]">
-                    <p className="lg:text-[16px] md:text-[14px] sm:text-[12px] leading-[20px] text-[#252526] uppercase  max-w-[412px]">
+                    <p className="2xl:text-[0.83vw]  xl:text-[1.09vw] lg:text-[1.17vw] sm:text-[12px] leading-[20px] text-[#252526] uppercase xl:w-[27.46vw]  2xl:w-[21.46vw] lg:w-[27.46vw]">
                       {t("rooms.about.desc")}
                     </p>
                     <BookLink
-                      className="text-[#FFFFFF] bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px]  py-[11px] lg:w-[204px] flex justify-center lg:h-[44px] h-[40px]"
+                      className="text-[#FFFFFF] flex-col items-center  bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] py-[11px] lg:w-[15.63vw] xl:w-[15.63vw]  2xl:text-[0.73vw] flex justify-center lg:h-[44px] h-[40px]"
                       to={"/booking"}
                     >
 
@@ -52,23 +52,27 @@ export const RoomsInfo = () => {
               </div>
             </div>
 
-            <div className="lg:hidden block pb-[20px] ">
-              <h1 className="text-[32px] leading-[32px] tracking-[-0.07em] uppercase mt-[53px] text-center">
+            <div className="lg:hidden flex flex-col items-center pb-[20px] ">
+              <h1 className="text-[8.53vw] leading-[98%]  tracking-[-0.07em] uppercase text-[#242425] mt-[53px] text-center">
                 <span className="text-[#8C331B]">
                   {t("rooms.about.heading.0")},
                 </span>
-                <span>
+                <span className="mt-[5px]">
                   {t("rooms.about.heading.1")}
+                </span>
+                <span className="mt-[5px]">
                   {t("rooms.about.heading.2")}
-                  {!isEng && t("rooms.about.heading.4")}
+                  <span className="mt-[5px]">
+                    {!isEng && t("rooms.about.heading.4")}
+                  </span>
                 </span>
               </h1>
-              <div className="flex flex-col text-center  items-center px-6 mt-[24px] md:mt-[0px]">
-                <p className="text-[12px] leading-[15px] text-[#252526] uppercase">
+              <div className="flex flex-col text-center  items-center w-[95%] mt-[24px] md:mt-[0px]">
+                <p className="text-[3.2vw] leading-[15px] text-[#252526] uppercase">
                   {t("rooms.about.desc")}
                 </p>
                 <BookLink
-                  className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px]"
+                  className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px] h-[40px] flex justify-center items-center"
                   to={"/booking"}
                 >
                   <span className="lg:px-[8px] lg:py-[13px] px-[4.2px] lg:mt-[43px] py-[9.5px] ">

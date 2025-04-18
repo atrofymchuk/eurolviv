@@ -12,12 +12,12 @@ export const HeaderHome = () => {
           <img loading="lazy"
             src={headerHome}
             alt="preview"
-            className="object-cover object-[46%_0%] w-full 2xl:h-[62.5vw] lg:h-[900px]  md:h-[650px] h-[469px] hidden md:block"
+            className="object-cover object-[46%_0%] w-full 2xl:h-[62.5vw] lg:h-[900px]  md:h-[650px] h-[125.07vw] hidden md:block"
           />
           <img loading="lazy"
             src={headerHomeMobile}
             alt="preview"
-            className="object-cover object-[46%_0%] w-full 2xl:h-[62.5vw] lg:h-[900px]  md:h-[650px] h-[469px] md:hidden"
+            className="object-cover object-[46%_0%] w-full 2xl:h-[62.5vw] lg:h-[900px]  md:h-[650px] h-[125.07vw] md:hidden"
           />
         </InViewWrapper>
         
