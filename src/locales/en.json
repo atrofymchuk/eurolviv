@@ -1013,6 +1013,7 @@
                     "title": "Military Rate",
                     "desc": "Our heartfelt thanks go to our military, whose courage enables us to keep doing what we do best: offering warm hospitality.",
                     "cardDesc": "We are sincerely grateful to our military for the opportunity to continue working.",
+                    "cardDescMobile": "We are sincerely grateful to our military for the opportunity to continue working",
                     "offer": "-20% off accommodation for military personnel",
                     "details": [
                       "Discount available for service members of the Ukrainian Armed Forces, National Guard, border guards, Security Service of Ukraine members, veterans, and participants of ATO/JFO",

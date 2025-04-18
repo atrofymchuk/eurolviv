@@ -15,10 +15,10 @@ export const Cards = () => {
 
   return (
     <div className="flex items-center justify-center  md:pb-[82px] ">
-      <div className="grid w-[89.58%] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10 md:pb-0">
-        <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
-        <div className="md:col-span-2 lg:col-span-1 lg:border-x border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
-        <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] pt-[38px]"></div>
+      <div className="grid w-[79.7%] lg:w-[89.58%] grid-cols-1 md:grid-cols-2 lg:grid-cols-[33.31%_33.43%_33.26%] border-[#C7C7C7] border-t border-l border-r pb-10 md:pb-0">
+        <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] 2xl:pt-[2.66vw] pt-[10.13vw]"></div>
+        <div className="md:col-span-2 lg:col-span-1 lg:border-x border-[#C7C7C7] lg:pt-[51px] 2xl:pt-[2.66vw] pt-[10.13vw]"></div>
+        <div className="hidden lg:block border-[#C7C7C7] lg:pt-[51px] 2xl:pt-[2.66vw] pt-[10.13vw]"></div>
 
         {specialOffers.map((el, index) => {
           const isMiddleCard = index % 3 === 1;
@@ -39,13 +39,13 @@ export const Cards = () => {
                 ${isFirstInRowLg ? "lg:border-l-0" : ""}
                 ${isLastRowLg ? "lg:border-b" : ""}
                 ${isLastRowMd ? "md:border-b" : ""}
-                ${index === specialOffers.length - 1 ? "border-b " : ""}
+                ${index === specialOffers.length - 1 ? "border-b border-s-0! " : ""}
               `)}
             >
               <Link
                 to={`/special-offers/${el.url}`}
-                onClick={() => onOpenModal('specialOffer')}
-                className="w-full sm:p-5 flex flex-col hover:cursor-pointer 2xl:h-[703px] xl:h-[650px] lg:h-[520px] md:h-[520px] "
+                // onClick={() => onOpenModal('specialOffer')}
+                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[39.06vw] lg:h-[39.99vw] md:h-[520px] "
               >
                 <Card
                   src={el.src}
@@ -55,6 +55,7 @@ export const Cards = () => {
                   offer={el.offer}
                   url={el.url}
                   handleCardClick={handleCardClick}
+                  index={index}
                 />
               </Link>
             </div>

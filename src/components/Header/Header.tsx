@@ -123,7 +123,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <Link
                 to={"/booking"}
                 className={cn(
-                  `uppercase bg-[#8C331B] 2xl:mt-[1.3vw] xl:mt-[0.94vw]  text-white px-3 text-center items-center justify-center
+                  `uppercase bg-[#8C331B] 2xl:mt-[1.3vw] xl:mt-[0.94vw] xl:text-[0.94vw]  text-white px-3 text-center items-center justify-center
                    py-2 rounded-full hover:bg-[#922b1f] font-cofo-medium lg:text-[0.98vw] text-[12px] 2xl:text-[0.73vw] 2xl:w-[9.95vw] 2xl:h-[2.03vw]
                     hover:cursor-pointer hidden lg:flex`,
                   {
