@@ -15,7 +15,7 @@ export const ContactUs = () => {
         >
           {t("contacts.info.partners")}
         </h1>
-        <p className="uppercase 2xl:text-[1.04vw] text-[3.2vw] 2xl:w-[85%]  px-[18px] md:px-0  xl:text-[1.09vw] 
+        <p className="uppercase 2xl:text-[1.04vw] text-[3.2vw] 2xl:w-[87%]  px-[18px] md:px-0  xl:text-[1.09vw] 
          lg:text-[14px]  md:text-[14px] leading-[125%] 2xl:mt-[1.82vw]  xl:w-[95%] lg:mt-[35px] text-[#6B6B6B]   mt-[12px] ">
           {t("contacts.info.partnersText.0")}
           <span className="font-cofo-medium text-[#252526]">

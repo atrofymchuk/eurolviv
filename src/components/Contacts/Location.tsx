@@ -10,7 +10,7 @@ export const Location = () => {
   return (
     <div className="w-full flex flex-col mt-[45px] 2xl:mt-[8.28vw] lg:mt-[159px]">
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-cofo uppercase lg:tracking-[-0.04em] 2xl:text-[5.21vw] text-[8.53vw] tracking-[-0.05em]  text-[#252526]">
+        <h1 className="font-cofo uppercase lg:tracking-[-0.04em] 2xl:text-[5.21vw] text-[8.53vw] tracking-[-0.05em] leading-[80%]  text-[#252526]">
           {t("contacts.location.locationTitle")}
         </h1>
         <p className="flex items-center text-[3.2vw] font-cofo-medium uppercase underline  underline-offset-[22%] lg:text-[18px] 
@@ -18,7 +18,7 @@ export const Location = () => {
           <img loading="lazy" src={location} alt="location" className="2xl:w-[0.94vw] 2xl:h-[0.94vw] lg:w-[18px] lg:h-[18px] md:w-[16px] md:h-[16px] " />
           {t("contacts.info.addressDesc")}
         </p>
-        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] 2xl:w-[10.26vw] 2xl:h-[2.03vw] 2xl:text-[0.73vw] lg:w-[197px] w-[178px] text-center" />
+        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] 2xl:w-[10.26vw] 2xl:h-[2.03vw] 2xl:text-[0.73vw] lg:w-[197px] w-[178px] text-center flex items-center justify-center" />
       </div>
 
       <div className="relative w-full lg:h-full h-[332px] mt-[18px]">

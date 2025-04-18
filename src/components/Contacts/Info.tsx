@@ -50,7 +50,7 @@ export const Info = () => {
               </h4>
               <div className="flex space-x-4 text-lg">
                 <Link
-                  className="rounded-full hover:cursor-pointer transition-transform hover:scale-110"
+                  className="rounded-full hover:cursor-pointer  transition-transform hover:scale-110"
                   to={social.hotel.facebook}
                   target="_blank"
                 >
@@ -66,7 +66,7 @@ export const Info = () => {
                 >
                   <FaInstagram
                     color="white"
-                    className="w-[22px] h-[22px] md:w-[24px] md:h-[24px] lg:w-[26px] lg:h-[26px] xl:w-[1.72vw] xl:h-[1.72vw]"
+                    className="w-[22px] h-[22px] md:w-[24px] md:h-[24px] lg:w-[26px] lg:h-[26px] xl:w-[1.72vw] xl:h-[1.72vw] 2xl:w-[1.5vw] 2xl:h-[1.5vw]"
 
                   />
                 </Link>
@@ -80,20 +80,20 @@ export const Info = () => {
               <h1
                 className=" uppercase 
               leading-[82%] lg:tracking-[-0.04em] 
-                text-[8.53vw]  lg:text-[48px] xl:text-[70px] 2xl:text-[5.21vw]  tracking-[-0.07em] 2xl:w-[29.53vw] "
+                text-[8.53vw]  lg:text-[48px] xl:text-[5.2vw] 2xl:text-[5.21vw]  tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] "
               >
                 {t("contacts.info.headingContactUs")}
               </h1>
               <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5">
                 <p
                   className="font-cofo-medium uppercase 
-                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw]   "
+                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw] "
                 >
                   {t("contacts.info.contactWithUsDesc")}
                 </p>
                 <p
                   className=" uppercase 
-                w-[95%] text-[#252526] lg:text-[14px] md:text-[14px] 2xl:text-[1.04vw]  xl:w-[90%] 2xl:w-full
+                w-[95%] text-[#252526] lg:text-[14px] md:text-[14px] 2xl:text-[1.04vw]  xl:w-[90%] 2xl:w-[95%]
                 text-[3.2vw] "
                 >
                   {t("contacts.info.review")}

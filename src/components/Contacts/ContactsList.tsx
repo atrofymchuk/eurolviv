@@ -58,7 +58,7 @@ export const ContactList = ({
             <Link to={instagramLink} target="_blank">
               <FaInstagram
                 color="white"
-                className="w-[22px] h-[22px] md:w-[24px] md:h-[24px] lg:w-[26px] lg:h-[26px] xl:w-[1.72vw] xl:h-[1.72vw] 2xl:w-[2.08vw] 2xl:h-[2.08vw]"
+                className="w-[22px] h-[22px] md:w-[24px] md:h-[24px] lg:w-[26px] lg:h-[26px] xl:w-[1.72vw] xl:h-[1.72vw] 2xl:w-[1.58vw] 2xl:h-[1.58vw]"
               />
             </Link>
           </div>
