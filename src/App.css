@@ -65,7 +65,6 @@
 }
 
 .special-offers-slider > .slick-list > .slick-track{
-  height: 800px !important;
   overflow-y: hidden !important;
 }
 
@@ -104,7 +103,7 @@
     height: 280px;
   }
   .special-offers-slider > .slick-list >.slick-track>.slick-slide  {
-    width: 269px !important;
+    width: 72vw !important;
   }
   .roomslider > .slick-list >.slick-track>.slick-slide   {
     width: 269px !important;

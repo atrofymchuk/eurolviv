@@ -125,7 +125,8 @@ export const About = memo(
 
               <BookLink
                 to={"/booking"}
-                className="uppercase 2xl:text-[0.73vw] bg-[#8C331B] text-white w-fit 2xl:mt-[3.65vw] xl:mt-[3.91vw] 2xl:w-[10.63vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center  mt-[69px] mb-[28px] md:mb-0
+                className="uppercase 2xl:text-[0.73vw] bg-[#8C331B] text-white s 2xl:mt-[3.65vw] xl:mt-[3.91vw] w-[40.27vw]
+                2xl:w-[10.63vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center  mt-[69px] mb-[28px] md:mb-0
             "
               >
                 

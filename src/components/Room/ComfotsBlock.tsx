@@ -13,7 +13,7 @@ export const ComfortsBlock = memo(
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw]  ${style.text} uppercase 2xl:w-[93%] w-full`
+            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw] xl:gap-x-[0.55vw]  ${style.text} uppercase 2xl:w-[93%] w-full`
           )}
         >
           <InViewWrapper>
@@ -23,7 +23,7 @@ export const ComfortsBlock = memo(
               className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-[1.88vw] 2xl:h-[1.88vw]"
             />
           </InViewWrapper>
-          <p className="text-[14px] sm:text-[12px] xl:text-[18px] 2xl:text-[1.04vw]  ">
+          <p className="text-[3.73vw] sm:text-[12px] xl:text-[15px] 2xl:text-[1.04vw]  ">
             {t(item.text)}
           </p>
         </li>
@@ -44,13 +44,13 @@ export const ComfortsBlock = memo(
             md:max-w-[90.83%]  w-full max-w-[81.9%]
             "
           >
-            <div className="flex flex-col  ps-[8px] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
+            <div className="flex flex-col  ps-[2.93vw] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
                 <h1
-                  className={cn(`uppercase ${style.headerColor} font-cofo text-[1.67vw] 
-              lg:text-[32px] xl:text-[48px] 2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 
-              2xl:mb-[2.66vw] lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
-              break-words max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
+                  className={cn(`uppercase ${style.headerColor} font-cofo text-[8.53vw] 
+              lg:text-[32px] xl:text-[3.75vw] 2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 2xl:leading-[100%] xl:leading-[86%] 
+              2xl:mb-[2.66vw]  lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
+               max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
                 >
                   {title}
                 </h1>
@@ -61,7 +61,8 @@ export const ComfortsBlock = memo(
                       src={images[0]}
                       alt="room image"
                       className={cn(
-                        `md:w-full 2xl:h-[26.67vw]  xl:h-[380px]  lg:h-[311px]  md:h-[260px] w-[250px]  h-[262px] object-cover `
+                        `md:w-full 2xl:h-[26.67vw]  xl:h-[27.34vw]  lg:h-[311px] 
+                         md:h-[260px]  h-[69.87vw] object-cover `
                       )}
                     />
                   </InViewWrapper>
@@ -73,14 +74,14 @@ export const ComfortsBlock = memo(
               className="md:border-x border-[#C7C7C7]
               flex  md:justify-center 
               md:items-center xl:py-[89px] lg:py-[45px]
-              py-6 md:py-8  h-full ps-[8px] md:ps-[4px] lg:ps-0
+              py-[11.73vw_6.4vw] md:py-8  h-full ps-[2.93vw] md:ps-[4px] lg:ps-0
               "
             >
               <div
                 className=" sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
               2xl:h-[26.67vw] md:h-[260px] lg:h-[311px]
                   2xl:ps-[36px] xl:ps-[14px]  
-                lg:pt-[50px] xl:pt-[20px] 2xl:pt-[78px] md:pt-[45px] "
+                lg:pt-[50px] xl:pt-[3.13vw] 2xl:pt-[4vw] md:pt-[45px] "
               >
                 <ul>
                   {renderedIcons}
@@ -91,24 +92,25 @@ export const ComfortsBlock = memo(
             <div
               className="flex flex-col items-center justify-center 
                md:py-8 lg:py-0 md:px-0 
-              xl:pt-[130px]
-                pb-[28px]
+              xl:pt-[4.5vw]
+                pb-[7.47vw]
                md:pb-0"
             >
               <div
                 className="sm
                 lg:h-[441px]  
-                xl:h-[411px]  
+                xl:h-[32.11vw]  
                  2xl:h-[26.56vw]
                 w-full px-2.5 md:p-0
-                lg:pt-[110px] xl:pt-0   md:pt-[45px] 2xl:pt-[10px]"
+                lg:pt-[110px] xl:pt-[4.13vw]   md:pt-[45px] 2xl:pt-[27px]"
               >
                 <InViewWrapper>
                   <img loading="lazy"
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
-                     2xl:h-[26.67vw]  xl:h-[380px] lg:h-[311px] md:w-full object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
+                     2xl:h-[26.67vw]  xl:h-[27.34vw] lg:h-[311px] md:w-full 
+                     object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
                     `)}
                   />
                   
@@ -116,7 +118,7 @@ export const ComfortsBlock = memo(
                     src={images[2]}
                     alt="room image"
                     className={cn(`md:hidden w-full object-cover object-bottom
-                    h-[262px] sm:h-[250px] md:h-[300px] 
+                    h-[69.87vw] sm:h-[250px] md:h-[300px] 
                     `)}
                   />
 

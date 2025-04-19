@@ -48,7 +48,7 @@ export const SpecialOffers = () => {
               </h1>
             </div>
 
-            <div className="flex overflow-hidden h-[450px] sm:h-[500px] md:h-[600px] lg:h-[670px] w-screen flex-col z-50 relative">
+            <div className="flex overflow-hidden h-[450px] sm:h-[500px] md:h-[600px] lg:h-[670px] 2xl:h-[40.9vw] w-screen flex-col z-50 relative">
               <div className="flex overflow-y-hidden overflow-x-hidden w-full">
                 <SpecialOffersSlider ref={sliderRef} isHome={isHome} />
               </div>

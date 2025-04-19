@@ -3,6 +3,7 @@ import { parking } from "../../store/exportsIcons";
 import { dog } from "../../store/exportsImg";
 import { BookLink } from "../Buttons/BookLink";
 import cn from "classnames";
+
 export const MoreInfoSecondCol = ({
   availableService,
   isShowOtherInfo,
@@ -16,27 +17,27 @@ export const MoreInfoSecondCol = ({
       className={cn(
         `flex flex-col  md:py-10 items-center ${
           isShowOtherInfo
-            ? "justify-start pb-[41px] lg:py-20  "
-            : "lg:pt-42 xl:pt-58 2xl:pt-[10.6vw] md:pt-32"
+            ? "justify-start pb-[41px] lg:py-20 2xl:py-[4.17vw] "
+            : "lg:pt-42 xl:pt-[16.13vw] 2xl:pt-[12.9vw] md:pt-32"
         } h-full`
       )}
     >
       <div
         className={cn(
-          `flex flex-col md:items-center justify-between   gap-2 w-full 2xl:ps-[37px]  md:h-full  xl:ps-[17px] md:ps-[10px] ${
+          `flex flex-col md:items-center justify-between   w-full 2xl:ps-[1.93vw]  md:h-full  xl:ps-[1.33vw] md:ps-[10px] ${
             isShowOtherInfo
-              ? "2xl:h-[26.67vw] lg:h-[300px] xl:h-[371px] "
-              : "ps-[10px] 2xl:h-[26.67vw] lg:h-[300px] xl:h-[371px] md:h-[250px] "
+              ? "2xl:h-[26.57vw] lg:h-[300px] xl:h-[28.98vw] "
+              : "ps-[10px] 2xl:h-[26vw] lg:h-[300px] xl:h-[28.88vw] md:h-[250px] "
           }`
         )}
-      >
+      > 
         <h1
           className={cn(
-            ` text-white text-[32px]  tracking-[-0.07em] xl:text-[42px] 2xl:text-[2.5vw] leading-[104%] uppercase `,
+            ` text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[2.8vw] 2xl:text-[2.52vw] leading-[104%] uppercase `,
             {
-              "block md:hidden xl:pb-[51px] lg:pb-[20px] md:pb-[15px] pt-[54px]":
+              "block md:hidden xl:pb-[2.98vw] lg:pb-[20px] md:pb-[15px] pt-[54px] 2xl:pb-[2.71vw]":
                 !isShowOtherInfo,
-              "md:block hidden xl:pb-[51px] lg:pb-[20px] md:pb-[15px]":
+              "md:block hidden xl:pb-[2.98vw] lg:pb-[20px] md:pb-[15px]  2xl:pb-[2.71vw]":
                 isShowOtherInfo,
             }
           )}
@@ -49,20 +50,21 @@ export const MoreInfoSecondCol = ({
             loading="lazy"
             src={dog}
             alt="imageOverlay"
-            className="w-full  object-cover px-[10px_6px] md:hidden h-[262px] "
+            className="w-full  object-cover px-[2.67vw_1.6vw] md:hidden h-[69.87vw] "
           />
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[32px]  tracking-[-0.07em] xl:text-[48px] leading-[104%] uppercase font-cofo  md:hidden block px-[10px] lg:px-5 mt-[42px]">
+          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw]
+           leading-[104%] uppercase  md:hidden block px-[2.67vw] lg:px-5 mt-[42px]">
             {t("room.moreInfo.title")}
           </h1>
         )}
 
         <ul
           className={cn(
-            `flex flex-col 2xl:gap-x-[0.47vw] gap-x-0.5 pt-[44px] md:pt-0  w-full ${
-              isShowOtherInfo ? "md:px-0 px-[10px] " : ""
+            `flex flex-col 2xl:gap-x-[0.47vw] gap-x-0.5 pt-[44px] gap-y-[1.33vw] lg:gap-y-0 md:pt-0  w-full ${
+              isShowOtherInfo ? "md:px-0 px-[2.67vw] " : ""
             }`
           )}
         >
@@ -70,14 +72,14 @@ export const MoreInfoSecondCol = ({
             <li
               key={item.src}
               className={cn(
-                `text-white text-[14px] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw] uppercase   items-center gap-0.75 flex`
+                `text-white text-[3.73vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.05vw] uppercase xl:text-[1.09vw]   items-center gap-0.75 flex`
               )}
             >
               <img
                 loading="lazy"
                 src={item.src}
                 alt={t(item.text)}
-                className="2xl:w-[1.88vw] 2xl:h-[1.88vw] lg:w-6 lg:h-6 md:w-5 md:h-5 w-6 h-6"
+                className="2xl:w-[1.88vw] 2xl:h-[1.88vw] xl:w-[2.2vw] xl:h-[2.2vw] lg:w-6 lg:h-6 md:w-5 md:h-5 w-6 h-6"
               />
               {t(item.text)}
             </li>
@@ -88,7 +90,7 @@ export const MoreInfoSecondCol = ({
           <BookLink
             to="/booking"
             className=" 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-10 lg:w-[204px] text-center
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors   xl:mt-[3.13vw] lg:w-[204px] text-center
         lg:mt-9
         md:mt-4
         mt-10
@@ -101,12 +103,13 @@ export const MoreInfoSecondCol = ({
           </BookLink>
         )}
         <div className="mt-auto">
-          <p className="text-white text-[16px] 2xl:text-[1.04vw] md:text-[12px] lg:text-[14px] uppercase leading-[104%] md:flex hidden gap-1">
+          <p className="text-white text-[4.27vw] w-[102%] 2xl:text-[1.05vw] 2xl:gap-[0.42vw]
+          xl:text-[1.09vw] md:text-[12px] lg:text-[14px] uppercase leading-[120%] md:flex hidden gap-1">
             <img
               loading="lazy"
               src={parking}
               alt="parking"
-              className="2xl:w-[1.88vw] 2xl:h-[1.88vw] lg:w-6 lg:h-6 md:w-6 md:h-6 w-6 h-6"
+              className="2xl:w-[1.88vw] 2xl:h-[1.88vw]  xl:w-[2.2vw] xl:h-[2.2vw] lg:w-6 lg:h-6 md:w-6 md:h-6 w-6 h-6"
             />
             {t("room.moreInfo.parking")}
           </p>
@@ -114,11 +117,12 @@ export const MoreInfoSecondCol = ({
             <BookLink
               to="/booking"
               className={cn(` 
-        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors lg:w-[204px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] text-center flex items-center justify-center  xl:mt-10
+        bg-[#EDE8E5] text-[#A47762] hover:bg-white transition-colors xl:text-[0.94vw]
+         2xl:text-[0.73vw] lg:px-0 xl:w-[15.28vw] lg:w-[204px] 2xl:w-[10.63vw] 2xl:h-[2.29vw]
+          text-center flex items-center justify-center  xl:mt-[3.13vw]
         lg:mt-9
         md:mt-4
         mt-10
-        2xl:text-[0.73vw]
         w-fit
         `)}
             >

@@ -8,7 +8,7 @@ export const MoreInfoThirdCol = ({
 }) => {
   return (
     <div
-      className={cn(`flex flex-col pt-[54px] lg:py-20 md:py-10 items-center ${
+      className={cn(`flex flex-col pt-[54px] 2xl:py-[4.17vw] xl:py-[6.25vw] lg:py-20 md:py-10 items-center ${
         isShowOtherInfo ? "justify-start" : "justify-end"
       } h-full w-full`)}
     >
@@ -16,7 +16,8 @@ export const MoreInfoThirdCol = ({
         <img loading="lazy"
           src={dog}
           alt="dog"
-          className="2xl:h-[26.67vw] xl:h-[371px] lg:h-[300px] md:h-[250px] 2xl:px-[1.3vw] object-cover w-full h-full md:block hidden lg:px-3 md:px-2"
+          className="2xl:h-[26.67vw] xl:h-[28.98vw] lg:h-[300px] 
+          md:h-[250px] 2xl:px-[1.3vw] object-cover w-full h-full md:block hidden lg:px-3 md:px-2"
         />
       </div>
     </div>
