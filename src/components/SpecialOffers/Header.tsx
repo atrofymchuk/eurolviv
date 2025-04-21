@@ -9,10 +9,10 @@ export const Header = () => {
       <div className="grid lg:grid-cols-[33.31%_33.43%_33.26%] grid-cols-1 text-[#EDE8E5] text-center lg:text-start w-[79.7%] lg:w-[89.58%] mx-auto ">
         
         <div className="   border-x lg:border-e-0 border-[#515151] flex flex-col
-         items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-[5.33vw] 2xl:pt-[7.5vw] xl:pt-[7.5vw] lg:pt-[86px] 2xl:pl-[1.15vw] xl:pl-[1.5vw] lg:pl-[1.56vw] ">
+         items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-[5.33vw] 2xl:pt-[7.5vw] xl:pt-[7.5vw] lg:pt-[86px] 2xl:pl-[1vw] xl:pl-[1.5vw] lg:pl-[1.56vw] ">
           <h1
             className="uppercase  text-white lg:leading-[91%] leading-[82%] tracking-[-0.1em] 
-            text-[12.8vw] md:text-[64px] lg:text-[10.16vw] xl:text-[10.16vw] 2xl:text-[10.2vw] z-1"
+            text-[12.8vw] md:text-[64px] lg:text-[10.16vw] xl:text-[10.1vw] 2xl:text-[10.3vw] z-1"
           >
             {t("specialOffers.title")}
           </h1>
@@ -28,11 +28,11 @@ export const Header = () => {
           </p>
         </div>
 
-        <div className={`border-x border-[#515151]  2xl:pt-[16.02vw] 2xl:ps-[0.8vw]  
+        <div className={`border-x border-[#515151]  2xl:pt-[16.02vw] 2xl:ps-[0.9vw]  
         lg:flex hidden flex-col lg:justify-center lg:pt-[17vw] 2xl:pb-[5.26vw] xl:pb-[101px] lg:pb-[90px]  xl:pt-[15.88vw] `}>
           <h1
             className={`uppercase  text-white leading-[91%] tracking-[-0.1em] lg:flex hidden 
-            xl:text-[10.16vw] 2xl:text-[10.2vw] 2xl:ps-[2.8vw] xl:ps-[3.7vw] lg:ps-[3.73vw] lg:text-[10.16vw] `}
+            xl:text-[10.16vw] 2xl:text-[10.3vw] 2xl:ps-[2.8vw] xl:ps-[3.7vw] lg:ps-[3.73vw] lg:text-[10.16vw] `}
           >
             {t("specialOffers.desc2")}
           </h1>

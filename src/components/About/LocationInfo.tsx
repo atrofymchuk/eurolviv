@@ -23,8 +23,8 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
            ${isSpecialWidth ? "xl:text-[5.1vw]" : "xl:text-[5vw]"}`}>
           {t("about.whereWeAre.title")}
         </h1>
-        <p className={`text-[#8F8F8F] text-[3.2vw] leading-[110%] xl:text-[1.25vw] 2xl:text-[1.042vw] px-5 md:px-0 2xl:max-w-[500px]
-           xl:w-[90%] text-center uppercase lg:text-left  2xl:mt-[61px] ${isSpecialWidth ? "mt-12" : "mt-10"}`}>
+        <p className={`text-[#8F8F8F] text-[3.2vw] leading-[110%] xl:text-[1.25vw] 2xl:text-[1.042vw] px-5 md:px-0 2xl:max-w-[26.04vw]
+           xl:w-[80%] text-center uppercase lg:text-left  2xl:mt-[61px] ${isSpecialWidth ? "mt-12" : "mt-10"}`}>
           <span className="text-[#8C331B] font-cofo-medium">
             {t("about.whereWeAre.desc.1")}
           </span>

@@ -47,7 +47,7 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
           </div>
         </div>
 
-          <div className="flex lg:gap-x-4 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-[30px]">
+          <div className="flex lg:gap-x-3 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-[30px]">
           <Link
             to={social.restaurant.instagram}
             target="_blank"

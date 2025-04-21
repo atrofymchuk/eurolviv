@@ -44,7 +44,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
           {t("conferenceService.about.capacity")}:
           <br className="lg:inline hidden"/>
           <span className="font-cofo-medium text-[#8C331B] ">
-            &nbsp;{t(capacity)}
+            {t(capacity)}
           </span>
         </p>
       </div>

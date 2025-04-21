@@ -60,7 +60,7 @@ export const Footer = () => {
                         <Link to="/rooms" className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300">{t("footer.rooms")}</Link>
                       </li>
                       <li className="font-cofo-medium">
-                        <Link to="/conference-service" className="lg:hover:underline underline  lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
+                        <Link to="/conference-service" className="lg:hover:underline   lg:hover:underline-offset-4 lg:transition-all lg:duration-300">
                           {t("footer.conferenceServices")}
                         </Link>
                       </li>
@@ -122,8 +122,8 @@ export const Footer = () => {
 
             <BookingSection openPdf={openPdf} pdfDocuments={pdfDocuments} />
 
-            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px]">
-              <div className="w-full flex flex-col lg:ps-[32px]">
+            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px] ">
+              <div className="w-full flex flex-col lg:ps-[32px] ">
                 <div>
                   <div className="flex flex-col items-center md:items-start">
                     <h4 className="text-lg font-cofo-medium 2xl:text-[1.25vw] text-[20px] leading-[108.6%] font-cofo px-4 md:px-0 tracking-[-0.05em] 

@@ -10,7 +10,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
   const { t } = useTranslation();
 
   return (
-    <div className="gap-y-4 flex flex-col lg:h-[473px] 2xl:h-[25.677vw] w-full lg:w-[24.2%] h-full lg:border-e mt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:mt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
+    <div className="gap-y-4 flex flex-col lg:h-[493px] 2xl:h-[25.677vw] w-full lg:w-[24.2%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3 2xl:px-0 lg:items-center">
       <div className="flex flex-col h-full rrelatives">
         <div className="mb-0 2xl:w-[17.292vw]">
           <h4 className="text-[12px] uppercase 2xl:text-[0.938vw] xl:text-[16px] 2xl:h-[1.2vw] lg:text-[14px] font-cofo-medium ">

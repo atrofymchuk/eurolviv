@@ -65,6 +65,7 @@ export { default as bigHall } from "../assets/ConferenceService/BigHall.webp";
 export { default as bigHallTheathre } from "../assets/ConferenceService/BigHallTheathre.webp";
 export { default as hallH } from "../assets/ConferenceService/hallH.webp";
 export { default as pLetterImg } from "../assets/ConferenceService/pLetterImg.webp";
+export { default as negotiationTableBig } from "../assets/ConferenceService/negotiationTableBig.webp";
 
 export { default as pLetter } from "../assets/ConferenceService/uaHall/pLetter.webp";
 export { default as classRoom } from "../assets/ConferenceService/uaHall/class.webp";

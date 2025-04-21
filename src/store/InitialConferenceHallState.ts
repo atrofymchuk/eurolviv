@@ -22,7 +22,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         imgs.pLetterImg,
         imgs.hallH,
         imgs.bigHallTheathre,
-        imgs.bigHallTheathre,
+        imgs.negotiationTableBig,
       ],
       viewShowcaseSwiperImages: {
         ua: [

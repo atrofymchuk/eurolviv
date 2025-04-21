@@ -48,7 +48,7 @@ export const Info = () => {
               <h4 className="text-[3.2vw] md:text-[14px] 2xl:text-[0.83vw] text-[#6B6B6B] font-cofo uppercase ">
                 {t("contacts.info.socialMedia")}
               </h4>
-              <div className="flex space-x-4 text-lg">
+              <div className="flex lg:space-x-2 space-x-1.5 text-lg">
                 <Link
                   className="rounded-full hover:cursor-pointer  transition-transform hover:scale-110"
                   to={social.hotel.facebook}

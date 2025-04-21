@@ -69,13 +69,13 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
           </h2>
           <div className="gap-y-[3px] mt-[15px]  2xl:mt-[27px] ">
             <p className="text-[#8C331B] text-[14px] sm:text-[18px] md:text-[24px] lg:text-[24px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
-              {price.day} UAH
+              {price.day} UAH &nbsp;
               <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
                 /{t("conferenceService.equipment.day")}
               </span>
             </p>
             <p className="text-[#8C331B] text-[14px]  md:text-[24px] lg:text-[24px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
-              {price.hour} UAH{" "}
+              {price.hour} UAH &nbsp;
               <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
                 /{t("conferenceService.equipment.hour")}
               </span>

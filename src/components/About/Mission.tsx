@@ -45,7 +45,7 @@ export const Mission = () => {
 
       <div className="grid xl:grid-cols-3 items-center grid-cols-[1fr] w-full border-collapse   max-w-[89.58%]">
         <div className="xl:col-span-3 border-x border-[#C7C7C7] flex justify-center items-center py-6 2xl:pt-[2.26vw]">
-          <p className={`text-[#8C331B] uppercase tracking-[-0.01em] md:w-[400px] lg:w-[500px] 2xl:w-[40%]
+          <p className={`text-[#8C331B] uppercase tracking-[-0.01em] md:w-[400px] lg:w-[500px] 2xl:w-[38%]
  text-[3.2vw] md:text-[16px] lg:text-[18px]  2xl:text-[1.042vw] font-cofo-medium leading-[126%] text-center 
           ${isCustomMobile ?'w-[80%]' :' '}
           ${!isCustomMobile && !isCustomMobileSecondary ?'w-[80%]' :' '}
