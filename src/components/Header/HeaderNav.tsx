@@ -110,9 +110,7 @@ export const HeaderNav = memo(
 
         <MobileNavigation
           menuOpen={menuOpen}
-          iconLogoStyle={iconLogoStyle}
           scrolled={scrolled}
-          logo={logo}
           navLinks={navLinks}
           isActiveLink={isActiveLink}
           handleMouseEnterRooms={handleMouseEnterRooms}

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import { InViewWrapper } from "../utils/InViewWrapper";
-
 type LogoProps = {
   logo: string;
   iconLogoStyle: string;
@@ -26,7 +25,7 @@ export const Logo = ({
     <Link
       to="/"
       className={cn(
-          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]  ms-[2vw] lg:ms-0",
+          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]   lg:ms-0",
         className,
         {
         "2xl:me-[6.02vw] xl:me-[3vw]"  : isRestaurant,

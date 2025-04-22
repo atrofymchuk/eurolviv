@@ -8,6 +8,8 @@ import { IoClose } from "react-icons/io5";
 import { BookLink } from "../Buttons/BookLink";
 import { SocialIcons } from "./SocialIcons";
 import { useEffect } from "react";
+import logoSideBar from "../../assets/logo.svg";
+
 
 type MobileNavigationProps = {
   menuOpen: boolean;
@@ -21,10 +23,8 @@ type MobileNavigationProps = {
   setMenuOpen: (value: boolean) => void;
   changeLanguage: () => void;
   handleMouseEnterRestaurant: () => void;
-  logo: string;
   handleMouseLeaveRestaurant: () => void;
   isShowRestaurant: boolean;
-  iconLogoStyle: string;
   pathname: string;
 };
 
@@ -36,9 +36,7 @@ export const MobileNavigation = ({
   handleMouseEnterRooms,
   handleMouseLeaveRooms,
   isShowRooms,
-  logo,
   rooms,
-  iconLogoStyle,
   setMenuOpen,
   changeLanguage,
   handleMouseEnterRestaurant,
@@ -71,10 +69,10 @@ export const MobileNavigation = ({
     >
       <div className="w-full flex flex-col  px-[21px_27px] justify-between mt-[51px] h-full">
         <div>
-          <div className="mb-[30px] flex items-center justify-between">
+          <div className="mb-[30px] flex items-center justify-between ">
             <Logo
-              logo={logo}
-              iconLogoStyle={iconLogoStyle}
+              logo={logoSideBar}
+              iconLogoStyle={''}
               className="w-full self-start justify-start "
               iconClassName="w-[99px] h-[54px]"
               isMobile={true}

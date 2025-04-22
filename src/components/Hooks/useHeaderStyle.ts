@@ -9,7 +9,7 @@ const useNavbarStyles = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [isShowRooms, setIsShowRooms] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
