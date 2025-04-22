@@ -6,7 +6,7 @@ export const SwiperSlider = ({ slides }: { slides: string[] }) => {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   return (
-    <div className="relative xl:ms-[58px] ms-[18px] lg:ms-[30px] md:ms-[20px]  mt-[30px]  mr-[calc(-1*((100vw-87.7%)/2))] md:w-[calc(100%+((100vw-87.7%)/2))] overflow-x-hidden">
+    <div className="relative 2xl:ms-[3.02vw]  xl:ms-[2vw] ms-[1.41vw] lg:ms-[30px] md:ms-[20px]  mt-[30px]  mr-[calc(-1*((100vw-87.7%)/2))] md:w-[calc(100%+((100vw-87.7%)/2))] overflow-x-hidden">
      
       <Swiper
         loop={true}

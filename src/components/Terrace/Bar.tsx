@@ -11,7 +11,7 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 export const BarComponent = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto md:w-[93.25%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
+    <div className="mx-auto md:w-[94%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
       <div className="md:border-x  border-[#B3B3B3] xl:pt-[149px]">
         <h4 className="font-cofo-medium text-[#252526] leading-[22.68px] justify-center flex xl:mb-4">
           <span className="font-blessed   text-center text-[16px] xl:text-[36px]  xl:inline">

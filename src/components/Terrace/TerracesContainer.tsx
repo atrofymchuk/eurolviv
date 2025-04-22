@@ -5,25 +5,19 @@ import { useEffect } from "react";
 export const TerrasesContainer = () => {
   const { terases } = useRoomStore();
 
-  // Додаємо функцію для запобігання небажаним прокруткам на мобільних пристроях
   useEffect(() => {
-    // Функція для запобігання випадковим свіпам на мобільних
     const preventUnwantedSwipes = (e: TouchEvent) => {
-      // Якщо торкання почалося не в слайдері, 
-      // запобігаємо стандартній поведінці браузера 
-      // при певних умовах
+     
       if (
         !(e.target as HTMLElement)?.closest('.slider-container') &&
         !(e.target as HTMLElement)?.closest('.dish-swiper')
       ) {
-        // Не блокуємо звичайну прокрутку сторінки
         if (e.touches.length === 1) {
           e.stopPropagation();
         }
       }
     };
 
-    // Додаємо обробники подій тільки на мобільних пристроях
     if (window.innerWidth <= 768) {
       document.addEventListener('touchmove', preventUnwantedSwipes, { passive: false });
     }

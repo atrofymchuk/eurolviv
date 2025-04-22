@@ -21,15 +21,16 @@ export const Logo = ({
   onClick,
   pathname,
 }: LogoProps) => {
+  const isRestaurant = pathname === "/terrace" || pathname === "/restaurant";
   return (
     <Link
       to="/"
       className={cn(
-          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px] 2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw] ms-[2vw] lg:ms-0",
+          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]  ms-[2vw] lg:ms-0",
         className,
         {
-          "lg:me-[94px]": pathname === "/restaurant",
-          "lg:me-[140px]": pathname === "/terrace",
+        "2xl:me-[6.02vw] xl:me-[3vw]"  : isRestaurant,
+        "2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw]": !isRestaurant,
         }
       )}
       onClick={onClick}

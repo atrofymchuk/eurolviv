@@ -18,6 +18,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
   const isCustomWidth = useCustomWidth(1500, 1700)
   const minSwipeDistance = 100;
   const [isSwiping, setIsSwiping] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const onTouchStart = (e: React.TouchEvent) => {
     if (e.currentTarget.classList.contains('slider-container')) {
@@ -68,6 +69,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
     speed: 500,
     focusOnSelect: true,
     swipe: false,
+    initialSlide: 0,
     beforeChange: (_: number, next: number) => setActiveSlide(next),
     responsive: [
       {
@@ -82,6 +84,16 @@ function AboutSlider({ slides }: AboutSliderProps) {
       },
     ],
   };
+
+  useEffect(() => {
+    setIsInitialized(true);
+  }, []);
+
+  useEffect(() => {
+    if (isInitialized && sliderRef.current) {
+      sliderRef.current.slickGoTo(0, true);
+    }
+  }, [isInitialized]);
 
   useEffect(() => {
     const handleResize = () => {

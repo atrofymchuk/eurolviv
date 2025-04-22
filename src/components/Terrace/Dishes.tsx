@@ -25,7 +25,7 @@ export const Dishes = ({
   return (
     <div className="w-full overflow-x-hidden overflow-y-hidden h-fit">
       <div
-        className={`relative mx-auto w-[89.7%] lg:w-[93.25%] border-x md:border-x-0 border-[#B3B3B3] ${
+        className={`relative mx-auto w-[89.7%] lg:w-[94%] border-x md:border-x-0 border-[#B3B3B3] ${
           content.isMenu ? "" : "lg:pb-[149px] pb-[59px]"
         }`}
       >
