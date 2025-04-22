@@ -6,9 +6,10 @@ type changeLanguageToProps = {
   changeLanguage: () => void
   isMobile: boolean
   scrolled: boolean
+  pathname?: string
 }
 
-export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeLanguageToProps) => {
+export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled, pathname }: changeLanguageToProps) => {
   const currentLang = i18n.language;
   
   const getTextColor = (lang: string) => {
@@ -17,7 +18,8 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
     }
     if (scrolled) {
       return currentLang === lang ? "text-black" : "text-[#ADADAD]";
-    }
+    } 
+
     return currentLang === lang ? "text-white" : "text-[#ADADAD]";
   };
 
@@ -32,8 +34,8 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled }: changeL
           "font-cofo-medium": currentLang === 'uk'
         })}>UK</span>
         <span className={cn( {
-          "text-[#252526]": isMobile,
-          "text-white": !isMobile && !scrolled,
+          "text-[#252526]": isMobile, 
+          "text-white": !isMobile && !scrolled && pathname !== "/contacts",
           "text-black": !isMobile && scrolled
         })}>/</span>
         <span className={cn("hover:cursor-pointer text-[14px] 2xl:text-[0.83vw] xl:text-[0.94vw] lg:text-[1.17vw]", getTextColor('en'), {

@@ -1,5 +1,5 @@
 import * as icons from "./exportsIcons";
-import { roomLux, terasse, bussines, bar, restaurant, karaoke, terasseHome, menuTerrase, celebratingTerrase, barTerrase, reviewFst, reviewScd, reviewTrd, reviewFth, reviewFve } from "./exportsImg";
+import { roomLux, terasse, bussines, bar,  terasseHome, menuTerrase, celebratingTerrase, barTerrase, reviewFst, reviewScd, reviewTrd, reviewFth, reviewFve, restaurantPC, karaokePC } from "./exportsImg";
 import { Reviews } from "../types/types";
 
 
@@ -39,14 +39,14 @@ export  const cards = [
 
 export const suggestion = [
     {
-      img: restaurant,
+      img: restaurantPC,
       title:"home.roofService.restaurant.title",
       titleDesc:"home.roofService.restaurant.titleDesc",
       desc:["home.roofService.restaurant.desc.0","home.roofService.restaurant.desc.1", "home.roofService.restaurant.desc.2", "home.roofService.restaurant.desc.3"],
       url: "/restaurant",
     },
     {
-      img: karaoke,
+      img: karaokePC,
       title:"home.roofService.karaoke.title",
       titleDesc:"home.roofService.karaoke.titleDesc",
       desc:["home.roofService.karaoke.desc.0","home.roofService.karaoke.desc.1","home.roofService.karaoke.desc.2","home.roofService.karaoke.desc.3"],

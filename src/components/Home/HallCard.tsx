@@ -70,7 +70,11 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
           <div className="text-center flex items-center justify-center pt-[37px] relative">
             <Link
               to="/conference-service"
-              className="w-fit xl:py-[10px]  xl:px-[30.5px] font-cofo-medium flex justify-center items-center  px-5 py-2 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw] "
+              className={`w-fit xl:py-[10px]   font-cofo-medium flex 
+                justify-center items-center  px-5 py-2 text-[#8c331b]
+                 hover:bg-[#8c331b] hover:text-white border-[#8C331B] border 
+                 rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]
+                 ${isEng ? "2xl:w-[8.72vw]" : "xl:px-[30.5px]"} `}
             >
               {t("buttons.details")}
             </Link>

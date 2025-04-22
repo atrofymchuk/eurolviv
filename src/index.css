@@ -3,7 +3,7 @@
 @font-face {
     font-family: CoFoSans;
     src: url(./assets//fonts/CoFoSans-Regular.ttf) ;
-    font-weight: normal;
+    font-weight: 300,400,500,600,700;
     font-style: normal;
     font-display: swap;
   }
@@ -11,6 +11,7 @@
 .font-cofo{
   font-family: CoFoSans;
   font-display: swap;
+  font-weight: 300;
 }
 
 @font-face {
@@ -33,7 +34,6 @@
     src: url(./assets//fonts/CoFoSans-Medium.ttf) ;
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 
 }
 
@@ -43,16 +43,16 @@
 
 }
 @font-face {
-  font-family: 'CoFoSans-Two';
-    src: url(./assets//fonts/CoFoSans-Regular1.ttf) ;
-  font-weight: 500;
+  font-family: 'CoFo Sans';
+    src: url(./assets//fonts/CoFo-Sans.ttf) ;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 
 }
 
-.font-cofo-medium{
-  font-family: 'CoFoSans-Medium';
+.font-cofo-secondary{
+  font-family: 'CoFo Sans';
   font-display: swap;
 
 }

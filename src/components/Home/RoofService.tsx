@@ -22,7 +22,7 @@ export const RoofService = () => {
               }`
             )}
           >
-            <div className={`relative w-full h-full `}>
+            <div className={`relative w-full h-full overflow-hidden`}>
               <div
                 className={`${
                   index === 2 ? " " : ""
@@ -33,7 +33,7 @@ export const RoofService = () => {
                 loading="lazy"
                 src={item.img}
                 alt={item.url}
-                className="w-full h-full object-cover"
+                className={`w-full overflow-hidden h-full object-cover ${index === 1 ? " 2xl:scale-108" : ""}`}
               />
             </div>
 
@@ -63,8 +63,8 @@ export const RoofService = () => {
                   <h1
                     className={cn(`${
                       index === 2
-                        ? "lg:text-[198px] max-w-[900px] text-[76px] md:text-[100px] sm:text-[80px] "
-                        : "lg:text-[100px] max-w-[722px] text-[66px] md:text-[70px] sm:text-[50px] xl:h-[172px] lg:h-[162px]"
+                        ? "2xl:text-[10.31vw] xl:text-[13.31vw] text-[20.27vw] md:text-[100px] sm:text-[80px] "
+                        : "2xl:text-[5.21vw]  max-w-[37.6vw] text-[17.6vw] md:text-[70px] sm:text-[50px] xl:h-[172px] lg:h-[162px]"
                     } 
                   text-center uppercase leading-[104%] tracking-[-0.05em] xl:mt-[29px] lg:mt-[19px]
                   w-full lg:leading-[81%]`)}
@@ -85,15 +85,15 @@ export const RoofService = () => {
               <div
                 className={cn(
                   `flex flex-col items-center    ${
-                    index === 2 ? "" : " pb-[75px]"
+                    index === 2 ? "" : " 2xl:pb-[3.91vw] xl:pb-[7.74vw]"
                   }`
                 )}
               >
                 {item.desc.map((desc, index) => (
                   <p
                     key={index}
-                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] lg:leading-[22px]  ${
-                      index === 0 ? "mt-[32px]" : ""
+                    className={`uppercase lg:text-[18px] text-[12px] sm:text-[14px] md:text-[16px] 2xl:text-[0.94vw] xl:text-[1.25vw]   ${
+                      index === 0 ? "2xl:mt-[1.67vw] xl:mt-[1.25vw]" : ""
                     }`}
                   >
                     {t(desc)}

@@ -183,6 +183,8 @@ export { default as terasseHome } from "../assets/Terrase/homePreview.webp";
 
 export { default as restaurantMobile } from "../assets/Home/ruff/restaurant.webp";
 export { default as terasseHomeMobile } from "../assets/Home/ruff/terrase.webp";
+export { default as karaokePC } from "../assets/Home/ruff/KaraokePC.webp";
+export { default as restaurantPC } from "../assets/Home/ruff/restaurantPC.webp";
 
 //restaurant page
 export { default as headerRestaurant } from "../assets/Restaurant/header.webp";

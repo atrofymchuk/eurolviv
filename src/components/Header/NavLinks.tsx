@@ -97,7 +97,7 @@ export const NavLinks = ({
             <Link
               to={path}
               className={cn(
-                "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw]  lg:text-[1.17vw] text-[14px] hover:text-[#8C331B] transition-colors md:font-cofo-medium whitespace-nowrap",
+                "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw]  lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
                 !isMobile && isActiveLink(path),
                 isMobile && "xl:text-inherit text-[#252526]"
               )}

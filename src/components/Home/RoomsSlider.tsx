@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./HallList.css";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import useLanguage from "../Hooks/useLanguage";
 type Room = {
   title: string;
   area: number;
@@ -35,6 +36,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
 
     const { t } = useTranslation();
     const isCustomWidth = useCustomWidth(1530, 1700);
+    const isEng = useLanguage();
 
     return (
       <div className="overflow-hidden w-full h-full absolute flex items-center justify-center  hall-list">
@@ -159,8 +161,18 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                     <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px] ">
                       <h4
                         className={cn(
-                          "2xl:text-[1.667vw]   lg:w-4/5 xl:text-[1.3vw]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
-                          {
+                          "2xl:text-[1.667vw]   lg:w-4/5 xl:text-[1.8vw]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
+                        isEng ? {
+                            " xl:w-[65%] w-[55%]": t(el.title).length > 15,
+                            "2xl:w-[22vw]! xl:w-[17vw]! w-[65%]":
+                              t(el.title).length > 20 &&
+                              t(el.title).length < 20,
+                            " xl:w-[55%] w-[75%]":
+                              t(el.title).length > 30 &&
+                              t(el.title).length < 40,
+
+                            "!w-[50%] lg:w-fit!": index === 1,
+                          }:{
                             " xl:w-[65%] w-[75%]": t(el.title).length > 15,
                             "2xl:w-[22vw]! xl:w-[17vw]! w-[75%]":
                               t(el.title).length > 20 &&

@@ -115,7 +115,8 @@ export const SpecialOffersSlider = forwardRef<
         lg:text-[16px] md:text-[13px] 
         text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
                     {
-                      "xl:me-[0vw] 2xl:me-[0vw]": index === 0,
+                      "xl:me-[9vw] 2xl:me-[9.5vw]": index === 0 && isEng,
+                      
                     }
                   )}
                 >
@@ -124,18 +125,25 @@ export const SpecialOffersSlider = forwardRef<
               </div>
             </InViewWrapper>
 
-            <h4 className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium pt-[5.33vw]
+            <h4 className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium 
             leading-[100%]
-             text-[#252526] md:pt-[24px] lg:pt-[0.94vw] md:text-[22px] lg:text-[24px] 2xl:text-[1.25vw]
-              2xl:mt-[1.25vw] xl:text-[1.56vw]">
+             text-[#252526] md:text-[22px] lg:text-[24px] 2xl:text-[1.25vw] mt-[5.33vw]
+              2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.66vw]">
               {t(el.title)}
             </h4>
-            <p className={`uppercase text-[2.67vw] w-[219px] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
+            <p className={`uppercase text-[2.67vw] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
              lg:text-[12px] 2xl:text-[0.83vw] xl:text-[0.94vw] leading-[108%]  md:w-[300px] lg:w-fit
-              ${index===1 ? " xl:w-[102%]" : ""}`}>
+             ${!isEng  ? "w-[63.4vw]" : ""}
+             ${!isEng && index === 0? "w-[58.4vw]!" : ""}
+              ${index===1 ? " xl:w-[102%] " : ""}
+
+              ${isEng && index === 1 ? " xl:w-[105%] tracking-[-0.03em]" : ""}
+              ${index === 2 && isEng ? " 2xl:w-[80%]" : ""}
+              ${index === 4 && isEng ? " 2xl:w-[95%] xl:w-[100%] tracking-[-0.03em]" : ""}
+              `}>
               {t(el.cardDesc)}
             </p>
-            <div className="flex flex-col text-start w-full lg:mb-4 md:mb-3  mt-auto">
+            <div className="flex flex-col text-start w-full 2xl:mb-1  mt-auto">
               <Link
                 to="/special-offers"
                 className="mt-auto inline-flex items-center justify-center font-cofo-medium border border-[#8C331B]

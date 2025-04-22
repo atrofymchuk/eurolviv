@@ -79,6 +79,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   changeLanguage={changeLanguage}
                   isMobile={false}
                   scrolled={scrolled}
+                  pathname={pathname}
                 />
                 <button
                   onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -88,7 +89,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 >
                   <span
                     className={cn(`2xl:text-[0.83vw] xl:text-[0.94vw]`, {
-                      "text-white": !scrolled,
+                      "text-white": !scrolled && pathname !== "/contacts",
                       "text-[#252526]": scrolled,
                     })}
                   >

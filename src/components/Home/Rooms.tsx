@@ -52,7 +52,7 @@ export const RoomsHome = () => {
             <span className="leading-[81%] w-auto">
               {t("home.rooms.forWhat.0")} &nbsp;
             </span>
-            <span className="leading-[81%] self-end xl:ps-[10.7vw] 2xl:ps-[11vw] lg:ps-[11vw]  w-auto">
+            <span className={`leading-[81%]   w-auto ${isEng ? " xl:ps-[13.8vw] 2xl:ps-[14vw] lg:ps-[11vw] xl:translate-x-[-3vw] 2xl:translate-x-[-3vw]" : " xl:ps-[10.7vw] 2xl:ps-[11vw] lg:ps-[11vw]"}`}>
               {t("home.rooms.forWhat.1")}
             </span>
           </span>
@@ -60,7 +60,10 @@ export const RoomsHome = () => {
         <div className="flex flex-col w-full h-full items-center lg:items-start lg:justify-center ">
           <div className="z-4 ">
             <div className="flex md:flex-row lg:ps-[5.56vw] 2xl:ps-[4.15vw] md:ps-[5.86vw] flex-col text-start items-center md:items-start 2xl:items-start relative 2xl:h-[10.42vw] xl:h-[9.9vw] lg:h-[12.5vw] md:h-[14.65vw] sm:h-[16.93vw]">
-              <div className="md:absolute flex md:flex-row items-center flex-col pt-[4.27vw] md:pt-[3.42vw] xl:pt-[1.8vw]  space-y-[8vw] md:space-y-0 text-center md:text-start md:gap-[1.95vw] xl:gap-x-[3.13vw] md:hidden lg:flex">
+              <div className={`md:absolute flex md:flex-row items-center flex-col pt-[4.27vw] md:pt-[3.42vw] xl:pt-[1.8vw]
+                space-y-[8vw] md:space-y-0 text-center md:text-start  md:hidden lg:flex
+                ${isEng ? "2xl:gap-x-[2.2vw] xl:gap-x-[1.9vw]" : "md:gap-[1.95vw] 2xl:gap-x-[4.43vw]  xl:gap-x-[3.13vw]"}
+                `}>
                 <p
                   className="uppercase 2xl:w-[22vw] xl:w-[20.83vw] px-[6.4vw] lg:w-[22.92vw] md:w-[34.18vw] sm:w-[37.11vw] lg:px-0 
                   text-[3.2vw] sm:text-[2.08vw] md:text-[1.27vw] lg:text-[0.97vw] xl:text-[0.78vw] 2xl:text-[0.83vw]
@@ -80,8 +83,7 @@ export const RoomsHome = () => {
                        w-[178px]
                        h-[42px]
                        lg:px-[1.39vw] lg:py-[0.83vw]
-                       2xl:h-[2.4vw] 2xl:w-[12.25vw]
-                       xl:w-[12vw]
+                       2xl:h-[2.4vw] 
                        xl:h-[2.7vw]
                        2xl:text-[0.83vw]
                        xl:text-[0.8vw]
@@ -89,7 +91,8 @@ export const RoomsHome = () => {
                        rounded-full hover:cursor-pointer
                        flex items-center justify-center`,
                       {
-                        "lg:w-[11.81vw]": isEng,
+                        "2xl:w-[8.85vw] xl:w-[9vw]": isEng,
+                        "2xl:w-[12.25vw] xl:w-[12vw]": !isEng,
                       }
                     )}
                   >
