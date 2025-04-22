@@ -6,10 +6,13 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
 import { BookLink } from "../Buttons/BookLink";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const Advantages = () => {
   const { t } = useTranslation();
   const { hotelInfo, services } = usePagesInfoStore();
   const isCustomWidth = useCustomWidth(1500, 1700);
+  const isEng = useIsEnglish();
+
 
   return (
     <section className="flex justify-center items-center bg-[#A47762]  *:font-cofo">
@@ -31,7 +34,7 @@ export const Advantages = () => {
               {hotelInfo.map(({ icon, text }, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-1.5 lg:self-end "
+                  className={`flex  gap-1.5 lg:self-end ${isEng ? "w-[60vw] md:w-auto 2xl:w-[20vw] xl:w-[20vw]" : ""}`}
                 >
                   <InViewWrapper>
                     <img
@@ -62,14 +65,22 @@ export const Advantages = () => {
         <div className="h-full  w-full lg:border-x  pb-[47px] lg:pb-0 border-[#C29986]">
           <div className="flex flex-col ps-[4.27vw] 2xl:ps-[2.34vw] xl:ps-[2.115625vw] sm:items-center md:items-start">
             <h1
-              className={`uppercase text-[8.533vw]  md:text-[32px]  2xl:text-[2.5vw] tracking-[-0.02em] lg:tracking-[-0.05em] leading-[100%]  md:w-2/3 text-[#FFFFFF] md:pt-[18px] 2xl:pt-[4.479vw] xl:pt-[60px] xl:text-left ${
+              className={`uppercase text-[8.533vw]  md:text-[32px]  2xl:text-[2.5vw] tracking-[-0.02em] lg:tracking-[-0.05em]
+                 leading-[100%]  md:w-2/3 text-[#FFFFFF] md:pt-[18px] 2xl:pt-[4.479vw] xl:pt-[60px] xl:text-left ${
                 isCustomWidth ? "xl:text-[40px]" : "xl:text-[32px]"
               }`}
             >
+              <span className={`${isEng ? "hidden" : ""}`}>
+                
               {t("about.advantages.title2").split(" ")[0]}<br className="lg:hidden"/> {t("about.advantages.title2").split(" ").slice(1).join(" ")}
+              </span>
+              <span className={`${isEng ? "" : "hidden"}`}>
+                {t("about.advantages.title2")}
+              </span>
             </h1>
             <ul
-              className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF] text-[3.733vw] 2xl:text-[1.042vw]  xl:gap-y-1 gap-y-[2px] ${
+              className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF]
+                 text-[3.733vw] 2xl:text-[1.042vw]  xl:gap-y-1 gap-y-[2px] ${
                 isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
               }`}
             >
@@ -81,7 +92,8 @@ export const Advantages = () => {
                   <InViewWrapper>
                     <img
                       loading="lazy"
-                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px] ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}`}
+                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px]
+                         ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}`}
                       src={icon}
                       alt={text}
                     />

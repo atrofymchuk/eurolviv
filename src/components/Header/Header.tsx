@@ -72,7 +72,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
               <div
                 className={cn(`relative flex items-center xl:pt-[18px] 2xl:pt-[1.15vw] 2xl:me-[1.56vw] xl:me-[1.25vw] lg:me-[1.17vw]`, {
                   "": !isEng,
-                  "space-x-[115px]": isEng,
+                  "2xl:space-x-[115px] xl:space-x-[50px]": isEng,
                 })}
               >
                 <ChangeLangButton
