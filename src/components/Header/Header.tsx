@@ -49,7 +49,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           }
         )}
       >
-        <div className=" flex items-center justify-center h-full mx-auto lg:mx-[20px] xl:mx-auto ">
+        <div className=" flex items-center justify-center h-full mx-auto 2xl:w-[89%] lg:mx-[20px] xl:mx-auto ">
           <div className="flex items-center xl:space-x-4 space-x-3  w-full h-full justify-between">
             <HeaderNav
               {...{
@@ -130,7 +130,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   {
                     "lg:flex ": scrolled,
                     flex: !scrolled,
-                    "lg:w-[145px]": isEng,
+                    "2xl:w-[7.55vw]!": isEng,
                   }
                 )}
               >
