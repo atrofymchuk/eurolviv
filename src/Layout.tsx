@@ -69,7 +69,7 @@ export const Layout = () => {
         </Routes>
         {!isBookingPage && <Footer />}
         <BaseModal />
-        {!isBookingPage && <MobileBottomMenu setMenuOpen={setMenuOpen} />}
+        {!isBookingPage && <MobileBottomMenu/>}
         {activeModal === "contacts" && <ContactsModal />}
       </div>
     </>

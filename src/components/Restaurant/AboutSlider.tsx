@@ -16,19 +16,25 @@ function AboutSlider({ slides }: AboutSliderProps) {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const isCustomWidth = useCustomWidth(1500, 1700)
-  const minSwipeDistance = 50;
+  const minSwipeDistance = 100;
+  const [isSwiping, setIsSwiping] = useState(false);
 
   const onTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
+    if (e.currentTarget.classList.contains('slider-container')) {
+      setTouchEnd(null);
+      setTouchStart(e.targetTouches[0].clientX);
+      setIsSwiping(true);
+    }
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    if (isSwiping && touchStart !== null) {
+      setTouchEnd(e.targetTouches[0].clientX);
+    }
   };
 
   const onTouchEnd = useCallback(() => {
-    if (!touchStart || !touchEnd) return;
+    if (!touchStart || !touchEnd || !isSwiping) return;
     const distance = touchStart - touchEnd;
     const isSwipe = Math.abs(distance) > minSwipeDistance;
 
@@ -39,7 +45,17 @@ function AboutSlider({ slides }: AboutSliderProps) {
         sliderRef.current?.slickPrev();
       }
     }
-  }, [touchStart, touchEnd]);
+    
+    setTouchStart(null);
+    setTouchEnd(null);
+    setIsSwiping(false);
+  }, [touchStart, touchEnd, isSwiping]);
+
+  const handleTouchCancel = () => {
+    setTouchStart(null);
+    setTouchEnd(null);
+    setIsSwiping(false);
+  };
 
   const settings = {
     className: "center",
@@ -51,7 +67,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
     variableWidth: true,
     speed: 500,
     focusOnSelect: true,
-    swipe: true,
+    swipe: false,
     beforeChange: (_: number, next: number) => setActiveSlide(next),
     responsive: [
       {
@@ -61,7 +77,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
           centerMode: true,
           slidesToShow: 1,
           variableWidth: true,
-          swipe: true,
+          swipe: false,
         },
       },
     ],
@@ -86,6 +102,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
+      onTouchCancel={handleTouchCancel}
     >
       <button
         className="hidden md:flex absolute left-4 md:left-[10%] top-1/2 transform -translate-y-1/2 z-10 w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]  

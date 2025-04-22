@@ -14,28 +14,32 @@ export const SwiperSlider = ({ slides }: { slides: string[] }) => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        threshold={20}
+        touchRatio={0.8}
+        touchStartPreventDefault={true}
         breakpoints={{
           320: {
+            slidesPerView: 'auto',
             spaceBetween: 10,
           },
           640: {
             spaceBetween: 15,
-            slidesPerView: 2.3,
+            slidesPerView: 'auto',
           },
           768: {
             spaceBetween: 15,
-            slidesPerView: 2,
+            slidesPerView: 'auto',
           },
           1024: {
             spaceBetween: 20,
-            slidesPerView: 3,
+            slidesPerView: 'auto',
           },
           1280: {
             spaceBetween: 20,
-            slidesPerView: 3,
+            slidesPerView: 'auto',
           },
           1536: {
-            slidesPerView: 3,
+            slidesPerView: 'auto',
             spaceBetween: 10,
           },
         }}

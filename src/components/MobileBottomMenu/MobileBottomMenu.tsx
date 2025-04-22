@@ -9,19 +9,20 @@ import {
 } from "../../store/exportsIcons";
 import { useModalStore } from "../../store/useModalStore";
 
-type MobileBottomMenuProps = {
-  setMenuOpen: (value: boolean) => void;
-};
-
-export const MobileBottomMenu = ({ setMenuOpen }: MobileBottomMenuProps) => {
+export const MobileBottomMenu = () => {
   const { t } = useTranslation();
   const { onOpenModal } = useModalStore();
+
+  const handleClick = () => {
+    window.open(`/documents/Фуршетне меню.pdf`, '_blank');
+}
+
 
   const menuItems = [
     {
       icon: <img loading="lazy" src={menu} alt="menu" />,
       label: t("phoneBottomMenu.menu"),
-      action: () => setMenuOpen(true),
+      action: () => handleClick(),
     },
     {
       icon: <img loading="lazy" src={calendarBooking} alt="calendar" />,
