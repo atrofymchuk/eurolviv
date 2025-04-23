@@ -85,13 +85,13 @@ export const StorySection = () => {
                 }`}
               >
                 {t("about.about.desc.0")}
-                <span className={`${isEng ? "" : "hidden"}`}>
+                <span className={`${isEng ? "lg:hidden" : "hidden"}`}>
                   {t("about.about.desc.1")}
                 </span>
               </p>
               <p
                 className={`w-full block 2xl:text-[1.042vw]  lg:text-[18px] text-[3.2vw] tracking-[-0.01em]  leading-[120%] 
-                  ${isEng ? "hidden" : ""}
+                  ${isEng ? "hidden lg:block" : ""}
                   ${isCustomWidth ? "xl:text-[1.25vw]" : "xl:text-[1.13vw]"}`}
               >
                 {t("about.about.desc.1")}

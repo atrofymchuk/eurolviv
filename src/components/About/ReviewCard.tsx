@@ -34,9 +34,9 @@ export const ReviewCard = ({ review, reviewHeader, index }: { review: ReviewProp
         </p>
       </div>
     
-      <div className={`2xl:ps-[33px] 2xl:mt-[34px] ps-[18px] px-[15px] xl:mt-[24px] max-h-fit mt-[28px] ${index <= 1 ? 'xl:pe-[1.106vw]' : 'xl:pe-[1.719vw]'}`}>
+      <div className={`2xl:ps-[33px] 2xl:mt-[34px] ps-[18px] px-[15px] xl:mt-[24px] max-h-fit ${isEng ? "mt-[20px]" : "mt-[28px]"} ${index <= 1 ? 'xl:pe-[1.106vw]' : 'xl:pe-[1.719vw]'}`}>
         <h2 className="uppercase text-[#A47762] 2xl:text-[1.042vw] text-[14px] font-cofo-medium">{reviewHeader}</h2>
-        <p className="uppercase text-[#6B6B6B] xl:pt-[13px] 2xl:max-w-[24.792vw] xl:text-[0.938vw] text-[3.2vw] 2xl:text-[0.938vw] ">
+        <p className={`uppercase text-[#6B6B6B] xl:pt-[13px]  xl:text-[0.938vw] text-[3.2vw] 2xl:text-[0.938vw] ${isEng ? "w-[102.5%]" : "2xl:max-w-[24.792vw]"}`}>
           {displayText()}
         </p>
       </div>

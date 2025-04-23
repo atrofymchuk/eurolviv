@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { DetailsLink } from "../Buttons/DetailsLink";
 import cn from "classnames";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const ConceptCasd = ({
   title,
   img,
@@ -22,6 +23,8 @@ export const ConceptCasd = ({
   const isMobileWidth = useCustomWidth(389, 420);
   const isSpecialMobileWidth = useCustomWidth(421, 450);
   const isUltraHD = useCustomWidth(2000, 3000);
+  const isEng = useIsEnglish();
+
 
   return (
     <div
@@ -64,7 +67,7 @@ export const ConceptCasd = ({
             loading="lazy"
             src={img}
             alt={alt}
-            className="w-[200px] h-[191px] xl:w-[12vw] xl:h-[12vw] 2xl:w-[10.417vw] 2xl:h-[9.948vw] object-cover 2xl:mt-[22px] 2xl:mb-[25px] my-4"
+            className="w-[53.33vw] h-[50.93vw] xl:w-[12vw] xl:h-[12vw] 2xl:w-[10.417vw] 2xl:h-[9.948vw] object-cover 2xl:mt-[22px] 2xl:mb-[25px] my-4"
           />
         </InViewWrapper>
         <p
@@ -74,15 +77,28 @@ export const ConceptCasd = ({
             isSpecialWidth
               ? "xl:text-[16px]"
               : "xl:text-[14px] tracking-[-0.02em]"
-          }`}
+          }
+          ${isEng && index === 0 ? "w-[95%] lg:w-auto" : ""}
+          ${isEng && index === 2 ? "2xl:w-[84%] xl:w-[90%]  " : ""}
+          ${isEng && index === 3 ? "2xl:w-[75%] xl:w-[90%]  w-[95%]" : ""}
+          `}
         >
           {text.map((textItem, i) => {
             const translatedText = t(textItem);
             return (
               <div
-                className={`mx-auto ${index === 3 ? "inline xl:block" : ""} ${
+                className={`mx-auto  ${index === 3 && !isEng ? "inline xl:block" : ""}
+                ${index === 2 || index === 3 && isEng ? "xl:inline " : ""}
+
+                ${
                   !isSpecialMobileWidth && index === 1 ? "w-[95.5%] lg:w-full" : ""
-                } ${isSpecialMobileWidth && index === 1 ? "w-[93%]" : ""}`}
+                } ${isSpecialMobileWidth && index === 1 ? "w-[93%]" : ""}
+                ${isEng && index === 0? "2xl:w-[87%] xl:w-[89%] w inline lg:block" : ""}
+                ${isEng && index === 1? "2xl:w-[93%] xl:w-[95%] " : ""}
+                ${isEng && index === 2? "2xl:w-[95%] xl:w-[90%] inline xl:block" : ""}
+                ${isEng && index === 3? "inline xl:block" : ""}
+                
+                `}
                 key={i}
               >
                 {translatedText}

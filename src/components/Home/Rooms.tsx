@@ -52,7 +52,7 @@ export const RoomsHome = () => {
             <span className="leading-[81%] w-auto">
               {t("home.rooms.forWhat.0")} &nbsp;
             </span>
-            <span className={`leading-[81%]   w-auto ${isEng ? " xl:ps-[13.8vw] 2xl:ps-[14vw] lg:ps-[11vw] xl:translate-x-[-3vw] 2xl:translate-x-[-3vw]" : " xl:ps-[10.7vw] 2xl:ps-[11vw] lg:ps-[11vw]"}`}>
+            <span className={`leading-[81%]   w-auto ${isEng ? " xl:ps-[13.8vw] 2xl:ps-[14.5vw] lg:ps-[11vw] xl:translate-x-[-3vw] 2xl:translate-x-[-3.5vw]" : " xl:ps-[10.7vw] 2xl:ps-[11vw] lg:ps-[11vw]"}`}>
               {t("home.rooms.forWhat.1")}
             </span>
           </span>

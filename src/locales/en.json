@@ -85,10 +85,11 @@
                 "heading":["ELEGANCE, REDEFINED",""],
                 "desc":["At Eurohotel, we’ve created a space where the dynamic rhythm of modern business blends seamlessly with the timeless charm of old Lviv.",
                   "We believe in hospitality that speaks directly to the heart and service that anticipates your every need.","We are created to fall in love with Lviv, and our greatest reward is welcoming guests who return to us again and again",
-                  "We’re here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."]
+                  "We are here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."],
+                  "desc2":["We’re here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."],
+                  "desc2PC":["We’re here to inspire your love for Lviv, and our greatest"," reward is welcoming back guests who return to us again and again."]
             },
             "concepts":{
-    
                 "title":"PERFECTION",
                 "heading":["IN EVERY DETAIL"],
                 "desc":"of our concept",
@@ -141,11 +142,11 @@
             }
     },
     "reviews":{
-            "title":"Reviews",
-            "desc":"100 rooms, where each detail creates a unique aesthetic. From standard rooms to luxury suites, consistently high service quality.",
+            "title":"reviews",
+            "desc":"100 rooms where every detail adds to a unique aesthetic. From standard rooms to suites—service excellence, always.",
             "heading":"from ",
-            "heading2":"our guests",
-            "review":"review",
+            "heading2":"reviews",
+            "review":"guest",
             "reviewAbout":"guest",
             "about":["About", "the", "restaurant"],
             "desc2":["The story of our restaurant is shaped by your experiences.","Thank you for sharing them with us."]

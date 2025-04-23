@@ -19,7 +19,8 @@ export const Rewies = () => {
           <div className="xl:col-span-1 pt-[58px] xl:pt-[109px] flex flex-col">
             <h1 className="text-center font-cofo    uppercase tracking-[-0.09em] text-[#EDE8E5]  leading-[81%] ">
               <span className="xl:hidden block text-[8.533vw] lg:text-[80px] leading-[100%] xl:leading-[96%]">
-                {t("reviews.title")} {t("reviews.heading")}
+                {!isEng ? t("reviews.title") : t("reviews.review")}
+                {!isEng && t("reviews.heading")}
               </span>
               <span className="hidden xl:block text-[8.533vw]  xl:text-[11.719vw] text-start md:ps-[25px] xl:ps-[1.5vw] 2xl:ps-[1.302vw] tracking-[-0.09em] leading-[91%] 2xl:text-[10.313vw]">
                 {t("reviews.title")}
@@ -38,7 +39,7 @@ export const Rewies = () => {
 
               <Link
                 to={"/booking"}
-                className="uppercase text-[#A47762] 2xl:w-[12.188vw] text-center  mt-[20px] lg:mt-0 xl:w-[17vw] xl:text-[1.094vw] 2xl:text-[0.833vw]
+                className="uppercase text-[#A47762] 2xl:w-[12.188vw] text-center  mt-[20px] lg:mt-0 xl:w-[13vw] xl:text-[1.094vw] 2xl:text-[0.833vw]
                 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] 
                 w-[45.867vw]   xl:py-[10px] py-[10px]  rounded-full  hover:cursor-pointer text-[3.2vw] "
               >
@@ -59,7 +60,7 @@ export const Rewies = () => {
               >
                 {t("reviews.heading")}
               </span>
-              <span className="relative left-[30px] leading-[81%]  md:left-[70px] xl:left-[10.547vw] 2xl:left-[10.156vw]">
+              <span className={`relative left-[30px] leading-[81%]  md:left-[70px] xl:left-[10.547vw] 2xl:left-[10.156vw] ${isEng ? "2xl:translate-y-[1.56vw] xl:translate-y-[2.8vw]" : ""}`}>
                 {t("reviews.reviewAbout")}
               </span>
             </h2>
@@ -76,16 +77,18 @@ export const Rewies = () => {
         </div>
       </div>
 
-      <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between  z-10">
+      <div className="flex max-w-[89.7%] w-screen  border-x border-[#C7C7C7]  justify-between pt-5 2xl:pt-[1.04vw] z-10">
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-5  flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[39px] lg:mt-2 lg:mb-[72px]"
+          className="lg:w-[48px] 2xl:w-[3.13vw] 2xl:h-[3.13vw] lg:h-[48px] w-[30px] h-[30px] md:ms-20 sm:ms-20 ms-5  flex items-center justify-center hover:text-[#8C331B] border
+           hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:ms-[1.56vw] lg:mt-2 lg:mb-[72px]"
           onClick={() => sliderRef.current?.slickPrev()}
         >
           <HiArrowLongLeft className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
         </button>
 
         <button
-          className="lg:w-[62px] lg:h-[62px] w-[30px] h-[30px] md:me-20 sm:me-20 me-5 flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-2 lg:me-[39px]"
+          className="lg:w-[48px] 2xl:w-[3.13vw] 2xl:h-[3.13vw] lg:h-[48px] w-[30px] h-[30px] md:me-20 sm:me-20 me-5 flex items-center justify-center hover:text-[#8C331B] border 
+          hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[26px]  mb-[44px] lg:mb-[72px] lg:mt-2 lg:me-[39px]"
           onClick={() => sliderRef.current?.slickNext()}
         >
           <HiArrowLongRight className="lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]" />
