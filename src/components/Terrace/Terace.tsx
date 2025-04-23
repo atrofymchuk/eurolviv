@@ -109,7 +109,11 @@ ${index === 1 ? "xl:w-[85%] 2xl:w-[84%]" : ""}
         </div>
       </div>
 
-      <AbootSliderContainer slides={terase.imgs} isTerrase={true} index={index}/>
+      <AbootSliderContainer
+        slides={terase.imgs}
+        isTerrase={true}
+        index={index}
+      />
     </>
   );
 };

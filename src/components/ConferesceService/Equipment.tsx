@@ -34,7 +34,7 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
                       alt={icon.text}
                       className="w-[22px] h-[22px]  md:w-[22px] md:h-[22px] lg:w-6 lg:h-6 xl:w-[1.7vw] xl:h-[1.7vw]  2xl:w-[1.6vw] 2xl:h-[1.6vw]"
                     />
-                    <span className="uppercase text-[#383838] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[16px] xl:text-[1.1vw] 2xl:text-[1.05vw]">
+                    <span className="uppercase text-[#383838] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[16px] xl:text-[1.2vw] 2xl:text-[1.05vw]">
                       {t(icon.text)}
                     </span>
                   </div>
@@ -45,7 +45,7 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
               {icons
                 .slice(icons.length / 2, icons.length)
                 .map((icon, index) => (
-                  <div key={index} className="flex items-center ">
+                  <div key={index} className="flex items-center gap-x-2.5 gap-y-[3px]">
                     <div className="flex items-center gap-x-[14px] gap-y-[3px]">
                       <img
                         loading="lazy"

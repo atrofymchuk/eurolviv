@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 import Slider from "react-slick";
 import cn from "classnames";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
@@ -18,7 +18,6 @@ function AboutSlider({ slides }: AboutSliderProps) {
   const isCustomWidth = useCustomWidth(1500, 1700)
   const minSwipeDistance = 100;
   const [isSwiping, setIsSwiping] = useState(false);
-  const [isInitialized, setIsInitialized] = useState(false);
 
   const onTouchStart = (e: React.TouchEvent) => {
     if (e.currentTarget.classList.contains('slider-container')) {
@@ -85,28 +84,6 @@ function AboutSlider({ slides }: AboutSliderProps) {
     ],
   };
 
-  useEffect(() => {
-    setIsInitialized(true);
-  }, []);
-
-  useEffect(() => {
-    if (isInitialized && sliderRef.current) {
-      sliderRef.current.slickGoTo(0, true);
-    }
-  }, [isInitialized]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (sliderRef.current) {
-        sliderRef.current.slickGoTo(activeSlide);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [activeSlide]);
 
   return (
     <div 

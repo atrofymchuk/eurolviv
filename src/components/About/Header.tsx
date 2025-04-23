@@ -42,7 +42,7 @@ const isEng = i18n.language === "en";
         </span>
       </h4>
       <BookLink
-        className="text-[#252526] mt-7.5 xl:mt-[33px] text-[12px]  bg-[#EDE8E5] xl:px-[47px] w-[171px] text-center lg:w-[204px]"
+        className="text-[#252526] mt-7.5 xl:mt-[33px] text-[12px] xl:text-[14px] bg-[#EDE8E5] xl:px-[47px] w-[171px] text-center lg:w-[204px]"
         to={"/booking"}
       >
         {t("buttons.book")}

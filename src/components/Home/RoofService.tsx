@@ -43,8 +43,8 @@ export const RoofService = () => {
 
             <div
               className={cn(
-                `absolute inset-0 flex flex-col items-center text-center mt-[123px] text-white z-2  ${
-                  index === 2 ? "justify-center" : "justify-between"
+                `absolute inset-0 flex flex-col items-center text-center mt-[123px]  text-white z-2  ${
+                  index === 2 ? "2xl:mt-[14.69vw]" : "justify-between"
                 }`
               )}
             >
@@ -63,7 +63,7 @@ export const RoofService = () => {
                   <h1
                     className={cn(`${
                       index === 2
-                        ? "2xl:text-[10.31vw] xl:text-[13.31vw] text-[20.27vw] md:text-[100px] sm:text-[80px] "
+                        ? "2xl:text-[10.31vw] xl:text-[13.31vw] text-[20.27vw] md:text-[100px] sm:text-[80px] 2xl:w-[70%] mx-auto"
                         : "2xl:text-[5.21vw]  max-w-[37.6vw] text-[17.6vw] md:text-[70px] sm:text-[50px] xl:h-[172px] lg:h-[162px]"
                     } 
                   text-center uppercase leading-[104%] tracking-[-0.05em] xl:mt-[29px] lg:mt-[19px]

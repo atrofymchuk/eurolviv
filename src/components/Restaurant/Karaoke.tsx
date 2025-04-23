@@ -29,7 +29,9 @@ export const Karaoke = () => {
                 </span>
                 {t("restaurant.karaoke.desc.1")}
               </p>
-              <p className={`inline uppercase text-[#252526]  leading-[120%]   2xl:text-[0.94vw] lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px] ${isCustomWidth ? "xl:text-[0.92vw] w-[93%]" : "xl:text-[1vw]"}`}>
+              <p className={`inline uppercase text-[#252526]  leading-[120%]   2xl:text-[0.94vw] 
+                lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px] ${isCustomWidth ? "xl:text-[0.92vw] w-[93%]" : "xl:text-[1vw] xl:w-[93%]"}
+                `}>
                 {t("restaurant.karaoke.desc.2")}
               </p>
               <p className={`uppercase font-cofo-medium text-[#252526] leading-[120%] 2xl:text-[0.94vw] 2xl:mt-[27px] lg:mt-[18px] text-[3.2vw] lg:text-[16px] md:order-none order-1 mt-[33px] md:mb-0 mb-[19px] ${isCustomWidth ? "xl:text-[1vw] mt-[15px]  " : ""}`}>

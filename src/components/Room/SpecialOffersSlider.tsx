@@ -133,8 +133,7 @@ export const SpecialOffersSlider = forwardRef<
             </h4>
             <p className={`uppercase text-[2.67vw] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
              lg:text-[12px] 2xl:text-[0.83vw] xl:text-[0.94vw] leading-[108%]  md:w-[300px] lg:w-fit
-             ${!isEng  ? "w-[63.4vw]" : ""}
-             ${!isEng && index === 0? "w-[58.4vw]!" : ""}
+             ${!isEng && index === 0? "w-[58.4vw]! lg:w-fit!" : ""}
               ${index===1 ? " xl:w-[102%] " : ""}
 
               ${isEng && index === 1 ? " xl:w-[105%] tracking-[-0.03em]" : ""}

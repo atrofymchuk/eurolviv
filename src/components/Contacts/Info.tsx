@@ -16,7 +16,7 @@ export const Info = () => {
             <h1
               className="font-cofo uppercase xl:pt-0  text-center md:text-start 
             text-[8.53vw] md:text-[32px] lg:text-[48px] xl:text-[70px] 2xl:text-[5.21vw] 
-            tracking-[-0.07em] leading-[1.2] lg:leading-[1.1] xl:leading-[82%]  mx-[20px] md:mx-0
+            tracking-[-0.07em] leading-[1.2] lg:leading-[1.1] xl:leading-[94%]  mx-[20px] md:mx-0
             lg:tracking-[-0.04em]"
             >
               {t("contacts.info.title")}
@@ -87,7 +87,7 @@ export const Info = () => {
               <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5">
                 <p
                   className="font-cofo-medium uppercase 
-                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw] "
+                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw]"
                 >
                   {t("contacts.info.contactWithUsDesc")}
                 </p>

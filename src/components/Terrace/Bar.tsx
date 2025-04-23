@@ -11,7 +11,7 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 export const BarComponent = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto md:w-[94%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
+    <div className="mx-auto md:w-[93.23%] 2xl:w-[94%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
       <div className="md:border-x  border-[#B3B3B3] xl:pt-[149px]">
         <h4 className="font-cofo-medium text-[#252526] leading-[22.68px] justify-center flex xl:mb-4">
           <span className="font-blessed   text-center text-[16px] xl:text-[36px]  xl:inline">
@@ -27,7 +27,7 @@ export const BarComponent = () => {
         </p>
       </div>
       <div className="flex flex-wrap pt-[36px] md:pt-0">
-        <div className="w-full md:w-[53.46%] xl:pt-[17px] xl:px-[16px_17px]  2xl:pt-[1.35vw] 2xl:px-[1.56vw_1.88vw] border-y md:border-s border-[#B3B3B3] px-[10px_9px] pt-[10px]">
+        <div className="w-full md:w-[53.51%] xl:pt-[17px] xl:px-[16px_17px]  2xl:pt-[1.35vw] 2xl:px-[1.56vw_1.88vw] border-y md:border-s border-[#B3B3B3] px-[10px_9px] pt-[10px]">
           <InViewWrapper>
             <img
               loading="lazy"
@@ -41,7 +41,7 @@ export const BarComponent = () => {
           </h2>
         </div>
 
-        <div className="w-full md:w-[46.48%] border-t-0 md:border-t border-b border-[#B3B3B3] md:border-s md:border-e">
+        <div className="w-full md:w-[46.49%] border-t-0 md:border-t border-b border-[#B3B3B3] md:border-s md:border-e">
           <div className=" 2xl:pt-[1.35vw] xl:pt-[17px] pt-[10px] w-full md:w-fit grid grid-cols-2 ">
             <div className=" md:w-fit 2xl:px-[1.61vw_0.52vw]  xl:px-[17px_8px] px-[10px_3.5px]">
               <InViewWrapper>

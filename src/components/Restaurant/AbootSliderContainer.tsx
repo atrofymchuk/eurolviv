@@ -49,7 +49,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
           className={cn(`absolute h-[660px] xl:h-[50vw] 2xl:h-[46.15vw]  `, {
             
             "2xl:w-[93.1%] xl:w-[93.1%] lg:w-[93.1%] md:w-[93.1%] w-[89.07%]": !isTerrase,
-            " xl:w-[93.25%] lg:w-[93.25%] md:w-[93.25%] w-[89.9%]": isTerrase,
+            "2xl:w-[93.23%] xl:w-[93.23%] lg:w-[93.25%] md:w-[93.25%] w-[89.9%]": isTerrase,
             "h-[700px] w-[89%]!": isMobile,
           })}
         >

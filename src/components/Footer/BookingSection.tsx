@@ -9,7 +9,7 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
   const { t } = useTranslation();
   return (
     <div
-      className="gap-y-3 flex flex-col 2xl:h-[26.5vw] lg:h-[493px] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+      className="gap-y-3 flex flex-col 2xl:h-[25.677vw] lg:h-[493px] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
      pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] lg:items-center"
     >
       <div className="h-full flex flex-col ">
