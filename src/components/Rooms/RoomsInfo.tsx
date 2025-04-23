@@ -23,13 +23,20 @@ export const RoomsInfo = () => {
                   {t("rooms.about.heading.1")}
                 </span>
               </h1>
-              <div className={cn("flex flex-col  ", {
-                "items-center": isEng,
-              },
-              {
-                "": !isEng,
-              })}>
-                <div className="w-full 2xl:ms-[0.9vw] xl:ms-[.4vw] lg:ps-[9vw]">
+              <div
+                className={cn(
+                  "flex flex-col  ",
+                  {
+                    "items-center": isEng,
+                  },
+                  {
+                    "": !isEng,
+                  }
+                )}
+              >
+                <div
+                  className={`w-full 2xl:ms-[0.9vw] xl:ms-[.4vw] ${isEng ? "lg:ps-[9vw] 2xl:ps-[9.4vw] xl:ps-[9.25vw]" : "lg:ps-[9vw] 2xl:ps-[9vw] xl:ps-[9.1vw]"} `}
+                >
                   <h1 className="uppercase 2xl:text-[5.21vw] xl:text-[5vw] lg:text-[4.69vw] md:text-[80px] sm:text-[60px] leading-[81%] tracking-[-0.04em] lg:leading-none text-[#252526]">
                     {t("rooms.about.heading.2")}
                   </h1>
@@ -44,7 +51,6 @@ export const RoomsInfo = () => {
                       className="text-[#FFFFFF] flex-col items-center  bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] py-[11px] lg:w-[15.63vw] xl:w-[15.63vw]  2xl:text-[0.73vw] flex justify-center lg:h-[44px] h-[40px]"
                       to={"/booking"}
                     >
-
                       {t("buttons.book")}
                     </BookLink>
                   </div>
@@ -57,9 +63,7 @@ export const RoomsInfo = () => {
                 <span className="text-[#8C331B]">
                   {t("rooms.about.heading.0")},
                 </span>
-                <span className="mt-[5px]">
-                  {t("rooms.about.heading.1")}
-                </span>
+                <span className="mt-[5px]">{t("rooms.about.heading.1")}</span>
                 <span className="mt-[5px]">
                   {t("rooms.about.heading.2")}
                   <span className="mt-[5px]">
@@ -76,8 +80,7 @@ export const RoomsInfo = () => {
                   to={"/booking"}
                 >
                   <span className="lg:px-[8px] lg:py-[13px] px-[4.2px] lg:mt-[43px] py-[9.5px] ">
-
-                  {t("buttons.book")}
+                    {t("buttons.book")}
                   </span>
                 </BookLink>
               </div>
