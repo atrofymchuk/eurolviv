@@ -109,6 +109,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                       (phone, index) => (
                         <a
                           key={index}
+                          href={`tel:${phone.replace(/\s/g, '')}`}
                           className="block px-4 py-2 hover:bg-gray-100"
                         >
                           {phone}

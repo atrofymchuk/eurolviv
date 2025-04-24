@@ -14,7 +14,7 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
   return (
     <div className="flex flex-col items-center  gap-1.75">
       {showBookButton && (
-        <BookLink className="lg:px-[34.5px] 2xl:w-[10.63vw] 2xl:py-[13.5px] px-[19px] 2xl:mt-[43px] text-center py-[11px] w-[171px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to="/booking">
+        <BookLink className="lg:px-[34.5px] 2xl:text-[0.73vw]  2xl:w-[10.63vw] 2xl:py-[13.5px] px-[19px] 2xl:mt-[43px] text-center py-[11px] w-[171px] text-[#252526] mt-[30px] bg-[#EDE8E5] lg:w-[204px]" to="/booking">
 
           {t("buttons.book")}
         </BookLink>

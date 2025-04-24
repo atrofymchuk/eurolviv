@@ -23,12 +23,12 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
           </p>
 
           <ul className="lg:gap-y-[7px] gap-y-[7px] underline lg:no-underline underline-offset-2  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-            <li>+38 (032) 242-31-60</li>
-            <li>+38 (093) 242-31-60</li>
-            <li>+38 (093) 348-31-12</li>
+            <li><a href="tel:+380322423160" className="hover:underline">+38 (032) 242-31-60</a></li>
+            <li><a href="tel:+380932423160" className="hover:underline">+38 (093) 242-31-60</a></li>
+            <li><a href="tel:+380933483112" className="hover:underline">+38 (093) 348-31-12</a></li>
           </ul>
           <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium ">
-            info@eurohotel.lviv.ua
+            <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">info@eurohotel.lviv.ua</a>
           </p>
           <div className="lg:mt-[29px] mt-8 mb-0">
             <p className="uppercase  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px]">
@@ -36,12 +36,12 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
             </p>
 
             <ul className="lg:gap-y-[7px] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-            <li>+38 (073) 242-40-02</li>
-              <li>+38 (093) 348-31-14</li>
+            <li><a href="tel:+380732424002" className="hover:underline">+38 (073) 242-40-02</a></li>
+              <li><a href="tel:+380933483114" className="hover:underline">+38 (093) 348-31-14</a></li>
             </ul>
             <div className="lg:mt-[10px] mt-0 flex flex-col">
               <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
-                restaurant@eurohotel.lviv.ua
+                <a href="mailto:restaurant@eurohotel.lviv.ua" className="hover:underline">restaurant@eurohotel.lviv.ua</a>
               </p>
             </div>
           </div>

@@ -118,14 +118,20 @@ export const SpecialOffersModal = () => {
           <div className="flex flex-col md:justify-center justify-start px-4 pt-4 col-span-2 md:col-span-1 ">
             <ul className="space-y-1 lg:space-y-2 ">
               <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
-                +38 (073) 242 40 02
+                <a href="tel:+380732424002" className="hover:underline">
+                  +38 (073) 242 40 02
+                </a>
               </li>
               <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
-                +38 (093) 242 40 02
+                <a href="tel:+380932424002" className="hover:underline">
+                  +38 (093) 242 40 02
+                </a>
               </li>
             </ul>
             <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] pt-2 lg:pt-4">
-              info@eurohotel.lviv.ua
+              <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">
+                info@eurohotel.lviv.ua
+              </a>
             </p>
           </div>
         </div>

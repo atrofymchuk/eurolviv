@@ -46,7 +46,7 @@ export const Footer = () => {
           width="1920"
           height="1080"
           className="absolute top-0 left-0 w-full h-[120%] object-cover z-0"
-          style={{ minHeight: "1080px" }}
+          style={{ minHeight: "1480px" }}
         />
       </InViewWrapper>
 

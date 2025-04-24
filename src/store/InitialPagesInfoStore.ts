@@ -57,7 +57,7 @@ export const suggestion = [
       title:"home.roofService.terrace.title",
       titleDesc:"home.roofService.terrace.titleDesc",
       desc:["home.roofService.terrace.desc.0","home.roofService.terrace.desc.1","home.roofService.terrace.desc.2"]  ,
-      url: "/terrase",
+      url: "/terrace",
     },
   ];
 

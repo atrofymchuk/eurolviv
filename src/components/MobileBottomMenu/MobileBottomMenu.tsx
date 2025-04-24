@@ -7,32 +7,26 @@ import {
   callUs,
   locationWhite,
 } from "../../store/exportsIcons";
-import { useModalStore } from "../../store/useModalStore";
-
+import { links } from "../../Constants/Links";
 export const MobileBottomMenu = () => {
   const { t } = useTranslation();
-  const { onOpenModal } = useModalStore();
 
-  const handleClick = () => {
-    window.open(`/documents/Фуршетне меню.pdf`, '_blank');
-}
 
 
   const menuItems = [
     {
       icon: <img loading="lazy" src={menu} alt="menu" />,
       label: t("phoneBottomMenu.menu"),
-      action: () => handleClick(),
+      path: links.menu,
     },
     {
       icon: <img loading="lazy" src={calendarBooking} alt="calendar" />,
       label: t("phoneBottomMenu.book"),
-      action: () => onOpenModal("order"),
+      path: links.bookTable,
     },
     {
       icon: <img loading="lazy" src={callUs} alt="call" />,
       label: t("phoneBottomMenu.callUs"),
-      action: () => onOpenModal("contacts"),
     },
     {
       icon: <img loading="lazy" src={locationWhite} alt="location" />,
@@ -60,16 +54,17 @@ export const MobileBottomMenu = () => {
               </span>
             </Link>
           ) : (
-            <button
+            <Link
+              to={item.path as string}
+              target="_blank"
               key={index}
-              onClick={item.action}
               className="flex-1 flex p-3.5 border-r border-[#C29986] flex-col items-center justify-center py-[15px] hover:bg-[#8C331B] transition-colors whitespace-nowrap last:border-r-0"
             >
               {item.icon}
               <span className="text-[10px] mt-[7px] uppercase font-cofo-medium">
                 {item.label}
               </span>
-            </button>
+            </Link>
           )
         )}
       </div>

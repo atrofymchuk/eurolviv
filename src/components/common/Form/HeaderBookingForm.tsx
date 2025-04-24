@@ -62,7 +62,7 @@ export const HeaderBookingForm = () => {
         </div>
         <div className="">
 
-        <p className="text-white uppercase 2xl:mt-[1.09vw] lg:mt-[21px] mt-[12px]  2xl:text-[1.09vw] xl:text-[1.09vw] md:font-cofo-medium text-[2.67vw] ps-[20px] lg:ps-0" >
+        <p className="text-white uppercase 2xl:mt-[1.09vw] lg:mt-[21px] mt-[12px]  2xl:text-[0.94vw] xl:text-[1.09vw] md:font-cofo-medium text-[2.67vw] ps-[20px] lg:ps-0" >
           {t("home.header.bookingForm.gusts.title")}
         </p>
 

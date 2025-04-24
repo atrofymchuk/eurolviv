@@ -1,13 +1,13 @@
 import { MenuPC } from "./MenuPC";
 import { MenuSmallWidth } from "./MenuSmallWidth";
-import { useModalStore } from "../../store/useModalStore";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { Link } from "react-router-dom";
+import { links } from "../../Constants/Links";
 export const Menu = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
-  const { onOpenModal } = useModalStore();
   const isCustomWidth = useCustomWidth(1500, 1700);
   return (
     <div className="flex flex-col items-center justify-center md:w-[93.16%] w-[89.067%] mx-auto md:border-x border-[#B3B3B3] border-t ">
@@ -52,14 +52,15 @@ export const Menu = () => {
             <p className="uppercase text-[#888888] px-5 lg:text-[16px] sm:text-[14px] text-[3.2vw]  lg:leading-[120%] xl:w-[359px] mt-[8px] md:pt-[39px]">
               {t("restaurant.menu.desc")}
             </p>
-            <button
-              onClick={() => onOpenModal("menu")}
+            <Link
+              to={links.menu}
+              target="_blank"
               className="font-cofo-medium uppercase 2xl:w-[10.9vw] 2xl:h-[2.4vw] text-[#8C331B] lg:w-[209px] border-[#8C331B]
                border hover:cursor-pointer hover:bg-[#8C331B] hover:text-white rounded-full flex items-center justify-center
                lg:text-[14px] mb-[30px] lg:mb-0 text-[13px] lg:mt-[19px] mt-[24px] lg:py-[10px] w-[171px] h-[40px]"
             >
               {isEng ? t("buttons.restaurantMenu") : t("buttons.viewMenu")}
-            </button>
+            </Link>
           </div>
           <div className="2xl:h-[329px] xl:h-[259px] lg:h-[209px] md:flex hidden   border-[#B3B3B3]   "></div>
         </div>

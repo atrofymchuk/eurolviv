@@ -8,6 +8,8 @@ import {
 import cn from "classnames";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { links } from "../../Constants/Links";
 
 interface AbootSliderContainerProps {
   slides?: string[];
@@ -39,7 +41,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative flex xl:h-[50vw] items-center lg:justify-end   max-w-screen   lg:h-[650px] md:h-[570px] flex-col 
+      className={`relative flex xl:h-[50vw] items-center lg:justify-end   max-w-screen overflow-x-hidden  lg:h-[650px] md:h-[570px] flex-col 
         ${
         isTerrase ? "w-full h-[380px] 2xl:h-[46.15vw] " : "justify-center h-[370px] 2xl:h-[46.15vw]"
       }`}
@@ -64,8 +66,10 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
       <div className={`flex flex-col items-center lg:mb-0 ${isTerrase ? "mt-12" : "mt-1 "}`}>
           <AboutSlider slides={imgs} />
 
-        <button
-          className={cn(`2xl:text-[.73vw] lg:text-[14px] 2xl:mt-[38px]  font-cofo-medium text-center
+        <Link
+          to={links.bookTable}
+          target="_blank"
+          className={cn(`2xl:text-[.73vw] lg:text-[14px] 2xl:mt-[38px]  font-cofo-medium text-center flex items-center justify-center
            bg-[#8C331B] border border-[#8C331B] hover:text-[#8C331B] w-[160px] h-[40px] 2xl:w-[10.1vw] 2xl:h-[2.3vw] 
         uppercase mt-[24px] mb-[10px] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer  rounded-4xl text-[12px]`, {
           "xl:w-[12.1vw] xl:h-[2.5vw]": isCustomWidth,
@@ -76,7 +80,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
         })}
         >
           {t("buttons.bookTable")}
-        </button>
+        </Link>
       </div>
     </div>
   );

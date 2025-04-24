@@ -9,7 +9,7 @@ export const AboutRestaurant = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();
   return (
-    <div className="flex flex-col  justify-center items-center md:w-[93.16%] w-[89.067%] mx-auto">
+    <div className="flex flex-col  justify-center items-center md:w-[93.16%] w-[89.067%] mx-auto overflow-x-hidden">
       <div className="grid md:grid-cols-[41.82%_58.18%] w-full grid-cols-1 ">
         <div className="border-x border-b h-[33px] border-[#B3B3B3] lg:h-[53px]"></div>
         <div className="border-e md:border-b border-[#B3B3B3] lg:h-[53px]"></div>

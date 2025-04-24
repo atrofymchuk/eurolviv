@@ -43,15 +43,21 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
 
           <ul className="gap-y-[7px]">
             <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   text-[12px] font-cofo lg:no-underline underline underline-offset-2 ">
-              +38 (073) 242-40-02
+              <a href="tel:+380732424002" className="hover:underline">
+                +38 (073) 242-40-02
+              </a>
             </li>
             <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline underline-offset-2 ">
-              +38 (093) 242-40-02
+              <a href="tel:+380932424002" className="hover:underline">
+                +38 (093) 242-40-02
+              </a>
             </li>
           </ul>
           <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[15px]  mt-[20px]  ">
             <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
-              reception@eurohotel.lviv.ua
+              <a href="mailto:reception@eurohotel.lviv.ua">
+                reception@eurohotel.lviv.ua
+              </a>
             </p>
             <div className="lg:mt-[32px] mt-[19px] flex gap-x-4">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">

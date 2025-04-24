@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { useModalStore } from "../../store/useModalStore";
 import "swiper/css";
 import "swiper/css/pagination";
 import { SwiperSlider } from "./Swiper";
 import cn from "classnames";
+import { Link } from "react-router-dom";
+import { links } from "../../Constants/Links";
 export const Dishes = ({
   slides,
   content,
@@ -19,7 +20,6 @@ export const Dishes = ({
   };
 }) => {
   const { t, i18n } = useTranslation();
-  const { onOpenModal } = useModalStore();
   const isEng = i18n.language === "en";
 
   return (
@@ -76,10 +76,11 @@ export const Dishes = ({
               }`
             )}
           >
-            <button
-              onClick={() => onOpenModal("menu")}
+            <Link 
+              to={links.menu}
+              target="_blank"
               className={cn(
-                `uppercase  xl:text-[14px] 2xl:text-[0.73vw] 
+                `uppercase  xl:text-[14px] 2xl:text-[0.73vw] text-center
           rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${
             content.isMenu
               ? "xl:px-[20px] lg:w-[122px] 2xl:w-[6.35vw] xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B]  text-[#FFFFFF] hover:bg-[white] hover:text-[#8C331B] border border-[#8C331B]"
@@ -92,7 +93,7 @@ export const Dishes = ({
               )}
             >
               {t(content.button)}
-            </button>
+            </Link>
           </div>
         </div>
 

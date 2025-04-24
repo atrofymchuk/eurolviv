@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import ruffLogo from "../../assets/icons/ruffLogo.svg";
 import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+import { links } from "../../Constants/Links";
 export const RoofService = () => {
   const { t } = useTranslation();
   const { suggestion } = usePagesInfoStore();
@@ -106,7 +107,8 @@ export const RoofService = () => {
                   }`}
                 >
                   <Link
-                    to={item.url}
+                    to={links.bookTable}
+                    target="_blank"
                     className={`uppercase bg-[#8C331B] lg:py-[11px]   rounded-full font-cofo-medium  text-[#FFFFFF] hover:bg-[#252526] hover:text-[#FFFFFF] lg:w-[226px]  lg:text-[16px] text-[12px] py-[12px] px-[17px] ${
                       index === 2 ? "" : "hidden"
                     }`}
