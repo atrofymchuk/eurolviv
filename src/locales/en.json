@@ -289,7 +289,7 @@
         "contact":"contacts"
     },
     "equipment":{
-        "title":["included", "у equipment:"],
+        "title":["included", "equipment:"],
         "price":"Rates:",
         "day":"full day",
         "hour":"hourly"
@@ -443,8 +443,8 @@
     
     "conferenceHallState":{
         "smallHall":{
-            "title":"Small Conference ",
-            "desc":"Hall",
+            "title":"Small  ",
+            "desc":"Conference Hall",
             "capacity":"up to 40 people",
             "about":{
                 "pOne":"Designed for productivity and seamless communication, this functional yet cozy space features a stylish interior, two plasma screens, and well-planned lighting—ideal for training sessions, meetings, and board discussions.",
@@ -461,8 +461,8 @@
             }
         },
         "bigHall":{
-            "title":"Grand Conference",
-            "desc":"Hall",
+            "title":"Grand ",
+            "desc":"Conference Hall",
             "capacity":"up to 100 people",
             "about":{
                 "pOne":"A sophisticated space with a classic design that blends elegance, coziness, and modern functionality. Perfectly suited for hosting everything from private business meetings to large conferences and presentations in the heart of Lviv.",
@@ -1145,7 +1145,7 @@
             "seeMore":"see more",
             "viewRoom":"View details"  ,
             "book":"Book now",
-            "conferenceMenu":"конференц-меню",
+            "conferenceMenu":"Event catering menu",
             "order":"book an event",
             "bookRoom":"Book a room",
             "bookRoomArr":["book"," now"],

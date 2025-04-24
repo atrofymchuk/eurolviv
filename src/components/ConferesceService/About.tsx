@@ -25,7 +25,7 @@ export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
         <div
           className={cn(`flex ${
             isOnTop ? "lg:border-x-0 border-x" : " border-x lg:border-x-0"
-          } border-b 2xl:border-b-0 border-[#C7C7C7] flex-col h-full justify-center p-2.5 2xl:p-0 xl:items-center
+          } border-b 2xl:border-b-0 border-[#C7C7C7] flex-col h-full justify-center p-[2.67vw] 2xl:p-0 xl:items-center
           order-2 lg:order-none`)}
         >
         <div className="text-[#8C331B] hidden lg:flex 2xl:mb-[1.6vw] xl:mb-4 lg:mb-2">

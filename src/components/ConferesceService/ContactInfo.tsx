@@ -10,14 +10,14 @@ export const ContactInfo = memo(() => {
         {t("conferenceService.about.contact")}
       </h1>
       <ul className="xl:gap-y-[9px] gap-y-1 2xl:pt-[21px] pt-[11px]">
-        <li className="uppercase text-[#252526] 2xl:text-[1.05vw] text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[18px] ">
+        <li className="uppercase text-[#252526] 2xl:text-[1.05vw] text-[3.2vw] sm:text-[14px] lg:text-[14px] xl:text-[18px] ">
         + 38 (093) 242 31 60
         </li>
-        <li className="uppercase text-[#252526] 2xl:text-[1.05vw] xl:text-[18px] text-[12px] sm:text-[14px] lg:text-[14px] ">
+        <li className="uppercase text-[#252526] 2xl:text-[1.05vw] xl:text-[18px] text-[3.2vw] sm:text-[14px] lg:text-[14px] ">
         + 38 (093) 348 31 12
         </li>
       </ul>
-      <p className="font-cofo-medium uppercase text-[#252526] 2xl:text-[1.05vw] text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[18px]  2xl:pt-[21px] pt-[11px]">
+      <p className="font-cofo-medium uppercase text-[#252526] 2xl:text-[1.05vw] text-[3.2vw] sm:text-[14px] lg:text-[14px] xl:text-[18px]  2xl:pt-[21px] pt-[11px]">
         info@eurohotel.lviv.ua
       </p>
     </div>

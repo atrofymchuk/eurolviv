@@ -23,8 +23,8 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       {showOrderButton && (
         <button
           onClick={onOrderClick}
-          className="uppercase mt-[30px] lg:mt-[43px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526] w-fit md:px-[34.5px] md:py-[13.5px]
-           px-[19px] py-[11px] rounded-full font-cofo-medium text-[12px] hover:cursor-pointer lg:w-[204px] "
+          className="uppercase mt-[30px] lg:mt-[43px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526]  md:px-[34.5px] md:py-[13.5px]
+           px-[19px] py-[11px] rounded-full w-[171px] font-cofo-medium text-[12px] hover:cursor-pointer lg:w-[204px] "
         >
           {t("buttons.order")}
         </button>

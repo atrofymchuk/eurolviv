@@ -18,7 +18,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
         />
-        <p className="uppercase text-[12px] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1 text-[#8C331B]">
+        <p className="uppercase text-[3.2vw] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1 text-[#8C331B]">
           {t("conferenceService.about.area")}:
           <span className="font-cofo-medium">&nbsp;{t(area)}</span>
         </p>
@@ -29,7 +29,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
         />
-        <p className="text-[#8C331B] uppercase text-[12px] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
+        <p className="text-[#8C331B] uppercase text-[3.2vw] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
           {t("conferenceService.about.roomFloor")}:
           <span className="font-cofo-medium text-[#8C331B]">&nbsp;{roomFloor}</span>
         </p>
@@ -40,7 +40,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
           alt="houseicon"
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
         />
-        <p className="text-[#8C331B] uppercase text-[12px] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
+        <p className="text-[#8C331B] uppercase text-[3.2vw] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
           {t("conferenceService.about.capacity")}:
           <br className="lg:inline hidden"/>
           <span className="font-cofo-medium text-[#8C331B] ">
