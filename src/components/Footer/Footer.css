@@ -34,6 +34,6 @@
 
 @media (min-width: 1440px) {
   .footer-height-fixed {
-    min-height: 1000px !important;
+    min-height: 900px !important;
   }
 }

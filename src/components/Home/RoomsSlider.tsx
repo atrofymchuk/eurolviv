@@ -118,12 +118,12 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
             return (
               <SwiperSlide
                 key={index}
-                className="h-full flex items-center justify-center"
+                className="h-full flex items-center justify-center "
               >
-                <div className="flex flex-col items-center w-full h-full lg:h-auto">
+                <div className="flex flex-col items-center w-full  2xl:min-h-[26.61vw] xl:min-h-[33.59vw]">
                   <div
                     className={cn("transition-all duration-500", {
-                      "2xl:w-[30.7vw] xl:w-[30vw] lg:w-[34vw] md:w-[38vw] w-[69vw] ":
+                      "2xl:w-[30.7vw]  xl:w-[30vw] lg:w-[34vw] md:w-[38vw] w-[69vw] ":
                         isActive,
                       "2xl:w-[24.7vw] xl:w-[26vw] lg:w-[30vw] md:w-[34vw] w-[69vw] ":
                         !isActive,
