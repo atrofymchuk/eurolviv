@@ -30,7 +30,7 @@ export const Karaoke = () => {
                 {t("restaurant.karaoke.desc.1")}
               </p>
               <p className={`inline uppercase text-[#252526]  leading-[120%]   2xl:text-[0.94vw] 
-                lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px] ${isCustomWidth ? "xl:text-[0.92vw] w-[93%]" : "xl:text-[1vw] xl:w-[93%]"}
+                lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px] ${isCustomWidth ? "2xl:w-[96%] xl:text-[0.92vw]  w-[93%]" : "2xl:w-[100%]  xl:text-[1vw] xl:w-[98%]"}
                 `}>
                 {t("restaurant.karaoke.desc.2")}
               </p>

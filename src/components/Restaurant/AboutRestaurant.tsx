@@ -4,11 +4,10 @@ import {
   aboutImageScd,
   aboutImageTrd,
 } from "../../store/exportsImg";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const AboutRestaurant = () => {
   const { t } = useTranslation();
-  const isSpecialWidth = useCustomWidth(1530, 1700);
+  const isEng = useIsEnglish();
   return (
     <div className="flex flex-col  justify-center items-center md:w-[93.16%] w-[89.067%] mx-auto">
       <div className="grid md:grid-cols-[41.82%_58.18%] w-full grid-cols-1 ">
@@ -19,25 +18,22 @@ export const AboutRestaurant = () => {
          xl:pt-[38px] 2xl:pb-[3.125vw] xl:pb-[40px] md:text-start text-center"
         >
           <div
-            className={`2xl:w-[33.07vw]  w-[299px] lg:w-[406px] ${
-              isSpecialWidth ? "xl:w-[33.6vw]" : "xl:w-[34.07vw]"
-            }`}
+            className={`2xl:w-[33.07vw]  w-[299px] lg:w-[406px] xl:w-[34.07vw]`}
           >
             <p className="font-blessed  leading-[70%] 2xl:text-[1.875vw] xl:text-[28px] lg:text-[24px] md:text-[18px]  text-[#242425] text-[16px] lg:pt-0 pt-[33px]">
               {t("restaurant.about.title")}
             </p>
             <div className="md:flex md:items-center md:gap-2 pt-[8px] xl:pt-0 2xl:pt-[8px] ">
               <h1
-                className={`uppercase tracking-[-0.07em] leading-[81%]  text-[#242425] text-[64px] 2xl:text-[5.21vw] ${
-                  isSpecialWidth ? "xl:text-[6.719vw]" : "xl:text-[5.313vw] pt-2"
-                }`}
+                className={`uppercase tracking-[-0.07em] leading-[81%]  text-[#242425] text-[17.07vw] 2xl:text-[5.21vw] 
+                  xl:text-[6.719vw] xl:pt-2
+                `}
               >
                 ruff
               </h1>
               <span
-                className={`2xl:text-[3.33vw] lg:tracking-[-0.07em] justify-center pt-[4px] lg:pt-0  ${
-                  isSpecialWidth ? "xl:text-[64px]" : "xl:text-[48px]"
-                } text-[32px] flex  mt-auto  md:justify-start 2xl:ps-1`}
+                className={`2xl:text-[3.33vw] lg:tracking-[-0.07em] justify-center pt-[4px] lg:pt-0 
+                  xl:text-[64px] text-[32px] flex  mt-auto  md:justify-start 2xl:ps-1`}
               >
                 {t("restaurant.about.title2")}
                 <span className="md:inline-flex hidden">&nbsp;-</span>
@@ -45,18 +41,18 @@ export const AboutRestaurant = () => {
             </div>
 
             <div
-              className={`2xl:space-y-5.5 space-y-3 2xl:pt-[42px]  pt-[22px] md:mb-0 mb-8 ${
-                isSpecialWidth
-                  ? "xl:pt-[22px] xl:leading-normal xl:space-y-5"
-                  : "xl:pt-[20px] xl:space-y-6"
+              className={`2xl:space-y-5.5 space-y-3 2xl:pt-[42px]  pt-[22px] md:mb-0 mb-8 xl:pt-[22px] xl:leading-normal xl:space-y-5
+                
               }`}
             >
               <p
-                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw] lg:text-[14px] md:text-[12px] text-[12px]  ${
-                  isSpecialWidth
-                    ? "xl:text-[15px] xl:w-[105%] xl:leading-normal"
-                    : "xl:text-[0.977vw]"
-                }`}
+                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw] lg:text-[14px] md:text-[12px] text-[12px] 
+              
+
+                  ${isEng ? "xl:w-[100%]" : ""}
+                   xl:leading-[120%]
+                   xl:text-[0.977vw]
+                `}
               >
                 {t("restaurant.about.desc.first.0")}
                 <span className="font-cofo-medium">
@@ -65,11 +61,12 @@ export const AboutRestaurant = () => {
                 {t("restaurant.about.desc.first.2")}
               </p>
               <p
-                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
-                  isSpecialWidth
-                    ? "xl:text-[15px] xl:w-[100%] tracking-[-0.02em] xl:leading-normal"
-                    : "xl:text-[0.977vw] xl:w-[105%]"
-                }`}
+                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]
+                  ${isEng ? "xl:w-[98%] 2xl:w-[97%]" : ""}
+                  
+                 tracking-[-0.02em] xl:leading-[120%]
+                     xl:text-[0.977vw]
+              `}
               >
                 <span className=" lg:font-cofo-medium">
                   {t("restaurant.about.desc.second.0")}
@@ -79,24 +76,29 @@ export const AboutRestaurant = () => {
                   {t("restaurant.about.desc.second.2")}
                 </span>
                 <span>{t("restaurant.about.desc.second.3")}</span>
-                <span>{t("restaurant.about.desc.second.4")}</span>
+                <span className={`${isEng ? "hidden" : "inline"}`}>
+                  {t("restaurant.about.desc.second.4")}
+                </span>
               </p>
 
               <p
-                className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
-                  isSpecialWidth
-                    ? "xl:text-[15px] xl:leading-normal"
-                    : "xl:text-[0.977vw] "
-                }`}
+                className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px] 
+                  
+                    xl:leading-[120%]
+                    xl:text-[0.977vw] 
+                `}
               >
                 <span>{t("restaurant.about.desc.third.0")}</span>
                 {t("restaurant.about.desc.third.1")}
               </p>
 
               <p
-                className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]  ${
-                  isSpecialWidth ? "xl:text-[15px]" : "xl:text-[0.977vw]"
-                }`}
+                className={`leading-[120%] md:block hidden uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px] 
+                  
+                    xl:leading-[120%]
+                    xl:text-[0.977vw] 
+                ${isEng ? "xl:w-[102%]" : ""}
+                `}
               >
                 <span className="font-cofo lg:font-cofo-medium">
                   {t("restaurant.about.desc.fourh.0")}
@@ -114,10 +116,9 @@ export const AboutRestaurant = () => {
         <div className="md:border-e border-x md:border-x-0 border-t md:border-t-0 border-[#B3B3B3]  md:border-b ">
           <div className="flex items-center justify-center">
             <div
-              className={`md:border-e border-[#B3B3B3] border-b 2xl:px-[20px] w-full flex items-center justify-center lg:py-[14px_19px] 2xl:py-[14px_19px]   pt-[10px] pb-[13px]  md:px-2 px-[10px_3px] ${
-                isSpecialWidth
-                  ? "lg:px-[20px] xl:py-[14px_19px]"
-                  : "lg:px-[10px] xl:py-[10px_15px]"
+              className={`md:border-e border-[#B3B3B3] border-b 2xl:px-[20px] w-full flex items-center justify-center lg:py-[14px_19px] 2xl:py-[14px_19px]   pt-[10px] pb-[13px]  md:px-2 px-[10px_3px] 
+                
+                  lg:px-[20px] xl:py-[14px_19px]
               }`}
             >
               <img
@@ -128,10 +129,9 @@ export const AboutRestaurant = () => {
               />
             </div>
             <div
-              className={` border-[#B3B3B3] border-b w-full 2xl:px-[20px]   flex items-center justify-center lg:pt-[14px] pt-[10px] pb-[13px] 2xl:py-[14px_19px] md:px-2 px-[3px_10px] ${
-                isSpecialWidth
-                  ? "lg:px-[20px] xl:py-[14px_19px]"
-                  : "lg:px-[10px] xl:py-[10px_14px]"
+              className={` border-[#B3B3B3] border-b w-full 2xl:px-[20px]   flex items-center justify-center lg:pt-[14px] pt-[10px] pb-[13px] 2xl:py-[14px_19px] md:px-2 px-[3px_10px] 
+                
+                  lg:px-[10px] xl:py-[10px_14px]
               }`}
             >
               <img
@@ -143,19 +143,17 @@ export const AboutRestaurant = () => {
             </div>
           </div>
           <div
-            className={`flex items-center 2xl:py-[20px_26px] 2xl:px-[20px] px-2.5  justify-center lg:pt-[12px] lg:pb-[26px] pt-[10px]   ${
-              isSpecialWidth
-                ? "xl:py-[20px_25px] xl:px-[20px]"
-                : "xl:py-[10px_15px] xl:px-[10px]"
-            }`}
+            className={`flex items-center 2xl:py-[20px_26px] 2xl:px-[20px] px-2.5  justify-center lg:pt-[12px] lg:pb-[26px] pt-[10px]  
+                xl:py-[20px_25px] xl:px-[20px]  
+            `}
           >
             <img
               loading="lazy"
               src={aboutImageTrd}
               alt=""
-              className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[13.021vw] ${
-                isSpecialWidth ? "xl:h-[15.104vw]" : "xl:h-[17.021vw]"
-              }`}
+              className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[14.321vw] 
+                
+              `}
             />
           </div>
         </div>

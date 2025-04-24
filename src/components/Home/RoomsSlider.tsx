@@ -164,8 +164,9 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                           "2xl:text-[1.667vw]   lg:w-4/5 xl:text-[1.8vw]  lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
                           isEng
                             ? {
-                                " xl:w-[65%] w-[55%]": t(el.title).length > 15,
-                                "2xl:w-[22vw]! xl:w-[17vw]! w-[65%]":
+                                "2xl:w-[22vw] xl:w-[65%] w-[55%]":
+                                  t(el.title).length > 15,
+                                "2xl:w-[35vw]! xl:w-[17vw]! w-[65%]":
                                   t(el.title).length > 20 &&
                                   t(el.title).length < 20,
                                 " xl:w-[55%] w-[75%]":
@@ -176,7 +177,7 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                               }
                             : {
                                 " xl:w-[65%] w-[75%]": t(el.title).length > 15,
-                                "2xl:w-[22vw]! xl:w-[17vw]! w-[75%]":
+                                "2xl:w-[25vw]! xl:w-[17vw]! w-[75%]":
                                   t(el.title).length > 20 &&
                                   t(el.title).length < 40,
                                 " xl:w-[55%] w-[75%]":

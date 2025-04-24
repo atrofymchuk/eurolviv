@@ -17,7 +17,7 @@ export const RoofService = () => {
             className={cn(
               `relative flex flex-col w-full items-center bg-[#252526] ${
                 index === 2
-                  ? "lg:col-span-2 md:h-[1600px] h-[873px]"
+                  ? "lg:col-span-2 2xl:h-[80.33vw] xl:h-[84.38vw] h-[873px]"
                   : "md:h-[1173px] h-[873px]"
               }`
             )}
@@ -44,7 +44,7 @@ export const RoofService = () => {
             <div
               className={cn(
                 `absolute inset-0 flex flex-col items-center text-center mt-[123px]  text-white z-2  ${
-                  index === 2 ? "2xl:mt-[14.69vw]" : "justify-between"
+                  index === 2 ? "2xl:mt-[15.79vw] xl:mt-[15.63vw] lg:mt-[123px]" : "justify-between"
                 }`
               )}
             >

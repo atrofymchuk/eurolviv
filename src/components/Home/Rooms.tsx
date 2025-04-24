@@ -108,7 +108,7 @@ export const RoomsHome = () => {
 
       <div className="max-w-screen relative z-0  md:mb-0 mt-[17vw] md:mt-[0] xl:mb-[1.56vw] w-full xl:mt-[1.56vw] 2xl:mt-0  md:h-[500px] mb-[70px]  h-[407px] ">
         <div
-          className={`z-10 absolute   2xl:h-[36vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px]  mt-[40px] xl:mt-0 2xl:mt-[50px] w-full ${
+          className={`z-10 absolute   2xl:h-[37.5vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px]  mt-[40px] xl:mt-0 2xl:mt-[50px] w-full ${
             isCustomWidth ? "xl:h-[620px]" : "xl:h-[600px]"
           } `}
         >

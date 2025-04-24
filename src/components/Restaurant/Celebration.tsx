@@ -39,8 +39,8 @@ export const Celebration = () => {
             <p
               className={`text-[#252526] 2xl:w-[37.6vw] lg:w-[550px]  md:w-[420px]  md:text-[14px] 2xl:text-[0.94vw] uppercase  lg:text-[16px]  lg:leading-[120%] text-[3.2vw] w-[90%] ${
                 isCustomWidth
-                  ? "xl:text-[15px] xl:w-[140%] tracking-[-0.01em]"
-                  : "xl:text-[1.05vw] xl:w-[155%]"
+                  ? "xl:text-[15px] xl:w-[150%] tracking-[-0.01em]"
+                  : "xl:text-[1.05vw] xl:w-[160%]"
               }`}
             >
               {t("restaurant.celebration.desc.1")}

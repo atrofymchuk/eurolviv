@@ -16,8 +16,8 @@ export const Menu = () => {
           className={cn(
             `grid  md:h-full h-[521px] grid-cols-1`,
             isEng
-              ? "md:grid-cols-[35.7%_28.8%_35.6%]"
-              : "md:grid-cols-[35.7%_28.9%_35.1%]"
+              ? "md:grid-cols-[35.7%_29.9%_35.6%]"
+              : "md:grid-cols-[35.7%_28.9%_35.6%]"
           )}
         >
           <div className="lg:w-full md:flex  hidden lg:justify-end   "></div>
@@ -28,15 +28,16 @@ export const Menu = () => {
             </span>
             <h1
               className={cn(
-                `uppercase 2xl:text-[3.34vw] lg:text-[54px]  leading-[94%] text-[32px] mt-[9px]  tracking-[-0.07em] md:whitespace-nowrap`,
+                `uppercase 2xl:text-[3.3373vw] lg:text-[54px]  leading-[94%] text-[32px] mt-[9px]  tracking-[-0.075em] md:whitespace-nowrap`,
                 {
                   "xl:text-[51px]": isCustomWidth,
                   "xl:text-[42px]": !isCustomWidth,
+                  "2xl:pe-[3px]": isEng,
                 }
               )}
             >
               {t("restaurant.menu.title.0")}
-              <br className="hidden lg:block" />
+              <br className="hidden lg:block " />
               {t("restaurant.menu.title.1")}
             </h1>
           </div>
