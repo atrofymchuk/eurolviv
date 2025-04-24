@@ -5,11 +5,12 @@ import { useCustomWidth } from "../../components/Hooks/useCustomWidth";
 export const Karaoke = () => {
   const { t,i18n } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);
+  const isCustW = useCustomWidth(1800, 1899);
   const isEng = i18n.language === "en";
   return (
     <div className="flex flex-col items-center" id="karaoke">
       <div className="grid md:grid-cols-[35.7%_28.9%_35.1%] grid-cols-1 md:w-[93.16%] w-[89.067%] mx-auto border-x border-[#B3B3B3] border-t ">
-        <div className={`flex flex-col 2xl:ps-[52px]  lg:ps-[32px] md:ps-[24px]  justify-center md:justify-start 2xl:h-[29.01vw]  md:my-0 my-[8.6vw_5vw] ${isCustomWidth ? "xl:ps-[32px] xl:mt-[48px] 2xl:mt-0 " : "xl:ps-[24px] xl:mt-[32px] 2xl:mt-0 "}`}>
+        <div className={`flex flex-col 2xl:ps-[2.71vw]  lg:ps-[32px] md:ps-[24px]  justify-center md:justify-start 2xl:h-[29.01vw]  md:my-0 my-[8.6vw_5vw] ${isCustomWidth ? "xl:ps-[32px] xl:mt-[48px] 2xl:mt-0 " : "xl:ps-[24px] xl:mt-[32px] 2xl:mt-0 "}`}>
           <div className="flex items-center md:items-start  flex-col justify-center  text-center md:text-start 2xl:pt-[42px]">
             <p className="font-blessed xl:font-extrabold  text-[16px] 2xl:text-[36px] xl:text-[26px]  lg:w-[350px] lg:text-[26px] lg:leading-[25.2px]  xl:inline xl:w-[400px]">
               Ruff
@@ -22,7 +23,7 @@ export const Karaoke = () => {
               
             })} >
             
-              <p className={`inline uppercase text-[#252526]  leading-[120%]  2xl:text-[0.94vw] lg:text-[16px] text-[3.2vw] md:order-none order-3  ${isCustomWidth ? "xl:text-[0.92vw] w-[93%]" : "xl:text-[1vw] "}`}>
+              <p className={`inline uppercase text-[#252526]  leading-[120%]  2xl:text-[0.94vw] lg:text-[16px] text-[3.2vw] md:order-none order-3   ${isCustomWidth ? "xl:text-[0.92vw] w-[93%]" : "xl:text-[1vw] "} ${isCustW ? "2xl:w-[95%]!":""} `}>
                 <span className="lg:font-cofo-medium">
                 {t("restaurant.karaoke.desc.0")}
 
@@ -30,7 +31,7 @@ export const Karaoke = () => {
                 {t("restaurant.karaoke.desc.1")}
               </p>
               <p className={`inline uppercase text-[#252526]  leading-[120%]   2xl:text-[0.94vw] 
-                lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px] ${isCustomWidth ? "2xl:w-[96%] xl:text-[0.92vw]  w-[93%]" : "2xl:w-[100%]  xl:text-[1vw] xl:w-[98%]"}
+                lg:text-[16px] text-[3.2vw] md:order-none order-3 md:mt-0 mt-[19px]  ${isCustomWidth ? "2xl:w-[96%] xl:text-[0.92vw]  w-[93%]" : "2xl:w-[100%]  xl:text-[1vw] xl:w-[98%]"} ${isCustW ? "2xl:w-[95%]!":""} 
                 `}>
                 {t("restaurant.karaoke.desc.2")}
               </p>
