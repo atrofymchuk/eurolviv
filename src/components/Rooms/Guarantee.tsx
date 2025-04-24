@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { eurohotel } from "../../store/exportsImg";
 import { useModalStore } from "../../store/useModalStore";
-
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const Guarantee = () => {
   const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
+  const isEng = useIsEnglish();
 
   return (
     <div className="w-full flex flex-col items-center md:items-start relative">
@@ -13,29 +14,59 @@ export const Guarantee = () => {
       <div className="md:max-w-[94.79%] max-w-[89.5%] md:border-e border-x md:border-x-0 border-[#C7C7C7] lg:w-full">
         <div className="grid   justify-center md:justify-start  grid-cols-[1fr]   border-[#C7C7C7] ">
           <div className="  lg:border-x-0 border-[#C7C7C7] ">
-            <div className="flex flex-col xl:items-end md:items-center  2xl:pt-[4.22vw] xl:pt-[60px] lg:pt-[50px] pt-[49px] 2xl:pb-[48px] xl:pb-[40px] pb-[16px] ps-[12px] md:px-0">
-              <h1 className="font-cofo text-[8.53vw] 2xl:block uppercase sm:text-[42px] 2xl:text-[5.21vw] xl:text-[5.47vw] tracking-[-0.07em] lg:leading-[91%] leading-[86%]  2xl:tracking-[-0.04em]  xl:w-[68.5vw] 2xl:w-[69.5vw] ">
+            <div
+              className={`flex  flex-col xl:items-end md:items-center  2xl:pt-[4.22vw] xl:pt-[60px] lg:pt-[50px] pt-[49px] 2xl:pb-[48px] xl:pb-[40px] pb-[16px]  md:px-0 ${
+                isEng ? "" : "ps-[12px]"
+              }`}
+            >
+              <h1
+                className={` text-[8.53vw] 2xl:block md:font-cofo-medium uppercase sm:text-[42px] 2xl:text-[5.21vw] xl:text-[5.47vw] tracking-[-0.07em] lg:leading-[91%] leading-[86%]  2xl:tracking-[-0.04em] 
+                ${
+                  isEng
+                    ? "2xl:w-[66vw] xl:w-[63.94vw] "
+                    : "xl:w-[68.5vw] 2xl:w-[69.5vw] "
+                }
+                `}
+              >
                 <span className="hidden md:block">
                   {t("rooms.guarantee.heading.0")}
                 </span>
-                <span className="block md:hidden tracking-[-0.07em]">
+                <span
+                  className={`block md:hidden tracking-[-0.07em] ${
+                    isEng ? " text-center " : " "
+                  }`}
+                >
                   {t("rooms.guarantee.headingMobile.0")}
                 </span>
               </h1>
 
               <h1
-                className="font-cofo text-[8.53vw]  2xl:block sm:text-[42px] uppercase 2xl:text-[5.21vw]   lg:leading-[86%] 
-               xl:text-[5.47vw]  tracking-[-0.07em]  2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[59.9vw] xl:w-[85.94vw] 2xl:self-start  "
+                className={`font-cofo text-[8.53vw]  2xl:block sm:text-[42px] uppercase 2xl:text-[5.21vw]  md:font-cofo-medium lg:leading-[86%] 
+               xl:text-[5.47vw]  tracking-[-0.07em]  2xl:tracking-[-0.04em] 2xl:text-center  2xl:self-start  
+               ${
+                 isEng
+                   ? "2xl:w-[66.5vw] xl:w-[78.7vw] "
+                   : "2xl:w-[59.9vw] xl:w-[85.94vw] "
+               }
+               `}
               >
                 <span className="hidden md:block">
                   {t("rooms.guarantee.heading.1")}
                 </span>
-                <span className="block md:hidden leading-[91%]">
+                <span
+                  className={`block md:hidden leading-[91%] ${
+                    isEng ? "text-center " : " "
+                  }`}
+                >
                   {t("rooms.guarantee.headingMobile.1")}
                 </span>
               </h1>
 
-              <h1 className="font-cofo leading-[91%] text-[8.53vw] block md:hidden sm:text-[42px] uppercase 2xl:text-[5.21vw] tracking-[-0.07em] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[59.9vw]  self-start md:self-center">
+              <h1
+                className={`font-cofo leading-[91%] md:font-cofo-medium text-[8.53vw] block md:hidden sm:text-[42px] uppercase 2xl:text-[5.21vw] tracking-[-0.07em] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[59.9vw]   md:self-center ${
+                  isEng ? "text-center " : " self-start"
+                }`}
+              >
                 {t("rooms.guarantee.headingMobile.2")}
               </h1>
             </div>
@@ -57,8 +88,16 @@ export const Guarantee = () => {
                 {t("rooms.guarantee.imgHeading")}
               </h1>
 
-              <ol className="lg:mt-[29px] uppercase xl:space-y-5 lg:space-y-3 space-y-3 2xl:text-[1.04vw] xl:text-[1.09vw]
-               text-[3.2vw] lg:text-[12px] 2xl:w-[32.67vw] xl:w-[34.38vw] lg:w-[38.38vw] w-full  2xl:p-0 lg:pt-0 pt-[24px] order-3 md:order-2">
+              <ol
+                className={`lg:mt-[29px] uppercase xl:space-y-5 lg:space-y-3 space-y-3 2xl:text-[1.04vw] xl:text-[1.09vw]
+               text-[3.2vw] lg:text-[12px]  w-[96%] 2xl:p-0 lg:pt-0 pt-[24px] order-3 md:order-2
+               ${
+                 isEng
+                   ? "2xl:w-[26.67vw] xl:w-[29.38vw] lg:w-[38.38vw] tracking-[-0.04em] "
+                   : "2xl:w-[31.67vw] xl:w-[32.38vw] lg:w-[38.38vw] tracking-[-0.04em] "
+               }
+               `}
+              >
                 <li className="flex ">
                   <p>1.&nbsp; </p>
                   {t("rooms.guarantee.list.0")}
@@ -75,7 +114,7 @@ export const Guarantee = () => {
 
               <button
                 onClick={() => onOpenModal("order")}
-                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px] 2xl:w-[12.19vw]  2xl:h-[2.4vw] self-start 2xl:px-5 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
+                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px] 2xl:w-[12.19vw]  2xl:h-[2.4vw] self-start 2xl:px-0 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
                 font-cofo-medium 2xl:text-[0.83vw] xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3  "
               >
                 {t("buttons.bookRoomArr.0")}
@@ -84,8 +123,12 @@ export const Guarantee = () => {
                 </span>
               </button>
 
-              <div className="order-1 md:order-4  md:mt-auto mt-[15px]">
-                <h1 className="flex uppercase text-[#242425] 2xl:text-[5.21vw] xl:text-[70px] text-[8.53vw] 2xl:leading-[100px] lg:text-[5.27vw] leading-[91%] 2xl:tracking-[-0.04em] tracking-[-0.07em] 2xl:w-[35.47vw] xl:w-[500px]">
+              <div className="order-1 md:order-4  md:mt-auto mt-[15px] w-full">
+                <h1
+                  className={`uppercase text-[#242425] 2xl:text-[5.21vw] xl:text-[70px] text-[8.53vw] 2xl:leading-[81%] 
+                   lg:text-[5.27vw] leading-[91%] 2xl:tracking-[-0.04em] tracking-[-0.07em] 2xl:w-[35.47vw] xl:w-[500px] 
+                   ${isEng ? "mx-auto text-center md:text-left 2xl:mb-[1.56vw] xl:mb-[1vw]" : " "}`}
+                >
                   {t("rooms.guarantee.onOurSite")}
                 </h1>
               </div>

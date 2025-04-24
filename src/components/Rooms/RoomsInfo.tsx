@@ -68,6 +68,7 @@ export const RoomsInfo = () => {
                   {t("rooms.about.heading.2")}
                   <span className="mt-[5px]">
                     {!isEng && t("rooms.about.heading.4")}
+                    {isEng && t("rooms.about.heading.3")}
                   </span>
                 </span>
               </h1>
@@ -79,7 +80,7 @@ export const RoomsInfo = () => {
                   className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px] h-[40px] flex justify-center items-center"
                   to={"/booking"}
                 >
-                  <span className="lg:px-[8px] lg:py-[13px] px-[4.2px] lg:mt-[43px] py-[9.5px] ">
+                  <span className="lg:px-[8px] lg:py-[13px] px-[17.2px] lg:mt-[43px] py-[9.5px] ">
                     {t("buttons.book")}
                   </span>
                 </BookLink>
