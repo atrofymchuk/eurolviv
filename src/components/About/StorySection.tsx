@@ -16,7 +16,7 @@ export const StorySection = () => {
   const wrd = t("about.about.title.0").split("-");
   return (
     <section className="flex justify-center items-center flex-col w-full ">
-      <div className="fluid-container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-[74.42%_25.58%] items-center justify-center w-full max-w-[89.58%]">
+      <div className="fluid-container mx-auto border-x border-[#C7C7C7] grid grid-cols-1 lg:grid-cols-[74.32%_25.68%] items-center justify-center w-full max-w-[89.58%]">
         <div
           className={`border-b  border-[#C7C7C7] justify-end flex flex-col
          pt-[50px] sm:pt-[60px] md:pt-[100px] 2xl:pt-[130px]  2xl:h-[20vw] p-4 lg:pb-0 
@@ -63,7 +63,10 @@ export const StorySection = () => {
                     isEng ? "inline" : "block"
                   }`}
                 >
+                  <span className={`${isEng ? "inline" : "hidden"}`}>
+
                   {wrd[0] + " "}
+                  </span>
 
                   {t("about.about.title.1")
                     .split(" ")
@@ -121,7 +124,7 @@ export const StorySection = () => {
         >
           <p
             className={`text-[3.2vw] sm:text-sm md:text-[14px] xl:px-[8px_4px] xl:text-[1.09vw]
-            2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[24px_0px] 
+            2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[22px_17px] 
             md:px-3 uppercase font-normal leading-[120%]
             ${isEng ? "xl:w-[102%] w-[99%]" : ""}
             `}
@@ -134,7 +137,7 @@ export const StorySection = () => {
           </p>
           <div className="flex border-y border-[#C7C7C7] flex-col mt-auto">
             <p
-              className={` custom-md-font p-[15px] pb-[20px]  2xl:px-[24px_4px] xl:pt-[20px]  xl:px-[8px_0px]  xl:text-[1.09vw]
+              className={` custom-md-font p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px]  xl:px-[8px_0px]  xl:text-[1.09vw]
               ${isCustomMobile ? "px-[18px]" : ""}
               ${isEng ? "2xl:w-[95%] w-[90%] mx-auto" : ""}
               ${isCustomSecondaryMobile ? "px-[18px] " : ""}

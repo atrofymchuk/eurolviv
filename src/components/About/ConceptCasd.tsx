@@ -41,8 +41,8 @@ export const ConceptCasd = ({
           } ${index === concepts.length - 1 ? "border-b-0 md:border-b" : ""}`)}
     >
       <div
-        className={`text-center flex flex-col items-center  px-[29px]  xl:px-[0] py-[41px_28px] lg:py-[47px_38px]  ${isUltraHD ? "2xl:h-[26.156vw]" : "2xl:h-[30vw]"}
-          ${isSpecialMobileWidth ? " h-[112.667vw]" : "h-[124.667vw]"}
+        className={`text-center flex flex-col items-center  px-[29px]  xl:px-[0] py-[41px_28px] lg:py-[47px_38px]  ${isUltraHD ? "2xl:h-[26.156vw]" : "2xl:h-[30.5vw]"}
+          ${isSpecialMobileWidth ? " h-[122.667vw]" : "h-[124.667vw]"}
          ${isSpecialWidth ? "xl:h-[520px]" : "xl:h-[460px]"}`}
       >
         <div className={`${index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}>
@@ -87,7 +87,7 @@ export const ConceptCasd = ({
             const translatedText = t(textItem);
             return (
               <div
-                className={`mx-auto  ${index === 3 && !isEng ? "inline xl:block" : ""}
+                className={`mx-auto   ${index === 3 && !isEng ? "inline xl:block" : ""}
                 ${index === 2 || index === 3 && isEng ? "xl:inline " : ""}
 
                 ${
@@ -109,7 +109,7 @@ export const ConceptCasd = ({
         <div className="mt-auto">
           <DetailsLink
             to={"/booking"}
-            className={`2xl:text-[0.833vw]  ${
+            className={`2xl:text-[0.833vw] 2xl:h-[46px] block w-[141px] h-[40px] ${
               
               isSpecialWidth ? "xl:text-[.9vw]" : "xl:text-[0.9vw]"
             }`}

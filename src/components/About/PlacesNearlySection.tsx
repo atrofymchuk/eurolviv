@@ -22,7 +22,7 @@ export const PlacesNearbySection = ({
       <h2 className="text-[#8C331B] text-[6.4vw] xl:text-[2vw] 2xl:text-[2.083vw] tracking-[-0.04em] leading-[100%] text-center xl:text-left uppercase">
         {t("about.whereWeAre.whatIsClose")}
       </h2>
-      <ul className="grid mt-6 text-left uppercase 2xl:mt-[2.188vw] gap-y-[6px] xl:gap-y-[0.8vw] 2xl:gap-y-[0.885vw]">
+      <ul className="grid mt-6 text-left uppercase 2xl:mt-[2.61vw] gap-y-[6px] xl:gap-y-[0.8vw] 2xl:gap-y-[0.885vw]">
         {infrastructure.map(([place, distance], index) => (
           <li
             key={index}

@@ -129,7 +129,7 @@ export const AboutHome = () => {
           <div className="2xl:mt-[4.7vw] xl:mt-[5.9vw] pb-5 xl:pb-0">
             <h1
               className={cn(
-                "text-[8.53vw] w-[89.58vw] xl:space-y-[11px] sm:text-[3.65vw] leading-[81%] md:text-[3.52vw] lg:text-[3.33vw] xl:text-[5.3vw] 2xl:text-[5.21vw] uppercase text-[#242425] tracking-[-0.07em]"
+                "text-[8.53vw] w-[89.58vw] leading-[90%] xl:space-y-[11px] sm:text-[3.65vw] lg:leading-[81%] md:text-[3.52vw] lg:text-[3.33vw] xl:text-[5.3vw] 2xl:text-[5.21vw] uppercase text-[#242425] tracking-[-0.07em]"
               )}
             >
               <div className="tracking-[-0.07em] inline">

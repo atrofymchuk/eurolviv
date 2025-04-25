@@ -44,7 +44,10 @@ export const Advantages = () => {
                       alt={text}
                     />
                   </InViewWrapper>
+                  <span className={`${index === 0 ? "font-cofo-medium" : ""}`}>
+
                   {t(text)}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -93,7 +96,8 @@ export const Advantages = () => {
                     <img
                       loading="lazy"
                       className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px]
-                         ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}`}
+                         ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}
+                         ${index === 3? "scale-120" : ""}`}
                       src={icon}
                       alt={text}
                     />
@@ -103,7 +107,7 @@ export const Advantages = () => {
               ))}
             </ul>
             <BookLink
-              className={`hidden lg:w-[204px] lg:px-0 2xl:w-[10.625vw] 2xl:h-[2.292vw] items-center xl:p-0 justify-center lg:flex uppercase
+              className={`hidden lg:w-[204px] lg:px-0 2xl:w-[204px] 2xl:h-[44px] items-center xl:p-0 justify-center lg:flex uppercase 
                bg-[#EDE8E5] text-[#A47762] hover:bg-[#A47762] hover:text-[#EDE8E5]  border border-[#EDE8E5] lg:mt-[25px] 2xl:mt-[1.302vw]
                2xl:text-[0.729vw]!
                ${isCustomWidth ? "xl:w-[204px]" : "xl:w-[14vw] xl:text-[12px]!"}

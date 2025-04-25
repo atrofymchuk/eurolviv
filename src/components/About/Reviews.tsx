@@ -39,7 +39,7 @@ export const Rewies = () => {
 
               <Link
                 to={"/booking"}
-                className="uppercase text-[#A47762] 2xl:w-[12.188vw] text-center  mt-[20px] lg:mt-0 xl:w-[13vw] xl:text-[1.094vw] 2xl:text-[0.833vw]
+                className="uppercase text-[#A47762]  text-center  mt-[20px] lg:mt-0 xl:w-[234px]! xl:text-[1.094vw] 2xl:text-[0.833vw]
                 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] 
                 w-[45.867vw]   xl:py-[10px] py-[10px]  rounded-full  hover:cursor-pointer text-[3.2vw] "
               >

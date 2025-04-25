@@ -36,7 +36,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.rating")}
         </p>
         <div className={`flex  justify-center text-[3.2vw]! lg:justify-start mb-[4px] ${isSpecialWidth ? "mt-6 lg:mt-0" : "mt-0"}`}>
-          <RouteButton className={`mt-5 h-[40px] xl:h-[44px] block   xl:mt-[30px] 2xl:w-[11.615vw] xl:w-[200px] xl:text-[14px] text-center w-[171px] 2xl:text-[0.729vw] ${isEng ? "2xl:mt-[40px]" : "2xl:mt-[3.906vw]"}`}/>
+          <RouteButton className={`mt-5 h-[40px] xl:h-[44px] flex items-center justify-center   xl:mt-[30px] 2xl:w-[223px] 2xl:h-[46px] xl:w-[200px] xl:text-[14px] text-center w-[171px] 2xl:text-[0.729vw] ${isEng ? "2xl:mt-[40px]" : "2xl:mt-[3.906vw]"}`}/>
         </div>
       </div>
     </div>

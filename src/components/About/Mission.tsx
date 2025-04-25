@@ -67,11 +67,11 @@ export const Mission = () => {
       <div className="grid xl:grid-cols-3 items-center grid-cols-[1fr] w-full border-collapse max-w-[89.58%]  ">
         <div className="xl:col-span-3 border-x border-[#C7C7C7] flex justify-center items-center py-6 2xl:pt-[2.26vw]">
           <p
-            className={`text-[#8C331B] uppercase tracking-[-0.01em] md:w-[400px] lg:w-[500px] 
+            className={`text-[#8C331B] uppercase tracking-[-0.04em] md:w-[400px] lg:w-[500px]  
  text-[3.2vw] md:text-[16px] lg:text-[18px]  2xl:text-[1.042vw] font-cofo-medium leading-[126%] text-center 
-          ${isCustomMobile ? "w-[80%]" : " "}
-          ${!isCustomMobile && !isCustomMobileSecondary ? "w-[80%]" : " "}
-          ${isCustomMobileSecondary ? "w-[80%]" : ""}
+          ${isCustomMobile ? "w-[75%]" : " "}
+          ${!isCustomMobile && !isCustomMobileSecondary ? "w-[75%]" : " "}
+          ${isCustomMobileSecondary ? "w-[75%]" : ""}
           ${
             isCustomWidth
               ? "xl:text-[16.5px]  xl:w-[39%]  "
@@ -79,18 +79,27 @@ export const Mission = () => {
           }
           ${isEng ? "2xl:w-[40%] " : "2xl:w-[38%] "}`}
           >
-            
-            {isMobile ? t("about.mission.desc2.0") : <span>
-              <br className="hidden lg:block"/>
-              {t("about.mission.desc2PC.0")}
-              <br className="hidden lg:block"/>
-              <span className={`2xl:px-[2.08vw] xl:px-[1.04vw] ${isEng ? "" : "lg:hidden"}`}>
-
-              {t("about.mission.desc2PC.1")}
+            {isMobile ? (
+              t("about.mission.desc2.0")
+            ) : (
+              <span>
+                <br className="hidden lg:block" />
+                {t("about.mission.desc2PC.0")}
+                <br className="hidden lg:block" />
+                <span
+                  className={`2xl:px-[2.08vw] xl:px-[1.04vw] ${
+                    isEng ? "" : "lg:hidden"
+                  }`}
+                >
+                  {t("about.mission.desc2PC.1")}
+                </span>
               </span>
-            </span>}
-            <div className={`mx-auto inline ${isEng ? "2xl:w-[20%] xl:w-[90%] "  : ""}`}>
-            </div>
+            )}
+            <div
+              className={`mx-auto inline ${
+                isEng ? "2xl:w-[20%] xl:w-[90%] " : ""
+              }`}
+            ></div>
           </p>
         </div>
       </div>
