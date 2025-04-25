@@ -102,15 +102,14 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
         320: {
           slidesPerView: "auto" as const,
           spaceBetween: 15,
-          centeredSlides: true,
           initialSlide: 0,
-
+          slidesOffsetBefore:30,
+          centeredSlides: false,
         },
         480: {
           slidesPerView: 1,
           spaceBetween: 15,
           initialSlide: 0,
-          centeredSlides: true,
         },
         640: {
           slidesPerView: 1,
@@ -189,7 +188,6 @@ export const RoomsSlider = forwardRef<Swiper, RoomsSliderProps>(
                   "xl:ms-[2vw] 2xl:ms-[5.4vw]": !isPrev && activeSlide - 1 === index,
                   "opacity-0": activeSlide -2 === index,
                   "opacity-0 lg:opacity-100": activeSlide === 0 && index === sliderProps.length - 1,
-                  "ms-[-40px]": index === 0 && activeSlide === 0,
                   "opacity-[0]": activeSlide === 0 && index === sliderProps.length - 2,
                   "xl:ms-[2vw] 2xl:ms-[2.41vw]":
                   !isPrev && activeSlide === 0 && index === sliderProps.length - 1,
