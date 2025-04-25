@@ -5,90 +5,123 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { social } from "../../Constants/Social";
-export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string) => void, pdfDocuments: {pathPublicOffer: string}}) => {
+export const BookingSection = ({
+  openPdf,
+  pdfDocuments,
+}: {
+  openPdf: (path: string) => void;
+  pdfDocuments: { pathPublicOffer: string };
+}) => {
   const { t } = useTranslation();
   return (
     <div
-      className="gap-y-3 flex flex-col 2xl:h-[25.677vw] lg:h-[493px] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
-     pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] lg:items-center"
+      className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[32.42vw] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+     pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] 2xl:px-[3.28vw_4.79vw] xl:px-[2.4vw_1.5vw]"
     >
       <div className="h-full flex flex-col ">
         <div>
-          <h4 className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo mb-0 uppercase 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px] text-[12px] font-cofo-medium ">
+          <h4 className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo mb-0 leading-[1.28] uppercase 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px] text-[12px] font-cofo-medium ">
             {t("footer.booking")}
           </h4>
 
-          <p className="uppercase text-[#999999] text-cofo 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-1.5 lg:mb-5.25 mb-[17px] text-[12px] ">
+          <p className="uppercase text-[#999999] text-cofo 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] 2xl:mt-[0.31vw] mt-1.5 2xl:mb-[1.09vw] lg:mb-5.25 mb-[17px] text-[12px] leading-[1.28] ">
             {t("footer.bookingTime")}
           </p>
 
-          <ul className="lg:gap-y-[7px] gap-y-[7px] underline lg:no-underline underline-offset-2  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-            <li><a href="tel:+380322423160" className="hover:underline">+38 (032) 242-31-60</a></li>
-            <li><a href="tel:+380932423160" className="hover:underline">+38 (093) 242-31-60</a></li>
-            <li><a href="tel:+380933483112" className="hover:underline">+38 (093) 348-31-12</a></li>
+          <ul className="lg:gap-y-[7px] 2xl:gap-y-[0.36vw] gap-y-[7px] underline lg:no-underline underline-offset-2  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+            <li>
+              <a href="tel:+380322423160" className="hover:underline">
+                +38 (032) 242-31-60
+              </a>
+            </li>
+            <li>
+              <a href="tel:+380932423160" className="hover:underline">
+                +38 (093) 242-31-60
+              </a>
+            </li>
+            <li>
+              <a href="tel:+380933483112" className="hover:underline">
+                +38 (093) 348-31-12
+              </a>
+            </li>
           </ul>
-          <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[10px]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium ">
-            <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">info@eurohotel.lviv.ua</a>
+          <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[10px] 2xl:mt-[0.52vw]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium leading-[1.28] ">
+            <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">
+              info@eurohotel.lviv.ua
+            </a>
           </p>
           <div className="lg:mt-[29px] mt-8 mb-0">
-            <p className="uppercase  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px]">
+            <p className="uppercase 2xl:mt-[1.51vw]  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px] 2xl:mb-[1.09vw] leading-[1.28]">
               {t("contacts.info.restaurand/terrase")}
             </p>
 
-            <ul className="lg:gap-y-[7px] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-            <li><a href="tel:+380732424002" className="hover:underline">+38 (073) 242-40-02</a></li>
-              <li><a href="tel:+380933483114" className="hover:underline">+38 (093) 348-31-14</a></li>
+            <ul className="lg:gap-y-[7px] 2xl:gap-y-[0.36vw] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase  text-[12px] ">
+              <li>
+                <a href="tel:+380732424002" className="hover:underline">
+                  +38 (073) 242-40-02
+                </a>
+              </li>
+              <li>
+                <a href="tel:+380933483114" className="hover:underline">
+                  +38 (093) 348-31-14
+                </a>
+              </li>
             </ul>
             <div className="lg:mt-[10px] mt-0 flex flex-col">
-              <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
-                <a href="mailto:restaurant@eurohotel.lviv.ua" className="hover:underline">restaurant@eurohotel.lviv.ua</a>
+              <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
+                <a
+                  href="mailto:restaurant@eurohotel.lviv.ua"
+                  className="hover:underline"
+                >
+                  restaurant@eurohotel.lviv.ua
+                </a>
               </p>
             </div>
           </div>
         </div>
 
-          <div className="flex lg:gap-x-3 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] mt-6 lg:mt-[30px]">
+        <div className="flex lg:gap-x-3 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] mt-6 lg:mt-[30px] 2xl:mt-[1.5vw]">
           <Link
             to={social.restaurant.instagram}
             target="_blank"
             className={cn(
-              `rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `
+               `xl:w-[2.5vw] xl:h-[2.5vw] rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <FaInstagram
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
+              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.telegram}
             target="_blank"
             className={cn(
-              `rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `
+              `xl:w-[32px] xl:h-[32px]  rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <RiTelegram2Fill
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
+              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.whatsapp}
             target="_blank"
             className={cn(
-              `rounded-full hover:cursor-pointer bg-[#8C331B] lg:p-1.5 p-1 `
+              `xl:w-[2.5vw] xl:h-[2.5vw]  rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <FaWhatsapp
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px]"
+              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.viber}
             target="_blank"
             className={cn(
-              `rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px]`
+              `xl:w-[2.5vw] xl:h-[2.5vw]  rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px] 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <svg
@@ -105,9 +138,8 @@ export const BookingSection = ({openPdf, pdfDocuments}: {openPdf: (path: string)
             </svg>
           </Link>
         </div>
-      <Rating openPdf={openPdf} path={pdfDocuments.pathPublicOffer}  />
+        <Rating openPdf={openPdf} path={pdfDocuments.pathPublicOffer} />
       </div>
-
     </div>
   );
 };

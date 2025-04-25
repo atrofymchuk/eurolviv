@@ -53,11 +53,12 @@ export const Footer = () => {
       <footer className="relative z-20 flex flex-col lg:flex-row lg:items-start  lg:justify-center text-white pt-[53px] lg:pt-[133px] py-[47px]">
         <div className="relative w-full pl-4 lg:pl-0 z-30">
           <div className="flex flex-col lg:flex-row lg:justify-between w-full">
-            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col lg:items-center lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
+            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col 2xl:px-[3.75vw_3.49vw] xl:px-[2.75vw_1.5vw]  2xl:h-[23.777vw] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
               <div className="flex flex-col h-full justify-between  lg:mt-0 mt-[35px] ">
                 <div className="lg:flex lg:flex-col justify-between xl:justify-start h-full grid grid-cols-2 lg:grid-cols-1">
                   <div className="space-y-3 lg:w-full w-[180px] 2xl:max-h-[25.677vw]">
-                    <ul className=" 2xl:space-y-[11px] lg:space-y-[11px] space-y-[7px] 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase underline underline-offset-2 lg:no-underline tracking-[0.09em]">
+                    <ul className=" 2xl:space-y-[11px] lg:space-y-[11px] space-y-[7px] 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase underline underline-offset-2
+                     lg:no-underline  ">
                       <li className="font-cofo-medium">
                         <Link
                           to="/about"
@@ -109,18 +110,18 @@ export const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col lg:mt-auto xl:mt-[140px] 2xl:mt-[7.37vw] lg:ms-0 ms-[20%]">
+                  <div className="flex flex-col lg:mt-auto xl:mt-[140px] 2xl:mt-[7vw] lg:ms-0 ms-[20%]">
                     <div className="">
-                      <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] font-cofo uppercase text-[12px]">
+                      <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] leading-[1.28]">
                         {t("footer.socialMedia")}
                       </p>
-                      <div className="flex space-x-4 text-xl lg:mt-[25px] mt-4">
+                      <div className="flex space-x-4 text-xl lg:mt-[25px] 2xl:mt-[1.6vw] mt-4">
                         <Link
                           to={social.hotel.facebook}
                           target="_blank"
                           className="rounded-full hover:cursor-pointer"
                         >
-                          <FaFacebook className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]" />
+                          <FaFacebook className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]" />
                         </Link>
                         <Link
                           to={social.hotel.instagram}
@@ -133,7 +134,7 @@ export const Footer = () => {
                             alt="instagram"
                             width="37"
                             height="37"
-                            className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]"
+                            className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]"
                           />
                         </Link>
                       </div>
@@ -156,8 +157,8 @@ export const Footer = () => {
 
             <BookingSection openPdf={openPdf} pdfDocuments={pdfDocuments} />
 
-            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px] ">
-              <div className="w-full flex flex-col lg:ps-[32px] ">
+            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px] xl:h-[32.42vw] 2xl:h-[25.677vw]">
+              <div className="w-full flex flex-col lg:ps-[32px] 2xl:ps-[1.67vw]">
                 <div>
                   <div className="flex flex-col items-center md:items-start">
                     <h4
@@ -172,10 +173,10 @@ export const Footer = () => {
                     <input
                       type="email"
                       placeholder={t("footer.email")}
-                      className="bg-[#B5B5B52B] 2xl:text-[0.833vw] lg:py-[13px] lg:ps-[21px] w-full py-2.25 px-3 mb-2.5 rounded-full font-cofo mt-4.25 lg:mt-[22px] 2xl:mt-[1.146vw]"
+                      className="bg-[#B5B5B52B] 2xl:text-[0.833vw]  lg:py-[13px] lg:ps-[21px] w-full py-2.25 px-3 mb-2.5 2xl:mb-[0.52vw] rounded-full font-cofo mt-4.25 lg:mt-[22px] 2xl:mt-[1.146vw]"
                     />
                     <button
-                      className="bg-[#A47762] 2xl:py-3 font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] 
+                      className="bg-[#A47762]  2xl:max-h-[2.4vw] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] 
                       hover:text-[#A47762] py-2 px-6 rounded-full 2xl:text-[0.938vw] block w-full font-cofo hover:cursor-pointer"
                     >
                       {t("buttons.send")}

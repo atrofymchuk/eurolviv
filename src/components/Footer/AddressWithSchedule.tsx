@@ -10,13 +10,16 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
   const { t } = useTranslation();
 
   return (
-    <div className="gap-y-4 flex flex-col lg:h-[493px] 2xl:max-h-[25.677vw] w-full lg:w-[23.5%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3 2xl:px-[67px_62px] ">
+    <div className="gap-y-4 flex flex-col xl:h-[32.42vw] 2xl:h-[23.777vw] w-full lg:w-[23.5%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3
+    
+    
+    2xl:px-[67px_62px] xl:px-[2.4vw_1.5vw] ">
       <div className="flex flex-col h-full rrelatives">
         <div className="mb-0 2xl:w-[17.292vw]">
-          <h4 className="text-[12px] uppercase 2xl:text-[0.938vw] xl:text-[16px] 2xl:h-[1.2vw] lg:text-[14px] font-cofo-medium ">
+          <h4 className="text-[12px] uppercase 2xl:text-[0.938vw] xl:text-[1.09vw] 2xl:h-[1.2vw] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
           </h4>
-          <p className="flex gap-x-[7px] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[16px] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline 2xl: lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
+          <p className="flex gap-x-[7px] leading-[1.28] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[1.09vw] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
             <img loading="lazy"
               src={navigate}
               className="filter-invert-white"
@@ -27,42 +30,42 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <Link
             target="_blank"
             to={map.address}
-            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px] lg:px-[20.5px] lg:py-[11.5px] lg:text-[14px] text-[12px] rounded-full
-              font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] justify-center  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
+            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px] 2xl:px-[20.5px] 2xl:py-[11.5px] lg:text-[14px] text-[12px] rounded-full xl:w-[183px] 
+                         font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] justify-center xl:text-[0.94vw]  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}
           </Link>
         </div>
           <div className="2xl:mt-[3.333vw] xl:mt-[56px]">
-          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo ">
+          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo leading-[1.28]">
             {t("footer.reception")}
           </h4>
-          <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] mb-[17px] lg:mt-[6px] ">
-            {t("footer.receptionTime")}
+          <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
+            {t("footer.receptionTime")} 
           </p>
 
-          <ul className="gap-y-[7px]">
-            <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   text-[12px] font-cofo lg:no-underline underline underline-offset-2 ">
+          <ul className="gap-y-[7px] 2xl:gap-y-[0.36vw]">
+            <li className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px]   text-[12px] font-cofo lg:no-underline underline underline-offset-2 ">
               <a href="tel:+380732424002" className="hover:underline">
                 +38 (073) 242-40-02
               </a>
             </li>
-            <li className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline underline-offset-2 ">
+            <li className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px]   font-cofo text-[12px] lg:no-underline underline underline-offset-2 ">
               <a href="tel:+380932424002" className="hover:underline">
                 +38 (093) 242-40-02
               </a>
             </li>
           </ul>
-          <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[16px] lg:text-[14px] text-[12px] lg:mt-[15px]  mt-[20px]  ">
-            <p className="2xl:text-[0.938vw] xl:text-[16px] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
+          <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[15px] 2xl:mt-[0.78vw]  mt-[20px]  ">
+            <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
               <a href="mailto:reception@eurohotel.lviv.ua">
                 reception@eurohotel.lviv.ua
               </a>
             </p>
-            <div className="lg:mt-[32px] mt-[19px] flex gap-x-4">
+            <div className="lg:mt-[32px] mt-[19px] 2xl:mt-[1.6vw] flex gap-x-4 ">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
-                  className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
                   color="#45525F"
                 />
               </Link>
@@ -70,10 +73,10 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
               <Link to={social.hotel.whatsapp} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <FaWhatsapp
                   color="#45525E"
-                  className="lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
                 />
               </Link>
-              <Link to={social.hotel.whatsapp} target="_blank" className=" rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
+              <Link to={social.hotel.whatsapp} target="_blank" className=" rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
                 <svg
                   width="26"
                   height="26"
