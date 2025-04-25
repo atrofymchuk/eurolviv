@@ -110,7 +110,7 @@ export const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col lg:mt-auto xl:mt-[140px] 2xl:mt-[7vw] lg:ms-0 ms-[20%]">
+                  <div className="flex flex-col lg:mt-auto xl:mt-[113px] 2xl:mt-[7vw] lg:ms-0 ms-[20%]">
                     <div className="">
                       <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] leading-[1.28]">
                         {t("footer.socialMedia")}
@@ -121,7 +121,7 @@ export const Footer = () => {
                           target="_blank"
                           className="rounded-full hover:cursor-pointer"
                         >
-                          <FaFacebook className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]" />
+                          <FaFacebook className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]" />
                         </Link>
                         <Link
                           to={social.hotel.instagram}
@@ -134,7 +134,7 @@ export const Footer = () => {
                             alt="instagram"
                             width="37"
                             height="37"
-                            className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]"
+                            className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]"
                           />
                         </Link>
                       </div>
@@ -143,7 +143,7 @@ export const Footer = () => {
                 </div>
               </div>
               <p
-                className="absolute uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] 2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-6.1vw] 
+                className="absolute uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] 2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-9vw] 
               lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34 lg:block hidden"
               >
                 {t("footer.privacyPolicy")}

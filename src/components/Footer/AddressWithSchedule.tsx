@@ -30,14 +30,14 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <Link
             target="_blank"
             to={map.address}
-            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px] 2xl:px-[20.5px] 2xl:py-[11.5px] lg:text-[14px] text-[12px] rounded-full xl:w-[183px] 
+            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px]  2xl:text-[16px] 2xl:py-[11.5px] 2xl:px-0 lg:text-[14px] text-[12px] rounded-full xl:w-[183px] 2xl:w-[223px] 2xl:h-[46px] xl:h-[42px] 
                          font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] justify-center xl:text-[0.94vw]  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}
           </Link>
         </div>
-          <div className="2xl:mt-[3.333vw] xl:mt-[56px]">
-          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo leading-[1.28]">
+          <div className="2xl:mt-[3.333vw] xl:mt-[40px]">
+          <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
           </h4>
           <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
@@ -62,10 +62,10 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
                 reception@eurohotel.lviv.ua
               </a>
             </p>
-            <div className="lg:mt-[32px] mt-[19px] 2xl:mt-[1.6vw] flex gap-x-4 ">
+            <div className="lg:mt-[32px] mt-[19px] 2xl:mt-[1.4vw] flex gap-x-4 ">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
                   color="#45525F"
                 />
               </Link>
@@ -73,10 +73,10 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
               <Link to={social.hotel.whatsapp} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <FaWhatsapp
                   color="#45525E"
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
                 />
               </Link>
-              <Link to={social.hotel.whatsapp} target="_blank" className=" rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
+              <Link to={social.hotel.whatsapp} target="_blank" className=" xl:w-[2.5vw] xl:h-[2.5vw] rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
                 <svg
                   width="26"
                   height="26"
@@ -95,7 +95,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
         </div>
         <p
           onClick={()=>openPdf(path)}
-          className=" absolute uppercase underline 2xl:bottom-[-6.25vw] underline-offset-[18%] 2xl:text-[16px] cursor-pointer xl:text-[1.09vw] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-x-[0vw]
+          className=" absolute uppercase underline 2xl:bottom-[-7.2vw] underline-offset-[18%] 2xl:text-[16px] cursor-pointer xl:text-[0.9vw] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-x-[0vw]
          -bottom-34 lg:block hidden"
         >
           {t("footer.publicOffer")}
