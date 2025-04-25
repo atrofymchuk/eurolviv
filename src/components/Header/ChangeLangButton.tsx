@@ -32,7 +32,7 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled, pathname 
       <div className="flex items-center">
         <span className={cn("hover:cursor-pointer text-[14px] 2xl:text-[0.83vw] xl:text-[0.94vw] lg:text-[1.17vw]", getTextColor(currentLang), {
           "font-cofo-medium": currentLang === 'uk'
-        })}>UK</span>
+        })}>UA</span>
         <span className={cn( {
           "text-[#252526]": isMobile, 
           "text-white": !isMobile && !scrolled && pathname !== "/contacts",
