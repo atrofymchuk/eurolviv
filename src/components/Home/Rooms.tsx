@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { RoomsSlider } from "./RoomsSlider";
+import RoomsSlider from "./RoomsSlider";
 import { useRef } from "react";
-import type { Swiper } from "swiper";
+import type Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
 import { useRoomStore } from "../../store/useRoomsStore";
@@ -9,7 +9,7 @@ import cn from "classnames";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
 
 export const RoomsHome = () => {
-  const sliderRef = useRef<Swiper | null>(null);
+  const sliderRef = useRef<Slider | null>(null);
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const { sliderProps } = useRoomStore();
@@ -106,14 +106,10 @@ export const RoomsHome = () => {
         <div className="hidden md:flex"></div>
       </div>
 
-      <div className="max-w-screen relative z-0  md:mb-0 mt-[17vw] md:mt-[0] xl:mb-[1.56vw] w-full xl:mt-[1.56vw] 2xl:mt-0  md:h-[500px] mb-[70px]  h-[407px] ">
-        <div
-          className={`z-10 absolute   2xl:h-[37.5vw]  lg:h-[570px] md:h-[500px] sm:h-[470px] h-[357px]  mt-[40px] xl:mt-0 2xl:mt-[50px] w-full ${
-            isCustomWidth ? "xl:h-[620px]" : "xl:h-[600px]"
-          } `}
-        >
-          <RoomsSlider ref={sliderRef} sliderProps={sliderProps} />
-        </div>
+      <div className="max-w-screen relative z-0  md:mb-0 mt-[28vw] md:mt-[0] xl:mb-[1.56vw] w-full 2xl:h-[30vw] 2xl:mt-[0px]
+      xl:mt-[1.56vw]   md:h-[500px] mb-[70px]  h-[357px] ">
+      
+          <RoomsSlider sliderProps={sliderProps} ref={sliderRef} />
       </div>
 
       <div className="h-[17.07vw] w-full hidden md:flex">
@@ -125,14 +121,14 @@ export const RoomsHome = () => {
         >
           <button
             className={`2xl:w-[3.23vw] 2xl:h-[3.23vw] xl:w-[3.02vw] xl:h-[3.02vw] lg:w-[3.75vw] lg:h-[3.75vw] md:w-[4.69vw] md:h-[4.69vw] flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[6.93vw] 2xl:ms-[3.8vw] md:ms-[5.86vw] lg:ms-[4.17vw] 2xl:mb-[2.29vw] xl:mb-[2.08vw] lg:mb-[2.5vw]`}
-            onClick={() => sliderRef.current?.slidePrev()}
+            onClick={() => sliderRef.current?.slickPrev()}
           >
             <HiArrowLongLeft className="2xl:w-[1.67vw] 2xl:h-[1.67vw] xl:w-[1.56vw] xl:h-[1.56vw] lg:w-[1.94vw] lg:h-[1.94vw]" />
           </button>
 
           <button
             className="2xl:w-[3.23vw] 2xl:h-[3.23vw] xl:w-[3.02vw] xl:h-[3.02vw] lg:w-[3.75vw] lg:h-[3.75vw] md:w-[4.69vw] md:h-[4.69vw] flex items-center justify-center hover:text-[#8C331B] border hover:border-[#8C331B] rounded-full z-20 hover:bg-white text-white mt-[6.93vw] 2xl:me-[5.21vw] md:me-[5.86vw] xl:me-[4.69vw] lg:me-[5.56vw] 2xl:mb-[2.29vw] xl:mb-[2.08vw] lg:mb-[2.5vw]"
-            onClick={() => sliderRef.current?.slideNext()}
+            onClick={() => sliderRef.current?.slickNext()}
           >
             <HiArrowLongRight className="2xl:w-[1.67vw] 2xl:h-[1.67vw] xl:w-[1.56vw] xl:h-[1.56vw] lg:w-[1.94vw] lg:h-[1.94vw]" />
           </button>

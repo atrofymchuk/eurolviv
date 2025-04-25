@@ -1,18 +1,19 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { restaurantMobile, terasseHomeMobile } from "../../store/exportsImg";
+import { Link } from "react-router-dom";
 export const RoofServiceMobile = () => {
   const { t } = useTranslation();
   const suggestion = [
     {
       title: "footer.restaurant",
-
+      to: "/restaurant",
         img: restaurantMobile,
       },
     {
       img: terasseHomeMobile,
       title: "footer.terrace",
-
+      to: "/terrace", 
     },
     
   ];
@@ -39,6 +40,7 @@ export const RoofServiceMobile = () => {
                 `absolute inset-0 flex flex-col items-center text-center translate-y-1/4 text-white z-10`)}
             >
               <div className="flex flex-col items-center ">
+                <Link to={item.to}>
                 <h1
                   className={ "text-[6.4vw] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-0.1em] xl:mt-[29px] lg:mt-[19px] w-full underline  " } >
                   {t(item.title).split(' ').map((word, index) => (
@@ -47,6 +49,7 @@ export const RoofServiceMobile = () => {
                     </span>
                   ))}
                 </h1>
+                </Link>
               </div>
 
               <div

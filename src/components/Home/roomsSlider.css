@@ -1,0 +1,18 @@
+.rooms-slider-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .rooms-slider-slide {
+    width: 69.07vw !important;
+  }
+  
+  .rooms-slider-slide room-img {
+    width: 69.07vw !important;
+    max-height: 45.33vw;
+    object-fit: cover;
+  }
+}
