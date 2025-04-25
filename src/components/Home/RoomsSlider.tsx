@@ -107,7 +107,7 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
               <InViewWrapper className="flex flex-col justify-center items-center h-full min-h-full w-full my-auto">
                 <div className="flex items-center justify-center">
                   <img
-                    loading="lazy"
+                    loading="eager"
                     src={el.src}
                     alt={`slide_${index}`}
                     className={cn(
