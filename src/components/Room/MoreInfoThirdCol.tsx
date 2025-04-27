@@ -1,4 +1,4 @@
-import { dog } from "../../store/exportsImg";
+import { dogRoom } from "../../store/exportsImg";
 import cn  from "classnames";
 
 export const MoreInfoThirdCol = ({
@@ -14,7 +14,7 @@ export const MoreInfoThirdCol = ({
     >
       <div className="flex flex-col items-center justify-between gap-2 w-full 2xl:max-h-[26.67vw]">
         <img loading="lazy"
-          src={dog}
+          src={dogRoom}
           alt="dog"
           className="2xl:h-[26.67vw] xl:h-[28.98vw] lg:h-[300px] 
           md:h-[250px] 2xl:px-[1.3vw] object-cover w-full h-full md:block hidden lg:px-3 md:px-2"

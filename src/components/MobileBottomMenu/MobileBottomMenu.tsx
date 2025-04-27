@@ -8,9 +8,10 @@ import {
   locationWhite,
 } from "../../store/exportsIcons";
 import { links } from "../../Constants/Links";
+import { useModalStore } from "../../store/useModalStore";
 export const MobileBottomMenu = () => {
   const { t } = useTranslation();
-
+  const { onOpenModal } = useModalStore();
 
 
   const menuItems = [
@@ -27,6 +28,7 @@ export const MobileBottomMenu = () => {
     {
       icon: <img loading="lazy" src={callUs} alt="call" />,
       label: t("phoneBottomMenu.callUs"),
+      onClick: () => onOpenModal("contacts"),
     },
     {
       icon: <img loading="lazy" src={locationWhite} alt="location" />,
@@ -54,9 +56,8 @@ export const MobileBottomMenu = () => {
               </span>
             </Link>
           ) : (
-            <Link
-              to={item.path as string}
-              target="_blank"
+            <button
+              onClick={item.onClick}
               key={index}
               className="flex-1 flex p-3.5 border-r border-[#C29986] flex-col items-center justify-center py-[15px] hover:bg-[#8C331B] transition-colors whitespace-nowrap last:border-r-0"
             >
@@ -64,7 +65,7 @@ export const MobileBottomMenu = () => {
               <span className="text-[10px] mt-[7px] uppercase font-cofo-medium">
                 {item.label}
               </span>
-            </Link>
+            </button>
           )
         )}
       </div>

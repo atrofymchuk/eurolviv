@@ -3,6 +3,7 @@ import { ConferenceService } from "../pages/ConferenceService";
 
 export type SpecialOffers = {
   src: string;
+  srcMobile: string;
   url: string;
   title: string;
   desc: string;

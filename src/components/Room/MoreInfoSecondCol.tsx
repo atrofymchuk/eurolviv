@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { parking } from "../../store/exportsIcons";
-import { dog } from "../../store/exportsImg";
+import { dogRoom } from "../../store/exportsImg";
 import { BookLink } from "../Buttons/BookLink";
 import cn from "classnames";
 
@@ -48,7 +48,7 @@ export const MoreInfoSecondCol = ({
         {isShowOtherInfo && (
           <img
             loading="lazy"
-            src={dog}
+            src={dogRoom}
             alt="imageOverlay"
             className="w-full  object-cover px-[2.67vw_1.6vw] md:hidden h-[69.87vw] "
           />

@@ -211,7 +211,7 @@ export { default as barTerrase } from "../assets/Terrase/Aditionally/bar.webp";
 export { default as celebratingTerrase } from "../assets/Terrase/Aditionally/celebrating.webp";
 
 //rooom page
-export { default as dog } from "../assets/Rooms/AdditionaInfo/dog.webp";
+export { default as dogRoom } from "../assets/Rooms/AdditionaInfo/dog.webp";
 export { default as coffeeRoom } from "../assets/Rooms/AdditionaInfo/coffee.webp";
 
 //rooms page
@@ -224,3 +224,13 @@ export { default as business } from "../assets/SpecialOffers/buissenes.webp";
 export { default as birthday } from "../assets/SpecialOffers/birthday.webp";
 export { default as wedding } from "../assets/SpecialOffers/newlyweds.webp";
 export { default as photosession } from "../assets/SpecialOffers/photosession.webp";
+export { default as dog } from "../assets/SpecialOffers/dogMobile.webp";
+
+export { default as dogMobile } from "../assets/SpecialOffers/dogMobile.webp";
+export { default as mulitaryMobile } from "../assets/SpecialOffers/militaryMobile.webp";
+export { default as businessMobile } from "../assets/SpecialOffers/buissenesMobile.webp";
+export { default as birthdayMobile } from "../assets/SpecialOffers/birthdayMobile.webp";
+export { default as weddingMobile } from "../assets/SpecialOffers/newlywedsMobile.webp";
+export { default as photosessionMobile } from "../assets/SpecialOffers/photosessionMobile.webp";
+
+

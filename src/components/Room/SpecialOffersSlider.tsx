@@ -66,7 +66,7 @@ export const SpecialOffersSlider = forwardRef<
           <div
             key={index}
             className={cn(
-              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_5.07vw] h-[426px] md:h-[540px] lg:h-[444px] xl:h-[38vw]
+              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[444px] xl:h-[38vw]
                2xl:h-[34.79vw] border-t border-[#C7C7C7] relative   ${
                 index !== specialOffers.length - 1 ? "border-r-0" : ""
               }`,
@@ -82,15 +82,23 @@ export const SpecialOffersSlider = forwardRef<
             )}
           >
             <InViewWrapper className="relative">
-              <img
-                loading="lazy"
-                src={el.src}
-                alt={t(el.title)}
-                className={cn(
-                  `w-[64vw] h-[61.87vw] md:w-[340px] md:h-[320px] lg:w-[444px] xl:h-[23.44vw]
-                  lg:h-[421px] 2xl:w-[23.13vw] 2xl:h-[22.29vw] object-fill ${el.classes}`
-                )}
-              />
+              <picture>
+                <source 
+                  media="(min-width:1024px)" 
+                  srcSet={el.src}
+                  
+                />
+                <source 
+                  media="(max-width:1023px)" 
+                  srcSet={el.srcMobile}
+                />
+                <img 
+                  src={el.src} 
+                  alt={t(el.title)} 
+                  className={`w-full h-auto  object-cover  xl:h-[23.44vw]
+                  lg:h-[421px] 2xl:w-[23.13vw] 2xl:h-[22.29vw]  ${el.classes}`}
+                />
+              </picture>
               <div
                 className={cn(
                   `absolute  md:max-w-full `,

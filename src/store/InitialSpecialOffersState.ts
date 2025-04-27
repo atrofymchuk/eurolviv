@@ -7,10 +7,17 @@ import {
   wedding,
   photosession,
   dog,
+  mulitaryMobile,
+  businessMobile,
+  birthdayMobile,
+  weddingMobile,
+  photosessionMobile,
+  dogMobile,
 } from "./exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [
   {
     src: military,
+    srcMobile: mulitaryMobile,
     url: "military",
     title: "specialOffersState.tarifForMilitary.title",
     desc: "specialOffersState.tarifForMilitary.desc",
@@ -30,6 +37,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
   },
   {
     src: business,
+    srcMobile: businessMobile,
     url: "business",
     title: "specialOffersState.businessTarifDay.title",
     desc: "specialOffersState.businessTarifDay.desc",
@@ -50,6 +58,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
   },
   {
     src: dog,
+    srcMobile: dogMobile,
     url: "travel-with-pet",
     title: "specialOffersState.petFriendly.title",
     desc: "specialOffersState.petFriendly.desc",
@@ -70,6 +79,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
   },
   {
     src: photosession,
+    srcMobile: photosessionMobile,
     url: "photossession",
     title: "specialOffersState.photoSession.title",
     desc: "specialOffersState.photoSession.desc",
@@ -89,7 +99,8 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
     ],
   },
   {
-    src: wedding,
+      src: wedding,
+    srcMobile: weddingMobile,
     url: "newly-weeds",
     title: "specialOffersState.newlyweds.title",
     desc: "specialOffersState.newlyweds.desc",
@@ -111,6 +122,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
   },
   {
     src: birthday,
+    srcMobile: birthdayMobile,
     url: "birthday",
     title: "specialOffersState.birthday.title",
     desc: "specialOffersState.birthday.desc",
