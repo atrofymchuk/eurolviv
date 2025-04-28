@@ -17,7 +17,7 @@ export const RoomTitle = memo(({ title, size, isOnTop }: RoomTitleProps) => {
         className={cn(
           `${
             isOnTop ? " lg:border-x border-x" : "lg:border-x border-x"
-          } 2xl:ps-[1.83vw] xl:ps-[1.7vw] lg:ps-[1.9vw] md:ps-[1.8vw] items-center flex 2xl:block border-[#C7C7C7]
+          } 2xl:ps-[1.53vw] xl:ps-[1.7vw] lg:ps-[1.9vw] md:ps-[1.8vw] items-center flex 2xl:block border-[#C7C7C7]
            2xl:py-[1.83vw_1.67vw] xl:p-[2vw] lg:p-[2.2vw] md:p-[2.4vw] w-full relative h-full ps-[2.2vw]`
         )}
       >

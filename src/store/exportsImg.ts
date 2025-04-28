@@ -168,6 +168,7 @@ export {default as theater30max} from "../assets/ConferenceService/engHall/theat
 //contacts page
 export { default as hotelContacts } from "../assets/Contacts/hotel.webp";
 export { default as headerContacts } from "../assets/Contacts/header.webp";
+export { default as headerContactsMobile } from "../assets/Contacts/headerMobile.webp";
 export { default as mapContacts } from "../assets/Contacts/map.webp";
 
 //footer

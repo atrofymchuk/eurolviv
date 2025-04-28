@@ -41,7 +41,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative flex xl:h-[50vw] items-center lg:justify-end   max-w-screen overflow-x-hidden  lg:h-[650px] md:h-[570px] flex-col 
+      className={`relative flex xl:h-[50vw] items-center lg:justify-end   max-w-screen overflow-x-hidden overflow-y-hidden  lg:h-[650px] md:h-[570px] flex-col 
         ${
         isTerrase ? "w-full h-[380px] 2xl:h-[46.15vw] " : "justify-center h-[370px] 2xl:h-[46.15vw]"
       }`}

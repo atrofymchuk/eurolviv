@@ -8,6 +8,7 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
   objectPosition = "center",
   wrapInView = true,
   gradientStyle = "dark",
+  isContacts = false,
 }) => {
   const getBackgroundGradient = () => {
     switch (gradientStyle) {
@@ -27,20 +28,18 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
       <>
         {mobileSrc ? (
           <>
-            <img 
-            fetchPriority="high"
+            <img
+              fetchPriority="high"
               src={backgroundImage}
               alt="header background"
               className="object-cover w-full h-full lg:block hidden"
               style={{ objectPosition }}
             />
             <img
-            fetchPriority="high"
-
+              fetchPriority="high"
               src={mobileSrc}
               alt="header background mobile"
               className="object-cover w-full h-full lg:hidden block"
-              style={{ objectPosition }}
             />
           </>
         ) : (
@@ -53,14 +52,23 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
         )}
       </>
     );
-    
-    return wrapInView ? <InViewWrapper>{imageContent}</InViewWrapper> : imageContent;
+
+    return wrapInView ? (
+      <InViewWrapper>{imageContent}</InViewWrapper>
+    ) : (
+      imageContent
+    );
   };
 
   return (
     <>
       {renderImage()}
-      <div className={cn(`absolute inset-0 ${getBackgroundGradient()}`)}></div>
+      <div
+        className={cn(
+          `absolute  inset-0 ${getBackgroundGradient()}`,
+          isContacts ? "hidden lg:block" : "block"
+        )}
+      ></div>
     </>
   );
-}; 
+};

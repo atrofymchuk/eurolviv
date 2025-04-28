@@ -1,6 +1,7 @@
 export interface PageHeaderProps {
     backgroundImage: string;
     mobileSrc?: string;
+    isContacts?: boolean;
     objectPosition?: string;
     wrapInView?: boolean;
     gradientStyle?: "dark" | "light" | "contacts";
@@ -30,6 +31,7 @@ export interface PageHeaderProps {
     objectPosition?: string;
     wrapInView?: boolean;
     gradientStyle?: "dark" | "light" | "contacts" | "home";
+    isContacts?: boolean;
   }
   
   export interface HeaderTitleProps {

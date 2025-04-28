@@ -68,8 +68,8 @@ export const SpecialOffersSlider = forwardRef<
             className={cn(
               `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[444px] xl:h-[38vw]
                2xl:h-[34.79vw] border-t border-[#C7C7C7] relative   ${
-                index !== specialOffers.length - 1 ? "border-r-0" : ""
-              }`,
+                 index !== specialOffers.length - 1 ? "border-r-0" : ""
+               }`,
               {
                 "border-s lg:border-s ": currentSlide === index,
               },
@@ -83,18 +83,11 @@ export const SpecialOffersSlider = forwardRef<
           >
             <InViewWrapper className="relative">
               <picture>
-                <source 
-                  media="(min-width:1024px)" 
-                  srcSet={el.src}
-                  
-                />
-                <source 
-                  media="(max-width:1023px)" 
-                  srcSet={el.srcMobile}
-                />
-                <img 
-                  src={el.src} 
-                  alt={t(el.title)} 
+                <source media="(min-width:1024px)" srcSet={el.src} />
+                <source media="(max-width:1023px)" srcSet={el.srcMobile} />
+                <img
+                  src={el.src}
+                  alt={t(el.title)}
                   className={`w-full h-auto  object-cover  xl:h-[23.44vw]
                   lg:h-[421px] 2xl:w-[23.13vw] 2xl:h-[22.29vw]  ${el.classes}`}
                 />
@@ -124,7 +117,6 @@ export const SpecialOffersSlider = forwardRef<
         text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
                     {
                       "xl:me-[9vw] 2xl:me-[9.5vw]": index === 0 && isEng,
-                      
                     }
                   )}
                 >
@@ -133,21 +125,29 @@ export const SpecialOffersSlider = forwardRef<
               </div>
             </InViewWrapper>
 
-            <h4 className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium 
+            <h4
+              className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium 
             leading-[100%]
              text-[#252526] md:text-[22px] lg:text-[24px] 2xl:text-[1.25vw] mt-[5.33vw]
-              2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.66vw]">
+              2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.66vw]"
+            >
               {t(el.title)}
             </h4>
-            <p className={`uppercase text-[2.67vw] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
+            <p
+              className={`uppercase text-[2.67vw] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
              lg:text-[12px] 2xl:text-[0.83vw] xl:text-[0.94vw] leading-[108%]  md:w-[300px] lg:w-fit
-             ${!isEng && index === 0? "w-[58.4vw]! lg:w-fit!" : ""}
-              ${index===1 ? " xl:w-[102%] " : ""}
+             ${!isEng && index === 0 ? "w-[58.4vw]! lg:w-fit!" : ""}
+              ${index === 1 ? " xl:w-[102%] " : ""}
 
               ${isEng && index === 1 ? " xl:w-[105%] tracking-[-0.03em]" : ""}
               ${index === 2 && isEng ? " 2xl:w-[80%]" : ""}
-              ${index === 4 && isEng ? " 2xl:w-[95%] xl:w-[100%] tracking-[-0.03em]" : ""}
-              `}>
+              ${
+                index === 4 && isEng
+                  ? " 2xl:w-[95%] xl:w-[100%] tracking-[-0.03em]"
+                  : ""
+              }
+              `}
+            >
               {t(el.cardDesc)}
             </p>
             <div className="flex flex-col text-start w-full 2xl:mb-1  mt-auto">

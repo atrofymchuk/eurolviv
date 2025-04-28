@@ -18,6 +18,7 @@ export const RoomDescription = memo(
     const { t } = useTranslation();
     const isEng = useIsEnglish();
     const isMobile = useCustomWidth(330, 600);
+    const isMobileSmaller = useCustomWidth(330, 380);
     return (
       <div className="2xl:pt-[42px] xl:pt-[30px] lg:pt-[30px]   pt-[52px] flex flex-col h-full justify-between">
         <div className="flex flex-col gap-[24px]">
@@ -26,11 +27,13 @@ export const RoomDescription = memo(
               ${isEng ? "" : " 2xl:w-auto"}
               ${!isEng&&isMobile && index===1 ? "w-[94%]" :""}
               ${!isEng&&isMobile && index===2 ? "w-[105%]" :""}
+              ${isEng && index===1 ? "w-[94.5%]" :""}
               ${!isEng && isOnTop ? "2xl:w-[95%]! xl:w-[90%]!" : ""}
               ${!isEng && !isOnTop ? "xl:w-[95%] 2xl:w-[100%]" : ""}
               ${isEng && isOnTop ? "2xl:w-[90%]! xl:w-[88%]!" : ""}
-              ${isEng && !isOnTop ? "2xl:w-[100%]! xl:w-[96%]!" : ""}
-              ${isEng && isMobile && !isOnTop ? "w-[94%]" :""}
+              ${isEng && !isOnTop ? "2xl:w-[102%]! xl:w-[96%]!" : ""}
+                ${isEng && isMobile && index===2 ? "w-[102%]" :""}
+                ${isEng && isMobileSmaller && index===1 ? "w-[95.5%]" :""}
           text-[#252526]  uppercase 
             `}
           >

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { headerContacts } from "../../store/exportsImg";
+import { headerContacts, headerContactsMobile } from "../../store/exportsImg";
 import { PageHeader } from "../common/HeaderPage/PageHeader";
 
 export const Header = () => {
@@ -7,7 +7,9 @@ export const Header = () => {
   
   return (
     <PageHeader 
+      isContacts={true}
       backgroundImage={headerContacts}
+      mobileSrc={headerContactsMobile}
       gradientStyle="contacts"
       textColor="black"
       title={t("contacts.header.title")}

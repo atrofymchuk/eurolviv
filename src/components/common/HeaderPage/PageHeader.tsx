@@ -8,6 +8,8 @@ import { HeaderDescription } from "./HeaderDescription";
 import { PageHeaderProps } from "../../../types/headerTypes";
 import cn from "classnames";
 import { processTitle } from "../../../utils/ProccessTitle";
+
+
 export const PageHeader: React.FC<PageHeaderProps> = ({
   backgroundImage,
   mobileSrc,
@@ -19,6 +21,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   description,
   size,
   showBackLink = false,
+  isContacts = false,
   backLinkTo = "/",
   backLinkText = "room.roomNavigation",
   showBookButton = false,
@@ -26,7 +29,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   showConferenceMenuButton = false,
   customButton,
   roomInfo,
-  onOrderClick,
+  onOrderClick, 
 }) => {
   const { t } = useTranslation();
 
@@ -38,15 +41,18 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         objectPosition={objectPosition}
         wrapInView={wrapInView}
         gradientStyle={gradientStyle}
+        isContacts={isContacts}
       />
 
       {showBackLink && <HeaderNavLink to={backLinkTo} text={t(backLinkText)} />}
 
       <div
         className={cn(
-          `absolute inset-0 flex flex-col items-center justify-center text-center ${
+          `absolute inset-0 flex flex-col  text-center ${
             textColor === "white" ? "text-white" : "text-black"
-          } z-10`
+          }
+          ${isContacts ? "mt-[45vw] lg:mt-0 items-center" : "  items-center justify-center"}
+          z-10`
         )}
       >
         <h4 className="font-cofo-medium 2xl:text-[0.94vw] xl:text-[1.09vw] text-[10px] uppercase leading-[22.68px] font-cofo-medium underline text-sm decoration-transparent 2xl:mt-[7vw] xl:mt-[8vw]">
