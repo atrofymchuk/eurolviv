@@ -11,7 +11,7 @@ export const Header = () => {
         <div className="   border-x lg:border-e-0 border-[#515151] flex flex-col
          items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-[5.33vw] 2xl:pt-[7.5vw] xl:pt-[7.5vw] lg:pt-[86px] 2xl:pl-[1vw] xl:pl-[1.5vw] lg:pl-[1.56vw] ">
           <h1
-            className={`uppercase  text-white lg:leading-[91%] leading-[82%] tracking-[-0.1em]
+            className={`uppercase  text-white lg:leading-[91%] leading-[100%] tracking-[-0.1em]
                ${isEng ? "2xl:ps-[9px] xl:ps-[0.4vw]" : "ps-[1.6vw] xl:ps-[0.3vw]"}
             text-[12.8vw] md:text-[64px] lg:text-[10.36vw] xl:text-[10.1vw] 2xl:text-[10.3vw] z-1`}
           >

@@ -96,8 +96,8 @@ export const Info = () => {
                 </p>
                 <p
                   className={` uppercase 
-                text-[#252526] lg:text-[14px] md:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]  2xl:w-[95%]
-                text-[3.2vw] ${isEng ? "w-[90%] mx-auto lg:mx-0"  : "xl:w-[97%] w-[105%]"}
+                text-[#252526] lg:text-[14px] md:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw] mx-auto lg:mx-0  2xl:w-[95%]
+                text-[3.2vw] ${isEng ? "w-[90%] mx-auto lg:mx-0"  : "xl:w-[97%] w-[95%] "}
                 `}
                 >
                   {t("contacts.info.review")}

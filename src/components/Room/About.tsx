@@ -110,9 +110,9 @@ export const About = memo(
             px-4 sm:px-6 md:px-4 lg:pe-[40px] lg:ps-[20px] 2xl:ps-[2.29vw] 2xl:pe-[6.25vw] xl:ps-8 xl:pe-[4.9vw]"
             >
               <p
-                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
                 tracking-[-0.04em] leading-[120%]
-              text-[#8C331B] uppercase"
+              text-[#8C331B] uppercase 2xl:w-[102%]`}
               >
                 {t(pOne)}
               </p>
@@ -121,7 +121,7 @@ export const About = memo(
                 className={`text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
              leading-[120%]
               tracking-[-0.04em]
-              ${isSemiLux ? "2xl:w-[102%] " : "2xl:w-[103%]"}
+              ${isSemiLux ? "2xl:w-[102%] " : "2xl:w-[102%]"}
               text-[#444444] uppercase`}
               >
                 {t(pTwo)}

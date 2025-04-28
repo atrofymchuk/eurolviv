@@ -62,7 +62,7 @@ export const AboutRestaurant = () => {
               </p>
               <p
                 className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]
-                  ${isEng ? "xl:w-[98%] 2xl:w-[97%]" : ""}
+                  ${isEng ? "xl:w-[98%] 2xl:w-[97%]" : "w-[98%]"}
                   
                  tracking-[-0.02em] xl:leading-[120%]
                      xl:text-[0.977vw]
