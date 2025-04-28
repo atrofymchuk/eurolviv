@@ -73,6 +73,7 @@ export const ComfortsBlocksWrapper = ({
             {...commonProps}
             images={[room.about.ammentiesImages[0], room.about.ammentiesImages[1], room.about.ammentiesMobileImages[0]]}
             style={standardStyle}
+            type={room.type}
           />
       
           <ComfortsBlock

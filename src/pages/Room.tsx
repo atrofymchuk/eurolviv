@@ -25,6 +25,7 @@ export const Room = () => {
       about={room?.about}
       swiperImagesStyle={room?.about?.swiperImagesStyle || ""}
       nameRoom={room?.title || ""}
+      type={room?.type || ""}
       title={room?.header.title || ""}
       size={room?.header.size || ""}
     />,

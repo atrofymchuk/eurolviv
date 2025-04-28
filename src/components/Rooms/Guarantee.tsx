@@ -20,7 +20,7 @@ export const Guarantee = () => {
               }`}
             >
               <h1
-                className={` text-[8.53vw] 2xl:block md:font-cofo-medium uppercase sm:text-[42px] 2xl:text-[5.21vw] xl:text-[5.47vw] tracking-[-0.07em] lg:leading-[91%] leading-[86%]  2xl:tracking-[-0.04em] 
+                className={` text-[8.33vw] 2xl:block md:font-cofo-medium uppercase sm:text-[42px] 2xl:text-[5.21vw] xl:text-[5.47vw] tracking-[-0.07em] lg:leading-[91%] leading-[86%]  2xl:tracking-[-0.04em]
                 ${
                   isEng
                     ? "2xl:w-[66vw] xl:w-[63.94vw] "
@@ -41,7 +41,7 @@ export const Guarantee = () => {
               </h1>
 
               <h1
-                className={`font-cofo text-[8.53vw]  2xl:block sm:text-[42px] uppercase 2xl:text-[5.21vw]  md:font-cofo-medium lg:leading-[86%] 
+                className={`font-cofo text-[8.33vw]  2xl:block sm:text-[42px] uppercase 2xl:text-[5.21vw]  md:font-cofo-medium lg:leading-[86%] 
                xl:text-[5.47vw]  tracking-[-0.07em]  2xl:tracking-[-0.04em] 2xl:text-center  2xl:self-start  
                ${
                  isEng
@@ -63,7 +63,7 @@ export const Guarantee = () => {
               </h1>
 
               <h1
-                className={`font-cofo leading-[91%] md:font-cofo-medium text-[8.53vw] block md:hidden sm:text-[42px] uppercase 2xl:text-[5.21vw] tracking-[-0.07em] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[59.9vw]   md:self-center ${
+                className={`font-cofo leading-[91%] md:font-cofo-medium text-[8.33vw] block md:hidden sm:text-[42px] uppercase 2xl:text-[5.21vw] tracking-[-0.07em] 2xl:tracking-[-0.04em] 2xl:text-center 2xl:w-[59.9vw]   md:self-center ${
                   isEng ? "text-center " : " self-start"
                 }`}
               >

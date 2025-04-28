@@ -4,8 +4,9 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { ComfortsBlockToProps } from "../../types/entity";
 import cn from "classnames";
 export const ComfortsBlock = memo(
-  ({ title,  icons, images, style,  }: ComfortsBlockToProps) => {
+  ({ title, icons, images, style, type }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
+    const isSemiLux = type?.includes("semi-lux") || false;
 
     const renderedIcons = useMemo(() => {
       if (!icons) return null;
@@ -17,23 +18,32 @@ export const ComfortsBlock = memo(
           )}
         >
           <InViewWrapper>
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={item.src}
               alt="icon"
               className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-[1.88vw] 2xl:h-[1.88vw]"
             />
           </InViewWrapper>
-          <p className="text-[3.73vw] sm:text-[12px] xl:text-[15px] 2xl:text-[1.04vw]  ">
+          <p
+            className={`text-[3.73vw] sm:text-[12px] xl:text-[15px] 2xl:text-[1.04vw]  ${
+              !isSemiLux && index == 0 ? "lg:whitespace-nowrap" : ""
+            }`}
+          >
             {t(item.text)}
           </p>
         </li>
       ));
-    }, [icons, style.text, t]);
+    }, [icons, style.text, t, isSemiLux]);
 
     if (!icons) return null;
 
     return (
-      <div className={cn(`${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)]`)}>
+      <div
+        className={cn(
+          `${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)]`
+        )}
+      >
         <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
           <div
             className="grid  
@@ -57,7 +67,8 @@ export const ComfortsBlock = memo(
 
                 <div className="hidden md:flex justify-center items-center w-full xl:px-[21px] lg:px-[14px] md:px-[10px]">
                   <InViewWrapper>
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={images[0]}
                       alt="room image"
                       className={cn(
@@ -83,9 +94,7 @@ export const ComfortsBlock = memo(
                   2xl:ps-[36px] xl:ps-[14px]  
                 lg:pt-[50px] xl:pt-[3.13vw] 2xl:pt-[4vw] md:pt-[45px] "
               >
-                <ul>
-                  {renderedIcons}
-                </ul>
+                <ul>{renderedIcons}</ul>
               </div>
             </div>
 
@@ -105,7 +114,8 @@ export const ComfortsBlock = memo(
                 lg:pt-[110px] xl:pt-[4.13vw]   md:pt-[45px] 2xl:pt-[27px]"
               >
                 <InViewWrapper>
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     src={images[1]}
                     alt="room image"
                     className={cn(`hidden md:flex
@@ -113,15 +123,15 @@ export const ComfortsBlock = memo(
                      object-cover md:h-[262px] w-[250px] 2xl:px-[24px] lg:px-[17px] md:px-[14px]
                     `)}
                   />
-                  
-              <img loading="lazy"
+
+                  <img
+                    loading="lazy"
                     src={images[2]}
                     alt="room image"
                     className={cn(`md:hidden w-full object-cover object-bottom
                     h-[69.87vw] sm:h-[250px] md:h-[300px] 
                     `)}
                   />
-
                 </InViewWrapper>
               </div>
             </div>

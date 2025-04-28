@@ -60,8 +60,12 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             <div className="flex flex-col text-center items-center justify-between h-full w-full ">
               <div className="flex-1 flex flex-col justify-center items-center w-full">
                 <h1 className={`font-cofo uppercase 2xl:text-[2.08vw] xl:text-[2.34vw] lg:text-[2.15vw] md:text-[28px] text-[6.4vw] leading-[85%] tracking-[-0.06em] font-cofo-medium whitespace-pre-line text-[#252526] 
-                  ${isEng ? "2xl:w-[70%] xl:w-[80%] w-[75%]  " : "2xl:w-[85%] xl:w-[99%] w-[95%] "}
-                  ${isEng && index == 2 ? " xl:w-[50%]! w-[50%]!" : ""}`}>
+                
+                ${isEng ? "2xl:w-[70%] xl:w-[80%] w-[75%]  " : "2xl:w-[85%] xl:w-[99%] w-[95%] "}
+                    ${!isEng ? "w-[75%]! " : ""}
+                    ${!isEng && (index == 3 || index===4)? "w-[95%]! " : ""}
+                    ${!isEng && index >=7? "w-[95%]! " : ""}
+                ${isEng && index == 2 ? " xl:w-[50%]! w-[50%]!" : ""}`}>
                   {t(room.title)}
                 </h1>
                 <p className="uppercase 2xl:text-[0.94vw] xl:text-[0.93vw] lg:text-[0.98vw] md:text-[13px] text-[12px] 

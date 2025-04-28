@@ -21,6 +21,8 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
     <div className="w-full flex justify-center overflow-y-hidden" >
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
         {suggestion.map(({ img, type, title, size, desc }, index) => {
+  const isLuxSuggestion = type.includes("lux") || false;
+
           return (
             <div
               key={index}
@@ -59,9 +61,10 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                     {t(size)}
                   </p>
                 )}
-                <p className="uppercase 2xl:text-[0.94vw] xl:text-[14px] lg:text-[14px] text-[3.2vw] lg:leading-[22px] 
-                md:text-[16px] max-w-[61.87vw]  lg:max-w-full leading-[104%] lg:pt-[38px] xl:pt-[1.56vw] 2xl:pt-[1.98vw] pt-[19px] lg:w-[60%]
-                 xl:w-[65%] 2xl:w-[55%]">
+                <p className={`uppercase 2xl:text-[0.94vw] xl:text-[14px] lg:text-[14px] text-[3.2vw] lg:leading-[22px] 
+                md:text-[16px] max-w-[61.87vw]  lg:max-w-full leading-[104%] lg:pt-[38px] xl:pt-[1.56vw] 2xl:pt-[1.98vw] pt-[19px] 
+                ${isLuxSuggestion ? "2xl:w-[43%] xl:w-[65%] lg:w-[60%]" : "xl:w-[65%] 2xl:w-[51%] lg:w-[60%]"} 
+                 `}>
                   {t(desc)}
                 </p>
                 <Link

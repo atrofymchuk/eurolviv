@@ -6,6 +6,7 @@ export type ComfortsBlockToProps = {
     images: string[];
     imgStyle: ImgStyle;
     style: Styles;
+    type?: string;
   };
   
   export type ImgStyle = {

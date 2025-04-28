@@ -35,7 +35,7 @@ const isEng = i18n.language === "en";
       <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] pt-[5px] lg:pt-0 leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
       </h1>
-      <h4 className="font-cofo md:text-[18px] text-[14px] uppercase w-[300px] lg:w-fit z-10  text-white  text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
+      <h4 className="font-cofo md:text-[18px] text-[3.73vw] uppercase w-[70%] lg:w-fit z-10  text-white  text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
         {t("about.header.desc.0")}
         <span className={`${isEng ? "" : " font-cofo-medium"} xl:block text-[18px] uppercase  text-center underline-offset-[from-font] decoration-none hidden`}>
           {t("about.header.desc.1")}

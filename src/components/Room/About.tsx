@@ -14,12 +14,15 @@ type RoomAboutToProps = {
   size?: string | undefined;
   swiperImagesStyle?: string;
   nameRoom?: string;
+  type?: string;
 };
 
 export const About = memo(
-  ({ about, area, guests, swiperImagesStyle, nameRoom }: RoomAboutToProps) => {
+  ({ about, area, guests, swiperImagesStyle, nameRoom, type }: RoomAboutToProps) => {
     const { pOne, pTwo, swiperImages, rooms } = about || {};
     const { t } = useTranslation();
+    const isSemiLux = type?.includes("semi-lux") || false;
+    console.log(type)
     if (
       !about ||
       !swiperImages ||
@@ -115,10 +118,11 @@ export const About = memo(
               </p>
 
               <p
-                className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
              leading-[120%]
               tracking-[-0.04em]
-              text-[#444444] uppercase"
+              ${isSemiLux ? "2xl:w-[102%] " : "2xl:w-[103%]"}
+              text-[#444444] uppercase`}
               >
                 {t(pTwo)}
               </p>
