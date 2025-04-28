@@ -18,7 +18,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
   const isLux = location.pathname.includes("lux") || false;
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center overflow-y-hidden" >
       <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
         {suggestion.map(({ img, type, title, size, desc }, index) => {
           return (
@@ -32,7 +32,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                   <img loading="lazy"
                     src={img}
                     alt={type}
-                    className="lg:w-full lg:h-[654px] xl:h-[34.58vw] object-cover"
+                    className="lg:w-full w-full lg:h-[654px] xl:h-[34.58vw] object-cover h-[69.33vw]"
                   />
                 </InViewWrapper>
               </div>
@@ -48,19 +48,19 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                 {size && (
                   <p
                     className={cn(
-                      `uppercase  2xl:text-[1.25vw] xl:text-[1.41vw] lg:text-[16px] md:text-[20px]
-                      2xl:pt-[0.99vw] xl:pt-[1.09vw] lg:pt-[19px] pt-[7px]`,
+                      `uppercase  2xl:text-[1.25vw] xl:text-[1.41vw] lg:text-[16px]  md:text-[20px]
+                      2xl:pt-[0.99vw] xl:pt-[1.09vw] lg:pt-[19px] pt-[9px]`,
                       {
-                        "text-[32px] lg:font-cofo-medium ": isLux,
-                        "font-cofo-medium": !isLux,
+                        "text-[8.53vw] lg:font-cofo-medium ": isLux,
+                        "font-cofo-medium text-[3.73vw]": !isLux,
                       }
                     )}
                   >
                     {t(size)}
                   </p>
                 )}
-                <p className="uppercase 2xl:text-[0.94vw] xl:text-[14px] lg:text-[14px] text-[12px] lg:leading-[22px] 
-                md:text-[16px] max-w-[232px]  lg:max-w-full leading-[104%] lg:pt-[38px] xl:pt-[1.56vw] 2xl:pt-[1.98vw] pt-[19px] lg:w-[60%]
+                <p className="uppercase 2xl:text-[0.94vw] xl:text-[14px] lg:text-[14px] text-[3.2vw] lg:leading-[22px] 
+                md:text-[16px] max-w-[61.87vw]  lg:max-w-full leading-[104%] lg:pt-[38px] xl:pt-[1.56vw] 2xl:pt-[1.98vw] pt-[19px] lg:w-[60%]
                  xl:w-[65%] 2xl:w-[55%]">
                   {t(desc)}
                 </p>
