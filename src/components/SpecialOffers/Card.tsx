@@ -49,7 +49,7 @@ export const Card = ({
               src={src}
               alt={translatedTexts.title}
               className={cn(
-                `w-full object-cover  ${classes} h-[264px] sm:h-[320px] md:h-[320px] lg:h-[28.27vw] xl:h-[350px] 2xl:h-[26.56vw] `
+                `w-full object-cover  ${classes} h-[264px] sm:h-[320px] md:h-[320px] lg:h-[28.27vw] xl:h-[27.34vw] 2xl:h-[26.56vw] `
               )}
             />
           </InViewWrapper>
@@ -72,14 +72,17 @@ export const Card = ({
       </h4>
 
       <p
-        className={`uppercase text-[#8F8F8F] mt-3.25 lg:mt-auto px-[12px_12px] md:px-0  ${
-          index == 0 ? "xl:w-[105%]" : ""
-        }
+        className={`uppercase text-[#8F8F8F] mt-3.25 lg:mt-auto px-[12px_12px] md:px-0
+          ${isEng && index == 0 ? "2xl:w-[90%] xl:w-[90%]" : ""}
+          ${isEng && index == 2 ? "2xl:w-[85%] xl:w-[85%]" : ""}
+          ${isEng && index == 3 ? "2xl:w-[95%] xl:w-[95%]" : ""}
+          
+          ${!isEng && index == 0 ? "xl:w-[105%]" : ""}
                   text-[3.2vw] leading-[120%] sm:leading-[120%] lg:text-[10px] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.93vw] ${
-                    index === 2 ? "w-[105%] lg:w-auto " : ""
-                  } ${index == 3 ? "2xl:w-[95%] xl:w-[90%] w-[100%] " : ""}  ${
-          index == 4 ? "2xl:w-[90%] w-[97%] " : ""
-        } `}
+                    !isEng && index === 2 ? "w-[105%] lg:w-auto " : ""
+                  } ${
+          !isEng && index == 3 ? "2xl:w-[95%] xl:w-[90%] w-[100%] " : ""
+        }  ${!isEng && index == 4 ? "2xl:w-[90%] w-[97%] " : ""} `}
       >
         {(index === 0 || (index === 3 && !isEng)) && isMobileWidth ? (
           index === 0 ? (

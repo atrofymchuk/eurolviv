@@ -7,6 +7,8 @@ import {
 } from "../../store/exportsImg";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
+import { links } from "../../Constants/Links";
+import { Link } from "react-router-dom";
 
 export const BarComponent = () => {
   const { t } = useTranslation();
@@ -18,9 +20,9 @@ export const BarComponent = () => {
             {t("terrase.bar.title2")}
           </span>
         </h4>
-        <h1 className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] text-[64px] tracking-[-0.09em]">
-          {t("terrase.bar.title")}
-        </h1>
+        <h2  className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] text-[64px] tracking-[-0.09em]">
+          <Link to={links.cocktailCard} target="_blank">{t("terrase.bar.title")}</Link>
+        </h2>
 
         <p className="text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw] xl:w-[40%] 2xl:w-[30%] text-[3.20vw]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">
           {t("terrase.bar.desc")}
@@ -37,7 +39,7 @@ export const BarComponent = () => {
             />
           </InViewWrapper>
           <h2 className="text-center text-[16px]  block underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
-            {t("terrase.bar.alcoholCard")}
+            <Link to={links.alcoholCard} target="_blank">{t("terrase.bar.alcoholCard")}</Link>
           </h2>
         </div>
 
@@ -65,7 +67,7 @@ export const BarComponent = () => {
             </div>
           </div>
           <h2 className="text-center   text-[16px] underline underline-2 xl:py-[20px_27px] 2xl:py-[1.30vw_1.61vw] py-[17px_18px] uppercase text-[#8C331B] 2xl:text-[1.25vw]  xl:text-[1.72vw]  leading-[108%] tracking-[-0.05em] font-cofo-medium">
-            {t("terrase.bar.cocktailCard")}
+            <Link to={links.cocktailCard} target="_blank">{t("terrase.bar.cocktailCard")}</Link>
           </h2>
 
           <div className="grid grid-cols-2 2xl:pt-[1.35vw] xl:pt-[17px] pt-[10px] w-full md:w-fit border-t  border-[#B3B3B3]">
@@ -92,7 +94,7 @@ export const BarComponent = () => {
           </div>
           <h2 className="text-center 2xl:py-[1.49vw_1.61vw]   text-[16px] underline underline-2 xl:py-[20px_27px] py-[17px_18px]  xl:text-[1.72vw]
           uppercase text-[#8C331B] 2xl:text-[1.25vw] leading-[108%] tracking-[-0.05em] font-cofo-medium">
-            {t("terrase.bar.wineCard")}
+            <Link to={links.wineCard} target="_blank">{t("terrase.bar.wineCard")}</Link>
           </h2>
         </div>
       </div>

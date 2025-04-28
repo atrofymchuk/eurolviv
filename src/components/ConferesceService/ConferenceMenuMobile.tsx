@@ -7,6 +7,7 @@ type ConferenceMenuMobileCardToProps = {
 
 type MenuSection = {
   titleKey: string;
+  pdfPath: string;
 };
 
 export const ConferenceMenuMobileCard = ({
@@ -15,10 +16,23 @@ export const ConferenceMenuMobileCard = ({
   const { t } = useTranslation();
 
   const menuSections: MenuSection[] = [
-    { titleKey: "conferenceService.conferenceMenu.menu.title1" },
-    { titleKey: "conferenceService.conferenceMenu.menu.title" },
-    { titleKey: "conferenceService.conferenceMenu.menu.title2" },
+    { 
+      titleKey: "conferenceService.conferenceMenu.menu.title1",
+      pdfPath: "/documents/Бенкетне меню.pdf"
+    },
+    { 
+      titleKey: "conferenceService.conferenceMenu.menu.title",
+      pdfPath: "/documents/Каво-перерва.pdf"
+    },
+    { 
+      titleKey: "conferenceService.conferenceMenu.menu.title2",
+      pdfPath: "/documents/Фуршетне меню.pdf"
+    },
   ];
+
+  const handleViewMenuClick = (pdfPath: string) => {
+    window.open(pdfPath, '_blank');
+  };
 
   return (
     <div className="flex flex-col items-center relative">
@@ -44,7 +58,10 @@ export const ConferenceMenuMobileCard = ({
             <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px]  tracking-[-0.07em] leading-[104%]  text-center">
               {t(section.titleKey)}
             </p>
-            <ViewMenuButton className="w-[170px] ">
+            <ViewMenuButton 
+              className="w-[170px] flex justify-center items-center"
+              onClick={() => handleViewMenuClick(section.pdfPath)}
+            >
               {t("buttons.viewMenuButton")}
             </ViewMenuButton>
           </div>
