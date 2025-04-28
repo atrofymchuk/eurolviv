@@ -42,10 +42,10 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
     >
       <div
         className={cn(
-          "fixed top-0 left-0 right-0     flex justify-between items-center 2xl:h-[6.93vw] lg:h-[9.08vw] h-[25.33vw] transition-colors duration-300 z-50 border-b border-[#FFFFFF]/20",
+          "fixed top-0 left-0 right-0     flex justify-between items-center 2xl:h-[6.93vw] lg:h-[9.08vw] h-[25.33vw] transition-colors duration-300 z-50 border-b ",
           {
-            "bg-white text-black": scrolled,
-            "text-white": !scrolled,
+            "bg-white text-black border-[#C7C7C7]": scrolled,
+            "text-white border-[#E3E3E3]/43": !scrolled,
           }
         )}
       >

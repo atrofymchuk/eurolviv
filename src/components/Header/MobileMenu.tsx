@@ -65,15 +65,15 @@ export const MobileBookingButton = ({
         <Link
           to="/booking"
           className={cn(
-            `w-fit bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl hover:bg-[#922b1f] self-center
-          font-cofo-medium text-[10px] justify-end h-fit`,
+            ` bg-[#a33d2e] text-white px-2 py-1 lg:hidden uppercase rounded-3xl flex items-center justify-center hover:bg-[#922b1f] self-center
+          font-cofo-medium text-[10px]  w-[107px] text-center h-[30px]`,
             {
               "text-white": !scrolled,
               "text-black": scrolled,
-              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": scrolled || pathname === "/about" || pathname === "/rooms"
+              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled || pathname === "/about" || pathname === "/rooms"
             }
           )}
-          aria-disabled={scrolled}
+          aria-disabled={!scrolled}
           onClick={(e) => scrolled && e.preventDefault()}
         >
           {t("buttons.bookRoomArr.0")}

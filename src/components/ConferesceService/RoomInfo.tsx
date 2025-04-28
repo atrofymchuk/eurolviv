@@ -41,7 +41,7 @@ export const RoomInfo = memo(({ area, roomFloor, capacity }: RoomInfoToProps) =>
           className=" w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] "
         />
         <p className="text-[#8C331B] uppercase text-[3.2vw] sm:text-[14px] md:text-[16px]  2xl:text-[20px] leading-[15px] sm:leading-[18px] md:leading-[20px] lg:leading-[22px] 2xl:leading-[25.2px] items-center gap-x-1">
-          {t("conferenceService.about.capacity")}:
+          {t("conferenceService.about.capacity")}:{"\u00A0"}
           <br className="lg:inline hidden"/>
           <span className="font-cofo-medium text-[#8C331B] ">
             {t(capacity)}

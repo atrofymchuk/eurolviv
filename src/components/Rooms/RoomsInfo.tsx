@@ -48,7 +48,7 @@ export const RoomsInfo = () => {
                       {t("rooms.about.desc")}
                     </p>
                     <BookLink
-                      className="text-[#FFFFFF] flex-col items-center  bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] py-[11px] lg:w-[15.63vw] xl:w-[15.63vw]  2xl:text-[0.73vw] flex justify-center lg:h-[44px] h-[40px]"
+                      className="text-[#FFFFFF] w-[141px] flex-col items-center  bg-[#8C331B] lg:px-[28px] lg:py-[13px] px-[19px] 2xl:w-[10.63vw] 2xl:h-[2.29vw] py-[11px] lg:w-[15.63vw] xl:w-[15.63vw]  2xl:text-[0.73vw] flex justify-center lg:h-[44px] h-[40px]"
                       to={"/booking"}
                     >
                       {t("buttons.book")}
@@ -77,12 +77,10 @@ export const RoomsInfo = () => {
                   {t("rooms.about.desc")}
                 </p>
                 <BookLink
-                  className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px] h-[40px] flex justify-center items-center"
+                  className="text-[#FFFFFF] bg-[#8C331B] mt-[24px] md:mt-[0px] h-[40px] flex justify-center w-[141px] items-center"
                   to={"/booking"}
                 >
-                  <span className="lg:px-[8px] lg:py-[13px] px-[17.2px] lg:mt-[43px] py-[9.5px] ">
                     {t("buttons.book")}
-                  </span>
                 </BookLink>
               </div>
             </div>

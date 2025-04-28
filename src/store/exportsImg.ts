@@ -153,6 +153,7 @@ export { default as sandwich } from "../assets/ConferenceService/Menu/sandwich.w
 export { default as coffee } from "../assets/ConferenceService/Menu/coffee.webp";
 export { default as headerConference } from "../assets/ConferenceService/hallH.webp";
 export { default as headerConferenceMobile } from "../assets/ConferenceService/hallPhone.webp";
+export { default as headerMobile } from "../assets/ConferenceService/headerMobile.webp";
 
 export { default as uShape } from "../assets/ConferenceService/engHall/ushape.webp";
 export { default as board } from "../assets/ConferenceService/engHall/board.webp";

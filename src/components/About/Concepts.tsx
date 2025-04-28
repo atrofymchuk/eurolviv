@@ -10,13 +10,13 @@ export const Concepts = () => {
     <section className="w-full flex justify-center flex-col items-center bg-white  ">
       <div className="grid xl:grid-cols-4 w-full lg:grid-cols-2 box-border   border-[#C7C7C7]  fluid-container mx-auto max-w-[89.6%] ">
         <div className="xl:col-span-4 md:col-span-2 pt-[112px] 2xl:pt-[8.281vw] text-center border-x border-[#C7C7C7] xl:pb-[34px] 2xl:pb-[2.813vw] pb-6 ">
-          <h1 className="text-[32px] 2xl:text-[5.208vw] xl:text-[5vw]  text-[#252526] leading-[94%] uppercase font-cofo  tracking-[-0.04em]">
+          <h1 className="text-[32px] 2xl:text-[5.208vw] xl:text-[5vw] md:font-cofo-medium text-[#252526] leading-[94%] uppercase font-cofo  tracking-[-0.04em]">
             {t("about.concepts.title")}
           </h1>
-          <h1 className="text-[32px] 2xl:text-[5.208vw] xl:text-[5vw] leading-[94%] text-[#252526]  uppercase font-cofo  tracking-[-0.04em]">
+          <h1 className="text-[32px] 2xl:text-[5.208vw] xl:text-[5vw] md:font-cofo-medium leading-[94%] text-[#252526]  uppercase font-cofo  tracking-[-0.04em]">
             {t("about.concepts.heading.0")}
           </h1>
-          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] 2xl:text-[1.25vw] xl:text-[1.2vw] text-[3.2vw]  font-cofo-medium">
+          <p className="mt-2 xl:mt-6 uppercase text-[#8C331B] 2xl:text-[1.25vw] xl:text-[1.2vw] text-[3.2vw] font-semibold lg:font-medium font-cofo-medium">
             {t("about.concepts.desc")}
           </p>
         </div>

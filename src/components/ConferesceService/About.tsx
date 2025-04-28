@@ -50,7 +50,7 @@ export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
         </div>
         <div
           className={cn(
-            "flex flex-col lg:items-start md:justify-start  justify-center items-center border-t lg:border-s-0 2xl:px-[2vw_4.8vw] xl:px-[2vw_1vw] lg:px-[2vw_4.8vw]   2xl:w-auto border-[#C7C7C7] flex-1"
+            "flex flex-col lg:items-start md:justify-start  justify-center items-center lg:border-t lg:border-s-0 2xl:px-[2vw_4.8vw] xl:px-[2vw_1vw] lg:px-[2vw_4.8vw]   2xl:w-auto border-[#C7C7C7] flex-1"
           )}
         >
           <div

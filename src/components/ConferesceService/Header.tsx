@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { headerConference, headerConferenceMobile } from "../../store/exportsImg";
+import { headerConference,  headerMobile } from "../../store/exportsImg";
 import { PageHeader } from "../common/HeaderPage/PageHeader";
 import { useModalStore } from "../../store/useModalStore";
 
@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <PageHeader 
       backgroundImage={headerConference}
-      mobileSrc={headerConferenceMobile}
+      mobileSrc={headerMobile}
       title={t("conferenceService.header.title")}
       description="conferenceService.header.desc"
       showOrderButton={true}

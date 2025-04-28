@@ -34,11 +34,13 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             <img loading="lazy"
               src={room.header.previewImage}
               alt={room.title}
-              className="2xl:w-[28.13vw] 2xl:h-[21.67vw] xl:w-[40.5vw] xl:h-[25vw] lg:w-[420px] lg:h-[250px] md:w-[360px] md:h-[280px] w-full  h-[232px]  object-cover"
+              className="2xl:w-[28.13vw] 2xl:h-[21.67vw] xl:w-[40.5vw] xl:h-[25vw] lg:w-[420px] lg:h-[250px] md:w-[360px]
+               md:h-[280px] w-full  h-[232px]  object-cover"
             />
           </InViewWrapper>
         </div>
-        <div className="flex justify-between mx-auto 2xl:pt-[19px] xl:pt-[17px] lg:pt-[15px] md:pt-[12px] pt-[10.5px] 2xl:px-6.75 xl:px-5 lg:px-0 md:px-3   items-center">
+        <div className="flex justify-between mx-auto 2xl:pt-[19px] xl:pt-[17px] lg:pt-[15px] md:pt-[12px] pt-[10.5px] 2xl:px-6.75
+         xl:px-5 lg:px-0 md:px-3   items-center">
             <div className="flex items-center">
               <img loading="lazy" src={square} alt="square" className="lg:w-3  w-4 xl:w-[1.25vw] xl:h-[1.25vw]  2xl:w-[0.94vw] 2xl:h-[0.94vw]" />
               <p className="font-cofo uppercase 2xl:text-[0.83vw] xl:text-[1.09vw] lg:text-[12px] md:text-[13px] text-[12px] 2xl:ps-[11.62px] ps-[11.12px] text-[#252526]">
@@ -53,7 +55,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
             </div>
           </div>
 
-        <div className="2xl:h-[12.47vw] xl:h-[14.19vw] lg:h-[180px] md:h-[220px] h-[145px] flex flex-col justify-center items-center mb-[24px]">
+        <div className="2xl:h-[12.47vw] xl:h-[14.19vw] lg:h-[180px] md:h-[220px] pt-[6.67vw] lg:pt-0 flex flex-col justify-center items-center mb-[24px]">
          
 
           <div className="flex justify-center items-center  h-full 2xl:h-[10.5vw] xl:h-[12.06vw]">
@@ -78,7 +80,7 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
               <Link
                 to={`/rooms/${room.type}`}
                   className="uppercase 2xl:py-[10px] flex flex-col w-[165px] h-[40px]
-                justify-center items-center mt-auto 2xl:text-[0.83vw] 2xl:w-[11.35vw] 2xl:h-[2.4vw] xl:py-[9px] lg:py-[8px] py-[8px] 5 lg:px-[16px]  2xl:mt-[1.41vw]  xl:text-[16px] lg:text-[14px] lg:w-[218px] text-[12px] border rounded-full 
+                justify-center items-center mt-[7.2vw] lg:mt-auto 2xl:text-[0.83vw] 2xl:w-[11.35vw] 2xl:h-[2.4vw] xl:py-[9px] lg:py-[8px] py-[8px] 5 lg:px-[16px]  2xl:mt-[1.41vw]  xl:text-[16px] lg:text-[14px] lg:w-[218px] text-[12px] border rounded-full 
                 text-[#A47762] hover:bg-[#A47762] hover:text-white font-cofo font-cofo-medium transition-colors"
               >
                 {t("buttons.viewRoom")}

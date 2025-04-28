@@ -139,7 +139,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
       <button
         className="hidden md:flex absolute right-4 md:right-[10%] top-1/2 transform -translate-y-1/2 z-10 w-[35px] h-[35px] lg:w-[50px] lg:h-[50px]  
         xl:right-[20vw]
-                   items-center justify-center text-white hover:text-[#8C331B] hover:bg-white 2xl:right-[22vw] 2xl:w-[3.2vw] 2xl:h-[3.2vw]
+                   items-center justify-center text-[#8C331B] bg-white hover:text-white hover:bg-[#8C331B] 2xl:right-[22vw] 2xl:w-[3.2vw] 2xl:h-[3.2vw]
                    rounded-full border border-white transition hover:cursor-pointer"
         onClick={() => sliderRef.current?.slickNext()}
       >

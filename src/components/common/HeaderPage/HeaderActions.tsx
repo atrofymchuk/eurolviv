@@ -23,15 +23,15 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({
       {showOrderButton && (
         <button
           onClick={onOrderClick}
-          className="uppercase mt-[30px] lg:mt-[43px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526]  md:px-[34.5px] md:py-[13.5px]
-           px-[19px] py-[11px] rounded-full w-[171px] font-cofo-medium text-[12px] hover:cursor-pointer lg:w-[204px] "
+          className="uppercase mt-[30px] w-[157px] lg:mt-[43px] bg-[#EDE8E5] lg:text-[14px] hover:text-[#EDE8E5] hover:bg-[#252526] text-[#252526]  md:px-[34.5px] md:py-[13.5px]
+           px-[19px] py-[11px] rounded-full font-cofo-medium text-[12px] hover:cursor-pointer lg:w-[204px] "
         >
           {t("buttons.order")}
         </button>
       )}
 
       {showConferenceMenuButton && (
-        <button className="uppercase  hover:bg-[#EDE8E5]  hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border md:px-[30.5px] md:py-[12.5px] w-fit lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
+        <button className="uppercase w-[157px]  hover:bg-[#EDE8E5]  hover:text-[#252526] text-[#EDE8E5] border-[#EDE8E5] border md:px-[30.5px] md:py-[12.5px] lg:px-[25.5px] lg:py-[13.5px] px-[15px] py-[10px] rounded-full font-cofo-medium text-[12px]  lg:hidden hover:cursor-pointer">
           {t("buttons.conferenceMenu")}
         </button>
       )}

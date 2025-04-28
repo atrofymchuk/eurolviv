@@ -48,7 +48,8 @@ export const Celebration = () => {
           </div>
           <ViewMenuButton 
             onClick={() => window.open('/documents/Бенкетне меню.pdf', '_blank')}
-            className="uppercase cursor-pointer lg:text-[14px] lg:w-[175px] 2xl:w-[9.1vw] 2xl:h-[2.29vw] 2xl:text-[0.73vw] text-[12px] font-cofo-medium bg-[#8C331B]
+            className="uppercase cursor-pointer lg:text-[14px] lg:w-[175px] 2xl:w-[9.1vw] 2xl:h-[2.29vw] 2xl:text-[0.73vw]
+             text-[12px] font-cofo-medium bg-[#8C331B] h-[40px]
              lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B]
               flex flex-col items-center justify-center lg:py-[13px] rounded-full lg:mt-[45px] mt-[26px]"
           >

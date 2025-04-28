@@ -14,11 +14,12 @@ export const Mission = () => {
       <div className="grid xl:grid-cols-3 items-center  w-full   sm:grid-cols-[1fr]     max-w-[89.58%]">
         <div className="xl:col-span-3 border-x border-[#C7C7C7] pt-[52px] xl:pt-[109px] flex justify-center items-center">
           <div className="flex flex-col text-center items-center">
-            <h1 className="uppercase text-[#8C331B] font-cofo-medium text-sm md:text-base lg:text-lg 2xl:text-[1.25vw]  px-2">
+            <h1 className="uppercase text-[#8C331B] font-cofo-medium text-[12px] font-semibold lg:font-medium md:text-base lg:text-lg 2xl:text-[1.25vw]  px-2">
               {t("about.mission.title")}
             </h1>
             <h1
-              className={`uppercase text-[32px] md:text-[48px] 2xl:pt-[11px] xl:pt-[9px] lg:text-[64px] 2xl:text-[5.208vw] pt-[6px]  leading-[91%]
+              className={`uppercase text-[32px] md:text-[48px] 2xl:pt-[11px] xl:pt-[9px] lg:text-[64px] 2xl:text-[5.208vw] pt-[6px]  leading-[91%] 
+                md:font-cofo-medium
                 tracking-[-0.04em] lg:tracking-[-0.07em] lg:leading-[81%]  px-2 ${
                   isCustomWidth ? "xl:text-[82px]" : "xl:text-[72px]"
                 }`}
@@ -28,6 +29,7 @@ export const Mission = () => {
             <h1
               className={` uppercase 2xl:pt-[1px] xl:pt-[1px] text-[32px] md:text-[48px] lg:text-[64px] 2xl:text-[5.208vw] leading-[91%]
              tracking-[-0.04em] lg:tracking-[-0.065em] lg:leading-[81%]  px-2 
+             md:font-cofo-medium
            ${isCustomMobile ? "w-[96%]" : ""}
            ${isCustomWidth ? "xl:text-[82px]" : "xl:text-[72px]"}`}
             >

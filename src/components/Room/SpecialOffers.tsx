@@ -81,7 +81,7 @@ export const SpecialOffers = () => {
             </button>
             <button
               className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                    text-[#8C331B] bg-white rounded-full border border-[#8C331B] transition hover:bg-[#8C331B] hover:text-white"
+                    hover:text-[#8C331B] hover:bg-white rounded-full border border-[#8C331B] transition bg-[#8C331B] text-white"
               onClick={() => {
                 if (
                   sliderRef.current &&

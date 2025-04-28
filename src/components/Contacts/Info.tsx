@@ -79,15 +79,15 @@ export const Info = () => {
 
           <OurContactsWithMap />
           <div className="border-e border-[#C7C7C7] flex flex-col h-full md:text-start  text-center  ">
-            <div className="2xl:ps-[4.43vw] xl:ps-[55px] md:ps-[30px] 2xl:pt-[3.02vw]  lg:pt-[58px] pt-[43px] flex-1 mx-[5.33vw] md:mx-0">
+            <div className="2xl:ps-[4.43vw] xl:ps-[55px] md:ps-[30px] 2xl:pt-[3.02vw]  lg:pt-[58px] pt-[43px] flex-1 md:mx-0">
               <h1
                 className={` uppercase 
               leading-[82%] lg:tracking-[-0.04em] 
-                text-[8.53vw]  lg:text-[48px]  2xl:text-[5.21vw]  tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] ${isEng ? "xl:text-[5.78vw]" : "xl:text-[5vw]"}`}
+                text-[8.53vw]  lg:text-[48px]  2xl:text-[5.21vw] md:font-cofo-medium tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] ${isEng ? "xl:text-[5.78vw]" : "xl:text-[5vw]"}`}
               >
                 {t("contacts.info.headingContactUs")}
               </h1>
-              <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5">
+              <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5 mx-[5.23vw]">
                 <p
                   className="font-cofo-medium uppercase 
                   text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]"

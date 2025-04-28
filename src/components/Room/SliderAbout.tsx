@@ -77,7 +77,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
 
           <button
             className="w-[35px] h-[35px] lg:w-[46px] lg:h-[46px] 2xl:w-[60px] 2xl:h-[60px] xl:w-[52px] xl:h-[52px] flex items-center justify-center 2xl:right-[2.2vw] xl:right-[1.7vw]
-                     right-5 lg:right-5 z-10 hover:text-[#8C331B]  absolute top-1/2 hover:bg-white text-white 
+                     right-5 lg:right-5 z-10 text-[#8C331B]  absolute top-1/2 bg-white hover:text-white  hover:bg-[#8C331B]
                      transform -translate-y-1/2 rounded-full border border-white transition"
             onClick={handleNext}
           >
