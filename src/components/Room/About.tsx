@@ -18,11 +18,18 @@ type RoomAboutToProps = {
 };
 
 export const About = memo(
-  ({ about, area, guests, swiperImagesStyle, nameRoom, type }: RoomAboutToProps) => {
+  ({
+    about,
+    area,
+    guests,
+    swiperImagesStyle,
+    nameRoom,
+    type,
+  }: RoomAboutToProps) => {
     const { pOne, pTwo, swiperImages, rooms } = about || {};
     const { t } = useTranslation();
     const isSemiLux = type?.includes("semi-lux") || false;
-    console.log(type)
+    console.log(type);
     if (
       !about ||
       !swiperImages ||
@@ -32,21 +39,35 @@ export const About = memo(
       !nameRoom
     )
       return null;
+
+    const istandartbigbed = type === "standart-big-bed" || false;
+    const isLuxImperial = type === "lux-imperial" || false;
+    const isLuxElegant = type === "lux-elegant" || false;
+    const isLuxTwoRoom = type === "lux-two-rooms" || false;
+    const isStandartSingle = type === "standart-single" || false;
+    const isStandartTwoBeds = type === "standart-two-bed" || false;
+    const isStandartBigBedBalcony =
+      type === "standart-big-bed-balcony" || false;
+    const isStandartTwoBedBalcony =
+      type === "standart-two-bed-balcony" || false;
     return (
       <div>
         <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[9.67%_80.67%_9.67%] items-center justify-center 2xl:items-start 2xl:justify-normal  md:max-w-full mx-auto md:mx-0">
-          <div className="2xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0 md:border-e  w-full h-[109px] border-[#C7C7C7] order-1 md:order-none" />
-          <div className="2xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full h-[109px] border-[#C7C7C7] order-3 md:order-none" />
-          <div className="2xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-[109px] border-[#C7C7C7] order-5 md:order-none" />
-          <div className="2xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-[109px] border-[#C7C7C7] order-6 md:order-none " />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-1 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-[29.07vw] border-[#C7C7C7] order-5 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-6 md:order-none " />
+          
           <div
-            className=" h-full border-t 2xl:h-[13.67vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] flex flex-col justify-end md:justify-center  p-2.5 2xl:p-0
+            className=" h-full border-t 2xl:h-[13.67vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
+            flex flex-col justify-end md:justify-center  p-2.5 pb-[16px] 2xl:p-0
           lg:items-center order-2 md:order-none "
           >
             <div className="  text-[#8C331B] ">
-              <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.33vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center ">
-                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center    ">
-                  <img loading="lazy"
+              <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.33vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center   ">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[3.2vw] items-center    ">
+                  <img
+                    loading="lazy"
                     src={houseBrown}
                     alt="houseicon"
                     className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -55,7 +76,8 @@ export const About = memo(
                   <span className="font-cofo-medium">&nbsp;{area} М²</span>
                 </p>
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center ">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     src={squareBrown}
                     alt="houseicon"
                     className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -64,7 +86,8 @@ export const About = memo(
                   <span className="font-cofo-medium">&nbsp;{rooms}</span>
                 </p>
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     src={guestBrown}
                     alt="houseicon"
                     className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -110,18 +133,36 @@ export const About = memo(
             px-4 sm:px-6 md:px-4 lg:pe-[40px] lg:ps-[20px] 2xl:ps-[2.29vw] 2xl:pe-[6.25vw] xl:ps-8 xl:pe-[4.9vw]"
             >
               <p
-                className={`text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
                 tracking-[-0.04em] leading-[120%]
-              text-[#8C331B] uppercase 2xl:w-[102%]`}
+                ${isLuxImperial ? "xl:w-[100%]! " : ""}
+                ${isLuxElegant ? "xl:w-[100%]! " : ""}
+                ${isLuxTwoRoom ? "xl:w-[100%]! " : ""}
+                ${istandartbigbed ? "w-[95%]! xl:w-[100%]!" : ""}
+                ${isStandartSingle ? "xl:w-[100%]! w-[95%]!" : ""}
+                ${isStandartBigBedBalcony ? "w-[95%]! xl:w-[100%]!" : ""}
+                ${isStandartTwoBeds ? "w-[97%]!" : ""}
+                ${isStandartTwoBedBalcony ? "w-[95%]! xl:w-[100%]!" : ""}
+              ${isSemiLux ? "w-[97%]! xl:w-[100%]!" : ""}
+
+              text-[#8C331B] uppercase 2xl:w-[102%] w-[93%]`}
               >
                 {t(pOne)}
               </p>
 
               <p
-                className={`text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
              leading-[120%]
               tracking-[-0.04em]
-              ${isSemiLux ? "2xl:w-[102%] " : "2xl:w-[102%]"}
+              ${istandartbigbed ? "w-[90%]! xl:w-[105%]!" : ""}
+              ${isStandartTwoBeds ? "w-[90%]! xl:w-[105%]!" : ""}
+              ${isLuxElegant ? "xl:w-[100%]! " : ""}
+              ${isLuxTwoRoom ? "xl:w-[100%]! " : ""}
+              ${isStandartSingle ? "xl:w-[100%]!" : ""}
+              ${isStandartBigBedBalcony ? "xl:w-[100%]!   w-[90%]!" : ""}
+              ${isStandartTwoBedBalcony ? "w-[90%]! xl:w-[105%]!" : ""}
+              ${isLuxImperial ? "xl:w-[102%]! " : ""}
+              ${isSemiLux ? "2xl:w-[102%] w-[90%] xl:w-[102%]!" : "2xl:w-[102%] w-[90%]"}
               text-[#444444] uppercase`}
               >
                 {t(pTwo)}
@@ -133,7 +174,6 @@ export const About = memo(
                 2xl:w-[10.63vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center  mt-[69px] mb-[28px] md:mb-0
             "
               >
-                
                 {t("buttons.bookRoomArr.0")} &nbsp;
                 <span className="hidden md:inline">
                   {t("buttons.bookRoomArr.1")}

@@ -20,6 +20,7 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
     size,
     view,
     previewImage,
+    descriptionMobile
   } = header;
   
   return (
@@ -27,6 +28,7 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
       backgroundImage={previewImage}
       title={t(title)}
       description={description}
+      descriptionMobile={descriptionMobile}
       size={size}
       showBackLink={true}
       backLinkTo="/rooms"

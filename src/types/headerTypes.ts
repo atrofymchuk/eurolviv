@@ -8,6 +8,7 @@ export interface PageHeaderProps {
     textColor?: "white" | "black";
     title: string;
     description?: string;
+    descriptionMobile?: string;
     size?: string;
     showBackLink?: boolean;
     backLinkTo?: string;
@@ -47,6 +48,13 @@ export interface PageHeaderProps {
   export interface HeaderDescriptionProps {
     description: string;
     size?: string;
+    descriptionMobile?: string;
+    roomInfo?: {
+      count?: string;
+      view?: string;
+      arriveTime?: string;
+      leaveTime?: string;
+    };
   }
   
   export interface HeaderActionsProps {

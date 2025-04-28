@@ -3,19 +3,24 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { ComfortsBlockToProps } from "../../types/entity";
 import cn from "classnames";
+
+const removeParentheses = (text: string, isMobile: boolean) => {
+  if (!isMobile) return text;
+  return text.replace(/[()]/g, '').trim();
+};
+
 export const ComfortsBlock = memo(
   ({ title, icons, images, style, type }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
-    const isSemiLux = type?.includes("semi-lux") || false;
-
+    const isSemiLux = type ===("semi-lux") || false;
+    console.log(type)
     const renderedIcons = useMemo(() => {
       if (!icons) return null;
       return icons.map((item, index) => (
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw] xl:gap-x-[0.55vw]  ${style.text} uppercase 2xl:w-[93%] w-full`
-          )}
+            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw] xl:gap-x-[0.55vw]  ${style.text} uppercase 2xl:w-[93%] w-full`)}
         >
           <InViewWrapper>
             <img
@@ -26,11 +31,12 @@ export const ComfortsBlock = memo(
             />
           </InViewWrapper>
           <p
-            className={`text-[3.73vw] sm:text-[12px] xl:text-[15px] 2xl:text-[1.04vw]  ${
+            className={`text-[3.73vw] sm:text-[12px] xl:text-[15px] 2xl:text-[1.04vw]
+              ${isSemiLux ? "w-[90%]!" : ""}  ${
               !isSemiLux && index == 0 ? "lg:whitespace-nowrap" : ""
             }`}
           >
-            {t(item.text)}
+            {isSemiLux ? t(item.text) : removeParentheses(t(item.text), window.innerWidth < 768)}
           </p>
         </li>
       ));

@@ -45,6 +45,7 @@ export const ComfortsBlocksWrapper = ({
             {...commonProps}
             images={[room.about.ammentiesImages[0], room.about.ammentiesImages[1], room.about.ammentiesMobileImages[0]]}
             style={luxStyle}
+            type={room.type}
           />
 
           {icons.bedRoom && (
@@ -54,6 +55,7 @@ export const ComfortsBlocksWrapper = ({
               {...commonProps}
               images={[room.about.ammentiesImages[2], room.about.ammentiesImages[3], room.about.ammentiesMobileImages[1]]}
               style={standardStyle}
+              type={room.type}
             />
           )}
 
@@ -63,6 +65,7 @@ export const ComfortsBlocksWrapper = ({
             {...commonProps}
             images={[room.about.ammentiesImages[4], room.about.ammentiesImages[5], room.about.ammentiesMobileImages[2]]}
             style={standardStyle}
+            type={room.type}
           />
         </>
       ) : (
@@ -82,6 +85,7 @@ export const ComfortsBlocksWrapper = ({
             {...commonProps}
             images={[room.about.ammentiesImages[2], room.about.ammentiesImages[3], room.about.ammentiesMobileImages[1]]}
             style={standardStyle}
+            type={room.type}
           />
         
         </>

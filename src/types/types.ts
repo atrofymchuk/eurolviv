@@ -36,6 +36,7 @@ export type Room = {
   type: string;
   title: string;
   description: string;
+  descriptionMobile?: string;
   area: number;
   guests: string;
   header: RoomHeader;
@@ -78,6 +79,7 @@ export type RoomHeader = {
   title: string;
   size?: string;
   description: string;
+  descriptionMobile?: string;
   count: number;
   view: string;
   arriveTime: string;

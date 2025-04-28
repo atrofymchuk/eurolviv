@@ -126,7 +126,7 @@ export const Guarantee = () => {
               <div className="order-1 md:order-4  md:mt-auto mt-[15px] w-full">
                 <h1
                   className={`uppercase text-[#242425] 2xl:text-[5.21vw] xl:text-[70px] text-[8.53vw] 2xl:leading-[81%] 
-                   lg:text-[5.27vw] leading-[91%] 2xl:tracking-[-0.04em] tracking-[-0.07em] 2xl:w-[35.47vw] xl:w-[500px] 
+                   lg:text-[5.27vw] leading-[91%] 2xl:tracking-[-0.04em] tracking-[-0.07em] 2xl:w-[35.47vw] xl:w-[500px] md:font-cofo-medium
                    ${isEng ? "mx-auto text-center md:text-left 2xl:mb-[1.56vw] xl:mb-[1vw]" : " "}`}
                 >
                   {t("rooms.guarantee.onOurSite")}

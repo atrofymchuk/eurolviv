@@ -19,6 +19,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   textColor = "white",
   title,
   description,
+  descriptionMobile,
   size,
   showBackLink = false,
   isContacts = false,
@@ -32,7 +33,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   onOrderClick, 
 }) => {
   const { t } = useTranslation();
-
   return (
     <div className="w-full relative lg:h-[1181px] h-[821px] ">
       <HeaderBackground
@@ -67,7 +67,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         {size && (
           <p
             className={cn(
-              `uppercase w-[90%] md:w-[60%] xl:w-[40%] lg:leading-[35px] lg:text-[36px] text-[20px] font-cofo-medium leading-[25px]  2xl:pt-[2.4vw] md:text-[32px] lg:pt-[30px] pt-[17px]`
+              `uppercase w-[55%] md:w-[60%] xl:w-[40%] lg:leading-[35px] lg:text-[36px] text-[5.33vw] font-cofo-medium leading-[25px]  2xl:pt-[2.4vw] md:text-[32px] lg:pt-[30px] pt-[17px]`
             )}
           >
             {processTitle(t(size))}
@@ -75,7 +75,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         )}
 
         {description && (
-          <HeaderDescription description={description} size={size} />
+          <HeaderDescription descriptionMobile={descriptionMobile} description={description} size={size} roomInfo={roomInfo} />
         )}
 
         <HeaderActions
