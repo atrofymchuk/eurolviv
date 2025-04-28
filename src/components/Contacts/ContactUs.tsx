@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { hotelContacts } from "../../store/exportsImg";
-
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const ContactUs = () => {
   const { t } = useTranslation();
+  const isEng = useIsEnglish();
   return (
     <div className="lg:mt-[50px] 2xl:mt-[2.6vw] 2xl:px-[1.93vw] xl:px-[1.88vw] md:px-[20px] w-full  flex-col flex text-center md:text-start md:border-e-0 md:border-b-0 border-e border-b border-[#C7C7C7]">
       <div className="md:pe-5 ">
@@ -30,7 +31,8 @@ export const ContactUs = () => {
           <h1 className=" uppercase 2xl:text-[2.08vw]  xl:text-[32px]  lg:text-[24px]  md:text-[20px]  tracking-[-0.05em] text-[#252526] text-[24px] leading-[24px]  pt-[31px] lg:pt-0">
             {t("contacts.info.career")}
           </h1>
-          <p className="uppercase px-[18px] md:px-0 xl:w-[100%] w-[101%]  leading-[125%] 2xl:text-[1.04vw] xl:text-[1.09vw] lg:text-[14px]  md:text-[14px]  text-[3.2vw] 2xl:mt-[1.82vw]  lg:mt-[35px] text-[#6B6B6B]    mt-[12px] ">
+          <p className={`uppercase px-[18px] md:px-0 
+            ${isEng ? "2xl:w-[97%]":"xl:w-[100%]"} w-[101%]  leading-[125%] 2xl:text-[1.04vw] xl:text-[1.09vw] lg:text-[14px]  md:text-[14px]  text-[3.2vw] 2xl:mt-[1.82vw]  lg:mt-[35px] text-[#6B6B6B]    mt-[12px] `}>
             {t("contacts.info.careerText.0")}
             <span className="font-cofo-medium text-[#252526]">
               {t("contacts.info.careerText.1")}

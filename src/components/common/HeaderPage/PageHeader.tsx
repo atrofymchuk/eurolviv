@@ -51,7 +51,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           `absolute inset-0 flex flex-col  text-center ${
             textColor === "white" ? "text-white" : "text-black"
           }
-          ${isContacts ? "mt-[45vw] lg:mt-0 items-center" : "  items-center justify-center"}
+          ${isContacts ? "mt-[55vw] 2xl:mb-[7vw] xl:mb-[2vw] lg:mt-0 items-center lg:justify-center" : "  items-center justify-center"}
           z-10`
         )}
       >
