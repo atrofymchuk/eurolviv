@@ -5,7 +5,7 @@ export const RatingMobile = () => {
     <div className="lg:block hidden px-4  ps-0">
       <img loading="lazy" src={rating} alt="rating" className="lg:mt-8.75 xl:mt-[20px] 2xl:mt-[1.823vw]" />
       <p className="2xl:mt-[0.677vw] xl:mt-[10px] mt-[13px] 2xl:text-[0.833vw]  xl:text-[1.09vw] font-cofo-medium uppercase  leading-[1.28]">Booking.com</p>
-      <p className="2xl:mt-[0.313vw] xl:mt-[6px] mt-[6px] 2xl:text-[0.833vw] xl:text-[1.09vw] lg:text-[18px] text-[#999999] font-cofo uppercase leading-[1.28]">
+      <p className="2xl:mt-[0.313vw] xl:mt-[6px] mt-[6px] 2xl:text-[0.833vw] xl:text-[1.09vw] lg:text-[18px] text-[#D6D5D5] font-cofo uppercase leading-[1.28]">
         Traveller Review Awards 2024
       </p>
 

@@ -5,7 +5,6 @@ import { useCustomWidth } from "../Hooks/useCustomWidth";
 export const Celebration = () => {
   const { t } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);
-  const isMobile = useCustomWidth(0, 768);
   return (
     <div className="flex flex-col items-center justify-center mx-auto md:w-[93.16%] w-[89.067%] border-[#B3B3B3] md:border-">
       <div className="grid md:grid-cols-[35.7%_28.9%_35.1%]  grid-cols-1 w-full border-x border-[#B3B3B3] md:border-t ">

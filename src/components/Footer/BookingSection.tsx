@@ -24,7 +24,7 @@ export const BookingSection = ({
             {t("footer.booking")}
           </h4>
 
-          <p className="uppercase text-[#999999] text-cofo 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] 2xl:mt-[0.31vw] mt-1.5 2xl:mb-[1.09vw] lg:mb-5.25 mb-[17px] text-[12px] leading-[1.28] ">
+          <p className="uppercase text-[#C8C8C8] text-cofo 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] 2xl:mt-[0.31vw] mt-1.5 2xl:mb-[1.09vw] lg:mb-5.25 mb-[17px] text-[12px] leading-[1.28] ">
             {t("footer.bookingTime")}
           </p>
 

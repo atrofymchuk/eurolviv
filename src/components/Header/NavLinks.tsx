@@ -39,6 +39,20 @@ export const NavLinks = ({
   isShowRestaurant = false,
   isMobile = false,
 }: NavLinksProps) => {
+
+  
+  const roomsLinksToRender = useMemo(() => [
+    {key:rooms[0].type, path:`/rooms/${rooms[0].type}`, title:rooms[0].title},
+    {key:rooms[2].type, path:`/rooms/${rooms[2].type}`, title:rooms[2].title},
+    {key:rooms[1].type, path:`/rooms/${rooms[1].type}`, title:rooms[1].title},
+    {key:rooms[3].type, path:`/rooms/${rooms[3].type}`, title:rooms[3].title},
+    {key:rooms[4].type, path:`/rooms/${rooms[4].type}`, title:rooms[4].title},
+    {key:rooms[5].type, path:`/rooms/${rooms[5].type}`, title:rooms[5].title},
+    {key:rooms[6].type, path:`/rooms/${rooms[6].type}`, title:rooms[6].title},
+    {key:rooms[7].type, path:`/rooms/${rooms[7].type}`, title:rooms[7].title},
+    {key:rooms[8].type, path:`/rooms/${rooms[8].type}`, title:rooms[8].title},
+  ], [rooms]);
+
   const restaurantLinks = useMemo<DropdownItem[]>(
     () => [
       { key: "restaurant", path: "/restaurant", title: "footer.restaurant" },
@@ -63,14 +77,7 @@ export const NavLinks = ({
 
   const renderNavLinks = useCallback(() => {
     return navLinks.map(({ path, label }) => {
-      const roomItems: DropdownItem[] =
-        path === "/rooms"
-          ? rooms.map((room) => ({
-              key: room.type,
-              path: `/rooms/${room.type}`,
-              title: room.title,
-            }))
-          : [];
+  
 
       const isDropdown = path === "/rooms" || path === "/restaurant";
 
@@ -128,7 +135,7 @@ export const NavLinks = ({
 
           {path === "/rooms" &&
             renderDropdownMenu({
-              items: roomItems,
+              items: roomsLinksToRender,
               isVisible: isShowRooms,
               isMobile,
               setMenuOpen,
@@ -143,21 +150,7 @@ export const NavLinks = ({
         </div>
       );
     });
-  }, [
-    navLinks,
-    isActiveLink,
-    handleMouseEnterRooms,
-    handleMouseLeaveRooms,
-    isShowRooms,
-    rooms,
-    setMenuOpen,
-    handleMouseEnterRestaurant,
-    handleMouseLeaveRestaurant,
-    isShowRestaurant,
-    restaurantLinks,
-    isMobile,
-    toggleHandle,
-  ]);
+  }, [navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, setMenuOpen, restaurantLinks, toggleHandle]);
 
   return <>{renderNavLinks()}</>;
 };

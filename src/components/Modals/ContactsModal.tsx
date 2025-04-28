@@ -10,13 +10,13 @@ export const ContactsModal = () => {
 
   const contacts = [
     {
-      title: t("footer.reception"),
+      title: t("home.roofService.restaurant.title"),
       subtitle: t("contacts.info.receptionPhone"),
       phone: "+ 38 (073) 242 40 02",
       icon: callUs,
     },
     {
-      title: t("footer.restaurant") + "/" + t("footer.terrace"),
+      title: t("home.roofService.restaurant.title") + "/" + t("terrase.header.title2"),
       subtitle: t("contacts.info.receptionPhone"),
       phone: "+38 (093) 348 31 14",
       icon: callUs,
@@ -50,7 +50,8 @@ export const ContactsModal = () => {
            
                 <Link
                   to={`tel:${contact.phone}`}
-                  className="text-[#252526] text-[12px] hover:text-[#8C331B] transition-colors"
+                  style={{textDecorationThickness: '1px'}}
+                  className="text-[#252526] text-[12px] hover:text-[#8C331B] transition-colors underline-[#252526] underline underline-offset-4"
                 >
                   {contact.phone}
                 </Link>

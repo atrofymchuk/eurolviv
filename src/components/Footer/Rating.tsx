@@ -17,7 +17,7 @@ export const Rating = ({openPdf, path}: {openPdf: (path: string) => void, path: 
             <p className="2xl:text-[0.938vw] lg:text-[18px] text-[12px] lg:mb-2 font-cofo-medium uppercase">
               Booking.com
             </p>
-            <p className="2xl:text-[0.938vw] lg:text-[18px] text-[#999999] text-[12px] font-cofo uppercase">
+            <p className="2xl:text-[0.938vw] lg:text-[18px] text-[#D6D5D5] text-[12px] font-cofo uppercase">
               Traveller Review Awards 2024
             </p>
           </div>

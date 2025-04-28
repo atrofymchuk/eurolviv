@@ -115,7 +115,7 @@ export const Footer = () => {
                       <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] leading-[1.28]">
                         {t("footer.socialMedia")}
                       </p>
-                      <div className="flex space-x-4 text-xl lg:mt-[25px] 2xl:mt-[1.6vw] mt-4">
+                      <div className="flex lg:space-x-4 space-x-1.75 text-xl lg:mt-[25px] 2xl:mt-[1.6vw] mt-4">
                         <Link
                           to={social.hotel.facebook}
                           target="_blank"

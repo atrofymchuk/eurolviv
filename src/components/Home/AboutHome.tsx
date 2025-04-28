@@ -13,7 +13,7 @@ export const AboutHome = () => {
     <div className="flex flex-col  xl:items-start xl:justify-start  justify-center items-center overflow-x-hidden overflow-y-hidden ">
       <div className="grid md:grid-cols-[24.2%_34.7%_25.8%_15.3%] grid-cols-[89.07%]  justify-center md:justify-stretch   mx-0 w-full">
         <div className="md:flex hidden border-[#C7C7C7]  border-b"></div>
-        <div className="md:border-x flex flex-col border-x  xl:flex-row 2xl:ps-[27px]  items-center space-y-2 2xl:space-y-0 xl:space-y-0 border-[#C7C7C7]   border-b">
+        <div className="md:border-x flex flex-col border-x  xl:flex-row 2xl:ps-[27px]  items-center space-y-2 2xl:space-y-0 xl:space-y-0 border-[#C7C7C7]   lg:border-b">
           <div className="w-full justify-between 2xl:pe-[3.1vw]  md:flex hidden *: flex-col md:flex-row lg:h-[15.7vw] 2xl:h-[8.7vw] xl:h-[8vw] items-center  px-2   ">
             <p
               className={` uppercase  
@@ -89,7 +89,7 @@ export const AboutHome = () => {
           </div>
         </div>
 
-        <div className="md:flex hidden border-[#C7C7C7] md:border-e  border-x md:border-x-0 md:border-s-0 xl:justify-start   lg:items-center  2xl:ps-0 xl:ps-[2vw]  border-b">
+        <div className="md:flex hidden  border-[#C7C7C7] md:border-e  border-x md:border-x-0 md:border-s-0 xl:justify-start   lg:items-center  2xl:ps-0 xl:ps-[2vw]  border-b">
           <div className=" md:w-[80%] lg:w-[0%] lg:mb-2 ">
             <p
               className={`uppercase font-cofo-medium 
@@ -113,23 +113,32 @@ export const AboutHome = () => {
             </p>
           </div>
         </div>
+
         <div className="border-b border-[#C7C7C7] md:flex hidden"></div>
 
-        <div className="border-[#C7C7C7] md:border-e-0 border-x md:border-x-0  pt-[4vw]  2xl:border-e-0 xl:border-e-0 lg:border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col lg:items-center ">
-          <p className=" md:text-[2vw] lg:text-[1.7vw]   uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ps-[3vw]">
+        <div className="relative">
+          <hr className="w-[1000px] absolute -translate-x-1/2  border-[#C7C7C7]" />
+        </div>
+        
+        <div className="border-[#C7C7C7]  md:border-e-0 border-x md:border-x-0  pt-[4vw]  2xl:border-e-0 xl:border-e-0 lg:border-b 2xl:border-b-0 xl:border-b-0 lg:block 2xl:py-0 xl:py-0 flex flex-col lg:items-center ">
+          <p className=" md:text-[2vw] lg:text-[1.7vw]  md:font-cofo-medium  uppercase 2xl:text-[1.25vw] xl:text-[1.5vw] sm:text-[3vw] text-[12px] tracking-[-0.05em] font-cofo-medium 2xl:ps-[3.75vw] xl:ps-[4.2vw] lg:ps-[2.8vw] 2xl:pt-[4.7vw] xl:pt-[5.9vw] ps-[3vw]">
             {t("home.about.title")}
           </p>
         </div>
 
         <div
           className={`border-x   border-[#C7C7C7] ps-[3vw] lg:ps-[4.5vw]   flex flex-col xl:pb-[2.3vw] 2xl:pt-0 xl:pt-0 md:pt-[5.2vw] pt-[2.2vw]
-            ${isEng ? " 2xl:ps-[1.24vw] xl:ps-[1.1vw]" : "2xl:ps-[1.64vw] xl:ps-[2.1vw]"}
+            ${
+              isEng
+                ? " 2xl:ps-[1.24vw] xl:ps-[1.1vw]"
+                : "2xl:ps-[1.64vw] xl:ps-[2.1vw]"
+            }
             `}
         >
           <div className="2xl:mt-[4.7vw] xl:mt-[5.9vw] pb-5 xl:pb-0">
             <h1
               className={cn(
-                "text-[8.53vw] w-[89.58vw] leading-[90%] xl:space-y-[11px] sm:text-[3.65vw] lg:leading-[81%] md:text-[3.52vw] lg:text-[3.33vw] xl:text-[5.3vw] 2xl:text-[5.21vw] uppercase text-[#242425] tracking-[-0.07em]"
+                "text-[8.53vw] w-[89.58vw] leading-[90%] xl:space-y-[11px] sm:text-[3.65vw] lg:leading-[81%] md:text-[3.52vw] lg:text-[3.33vw] xl:text-[5.3vw] 2xl:text-[5.21vw] uppercase stroke-[#252526] text-[#242425] md:font-cofo-medium tracking-[-0.07em]"
               )}
             >
               <div className="tracking-[-0.07em] inline">
@@ -175,7 +184,7 @@ export const AboutHome = () => {
                   xl:text-[1.04vw] xl:leading-[1.15vw]
                   2xl:text-[1.04vw] 2xl:leading-[1.25vw] 2xl:p-0 xl:p-0
                   ${isEng ? "w-[90%]" : ""}
-                  `,
+                  `
                 )}
               >
                 {t("home.about.desc.0")}
@@ -218,7 +227,7 @@ export const AboutHome = () => {
               <div className="md:absolute top-0 left-0  pt-[5.4vw]  xl:pt-[2.6vw] xl:ps-[1vw] w-full md:w-fit   px-[3.8vw_2.2vw]">
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap  uppercase leading-[84%] tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
+                    "md:whitespace-nowrap md:font-cofo-medium  uppercase leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
                     {}
                   )}
                 >
@@ -226,14 +235,14 @@ export const AboutHome = () => {
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
+                    "md:whitespace-nowrap uppercase md:font-cofo-medium leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]"
                   )}
                 >
                   {t("home.about.quality.1")}
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[9vw] 2xl:text-[5.21vw] 2xl:translate-x-[8.75vw]",
+                    "md:whitespace-nowrap uppercase md:font-cofo-medium leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] h-fit text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] xl:translate-x-[9vw] 2xl:text-[5.21vw] 2xl:translate-x-[8.75vw]",
                     {
                       "2xl:translate-x-[16.25vw]!": isEng,
                       "xl:translate-x-[17vw]": isEng,
@@ -244,7 +253,7 @@ export const AboutHome = () => {
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase leading-[84%] tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
+                    "md:whitespace-nowrap uppercase md:font-cofo-medium leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[3.33vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
                     {}
                   )}
                 >

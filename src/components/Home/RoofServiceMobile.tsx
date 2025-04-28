@@ -42,7 +42,9 @@ export const RoofServiceMobile = () => {
               <div className="flex flex-col items-center ">
                 <Link to={item.to}>
                 <h1
-                  className={ "text-[6.4vw] md:text-[32px] lg:text-[48px]   xl:text-[64px] text-center uppercase leading-[104%] tracking-[-0.1em] xl:mt-[29px] lg:mt-[19px] w-full underline  " } >
+                  className={ "text-[6.4vw] md:text-[32px] lg:text-[48px] underline-offset-2  xl:text-[64px] text-center uppercase leading-[104%] tracking-[-0.1em] xl:mt-[29px] lg:mt-[19px] w-full underline   " }
+                  style={{ textDecorationThickness: "1px" }}
+                  >
                   {t(item.title).split(' ').map((word, index) => (
                     <span key={index} className="block">
                       {word}

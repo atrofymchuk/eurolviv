@@ -73,6 +73,18 @@ export const HeaderNav = memo(
       ],
       [t]
     );
+    const navLinksMobile = useMemo(
+      () => [
+        { path: "/about", label: t("header.about") },
+        { path: "/rooms", label: t("header.rooms") },
+        { path: "/conference-service", label: t("header.conferenceServices") },
+        { path: "/restaurant", label: t("header.restaurant") },
+        { path: "/terrace", label: t("terrase.header.title2") },
+        { path: "/special-offers", label: t("header.specialOffers") },
+        { path: "/contacts", label: t("header.contacts") },
+      ],
+      [t]
+    );
 
     return (
       <div className="flex relative justify-between  me-0 h-full w-full lg:w-auto">
@@ -111,7 +123,7 @@ export const HeaderNav = memo(
         <MobileNavigation
           menuOpen={menuOpen}
           scrolled={scrolled}
-          navLinks={navLinks}
+          navLinks={navLinksMobile}
           isActiveLink={isActiveLink}
           handleMouseEnterRooms={handleMouseEnterRooms}
           handleMouseLeaveRooms={handleMouseLeaveRooms}

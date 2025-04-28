@@ -40,7 +40,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
           </h4>
-          <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#999999] lg:mb-[20px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
+          <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#C8C8C8] lg:mb-[20px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
             {t("footer.receptionTime")} 
           </p>
 

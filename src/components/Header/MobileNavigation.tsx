@@ -113,7 +113,7 @@ export const MobileNavigation = ({
 
             <BookLink
               to="/booking"
-              className="w-[107px] text-center bg-[#A47762] text-white uppercase font-cofo-medium text-[10px] px-[6.25px] py-[6px] mt-[22px] "
+              className="w-[107px] text-center  bg-[#A47762] text-white uppercase font-cofo-medium text-[10px]! h-[30px] flex items-center justify-center px-[6.25px] py-[6px] mt-[22px] "
               onClick={() => setMenuOpen(false)}
             >
               {t("buttons.book")}
@@ -130,7 +130,7 @@ export const MobileNavigation = ({
               <p className="text-[12px] text-[#8F8F8F] uppercase   mt-1 mb-[14px]">
                 {t("contacts.info.receptionPhone")}
               </p>
-              <p className="text-[#252526] text-sm">+38 (073) 242 40 02</p>
+              <p className="text-[#252526] text-sm underline underline-offset-4 " style={{textDecorationThickness: '1px'}}>+38 (073) 242 40 02</p>
             </div>
 
               <SocialIcons type="hotel"  />
@@ -139,10 +139,10 @@ export const MobileNavigation = ({
           <div className="mb-[40px]">
             <div className="space-y-[10px]">
               <h4 className="text-[12px]  font-cofo-medium text-[#252526] uppercase mt-[44px]">
-                {t("footer.restaurant")}/{t("footer.terrace")}
+                {t("home.roofService.restaurant.title")}/{t("terrase.header.title2")}
               </h4>
              
-              <p className="text-[#252526] text-sm">+38 (093) 348 31 14</p>
+              <p className="text-[#252526] text-sm underline underline-offset-4 " style={{textDecorationThickness: '1px'}}>+38 (093) 348 31 14</p>
             </div>
 
             <SocialIcons type="restaurant" className="mt-[30px]" isBottomColor={true} />
