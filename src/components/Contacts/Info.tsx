@@ -29,9 +29,9 @@ export const Info = () => {
             >
               <p
                 className={` uppercase 
-              text-[3.2vw] md:text-[14px] lg:text-[12px] 2xl:text-[0.83vw]
+              text-[3.2vw] md:text-[14px] lg:text-[0.94vw] 2xl:text-[0.83vw]
               leading-[1.4] lg:leading-[1.3] 
-              ${isEng ? "w-[107%] 2xl:w-[120%]" : ""}
+              ${isEng ? "w-[107%]  2xl:w-[120%]" : "xl:w-[95%] 2xl:w-[115%]"}
               text-[#252526] 
                 `}
               >
@@ -39,10 +39,10 @@ export const Info = () => {
               </p>
               <p
                 className={` uppercase 
-              text-[3.2vw] md:text-[14px] lg:text-[12px] 2xl:text-[0.83vw]
+              text-[3.2vw] md:text-[14px] lg:text-[0.94vw] 2xl:text-[0.83vw]
               leading-[1.4] lg:leading-[1.3] 
               text-[#8C331B] font-cofo-medium
-              ${isEng ? "w-[105%] 2xl:w-[110%]" : ""}
+              ${isEng ? "w-[105%] 2xl:w-[115%]" : ""}
               `}
               >
                 {t("contacts.info.contactUs")}
@@ -81,23 +81,23 @@ export const Info = () => {
           <div className="border-e border-[#C7C7C7] flex flex-col h-full md:text-start  text-center  ">
             <div className="2xl:ps-[4.43vw] xl:ps-[55px] md:ps-[30px] 2xl:pt-[3.02vw]  lg:pt-[58px] pt-[43px] flex-1 mx-[5.33vw] md:mx-0">
               <h1
-                className=" uppercase 
+                className={` uppercase 
               leading-[82%] lg:tracking-[-0.04em] 
-                text-[8.53vw]  lg:text-[48px] xl:text-[5.78vw] 2xl:text-[5.21vw]  tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] "
+                text-[8.53vw]  lg:text-[48px]  2xl:text-[5.21vw]  tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] ${isEng ? "xl:text-[5.78vw]" : "xl:text-[5vw]"}`}
               >
                 {t("contacts.info.headingContactUs")}
               </h1>
               <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5">
                 <p
                   className="font-cofo-medium uppercase 
-                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] 2xl:text-[1.04vw]"
+                  text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]"
                 >
                   {t("contacts.info.contactWithUsDesc")}
                 </p>
                 <p
                   className={` uppercase 
-                 text-[#252526] lg:text-[14px] md:text-[14px] 2xl:text-[1.04vw]  xl:w-[90%] 2xl:w-[95%]
-                text-[3.2vw] ${isEng ? "w-[90%] mx-auto lg:mx-0"  : "w-[95%]"}
+                text-[#252526] lg:text-[14px] md:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]  2xl:w-[95%]
+                text-[3.2vw] ${isEng ? "w-[90%] mx-auto lg:mx-0"  : "xl:w-[97%] w-[105%]"}
                 `}
                 >
                   {t("contacts.info.review")}

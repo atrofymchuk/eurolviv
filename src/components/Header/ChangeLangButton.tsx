@@ -19,6 +19,10 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled, pathname 
     if (scrolled) {
       return currentLang === lang ? "text-black" : "text-[#ADADAD]";
     } 
+    if (pathname === "/contacts") {
+      return currentLang === lang ? "text-black" : "text-[#ADADAD]";
+    }
+
 
     return currentLang === lang ? "text-white" : "text-[#ADADAD]";
   };
@@ -36,7 +40,8 @@ export const ChangeLangButton = ({ changeLanguage, isMobile, scrolled, pathname 
         <span className={cn( {
           "text-[#252526]": isMobile, 
           "text-white": !isMobile && !scrolled && pathname !== "/contacts",
-          "text-black": !isMobile && scrolled
+          "text-black": !isMobile && scrolled,
+          "text-black!": !isMobile && pathname === "/contacts"
         })}>/</span>
         <span className={cn("hover:cursor-pointer text-[14px] 2xl:text-[0.83vw] xl:text-[0.94vw] lg:text-[1.17vw]", getTextColor('en'), {
           "font-cofo-medium": currentLang === 'en'
