@@ -28,12 +28,12 @@
 
 @media (min-width: 1024px) {
   .footer-height-fixed {
-    min-height: 800px !important;
+    min-height: 850px !important;
   }
 }
 
 @media (min-width: 1440px) {
   .footer-height-fixed {
-    min-height: 900px !important;
+    min-height: 1100px !important;
   }
 }

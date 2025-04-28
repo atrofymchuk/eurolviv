@@ -10,7 +10,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
   const { t } = useTranslation();
 
   return (
-    <div className="gap-y-4 flex flex-col xl:h-[32.42vw] 2xl:h-[23.777vw] w-full lg:w-[23.5%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3
+    <div className="gap-y-4 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] w-full lg:w-[23.5%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3
     
     
     2xl:px-[67px_62px] xl:px-[2.4vw_1.5vw] ">
@@ -30,8 +30,10 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <Link
             target="_blank"
             to={map.address}
-            className="inline-flex  uppercase bg-white text-[#252526] px-[18px] py-[12.5px]  2xl:text-[16px] 2xl:py-[11.5px] 2xl:px-0 lg:text-[14px] text-[12px] rounded-full xl:w-[183px] 2xl:w-[223px] 2xl:h-[46px] xl:h-[42px] 
-                         font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] justify-center xl:text-[0.94vw]  w-[178px]  hover:cursor-pointer hover:bg-[#252526] hover:text-white lg:border border-[#252526] box-border"
+            className="flex  uppercase bg-white text-[#252526] p py-[12.5px]  2xl:text-[16px] 2xl:py-[11.5px]
+             2xl:px-0 lg:text-[14px] text-[12px] rounded-full xl:w-[193px] 2xl:w-[223px] 2xl:h-[46px] xl:h-[3.28vw] items-center justify-center
+                         font-cofo-medium  mt-5 2xl:mt-[1.823vw] lg:mt-[35px] lg:w-[223px] xl:text-[0.94vw]  w-[178px]
+                           hover:cursor-pointer hover:bg-[#8C331B] hover:text-white lg:border border-[#252526] box-border"
           >
             {t("buttons.route")}
           </Link>
@@ -40,7 +42,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
           </h4>
-          <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#C8C8C8] lg:mb-[20px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
+          <p className="2xl:text-[0.938vw]  xl:text-[1.09vw] lg:text-[14px] text-[12px] font-cofo uppercase text-[#C8C8C8] lg:mb-[21px] 2xl:mb-[1.04vw] mb-[17px] lg:mt-[6px] 2xl:mt-[0.31vw] leading-[1.28]">
             {t("footer.receptionTime")} 
           </p>
 
@@ -62,7 +64,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
                 reception@eurohotel.lviv.ua
               </a>
             </p>
-            <div className="lg:mt-[32px] mt-[19px] 2xl:mt-[1.4vw] flex gap-x-4 ">
+            <div className="lg:mt-[32px] mt-[19px] xl:mt-[25px] 2xl:mt-[1.4vw] flex gap-x-4 ">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
                   className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
@@ -95,7 +97,8 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
         </div>
         <p
           onClick={()=>openPdf(path)}
-          className=" absolute uppercase underline 2xl:bottom-[-7.2vw] underline-offset-[18%] 2xl:text-[16px] cursor-pointer xl:text-[0.9vw] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-x-[0vw]
+          className=" absolute uppercase underline 2xl:bottom-[-7.2vw] underline-offset-[18%] 2xl:text-[0.830vw] 
+          cursor-pointer xl:text-[0.9vw] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-x-[0vw] xl:bottom-[-10.5vw]
          -bottom-34 lg:block hidden"
         >
           {t("footer.publicOffer")}

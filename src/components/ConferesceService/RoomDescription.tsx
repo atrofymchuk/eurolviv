@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { ViewMenuButton } from "../Buttons/ViewMenu";
 import { ContactInfo } from "./ContactInfo";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
 import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { ViewMenuButton } from "../Buttons/ViewMenu";
 
 type RoomDescriptionProps = {
   pOne: string;
@@ -55,6 +55,29 @@ export const RoomDescription = memo(
 
         <div className="flex-1 flex items-center">
           <ViewMenuButton
+            onClick={() => {
+              const menuElement = document.getElementById("menu");
+              if (menuElement) {
+                const width = window.innerWidth;
+                let headerHeight = 100;
+                
+                if (width >= 1536) { 
+                  headerHeight = width * 0.0693; 
+                } else if (width >= 1024) { 
+                  headerHeight = width * 0.0908; 
+                } else {
+                  headerHeight = width * 0.2533; 
+                }
+                
+                const offset = 20;
+                const elementPosition = menuElement.getBoundingClientRect().top + window.scrollY;
+                
+                window.scrollTo({
+                  top: elementPosition - headerHeight - offset,
+                  behavior: "smooth"
+                });
+              }
+            }}
             className={`text-[14px] 2xl:text-[0.74vw] hidden lg:flex 2xl:w-[10.6vw] 2xl:h-[2.3vw] items-center justify-center`}
           >
             {t("buttons.conferenceMenu")}

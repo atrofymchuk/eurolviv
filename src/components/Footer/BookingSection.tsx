@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { social } from "../../Constants/Social";
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 export const BookingSection = ({
   openPdf,
   pdfDocuments,
@@ -12,10 +13,11 @@ export const BookingSection = ({
   openPdf: (path: string) => void;
   pdfDocuments: { pathPublicOffer: string };
 }) => {
+  const isCustomWidth = useCustomWidth(1350, 1550)
   const { t } = useTranslation();
   return (
     <div
-      className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[32.42vw] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+      className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
      pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] 2xl:px-[3.28vw_4.79vw] xl:px-[2.4vw_1.5vw]"
     >
       <div className="h-full flex flex-col ">
@@ -45,15 +47,16 @@ export const BookingSection = ({
               </a>
             </li>
           </ul>
-          <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[10px] 2xl:mt-[0.52vw]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%] underline font-cofo-medium leading-[1.28] ">
+          <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[10px] 2xl:mt-[0.52vw]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%]
+           underline font-cofo-medium leading-[1.28] ">
             <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">
               info@eurohotel.lviv.ua
             </a>
           </p>
-          <div className="lg:mt-[29px] mt-8 mb-0">
+          <div className={cn("2xl:mt-[29px] xl:mt-[29px] mt-8 mb-0", isCustomWidth && "xl:mt-[25px]!")}>
             <p className="uppercase 2xl:mt-[1.51vw]  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px] 2xl:mb-[1.09vw] leading-[1.28]">
               {t("contacts.info.restaurand/terrase")}
-            </p>
+            </p>    
 
             <ul className="lg:gap-y-[7px] 2xl:gap-y-[0.36vw] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase  text-[12px] ">
               <li>
@@ -67,7 +70,7 @@ export const BookingSection = ({
                 </a>
               </li>
             </ul>
-            <div className="lg:mt-[10px] mt-0 flex flex-col">
+            <div className="lg:mt-[10px] 2xl:mt-[10px] xl:mt-[15px  ]  mt-0 flex flex-col">
               <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
                 <a
                   href="mailto:restaurant@eurohotel.lviv.ua"
@@ -80,7 +83,7 @@ export const BookingSection = ({
           </div>
         </div>
 
-        <div className="flex lg:gap-x-3 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] mt-6 lg:mt-[30px] 2xl:mt-[1.5vw]">
+        <div className="flex lg:gap-x-3 gap-x-1.75 text-xl 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] xl:mt-[25px] mt-6 lg:mt-[30px] 2xl:mt-[1.5vw]">
           <Link
             to={social.restaurant.instagram}
             target="_blank"

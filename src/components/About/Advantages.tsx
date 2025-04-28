@@ -44,10 +44,8 @@ export const Advantages = () => {
                       alt={text}
                     />
                   </InViewWrapper>
-                  <span className={`${index === 0 ? "font-cofo-medium" : ""}`}>
 
                   {t(text)}
-                  </span>
                 </li>
               ))}
             </ul>

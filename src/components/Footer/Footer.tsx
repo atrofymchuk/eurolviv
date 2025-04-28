@@ -11,10 +11,16 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { footer } from "../../store/exportsImg";
 import { Link } from "react-router-dom";
 import { social } from "../../Constants/Social";
+import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
+  const isCustomWidth = useCustomWidth(1450, 1550);
+  const [email, setEmail] = useState("");
 
   const openPdf = (path: string) => {
     window.open(path, "_blank");
@@ -24,6 +30,30 @@ export const Footer = () => {
     pathPublicOffer: isEng
       ? "/documents/Public offer agreement.pdf"
       : "/documents/Договір публічної оферти .pdf",
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) {
+      toast.error(t("validation.email") || "Please enter your email");
+      return;
+    }
+    
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      toast.error(t("validation.emailInvalid") || "Please enter a valid email");
+      return;
+    }
+    
+    const mailtoLink = `mailto:info@eurohotel.lviv.ua?subject=${encodeURIComponent("Newsletter Subscription")}&body=${encodeURIComponent(`${t("footer.messageData")}: ${email}`)}`;
+    window.open(mailtoLink);
+    
+    toast.success(t("validation.contactUsSuccsses") || "Email sent successfully");
+    setEmail("");
   };
 
   return (
@@ -53,7 +83,7 @@ export const Footer = () => {
       <footer className="relative z-20 flex flex-col lg:flex-row lg:items-start  lg:justify-center text-white pt-[53px] lg:pt-[133px] py-[47px]">
         <div className="relative w-full pl-4 lg:pl-0 z-30">
           <div className="flex flex-col lg:flex-row lg:justify-between w-full">
-            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col 2xl:px-[3.75vw_3.49vw] xl:px-[2.75vw_1.5vw]  2xl:h-[23.777vw] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
+            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col 2xl:px-[3.75vw_3.49vw] xl:px-[2.75vw_1.5vw]  2xl:h-[23.777vw] xl:h-[28.677vw] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
               <div className="flex flex-col h-full justify-between  lg:mt-0 mt-[35px] ">
                 <div className="lg:flex lg:flex-col justify-between xl:justify-start h-full grid grid-cols-2 lg:grid-cols-1">
                   <div className="space-y-3 lg:w-full w-[180px] 2xl:max-h-[25.677vw]">
@@ -110,12 +140,12 @@ export const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col lg:mt-auto xl:mt-[113px] 2xl:mt-[7vw] lg:ms-0 ms-[20%]">
+                  <div className={`flex flex-col lg:mt-auto xl:mt-[114px] 2xl:mt-[7vw] lg:ms-0 ms-[20%] ${isCustomWidth && "xl:mt-[120px]!"}`}>
                     <div className="">
-                      <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] leading-[1.28]">
+                      <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] 2xl:w-[105%] leading-[1.28]">
                         {t("footer.socialMedia")}
                       </p>
-                      <div className="flex lg:space-x-4 space-x-1.75 text-xl lg:mt-[25px] 2xl:mt-[1.6vw] mt-4">
+                      <div className="flex lg:space-x-4 space-x-1.75 text-xl lg:mt-[25px] xl:mt-[25px] 2xl:mt-[1.6vw] mt-4">
                         <Link
                           to={social.hotel.facebook}
                           target="_blank"
@@ -143,7 +173,8 @@ export const Footer = () => {
                 </div>
               </div>
               <p
-                className="absolute uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] 2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-9vw] 
+                className="absolute uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%]
+                 2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-9vw] xl:bottom-[-10.6vw]
               lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34 lg:block hidden"
               >
                 {t("footer.privacyPolicy")}
@@ -157,7 +188,7 @@ export const Footer = () => {
 
             <BookingSection openPdf={openPdf} pdfDocuments={pdfDocuments} />
 
-            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px] xl:h-[32.42vw] 2xl:h-[25.677vw]">
+            <div className="space-y-4 order-1 lg:order-4 lg:me-1 lg:ms-1 2xl-mx-0 pe-6 md:pe-0 lg:w-[31.39%] w-full flex flex-col lg:pt-[17px]  2xl:h-[25.677vw] xl:h-[28.677vw]">
               <div className="w-full flex flex-col lg:ps-[32px] 2xl:ps-[1.67vw]">
                 <div>
                   <div className="flex flex-col items-center md:items-start">
@@ -169,19 +200,22 @@ export const Footer = () => {
                     </h4>
                   </div>
 
-                  <div className="w-full lg:w-[329px] xl:w-[25.703vw] 2xl:w-[24.948vw] flex flex-col items-center">
+                  <form onSubmit={handleSubmit} className="w-full lg:w-[329px] xl:w-[25.703vw] 2xl:w-[24.948vw] flex flex-col items-center">
                     <input
                       type="email"
                       placeholder={t("footer.email")}
-                      className="bg-[#B5B5B52B] 2xl:text-[0.833vw]  lg:py-[13px] lg:ps-[21px] w-full py-2.25 px-3 mb-2.5 2xl:mb-[0.52vw] rounded-full font-cofo mt-4.25 lg:mt-[22px] 2xl:mt-[1.146vw]"
+                      value={email}
+                      onChange={handleEmailChange}
+                      className="bg-[#B5B5B52B] 2xl:text-[0.833vw] lg:py-[13px] lg:ps-[21px] w-full py-2.25 px-3 mb-2.5 2xl:mb-[0.52vw] rounded-full font-cofo mt-4.25 lg:mt-[22px] 2xl:mt-[1.146vw]"
                     />
                     <button
-                      className="bg-[#A47762]  2xl:max-h-[2.4vw] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] 
+                      type="submit"
+                      className="bg-[#A47762] 2xl:max-h-[2.4vw] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] 
                       hover:text-[#A47762] py-2 px-6 rounded-full 2xl:text-[0.938vw] block w-full font-cofo hover:cursor-pointer"
                     >
                       {t("buttons.send")}
                     </button>
-                  </div>
+                  </form>
                   <RatingMobile />
                 </div>
               </div>
@@ -191,6 +225,11 @@ export const Footer = () => {
 
         <BottomText />
       </footer>
+      <ToastContainer
+        position="top-right"
+        style={{ zIndex: 100 }}
+        autoClose={5000}
+      />
     </div>
   );
 };

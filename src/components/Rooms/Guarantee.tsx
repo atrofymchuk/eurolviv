@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { eurohotel } from "../../store/exportsImg";
-import { useModalStore } from "../../store/useModalStore";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+  import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { Link } from "react-router-dom";
 export const Guarantee = () => {
-  const { onOpenModal } = useModalStore();
   const { t } = useTranslation();
   const isEng = useIsEnglish();
 
@@ -112,16 +111,16 @@ export const Guarantee = () => {
                 </li>
               </ol>
 
-              <button
-                onClick={() => onOpenModal("order")}
-                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px] 2xl:w-[12.19vw]  2xl:h-[2.4vw] self-start 2xl:px-0 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
+              <Link
+                to={"/booking"}
+                className="uppercase bg-[#8C331B] text-[#FFFFFF] lg:mt-[32px] lg:w-[234px] 2xl:w-[12.19vw] flex items-center justify-center 2xl:h-[2.4vw] self-start 2xl:px-0 xl:px-4 px-[23px] 2xl:py-3 xl:py-2.5 py-[11px] rounded-3xl 
                 font-cofo-medium 2xl:text-[0.83vw] xl:text-sm text-[12px]  mt-[24px]  hover:cursor-pointer order-3  "
               >
                 {t("buttons.bookRoomArr.0")}
                 <span className="xl:inline hidden font-cofo-medium">
                   {t("buttons.bookRoomArr.1")}
                 </span>
-              </button>
+              </Link>
 
               <div className="order-1 md:order-4  md:mt-auto mt-[15px] w-full">
                 <h1

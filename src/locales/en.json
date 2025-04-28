@@ -3,7 +3,8 @@
             "createdFor":"Inspiring love for ",
             "whereTo":"Lviv",
             "eurohotel":"Eurohotel",
-            "details":"детальніше"
+            "details":"details",
+            "hotel":"hotel"
     },
     "home":{
         "header":{
@@ -205,7 +206,8 @@
         "bookingTime":"Weekdays from 09:00 to 18:00",
         "receptionTime":"24/7",
         "getNews":"STAY UPDATED WITH THE BEST OFFERS",
-        "email":"Enter your email"
+        "email":"Enter your email",
+        "messageData":"Email for newsletter subscription"
     
         
     },

@@ -11,12 +11,14 @@ export const ConceptCasd = ({
   alt,
   text,
   index,
+  to
 }: {
   title: string[];
   img: string;
   alt: string;
   text: string[];
   index: number;
+  to: string;
 }) => {
   const { t } = useTranslation();
   const isSpecialWidth = useCustomWidth(1500, 1700);
@@ -108,8 +110,8 @@ export const ConceptCasd = ({
         </p>
         <div className="mt-auto">
           <DetailsLink
-            to={"/booking"}
-            className={`2xl:text-[0.833vw] 2xl:h-[46px] block w-[141px] h-[40px] ${
+            to={to}
+            className={`2xl:text-[0.833vw] 2xl:h-[46px]  w-[141px] h-[40px] flex items-center justify-center ${
               
               isSpecialWidth ? "xl:text-[.9vw]" : "xl:text-[0.9vw]"
             }`}

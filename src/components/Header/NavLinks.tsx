@@ -18,6 +18,7 @@ type NavLinksProps = {
   handleMouseLeaveRestaurant?: () => void;
   isShowRestaurant?: boolean;
   isMobile?: boolean;
+  scrolled: boolean;
 };
 
 type DropdownItem = {
@@ -33,6 +34,7 @@ export const NavLinks = ({
   handleMouseLeaveRooms,
   isShowRooms,
   rooms,
+  scrolled,
   setMenuOpen,
   handleMouseEnterRestaurant,
   handleMouseLeaveRestaurant,
@@ -59,7 +61,7 @@ export const NavLinks = ({
       { key: "terrace", path: "/terrace", title: "footer.terrace" },
       {
         key: "karaoke",
-        path: "/restaurant/#karaoke",
+        path: "/restaurant#karaoke",
         title: "restaurant.karaoke.title",
       },
     ],
@@ -138,6 +140,7 @@ export const NavLinks = ({
               items: roomsLinksToRender,
               isVisible: isShowRooms,
               isMobile,
+              isScrolled: scrolled,
               setMenuOpen,
             })}
           {path === "/restaurant" &&
@@ -146,11 +149,12 @@ export const NavLinks = ({
               isVisible: isShowRestaurant,
               isMobile,
               setMenuOpen,
+              isScrolled: scrolled,
             })}
         </div>
       );
     });
-  }, [navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, setMenuOpen, restaurantLinks, toggleHandle]);
+  }, [scrolled,navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, setMenuOpen, restaurantLinks, toggleHandle]);
 
   return <>{renderNavLinks()}</>;
 };

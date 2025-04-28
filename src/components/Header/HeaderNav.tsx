@@ -112,6 +112,7 @@ export const HeaderNav = memo(
             isShowRooms={isShowRooms}
             rooms={rooms}
             setMenuOpen={setMenuOpen}
+            scrolled={scrolled}
             setIsShowRooms={setIsShowRooms}
             handleMouseEnterRestaurant={handleMouseEnterRestaurant}
             handleMouseLeaveRestaurant={handleMouseLeaveRestaurant}

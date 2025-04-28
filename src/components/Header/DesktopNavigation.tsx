@@ -9,6 +9,7 @@ type DesktopNavigationProps = {
   handleMouseLeaveRooms: () => void;
   isShowRooms: boolean;
   rooms: Room[];
+  scrolled: boolean;
   setMenuOpen: (value: boolean) => void;
   setIsShowRooms: (value: boolean) => void;
   handleMouseEnterRestaurant: () => void;
@@ -30,6 +31,7 @@ export const DesktopNavigation = ({
   handleMouseLeaveRestaurant,
   isShowRestaurant,
   setIsShowRestaurant,
+  scrolled,
 }: DesktopNavigationProps) => {
   const isEng = useIsEnglish();
   return (
@@ -50,6 +52,7 @@ export const DesktopNavigation = ({
         handleMouseEnterRooms={handleMouseEnterRooms}
         handleMouseLeaveRooms={handleMouseLeaveRooms}
         isShowRooms={isShowRooms}
+        scrolled={scrolled}
         rooms={rooms}
         setMenuOpen={setMenuOpen}
         handleMouseEnterRestaurant={handleMouseEnterRestaurant}

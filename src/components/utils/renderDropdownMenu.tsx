@@ -13,6 +13,7 @@ type RenderDropdownMenuProps = {
   isVisible: boolean;
   isMobile?: boolean;
   setMenuOpen?: (value: boolean) => void;
+  isScrolled?: boolean;
 };
 
 export const renderDropdownMenu = ({
@@ -20,8 +21,10 @@ export const renderDropdownMenu = ({
   isVisible,
   isMobile = false,
   setMenuOpen,
+  isScrolled = false,
 }: RenderDropdownMenuProps): ReactNode => {
   if (!isVisible) return null;
+  console.log(isScrolled)
 
   return (
     <div
@@ -31,13 +34,17 @@ export const renderDropdownMenu = ({
       )}
     >
       <div className="w-fit">
-        <div className="flex flex-col rounded-lg overflow-hidden md:gap-0 gap-[8px] bg-[#FFFFFF]/51%">
+        <div className={cn(
+          "flex flex-col rounded-lg overflow-hidden md:gap-0 gap-[8px]",
+          isScrolled ? "bg-gray-500/51 " : "bg-[#FFFFFF]/51% text-black"
+        )}>
           {items.map((item) => (
             <NavListHeader
               key={item.key}
               path={item.path}
               title={item.title}
               setMenuOpen={setMenuOpen}
+              isScrolled={isScrolled}
             />
           ))}
         </div>

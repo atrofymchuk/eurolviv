@@ -28,7 +28,7 @@ export const Logo = ({
           " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]   lg:ms-0",
         className,
         {
-        "2xl:me-[6.02vw] xl:me-[3vw]"  : isRestaurant,
+        " xl:me-[3vw] 2xl:me-[3.02vw]"  : isRestaurant,
         "2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw]": !isRestaurant,
         }
       )}
@@ -45,6 +45,7 @@ export const Logo = ({
                 !isMobile,
               "w-[99px] h-[54px] filter invert": isMobile,
               "2xl:h-[91px]": pathname === "/terrace",
+              "2xl:h-[71px] 2xl:w-[129px]": pathname === "/restaurant",
             },
             iconClassName
           )}

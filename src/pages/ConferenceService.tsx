@@ -56,7 +56,7 @@ export const ConferenceService = () => {
   }, [loadMore, loadedSections]);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <Header />
       {sections.slice(0, loadedSections).map((Component, index) => {
         const isLast = index === loadedSections - 1;

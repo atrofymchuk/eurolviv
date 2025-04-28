@@ -1,9 +1,10 @@
 {
 "global":{
-        "createdFor":"створений щоб закохувати у ",
+        "createdFor":"створений, щоб закохувати у ",
         "whereTo":"Львів",
         "eurohotel":"Eurohotel",
-        "details":"детальніше"
+        "details":"детальніше",
+        "hotel":"Готель"
 },
 "home":{
     "header":{
@@ -199,8 +200,8 @@
     "bookingTime":"будні з 9:00 до 18:00",
     "receptionTime":"Цілодобово",
     "getNews":"ДІЗНАВАЙТЕСЬ ПРО НАЙВИГІДНІШІ ПРОПОЗИЦІЇ ПЕРШИМИ",
-    "email":"Введіть свій email"
-
+    "email":"Введіть свій email",
+    "messageData":"Email для підписки на новини"
     
 },
 "room":{
@@ -273,7 +274,7 @@
 "conferenceService":{
 "header":{
     "title":"конференц-сервіс",
-    "desc":"ділові зустрічі які надихають"
+    "desc":"ділові зустрічі, які надихають"
 }    ,
 "about":{
     "area":"площа",

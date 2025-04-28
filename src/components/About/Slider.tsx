@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import {
   mirrorAboutSlider,
   luxTwoRoomsPreview,
-  bathroomAboutSlider,
   champagneAboutSlider,
   bedroomAboutSlider,
 } from "../../store/exportsImg";
@@ -20,7 +19,6 @@ import { useCustomWidth } from "../Hooks/useCustomWidth";
   mirrorAboutSlider,
   champagneAboutSlider,
   bedroomAboutSlider,
-  bathroomAboutSlider,
   luxTwoRoomsPreview,
 ];
 

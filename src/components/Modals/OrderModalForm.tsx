@@ -1,6 +1,5 @@
 import { UseFormRegister } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { IoIosArrowDown } from "react-icons/io";
 import { FormData } from "./OrderModal";
 
 
@@ -32,27 +31,11 @@ import { FormData } from "./OrderModal";
   />
 
   <div className="relative w-full">
-    <select
-      className="w-full font-cofo py-[14px] lg:text-[14px] text-[12px] px-[25px]  rounded-full outline-none bg-[#C2C2C242] uppercase appearance-none pr-10 text-[#7C7C7C]"
+
+<input  placeholder={t("orderModal.guests")}    className="w-full font-cofo py-[14px] lg:text-[14px] text-[12px] px-[25px]  rounded-full outline-none bg-[#C2C2C242] uppercase appearance-none pr-10 text-[#7C7C7C]"
       {...register("guests")}
-    >
-      <option value="" className="text-[#7C7C7C]">
-        {t("orderModal.guests")}
-      </option>
-      <option className="font-cofo" value="1">
-        1
-      </option>
-      <option className="font-cofo" value="2">
-        2
-      </option>
-      <option className="font-cofo" value="3">
-        3
-      </option>
-      <option className="font-cofo" value="4">
-        4
-      </option>
-    </select>
-    <IoIosArrowDown className="absolute right-5 top-1/2 transform -translate-y-1/2 text-[#252526] text-xl pointer-events-none" />
+/>
+   
   </div>
 
   <div className="flex items-center gap-2 text-sm justify-center text-[#A47762] lg:mt-[25px] lg:mb-[39px] lg:p-0 pt-[16px] pb-[19px] ">

@@ -22,8 +22,8 @@ export const Concepts = () => {
         </div>
 
 
-        {concepts.map(({ title, img, alt, text }, index) => (
-          <ConceptCasd key={index} title={title} img={img} alt={alt} text={text} index={index} />
+        {concepts.map(({ title, img, alt, text, to }, index) => (
+          <ConceptCasd key={index} title={title} img={img} alt={alt} text={text} index={index} to={to} />
         ))} 
 
         <div className="xl:col-span-4 md:col-span-2 xl:h-[165px] xl:w-full  xl:border-x border-x xl:border-b xl:border-t-0 border-t md:h-0  border-[#C7C7C7] "></div>

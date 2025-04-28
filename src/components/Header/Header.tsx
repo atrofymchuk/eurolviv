@@ -105,7 +105,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                     className="absolute right-0 mt-2 top-full bg-white text-black rounded shadow-lg py-2 font-cofo-medium  "
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
-                    {["+380 99 123 45 67", "+380 97 765 43 21"].map(
+                    {[`+38 (073) 242 40 02 ${t("global.hotel")}`, `+38 (093) 348 31 14 ${t("header.restaurant")}`].map(
                       (phone, index) => (
                         <a
                           key={index}
