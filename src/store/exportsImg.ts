@@ -228,11 +228,14 @@ export { default as wedding } from "../assets/SpecialOffers/newlyweds.webp";
 export { default as photosession } from "../assets/SpecialOffers/photosession.webp";
 export { default as dog } from "../assets/SpecialOffers/dogMobile.webp";
 
+//alerts 
+export { default as eurohotelAlert} from "../assets/Alerts/StillThinking/eurohotel.webp";
+export { default as roomAlert} from "../assets/Alerts/GetMore/Room.webp";
+
 export { default as dogMobile } from "../assets/SpecialOffers/dogMobile.webp";
 export { default as mulitaryMobile } from "../assets/SpecialOffers/militaryMobile.webp";
 export { default as businessMobile } from "../assets/SpecialOffers/buissenesMobile.webp";
 export { default as birthdayMobile } from "../assets/SpecialOffers/birthdayMobile.webp";
 export { default as weddingMobile } from "../assets/SpecialOffers/newlywedsMobile.webp";
 export { default as photosessionMobile } from "../assets/SpecialOffers/photosessionMobile.webp";
-
 

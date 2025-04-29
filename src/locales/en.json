@@ -1159,6 +1159,12 @@
               "book":"book a table",
               "menu":"Menu"
               
+            },
+            "promo":{
+              "title":"STILL Thinking?",
+              "subtitle":"LET US MAKE it BETTER!",
+              "description":"Book directly & get the best deal, guaranteed! ",
+              "button":"BOOK now"
             }
     }
     

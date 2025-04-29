@@ -226,3 +226,8 @@ export interface PagesInfo {
   availableService: Icon[];
   cards: { src: string; title: string; text: string }[];
 }
+
+export interface PromoAlertProps {
+  delay?: number; 
+  image?: string;
+}
