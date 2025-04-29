@@ -79,7 +79,8 @@ export interface PageHeaderProps {
 export type FormData = {
   checkIn: Date | null;
   checkOut: Date | null;
-  guests: string;
+  adults: string;
+  children: string;
 };
 
 export interface DatePickerFieldProps {

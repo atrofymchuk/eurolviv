@@ -23,16 +23,33 @@ export const HeaderBookingForm = () => {
     defaultValues: {
       checkIn: null,
       checkOut: null,
-      guests: "2 ДОРОСЛИХ, 0 ДІТЕЙ",
+      adults: "1",
+      children: "0",
     },
   });
+
+const guests = [
+  'home.header.bookingForm.gusts.options.3',
+  'home.header.bookingForm.gusts.options.2',
+  'home.header.bookingForm.gusts.options.1',
+  'home.header.bookingForm.gusts.options.0',
+]
+
+const children = [
+  'home.header.bookingForm.children.options.0',
+  'home.header.bookingForm.children.options.1',
+  'home.header.bookingForm.children.options.2',
+  'home.header.bookingForm.children.options.3',
+]
+
 
   const onSubmit = (data: FormData) => {
     navigate("/booking", {
       state: {
         checkIn: data.checkIn,
         checkOut: data.checkOut,
-        guests: data.guests,
+        adults: data.adults,
+        children: data.children,
       },
     });
   };
@@ -67,9 +84,24 @@ export const HeaderBookingForm = () => {
         </p>
 
         <div className="flex gap-[11px] 2xl:gap-[2.24vw] flex-col md:flex-row">
-          <div className="px-[19px_18px] lg:px-0 w-full">
+          <div className="px-[19px_18px] lg:px-0 w-full flex gap-x-4">
 
-          <GuestsSelect control={control} errors={errors} />
+            <GuestsSelect 
+              control={control} 
+              errors={errors} 
+              fieldName="adults"
+              optionsPrefix="home.header.bookingForm.gusts.adultsOptions"
+              options={guests}
+            />
+
+            <GuestsSelect 
+              control={control} 
+              errors={errors} 
+              fieldName="children"
+              optionsPrefix="home.header.bookingForm.gusts.childrenOptions"
+              options={children}
+              isChild={true}
+            />
           </div>
           <div className="px-[15px] lg:px-0">
 

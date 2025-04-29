@@ -17,8 +17,12 @@
                 "guests":"Кількість гостей",
                 "book":"Забронювати номер",
                 "gusts":{
-                    "title":"ГОСТІ",
-                    "options":["2 adults, 0 children","2 adults, 1 child","2 adults, 2 children","1 adult"]
+                    "title":"GUESTS",
+                    "options":["4 adults","3 adults","2 adults","1 adult"]
+                },
+                "children":{
+                    "title":"CHILDREN",
+                    "options":["0 children","1 child","2 children","3 children"]
                 }
             }
         },

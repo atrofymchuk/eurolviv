@@ -6,19 +6,29 @@ import { FormData } from "../../../types/headerTypes";
 interface GuestsSelectProps {
   control: Control<FormData>;
   errors: FieldErrors<FormData>;
+  fieldName: "adults" | "children";
+  optionsPrefix: string;
+  options: string[];
+  isChild?: boolean;
 }
 
 export const GuestsSelect: React.FC<GuestsSelectProps> = ({
   control,
   errors,
+  fieldName,
+  options,
+  isChild = false,
 }) => {
   const { t } = useTranslation();
 
+  
+
   return (
     <div className="w-full">
+     
    
       <Controller
-        name="guests"
+        name={fieldName}
         control={control}
         render={({ field }) => (
           <div>
@@ -26,22 +36,22 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
               {...field}
               className={cn(
                 "w-full 2xl:pb-[10px] xl:pb-[8px] pb-[7px] xl:text-[1.09vw] text-white border-b uppercase border-[#969696] cursor-pointer text-[2.67vw] 2xl:text-[0.83vw]",
-                errors.guests && "border-red-500 border"
+                errors[fieldName] && "border-red-500 border"
               )}
             >
-              {[0, 1, 2, 3].map((index) => (
+              {options.map((el, index) => (
                 <option
-                  key={index}
+                  key={index + el}
                   className="text-black"
-                  value={t(`home.header.bookingForm.gusts.options.${index}`)}
+                  value={!isChild ? index + 1 : index}
                 >
-                  {t(`home.header.bookingForm.gusts.options.${index}`)}
+                  {t(`${el}`)}
                 </option>
               ))}
             </select>
-            {errors.guests && (
+            {errors[fieldName] && (
               <p className="text-red-500 text-sm mt-1">
-                {errors.guests.message}
+                {errors[fieldName]?.message}
               </p>
             )}
           </div>

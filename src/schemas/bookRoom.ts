@@ -7,5 +7,6 @@ export const formSchema = yup.object().shape({
     .date()
     .required("validation.checkOut")
     .min(yup.ref("checkIn"), "validation.checkOutMin"),
-  guests: yup.string().required("validation.guests"),
+  adults: yup.string().required("validation.adults"),
+  children: yup.string().required("validation.children"),
 }) as yup.ObjectSchema<FormData>; 
