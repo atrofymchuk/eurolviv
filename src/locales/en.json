@@ -1165,6 +1165,12 @@
               "subtitle":"LET US MAKE it BETTER!",
               "description":"Book directly & get the best deal, guaranteed! ",
               "button":"BOOK now"
+            },
+            "bookDirectAlert":{
+              "title":"Book directly",
+              "subtitle":"-get more!",
+              "description":"We guarantee the best rate when you book directly with us.",
+              "button":"BOOK now"
             }
     }
     
