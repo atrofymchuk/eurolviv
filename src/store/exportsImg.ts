@@ -239,3 +239,121 @@ export { default as birthdayMobile } from "../assets/SpecialOffers/birthdayMobil
 export { default as weddingMobile } from "../assets/SpecialOffers/newlywedsMobile.webp";
 export { default as photosessionMobile } from "../assets/SpecialOffers/photosessionMobile.webp";
 
+//rooms sliders
+
+//Standart single
+export { default as standartSingleSliderFst } from "../assets/Rooms/StandartSingle/swiperImages/1.webp";
+export { default as standartSingleSliderScd } from "../assets/Rooms/StandartSingle/swiperImages/2.webp";
+export { default as standartSingleSliderTrd } from "../assets/Rooms/StandartSingle/swiperImages/3.webp";
+export { default as standartSingleSliderFth } from "../assets/Rooms/StandartSingle/swiperImages/4.webp";
+export { default as standartSingleSliderFve } from "../assets/Rooms/StandartSingle/swiperImages/5.webp";
+export { default as standartSingleSliderSix } from "../assets/Rooms/StandartSingle/swiperImages/6.webp";
+export { default as standartSingleSliderSev } from "../assets/Rooms/StandartSingle/swiperImages/7.webp";
+export { default as standartSingleSliderEig } from "../assets/Rooms/StandartSingle/swiperImages/8.webp";
+export { default as standartSingleSliderNin } from "../assets/Rooms/StandartSingle/swiperImages/9.webp";
+
+// standart big bed
+export {default as standartBigBedSliderFst} from "../assets/Rooms/StandartWithBigBed/swiperImages/1.webp"
+export {default as standartBigBedSliderScd} from "../assets/Rooms/StandartWithBigBed/swiperImages/2.webp"
+export {default as standartBigBedSliderTrd} from "../assets/Rooms/StandartWithBigBed/swiperImages/3.webp"
+export {default as standartBigBedSliderFth} from "../assets/Rooms/StandartWithBigBed/swiperImages/4.webp"
+export {default as standartBigBedSliderFve} from "../assets/Rooms/StandartWithBigBed/swiperImages/5.webp"
+export {default as standartBigBedSliderSix} from "../assets/Rooms/StandartWithBigBed/swiperImages/6.webp"
+export {default as standartBigBedSliderSev} from "../assets/Rooms/StandartWithBigBed/swiperImages/7.webp"
+export {default as standartBigBedSliderEig} from "../assets/Rooms/StandartWithBigBed/swiperImages/8.webp"
+export {default as standartBigBedSliderNin} from "../assets/Rooms/StandartWithBigBed/swiperImages/9.webp"
+export {default as standartBigBedSliderTen} from "../assets/Rooms/StandartWithBigBed/swiperImages/10.webp"
+
+//Standart Two Bed
+export {default as standartTwoBedSliderFst} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/1.webp"
+export {default as standartTwoBedSliderScd} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/2.webp"
+export {default as standartTwoBedSliderTrd} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/3.webp"
+export {default as standartTwoBedSliderFth} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/4.webp"
+export {default as standartTwoBedSliderFve} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/5.webp"
+export {default as standartTwoBedSliderSix} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/6.webp"
+export {default as standartTwoBedSliderSev} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/7.webp"
+export {default as standartTwoBedSliderEig} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/8.webp"
+export {default as standartTwoBedSliderNin} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/9.webp"  
+export {default as standartTwoBedSliderTen} from "../assets/Rooms/StandartWithTwoBeds/swiperImages/10.webp"
+
+//Standart big bed and balcony
+export {default as standartBigBedAndBalconySliderFst} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/1.webp"
+export {default as standartBigBedAndBalconySliderScd} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/2.webp"
+export {default as standartBigBedAndBalconySliderTrd} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/3.webp"
+export {default as standartBigBedAndBalconySliderFth} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/4.webp"
+export {default as standartBigBedAndBalconySliderFve} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/5.webp"
+export {default as standartBigBedAndBalconySliderSix} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/6.webp"
+export {default as standartBigBedAndBalconySliderSev} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/7.webp"
+export {default as standartBigBedAndBalconySliderEig} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/8.webp"
+export {default as standartBigBedAndBalconySliderNin} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/9.webp"
+export {default as standartBigBedAndBalconySliderTen} from "../assets/Rooms/StandartWithBigBedAndBalcony/swiperImages/10.webp"
+
+//Standart two bed and balcony
+export {default as standartTwoBedAndBalconySliderFst} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/1.webp"
+export {default as standartTwoBedAndBalconySliderScd} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/2.webp"
+export {default as standartTwoBedAndBalconySliderTrd} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/3.webp"
+export {default as standartTwoBedAndBalconySliderFth} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/4.webp"
+export {default as standartTwoBedAndBalconySliderFve} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/5.webp"
+export {default as standartTwoBedAndBalconySliderSix} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/6.webp"
+export {default as standartTwoBedAndBalconySliderSev} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/7.webp"
+export {default as standartTwoBedAndBalconySliderEig} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/8.webp"
+export {default as standartTwoBedAndBalconySliderNin} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/9.webp"
+export {default as standartTwoBedAndBalconySliderTen} from "../assets/Rooms/StandartWithTwoBedsAndBalcony/swiperImages/10.webp"
+
+//semilux
+export {default as semiLuxSliderFst} from "../assets/Rooms/SemiLux/swiperImages/1.webp"
+export {default as semiLuxSliderScd} from "../assets/Rooms/SemiLux/swiperImages/2.webp"
+export {default as semiLuxSliderTrd} from "../assets/Rooms/SemiLux/swiperImages/3.webp"
+export {default as semiLuxSliderFth} from "../assets/Rooms/SemiLux/swiperImages/4.webp"
+export {default as semiLuxSliderFve} from "../assets/Rooms/SemiLux/swiperImages/5.webp"
+export {default as semiLuxSliderSix} from "../assets/Rooms/SemiLux/swiperImages/6.webp"
+export {default as semiLuxSliderSev} from "../assets/Rooms/SemiLux/swiperImages/7.webp"
+export {default as semiLuxSliderEig} from "../assets/Rooms/SemiLux/swiperImages/8.webp"
+export {default as semiLuxSliderNin} from "../assets/Rooms/SemiLux/swiperImages/9.webp"
+export {default as semiLuxSliderTen} from "../assets/Rooms/SemiLux/swiperImages/10.webp"
+
+//lux two rooms
+export {default as luxTwoRoomsSliderFst} from "../assets/Rooms/LuxTwoRooms/swiperImages/1.webp"
+export {default as luxTwoRoomsSliderScd} from "../assets/Rooms/LuxTwoRooms/swiperImages/2.webp"
+export {default as luxTwoRoomsSliderTrd} from "../assets/Rooms/LuxTwoRooms/swiperImages/3.webp"
+export {default as luxTwoRoomsSliderFth} from "../assets/Rooms/LuxTwoRooms/swiperImages/4.webp"
+export {default as luxTwoRoomsSliderFve} from "../assets/Rooms/LuxTwoRooms/swiperImages/5.webp"
+export {default as luxTwoRoomsSliderSix} from "../assets/Rooms/LuxTwoRooms/swiperImages/6.webp"
+export {default as luxTwoRoomsSliderSev} from "../assets/Rooms/LuxTwoRooms/swiperImages/7.webp"
+export {default as luxTwoRoomsSliderEig} from "../assets/Rooms/LuxTwoRooms/swiperImages/8.webp"
+export {default as luxTwoRoomsSliderNin} from "../assets/Rooms/LuxTwoRooms/swiperImages/9.webp"
+export {default as luxTwoRoomsSliderTen} from "../assets/Rooms/LuxTwoRooms/swiperImages/10.webp"
+export {default as luxTwoRoomsSliderEleven} from "../assets/Rooms/LuxTwoRooms/swiperImages/11.webp"
+
+//lux imperial
+export {default as luxImperialSliderFst} from "../assets/Rooms/LuxImpreial/swiperImages/1.webp" 
+export {default as luxImperialSliderScd} from "../assets/Rooms/LuxImpreial/swiperImages/2.webp"
+export {default as luxImperialSliderTrd} from "../assets/Rooms/LuxImpreial/swiperImages/3.webp"
+export {default as luxImperialSliderFth} from "../assets/Rooms/LuxImpreial/swiperImages/4.webp"
+export {default as luxImperialSliderFve} from "../assets/Rooms/LuxImpreial/swiperImages/5.webp"
+export {default as luxImperialSliderSix} from "../assets/Rooms/LuxImpreial/swiperImages/6.webp"
+export {default as luxImperialSliderSev} from "../assets/Rooms/LuxImpreial/swiperImages/7.webp"
+export {default as luxImperialSliderEig} from "../assets/Rooms/LuxImpreial/swiperImages/8.webp"
+export {default as luxImperialSliderNin} from "../assets/Rooms/LuxImpreial/swiperImages/9.webp"
+
+//lux elegant
+export {default as luxElegantSliderFst} from "../assets/Rooms/LuxElegant/swiperImages/1.webp"
+export {default as luxElegantSliderScd} from "../assets/Rooms/LuxElegant/swiperImages/2.webp"
+export {default as luxElegantSliderTrd} from "../assets/Rooms/LuxElegant/swiperImages/3.webp"
+export {default as luxElegantSliderFth} from "../assets/Rooms/LuxElegant/swiperImages/4.webp"
+export {default as luxElegantSliderFve} from "../assets/Rooms/LuxElegant/swiperImages/5.webp"
+export {default as luxElegantSliderSix} from "../assets/Rooms/LuxElegant/swiperImages/6.webp"
+export {default as luxElegantSliderSev} from "../assets/Rooms/LuxElegant/swiperImages/7.webp"
+export {default as luxElegantSliderEig} from "../assets/Rooms/LuxElegant/swiperImages/8.webp"
+
+
+
+
+
+
+
+
+
+
+
+

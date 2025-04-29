@@ -58,7 +58,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
                     src={img}
                     alt="room image"
                     className={cn(
-                      `${swiperImagesStyle} w-full h-full object`
+                      `${swiperImagesStyle} w-full h-full object-cover`
                     )}
                   />
                 </InViewWrapper>
