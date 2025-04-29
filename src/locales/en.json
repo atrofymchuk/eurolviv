@@ -416,8 +416,20 @@
             "success":"Form sent successfully",
             "error":"Something went wrong, please try again",
             "errorDate":"Select a valid date"
+        },
+        "letter":{
+            "subject":"Order a hall from the site",
+            "body":{
+                "name":"Name: ",
+                "phone":"Phone: ",
+                "email":"Email: ",
+                "date":"Date: ",
+                "guests":"Number of guests: ",
+                "needRooms":"Need rooms: ",
+                "yes":"Yes",
+                "no":"No"
+            }
         }
-    
     },
     
     "terasesState": {
@@ -1127,7 +1139,9 @@
               "genericError":"Something went wrong",
               "checkIn":"Select check-in date",
               "checkOut":"Select check-out date",
-              "guests":"Select number of guests"
+              "guests":"Select number of guests",
+
+              "emailSuccsess":"Success! We will contact you soon"
     
             },
            

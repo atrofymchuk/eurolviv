@@ -8,7 +8,6 @@ type ViewMenuButtonProps = {
 };
 
 export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonProps) => {
-  // Функція для визначення висоти хедера
   const getHeaderHeight = (): number => {
     const width = window.innerWidth;
     
@@ -40,7 +39,6 @@ export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonPro
       });
     }
     
-    // Викликаємо додатковий onClick, якщо він переданий
     if (onClick) onClick();
   };
 

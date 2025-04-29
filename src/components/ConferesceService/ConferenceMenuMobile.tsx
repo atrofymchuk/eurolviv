@@ -16,27 +16,28 @@ export const ConferenceMenuMobileCard = ({
   const { t } = useTranslation();
 
   const menuSections: MenuSection[] = [
-    { 
+    {
       titleKey: "conferenceService.conferenceMenu.menu.title1",
-      pdfPath: "/documents/Бенкетне меню.pdf"
+      pdfPath: "/documents/Фуршетне меню.pdf",
     },
-    { 
+    {
       titleKey: "conferenceService.conferenceMenu.menu.title",
-      pdfPath: "/documents/Каво-перерва.pdf"
+      pdfPath: "/documents/Обіди та вечері.pdf",
     },
-    { 
+    {
       titleKey: "conferenceService.conferenceMenu.menu.title2",
-      pdfPath: "/documents/Фуршетне меню.pdf"
+      pdfPath: "/documents/Каво-перерва.pdf",
     },
   ];
 
   const handleViewMenuClick = (pdfPath: string) => {
-    window.open(pdfPath, '_blank');
+    window.open(pdfPath, "_blank");
   };
 
   return (
     <div className="flex flex-col items-center relative w-full">
-      <img loading="lazy"
+      <img
+        loading="lazy"
         src={img}
         alt=""
         className="w-full h-[432px] sm:h-[500px] md:h-[600px] object-cover"
@@ -58,7 +59,7 @@ export const ConferenceMenuMobileCard = ({
             <p className="uppercase text-[#FFFFFF] text-[24px] sm:text-[32px] md:text-[42px] tracking-[-0.07em] leading-[104%] text-center max-w-[90%]">
               {t(section.titleKey)}
             </p>
-            <ViewMenuButton 
+            <ViewMenuButton
               className="w-[170px] flex justify-center items-center"
               onClick={() => handleViewMenuClick(section.pdfPath)}
             >

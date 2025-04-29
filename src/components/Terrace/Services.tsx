@@ -28,16 +28,15 @@ export const Services = () => {
     button: "buttons.celebrationMenu",
   };
 
-  const dishSlides = [table,tableTwo , tableThree, tableFrh];
+  const dishSlides = [table,tableTwo , tableThree, tableFrh,tableThree];
   const slides = [fish, steak, golubtsi,pie, pasta];
   return (
     <div>
       <div className="">
-        <Dishes slides={slides} content={menuContent}  />
+        <Dishes slides={slides} content={menuContent} sliderId="menu" />
       </div>
       <div className="">
-
-        <Dishes slides={dishSlides} content={celebrationContent} />
+        <Dishes slides={dishSlides} content={celebrationContent} sliderId="celebration" />
       </div>
     </div>
   );

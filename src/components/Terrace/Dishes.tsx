@@ -5,11 +5,14 @@ import { SwiperSlider } from "./Swiper";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { links } from "../../Constants/Links";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const Dishes = ({
   slides,
   content,
+  sliderId,
 }: {
   slides: string[];
+  sliderId?: string;
   content: {
     title: string;
     titleTwo?: string;
@@ -19,8 +22,8 @@ export const Dishes = ({
     isMenu?: boolean;
   };
 }) => {
-  const { t, i18n } = useTranslation();
-  const isEng = i18n.language === "en";
+  const { t } = useTranslation();
+  const isEng = useIsEnglish();
 
   return (
     <div className="w-full overflow-x-hidden overflow-y-hidden h-fit">
@@ -59,7 +62,11 @@ export const Dishes = ({
             className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] 
           text-[3.20vw] lg:pt-[18px] 2xl:pt-[0.94vw] pt-[22px] lg:pb-[30px] 2xl:pb-[1.56vw] pb-[22px]  2xl:w-1/3 w-8/9 mx-auto
           
-          ${content.isMenu ? "lg:w-[35%] 2xl:w-[30%]" : "lg:w-[45%] xl:w-[30%] 2xl:w-[25%]"}
+          ${
+            content.isMenu
+              ? "lg:w-[35%] 2xl:w-[30%]"
+              : "lg:w-[45%] xl:w-[30%] 2xl:w-[25%]"
+          }
           `}
           >
             {t(content.desc)}
@@ -76,30 +83,42 @@ export const Dishes = ({
               }`
             )}
           >
-            <Link 
-              to={links.menu}
-              target="_blank"
-              className={cn(
-                `uppercase  xl:text-[14px] 2xl:text-[0.73vw] text-center
+            {sliderId !== "celebration" ? (
+              <Link
+                to={links.menu}
+                target="_blank"
+                className={cn(
+                  `uppercase  xl:text-[14px] 2xl:text-[0.73vw] text-center
           rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${
             content.isMenu
               ? "xl:px-[20px] lg:w-[122px] 2xl:w-[6.35vw] xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B]  text-[#FFFFFF] hover:bg-[white] hover:text-[#8C331B] border border-[#8C331B]"
               : "border-[#8C331B] hover:text-white border text-[#8C331B] px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] hover:bg-[#8C331B] "
           },`,
-                {
-                  "lg:w-[175px]": isEng && content.isMenu,
-                  "lg:w-[122px]": !isEng && content.isMenu,
+                  {
+                    "2xl:w-[175px]": isEng && content.isMenu,
+                    "2xl:w-[122px]": !isEng && content.isMenu,
+                  }
+                )}
+              >
+                {t(content.button)}
+              </Link>
+            ) : (
+              <button
+                onClick={() =>
+                  window.open("/documents/Бенкетне меню.pdf", "_blank")
                 }
-              )}
-            >
-              {t(content.button)}
-            </Link>
+                className={`uppercase border-[#8C331B] hover:text-white border text-[#8C331B] 2xl:text-[0.73vw] rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer 
+                  ${isEng && content.isMenu ? "2xl:w-[122px] xl:w-[122px]" : "2xl:w-[175px] xl:w-[175px]"}`}
+              >
+                {t(content.button)}
+              </button>
+            )}
           </div>
         </div>
 
         <div className="absolute w-full h-[1000px] md:border-x overflow-y-hidden  border-[#B3B3B3] "></div>
 
-        <SwiperSlider slides={slides} />
+        <SwiperSlider slides={slides} id={sliderId} />
       </div>
     </div>
   );

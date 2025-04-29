@@ -10,7 +10,7 @@ export const TerraseHeader = () => {
 
       <img loading="lazy"
         src={
-          "https://www.figma.com/file/utxDpDAE3Ua28t2GxjQihO/image/afb341a54c55d79be5eaec708addc0b9c51c319a"
+          "https://uc729ddb932de4f212da4e1d974e.dl.dropboxusercontent.com/cd/0/inline/CotiilM-fs6d7Sv3MmwEzr772Nc2qcIM2J4W9Kzo3Ix0CwvRnidQDMLzonEHTUn4AZAaO5cUYSqsDMVt0GuykeNrGCGgRERsezNFGXw_7F1141fozE2RqYD8_DiBcoZlVDupV767hpVivE4xN-16yxjP/file#"
         }
         alt="headerImg"
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"

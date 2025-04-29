@@ -11,7 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import OrderModalForm from "./OrderModalForm";
 import { validationSchema } from "../../schemas/orderHall";
-
+import emailjs from "emailjs-com"; 
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 Modal.setAppElement("#root");
 
 export interface FormData {
@@ -29,7 +30,7 @@ const OrderModal = ({
   onCloseGlobalModal: () => void;
 }) => {
   const { t } = useTranslation();
-
+  const isEng = useIsEnglish()
   const {
     control,
     register,
@@ -45,14 +46,36 @@ const OrderModal = ({
 
   const onSubmit: SubmitHandler<FormData> = useCallback(
     (data) => {
-      console.log("form sent:", data);
-      toast.success(t("orderModal.toast.success"));
-      setTimeout(() => {
-        reset();
-        onCloseGlobalModal();
-      }, 5000);
+      const templateParams = {
+        user_name: data.name,
+        user_email: data.email,
+        user_phone: data.phone,
+        user_guests: data.guests,
+        user_date: data.date.toLocaleDateString("uk-UA"),
+        user_needRooms: data.needRooms ? "Так" : "Ні",
+        user_isEng: isEng ? "Так" : "Ні",
+      };
+  
+      emailjs
+        .send(
+          "service_giyw17p", 
+          "template_a3t0f14", 
+          templateParams,
+          "0A61tJFFXJIR6r1M1" 
+        )
+        .then(() => {
+          toast.success(t("orderModal.toast.success"));
+          setTimeout(() => {
+            reset();
+            onCloseGlobalModal();
+          }, 5000);
+        })
+        .catch((error) => {
+          console.error("Email send error:", error);
+          toast.error(t("orderModal.toast.error"));
+        });
     },
-    [t, reset, onCloseGlobalModal]
+    [t, reset, onCloseGlobalModal,isEng]
   );
 
   return (
@@ -61,7 +84,7 @@ const OrderModal = ({
         className="absolute lg:top-4 lg:right-4 top-1.5 -right-3 text-2xl hover:cursor-pointer"
         onClick={onCloseGlobalModal}
       >
-        <IoClose className="w-[32px] h-[32px]"/>
+        <IoClose className="w-[32px] h-[32px]" />
       </button>
       <div className="lg:items-center flex flex-col">
         <h2 className="lg:mb-[25px]  text-center lg:text-[48px] text-[32px] leading-[30px]  lg:leading-[39px] lg:w-[337px] lg:pt-[30px] items-center lg:tracking-[-0.07em] uppercase text-[#252526]">
@@ -74,7 +97,7 @@ const OrderModal = ({
         onSubmit={handleSubmit(onSubmit, () => {
           Object.values(errors).forEach((error) => {
             if (error?.message) {
-              toast.error(error.message, { position: "top-right" });
+              toast.error(t(error.message), { position: "top-right" });
             }
           });
           if (!getValues("date")) {
@@ -91,7 +114,8 @@ const OrderModal = ({
               {t("orderModal.date")}
             </label>
             <div className="bg-[#A47762] rounded-full p-2 w-fit mb-[6px] lg:mb-[0px]">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 className="text-xl cursor-pointer"
                 src={calendar}
                 onClick={() => setIsDatePickerOpen(!isDatePickerOpen)}
@@ -128,7 +152,7 @@ const OrderModal = ({
 
       <ToastContainer
         position="top-right"
-        style={{ zIndex: 100 }}
+        style={{ zIndex: 2000 }}
         autoClose={5000}
       />
     </div>

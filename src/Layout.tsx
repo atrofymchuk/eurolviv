@@ -18,7 +18,7 @@ import { ContactsModal } from "./components/Modals/ContactsModal";
 import { useModalStore } from "./store/useModalStore";
 import { PromoAlert } from "./components/common/PromoAlert";
 import { BookDirectAlert } from "./components/common/BookDirectAlert";
-
+import { Restaurant } from "./pages/Restaurant";
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ export const Layout = () => {
           <Route path="/conference-service" element={<ConferenceService />} />
           <Route
             path="/restaurant"
-            element={<InfinityScrollPage pageKey="restaurant" />}
+            element={<Restaurant />}
           />
           <Route
             path="/special-offers"

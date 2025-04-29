@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
+import { useEffect } from "react";
 
 import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
@@ -19,6 +20,19 @@ export const SpecialOffersModal = () => {
   const { offer } = useParams();
   const isPetOffer = offer?.includes("pet");
   const isEng = i18n.language === "en";
+
+  // Заблокувати прокрутку фону при відкритті модального вікна
+  useEffect(() => {
+    if (isOpenSpecialOfferModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpenSpecialOfferModal]);
 
   const pdfDocuments = {
     pathPublicOffer: isEng
@@ -48,12 +62,12 @@ export const SpecialOffersModal = () => {
     <Modal
       isOpen={isOpenSpecialOfferModal}
       onRequestClose={handleCloseModal}
-      className="fixed inset-0 flex items-center justify-center overflow-auto"
+      className="fixed inset-0 flex items-center justify-center overflow-hidden"
       overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
     >
-      <div className="bg-white md:w-[76.51%] w-[91%] h-[97%] md:h-full  min-h-[80vh] max-h-[100vh] relative lg:overflow-hidden flex flex-col 2xl:justify-center md:p-[25px] p-[22px] items-center overflow-auto">
+      <div className="bg-white md:w-[76.51%] w-[91%] max-h-[90vh] relative flex flex-col 2xl:justify-center md:p-[25px] p-[22px] items-center overflow-auto">
         <button
-          className="absolute top-0.5 right-0.5 text-3xl hover:cursor-pointer"
+          className="absolute top-0.5 right-0.5 text-3xl hover:cursor-pointer z-10"
           onClick={handleCloseModal}
         >
           <IoClose color="#8C331B" className="w-[20px] h-[20px]" />

@@ -15,11 +15,11 @@ export const ConferenceMenuCard = ({
   const getPdfPath = (text: string) => {
     switch(text) {
       case t("conferenceService.conferenceMenu.menu.title1"):
-        return "/documents/Бенкетне меню.pdf";
-      case t("conferenceService.conferenceMenu.menu.title"):
-        return "/documents/Каво-перерва.pdf";
-      case t("conferenceService.conferenceMenu.menu.title2"):
         return "/documents/Фуршетне меню.pdf";
+        case t("conferenceService.conferenceMenu.menu.title"):
+        return "/documents/Бенкетне меню.pdf";
+        case t("conferenceService.conferenceMenu.menu.title2"):
+        return "/documents/Каво-перерва.pdf";
       default:
         return "";
     }

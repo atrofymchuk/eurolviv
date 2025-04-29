@@ -66,7 +66,7 @@ export const SpecialOffersSlider = forwardRef<
           <div
             key={index}
             className={cn(
-              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[444px] xl:h-[38vw]
+              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[444px] xl:h-[37.5vw]
                2xl:h-[34.79vw] border-t border-[#C7C7C7] relative   ${
                  index !== specialOffers.length - 1 ? "border-r-0" : ""
                }`,
@@ -108,7 +108,7 @@ export const SpecialOffersSlider = forwardRef<
               >
                 <p
                   className={cn(
-                    `lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] flex xl:ms-4.5 2xl:ms-[0.94vw] xl:mt-4.5 2xl:mt-[0.94vw] ms-3 mt-3 w-fit
+                    `lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] flex xl:ms-4.5 2xl:ms-[0.94vw] xl:mt-[1.41vw] 2xl:mt-[0.94vw] ms-3 mt-3 w-fit
         uppercase lg:w-fit border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] md:leading-[16px] 2xl:py-[12px] z-10  
         md:py-[11px] py-[7px] px-[12px]  md:px-[10px] rounded-full font-cofo-medium 
         2xl:text-[0.83vw]  xl:py-1
@@ -129,7 +129,7 @@ export const SpecialOffersSlider = forwardRef<
               className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium 
             leading-[100%]
              text-[#252526] md:text-[22px] lg:text-[24px] 2xl:text-[1.25vw] mt-[5.33vw]
-              2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.66vw]"
+              2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.41vw]"
             >
               {t(el.title)}
             </h4>
@@ -150,7 +150,7 @@ export const SpecialOffersSlider = forwardRef<
             >
               {t(el.cardDesc)}
             </p>
-            <div className="flex flex-col text-start w-full 2xl:mb-1  mt-auto">
+            <div className="flex flex-col text-start w-full 2xl:mb-1 xl:mb-2  mt-auto">
               <Link
                 to="/special-offers"
                 className="mt-auto inline-flex items-center justify-center font-cofo-medium border border-[#8C331B]

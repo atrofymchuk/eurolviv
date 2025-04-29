@@ -45,7 +45,7 @@ export const Cards = () => {
               <Link
                 to={`/special-offers/${el.url}`}
                 onClick={() => onOpenModal('specialOffer')}
-                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[39.06vw] lg:h-[39.99vw] md:h-[520px] "
+                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[38.06vw] lg:h-[39.99vw] md:h-[520px] "
               >
                 <Card
                   src={el.src}
