@@ -116,7 +116,7 @@ export const AboutHome = () => {
 
         <div className="border-b border-[#C7C7C7] md:flex hidden"></div>
 
-        <div className="relative">
+        <div className="relative lg:hidden">
           <hr className="w-[1000px] absolute -translate-x-1/2  border-[#C7C7C7]" />
         </div>
         

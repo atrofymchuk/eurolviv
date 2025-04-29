@@ -87,7 +87,7 @@ export const Info = () => {
               >
                 {t("contacts.info.headingContactUs")}
               </h1>
-              <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5 mx-[5.23vw]">
+              <div className="lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px] lg:space-y-7 space-y-2.5 mx-[5.23vw] lg:mx-0">
                 <p
                   className="font-cofo-medium uppercase 
                   text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]"

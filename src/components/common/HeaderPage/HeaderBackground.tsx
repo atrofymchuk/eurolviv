@@ -14,7 +14,7 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
     switch (gradientStyle) {
       case "light":
       case "contacts":
-        return "bg-[linear-gradient(2.57deg,rgba(255,255,255,0)_0.95%,#FFFFFF_95.83%)]";
+        return isContacts ? "lg:bg-none bg-[linear-gradient(2.57deg,rgba(255,255,255,0)_0.95%,#FFFFFF_95.83%)]" : "bg-[linear-gradient(2.57deg,rgba(255,255,255,0)_0.95%,#FFFFFF_95.83%)]";
       case "home":
         return "";
       case "dark":
@@ -32,7 +32,7 @@ export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({
               fetchPriority="high"
               src={backgroundImage}
               alt="header background"
-              className="object-cover w-full h-full lg:block hidden"
+              className=" object-cover  w-full h-full lg:block hidden"
               style={{ objectPosition }}
             />
             <img
