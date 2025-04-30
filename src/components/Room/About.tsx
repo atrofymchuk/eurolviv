@@ -59,12 +59,12 @@ export const About = memo(
           <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-6 md:order-none " />
           
           <div
-            className=" h-full border-t 2xl:h-[13.67vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
+            className=" h-full border-t 2xl:h-[12.57vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
             flex flex-col justify-end md:justify-center  p-2.5 pb-[16px] 2xl:p-0
           lg:items-center order-2 md:order-none "
           >
             <div className="  text-[#8C331B] ">
-              <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.33vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center   ">
+              <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.5vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center   ">
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[3.2vw] items-center    ">
                   <img
                     loading="lazy"

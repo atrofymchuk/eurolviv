@@ -37,15 +37,17 @@ const OrderModal = ({
     handleSubmit,
     getValues,
     reset,
+
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(validationSchema),
   });
 
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
   const onSubmit: SubmitHandler<FormData> = useCallback(
     (data) => {
+      setIsLoading(true);
       const templateParams = {
         user_name: data.name,
         user_email: data.email,
@@ -73,6 +75,9 @@ const OrderModal = ({
         .catch((error) => {
           console.error("Email send error:", error);
           toast.error(t("orderModal.toast.error"));
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
     },
     [t, reset, onCloseGlobalModal,isEng]
@@ -147,7 +152,7 @@ const OrderModal = ({
           )}
         </div>
 
-        <OrderModalForm register={register} />
+        <OrderModalForm register={register} isLoading={isLoading} />
       </form>
 
       <ToastContainer

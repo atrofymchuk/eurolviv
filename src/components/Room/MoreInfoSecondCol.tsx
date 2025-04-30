@@ -55,7 +55,7 @@ export const MoreInfoSecondCol = ({
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw]
+          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw] w-[88%]
            leading-[104%] uppercase  md:hidden block px-[2.67vw] lg:px-5 mt-[42px]">
             {t("room.moreInfo.title")}
           </h1>

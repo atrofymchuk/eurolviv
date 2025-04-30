@@ -4,7 +4,7 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
   const { t } = useTranslation();
   const isMobile = window.innerWidth < 768;
   const isLuxTwoRoom = nameRoom.toLowerCase().includes("luxtworooms") || false;
-  console.log(isLuxTwoRoom);
+  const semilux = nameRoom.toLowerCase().includes("semilux") || false;
   return (
     <div
       className={cn(
@@ -16,6 +16,11 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
     lg:text-[60px]  2xl:font-normal xl:leading-[86%] leading-[90%] tracking-[-0.026em] flex flex-col 
     pb-[19px] md:pb-0 justify-end md:justify-center lg:h-full"
       >
+        {semilux && (
+          <span className="md:whitespace-nowrap md:font-cofo-medium">
+            {t(nameRoom)}
+          </span>
+        )}
         {!isLuxTwoRoom && isMobile && (
           <span className="md:whitespace-nowrap md:font-cofo-medium">
             {t(nameRoom)}

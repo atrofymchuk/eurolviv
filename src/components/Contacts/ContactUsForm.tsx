@@ -5,6 +5,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FormInput } from "./FormInput";
 import { schema } from "../../schemas/contactUs";
+import emailjs from "emailjs-com";
+import { useState } from "react";
 interface FormData {
   name: string;
   email: string;
@@ -13,7 +15,7 @@ interface FormData {
 
 export default function ContactUsForm() {
   const { t } = useTranslation();
-
+  const [isLoading, setIsLoading] = useState(false);
 
 
   const {
@@ -26,14 +28,35 @@ export default function ContactUsForm() {
   });
 
   const onSubmit = async (data: FormData) => {
-    try {
-      console.log("Sending data:", data);
-      toast.success(t("validation.contactUsSuccsses"));
-      reset();
-    } catch (err) {
-      console.error("Error sending data:", err);
-      toast.error(t("validation.contactUsError"));
-    }
+    setIsLoading(true);
+    const templateParams = {
+      user_email: data.email,
+      user_name: data.name,
+      user_message: data.message,
+    };
+    emailjs
+      .send(
+        "service_giyw17p",
+        "template_zy7q4qv",
+        templateParams,
+        "0A61tJFFXJIR6r1M1"
+      )
+      .then(() => {
+        toast.success(
+          t("validation.contactUsSuccsses") || "Email sent successfully"
+        );
+        reset();
+      })
+      .catch((error) => {
+        console.error("Email send error:", error);
+        toast.error(
+          t("validation.contactUsError") ||
+            "Failed to send email. Please try again later."
+        );
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -71,7 +94,7 @@ export default function ContactUsForm() {
 
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={isSubmitting || isLoading}
             className="uppercase font-cofo-medium mt-[12px] 2xl:max-w-[27.24vw] w-full text-sm py-[9px] text-[12px] xl:text-[16px] 
             2xl:text-[0.83vw] text-white border border-[#A47762] hover:text-[#A47762] hover:bg-white bg-[#A47762] rounded-full lg:py-[15px]"
           >

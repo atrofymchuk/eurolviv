@@ -47,14 +47,14 @@ export const ComfortsBlock = memo(
     return (
       <div
         className={cn(
-          `${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)]`
+          `${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)] 2xl:h-[43vw]  z-20`
         )}
       >
         <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
           <div
             className="grid  
             grid-cols-1 
-            md:grid-cols-[35.67%_30.65%_33.76%]
+            md:grid-cols-[35.6%_30.65%_33.76%]
             items-center justify-center 
             border-x border-[#C7C7C7]
             md:max-w-[90.83%]  w-full max-w-[81.9%]

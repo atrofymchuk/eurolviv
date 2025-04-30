@@ -4,9 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 
+
 export default function ContactMeForm() {
   const { t } = useTranslation();
-
+  const [isLoading, setIsLoading] = useState(false);  
   const [email, setEmail] = useState("");
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +16,7 @@ export default function ContactMeForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    setIsLoading(true);
     if (!email) {
       toast.error(t("validation.email") || "Please enter your email");
       return;
@@ -49,6 +50,9 @@ export default function ContactMeForm() {
           t("validation.contactUsError") ||
             "Failed to send email. Please try again later."
         );
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -67,10 +71,11 @@ export default function ContactMeForm() {
         />
         <button
           type="submit"
+          disabled={isLoading}
           className="bg-[#A47762] 2xl:max-h-[2.4vw] font-cofo-medium border uppercase border-[#A47762] hover:bg-[#ffff] 
         hover:text-[#A47762] py-2 px-6 rounded-full 2xl:text-[0.938vw] block w-full font-cofo hover:cursor-pointer"
         >
-          {t("buttons.send")}
+          {isLoading ? t("buttons.sending"):t("buttons.send")}
         </button>
       </form>
       <ToastContainer

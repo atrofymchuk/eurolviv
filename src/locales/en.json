@@ -1153,6 +1153,7 @@
             "buttons":{
               "restaurantMenu":"menu",
                 "send":"SEND",
+                "sending":"sending...",
             "celebrationMenu":"Banquet menu",
             "view":"view",
             "menu":"view menu",

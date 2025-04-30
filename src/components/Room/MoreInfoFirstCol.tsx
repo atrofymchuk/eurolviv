@@ -16,7 +16,7 @@ export const MoreInfoFirstCol = ({
       {isShowOtherInfo ? (
         <h1 className={`text-white 2xl:text-[2.5vw] xl:text-[2.8vw] px-[2.67vw] lg:px-0 tracking-[-0.07em] 
         text-[8.53vw]  leading-[104%] uppercase font-cofo md:pb-[15px] xl:pb-[2.98vw] lg:pb-[20px]  2xl:pb-[2.71vw]
-        ${isShowOtherInfo ? "2xl:w-[75%]": ""}
+        ${isShowOtherInfo ? "2xl:w-[75%] w-[95%] ": ""}
         `}>
           {t("room.moreInfo.title2")}
         </h1>
@@ -51,8 +51,9 @@ export const MoreInfoFirstCol = ({
           className="w-full 2xl:h-[26.67vw] xl:h-[28.98vw] lg:h-[300px] md:h-[250px] h-[69.87vw] px-[2.93vw_2.13vw] md:px-0  object-cover md:object-bottom object-[20%_80%]  "
         />
       )}
-      <p className={`text-white text-[3.73vw]  2xl:text-[1.05vw] xl:text-[1.09vw] md:text-[14px] gap-[1.07vw] px-[2.67vw_1.6vw] lg:text-[14px] uppercase mt-[32px]   md:px-0 flex md:hidden xl:ps-5
-         ${isShowOtherInfo ? "xl:ps-0 " : "w-[105%] lg:w-auto"}`}>
+      <p className={`text-white text-[3.73vw]  2xl:text-[1.05vw] xl:text-[1.09vw] md:text-[14px] gap-[1.07vw] px-[2.67vw_1.6vw] lg:text-[14px] uppercase mt-[32px]  
+       md:px-0 flex md:hidden xl:ps-5
+         ${isShowOtherInfo ? "xl:ps-0 " : "w-[95%] lg:w-auto"}`}>
         <img loading="lazy" src={parking} alt="parking" className="w-6 h-6" />
         {t("room.moreInfo.parking")}
       </p>
