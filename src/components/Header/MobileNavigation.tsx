@@ -98,6 +98,7 @@ export const MobileNavigation = ({
 
           <div className="w-full flex flex-col items-start gap-[8px] ">
             <NavLinks
+              scrolled={scrolled}
               navLinks={navLinks}
               isActiveLink={isActiveLink}
               handleMouseEnterRooms={handleMouseEnterRooms}
