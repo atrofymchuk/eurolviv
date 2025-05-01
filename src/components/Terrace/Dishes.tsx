@@ -107,8 +107,8 @@ export const Dishes = ({
                 onClick={() =>
                   window.open("/documents/Бенкетне меню.pdf", "_blank")
                 }
-                className={`uppercase border-[#8C331B] hover:text-white border text-[#8C331B] 2xl:text-[0.73vw] rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer 
-                  ${isEng && content.isMenu ? "2xl:w-[122px] xl:w-[122px]" : "2xl:w-[175px] xl:w-[175px]"}`}
+                className={`uppercase border-[#8C331B] hover:text-white border text-[#8C331B] 2xl:text-[0.73vw] w-[171px] h-[40px] rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer 
+                    ${isEng && content.isMenu ? "2xl:w-[122px] xl:w-[122px]" : "2xl:w-[175px] xl:w-[175px] "}`}
               >
                 {t(content.button)}
               </button>

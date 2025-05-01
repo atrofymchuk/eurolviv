@@ -23,7 +23,6 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
   index
 }) => {
   const { t } = useTranslation();
-  const isMobile = useCustomWidth(410, 450);
   const isCustomWidth = useCustomWidth(1500, 1700);
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -48,11 +47,10 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
     >
       <div className="absolute w-full h-[660px] -z-1 flex items-end justify-center ">
         <div
-          className={cn(`absolute h-[660px] xl:h-[50vw] 2xl:h-[46.15vw]  `, {
+          className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw]  h-[700px]`, {
             
-            "2xl:w-[93.1%] xl:w-[93.1%] lg:w-[93.1%] md:w-[93.1%] w-[89.07%]": !isTerrase,
+            "2xl:w-[93.1%] xl:w-[93.1%] lg:w-[93.1%] md:w-[93.1%] w-[89.05%]": !isTerrase,
             "2xl:w-[93.23%] xl:w-[93.23%] lg:w-[93.25%] md:w-[93.25%] w-[89.9%]": isTerrase,
-            "h-[700px] w-[89%]!": isMobile,
           })}
         >
           <div className="h-full grid grid-cols-1  w-full md:grid-cols-[49.9%_0.1%_50.03%]">
