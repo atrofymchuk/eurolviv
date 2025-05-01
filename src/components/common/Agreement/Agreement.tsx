@@ -17,7 +17,7 @@ export const Agreement = ({ handleAgree }: { handleAgree: () => void }) => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full 2xl:h-[14vh] h-[16vh] flex flex-col  bg-[#8C331B]/75 z-50">
+    <div className="fixed bottom-0 left-0 w-full 2xl:h-[14vh] h-[16vh] flex flex-col  bg-[#8C331B]/75 z-1000">
       <div className=" absolute 2xl:w-[90%] xl:w-[95%] mx-auto h-full border-x border-[#C7C7C7] self-center -z-1 w-[90%]"></div>
       <div className="flex flex-col items-center justify-center h-full">
         <p className="text-[#EDE8E5] text-center 2xl:text-[0.94vw] xl:text-[16px] 2xl:w-[50%] uppercase leading-[140%] text-[3.2vw] ">

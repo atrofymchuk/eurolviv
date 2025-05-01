@@ -58,13 +58,12 @@ export const MobileNavigation = ({
     };
   }, [menuOpen]);
 
-  if (!menuOpen) return null;
-
   return (
     <nav
       className={cn(
-        `fixed top-0 left-0 h-full bg-white flex flex-col   z-50 xl:hidden animate-fadeIn overflow-y-scroll  
-         w-[77.867vw] sm:w-[320px]`
+        `fixed top-0 left-0 h-full bg-white flex flex-col z-50 xl:hidden overflow-y-scroll  
+         w-[77.867vw] sm:w-[320px] transition-transform duration-300 ease-in-out`,
+        menuOpen ? "transform-none" : "transform -translate-x-full"
       )}
     >
       <div className="w-full flex flex-col  px-[21px_27px] justify-between mt-[51px] h-full">

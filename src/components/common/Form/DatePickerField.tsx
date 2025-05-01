@@ -57,6 +57,9 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
             <div className="relative w-full controller-wrapper">
               <DatePicker
                 ref={datePickerRef}
+                onInputClick={()=>{
+                  handleIconClick()
+                }}
                 locale={i18n.language}
                 calendarClassName={classNameCalendar}
                 onChange={(date) => {

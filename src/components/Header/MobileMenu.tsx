@@ -70,7 +70,7 @@ export const MobileBookingButton = ({
             {
               "text-white": !scrolled,
               "text-black": scrolled,
-              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled || pathname === "/about" 
+              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled  
             }
           )}
           aria-disabled={!scrolled}
