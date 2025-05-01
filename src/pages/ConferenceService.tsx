@@ -9,9 +9,10 @@ import cn from "classnames";
 
 export const ConferenceService = () => {
   const { halls } = useRoomStore();
+  const anchorId = ["big-hall", "small-hall", "launge-hall"];
 
   const sections = halls.flatMap((el, index) => [
-    <About key={cn(`about-${index}`)} item={el} isOnTop={index === 0} index={index} />,
+    <About key={cn(`about-${index}`)} item={el} isOnTop={index === 0} index={index} anchorId={anchorId[index]} />,
     <Equipment
       key={cn(`equipment-${index}`)}
       icons={el.icons}

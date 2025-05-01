@@ -10,9 +10,10 @@ type AboutToProps = {
   item: ConferenceService;
   isOnTop: boolean;
   index: number;
+  anchorId: string;
 };
 
-export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
+export const About = memo(({ item, isOnTop, index, anchorId }: AboutToProps) => {
   return (
     <div className="flex flex-col">
       <div
@@ -23,12 +24,13 @@ export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
         <GridBorders isOnTop={isOnTop} />
 
         <div
+        
           className={cn(`flex ${
             isOnTop ? "lg:border-x-0 border-x" : " border-x lg:border-x-0"
           } border-b 2xl:border-b-0 border-[#C7C7C7] flex-col h-full justify-center p-[2.67vw] 2xl:p-0 xl:items-center
           order-2 lg:order-none`)}
         >
-        <div className="text-[#8C331B] hidden lg:flex 2xl:mb-[1.6vw] xl:mb-4 lg:mb-2">
+        <div className="text-[#8C331B] hidden lg:flex 2xl:mb-[1.6vw] xl:mb-4 lg:mb-2"  >
             <RoomInfo
               area={item.area}
               capacity={item.capacity}
@@ -37,9 +39,9 @@ export const About = memo(({ item, isOnTop, index }: AboutToProps) => {
           </div>
         </div>
 
-        <RoomTitle title={item.title} size={item.size} isOnTop={isOnTop} />
+        <RoomTitle title={item.title} size={item.size} isOnTop={isOnTop} id={anchorId} />
 
-        <div className="border-e border-[#C7C7C7] 2xl:flex hidden"></div>
+        <div className="border-e border-[#C7C7C7] 2xl:flex hidden" ></div>
       </div>
 
       <div className="grid flex-col lg:grid-cols-[63.5%_36.5%] h-auto grid-cols-1  order-7 lg:order-none ">

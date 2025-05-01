@@ -37,6 +37,7 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
   };
 
   const isEng = i18n.language === "en";
+  const anchorId = ["small-hall", "big-hall", "launge-hall"];
 
   return (
     <div className="w-full ms-[8%] z-10">
@@ -81,7 +82,7 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
             </div>
             <div className="text-center flex items-center justify-center pt-[12px] lg:pt-[37px] relative">
               <Link
-                to="/conference-service"
+                to={`/conference-service#${anchorId[index]}`}
                 className="w-fit font-cofo-medium px-5 py-2.5 text-[#8c331b] hover:bg-[#8c331b] hover:text-white border-[#8C331B] border rounded-full uppercase text-[12px]"
               >
                 {t("buttons.details")}

@@ -16,15 +16,12 @@ import { useState } from "react";
 import { MobileBottomMenu } from "./components/MobileBottomMenu/MobileBottomMenu";
 import { ContactsModal } from "./components/Modals/ContactsModal";
 import { useModalStore } from "./store/useModalStore";
-import { PromoAlert } from "./components/common/PromoAlert";
 import { BookDirectAlert } from "./components/common/BookDirectAlert";
 import { Restaurant } from "./pages/Restaurant";
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const { activeModal } = useModalStore();
-  const isMobile = window.innerWidth < 768;
-  const [isBookDirectVisible, setIsBookDirectVisible] = useState(false);
 
   if (location.pathname === "/admin") {
     RedirectToAdminPanel();
@@ -75,10 +72,9 @@ export const Layout = () => {
         <BaseModal />
         {!isBookingPage && <MobileBottomMenu/>}
         {activeModal === "contacts" && <ContactsModal />}
-        {!isMobile && (
+        { (
           <>
-            <BookDirectAlert delay={25000} onVisibilityChange={setIsBookDirectVisible} />
-            {!isBookDirectVisible && <PromoAlert delay={10000} />}
+            <BookDirectAlert delay={15000} />
           </>
         )}
       </div>

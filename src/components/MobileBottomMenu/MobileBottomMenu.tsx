@@ -13,17 +13,18 @@ export const MobileBottomMenu = () => {
   const { t } = useTranslation();
   const { onOpenModal } = useModalStore();
 
-
   const menuItems = [
     {
       icon: <img loading="lazy" src={menu} alt="menu" />,
       label: t("phoneBottomMenu.menu"),
       path: links.menu,
+      external: true,
     },
     {
       icon: <img loading="lazy" src={calendarBooking} alt="calendar" />,
       label: t("phoneBottomMenu.book"),
       path: links.bookTable,
+      external: true,
     },
     {
       icon: <img loading="lazy" src={callUs} alt="call" />,

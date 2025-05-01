@@ -3,6 +3,7 @@ import { InViewWrapper } from "../utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { square, guest } from "../../store/exportsIcons";
 import cn from "classnames";
+import { useState } from "react";
 
 type HallCardProps = {
   hall: {
@@ -18,11 +19,19 @@ type HallCardProps = {
 
 export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
   const { t } = useTranslation();
+  const [onHover, setOnHover] = useState<number | null>(null);
+
+  const anchorId = ["small-hall", "big-hall", "launge-hall"];
+
   return (
     <div
-      className={`flex flex-col items-center justify-center w-fit h-fit pb-20 ${
-        index !== 1 ? "-translate-y-6" : ""
-      } `}
+      onMouseEnter={() => setOnHover(index)}
+      onMouseLeave={() => setOnHover(null)}
+      className={`flex flex-col items-center justify-center w-fit h-fit 
+        ${
+          onHover === index ? "scale-105" : "scale-100"
+        } transition-all duration-300 ease-in-out
+        ${index !== 1 ? "-translate-y-6" : "pb-20"} `}
     >
       <InViewWrapper>
         <img
@@ -66,20 +75,31 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
             {isEng ? t(hall.capacity) : t(hall.capacity).slice(0, -2) + "."}
           </p>
         </div>
-        {index === 1 && (
-          <div className="text-center flex items-center justify-center pt-[37px] relative">
+        {
+          <div
+            className={cn(
+              `text-center items-center justify-center ${
+                index === 1 ? "pt-[37px]" : "pt-[25px]"
+              } relative transition-opacity duration-300 ease-in-out`,
+              {
+                "flex opacity-100": onHover === index,
+                "opacity-0": onHover !== index && index !== 1,
+              }
+            )}
+          >
             <Link
-              to="/conference-service"
-              className={`w-fit xl:py-[10px]   font-cofo-medium flex 
-                justify-center items-center  px-5 py-2 text-[#8c331b]
-                 hover:bg-[#8c331b] hover:text-white border-[#8C331B] border 
-                 rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]
-                 ${isEng ? "2xl:w-[8.72vw]" : "xl:px-[30.5px]"} `}
+              to={`/conference-service#${anchorId[index]}`}
+              className={`w-fit xl:py-[10px] font-cofo-medium flex 
+                justify-center items-center px-5 py-2 text-[#8c331b]
+                border-[#8C331B] border rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]
+                ${isEng ? "2xl:w-[8.72vw]" : "xl:px-[30.5px]"}
+                transition-all duration-300 hover:bg-[#8c331b] hover:text-white
+                hover:shadow-lg hover:scale-105 hover:-translate-y-1`}
             >
               {t("buttons.details")}
             </Link>
           </div>
-        )}
+        }
       </div>
     </div>
   );

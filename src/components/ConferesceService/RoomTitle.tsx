@@ -6,13 +6,14 @@ type RoomTitleProps = {
   title: string;
   size: string;
   isOnTop: boolean;
+  id: string;
 };
 
-export const RoomTitle = memo(({ title, size, isOnTop }: RoomTitleProps) => {
+export const RoomTitle = memo(({ title, size, isOnTop, id }: RoomTitleProps) => {
   const { t } = useTranslation();
   
   return (
-    <div className="flex flex-col-reverse lg:flex-row 2xl:items-center justify-center order-5 lg:order-none h-full">
+    <div className="flex flex-col-reverse lg:flex-row 2xl:items-center justify-center order-5 lg:order-none h-full" id={id}>
       <div
         className={cn(
           `${
