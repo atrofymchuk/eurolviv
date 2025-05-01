@@ -59,7 +59,7 @@ export const StorySection = () => {
                 )}
               >
                 <span
-                  className={`tracking-[-0.07em] lg:hidden ${
+                  className={`tracking-[-0.07em] lg:hidden font-cofo-medium ${
                     isEng ? "inline" : "block"
                   }`}
                 >

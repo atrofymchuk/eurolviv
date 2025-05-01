@@ -1,0 +1,29 @@
+.react-datepicker__day{
+    color: #A47762;
+    font-family: "CoFoSans-Medium";
+}
+.react-datepicker__day--selected{
+    color: #A47762;
+}
+.react-datepicker__day--selected{
+    color: #A47762;
+    font-weight: bold;
+    background-color: rgb(186.25, 217.0833333333, 241.25);
+}
+
+.react-datepicker__day--today{
+    font-weight: normal;
+}
+.react-datepicker__day--disabled{
+    color: #9e9693;
+}
+
+.react-datepicker__day-name{
+    color: #A47762;
+    font-family: "CoFoSans-Medium";
+
+}
+
+.react-datepicker__current-month{
+    color: #9b6a5d;
+}

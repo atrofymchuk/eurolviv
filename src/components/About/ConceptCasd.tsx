@@ -47,7 +47,9 @@ export const ConceptCasd = ({
           ${isSpecialMobileWidth ? " h-[122.667vw]" : "h-[124.667vw]"}
          ${isSpecialWidth ? "xl:h-[520px]" : "xl:h-[460px]"}`}
       >
-        <div className={`${index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}>
+        <div className={`
+          ${index === 2 ? "*:inline lg:*:block w-[50%]" : ""}
+          ${!isEng && index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}>
 
         <h1
           className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] tracking-[-0.07em] font-cofo-medium ${
@@ -111,7 +113,7 @@ export const ConceptCasd = ({
         <div className="mt-auto">
           <DetailsLink
             to={to}
-            className={`2xl:text-[0.833vw] 2xl:h-[46px]  w-[141px] h-[40px] flex items-center justify-center ${
+            className={`2xl:text-[0.833vw] 2xl:h-[46px] 2xl:w-[170px]  w-[141px] h-[40px] flex 2xl:px-0! items-center justify-center ${
               
               isSpecialWidth ? "xl:text-[.9vw]" : "xl:text-[0.9vw]"
             }`}

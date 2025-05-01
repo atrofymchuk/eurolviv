@@ -7,6 +7,7 @@ import { DatePickerFieldProps } from "../../../types/headerTypes";
 import { useState, useRef } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { FormData } from "../../../types/headerTypes";
+import "./datePickerStyles.css";
 
 export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   name,

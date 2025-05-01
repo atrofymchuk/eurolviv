@@ -32,8 +32,8 @@ export const Rewies = () => {
             </h1>
             <div className="flex flex-col xl:flex-row gap-4 xl:gap-[24px]  text-start xl:translate-y-[-10px]  items-center xl:mt-[38px] mt-[15px] ">
               <p
-                className="uppercase  text-[3.2vw] sm:text-sm md:text-lg 2xl:text-[0.84vw] xl:text-[0.9vw] text-[#E9E9E9]  w-[78.133vw]
-                 2xl:w-[24.688vw] xl:w-[61%]  2xl:ps-[2.031vw] xl:ps-[2.302vw] text-center xl:text-left"
+                className={`uppercase  text-[3.2vw] sm:text-sm md:text-lg 2xl:text-[0.84vw] xl:text-[0.9vw] text-[#E9E9E9]  w-[78.133vw]
+                   2xl:ps-[2.031vw] xl:ps-[2.302vw] text-center xl:text-left ${isEng ? "xl:w-[65%] 2xl:w-[55%]" : "2xl:w-[24.688vw] xl:w-[61%]"}`}
               >
                 {t("reviews.desc")}
               </p>

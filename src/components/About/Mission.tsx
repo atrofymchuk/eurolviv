@@ -37,7 +37,7 @@ export const Mission = () => {
             </h1>
             <p
               className={`uppercase 2xl:w-[41.719vw] mx-auto text-[3.2vw] tracking-[-0.01em]  leading-[126%] md:text-[14px] lg:text-[16px] 
-              2xl:text-[0.938vw] lg:pt-[29px] pt-[47px] xl:px-0 w-[95%]
+              2xl:text-[0.938vw] lg:pt-[29px] pt-[47px] xl:px-0  ${isEng ? "w-[90%]" : "w-[95%]"}
                ${
                  isCustomWidth
                    ? "xl:text-[14px] xl:w-[621px]"
@@ -47,7 +47,7 @@ export const Mission = () => {
               {t("about.mission.desc.0")}
             </p>
             <p
-              className={`uppercase 2xl:w-[40.719vw] mx-auto text-[3.2vw] tracking-[-0.01em] leading-[126%] w-[95%]
+              className={`uppercase 2xl:w-[40.719vw] mx-auto text-[3.2vw] tracking-[-0.01em] leading-[126%] ${isEng ? "w-[86%]" : "w-[95%]"}
               md:text-[14px] lg:text-[16px] 2xl:text-[0.938vw] pt-5  xl:pb-[20px] lg:pb-3 pb-[37px] xl:px-0 
               ${
                 isCustomWidth
@@ -71,20 +71,20 @@ export const Mission = () => {
           <p
             className={`text-[#8C331B] uppercase tracking-[-0.04em] md:w-[400px] lg:w-[500px]  
  text-[3.2vw] md:text-[16px] lg:text-[18px]  2xl:text-[1.042vw] font-cofo-medium leading-[126%] text-center 
-          ${isCustomMobile ? "w-[75%]" : " "}
-          ${!isCustomMobile && !isCustomMobileSecondary ? "w-[75%]" : " "}
-          ${isCustomMobileSecondary ? "w-[75%]" : ""}
+          ${!isEng && isCustomMobile ? "w-[75%]" : " "}
+          ${!isEng && !isCustomMobile && !isCustomMobileSecondary ? "w-[75%]" : " "}
+          ${!isEng && isCustomMobileSecondary ? "w-[75%]" : ""}
           ${
             isCustomWidth
               ? "xl:text-[16.5px]  xl:w-[39%]  "
               : "xl:w-[40%] xl:text-[14px] "
           }
-          ${isEng ? "2xl:w-[40%] " : "2xl:w-[38%] "}`}
+          ${isEng ? "w-[77%]" : "2xl:w-[37%] "}`}
           >
             {isMobile ? (
               t("about.mission.desc2.0")
             ) : (
-              <span>
+              <span className="flex flex-col justify-center items-center">
                 <br className="hidden lg:block" />
                 {t("about.mission.desc2PC.0")}
                 <br className="hidden lg:block" />

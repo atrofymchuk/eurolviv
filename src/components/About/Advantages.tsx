@@ -15,7 +15,7 @@ export const Advantages = () => {
 
 
   return (
-    <section className="flex justify-center items-center bg-[#A47762]  *:font-cofo">
+    <section className="flex justify-center items-center bg-[#A47762]">
       <div className={`container mx-auto border-x border-[#C29986] grid grid-cols-1 lg:grid-cols-[33.43%_28.72%_37.85%]  items-center 2xl:h-[35.625vw]  max-w-[89.58%] gap-0 ${isCustomWidth ? "xl:h-[584px]" : "xl:h-[500px]"}`}>
         <div className="h-full  flex md:justify-start sm:justify-center">
           <div className="flex flex-col xl:ps-[21px] ps-[16px] sm:items-center  lg:items-start lg:text-start">
@@ -27,7 +27,7 @@ export const Advantages = () => {
               {t("about.advantages.title")}
             </h1>
             <ul
-              className={`uppercase pt-[29px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF] text-[3.733vw] 2xl:text-[1.042vw] xl:gap-y-1 gap-y-[2px] gap-[6px] 2xl:gap-[9px] ${
+              className={`uppercase pt-[29px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#E1E1E1] text-[3.733vw] 2xl:text-[1.042vw] xl:gap-y-1 gap-y-[2px] gap-[6px] 2xl:gap-[9px] ${
                 isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
               }`}
             >
@@ -80,7 +80,7 @@ export const Advantages = () => {
               </span>
             </h1>
             <ul
-              className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#FFFFFF]
+              className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#E1E1E1]
                  text-[3.733vw] 2xl:text-[1.042vw]  xl:gap-y-1 gap-y-[2px] ${
                 isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
               }`}

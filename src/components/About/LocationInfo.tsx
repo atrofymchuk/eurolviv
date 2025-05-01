@@ -24,7 +24,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.title")}
         </h1>
         <p className={`text-[#8F8F8F] text-[3.2vw]  tracking-[-0.01em]
-          ${isEng ? "2xl:w-[70%] xl:w-[80%]" : "2xl:max-w-[26.04vw] xl:w-[80%] 2xl:mt-[61px]"} leading-[110%] xl:text-[1.25vw] 2xl:text-[1.042vw] px-5 md:px-0  text-center uppercase lg:text-left  
+          ${isEng ? "2xl:w-[70%] xl:w-[80%]" : "2xl:max-w-[26.04vw] xl:w-[80%] 2xl:mt-[61px] "} leading-[110%] xl:text-[1.25vw] 2xl:text-[1.042vw] px-5 md:px-0  text-center uppercase lg:text-left  
            ${isSpecialWidth ? "mt-12" : "mt-10"}`}>
           <span className="text-[#8C331B] font-cofo-medium">
             {t("about.whereWeAre.desc.1")}
@@ -32,7 +32,7 @@ export const LocationInfo = ({ t }: { t: TFunction }) => {
           {t("about.whereWeAre.desc.2")}
         </p>
         <p className={`font-cofo-medium text-[3.2vw] tracking-[-0.04em] leading-[115%] xl:text-[1.25vw] 2xl:text-[1.042vw] text-center lg:text-left
-           ${isEng ? "xl:w-[50%] 2xl:w-[45%] 2xl:pt-[100px] w-[70%]" : "w-4/5 xl:w-[80%] 2xl:w-2/3"} uppercase pt-4  mx-auto lg:mx-0 `}>
+           ${isEng ? "xl:w-[50%] 2xl:w-[45%] 2xl:pt-[100px] xl:pt-[50px] w-[70%]" : "w-4/5 xl:w-[80%] 2xl:w-2/3"} uppercase pt-4  mx-auto lg:mx-0 `}>
           {t("about.whereWeAre.rating")}
         </p>
         <div className={`flex  justify-center text-[3.2vw]! lg:justify-start mb-[4px] ${isSpecialWidth ? "mt-6 lg:mt-0" : "mt-0"}`}>

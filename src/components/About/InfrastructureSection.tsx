@@ -15,7 +15,7 @@ export const InfrastructureSection = ({ t }: { t: TFunction }) => {
         <h1 className={`md:font-cofo-medium  ${isSpecialWidth ? "xl:text-[70px]" : "xl:text-[64px]"} uppercase text-[8.533vw] 2xl:text-[5.208vw]   2xl:pt-[1.3vw] xl:pt-[1.3vw] text-center xl:text-left leading-[94%] lg:leading-[81%] tracking-[-0.07em] w-2/3 pt-[6px]`}>
           {t("about.whereWeAre.placesTitle")}
         </h1>
-        <p className={`text-[#252526] text-[3.2vw] xl:text-[1.10vw]  2xl:text-[0.938vw] ${isEng ? "w-[90%] 2xl:w-[70%]" : "lg:w-[73%] sm:w-[80%] xl:w-[82%] 2xl:w-[70%]"}
+        <p className={`text-[#252526] text-[3.2vw] xl:text-[1.10vw]  2xl:text-[0.938vw] ${isEng ? "w-[90%] 2xl:w-[70%] xl:w-[82%]" : "lg:w-[73%] sm:w-[80%] xl:w-[82%] 2xl:w-[70%]"}
            pt-[18px] 2xl:pt-[4.063vw] xl:pt-[2.5vw] text-center lg:text-left uppercase  tracking-[-0.01em] leading-[120%] `}>
           {t("about.whereWeAre.infrastructureDesc")}
         </p>
