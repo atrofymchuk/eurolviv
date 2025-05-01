@@ -21,23 +21,32 @@ import { Restaurant } from "./pages/Restaurant";
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { activeModal } = useModalStore();
+  const { activeModal, url } = useModalStore();
 
   if (location.pathname === "/admin") {
     RedirectToAdminPanel();
     return <OnLoadingSpin />;
   }
 
+
   const isBookingPage = location.pathname === "/booking";
 
   return (
     <>
-      {!isBookingPage && <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      {!isBookingPage && (
+        <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      )}
       <ScrollToTop />
       <div className="relative lg:pb-0 pb-[60px]  ">
         <Routes>
-          <Route path="/about" element={<InfinityScrollPage pageKey="about" />} />
-          <Route path="/rooms" element={<InfinityScrollPage pageKey="rooms" />} />
+          <Route
+            path="/about"
+            element={<InfinityScrollPage pageKey="about" />}
+          />
+          <Route
+            path="/rooms"
+            element={<InfinityScrollPage pageKey="rooms" />}
+          />
           <Route path="/" element={<InfinityScrollPage pageKey="home" />} />
           <Route path="/rooms/:roomType" element={<Room />} />
           <Route
@@ -45,10 +54,7 @@ export const Layout = () => {
             element={<InfinityScrollPage pageKey="contacts" />}
           />
           <Route path="/conference-service" element={<ConferenceService />} />
-          <Route
-            path="/restaurant"
-            element={<Restaurant />}
-          />
+          <Route path="/restaurant" element={<Restaurant />} />
           <Route
             path="/special-offers"
             element={<InfinityScrollPage pageKey="specialOffers" />}
@@ -58,7 +64,6 @@ export const Layout = () => {
             element={
               <>
                 <InfinityScrollPage pageKey="specialOffers" />
-                <SpecialOffersModal />
               </>
             }
           />
@@ -70,13 +75,14 @@ export const Layout = () => {
         </Routes>
         {!isBookingPage && <Footer />}
         <BaseModal />
-        {!isBookingPage && <MobileBottomMenu/>}
+        {!isBookingPage && <MobileBottomMenu />}
         {activeModal === "contacts" && <ContactsModal />}
-        { (
+        {
           <>
             <BookDirectAlert delay={15000} />
           </>
-        )}
+        }
+        {url && <SpecialOffersModal />}
       </div>
     </>
   );

@@ -20,13 +20,12 @@ export const Card = ({
   title,
   desc,
   classes,
-  offer,
   url,
+  offer,
   handleCardClick,
 }: CardToProps) => {
   const { t, i18n } = useTranslation();
   const isMobileWidth = useCustomWidth(350, 450);
-
   const isEng = i18n.language === "en";
 
   const translatedTexts = useMemo(
@@ -101,6 +100,7 @@ export const Card = ({
       <div className="md:mt-auto pt-[23px] flex lg:hidden ps-3.25 pb-5">
         <button
           onClick={(e) => {
+            console.log(url, '2')
             e.preventDefault();
             e.stopPropagation();
             handleCardClick(url);

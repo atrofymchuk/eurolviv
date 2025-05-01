@@ -1,4 +1,3 @@
-import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
 import { useEffect } from "react";
@@ -13,15 +12,13 @@ import cn from "classnames";
 Modal.setAppElement("#root");
 
 export const SpecialOffersModal = () => {
-  const navigate = useNavigate();
-  const { onCloseGlobalModal, isOpenSpecialOfferModal } = useModalStore();
+  const { onCloseGlobalModal, isOpenSpecialOfferModal, url } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
   const { t, i18n } = useTranslation();
-  const { offer } = useParams();
-  const isPetOffer = offer?.includes("pet");
+  
+  const isPetOffer = url?.includes("pet");
   const isEng = i18n.language === "en";
 
-  // Заблокувати прокрутку фону при відкритті модального вікна
   useEffect(() => {
     if (isOpenSpecialOfferModal) {
       document.body.style.overflow = "hidden";
@@ -46,12 +43,11 @@ export const SpecialOffersModal = () => {
 
   const handleCloseModal = () => {
     onCloseGlobalModal();
-    navigate("/special-offers");
   };
 
   let data;
-  if (offer) {
-    data = getSpecialOffer(offer);
+  if (url) {
+    data = getSpecialOffer(url);
   }
 
   if (!data) {
@@ -62,23 +58,24 @@ export const SpecialOffersModal = () => {
     <Modal
       isOpen={isOpenSpecialOfferModal}
       onRequestClose={handleCloseModal}
-      className="fixed inset-0 flex items-center justify-center overflow-hidden"
-      overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
+      className="fixed inset-0 flex items-center justify-center overflow-y-auto   "
+      overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center "
     >
-      <div className="bg-white md:w-[76.51%] w-[91%] max-h-[90vh] relative flex flex-col 2xl:justify-center md:p-[25px] p-[22px] items-center overflow-auto">
+      <div className="bg-white md:w-[76.51%] w-[91%] max-h-[95vh] relative flex flex-col 2xl:justify-center  
+       2xl:pt-[5vw]   md:p-[25px] p-[22px] items-center overflow-auto">
         <button
-          className="absolute top-0.5 right-0.5 text-3xl hover:cursor-pointer z-10"
+          className="absolute top-1 right-1 text-3xl hover:cursor-pointer z-10 "
           onClick={handleCloseModal}
         >
           <IoClose color="#8C331B" className="w-[20px] h-[20px]" />
         </button>
 
-        <div className="relative w-full">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%] to-[#252526]"></div>
+        <div className="relative w-full ">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%]  to-[#252526]"></div>
           <InViewWrapper>
             <img loading="lazy"
               src={data.src}
-              className="w-full h-[351px] md:max-h-[50vh] xl:h-[70vh] object-cover object-center rounded-t-lg"
+              className="w-full h-[351px] md:max-h-[50vh] xl:h-[60vh] 2xl:h-[60vh] object-cover object-center rounded-t-lg"
             />
           </InViewWrapper>
           <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10 ">

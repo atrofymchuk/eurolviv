@@ -6,7 +6,8 @@ export const useModalStore = create<ModalStore>((set) => ({
   isOpenMenuModal: false,
   isOpenSpecialOfferModal: false,
   activeModal: null,
-  onOpenModal: (modal: string) => {
+  url: null,
+  onOpenModal: (modal: string, url?: string) => {
     if (modal === "order") {
       set({ isOpenOrder: true, activeModal: modal });
     } else if (modal === "menu") {
@@ -14,7 +15,8 @@ export const useModalStore = create<ModalStore>((set) => ({
     } else if (modal === "contacts") {
       set({ activeModal: modal });
     } else {
-      set({ isOpenSpecialOfferModal: true, activeModal: modal });
+      set({ isOpenSpecialOfferModal: true, activeModal: modal, url});
+
     }
   },
   onCloseGlobalModal: () => {

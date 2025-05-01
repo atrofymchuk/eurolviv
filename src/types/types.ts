@@ -148,7 +148,8 @@ export interface ModalStore {
   isOpenMenuModal: boolean;
   isOpenSpecialOfferModal: boolean;
   activeModal: string | null;
-  onOpenModal: (modal: string) => void;
+  url: string | null;
+  onOpenModal: (modal: string, url?: string) => void;
   onCloseGlobalModal: () => void;
 }
 

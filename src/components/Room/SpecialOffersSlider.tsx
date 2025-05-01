@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
@@ -7,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { forwardRef, useState } from "react";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
-
+import { useModalStore } from "../../store/useModalStore";
 type SpecialOffersSliderToProps = {
   ref: Slider | null;
   isHome: boolean;
@@ -20,7 +19,7 @@ export const SpecialOffersSlider = forwardRef<
   const [currentSlide, setCurrentSlide] = useState(0);
   const { specialOffers } = useSpecialOffersStore();
   const { t, i18n } = useTranslation();
-
+  const { onOpenModal } = useModalStore();
   const settings = {
     speed: 800,
     slidesToShow: 4,
@@ -109,12 +108,12 @@ export const SpecialOffersSlider = forwardRef<
                 <p
                   className={cn(
                     `lg:left-[35px] md:left-[28px] lg:top-[35px] md:top-[28px] flex xl:ms-4.5 2xl:ms-[0.94vw] xl:mt-[1.41vw] 2xl:mt-[0.94vw] ms-3 mt-3 w-fit
-        uppercase lg:w-fit border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] md:leading-[16px] 2xl:py-[12px] z-10  
-        md:py-[11px] py-[7px] px-[12px]  md:px-[10px] rounded-full font-cofo-medium 
-        2xl:text-[0.83vw]  xl:py-1
-        xl:text-[0.78vw]
-        lg:text-[16px] md:text-[13px] 
-        text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
+                      uppercase lg:w-fit border bg-[#FFFFFF] text-[#A47762] lg:leading-[20px] md:leading-[16px] 2xl:py-[12px] z-10  
+                      md:py-[11px] py-[7px] px-[12px]  md:px-[10px] rounded-full font-cofo-medium 
+                      2xl:text-[0.83vw]  xl:py-1
+                      xl:text-[0.78vw]
+                      lg:text-[16px] md:text-[13px] 
+                      text-[10px] leading-[12px] break-words md:[text-wrap:normal] [text-wrap:balance] `,
                     {
                       "xl:me-[9vw] 2xl:me-[9.5vw]": index === 0 && isEng,
                     }
@@ -151,8 +150,8 @@ export const SpecialOffersSlider = forwardRef<
               {t(el.cardDesc)}
             </p>
             <div className="flex flex-col text-start w-full 2xl:mb-1 xl:mb-2  mt-auto">
-              <Link
-                to="/special-offers"
+              <button
+                onClick={() => onOpenModal('specialOffer', el.url)}
                 className="mt-auto inline-flex items-center justify-center font-cofo-medium border border-[#8C331B]
                  text-[#8C331B] px-5.75 py-2.5 xl:px-7.25 xl:py-3 rounded-full uppercase w-fit
                 text-[3.2vw] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.83vw] xl:w-[11vw] xl:h-[2.8vw]
@@ -160,7 +159,7 @@ export const SpecialOffersSlider = forwardRef<
                  lg:w-[170px] 2xl:w-[8.85vw] 2xl:h-[2.4vw] lg:h-[46px]"
               >
                 {t("buttons.details")}
-              </Link>
+              </button>
             </div>
           </div>
         ))}

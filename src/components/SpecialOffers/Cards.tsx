@@ -2,16 +2,15 @@ import { useModalStore } from "../../store/useModalStore";
 import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
 import { Card } from "./Card";
 import cn from "classnames";
-import { useNavigate, Link } from "react-router-dom";
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
   const { onOpenModal } = useModalStore();
-  const navigate = useNavigate();
 
   const handleCardClick = (url: string) => {
-    onOpenModal("specialOffer");
-    navigate(`/special-offers/${url}`);
+    onOpenModal("specialOffer", url);
+
   };
+
 
   return (
     <div className="flex items-center justify-center  md:pb-[82px] ">
@@ -29,7 +28,6 @@ export const Cards = () => {
               ? index >= specialOffers.length - 2
               : index === specialOffers.length - 1;
           const isMdSecondColumn = index % 2 === 1 && specialOffers.length > 1;
-
           return (
             <div
               key={el.title}
@@ -42,10 +40,9 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b border-s-0! " : ""}
               `)}
             >
-              <Link
-                to={`/special-offers/${el.url}`}
-                onClick={() => onOpenModal('specialOffer')}
-                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[38.06vw] lg:h-[39.99vw] md:h-[520px] "
+              <button
+                onClick={() => onOpenModal('specialOffer', el.url)}
+                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex text-start flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[38.06vw] lg:h-[39.99vw] md:h-[520px] "
               >
                 <Card
                   src={el.src}
@@ -57,7 +54,7 @@ export const Cards = () => {
                   handleCardClick={handleCardClick}
                   index={index}
                 />
-              </Link>
+              </button>
             </div>
           );
         })}
