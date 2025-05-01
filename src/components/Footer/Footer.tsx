@@ -28,7 +28,10 @@ const { isOpenOrder } = useModalStore()
   const pdfDocuments = {
     pathPublicOffer: isEng
       ? "/documents/Public offer agreement.pdf"
-      : "/documents/Договір публічної оферти .pdf",
+      : "/documents/Договір публічної оферти .pdf",
+      pathPrivacyPolicy: isEng
+      ? "/documents/Privacy Policy.pdf"
+      : "/documents/Політика конфіденційності.pdf",
   };
 
   return (
@@ -158,7 +161,9 @@ const { isOpenOrder } = useModalStore()
                  2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-9vw] xl:bottom-[-10.6vw]
               lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34 lg:block hidden"
               >
-                {t("footer.privacyPolicy")}
+                <Link to={pdfDocuments.pathPrivacyPolicy} target="_blank">
+                  {t("footer.privacyPolicy")}
+                </Link>
               </p>
             </div>
 

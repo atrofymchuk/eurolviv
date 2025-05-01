@@ -88,3 +88,6 @@ export  { default as menu} from '../assets/icons/Menu.svg';
 export {default as calendarBooking} from '../assets/icons/Calendar.svg';
 export {default as callUs} from '../assets/icons/phone.svg';
 export {default as locationWhite} from '../assets/icons/Modal/location.svg';
+
+export {default as ukraineFlag} from '../assets/icons/flags/ukraine.png';
+export {default as polandFlag} from '../assets/icons/flags/poland.png';

@@ -27,3 +27,23 @@
 .react-datepicker__current-month{
     color: #9b6a5d;
 }
+
+.react-datepicker__header{
+    background-color: #EDE8E5;
+}
+
+.react-datepicker__navigation react-datepicker__navigation--next{
+    color:black;
+    fill:black;
+}
+
+.react-datepicker__navigation-icon::before{
+    color:black;
+    fill:black;
+}
+
+.react-datepicker__navigation-icon::before{
+    color:black;
+    fill:black;
+}
+

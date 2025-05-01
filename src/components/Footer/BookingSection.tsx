@@ -11,7 +11,7 @@ export const BookingSection = ({
   pdfDocuments,
 }: {
   openPdf: (path: string) => void;
-  pdfDocuments: { pathPublicOffer: string };
+  pdfDocuments: { pathPublicOffer: string; pathPrivacyPolicy: string };
 }) => {
   const isCustomWidth = useCustomWidth(1350, 1550)
   const { t } = useTranslation();
@@ -141,7 +141,7 @@ export const BookingSection = ({
             </svg>
           </Link>
         </div>
-        <Rating openPdf={openPdf} path={pdfDocuments.pathPublicOffer} />
+        <Rating openPdf={openPdf} pdfDocuments={pdfDocuments} />
       </div>
     </div>
   );

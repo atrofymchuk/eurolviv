@@ -20,7 +20,7 @@ export interface FormData {
   name: string;
   phone: string;
   email: string;
-  guests: string;
+  guests?: number;
   needRooms?: boolean;
 }
 
@@ -129,7 +129,7 @@ const OrderModal = ({
           </div>
 
           {isDatePickerOpen && (
-            <div className="absolute z-10 mt-2 bg-white shadow-md p-2 rounded-lg">
+            <div className="absolute z-10 -mt-1 bg-white right-0 rounded-lg">
               <Controller
                 name="date"
                 control={control}
@@ -152,7 +152,7 @@ const OrderModal = ({
           )}
         </div>
 
-        <OrderModalForm register={register} isLoading={isLoading} />
+        <OrderModalForm register={register} isLoading={isLoading} getValues={getValues} />
       </form>
 
       <ToastContainer

@@ -29,8 +29,9 @@ export const ReviewCard = ({ review, reviewHeader, index }: { review: ReviewProp
         <h1 className="leading-[120%] uppercase xl:text-[2.267vw] text-[5.333vw]  text-[#A47762]  2xl:text-[2.5vw] font-cofo-medium font-cofo xl:tracking-[-0.04em]">
           {review.name}
         </h1>
-        <p className="text-[#727272] font-cofo uppercase 2xl:text-[1.042vw] text-[14px]">
-          {review.flag} {review.country}
+        <p className="text-[#727272] font-cofo uppercase 2xl:text-[1.042vw] text-[14px] flex items-center gap-2">
+          <img src={review.flag} alt={review.country} className="2xl:w-[25px] 2xl:h-[25px] xl:w-[18px] xl:h-[18px]"/> 
+           {review.country}
         </p>
       </div>
     
