@@ -27,7 +27,7 @@ export const StorySection = () => {
         >
           <h1
             className={cn(
-              `text-[8.53vw]  md:text-[48px] lg:text-[60px]  2xl:text-[5.208vw] font-normal
+              `text-[8.53vw]  md:text-[48px] lg:text-[60px]  2xl:text-[5.208vw] md:font-cofo-medium
                     leading-[81%]   tracking-[-0.07em] uppercase text-[#242425] `,
               {
                 "hidden lg:block": isEng,

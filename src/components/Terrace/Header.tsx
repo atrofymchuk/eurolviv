@@ -15,6 +15,8 @@ export const TerraseHeader = () => {
         autoPlay
         muted
         loop
+        controls={false}
+        playsInline
       />
 
       <h4 className="font-cofo-medium text-[#FFFFFF] leading-[22.68px]  underline text-sm decoration-transparent items-center xl:mb-4">

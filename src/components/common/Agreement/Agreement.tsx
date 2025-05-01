@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export const Agreement = ({handleAgree}: {handleAgree: () => void}) => {
+export const Agreement = ({ handleAgree }: { handleAgree: () => void }) => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const openPdf = (path: string) => {
