@@ -21,7 +21,7 @@
 .react-datepicker__day-name{
     color: #A47762;
     font-family: "CoFoSans-Medium";
-
+    text-transform: capitalize;
 }
 
 .react-datepicker__current-month{
@@ -47,3 +47,6 @@
     fill:black;
 }
 
+.react-datepicker__current-month{
+    text-transform: capitalize;
+}

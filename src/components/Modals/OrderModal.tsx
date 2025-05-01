@@ -29,7 +29,7 @@ const OrderModal = ({
 }: {
   onCloseGlobalModal: () => void;
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEng = useIsEnglish()
   const {
     control,
@@ -138,8 +138,10 @@ const OrderModal = ({
                   <DatePicker
                     selected={field.value}
                     dateFormat="dd/MM/yyyy"
+                    locale={i18n.language}
                     onChange={(date) => {
                       field.onChange(date);
+                      
                       setIsDatePickerOpen(false);
                     }}
                     minDate={new Date(new Date().setDate(new Date().getDate()))}

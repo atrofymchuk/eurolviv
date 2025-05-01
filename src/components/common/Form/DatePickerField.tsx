@@ -1,4 +1,4 @@
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import { Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
@@ -8,6 +8,9 @@ import { useState, useRef } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { FormData } from "../../../types/headerTypes";
 import "./datePickerStyles.css";
+import { uk, enUS } from "date-fns/locale";
+
+
 
 export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   name,
@@ -16,7 +19,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   label,
   placeholderKey,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const width = window.innerWidth;
   const getInputText = () => {
     if (width < 1024) {
@@ -25,7 +28,15 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
     return t(placeholderKey);
   };
   const [startDate, setStartDate] = useState<Date | string | null>(null);
+
+  if (i18n.language === "uk") {
+    registerLocale("uk", uk);
+  } else {
+    registerLocale("en", enUS);
+  }
   
+
+
   const datePickerRef = useRef<DatePicker | null>(null);
 
   const handleIconClick = () => {
@@ -45,6 +56,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
             <div className="relative w-full controller-wrapper">
               <DatePicker
                 ref={datePickerRef}
+                locale={i18n.language}
                 onChange={(date) => {
                   setStartDate(date);
                   field.onChange(date);
