@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { HeaderButtons } from "../Buttons/Ruff/HeaderButtons";
+import terraceHeader from "../../assets/Terrase/header.mp4";
 
 export const TerraseHeader = () => {
   const { t } = useTranslation();
@@ -8,12 +9,12 @@ export const TerraseHeader = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
 
-      <img loading="lazy"
-        src={
-          "https://uc729ddb932de4f212da4e1d974e.dl.dropboxusercontent.com/cd/0/inline/CotiilM-fs6d7Sv3MmwEzr772Nc2qcIM2J4W9Kzo3Ix0CwvRnidQDMLzonEHTUn4AZAaO5cUYSqsDMVt0GuykeNrGCGgRERsezNFGXw_7F1141fozE2RqYD8_DiBcoZlVDupV767hpVivE4xN-16yxjP/file#"
-        }
-        alt="headerImg"
+      <video
+        src={terraceHeader}
         className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover object-[20%_40%] z-[-10]"
+        autoPlay
+        muted
+        loop
       />
 
       <h4 className="font-cofo-medium text-[#FFFFFF] leading-[22.68px]  underline text-sm decoration-transparent items-center xl:mb-4">

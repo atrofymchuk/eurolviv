@@ -7,7 +7,7 @@ export const BottomText = () => {
           background: "linear-gradient(135deg, #c2d3e6 5%, #fff9d7 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          backgroundClip: "text"
+          backgroundClip: "text",
         }}
       >
         EUROHOTEL

@@ -1170,7 +1170,8 @@
             "order":"book an event",
             "bookRoom":"Book a room",
             "bookRoomArr":["book"," now"],
-            "route":"Get directions"
+            "route":"Get directions",
+            "agree":"Agree"
             },
             "phoneBottomMenu":{
               "callUs":"Call Us",
@@ -1190,6 +1191,11 @@
               "subtitle":"-get more!",
               "description":"We guarantee the best rate when you book directly with us.",
               "button":"BOOK now"
+            },
+            "agreement":{
+              "title":"At Eurohotel, we care about your privacy. Learn more in our ",
+              "button":"[Privacy Policy].",
+              "title2":"By clicking «Agree», you confirm your consent."
             }
     }
     

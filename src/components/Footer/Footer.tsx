@@ -12,7 +12,7 @@ import { footer } from "../../store/exportsImg";
 import { Link } from "react-router-dom";
 import { social } from "../../Constants/Social";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
-import ContactMeForm from "./ContactMeForm";  
+import ContactMeForm from "./ContactMeForm";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useModalStore } from "../../store/useModalStore";
@@ -20,7 +20,10 @@ export const Footer = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
   const isCustomWidth = useCustomWidth(1450, 1550);
-const { isOpenOrder } = useModalStore()
+  const { isOpenOrder } = useModalStore();
+  
+
+
   const openPdf = (path: string) => {
     window.open(path, "_blank");
   };
@@ -29,7 +32,7 @@ const { isOpenOrder } = useModalStore()
     pathPublicOffer: isEng
       ? "/documents/Public offer agreement.pdf"
       : "/documents/Договір публічної оферти .pdf",
-      pathPrivacyPolicy: isEng
+    pathPrivacyPolicy: isEng
       ? "/documents/Privacy Policy.pdf"
       : "/documents/Політика конфіденційності.pdf",
   };
@@ -71,7 +74,7 @@ const { isOpenOrder } = useModalStore()
                     >
                       <li className="font-cofo-medium">
                         <Link
-                          to="/about"
+                          to="/"
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
                           {t("footer.about")}
@@ -193,11 +196,13 @@ const { isOpenOrder } = useModalStore()
           </div>
         </div>
 
-        {!isOpenOrder && <ToastContainer
-        position="bottom-right"
-        style={{ zIndex: 2000 }}
-        autoClose={5000}
-      />}
+        {!isOpenOrder && (
+          <ToastContainer
+            position="bottom-right"
+            style={{ zIndex: 2000 }}
+            autoClose={5000}
+          />
+        )}
         <BottomText />
       </footer>
     </div>

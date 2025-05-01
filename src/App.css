@@ -8,6 +8,14 @@
 .sliderContainer {   position: relative;   z-index: 2; height: 25rem; }
 
 
+.react-datepicker__month-container{
+  z-index: 1000 !important;
+}
+.react-datepicker{
+  z-index: 10000 !important;
+}
+
+
 .img > .slick-list >.slick-track>.slick-slide > div {
   display: grid;
   place-items: center;

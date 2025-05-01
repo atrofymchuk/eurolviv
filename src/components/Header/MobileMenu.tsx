@@ -70,11 +70,11 @@ export const MobileBookingButton = ({
             {
               "text-white": !scrolled,
               "text-black": scrolled,
-              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled || pathname === "/about" || pathname === "/rooms"
+              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled || pathname === "/about" 
             }
           )}
           aria-disabled={!scrolled}
-          onClick={(e) => scrolled && e.preventDefault()}
+      
         >
           {t("buttons.bookRoomArr.0")}
           <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>

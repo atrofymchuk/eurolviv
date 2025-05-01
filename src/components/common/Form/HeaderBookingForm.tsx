@@ -67,6 +67,7 @@ const children = [
             errors={errors}
             label="home.header.bookingForm.checkIn"
             placeholderKey="home.header.bookingForm.chooseDateIn"
+            classNameCalendar="translate-x-[11.33vw] translate-y-[40vw] lg:translate-x-0 lg:translate-y-0"
           />
 
           <DatePickerField
@@ -75,6 +76,7 @@ const children = [
             errors={errors}
             label="home.header.bookingForm.checkOut"
             placeholderKey="home.header.bookingForm.chooseDateOut"
+            classNameCalendar="translate-x-[-11.33vw] translate-y-[40vw] lg:translate-x-0 lg:translate-y-0"
           />
         </div>
         <div className="">

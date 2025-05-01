@@ -90,5 +90,6 @@ export interface DatePickerFieldProps {
   label: string;
   selectsStart?: boolean;
   selectsEnd?: boolean;
+  classNameCalendar?: string;
   placeholderKey: string;
 } 

@@ -34,7 +34,7 @@ export const Rating = ({
         <img loading="lazy" src={visa} alt="Visa" className="h-6" />
         <img loading="lazy" src={mastercard} alt="Mastercard" className="h-6" />
       </div>
-      <div className="flex justify-between mt-[65px]">
+      <div className="flex justify-between mt-[65px] px-[1.27vw] lg:px-0">
         <p className=" uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">
           <Link to={pdfDocuments.pathPrivacyPolicy} target="_blank">
             {t("footer.privacyPolicy")}

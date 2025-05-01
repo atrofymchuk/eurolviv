@@ -18,16 +18,24 @@ import { ContactsModal } from "./components/Modals/ContactsModal";
 import { useModalStore } from "./store/useModalStore";
 import { BookDirectAlert } from "./components/common/BookDirectAlert";
 import { Restaurant } from "./pages/Restaurant";
+import { Agreement } from "./components/common/Agreement/Agreement";
+
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const { activeModal, url } = useModalStore();
+  const [isAcceptedAgreement, setIsAcceptedAgreement] = useState(
+    localStorage.getItem("agreement") === "true"
+  );
 
   if (location.pathname === "/admin") {
     RedirectToAdminPanel();
     return <OnLoadingSpin />;
   }
-
+  const handleAgree = () => {
+    localStorage.setItem("agreement", "true");
+    setIsAcceptedAgreement(true);
+  };
 
   const isBookingPage = location.pathname === "/booking";
 
@@ -83,6 +91,7 @@ export const Layout = () => {
           </>
         }
         {url && <SpecialOffersModal />}
+        {!isAcceptedAgreement && <Agreement handleAgree={handleAgree} />}
       </div>
     </>
   );
