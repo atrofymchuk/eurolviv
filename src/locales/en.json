@@ -1139,7 +1139,7 @@
               "nameShort":"Name is too short",
               "contactUsSuccsses":"Message sent successfully",
               "contactUsError":"Message not sent",
-              
+              "checkOutAfterCheckIn":"Check-out date cannot be earlier than check-in date",
               "genericError":"Something went wrong",
               "checkIn":"Select check-in date",
               "checkOut":"Select check-out date",
