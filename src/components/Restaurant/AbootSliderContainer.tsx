@@ -42,7 +42,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
         isTerrase ? "w-full h-[380px] 2xl:h-[46.15vw] " : "justify-center h-[370px] 2xl:h-[46.15vw]"
       }`}
     >
-      <div className="absolute w-full lg:h-[660px] h-[460px] -z-1 flex items-end justify-center ">
+      <div className="absolute w-full lg:h-[660px] h-[460px] z-2 flex items-end justify-center ">
         <div
           className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw]  h-[470px]`, {
             
@@ -58,7 +58,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
         </div>
       </div>
 
-      <div className={`flex flex-col items-center lg:mb-0 ${isTerrase ? "mt-12" : "mt-1 "}`}>
+      <div className={`flex flex-col items-center z-3 lg:mb-0 ${isTerrase ? "mt-12" : "mt-1 "}`}>
           <AboutSlider slides={imgs} />
 
         <Link

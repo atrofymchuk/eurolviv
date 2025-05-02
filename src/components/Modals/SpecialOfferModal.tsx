@@ -58,7 +58,7 @@ export const SpecialOffersModal = () => {
     <Modal
       isOpen={isOpenSpecialOfferModal}
       onRequestClose={handleCloseModal}
-      className="fixed inset-0 flex items-center justify-center overflow-y-auto   "
+      className="fixed inset-0 flex items-center justify-center overflow-y-auto  mt-10 lg:mt-0 "
       overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center "
     >
       <div className="bg-white md:w-[76.51%] w-[91%] max-h-[95vh] relative flex flex-col 2xl:justify-center  
