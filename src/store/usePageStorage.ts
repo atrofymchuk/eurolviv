@@ -5,6 +5,8 @@ interface PageStore {
   sections: Record<string, React.FC[]>;
   loadedSections: Record<string, number>;
   loadMore: (page: string) => void;
+  isLastComfortBlockSection: boolean;
+  setIsLastComfortBlockSection: (isLast: boolean) => void;
 }
 
 const allPageSections: Record<string, React.FC[]> = {
@@ -56,6 +58,7 @@ const allPageSections: Record<string, React.FC[]> = {
 
 export const usePageStore = create<PageStore>((set, get) => ({
   sections: allPageSections,
+  isLastComfortBlockSection: false,
   loadedSections: Object.fromEntries(
     Object.keys(allPageSections).map((key) => [key, 2])
   ),
@@ -72,5 +75,8 @@ export const usePageStore = create<PageStore>((set, get) => ({
         },
       }));
     }
+  },
+  setIsLastComfortBlockSection: (isLast: boolean) => {
+    set({ isLastComfortBlockSection: isLast });
   },
 }));

@@ -1,30 +1,122 @@
 import { IconsState, Room } from "../../types/types";
 import { ComfortsBlock } from "./ComfotsBlock";
 import { useTranslation } from "react-i18next";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import "./styles.css";
 type ComfortsBlockToProps = {
   icons?: IconsState;
   room?: Room;
+  setIsLastComfortBlockSection: (isLast: boolean) => void;
 };
 
 export const ComfortsBlocksWrapper = ({
   icons,
   room,
+  setIsLastComfortBlockSection
 }: ComfortsBlockToProps) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const blocksRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastBlockRef = useRef<HTMLDivElement | null>(null);
+  const [hasShownLastBlock, setHasShownLastBlock] = useState(false);
+  const lastScrollTop = useRef<number>(0);
+  const lastScrollPosition = useRef(0);
+  const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scrollDistance = useRef(0);
+  const isScrollingContainer = useRef(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const hasScrolledToComponent = useRef(false);
+
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        
+        if (entry.isIntersecting && !hasScrolledToComponent.current) {
+          setTimeout(() => {
+            const rect = entry.target.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const targetPosition = rect.top + scrollTop - 100;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+            
+            hasScrolledToComponent.current = true;
+            
+            setTimeout(() => {
+              hasScrolledToComponent.current = false;
+            }, 3000);
+          }, 300);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    
+    observer.observe(wrapperRef.current);
+    
+    return () => {
+      if (wrapperRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(wrapperRef.current);
+      }
+    };
+  }, []);
+
+  const setLastComfortSection = useCallback((value: boolean) => {
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
+    }
+    
+    scrollTimeout.current = setTimeout(() => {
+      setIsLastComfortBlockSection(value);
+      if (value) {
+        setHasShownLastBlock(true);
+      } else if (!value && hasShownLastBlock) {
+        if (scrollDistance.current > 100) {
+          setHasShownLastBlock(false);
+        }
+      }
+    }, 150);
+  }, [setIsLastComfortBlockSection, hasShownLastBlock]);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     const container = containerRef.current;
+    container.style.scrollBehavior = 'smooth';
     const blocks = blocksRefs.current.filter(Boolean);
     if (blocks.length === 0) return;
 
     const handleScroll = () => {
       const scrollTop = container.scrollTop;
+      isScrollingContainer.current = true;
+      
+      if (scrollTop < lastScrollTop.current) {
+        setLastComfortSection(false);
+      }
+      
+      else if (scrollTop > lastScrollTop.current) {
+        const isAtBottom = 
+          Math.abs((container.scrollHeight - container.scrollTop) - container.clientHeight) < 10;
+        
+        if (isAtBottom) {
+          setLastComfortSection(true);
+        }
+      }
+      
+      lastScrollTop.current = scrollTop;
 
       const firstBlock = blocks[0];
       if (firstBlock) {
@@ -46,6 +138,10 @@ export const ComfortsBlocksWrapper = ({
 
         block.style.zIndex = `${20 + i}`;
       }
+      
+      setTimeout(() => {
+        isScrollingContainer.current = false;
+      }, 100);
     };
 
     container.addEventListener("scroll", handleScroll);
@@ -54,37 +150,61 @@ export const ComfortsBlocksWrapper = ({
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setLastComfortSection]);
 
   useEffect(() => {
+    if (!lastBlockRef.current) return;
+    
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
-          window.scrollTo({
-            top:
-              entry.target.getBoundingClientRect().top +
-              window.pageYOffset -
-              153,
-            behavior: "smooth",
-          });
-        }
+      () => {
+        if (isScrollingContainer.current) return;
       },
-      { threshold: 0.7 }
-    );
-
-    setTimeout(() => {
-      if (containerRef.current) {
-        observer.observe(containerRef.current);
+      { 
+        threshold: [0.1, 0.9]  
       }
-    }, 1000);
-
+    );
+    
+    observer.observe(lastBlockRef.current);
+    
     return () => {
-      if (containerRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(containerRef.current);
+      if (lastBlockRef.current) {
+        observer.unobserve(lastBlockRef.current);
       }
     };
-  }, []);
+  }, [setLastComfortSection, hasShownLastBlock]);
+
+  useEffect(() => {
+    lastScrollPosition.current = window.pageYOffset;
+    let isScrolling = false;
+    
+    const handleWindowScroll = () => {
+      if (isScrollingContainer.current) return;
+      
+      if (isScrolling) return;
+      isScrolling = true;
+      
+      const currentScrollPosition = window.pageYOffset;
+      const scrollDiff = Math.abs(currentScrollPosition - lastScrollPosition.current);
+      scrollDistance.current = scrollDiff;
+      
+      lastScrollPosition.current = currentScrollPosition;
+      
+      if (!lastBlockRef.current) return;
+      
+      setTimeout(() => {
+        isScrolling = false;
+      }, 50);
+    };
+    
+    window.addEventListener('scroll', handleWindowScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, [setLastComfortSection]);
 
   if (!icons || !room) return null;
 
@@ -110,41 +230,114 @@ export const ComfortsBlocksWrapper = ({
 
   const setBlockRef = (index: number) => (el: HTMLDivElement | null) => {
     blocksRefs.current[index] = el;
+    if ((room.isLux && index === 2) || (!room.isLux && index === 1)) {
+      lastBlockRef.current = el;
+    }
   };
 
   return (
-    <div
+    <div 
+      ref={wrapperRef}
       className="relative 2xl:h-[43vw] xl:h-[46.22vw]  overflow-y-auto scrollbar-hide"
-      ref={containerRef}
-      style={{
-        perspective: "800px",
-        scrollBehavior: "smooth",
-      }}
     >
-      {room.isLux ? (
-        <>
-          <div
-            ref={setBlockRef(0)}
-            className="w-full sticky top-0"
-            style={{
-              transition: "transform 0.3s ease-out",
-            }}
-          >
-            <ComfortsBlock
-              title={t("room.comfortBlock.title")}
-              icons={icons.ammentiesInRoom}
-              {...commonProps}
-              images={[
-                room.about.ammentiesImages[0],
-                room.about.ammentiesImages[1],
-                room.about.ammentiesMobileImages[0],
-              ]}
-              style={luxStyle}
-              type={room.type}
-            />
-          </div>
+      <div
+        className="h-full relative overflow-y-auto scrollbar-hide"
+        ref={containerRef}
+        style={{
+          perspective: "800px",
+          scrollBehavior: "smooth",
+        }}
+      >
+        {room.isLux ? (
+          <>
+            <div
+              ref={setBlockRef(0)}
+              className="w-full sticky top-0"
+              style={{
+                transition: "transform 0.3s ease-out",
+              }}
+            >
+              <ComfortsBlock
+                title={t("room.comfortBlock.title")}
+                icons={icons.ammentiesInRoom}
+                {...commonProps}
+                images={[
+                  room.about.ammentiesImages[0],
+                  room.about.ammentiesImages[1],
+                  room.about.ammentiesMobileImages[0],
+                ]}
+                style={luxStyle}
+                type={room.type}
+              />
+            </div>
 
-          {icons.bedRoom && (
+            {icons.bedRoom && (
+              <div
+                ref={setBlockRef(1)}
+                className="w-full sticky top-0"
+                style={{
+                  transition: "transform 0.3s ease-out",
+                }}
+              >
+                <ComfortsBlock
+                  title={t("room.comfortBlock.title2")}
+                  icons={icons.bedRoom}
+                  {...commonProps}
+                  images={[
+                    room.about.ammentiesImages[2],
+                    room.about.ammentiesImages[3],
+                    room.about.ammentiesMobileImages[1],
+                  ]}
+                  style={standardStyle}
+                  type={room.type}
+                />
+              </div>
+            )}
+
+            <div
+              ref={setBlockRef(2)}
+              className="w-full relative z-10"
+              style={{
+                transition: "transform 0.3s ease-out ",
+              }}
+            >
+              <ComfortsBlock
+                title={t("room.comfortBlock.title3")}
+                icons={icons.bathRoom}
+                {...commonProps}
+                images={[
+                  room.about.ammentiesImages[4],
+                  room.about.ammentiesImages[5],
+                  room.about.ammentiesMobileImages[2],
+                ]}
+                style={standardStyle}
+                type={room.type}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <div
+              ref={setBlockRef(0)}
+              className="w-full"
+              style={{
+                transition: "transform 0.3s ease-out",
+              }}
+            >
+              <ComfortsBlock
+                title={t("room.comfortBlock.title4")}
+                icons={icons.ammentiesInRoom}
+                {...commonProps}
+                images={[
+                  room.about.ammentiesImages[0],
+                  room.about.ammentiesImages[1],
+                  room.about.ammentiesMobileImages[0],
+                ]}
+                style={standardStyle}
+                type={room.type}
+              />
+            </div>
+
             <div
               ref={setBlockRef(1)}
               className="w-full sticky top-0"
@@ -153,8 +346,8 @@ export const ComfortsBlocksWrapper = ({
               }}
             >
               <ComfortsBlock
-                title={t("room.comfortBlock.title2")}
-                icons={icons.bedRoom}
+                title={t("room.comfortBlock.title3")}
+                icons={icons.bathRoom}
                 {...commonProps}
                 images={[
                   room.about.ammentiesImages[2],
@@ -165,74 +358,9 @@ export const ComfortsBlocksWrapper = ({
                 type={room.type}
               />
             </div>
-          )}
-
-          <div
-            ref={setBlockRef(2)}
-            className="w-full relative z-10"
-            style={{
-              transition: "transform 0.3s ease-out ",
-            }}
-          >
-            <ComfortsBlock
-              title={t("room.comfortBlock.title3")}
-              icons={icons.bathRoom}
-              {...commonProps}
-              images={[
-                room.about.ammentiesImages[4],
-                room.about.ammentiesImages[5],
-                room.about.ammentiesMobileImages[2],
-              ]}
-              style={standardStyle}
-              type={room.type}
-            />
-          </div>
-        </>
-      ) : (
-        <>
-          <div
-            ref={setBlockRef(0)}
-            className="w-full"
-            style={{
-              transition: "transform 0.3s ease-out",
-            }}
-          >
-            <ComfortsBlock
-              title={t("room.comfortBlock.title4")}
-              icons={icons.ammentiesInRoom}
-              {...commonProps}
-              images={[
-                room.about.ammentiesImages[0],
-                room.about.ammentiesImages[1],
-                room.about.ammentiesMobileImages[0],
-              ]}
-              style={standardStyle}
-              type={room.type}
-            />
-          </div>
-
-          <div
-            ref={setBlockRef(1)}
-            className="w-full sticky top-0"
-            style={{
-              transition: "transform 0.3s ease-out",
-            }}
-          >
-            <ComfortsBlock
-              title={t("room.comfortBlock.title3")}
-              icons={icons.bathRoom}
-              {...commonProps}
-              images={[
-                room.about.ammentiesImages[2],
-                room.about.ammentiesImages[3],
-                room.about.ammentiesMobileImages[1],
-              ]}
-              style={standardStyle}
-              type={room.type}
-            />
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

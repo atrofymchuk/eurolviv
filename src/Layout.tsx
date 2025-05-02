@@ -19,11 +19,12 @@ import { useModalStore } from "./store/useModalStore";
 import { BookDirectAlert } from "./components/common/BookDirectAlert";
 import { Restaurant } from "./pages/Restaurant";
 import { Agreement } from "./components/common/Agreement/Agreement";
-
+import { usePageStore } from "./store/usePageStorage";
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const { activeModal, url } = useModalStore();
+  const { isLastComfortBlockSection } = usePageStore();
   const [isAcceptedAgreement, setIsAcceptedAgreement] = useState(
     localStorage.getItem("agreement") === "true"
   );
@@ -81,7 +82,7 @@ export const Layout = () => {
           />
           <Route path="/booking" element={<Booking />} />
         </Routes>
-        {!isBookingPage && <Footer />}
+        {!isBookingPage && isLastComfortBlockSection && <Footer />}
         <BaseModal />
         {!isBookingPage && <MobileBottomMenu />}
         {activeModal === "contacts" && <ContactsModal />}

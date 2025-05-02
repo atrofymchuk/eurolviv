@@ -20,11 +20,8 @@ export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonPro
     }
   };
 
-  // Функція для прокрутки до меню
   const handleScrollToMenu = (e: React.MouseEvent) => {
-    e.preventDefault(); // Запобігаємо стандартній навігації
-    
-    // Знаходимо елемент з id="menu"
+    e.preventDefault();
     const menuElement = document.getElementById("menu");
     
     if (menuElement) {
@@ -32,7 +29,6 @@ export const ViewMenuButton = ({className, children, onClick}: ViewMenuButtonPro
       const offset = 20;
       const elementPosition = menuElement.getBoundingClientRect().top + window.scrollY;
       
-      // Прокручуємо до елемента
       window.scrollTo({
         top: elementPosition - headerHeight - offset,
         behavior: "smooth"
