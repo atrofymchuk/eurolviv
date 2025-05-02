@@ -14,6 +14,7 @@ type RenderDropdownMenuProps = {
   isMobile?: boolean;
   setMenuOpen?: (value: boolean) => void;
   isScrolled?: boolean;
+  onItemClick?: (path: string) => boolean;
 };
 
 export const renderDropdownMenu = ({
@@ -22,6 +23,7 @@ export const renderDropdownMenu = ({
   isMobile = false,
   setMenuOpen,
   isScrolled = false,
+  onItemClick,
 }: RenderDropdownMenuProps): ReactNode => {
   if (!isVisible) return null;
 
@@ -45,6 +47,7 @@ export const renderDropdownMenu = ({
               title={item.title}
               setMenuOpen={setMenuOpen}
               isScrolled={isScrolled}
+              onItemClick={onItemClick}
             />
           ))}
         </div>

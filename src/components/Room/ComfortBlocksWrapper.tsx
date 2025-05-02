@@ -76,7 +76,7 @@ export const ComfortsBlocksWrapper = ({
         observer.unobserve(wrapperRef.current);
       }
     };
-  }, []);
+  }, [isMobile]);
 
   const setLastComfortSection = useCallback((value: boolean) => {
     if (scrollTimeout.current) {

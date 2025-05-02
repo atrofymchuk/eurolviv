@@ -98,7 +98,7 @@ export const SpecialOffersModal = () => {
               {isPetOffer && (
                 <button
                   onClick={() => handleOpenPdf(pdfDocuments.pathPublicOffer)}
-                  className={cn(`bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] rounded-full uppercase text-[#A47762] font-cofo-medium lg:text-[16px]`, {
+                  className={cn(`bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] text-[12px] rounded-full uppercase w-[181px] h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`, {
                     "lg:w-[280px]": isEng,
                   })}
                 >

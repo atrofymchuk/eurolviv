@@ -77,6 +77,41 @@ export const NavLinks = ({
     handleMouseLeaveRestaurant,
   });
 
+  const getHeaderHeight = useCallback((): number => {
+    const width = window.innerWidth;
+    
+    if (width >= 1536) { 
+      return width * 0.0693; 
+    } else if (width >= 1024) { 
+      return width * 0.0908; 
+    } else {
+      return width * 0.2533; 
+    }
+  }, []);
+
+  const handleSmoothScroll = useCallback((path: string) => {
+    if (path.includes('#')) {
+      const [pathPart, hashPart] = path.split('#');
+      
+      if (window.location.pathname === pathPart || pathPart === '') {
+        const element = document.getElementById(hashPart);
+        if (element) {
+          const headerHeight = getHeaderHeight();
+          const offset = 20;
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          
+          window.scrollTo({
+            top: elementPosition - headerHeight - offset,
+            behavior: 'smooth'
+          });
+          
+          return true;
+        }
+      }
+    }
+    return false;
+  }, [getHeaderHeight]);
+
   const renderNavLinks = useCallback(() => {
     return navLinks.map(({ path, label }) => {
   
@@ -106,11 +141,14 @@ export const NavLinks = ({
             <Link
               to={path}
               className={cn(
-                "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw]  lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
+                "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw] smooth-scroll lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
                 !isMobile && isActiveLink(path),
                 isMobile && "xl:text-inherit text-[#252526]"
               )}
-              onClick={() => {
+              onClick={(e) => {
+                if (handleSmoothScroll(path)) {
+                  e.preventDefault();
+                }
                 setMenuOpen(false);
                 if (!isDropdown) {
                   setMenuOpen(false);
@@ -142,6 +180,7 @@ export const NavLinks = ({
               isMobile,
               isScrolled: scrolled,
               setMenuOpen,
+              onItemClick: handleSmoothScroll
             })}
           {path === "/restaurant" &&
             renderDropdownMenu({
@@ -150,11 +189,12 @@ export const NavLinks = ({
               isMobile,
               setMenuOpen,
               isScrolled: scrolled,
+              onItemClick: handleSmoothScroll
             })}
         </div>
       );
     });
-  }, [scrolled,navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, setMenuOpen, restaurantLinks, toggleHandle]);
+  }, [navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, scrolled, setMenuOpen, restaurantLinks, toggleHandle, handleSmoothScroll]);
 
   return <>{renderNavLinks()}</>;
 };

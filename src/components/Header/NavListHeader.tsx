@@ -9,6 +9,7 @@ type NavListHeaderToProps = {
   title: string;
   setMenuOpen?: (value: boolean) => void;
   isScrolled?: boolean;
+  onItemClick?: (path: string) => boolean;
 };
 
 export const NavListHeader = ({
@@ -16,12 +17,17 @@ export const NavListHeader = ({
   title,
   setMenuOpen,
   isScrolled,
+  onItemClick,
 }: NavListHeaderToProps) => {
   const { t } = useTranslation();
   const location = useLocation();
 
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onItemClick && onItemClick(path)) {
+      e.preventDefault();
+    }
+    
     if (setMenuOpen) {
       setMenuOpen(false);
     }

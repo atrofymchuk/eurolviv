@@ -9,7 +9,7 @@ import { ReviewsContainer } from "../components/Restaurant/ReviewsContainer"
 
 export const Restaurant = ( ) =>{
     return (
-        <div >
+        <div className="scroll-smooth restaurant-page">
             <RestaurantHeader/>
             <AboutRestaurant />
             <AbootSliderContainer />

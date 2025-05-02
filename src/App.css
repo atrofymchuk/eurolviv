@@ -181,11 +181,7 @@
 }
 
 
-body{
-  scroll-behavior: smooth;
-}
 
 .first-br-visible > br:first-of-type{
   display: block;
 }
-
