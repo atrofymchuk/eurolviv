@@ -30,7 +30,7 @@ export const TerrasesContainer = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center relative 0"></div>
-      <div className="flex flex-col items-center justify-center relative ">
+      <div className="flex flex-col items-center justify-center relative overflow-hidden">
         {terases.map((el, index) => (
           <div
             className="flex flex-col items-center justify-center relative max-w-screen"
