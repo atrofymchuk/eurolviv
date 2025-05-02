@@ -39,6 +39,18 @@ export const Layout = () => {
   };
 
   const isBookingPage = location.pathname === "/booking";
+  const isRoomPage = /^\/rooms\/[^/]+$/.test(location.pathname);
+  const isRoomsPage = location.pathname === "/rooms";
+
+  const shouldShowFooter = () => {
+    if (isBookingPage) return false;
+
+    if (isRoomPage) return isLastComfortBlockSection;
+
+    if (isRoomsPage) return true;
+
+    return true;
+  };
 
   return (
     <>
@@ -82,7 +94,7 @@ export const Layout = () => {
           />
           <Route path="/booking" element={<Booking />} />
         </Routes>
-        {!isBookingPage && isLastComfortBlockSection && <Footer />}
+        {shouldShowFooter() && <Footer />}
         <BaseModal />
         {!isBookingPage && <MobileBottomMenu />}
         {activeModal === "contacts" && <ContactsModal />}

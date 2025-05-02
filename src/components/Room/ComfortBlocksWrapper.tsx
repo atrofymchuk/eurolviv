@@ -63,8 +63,11 @@ export const ComfortsBlocksWrapper = ({
       },
       { threshold: 0.2 }
     );
-    
-    observer.observe(wrapperRef.current);
+    setTimeout(() => {
+      if (wrapperRef.current) {
+        observer.observe(wrapperRef.current);
+      }
+    }, 1000);
     
     return () => {
       if (wrapperRef.current) {

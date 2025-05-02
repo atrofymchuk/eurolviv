@@ -55,7 +55,8 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           z-10`
         )}
       >
-        <h4 className="font-cofo-medium 2xl:text-[0.94vw] xl:text-[1.09vw] text-[10px] uppercase leading-[22.68px] font-cofo-medium underline text-sm decoration-transparent 2xl:mt-[7vw] xl:mt-[8vw]">
+        <h4 className="font-cofo-medium 2xl:text-[0.94vw] xl:text-[1.09vw] text-[10px] uppercase leading-[22.68px]
+         font-cofo-medium underline text-sm decoration-transparent 2xl:mt-[7vw] xl:mt-[8vw]">
           {t("global.createdFor")}
           <span className="font-blessed normal-case  block text-center text-[13px] md:text-[28px] xl:text-[2.03vw] 2xl:text-[1.67vw] xl:inline">
             {t("global.whereTo")}
