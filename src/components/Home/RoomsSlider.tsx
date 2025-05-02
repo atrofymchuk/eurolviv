@@ -30,6 +30,7 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
   const isEng = useIsEnglish();
   const isWide = useCustomWidth(1024, 10000);
   const isCustomWidth = useCustomWidth(1500, 1700);
+  const [isHover, setIsHover] = useState<number | null>(null);
   const settings = {    
     infinite: true,
     centerMode: true,
@@ -76,11 +77,11 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
 
 
   return (
-    <div className="relative w-full flex flex-col h-full">
+    <div className="relative w-full flex flex-col h-full ">
       <Slider 
         {...settings} 
         ref={ref} 
-        className={cn(`w-full flex items-center justify-center 2xl:h-[46vw] `, {
+        className={cn(`w-full flex items-center justify-center 2xl:h-[46vw]  `, {
           "img-rooms": isWide,
         })}
       >
@@ -98,11 +99,14 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
           const isEdge = normalizedDiff > 1;
 
           return (
-            <div key={index} className={cn("rooms-slider-slide flex flex-col justify-center items-center h-full lg:ms-0 ms-[-30px] ", {
+            <div key={index} 
+            onMouseEnter={() => setIsHover(index)}
+            onMouseLeave={() => setIsHover(null)}
+            className={cn("rooms-slider-slide flex flex-col justify-center items-center h-full lg:ms-0 ms-[-30px] z-20 ", {
               "opacity-0 lg:opacity-100": activeSlide === 0 && index === sliderProps.length - 1,
           
             })}>
-              <div className="flex flex-col justify-center items-center h-full 2xl:h-[44vw] md:px-0 px-0 mx-1">
+              <div className="flex flex-col justify-center items-center h-full 2xl:h-[44vw] md:px-0 px-0 mx-1 z-20">
 
               <InViewWrapper className="flex flex-col justify-center items-center h-full min-h-full w-full my-auto">
                 <div className="flex items-center justify-center">
@@ -135,14 +139,14 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
 
                 <div
                   className={cn(
-                    "flex flex-col items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px] 2xl:min-h-[8.59vw] xl:min-h-[10.39vw] ",
+                    "flex flex-col z-20 items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px] 2xl:min-h-[8.59vw] xl:min-h-[10.39vw] ",
                     {
                       "opacity-100": isActive,
                       "": !isActive,
                     }
                   )}
                 >
-                  <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px]">
+                  <div className="flex items-center justify-center 2xl:pt-[28px] xl:pt-[16px] lg:pt-[20px] md:pt-[16px] z-20">
                     <h4
                       className={cn(
                         "2xl:text-[1.667vw] lg:w-4/5 xl:text-[1.8vw] lg:text-[22px] md:text-[18px] text-[18px] leading-[104%] tracking-[-0.05em] mt-[13px] lg:mt-0 uppercase font-cofo-medium text-[#EDE8E5] text-center transition-all duration-500",
@@ -175,7 +179,7 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
                       {t(el.title)}
                     </h4>
                   </div>
-                  <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px]">
+                  <div className="flex gap-[3px] lg:gap-2 items-center mt-[11px] lg:mt-[18px] z-20">
                     <img
                       loading="lazy"
                       src={squareWhite}
@@ -186,7 +190,7 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
                       {t("home.rooms.area")}: {el.area} M<sup>2</sup>
                     </p>
                   </div>
-                  <div className="flex gap-[3px] lg:gap-2 items-center">
+                  <div className="flex gap-[3px] lg:gap-2 items-center z-20">
                     <img
                       loading="lazy"
                       src={guestWhite}
@@ -201,20 +205,21 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
 
                 <div
                   className={cn(
-                    "lg:mt-[34px] mt-[22px] flex justify-center transition-all duration-500",
+                    "lg:mt-[34px] mt-[22px] flex justify-center transition-all duration-500 z-20",
                     {
                       "opacity-100": isActive,
-                      "opacity-0 md:opacity-70": !isActive,
+                      "opacity-0 md:opacity-80 hover:opacity-100 transition-opacity duration-300": !isActive,
                     }
                   )}
                 >
                   <Link
                     to={`/rooms/${el.type}`}
                     className={cn(
-                      `border border-[#FFFFFF] uppercase text-[12px] xl:w-[150px] 2xl:w-[170px] 2xl:h-[46px] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-colors duration-300`,
+                      `border border-[#FFFFFF] uppercase text-[12px] z-20 xl:w-[150px] 2xl:w-[170px] 2xl:h-[46px] xl:h-[44px] flex items-center justify-center text-center xl:text-[16px] font-cofo-medium lg:w-[170px] w-[123px] h-[40px] rounded-full text-[#FFFFFF] hover:text-black hover:bg-[#FFFFFF] transition-all duration-300 transform`,
                       {
                         "xl:w-[170px] xl:h-[47px]": isCustomWidth,
-                        "opacity-0": !isActive,
+                        "opacity-0 scale-95 transition-all duration-300": !isActive && isHover !== index,
+                        "opacity-100 scale-100 transition-all duration-300": !isActive && isHover === index,
                       }
                     )}
                   >

@@ -16,3 +16,8 @@
     object-fit: cover;
   }
 }
+
+
+.slick-slide{
+  z-index: 1000;
+}
