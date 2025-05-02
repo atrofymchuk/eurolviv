@@ -26,7 +26,7 @@ export const SpecialOffersSlider = forwardRef<
     slidesToScroll: 1,
     arrows: false,
     infinite: true,
-
+    preventDefaultTouchmoveEvent: true,
     swipeToSlide: true,
     touchThreshold: 10,
     afterChange: (index: number) => {
