@@ -139,6 +139,10 @@ const OrderModal = ({
                     selected={field.value}
                     dateFormat="dd/MM/yyyy"
                     locale={i18n.language}
+                    disabledKeyboardNavigation={false}
+                    onKeyDown={(e) => {
+                      e.preventDefault();
+                  }}
                     onChange={(date) => {
                       field.onChange(date);
                       

@@ -63,6 +63,7 @@ const children = [
         <div className="flex gap-x-[3px] 2xl:gap-x-[0.57vw] xl:gap-x-[0.42vw] px-[20px_11px] lg:px-0">
           <DatePickerField
             name="checkIn"
+
             control={control}
             errors={errors}
             label="home.header.bookingForm.checkIn"

@@ -57,6 +57,11 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
             <div className="relative w-full controller-wrapper">
               <DatePicker
                 ref={datePickerRef}
+            disabledKeyboardNavigation={false}
+            onKeyDown={(e) => {
+              e.preventDefault();
+          }}
+          
                 onInputClick={()=>{
                   handleIconClick()
                 }}

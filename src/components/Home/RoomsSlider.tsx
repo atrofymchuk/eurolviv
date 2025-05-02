@@ -135,7 +135,7 @@ const RoomsSlider = forwardRef<Slider, RoomsSliderProps>(({ sliderProps },ref) =
 
                 <div
                   className={cn(
-                    "flex flex-col items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px]",
+                    "flex flex-col items-center text-white lg:gap-y-2 gap-y-[6px] transition-all duration-500 text-[12px] lg:text-[16px] 2xl:min-h-[8.59vw] xl:min-h-[10.39vw] ",
                     {
                       "opacity-100": isActive,
                       "": !isActive,
