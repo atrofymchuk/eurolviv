@@ -37,15 +37,7 @@
     fill:black;
 }
 
-.react-datepicker__navigation-icon::before{
-    color:black;
-    fill:black;
-}
 
-.react-datepicker__navigation-icon::before{
-    color:black;
-    fill:black;
-}
 
 .react-datepicker__current-month{
     text-transform: capitalize;
@@ -95,20 +87,11 @@
         background-color: #EDE8E5;
     }
     
-    .react-datepicker__navigation react-datepicker__navigation--next{
-        color:black;
-        fill:black;
-    }
-    
-    .react-datepicker__navigation-icon::before{
-        color:black;
-        fill:black;
-    }
-    
-    .react-datepicker__navigation-icon::before{
-        color:black;
-        fill:black;
-    }
+ 
+.react-datepicker__navigation{
+    z-index: 10000 !important;
+}    
+ 
 
     .react-datepicker{
         position: relative; 

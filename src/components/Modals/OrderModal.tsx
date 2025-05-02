@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useCallback, useState } from "react";
 import { IoClose } from "react-icons/io5";
@@ -13,6 +13,7 @@ import OrderModalForm from "./OrderModalForm";
 import { validationSchema } from "../../schemas/orderHall";
 import emailjs from "emailjs-com"; 
 import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { uk, enUS } from "date-fns/locale";
 Modal.setAppElement("#root");
 
 export interface FormData {
@@ -23,6 +24,8 @@ export interface FormData {
   guests?: number;
   needRooms?: boolean;
 }
+
+
 
 const OrderModal = ({
   onCloseGlobalModal,
@@ -45,6 +48,13 @@ const OrderModal = ({
 
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  if (i18n.language === "uk") {
+    registerLocale("uk", uk);
+  } else {
+    registerLocale("en", enUS);
+  }
+  
   const onSubmit: SubmitHandler<FormData> = useCallback(
     (data) => {
       setIsLoading(true);

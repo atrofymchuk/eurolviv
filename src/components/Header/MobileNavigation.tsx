@@ -127,9 +127,9 @@ export const MobileNavigation = ({
               <h4 className="text-[12px]  font-cofo-medium text-[#252526] uppercase ">
                 {t("footer.reception")}
               </h4>
-              <p className="text-[12px] text-[#8F8F8F] uppercase   mt-1 mb-[14px]">
+              <a href="tel:+380732424002" className="text-[12px] text-[#8F8F8F] uppercase mt-1 mb-[14px]">
                 {t("contacts.info.receptionPhone")}
-              </p>
+              </a>
               <p className="text-[#252526] text-sm underline underline-offset-4 " style={{textDecorationThickness: '1px'}}>+38 (073) 242 40 02</p>
             </div>
 
@@ -142,7 +142,7 @@ export const MobileNavigation = ({
                 {t("home.roofService.restaurant.title")}/{t("terrase.header.title2")}
               </h4>
              
-              <p className="text-[#252526] text-sm underline underline-offset-4 " style={{textDecorationThickness: '1px'}}>+38 (093) 348 31 14</p>
+              <a href="tel:+380933483114" className="text-[#252526] text-sm underline underline-offset-4 " style={{textDecorationThickness: '1px'}}>+38 (093) 348 31 14</a>
             </div>
 
             <SocialIcons type="restaurant" className="mt-[30px]" isBottomColor={true} />

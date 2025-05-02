@@ -78,7 +78,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
                   className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
                 />
               </Link>
-              <Link to={social.hotel.whatsapp} target="_blank" className=" xl:w-[2.5vw] xl:h-[2.5vw] rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
+              <Link to={social.hotel.viber} target="_blank" className=" xl:w-[2.5vw] xl:h-[2.5vw] rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
                 <svg
                   width="26"
                   height="26"
