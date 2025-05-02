@@ -26,6 +26,7 @@ export const ComfortsBlocksWrapper = ({
   const isScrollingContainer = useRef(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasScrolledToComponent = useRef(false);
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -64,7 +65,7 @@ export const ComfortsBlocksWrapper = ({
       { threshold: 0.2 }
     );
     setTimeout(() => {
-      if (wrapperRef.current) {
+      if (wrapperRef.current && !isMobile) {
         observer.observe(wrapperRef.current);
       }
     }, 1000);

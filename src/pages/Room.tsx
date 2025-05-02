@@ -12,6 +12,7 @@ export const Room = () => {
   const { roomType } = useParams();
   const { rooms } = useRoomStore();
   const { isLastComfortBlockSection, setIsLastComfortBlockSection } = usePageStore();
+  const isMobile = window.innerWidth < 768;
 
   const room = rooms.find((r) => r.type === roomType);
 
@@ -38,7 +39,7 @@ export const Room = () => {
       size={room?.header.size || ""}
     />
     <ComfortsBlocksWrapper key="comforts" icons={room?.icons} room={room} setIsLastComfortBlockSection={setIsLastComfortBlockSection} />
-      {isLastComfortBlockSection && sections.map((Component, index) => (
+      { (isMobile || isLastComfortBlockSection) && sections.map((Component, index) => (
         <div key={index}>
           {Component}
         </div>
