@@ -18,7 +18,7 @@ export const Agreement = ({ handleAgree }: { handleAgree: () => void }) => {
 
   return (
     <div className="fixed bottom-0 left-0 w-full 2xl:h-[7vh] xl:h-[10vh] h-[8vh] flex flex-col   z-1000">
-    <div className="mx-auto 2xl:w-[60vw] xl:w-[70vw] bg-[#646464]/80 h-full rounded-t-2xl">
+    <div className="mx-auto 2xl:w-[60vw] xl:w-[70vw] bg-gray-500/75 h-full rounded-t-2xl">
         <div className="flex  2xl:w-[90%] xl:w-[85%] items-center justify-center mx-auto h-full">
           <div className="flex flex-col  justify-between 2xl:w-[70%] xl:w-[100%]  w-[65%] gap-x-10 lg:gap-0">
             <p className="text-[#EDE8E5]  2xl:text-[0.73vw] xl:text-[1.09vw] w-[90%]  leading-[110%] text-[2.67vw]  ">
