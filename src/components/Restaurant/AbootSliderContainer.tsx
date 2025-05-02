@@ -7,7 +7,6 @@ import {
 } from "../../store/exportsImg";
 import cn from "classnames";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { links } from "../../Constants/Links";
 
@@ -24,7 +23,6 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
 }) => {
   const { t } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);
-  const containerRef = useRef<HTMLDivElement>(null);
   
   const imgs = slides
     ? slides
@@ -39,18 +37,17 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
 
   return (
     <div
-      ref={containerRef}
       className={`relative flex xl:h-[50vw] items-center lg:justify-end   max-w-screen overflow-x-hidden overflow-y-hidden  lg:h-[650px] md:h-[570px] flex-col 
         ${
         isTerrase ? "w-full h-[380px] 2xl:h-[46.15vw] " : "justify-center h-[370px] 2xl:h-[46.15vw]"
       }`}
     >
-      <div className="absolute w-full h-[660px] -z-1 flex items-end justify-center ">
+      <div className="absolute w-full lg:h-[660px] h-[460px] -z-1 flex items-end justify-center ">
         <div
-          className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw]  h-[700px]`, {
+          className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw]  h-[470px]`, {
             
             "2xl:w-[93.1%] xl:w-[93.1%] lg:w-[93.1%] md:w-[93.1%] w-[89.05%]": !isTerrase,
-            "2xl:w-[93.23%] xl:w-[93.23%] lg:w-[93.25%] md:w-[93.25%] w-[89.9%]": isTerrase,
+            "2xl:w-[93.23%] xl:w-[93.23%] lg:w-[93.25%] md:w-[93.25%] w-[89.7%]": isTerrase,
           })}
         >
           <div className="h-full grid grid-cols-1  w-full md:grid-cols-[49.9%_0.1%_50.03%]">

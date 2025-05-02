@@ -68,7 +68,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         {size && (
           <p
             className={cn(
-              `uppercase w-[55%] md:w-[60%] xl:w-[40%] lg:leading-[35px] lg:text-[36px] text-[5.33vw] font-cofo-medium leading-[25px]  2xl:pt-[2.4vw] md:text-[32px] lg:pt-[30px] pt-[17px]`
+              `uppercase w-[60%] md:w-[60%] xl:w-[40%] lg:leading-[35px] lg:text-[36px] text-[5.33vw] font-cofo-medium leading-[25px]  2xl:pt-[2.4vw] md:text-[32px] lg:pt-[30px] pt-[17px]`
             )}
           >
             {processTitle(t(size))}

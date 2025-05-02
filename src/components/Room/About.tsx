@@ -54,9 +54,9 @@ export const About = memo(
       <div>
         <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[9.67%_80.67%_9.67%] items-center justify-center 2xl:items-start 2xl:justify-normal  md:max-w-full mx-auto md:mx-0">
           <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-1 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-[29.07vw] border-[#C7C7C7] order-5 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-6 md:order-none " />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full md:min-h-auto min-h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-full border-[#C7C7C7] order-5 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-full border-[#C7C7C7] order-6 md:order-none " />
           
           <div
             className=" h-full border-t 2xl:h-[12.57vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
@@ -99,7 +99,7 @@ export const About = memo(
             </div>
           </div>
 
-          <div className="flex order-5 md:order-none h-full w-full">
+          <div className="flex order-5 md:order-none min-h-[29.07vw] lg:min-h-auto w-full ">
             <AboutRoomTitle nameRoom={nameRoom} />
           </div>
 
