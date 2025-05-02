@@ -13,7 +13,8 @@ i18n
       en: { translation: en },
       uk: { translation: uk }
     },
-    fallbackLng: "en",
+    lng: "uk",
+    fallbackLng: "uk",
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"]
