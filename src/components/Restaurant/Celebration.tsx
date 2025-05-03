@@ -2,9 +2,11 @@ import { useTranslation } from "react-i18next";
 import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
 import { ViewMenuButton } from "../Buttons/ViewMenu";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const Celebration = () => {
   const { t } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);
+  const isEng = useIsEnglish();
   return (
     <div className="flex flex-col items-center justify-center mx-auto md:w-[93.16%] w-[89.067%] border-[#B3B3B3] md:border-">
       <div className="grid md:grid-cols-[35.7%_28.9%_35.1%]  grid-cols-1 w-full border-x border-[#B3B3B3] md:border-t ">
@@ -26,22 +28,18 @@ export const Celebration = () => {
           </h1>
           <div className="lg:space-y-4 space-y-4 lg:mt-[37px] mt-[24px] flex flex-col items-center">
             <p
-              className={`text-[#252526] 2xl:w-[35.52vw] lg:w-[520px]
-                  md:w-[420px] md:text-[14px] 2xl:text-[0.94vw]  uppercase  lg:text-[16px]
-                    lg:leading-[120%] text-[3.2vw] w-[95%] ${
-                isCustomWidth
-                  ? "xl:text-[15px] xl:w-[145%] tracking-[-0.01em]"
-                  : "xl:text-[1.05vw] xl:w-[145%] "
-              }`}
+              className={`text-[#252526] 2 md:text-[14px] 2xl:text-[0.94vw] xl:text-[1.25vw] uppercase  lg:text-[16px]
+                    lg:leading-[120%] text-[3.2vw] 
+                    ${isEng? "2xl:w-[156%] xl:w-[210%] w-[96%]" : "w-[95%] 2xl:w-[35.52vw] xl:w-[180%] lg:w-[520px] md:w-[420px]"}
+                    `}
             >
               {t("restaurant.celebration.desc.0")}
             </p>
             <p
-              className={`text-[#252526] 2xl:w-[37.6vw] lg:w-[550px]  md:w-[420px]  md:text-[14px] 2xl:text-[0.94vw] uppercase  lg:text-[16px]  lg:leading-[120%] text-[3.2vw] w-[90%] ${
-                isCustomWidth
-                  ? "xl:text-[15px] xl:w-[150%] tracking-[-0.01em]"
-                  : "xl:text-[1.05vw] xl:w-[160%]"
-              }`}
+              className={`text-[#252526]   md:text-[14px] 2xl:text-[0.94vw] uppercase xl:text-[1.25vw] lg:text-[16px]  lg:leading-[120%] text-[3.2vw]
+                ${isEng ? "2xl:w-[156%] xl:w-[205%] w-[95%]" : "2xl:w-[37.6vw] lg:w-[550px] xl:w-[180%] md:w-[420px] w-[90%]"}
+              
+            `}
             >
               {t("restaurant.celebration.desc.1")}
             </p>

@@ -42,7 +42,7 @@ export const HeaderDescription: React.FC<HeaderDescriptionProps> = ({
     <p
       className={cn(
         ` uppercase 2xl:text-[0.94vw] xl:text-[1.09vw] lg:text-[18px] lg:leading-[22px] lg:w-[635px] 
-        ${roomInfo ? "w-[70%] " : "w-[85%] md:w-[60%] xl:w-[40%] 2xl:w-[35%]"}
+        ${roomInfo ? "w-[80%] " : "w-[80%] md:w-[60%] xl:w-[40%] 2xl:w-[35%]"}
         ${size ? "lg:pt-[33px]" : "2xl:pt-[2.4vw] pt-[30px]"} 
         ${isMobile && descriptionMobile ? "w-[54%]! whitespace-pre-line" : ""}
         ${isStandartTwoBeds ? "w-[50%]!" : ""}

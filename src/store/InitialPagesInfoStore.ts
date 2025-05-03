@@ -186,7 +186,7 @@ export const reviews: Reviews = {
     {
       id: 1,
       name: "Anna",
-      country: "Україна",
+      country: "reviews.ukraine",
       flag: icons.ukraineFlag ,
       textUa:
         "комфортні світлі номери, розташування супер, 10 хв прогулянки і ти в центрі, чудовий ресторан на 8 поверсі, смачні сніданки з прекрасним краєвидом",
@@ -196,7 +196,7 @@ export const reviews: Reviews = {
     {
       id: 2,
       name: "Tetiana",
-      country: "Україна",
+      country: "reviews.ukraine",
       flag: icons.ukraineFlag,
       textUa:
         "розташування, номери чисті. сніданки дуже смачні, великий вибір страв як для дорослих, і для дітей. дуже зручно, що є відкрита, де також можна до пізна можна смачно повечеряти",
@@ -208,14 +208,14 @@ export const reviews: Reviews = {
     {
       id: 4,
       name: "Maciej",
-      country: "Polska",
+      country: "reviews.poland",
       flag: icons.polandFlag,
       text: "Śniadanie w takim miejscu i jeszcze szampon! Żadnej rewelacji. Mama była podekscytowana. Widok na cały Lwów! Pięknie świeciło święciło. Nie było ruchu. Żadnych środowych marzeń",
     },
     {
       id: 5,
       name: "Grzegorz",
-      country: "Polska",
+      country: "reviews.poland",
       flag: icons.polandFlag,
       text: "Hotel czysty, śniadanie, miła obsuga, wszystkobsprawne, blisko do centrum.",
     },

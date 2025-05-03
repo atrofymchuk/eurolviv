@@ -35,9 +35,14 @@ const isEng = i18n.language === "en";
       <h1 className="uppercase  xl:text-[198px]  text-[64px] z-10 text-[#FFFFFF] pt-[5px] lg:pt-0 leading-[81%] tracking-[-0.1em] text-center underline decoration-transparent ">
         {t("global.eurohotel")}
       </h1>
-      <h4 className="font-cofo md:text-[18px] text-[3.73vw] uppercase w-[70%] lg:w-fit z-10  text-white  text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5">
+      <h4 className={`font-cofo 2xl:text-[0.94vw] xl:text-[1.25vw] md:text-[18px] inline text-[3.73vw] uppercase w-[70%] lg:w-auto z-10
+       ${isEng ? "2xl:w-[34%] xl:w-[45%]" : ""}
+        text-white  text-center underline-offset-[from-font] xl:mt-[33px] mt-7.5`}>
+          <span className={`${isEng ? "lg:inline" : ""}`}>
         {t("about.header.desc.0")}
-        <span className={`${isEng ? "" : " font-cofo-medium"} xl:block text-[18px] uppercase  text-center underline-offset-[from-font] decoration-none hidden`}>
+
+          </span>
+        <span className={`${isEng ? "lg:inline" : " font-cofo-medium lg:block"}  xl:text-[1.25vw]  text-[18px] 2xl:text-[0.94vw] uppercase  text-center underline-offset-[from-font] decoration-none hidden`}>
           {t("about.header.desc.1")}
         </span>
       </h4>

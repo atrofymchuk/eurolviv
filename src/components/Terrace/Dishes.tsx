@@ -60,12 +60,27 @@ export const Dishes = ({
           )}
           <p
             className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] 
-          text-[3.20vw] lg:pt-[18px] 2xl:pt-[0.94vw] pt-[22px] lg:pb-[30px] 2xl:pb-[1.56vw] pb-[22px]  2xl:w-1/3 w-8/9 mx-auto
+          text-[3.20vw] lg:pt-[18px] 2xl:pt-[0.94vw] pt-[22px] lg:pb-[30px] 2xl:pb-[1.56vw] pb-[22px]  mx-auto
           
           ${
-            content.isMenu
-              ? "lg:w-[35%] 2xl:w-[30%]"
-              : "lg:w-[45%] xl:w-[30%] 2xl:w-[25%]"
+            !isEng && content.isMenu
+              ? " lg:w-[35%] 2xl:w-[30%] w-8/9 "
+              : " "
+          }
+          ${
+            !isEng && !content.isMenu
+              ? "  lg:w-[45%] xl:w-[30%] 2xl:w-[25%] w-8/9 "
+              : " "
+          }
+          ${
+            isEng && content.isMenu
+              ? "2xl:w-[35%]! xl:w-[40%]! w-[85%]! lg:w-[35%] "
+              : ""
+          }
+          ${
+            isEng && !content.isMenu
+              ? "lg:w-[35%] 2xl:w-[25%]! xl:w-[30%]!  w-[65%]!"
+              : ""
           }
           `}
           >
@@ -91,7 +106,7 @@ export const Dishes = ({
                   `uppercase  xl:text-[14px] 2xl:text-[0.73vw] text-center
           rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer ${
             content.isMenu
-              ? "xl:px-[20px] lg:w-[122px] 2xl:w-[6.35vw] xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B]  text-[#FFFFFF] hover:bg-[white] hover:text-[#8C331B] border border-[#8C331B]"
+              ? "xl:px-[0px] lg:w-[122px] 2xl:w-[6.35vw] xl:py-[10.5px] px-[32px] py-[10px] bg-[#8C331B]  text-[#FFFFFF] hover:bg-[white] hover:text-[#8C331B] border border-[#8C331B]"
               : "border-[#8C331B] hover:text-white border text-[#8C331B] px-[32px] py-[10px] xl:px-[25px] xl:py-[10.5px] hover:bg-[#8C331B] "
           },`,
                   {

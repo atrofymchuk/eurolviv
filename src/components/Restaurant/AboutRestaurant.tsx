@@ -166,7 +166,7 @@ export const AboutRestaurant = () => {
             </p>
 
             <p className="uppercase text-[#252526] 2xl:text-[0.9375vw] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px]  w-[100%] ">
-              <span className="lg:font-cofo-medium">
+              <span className={`${isEng ? 'font-cofo-medium' : 'lg:font-cofo-medium'}`}>
                 {t("restaurant.about.desc.fourh.0")}
               </span>
               <span className="">{t("restaurant.about.desc.fourh.1")}</span>

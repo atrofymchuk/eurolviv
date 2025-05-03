@@ -28,13 +28,13 @@ export const Advantages = () => {
             </h1>
             <ul
               className={`uppercase pt-[29px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#E1E1E1] text-[3.733vw] 2xl:text-[1.042vw] xl:gap-y-1 gap-y-[2px] gap-[6px] 2xl:gap-[9px] ${
-                isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
+                isCustomWidth ? "xl:text-[18px]" : "xl:text-[15px]"
               }`}
             >
               {hotelInfo.map(({ icon, text }, index) => (
                 <li
                   key={index}
-                  className={`flex  gap-1.5 lg:self-end ${isEng ? "w-[60vw] md:w-auto 2xl:w-[20vw] xl:w-[20vw]" : ""}`}
+                  className={`flex   gap-1.5 lg:self-end ${isEng ? "w-[60vw] md:w-auto 2xl:w-[20vw] xl:w-[20vw]" : ""}`}
                 >
                   <InViewWrapper>
                     <img
@@ -82,7 +82,7 @@ export const Advantages = () => {
             <ul
               className={`uppercase pt-[30px] 2xl:pt-[2.708vw] xl:pt-[40px] md:text-[14px] text-[#E1E1E1]
                  text-[3.733vw] 2xl:text-[1.042vw]  xl:gap-y-1 gap-y-[2px] ${
-                isCustomWidth ? "xl:text-[18px]" : "xl:text-[16px]"
+                isCustomWidth ? "xl:text-[18px]" : "xl:text-[15px]"
               }`}
             >
               {services.map(({ icon, text }, index) => (
@@ -93,7 +93,7 @@ export const Advantages = () => {
                   <InViewWrapper>
                     <img
                       loading="lazy"
-                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px] md:h-[22px]
+                      className={`2xl:w-[1.875vw] 2xl:h-[1.875vw]  w-[5.333vw] h-[5.333vw] md:w-[22px]  md:h-[22px] 
                          ${isCustomWidth ? "xl:w-[30px] xl:h-[30px]" : "xl:w-[26px] xl:h-[26px]"}
                          ${index === 3? "scale-120" : ""}`}
                       src={icon}

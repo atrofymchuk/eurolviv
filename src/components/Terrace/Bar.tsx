@@ -9,9 +9,13 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { links } from "../../Constants/Links";
 import { Link } from "react-router-dom";
-
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const BarComponent = () => {
   const { t } = useTranslation();
+
+
+  const isEng = useIsEnglish ();
+  
   return (
     <div className="mx-auto md:w-[93.23%] 2xl:w-[94%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
       <div className="md:border-x  border-[#B3B3B3] xl:pt-[149px]">
@@ -24,8 +28,10 @@ export const BarComponent = () => {
           <Link to={links.cocktailCard} target="_blank">{t("terrase.bar.title")}</Link>
         </h2>
 
-        <p className="text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw] xl:w-[40%] 2xl:w-[30%] text-[3.20vw]  pt-[22px] lg:pb-[28px] md:w-1/3 mx-auto">
-          {t("terrase.bar.desc")}
+        <p className={`text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw]   text-[3.20vw]  pt-[22px] lg:pb-[28px]  mx-auto
+          ${isEng ? "xl:w-[40%] 2xl:w-[50%] w-[80%]" : "xl:w-[40%] 2xl:w-[30%] md:w-1/3"}
+          `}>
+          { isEng ? <> {t("terrase.bar.desc.0")} <br className="hidden lg:block"/> {t("terrase.bar.desc.1")} </> : t("terrase.bar.desc")}
         </p>
       </div>
       <div className="flex flex-wrap pt-[36px] md:pt-0">

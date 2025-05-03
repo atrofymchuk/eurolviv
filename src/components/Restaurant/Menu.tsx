@@ -16,7 +16,7 @@ export const Menu = () => {
           className={cn(
             `grid  md:h-full h-[521px] grid-cols-1`,
             isEng
-              ? "md:grid-cols-[35.7%_29.9%_35.6%]"
+              ? "md:grid-cols-[35.1%_30.1%_35.6%]"
               : "md:grid-cols-[35.7%_28.9%_35.6%]"
           )}
         >

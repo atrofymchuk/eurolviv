@@ -126,7 +126,7 @@ export const StorySection = () => {
             className={`text-[3.2vw] sm:text-sm md:text-[14px] xl:px-[8px_4px] xl:text-[1.09vw]
             2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[22px_17px] 
             md:px-3 uppercase font-normal leading-[120%]
-            ${isEng ? "xl:w-[102%] w-[99%]" : ""}
+            ${isEng ? "xl:w-[102%] w-[98%]" : ""}
             `}
           >
             {t("about.about.photoDesc.0")}
@@ -137,11 +137,11 @@ export const StorySection = () => {
           </p>
           <div className="flex border-y border-[#C7C7C7] flex-col mt-auto">
             <p
-              className={` custom-md-font p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px]  xl:px-[8px_0px]  xl:text-[1.09vw]
+              className={` font-cofo-medium p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px]    xl:text-[1.09vw]
               ${isCustomMobile ? "px-[18px]" : ""}
-              ${isEng ? "2xl:w-[95%] w-[90%] mx-auto" : ""}
+              ${isEng ? "2xl:w-[95%] w-[90%] mx-auto xl:px-[0px_0px]" : "xl:px-[8px_0px]"}
               ${isCustomSecondaryMobile ? "px-[18px] " : ""}
-               text-[3.2vw] sm:text-sm md:text-[14px]  pt-[26px]   2xl:text-[1.042vw] mt-auto leading-[120%] tracking-[-0.01em] uppercase text-[#8C331B] `}
+               text-[3.2vw]  pt-[26px]   2xl:text-[1.042vw] mt-auto leading-[120%] tracking-[-0.01em] uppercase text-[#8C331B] `}
             >
               {t("about.about.photoDesc.2")}
             </p>

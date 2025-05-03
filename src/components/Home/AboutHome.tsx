@@ -203,13 +203,15 @@ export const AboutHome = () => {
                 {t("home.about.desc.1")}
               </p>
               <p
-                className="uppercase font-cofo tracking-[-0.04em] font-normal text-[#444444]
+                className={`uppercase font-cofo tracking-[-0.04em] font-normal text-[#444444]
                 text-[3.2vw]
                 sm:text-[2.08vw]
                 md:text-[1.17vw]
                 lg:text-[0.97vw]
                 xl:text-[1.04vw] xl:leading-[1.15vw]
-                2xl:text-[1.04vw] 2xl:leading-[1.25vw] 2xl:p-0 xl:p-0"
+                2xl:text-[1.04vw] 2xl:leading-[1.25vw] 2xl:p-0 xl:p-0
+                ${isEng ? "xl:w-[90%] 2xl:w-auto" : ""}
+                `}
               >
                 {t("home.about.desc.2")}
               </p>

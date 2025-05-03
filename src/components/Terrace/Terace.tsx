@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FormatBoldText } from "../common/FormatBoldText";
 import { AbootSliderContainer } from "../Restaurant/AbootSliderContainer";
 import cn from "classnames";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 
 type TerraseToProps = {
   terase: TerraseT;
@@ -13,6 +14,7 @@ type TerraseToProps = {
 export const Terrase = ({ terase, index }: TerraseToProps) => {
   const { descOne, descTwo, descThree, title, preview } = terase;
   const { t } = useTranslation();
+  const isEng = useIsEnglish();
 
   const isLowerTerrase = index === 2;
 
@@ -46,38 +48,77 @@ export const Terrase = ({ terase, index }: TerraseToProps) => {
                   >
                     {t(title)}
                   </h1>
-                  <div className="space-y-4 xl:w-[106%] 2xl:mt-[1.93vw] mt-[27px]">
+                  <div
+                    className={`space-y-4  2xl:mt-[1.93vw] mt-[27px] ${
+                      !isEng ? "xl:w-[106%]" : ""
+                    }`}
+                  >
                     <div
                       className={`leading-[100%]
-                       ${index === 2 ? "xl:w-[97%]  2xl:w-[96.7%]" : ""}
-                       ${index === 1 ? "xl:w-[85%] 2xl:w-[85%]" : ""}
+                       ${
+                         !isEng && index === 2
+                           ? "xl:w-[97%]  2xl:w-[97%]"
+                           : ""
+                       }
+                       ${!isEng && index === 1 ? "xl:w-[85%] 2xl:w-[85%]" : ""}
+                       ${isEng && index === 0 ? "xl:w-[105%] 2xl:w-[102%] w-[100%] " : ""}
+                       ${
+                        isEng && index === 1 ? "xl:w-[85%] 2xl:w-[85%] " : ""
+                      }
+                       ${
+                        isEng && index === 2 ? "xl:w-[103%] 2xl:w-[103%] w-[102%] " : ""
+                      }
                        `}
                     >
                       <FormatBoldText
+                        descNumber={1}
                         desc={descOne}
                         isLowerTerrase={isLowerTerrase}
+                        isEng={isEng}
                       />
                     </div>
                     <div
                       className={`leading-[100%]
-                    ${index === 0 ? "xl:w-[95%] 2xl:w-[100%]" : ""}
-                      ${index === 1 ? "xl:w-[90%] 2xl:w-[90%]" : ""}
-                      ${index === 2 ? "xl:w-[90%] 2xl:w-[95%]" : ""}
-
+                      ${!isEng && index === 0 ? "xl:w-[95%] 2xl:w-[100%]" : ""}
+                      ${!isEng && index === 1 ? "xl:w-[90%] 2xl:w-[90%]" : ""}
+                      ${!isEng && index === 2 ? "xl:w-[90%] 2xl:w-[95%]" : ""}
+                      ${
+                        isEng && index === 0 ? "xl:w-[103.6%] 2xl:w-[104.4%] w-[99%] " : ""
+                      }
+                      ${
+                        isEng && index === 1 ? "xl:w-[90%] 2xl:w-[90%] " : ""
+                      }
+                      ${
+                        isEng && index === 2 ? "xl:w-[98%] 2xl:w-[98%] w-[102%]" : ""
+                      }
                       `}
                     >
-                      <FormatBoldText desc={descTwo} />
+                      <FormatBoldText
+                        desc={descTwo}
+                        isEng={isEng}
+                        descNumber={2}
+                      />
                     </div>
                     <div
                       className={`leading-[100%] 
-                       ${index === 0 ? " 2xl:w-[90%]" : ""}
+                       ${!isEng && index === 0 ? " 2xl:w-[95%]" : ""}
 
-${index === 1 ? "xl:w-[85%] 2xl:w-[84%]" : ""}
+                      ${!isEng && index === 1 ? "xl:w-[85%] 2xl:w-[84%]" : ""}
+                      ${
+                        isEng && index === 0 ? "xl:w-[105%] 2xl:w-[104.4%] w-[95%] " : ""
+                      }
+                      ${
+                        isEng && index === 1 ? "xl:w-[90%] 2xl:w-[90%] " : ""
+                      }
                       `}
                     >
-                      <FormatBoldText desc={descThree} />
+                      <FormatBoldText
+                        desc={descThree}
+                        isEng={isEng}
+                        descNumber={3}
+                      />
                     </div>
-                    {index === 0 && (
+                    {index === 0 && !isEng && (
                       <div className="leading-[100%] lg:flex hidden mt-[39px]">
                         <p className="text-[#444444] uppercase 2xl:text-[0.94vw] xl:text-[0.94vw] leading-[120%]">
                           <span className="font-cofo-medium">

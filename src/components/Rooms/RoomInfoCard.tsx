@@ -63,16 +63,18 @@ export const RoomInfoCard = ({ room, length, index }: RoomInfoCard) => {
               <div className="flex-1 flex flex-col justify-center items-center w-full">
                 <h1 className={`font-cofo uppercase 2xl:text-[2.08vw] xl:text-[2.34vw] lg:text-[2.15vw] md:text-[28px] text-[6.4vw] leading-[85%] tracking-[-0.06em] font-cofo-medium whitespace-pre-line text-[#252526] 
                 
-                ${isEng ? "2xl:w-[70%] xl:w-[80%] w-[75%]  " : "2xl:w-[85%] xl:w-[99%] w-[95%] "}
+                ${isEng ? "2xl:w-[70%] xl:w-[80%] w-[85%]  " : "2xl:w-[85%] xl:w-[99%] w-[95%] "}
                     ${!isEng ? "w-[75%]! " : ""}
                     ${!isEng && (index == 3 || index===4)? "w-[95%]! " : ""}
                     ${!isEng && index >=7? "w-[95%]! " : ""}
                 ${isEng && index == 2 ? " xl:w-[50%]! w-[50%]!" : ""}`}>
                   {t(room.title)}
                 </h1>
-                <p className="uppercase 2xl:text-[0.94vw] xl:text-[0.93vw] lg:text-[0.98vw] md:text-[13px] text-[12px] 
+                <p className={`uppercase 2xl:text-[0.94vw] xl:text-[0.93vw] lg:text-[0.98vw] md:text-[13px] text-[3.2vw] 
                 leading-[120%]
-                mt-[15px] 2xl:mt-[0.78vw] tracking-[-0.04em] text-[#6B6B6B] ">
+                ${isEng && (index === 4 || index === 6) ? "lg:w-auto w-[89%]  " : " "}
+               
+                mt-[15px] 2xl:mt-[0.78vw] tracking-[-0.04em] text-[#6B6B6B] `}>
                   {t(room.description)}
                 </p>
               </div>

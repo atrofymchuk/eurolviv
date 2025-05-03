@@ -18,7 +18,7 @@ export const RoomDescription = memo(
     const { t } = useTranslation();
     const isEng = useIsEnglish();
     const isMobile = useCustomWidth(330, 600);
-    const isMobileSmaller = useCustomWidth(330, 380);
+    const isMobileWider = useCustomWidth(400, 600);
     return (
       <div className="2xl:pt-[42px] xl:pt-[30px] lg:pt-[30px]   pt-[52px] flex flex-col h-full justify-between">
         <div className="flex flex-col gap-[24px]">
@@ -27,13 +27,13 @@ export const RoomDescription = memo(
               ${isEng ? "" : " 2xl:w-auto"}
               ${!isEng&&isMobile && index===1 ? "w-[94%]" :""}
               ${!isEng&&isMobile && index===2 ? "w-[105%]" :""}
-              ${isEng && index===1 ? "w-[94.5%]" :""}
               ${!isEng && isOnTop ? "2xl:w-[95%]! xl:w-[90%]!" : ""}
               ${!isEng && !isOnTop ? "xl:w-[95%] 2xl:w-[100%]" : ""}
               ${isEng && isOnTop ? "2xl:w-[90%]! xl:w-[88%]!" : ""}
-              ${isEng && !isOnTop ? "2xl:w-[102%]! xl:w-[96%]!" : ""}
+              ${isEng && !isOnTop ? "2xl:w-[101%]! xl:w-[96%]!" : ""}
+                ${isEng && isMobile && index===1 ? "w-[95.5%]" :""}
+                ${isEng && isMobileWider && index===1 ? "w-[94.5%]!" :""}
                 ${isEng && isMobile && index===2 ? "w-[102%]" :""}
-                ${isEng && isMobileSmaller && index===1 ? "w-[95.5%]" :""}
           text-[#252526]  uppercase 
             `}
           >
@@ -78,7 +78,7 @@ export const RoomDescription = memo(
                 });
               }
             }}
-            className={`text-[14px] 2xl:text-[0.74vw] hidden lg:flex 2xl:w-[10.6vw] 2xl:h-[2.3vw] items-center justify-center`}
+            className={`text-[14px] 2xl:text-[0.74vw] hidden lg:flex 2xl:w-[10.6vw] 2xl:h-[2.3vw] xl:h-[3vw] items-center justify-center`}
           >
             {t("buttons.conferenceMenu")}
           </ViewMenuButton>

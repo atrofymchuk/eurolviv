@@ -18,7 +18,7 @@ export const initialTerraseState: TerrasesInitialState = {
         { text: "terasesState.mainTerrase.descTwo.0" },
         { text: "terasesState.mainTerrase.descTwo.1", isBold: true },
         { text: "terasesState.mainTerrase.descTwo.2" },
-        { text: "terasesState.mainTerrase.descTwo.3", isBold: true, isEng: true },
+        { text: "terasesState.mainTerrase.descTwo.3", isBold: false, isEng: false },
       ],
       titleTwo: "terasesState.mainTerrase.titleTwo",
       descThree: [

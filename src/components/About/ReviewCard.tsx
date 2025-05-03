@@ -11,7 +11,7 @@ interface ReviewProps {
 }
 
 export const ReviewCard = ({ review, reviewHeader, index }: { review: ReviewProps, reviewHeader: string, index: number   }) => {
-  const { i18n } = useTranslation();
+  const { t,i18n } = useTranslation();
   const isEng = i18n.language === "en";
 
   const displayText = () => {
@@ -31,7 +31,7 @@ export const ReviewCard = ({ review, reviewHeader, index }: { review: ReviewProp
         </h1>
         <p className="text-[#727272] font-cofo uppercase 2xl:text-[1.042vw] text-[14px] flex items-center gap-2">
           <img src={review.flag} alt={review.country} className="2xl:w-[25px] 2xl:h-[25px] xl:w-[18px] xl:h-[18px] w-[18px] h-[18px]"/> 
-           {review.country}
+           {t(review.country)}
         </p>
       </div>
     
