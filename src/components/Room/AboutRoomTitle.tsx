@@ -1,9 +1,11 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 
 
 export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
   const { t } = useTranslation();
+  const isEng = useIsEnglish()
   const isMobile = window.innerWidth < 768;
   const isLuxTwoRoom = nameRoom.toLowerCase().includes("luxtworooms") || false;
   const semilux = nameRoom.toLowerCase().includes("semilux") || false;
@@ -28,7 +30,7 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
             {t(nameRoom)}
           </span>
         )}
-        {isLuxTwoRoom  && (
+        {isEng &&isLuxTwoRoom  && (
           <span className="md:whitespace-nowrap ">
             {t(nameRoom)}
           </span>
