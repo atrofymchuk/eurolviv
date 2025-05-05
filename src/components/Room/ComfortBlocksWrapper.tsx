@@ -2,6 +2,7 @@ import { IconsState, Room } from "../../types/types";
 import { ComfortsBlock } from "./ComfotsBlock";
 import { useTranslation } from "react-i18next";
 import { useRef, useEffect, useState, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import "./styles.css";
 type ComfortsBlockToProps = {
   icons?: IconsState;
@@ -15,6 +16,7 @@ export const ComfortsBlocksWrapper = ({
   setIsLastComfortBlockSection
 }: ComfortsBlockToProps) => {
   const { t } = useTranslation();
+  const location = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
   const blocksRefs = useRef<(HTMLDivElement | null)[]>([]);
   const lastBlockRef = useRef<HTMLDivElement | null>(null);
@@ -27,6 +29,28 @@ export const ComfortsBlocksWrapper = ({
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasScrolledToComponent = useRef(false);
   const isMobile = window.innerWidth < 768;
+
+  useEffect(() => {
+    setHasShownLastBlock(false);
+    lastScrollTop.current = 0;
+    lastScrollPosition.current = 0;
+    scrollDistance.current = 0;
+    isScrollingContainer.current = false;
+    hasScrolledToComponent.current = false;
+    
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
+    
+    blocksRefs.current.forEach(block => {
+      if (block) {
+        block.style.transform = '';
+      }
+    });
+    
+    setIsLastComfortBlockSection(false);
+    
+  }, [location.pathname, setIsLastComfortBlockSection]);
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
