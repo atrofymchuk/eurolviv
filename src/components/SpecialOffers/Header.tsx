@@ -12,7 +12,7 @@ export const Header = () => {
          items-center lg:items-start text-center lg:text-left md:py-20 py-[53px_49px] px-[5.33vw] 2xl:pt-[7.5vw] xl:pt-[7.5vw] lg:pt-[86px] 2xl:pl-[1vw] xl:pl-[1.5vw] lg:pl-[1.56vw] ">
           <h1
             className={`uppercase  text-white lg:leading-[91%] leading-[100%] tracking-[-0.1em]
-               ${isEng ? "2xl:ps-[9px] xl:ps-[0.4vw]" : "ps-[1.6vw] xl:ps-[0.3vw]"}
+               ${isEng ? "2xl:ps-[7px] xl:ps-[0.4vw]" : "ps-[1.6vw] xl:ps-[0.3vw]"}
             text-[12.8vw] md:text-[64px] lg:text-[10.36vw] xl:text-[10.1vw] 2xl:text-[10.3vw] z-1`}
           >
             {t("specialOffers.title")}
@@ -24,7 +24,8 @@ export const Header = () => {
             {t("specialOffers.desc2")}
           </h1>
           <p className={`relative uppercase text-[#BDBDC0] 2xl:ps-2 xl:ps-1.5 text-[3.2vw] sm:text-[14px] md:text-[16px] 2xl:text-[0.94vw] w-[100%]
-           lg:text-[12px] xl:text-[1.02vw] leading-[130%] 2xl:pt-[1.98vw] xl:pt-[2.33vw]  lg:pt-[1.32vw] pt-[20px]  md:w-[65%] ${isEng ? "2xl:w-[95%] xl:w-[110%] " : "2xl:w-[93%] xl:w-[105%] "} lg:w-[115%]`}>
+           lg:text-[12px] xl:text-[1.02vw] leading-[130%] 2xl:pt-[1.98vw] xl:pt-[2.33vw]  lg:pt-[1.32vw] pt-[20px]  md:w-[65%] 
+           ${isEng ? "2xl:w-[100%] xl:w-[110%] w-[110%]" : "2xl:w-[93%] xl:w-[105%] "} lg:w-[115%]`}>
             {t("specialOffers.desc")} 
           </p>
         </div>

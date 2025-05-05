@@ -3,31 +3,32 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import { ComfortsBlockToProps } from "../../types/entity";
 import cn from "classnames";
-
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 const removeParentheses = (text: string, isMobile: boolean) => {
   if (!isMobile) return text;
-  return text.replace(/[()]/g, '').trim();
+  return text.replace(/[()]/g, "").trim();
 };
 
 export const ComfortsBlock = memo(
   ({ title, icons, images, style, type }: ComfortsBlockToProps) => {
     const { t } = useTranslation();
-    const isSemiLux = type ===("semi-lux") || false;
-    console.log(type)
+    const isEng = useIsEnglish();
+    const isSemiLux = type === "semi-lux" || false;
     const renderedIcons = useMemo(() => {
       if (!icons) return null;
       return icons.map((item, index) => (
         <li
           key={index}
           className={cn(
-            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw] xl:gap-x-[0.55vw]  ${style.text} uppercase 2xl:w-[93%] w-full`)}
+            `flex items-center gap-x-[3px] 2xl:gap-x-[0.73vw] xl:gap-x-[0.55vw]  ${style.text} uppercase 2xl:w-[93%] w-full`
+          )}
         >
           <InViewWrapper>
             <img
               loading="lazy"
               src={item.src}
               alt="icon"
-              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-7 xl:h-7 2xl:w-[1.88vw] 2xl:h-[1.88vw]"
+              className="w-6 h-6 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-[1.88vw] 2xl:h-[1.88vw]"
             />
           </InViewWrapper>
           <p
@@ -36,7 +37,9 @@ export const ComfortsBlock = memo(
               !isSemiLux && index == 0 ? "lg:whitespace-nowrap" : ""
             }`}
           >
-            {isSemiLux ? t(item.text) : removeParentheses(t(item.text), window.innerWidth < 768)}
+            {isSemiLux
+              ? t(item.text)
+              : removeParentheses(t(item.text), window.innerWidth < 768)}
           </p>
         </li>
       ));
@@ -63,9 +66,16 @@ export const ComfortsBlock = memo(
             <div className="flex flex-col  ps-[2.93vw] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
                 <h1
-                  className={cn(`uppercase ${style.headerColor} font-cofo text-[8.53vw] 
-              lg:text-[32px] xl:text-[3.75vw] 2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 2xl:leading-[100%] xl:leading-[86%] 
-              2xl:mb-[2.66vw]  lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%]  xl:w-[70%] 2xl:w-[60%]
+                  className={cn(`uppercase ${
+                    style.headerColor
+                  } font-cofo text-[8.53vw] 
+             
+              lg:text-[32px]  2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 2xl:leading-[100%] xl:leading-[86%]  ${
+                isEng
+                  ? "xl:text-[2.5vw] xl:min-h-[5.16vw] 2xl:min-h-[5vw] flex items-end xl:w-[70%]"
+                  : "xl:w-[50%]"
+              }
+              2xl:mb-[2.66vw]  lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%] 2xl:w-[50%]
                max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
                 >
                   {title}

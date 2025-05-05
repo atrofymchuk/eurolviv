@@ -8,8 +8,7 @@ const useCachedTranslation = (lang: string) => {
   useEffect(() => {
     fetchTranslation(lang)
       .then((data) => {
-        i18n.addResourceBundle(lang, "translation", data, true, true)
-        i18n.changeLanguage(lang);
+        i18n.addResourceBundle(lang, "translation", data, true, true);
       })
       .finally(() => setLoading(false));
   }, [lang]);

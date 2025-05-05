@@ -21,7 +21,7 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
         {semilux && !isMobile && (
           <span className="md:whitespace-nowrap ">
             {t(nameRoom)}
-          </span>
+          </span> 
         )}
         {!isLuxTwoRoom && isMobile && (
           <span className="md:whitespace-nowrap ">
@@ -36,7 +36,7 @@ export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
         {
           
         }
-        {!isMobile && t(nameRoom).length > 16 && (
+        {!isMobile && t(nameRoom).length > 12 && (
           <>
             {(() => {
               const words = t(nameRoom).split(" ");

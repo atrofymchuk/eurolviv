@@ -5,9 +5,11 @@ import { navigate } from "../../store/exportsIcons";
 import { Link } from "react-router-dom";
 import { map } from "../../Constants/map";
 import { social } from "../../Constants/Social";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 
 export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => void, path: string}) => {
   const { t } = useTranslation();
+  const isEng = useIsEnglish();
 
   return (
     <div className="gap-y-4 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] w-full lg:w-[23.5%] h-full lg:border-e pt-[34px]  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] order-3 lg:order-2 lg:m-0 lg:pt-[17px]  lg:px-3
@@ -19,7 +21,8 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
           <h4 className="text-[12px] uppercase 2xl:text-[0.938vw] xl:text-[1.09vw] 2xl:h-[1.2vw] lg:text-[14px] font-cofo-medium ">
             {t("footer.address")}
           </h4>
-          <p className="flex gap-x-[7px] leading-[1.28] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[1.09vw] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]">
+          <p className={` ${isEng ? "2xl:w-[80%]" : ""}
+            flex gap-x-[7px] leading-[1.28] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[1.09vw] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]`}>
             <img loading="lazy"
               src={navigate}
               className="filter-invert-white"
@@ -38,7 +41,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
             {t("buttons.route")}
           </Link>
         </div>
-          <div className="2xl:mt-[3.333vw] xl:mt-[40px]">
+          <div className={`${isEng ? "2xl:mt-[2.1vw] xl:mt-[28px]" : "2xl:mt-[3.333vw] xl:mt-[40px]"}`}>
           <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
           </h4>

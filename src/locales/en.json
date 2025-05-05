@@ -22,7 +22,7 @@
                 },
                 "children":{
                     "title":"CHILDREN",
-                    "options":["0 children","1 child","2 children","3 children"]
+                    "options":["0 children","1 child","2 children","3 children", "4 children"]
                 }
             }
         },
@@ -244,7 +244,7 @@
             "Breakfast included","Max. 2 persons"],
             "availableService":["Laundry","Ironing","24-hour room service","pet-friendly"]
         },
-        "roomNavigation":"Номери"
+        "roomNavigation":"Rooms"
     },
     "contacts":{
     "header":{

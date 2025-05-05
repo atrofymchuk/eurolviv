@@ -32,7 +32,7 @@ export const Header: React.FC<RoomHeaderToProps> = ({ header }) => {
       size={size}
       showBackLink={true}
       backLinkTo="/rooms"
-      backLinkText="номери"
+      backLinkText="room.roomNavigation"
       roomInfo={{
         count:count.toString(),
         view,

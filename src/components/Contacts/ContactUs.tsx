@@ -18,7 +18,7 @@ export const ContactUs = () => {
         </h1>
         <p
           className={`uppercase 2xl:text-[1.04vw] text-[3.2vw] 2xl:w-[87%]  px-[18px] md:px-0  xl:text-[1.09vw] 
-            ${isEng ? "xl:w-[93%] " : "xl:w-[92%] "}
+            ${isEng ? "2xl:w-[89%] xl:w-[93%] " : "2xl:w-[90%] xl:w-[92%] "}
          lg:text-[14px] xl:text-[1.09vw]  md:text-[14px] leading-[125%] 2xl:mt-[1.82vw]  lg:mt-[35px] text-[#6B6B6B]   mt-[12px] `}
         >
           {t("contacts.info.partnersText.0")}

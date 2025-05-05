@@ -9,6 +9,7 @@ import useLanguage from "../Hooks/useLanguage";
 import { Link } from "react-router-dom";
 import { RiArrowDownSLine } from "react-icons/ri";
 import cn from "classnames";
+import { createPortal } from "react-dom";
 
 interface HeaderProps {
   menuOpen: boolean;
@@ -17,6 +18,7 @@ interface HeaderProps {
 
 export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const { rooms } = useRoomStore();
   const {
     styles,
@@ -34,6 +36,16 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const { changeLanguage } = useLanguage();
 
   const isEng = i18n.language === "en";
+
+  const handleDropdownToggle = (e: React.MouseEvent) => {
+    const buttonElement = e.currentTarget;
+    const rect = buttonElement.getBoundingClientRect();
+    setDropdownPosition({ 
+      top: rect.bottom, 
+      left: rect.left 
+    });
+    setIsDropdownOpen(prev => !prev);
+  };
 
   return (
     <header
@@ -82,9 +94,9 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   pathname={pathname}
                 />
                 <button
-                  onClick={() => setIsDropdownOpen((prev) => !prev)}
+                  onClick={handleDropdownToggle}
                   className={cn(
-                    `whitespace-nowrap uppercase  hidden xl:flex items-center  font-cofo-medium hover:cursor-pointer ${rightMenu}`
+                    `whitespace-nowrap uppercase hidden xl:flex items-center font-cofo-medium hover:cursor-pointer ${rightMenu}`
                   )}
                 >
                   <span
@@ -100,9 +112,14 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                   </span>
                 </button>
 
-                {isDropdownOpen && (
+                {isDropdownOpen && createPortal(
                   <div
-                    className="absolute right-0 mt-2 top-full bg-white text-black rounded shadow-lg py-2 font-cofo-medium  "
+                    className="fixed bg-white text-black rounded shadow-lg py-2 uppercase font-cofo-medium z-[999]"
+                    style={{ 
+                      top: `${dropdownPosition.top}px`,
+                      left: `${dropdownPosition.left}px`,
+                      minWidth: '200px'
+                    }}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     {[`+38 (073) 242 40 02 ${t("global.hotel")}`, `+38 (093) 348 31 14 ${t("header.restaurant")}`].map(
@@ -110,13 +127,14 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                         <a
                           key={index}
                           href={`tel:${phone.replace(/\s/g, '')}`}
-                          className="block px-4 py-2 hover:bg-gray-100"
+                          className="block px-4 py-2 hover:bg-gray-100 w-full"
                         >
                           {phone}
                         </a>
                       )
                     )}
-                  </div>
+                  </div>,
+                  document.body
                 )}
               </div>
 

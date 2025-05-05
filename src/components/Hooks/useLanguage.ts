@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import useCachedTranslation from "./useCachedTranslation";
+// import useCachedTranslation from "./useCachedTranslation";
 
 const useLanguage = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || "uk");
-  const loading = useCachedTranslation(language);
+  // const loading = useCachedTranslation(language);
 
   useEffect(() => {
     const i18nLang = i18n.language;
@@ -18,7 +18,7 @@ const useLanguage = () => {
     localStorage.setItem("i18nextLng", newLang);
   };
 
-  return { language, changeLanguage, loading };
+  return { language, changeLanguage };
 };
 
 export default useLanguage;

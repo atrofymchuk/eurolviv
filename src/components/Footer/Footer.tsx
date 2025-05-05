@@ -101,7 +101,7 @@ export const Footer = () => {
                           to="/restaurant"
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
-                          {t("footer.restaurant")}
+                          { isEng ? 'ruff '+t("home.roofService.restaurant.title") : t("footer.restaurant")}
                         </Link>
                       </li>
                       <li className="font-cofo-medium">
@@ -109,7 +109,7 @@ export const Footer = () => {
                           to="/terrace"
                           className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
                         >
-                          {t("footer.terrace")}
+                          { isEng ? 'ruff '+t("terrase.header.title2") : t("footer.terrace")}
                         </Link>
                       </li>
                       <li className="font-cofo-medium">
@@ -124,12 +124,15 @@ export const Footer = () => {
                   </div>
 
                   <div
-                    className={`flex flex-col lg:mt-auto xl:mt-[114px] 2xl:mt-[7vw] lg:ms-0 ms-[20%] ${
+                    className={`flex flex-col  lg:ms-0 ms-[20%] 
+                      ${isEng ? "lg:mt-auto xl:mt-[155px] 2xl:mt-[9vw]" : "lg:mt-auto xl:mt-[114px] 2xl:mt-[7vw]"}
+                      ${
                       isCustomWidth && "xl:mt-[120px]!"
                     }`}
                   >
                     <div className="">
-                      <p className="font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[12px] 2xl:w-[105%] leading-[1.28]">
+                      <p className={`font-cofo-medium 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase text-[3.2vw] 2xl:w-[105%] leading-[1.28]
+                         ${isEng ? "lg:w-auto w-[70%]" : ""}`}>
                         {t("footer.socialMedia")}
                       </p>
                       <div className="flex lg:space-x-4 space-x-1.75 text-xl lg:mt-[25px] xl:mt-[25px] 2xl:mt-[1.6vw] mt-4">
@@ -182,8 +185,9 @@ export const Footer = () => {
                 <div>
                   <div className="flex flex-col items-center md:items-start">
                     <h4
-                      className="text-lg font-cofo-medium 2xl:text-[1.25vw] text-[20px] leading-[108.6%] font-cofo px-4 md:px-0 tracking-[-0.05em] 
-                    lg:max-w-[420px] 2xl:w-[18.177vw] w-[315px] lg:text-start text-center "
+                      className={`text-lg font-cofo-medium 2xl:text-[1.25vw] text-[5.33vw ] xl:text-[1.56vw] leading-[108.6%] font-cofo px-4 md:px-0 tracking-[-0.05em]
+                          ${isEng ? "2xl:w-[12vw] xl:w-[16.5vw] w-[80%]" : "   lg:max-w-[420px] 2xl:w-[18.177vw] w-[315px]"}
+                  lg:text-start text-center `}
                     >
                       {t("footer.getNews")}
                     </h4>

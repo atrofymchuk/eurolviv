@@ -3,6 +3,7 @@ import { parking } from "../../store/exportsIcons";
 import { dogRoom } from "../../store/exportsImg";
 import { BookLink } from "../Buttons/BookLink";
 import cn from "classnames";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 
 export const MoreInfoSecondCol = ({
   availableService,
@@ -12,6 +13,7 @@ export const MoreInfoSecondCol = ({
   isShowOtherInfo: boolean;
 }) => {
   const { t } = useTranslation();
+  const isEng = useIsEnglish()
   return (
     <div
       className={cn(
@@ -103,8 +105,9 @@ export const MoreInfoSecondCol = ({
           </BookLink>
         )}
         <div className="mt-auto">
-          <p className="text-white text-[4.27vw] w-[102%] 2xl:text-[1.05vw] 2xl:gap-[0.42vw]
-          xl:text-[1.09vw] md:text-[12px] lg:text-[14px] uppercase leading-[120%] md:flex hidden gap-1">
+          <p className={`text-white text-[4.27vw]  2xl:text-[1.05vw] 2xl:gap-[0.42vw]
+          ${isEng ? "2xl:w-[95%]" : "w-[102%]"}
+          xl:text-[1.09vw] md:text-[12px] lg:text-[14px] uppercase leading-[120%] md:flex hidden gap-1`}>
             <img
               loading="lazy"
               src={parking}

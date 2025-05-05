@@ -40,6 +40,7 @@ const children = [
   'home.header.bookingForm.children.options.1',
   'home.header.bookingForm.children.options.2',
   'home.header.bookingForm.children.options.3',
+  'home.header.bookingForm.children.options.4',
 ]
 
 

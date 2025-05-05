@@ -6,6 +6,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { social } from "../../Constants/Social";
 import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useIsEnglish } from "../Hooks/useIsEnglish";
 export const BookingSection = ({
   openPdf,
   pdfDocuments,
@@ -15,6 +16,7 @@ export const BookingSection = ({
 }) => {
   const isCustomWidth = useCustomWidth(1350, 1550)
   const { t } = useTranslation();
+  const isEng = useIsEnglish();
   return (
     <div
       className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
@@ -22,7 +24,9 @@ export const BookingSection = ({
     >
       <div className="h-full flex flex-col ">
         <div>
-          <h4 className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo mb-0 leading-[1.28] uppercase 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px] text-[12px] font-cofo-medium ">
+          <h4 className={`2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo mb-0 leading-[1.28] uppercase 
+          ${isEng ? "2xl:w-[11.281vw] xl:w-[13.703vw] w-[160px]" : " 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px]"}
+            text-[12px] font-cofo-medium `}>
             {t("footer.booking")}
           </h4>
 
@@ -70,7 +74,7 @@ export const BookingSection = ({
                 </a>
               </li>
             </ul>
-            <div className="lg:mt-[10px] 2xl:mt-[10px] xl:mt-[15px  ]  mt-0 flex flex-col">
+            <div className="lg:mt-[10px] 2xl:mt-[10px] xl:mt-[15px]  mt-0 flex flex-col">
               <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
                 <a
                   href="mailto:restaurant@eurohotel.lviv.ua"

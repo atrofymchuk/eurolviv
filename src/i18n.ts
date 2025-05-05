@@ -5,6 +5,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import en from "./locales/en.json";
 import uk from "./locales/uk.json";
 
+const savedLanguage = localStorage.getItem("i18nextLng");
+const initialLanguage = savedLanguage === "en" ? "en" : "uk";
+
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)
@@ -13,7 +16,7 @@ i18n
       en: { translation: en },
       uk: { translation: uk }
     },
-    lng: "uk",
+    lng: initialLanguage,
     fallbackLng: "uk",
     detection: {
       order: ["localStorage", "navigator"],

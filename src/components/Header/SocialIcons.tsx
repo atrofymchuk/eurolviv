@@ -29,7 +29,7 @@ export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIcon
         />
       </Link>
       <Link
-        to={socialLinks.instagram}
+        to={socialLinks.telegram}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
@@ -42,7 +42,7 @@ export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIcon
         />
       </Link>
       <Link
-        to={socialLinks.instagram}
+        to={socialLinks.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
@@ -55,7 +55,7 @@ export const SocialIcons = ({ type, className, isBottomColor=false }: SocialIcon
         />
       </Link>
       <Link
-        to={socialLinks.instagram}
+        to={socialLinks.viber}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
