@@ -53,17 +53,17 @@ export const ComfortsBlock = memo(
           `${style.bgColor} shadow-[0_-4px_22.4px_rgba(0,0,0,0.06)] 2xl:h-[43vw]  z-20`
         )}
       >
-        <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full ">
+        <div className="flex flex-col md:ps-[7.45%] justify-center items-center md:items-start md:justify-start w-full h-full">
           <div
             className="grid  
             grid-cols-1 
             md:grid-cols-[35.6%_30.65%_33.76%]
             items-center justify-center 
-            border-x border-[#C7C7C7]
+            border-x border-[#C7C7C7] h-full
             md:max-w-[90.83%]  w-full max-w-[81.9%]
             "
           >
-            <div className="flex flex-col  ps-[2.93vw] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px]">
+            <div className="flex flex-col  ps-[2.93vw] md:ps-0 md:items-center md:col-span-1 lg:col-span-1 xl:col-span-1  w-full xl:py-[89px] lg:py-[67px] md:py-[45px] ">
               <div className="w-[90%] lg:w-fit xl:w-full flex-col items-center justify-center">
                 <h1
                   className={cn(`uppercase ${
