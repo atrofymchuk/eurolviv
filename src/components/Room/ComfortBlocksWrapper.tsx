@@ -160,7 +160,8 @@ export const ComfortsBlocksWrapper = ({
         const overlapProgress = Math.min(1, Math.max(0, scrollTop / 300));
 
         const translateY = -overlapProgress * (block.offsetHeight * 0.6);
-        if (translateY < -502.2) {
+        console.log(translateY)
+        if (translateY < -1000) {
           block.style.transform = `translateY(${translateY}px)`;
         }
 
@@ -266,7 +267,7 @@ export const ComfortsBlocksWrapper = ({
   return (
     <div 
       ref={wrapperRef}
-      className="relative 2xl:h-[43vw] xl:h-[46.22vw]  overflow-y-auto scrollbar-hide"
+      className="relative 2xl:h-[43vw] xl:h-[45.22vw]  overflow-y-auto scrollbar-hide"
     >
       <div
         className="h-full relative overflow-y-auto scrollbar-hide"

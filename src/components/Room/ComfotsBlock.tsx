@@ -73,7 +73,7 @@ export const ComfortsBlock = memo(
               lg:text-[32px]  2xl:text-[2.5vw] lg:ms-[20px] leading-[100%] 2xl:leading-[100%] xl:leading-[86%]  ${
                 isEng
                   ? "xl:text-[2.5vw] xl:min-h-[5.16vw] 2xl:min-h-[5vw] flex items-end xl:w-[70%]"
-                  : "xl:w-[50%]"
+                  : "xl:w-[45%] xl:min-h-[5.16vw] 2xl:min-h-[5vw]"
               }
               2xl:mb-[2.66vw]  lg:mb-[20px] md:text-left md:mb-[20px]  md:w-[90%] w-[70%] lg:w-[70%] 2xl:w-[50%]
                max-w-[80%] md:max-w-none whitespace-pre-line mt-[54px] md:mt-0`)}
@@ -108,7 +108,7 @@ export const ComfortsBlock = memo(
                 className=" sm:w-[400px] md:w-[300px] lg:w-full  md:ps-[9px]
               2xl:h-[26.67vw] md:h-[260px] lg:h-[311px]
                   2xl:ps-[36px] xl:ps-[14px]  
-                lg:pt-[50px] xl:pt-[3.13vw] 2xl:pt-[4vw] md:pt-[45px] "
+                lg:pt-[50px] xl:pt-[0.43vw] 2xl:pt-[4vw] md:pt-[45px] "
               >
                 <ul>{renderedIcons}</ul>
               </div>
