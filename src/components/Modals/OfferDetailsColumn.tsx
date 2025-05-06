@@ -4,21 +4,81 @@ import { list } from "../../store/exportsIcons";
 type OfferDetailsColumnToProps = {
     title:string
     items:string[]
+    url:string | null
+    isFirstCol:boolean
 }
 
 
 
-export const OfferDetailsColumn = ({ title, items }:OfferDetailsColumnToProps) => {
+export const OfferDetailsColumn = ({ title, items, url, isFirstCol }:OfferDetailsColumnToProps) => {
   const {t} = useTranslation()  
+const isMilitary = url?.includes("military")
+const isBusiness = url?.includes("business")
+const isPet = url?.includes("pet")
+const isPhotosession = url?.includes("photo")
+const isNewlyweeds = url?.includes("newly")
+const isBirthday = url?.includes("birthday")
   return (
-    <div className="flex flex-col col-span-2 md:col-span-1 px-5  md:border-b-0 border-b border-[#C7C7C7]  md:border-e lg:ps-[36px] lg:pt-[30px] w-full pt-[23px] pb-[23px] lg:pb-0">
-    <h1 className="uppercase xl:text-[36px] md:text-[32px] lg:leading-[38.9px] tracking-[-0.07em] text-[#252526] text-[24px] leading-[19.5px] text-center lg:text-start">
+    <div className="flex flex-col col-span-2 md:col-span-1 px-[5.07vw_3.73vw]  md:border-b-0 border-b border-[#C7C7C7]  md:border-e lg:ps-[36px] xl:ps-[2.34vw] lg:pt-[30px] 2xl:pt-[3.33vh] w-full pt-[23px] pb-[23px] lg:pb-0">
+    <h1 className="uppercase xl:text-[36px] 2xl:text-[2.5vw] md:text-[32px] lg:leading-[38.9px] tracking-[-0.07em] text-[#252526] text-[24px] leading-[19.5px] text-center lg:text-start">
         {t(title)}
     </h1>
 
-    <ul className="lg:space-y-[21px]  2xl:mt-[28px]  text-[#6B6B6B] 2xl:pb-5 mt-[27px]  space-y-[11px] ">
-        {items.map((el)=>
-        <li className="uppercase flex items-start lg:gap-3 gap-x-2 xl:text-[16px] md:text-[14px] text-[12px] lg:leading-[20.4px]  lg:tracking-[-0.04em] text-[#6B6B6B]  w-[95%]">
+    <ul className="lg:space-y-[21px]  2xl:mt-[3.24vh]  text-[#6B6B6B] 2xl:pb-[2.78vh] xl:pb-[2.5vh] mt-[27px]  space-y-[11px] ">
+        {items.map((el, index)=>
+        <li className={`uppercase flex items-start lg:gap-3 gap-x-[2.13vw]  2xl:text-[0.94vw] xl:text-[1.09vw] md:text-[14px] 
+        text-[3.2vw] lg:leading-[20.4px] tracking-[-0.04em] text-[#6B6B6B]   
+        
+        ${isMilitary && isFirstCol && index===0 ? "2xl:w-[85%] xl:w-[90%] w-[95%]" : ""}
+        ${isMilitary && isFirstCol && index===1? "xl:w-auto w-[90%]" : ""}
+        ${isMilitary && isFirstCol && index===2 ? "2xl:w-[100%] xl:w-[95%] w-[100%]" : ""}
+
+        ${isMilitary && !isFirstCol && index===0 ? "2xl:w-[100%] xl:w-[100%] w-[100%]" : ""}
+        ${isMilitary && !isFirstCol && index===1 ? "2xl:w-[95%] xl:w-[95%] w-[97%]" : ""}
+
+        ${isBusiness && isFirstCol && index===0 ? "2xl:w-[97%] xl:w-[92.9%] w-[97%]" : ""}
+        ${isBusiness && isFirstCol && index===1 ? "2xl:w-[105%] xl:w-[110%] w-[95%]" : ""}
+        ${isBusiness && isFirstCol && index===2 ? "xl:w-auto  w-[95%]" : ""}
+
+        ${isBusiness && !isFirstCol && index===0 ? "2xl:w-[100%] xl:w-[95%] w-[100%]" : ""}
+        ${isBusiness && !isFirstCol && index===1 ? "2xl:w-[100%] xl:w-[100%] w-[97%]" : ""}
+        ${isBusiness && !isFirstCol && index===2 ? "2xl:w-[95%] xl:w-[94%] w-[100%]" : ""}
+
+        ${isPet && isFirstCol && index===0 ? "2xl:w-[100%] xl:w-[110%] w-[97%]" : ""}
+        ${isPet && isFirstCol && index===1 ? "2xl:w-[95%] xl:w-[95%] w-[90%]" : ""}
+        ${isPet && isFirstCol && index===2 ? "2xl:w-[75%] xl:w-[85%] w-[100%]" : ""}
+        ${isPet && isFirstCol && index===3 ? "xl:w-auto w-[95%]" : ""}
+
+        ${isPet && !isFirstCol && index===0 ? "2xl:w-[101%] xl:w-[100%] w-[100%]" : ""}
+        ${isPet && !isFirstCol && index===1 ? "2xl:w-[87%] xl:w-[85%] w-[77%]" : ""}
+        ${isPet && !isFirstCol && index===2 ? "2xl:w-[99%] xl:w-[100%] w-[100%]" : ""}
+
+        ${isPhotosession && isFirstCol && index===0 ? "2xl:w-[90%] xl:w-[90%] w-[97%]" : ""}
+        ${isPhotosession && isFirstCol && index===1 ? "2xl:w-[105%] xl:w-[110%] w-[97%]" : ""}
+        ${isPhotosession && isFirstCol && index===2 ? "2xl:w-[100%] xl:w-[96.7%] w-[97%]" : ""}
+
+        ${isPhotosession && !isFirstCol && index===0 ? "2xl:w-[84%] xl:w-[81%] w-[97%]" : ""}
+        ${isPhotosession && !isFirstCol && index===1 ? "2xl:w-[105%] xl:w-[110%] w-[97%]" : ""}
+        ${isPhotosession && !isFirstCol && index===2 ? "2xl:w-[100%] xl:w-[100%] w-[99%]" : ""}
+        ${isPhotosession && !isFirstCol && index===3 ? "2xl:w-[100%] xl:w-[95%] w-[97%]" : ""}
+
+        ${isNewlyweeds && isFirstCol && index===0 ? "2xl:w-[105%] xl:w-[105%] w-[100%]" : ""}
+        ${isNewlyweeds && isFirstCol && index===1 ? "2xl:w-[110%] xl:w-[115%] w-[97%]" : ""}
+        ${isNewlyweeds && isFirstCol && index===2 ? "2xl:w-[110%] xl:w-[110%] w-[97%]" : ""}
+        ${isNewlyweeds && isFirstCol && index===3 ? "xl:w-auto w-[90%]" : ""}
+
+        ${isNewlyweeds && !isFirstCol && index===0 ? "2xl:w-auto xl:w-[90%] w-[97%]" : ""}
+        ${isNewlyweeds && !isFirstCol && index===1 ? "2xl:w-[95%] xl:w-[90%] w-[97%]" : ""}
+        ${isNewlyweeds && !isFirstCol && index===2 ? "2xl:w-[105%] xl:w-[100%] w-[98  %]" : ""}
+        ${isNewlyweeds && !isFirstCol && index===3 ? "2xl:w-[95%] xl:w-[95%] w-[97%]" : ""}
+
+        ${isBirthday && isFirstCol && index===0 ? "2xl:w-[101%] xl:w-[98%] w-[100%]" : ""}
+        ${isBirthday && isFirstCol && index===1 ? "2xl:w-[85%] xl:w-[82%] w-[90%]" : ""}
+
+        ${isBirthday && !isFirstCol && index===0 ? " xl:w-auto w-[90%]" : ""}
+        ${isBirthday && !isFirstCol && index===1 ? "2xl:w-[95%] xl:w-[90%] w-[90%]" : ""}
+        ${isBirthday && !isFirstCol && index===2 ? "2xl:w-[95%] xl:w-[90%] w-[100%]" : ""}
+`}>
         <img loading="lazy"
           src={list}
           alt={el}

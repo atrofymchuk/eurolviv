@@ -228,6 +228,20 @@ export { default as wedding } from "../assets/SpecialOffers/newlyweds.webp";
 export { default as photosession } from "../assets/SpecialOffers/photosession.webp";
 export { default as dog } from "../assets/SpecialOffers/dogMobile.webp";
 
+export {default as modalBusinessMobile} from "../assets/SpecialOffers/modal/mobile/buissiness.webp";
+export {default as modalBirthdayMobile} from "../assets/SpecialOffers/modal/mobile/birthday.webp";
+export {default as modalMilitaryMobile} from "../assets/SpecialOffers/modal/mobile/military.webp";
+export {default as modalNewlyweedsMobile} from "../assets/SpecialOffers/modal/mobile/newlyweeds.webp";
+export {default as modalPetMobile} from "../assets/SpecialOffers/modal/mobile/pet.webp";
+export {default as modalPhotosessionMobile} from "../assets/SpecialOffers/modal/mobile/photosession.webp";
+
+export {default as modalBusiness} from "../assets/SpecialOffers/modal/buissiness.webp";
+export {default as modalBirthday} from "../assets/SpecialOffers/modal/birthday.webp";
+export {default as modalMilitary} from "../assets/SpecialOffers/modal/military.webp";
+export {default as modalNewlyweeds} from "../assets/SpecialOffers/modal/newlyweeds.webp";
+export {default as modalPet} from "../assets/SpecialOffers/modal/pet.webp";
+export {default as modalPhotosession} from "../assets/SpecialOffers/modal/photosession.webp";
+
 //alerts 
 export { default as eurohotelAlert} from "../assets/Alerts/StillThinking/eurohotel.webp";
 export { default as roomAlert} from "../assets/Alerts/GetMore/Room.webp";

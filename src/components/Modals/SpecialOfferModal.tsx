@@ -15,9 +15,17 @@ export const SpecialOffersModal = () => {
   const { onCloseGlobalModal, isOpenSpecialOfferModal, url } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
   const { t, i18n } = useTranslation();
-  
+
   const isPetOffer = url?.includes("pet");
   const isEng = i18n.language === "en";
+  const isMilitary = url?.includes("military");
+  const isBusiness = url?.includes("business");
+  const isPet = url?.includes("pet");
+  const isPhotosession = url?.includes("photo");
+  const isNewlyweeds = url?.includes("newly");
+  const isBirthday = url?.includes("birthday");
+
+
 
   useEffect(() => {
     if (isOpenSpecialOfferModal) {
@@ -25,7 +33,7 @@ export const SpecialOffersModal = () => {
     } else {
       document.body.style.overflow = "auto";
     }
-    
+
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -58,25 +66,34 @@ export const SpecialOffersModal = () => {
     <Modal
       isOpen={isOpenSpecialOfferModal}
       onRequestClose={handleCloseModal}
-      className="fixed inset-0 flex items-center justify-center overflow-y-auto  mt-10 lg:mt-0 "
-      overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center "
+      className="fixed inset-0 flex items-center justify-center overflow-y-auto pt-6 mt-10 lg:mt-0"
+      overlayClassName="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
     >
-      <div className="bg-white md:w-[76.51%] w-[91%] max-h-[95vh] relative flex flex-col 2xl:justify-center  
-       2xl:pt-[5vw]   md:p-[25px] p-[22px] items-center overflow-auto">
+      <div
+        className="bg-white md:w-[76.51%] 2xl:w-[76.51%] xl:w-[90%] w-[89.4%] max-h-[95vh] relative flex flex-col 
+       pt-[35px] md:pt-[25px] 2xl:pt-[3.06vh] md:p-[25px] p-[22px] items-center overflow-auto"
+      >
         <button
-          className="absolute top-1 right-1 text-3xl hover:cursor-pointer z-10 "
+          className="absolute top-[1.11vh] right-[1.11vh] text-3xl hover:cursor-pointer z-10"
           onClick={handleCloseModal}
         >
           <IoClose color="#8C331B" className="w-[20px] h-[20px]" />
         </button>
 
-        <div className="relative w-full ">
+        <div className="relative w-full">
           <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent via-[49.85%]  to-[#252526]"></div>
           <InViewWrapper>
-            <img loading="lazy"
-              src={data.src}
-              className="w-full h-[351px] md:max-h-[50vh] xl:h-[60vh] 2xl:h-[60vh] object-cover object-center rounded-t-lg"
-            />
+            <picture>
+              <source media="(min-width:1024px)" srcSet={data.srcModal} />
+              <source media="(max-width:1023px)" srcSet={data.srcModalMobile} />
+              <img
+                src={data.srcModalMobile || data.srcModal}
+                className={`w-full h-auto object-cover xl:h-[33.44vw]
+                lg:h-[421px] 2xl:w-full 2xl:h-[50.83vh]`}
+                alt={t(data.title) || ""}
+                loading="lazy"
+              />
+            </picture>
           </InViewWrapper>
           <div className="absolute inset-0 flex flex-col items-center md:justify-center justify-between text-center px-5 z-2 py-10 ">
             <h1 className="text-[32px] lg:text-[70px] text-[#FFFFFF80] tracking-[-0.07em]">
@@ -85,22 +102,43 @@ export const SpecialOffersModal = () => {
             <div className="flex flex-col items-center justify-center  md:mt-auto  gap-y-[20px]">
               <h1
                 className={cn(
-                  `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] ${
-                    data.url === "business" ? "md:w-2/3" : ""
+                  `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] w-[90%] ${
+                  isBusiness && "2xl:w-[50%] xl:w-[50%] "
                   }`
                 )}
               >
                 {t(data.title)}
               </h1>
-              <p className="uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] leading-[15px] md:leading-[22px] w-[95%]">
-                {t(data.desc)}
+              <p
+                className={`
+                uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] xl:text-[1.25vw] 2xl:text-[0.94vw] leading-[15px] md:leading-[22px] 
+                ${isMilitary && "2xl:w-[58%] xl:w-[67%] w-[97%]"}
+                ${isBusiness && "2xl:w-[58%] xl:w-[65%] w-[93%]"}
+                ${isPet && "2xl:w-[58%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isPhotosession && "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isNewlyweeds && "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%] "}
+                `}
+              >
+                {isPet ? t(data.desc[0])  : t(data.desc)}
+              
+                <span className={`${isPet  && "mt-2 block lg:inline"} 
+                ${isPhotosession || isBirthday && " block lg:block"}
+                ${isNewlyweeds && " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"}
+                `}>
+
+                {isPet || isPhotosession || isNewlyweeds || isBirthday && t(data.desc[1])}
+                </span>
               </p>
               {isPetOffer && (
                 <button
                   onClick={() => handleOpenPdf(pdfDocuments.pathPublicOffer)}
-                  className={cn(`bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] text-[12px] rounded-full uppercase w-[181px] h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`, {
-                    "lg:w-[280px]": isEng,
-                  })}
+                  className={cn(
+                    `bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] text-[12px] rounded-full uppercase w-[181px] h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`,
+                    {
+                      "lg:w-[280px]": isEng,
+                    }
+                  )}
                 >
                   {t("specialOffers.pet")}
                 </button>
@@ -112,10 +150,14 @@ export const SpecialOffersModal = () => {
         <div className="grid grid-cols-2 border-x border-[#C7C7C7] w-full ">
           <OfferDetailsColumn
             items={data.details}
+            url={url}
+            isFirstCol={true}
             title={t("specialOffers.card.title.0")}
           />
           <OfferDetailsColumn
             items={data.conditions}
+            url={url}
+            isFirstCol={false}
             title={t("specialOffers.card.title.1")}
           />
         </div>
@@ -128,19 +170,22 @@ export const SpecialOffersModal = () => {
           </div>
           <div className="flex flex-col md:justify-center justify-start px-4 pt-4 col-span-2 md:col-span-1 ">
             <ul className="space-y-1 lg:space-y-2 ">
-              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
+              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw]">
                 <a href="tel:+380732424002" className="hover:underline">
                   +38 (073) 242 40 02
                 </a>
               </li>
-              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px]">
+              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw]">
                 <a href="tel:+380932424002" className="hover:underline">
                   +38 (093) 242 40 02
                 </a>
               </li>
             </ul>
-            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] pt-2 lg:pt-4">
-              <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">
+            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw] pt-2 lg:pt-4">
+              <a
+                href="mailto:info@eurohotel.lviv.ua"
+                className="hover:underline"
+              >
                 info@eurohotel.lviv.ua
               </a>
             </p>

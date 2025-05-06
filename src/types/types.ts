@@ -4,9 +4,11 @@ import { ConferenceService } from "../pages/ConferenceService";
 export type SpecialOffers = {
   src: string;
   srcMobile: string;
+  srcModal:string
+  srcModalMobile:string
   url: string;
   title: string;
-  desc: string;
+  desc: string | string[];
   cardDesc: string;
   offer: string;
   classes: string;
