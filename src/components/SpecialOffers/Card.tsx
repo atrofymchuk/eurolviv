@@ -56,10 +56,10 @@ export const Card = ({
         <p
           className={`absolute top-[23px] lg:top-[1.17vw] lg:left-[1.17vw]  left-[21px] 2xl:top-[1.04vw] 
             2xl:left-[1.04vw] xl:top-[1.41vw] xl:left-[1.41vw] uppercase border bg-white text-[#A47762] font-cofo-medium rounded-full 
-        px-[12px] font-cofo-medium py-1.25 text-[2.67vw]  sm:text-[12px]  md:text-[12px] lg:text-[0.98vw] 2xl:px-[0.83vw]
+        px-[12px] font-cofo-medium py-1.25 text-[2.67vw]  sm:text-[12px] xl:text-[0.74vw]  md:text-[12px] lg:text-[0.98vw] 2xl:px-[0.83vw]
           2xl:text-[0.83vw] xl:px-[16px] xl:py-[10px]  lg:px-[14px] lg:py-[9px]  2xl:py-[.54vw]
         shrink-0  
-        ${isEng && index == 0 ? "me-[26.67vw] lg:me-0" : ""}
+        ${isEng && index == 0 ? "me-[26.67vw] xl:me-[0vw] 2xl:me-0" : ""}
 
         `}
         >
