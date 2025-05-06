@@ -53,10 +53,10 @@ export const About = memo(
     return (
       <div>
         <div className="grid md:grid-cols-[20.47%_42.66%_36.88%]   grid-cols-[9.67%_80.67%_9.67%] items-center justify-center 2xl:items-start 2xl:justify-normal  md:max-w-full mx-auto md:mx-0">
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-1 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full md:min-h-auto min-h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-full border-[#C7C7C7] order-5 md:order-none" />
-          <div className="2xl:h-[109px] xl:h-[109px] border-x md:border-x-0 md:border-e  w-full h-full border-[#C7C7C7] order-6 md:order-none " />
+          <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:border-x-0 border-b md:border-b-0 md:border-e  w-full h-[29.07vw] border-[#C7C7C7] order-1 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full md:min-h-auto min-h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-full border-[#C7C7C7] order-5 md:order-none" />
+          <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:border-x-0 md:border-e  w-full h-full border-[#C7C7C7] order-6 md:order-none " />
           
           <div
             className=" h-full border-t 2xl:h-[12.57vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
@@ -65,32 +65,32 @@ export const About = memo(
           >
             <div className="  text-[#8C331B] ">
               <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.5vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center   ">
-                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[3.2vw] items-center    ">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw]  text-[3.2vw] items-center    ">
                   <img
                     loading="lazy"
                     src={houseBrown}
                     alt="houseicon"
-                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
+                    className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.area")}:
                   <span className="font-cofo-medium">&nbsp;{area} М²</span>
                 </p>
-                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center ">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw] text-[12px] items-center ">
                   <img
                     loading="lazy"
                     src={squareBrown}
                     alt="houseicon"
-                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
+                    className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.count")}:
                   <span className="font-cofo-medium">&nbsp;{rooms}</span>
                 </p>
-                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[14px] xl:text-[1.09vw] text-[12px] items-center">
+                <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw] text-[12px] items-center">
                   <img
                     loading="lazy"
                     src={guestBrown}
                     alt="houseicon"
-                    className="pe-2.5 xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
+                    className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
                   />
                   {t("room.about.guests")}:
                   <span className="font-cofo-medium">&nbsp;{guests}</span>
@@ -99,7 +99,7 @@ export const About = memo(
             </div>
           </div>
 
-          <div className="flex order-5 md:order-none min-h-[29.07vw] lg:min-h-auto w-full ">
+          <div className="flex order-5 md:order-none min-h-[29.07vw] lg:min-h-auto lg:h-full xl:h-full w-full ">
             <AboutRoomTitle nameRoom={nameRoom} />
           </div>
 
@@ -133,7 +133,7 @@ export const About = memo(
             px-4 sm:px-6 md:px-4 lg:pe-[40px] lg:ps-[20px] 2xl:ps-[2.29vw] 2xl:pe-[6.25vw] xl:ps-8 xl:pe-[4.9vw]"
             >
               <p
-                className={`text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[3.2vw] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]
                 tracking-[-0.04em] leading-[120%]
                 ${isLuxImperial ? "xl:w-[100%]! " : ""}
                 ${isLuxElegant ? "xl:w-[100%]! " : ""}
@@ -151,7 +151,7 @@ export const About = memo(
               </p>
 
               <p
-                className={`text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[1.09vw] 2xl:text-[1.04vw]
+                className={`text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]
              leading-[120%]
               tracking-[-0.04em]
               ${istandartbigbed ? "w-[90%]! xl:w-[105%]!" : ""}
@@ -171,7 +171,7 @@ export const About = memo(
               <BookLink
                 to={"/booking"}
                 className="uppercase 2xl:text-[0.73vw] bg-[#8C331B] text-white s 2xl:mt-[3.65vw] xl:mt-[3.91vw] w-[40.27vw]
-                2xl:w-[10.73vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center  mt-[69px] mb-[28px] md:mb-0
+                2xl:w-[10.73vw] 2xl:h-[2.29vw] xl:w-[16vw] xl:h-[2.6vw] flex items-center justify-center lg:w-[200px]  mt-[69px] lg:mt-[10px] mb-[28px] md:mb-0
             "
               >
                 {t("buttons.bookRoomArr.0")} &#8202;

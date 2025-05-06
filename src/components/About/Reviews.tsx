@@ -40,7 +40,7 @@ export const Rewies = () => {
 
               <Link
                 to={"/booking"}
-                className="uppercase text-[#A47762]  text-center  mt-[20px] lg:mt-0 xl:w-[234px]! xl:text-[1.094vw] 2xl:text-[0.833vw]
+                className="uppercase text-[#A47762] lg:text-[14px] lg:w-[234px]  text-center  mt-[20px] lg:mt-0 xl:w-[234px]! xl:text-[1.094vw] 2xl:text-[0.833vw]
                 font-cofo-medium whitespace-nowrap bg-[#EDE8E5] border-[#EDE8E5] border hover:bg-[#A47762] hover:text-[#EDE8E5] 
                 w-[45.867vw]   xl:py-[10px] py-[10px]  rounded-full  hover:cursor-pointer text-[3.2vw] "
               >
@@ -68,8 +68,8 @@ export const Rewies = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full  flex flex-col items-center h-[133.333vw] md:h-[470px] xl:h-[25.9vw] 2xl:h-[24.3vw]  overflow-x-hidden overflow-y-hidden">
-        <div className="absolute  w-[89.68%] border-x border-[#C7C7C7] h-[700px]  overflow-y-hidden"></div>
+      <div className="relative w-full  flex flex-col items-center h-[133.333vw] md:h-[470px] xl:h-[25.9vw] 2xl:h-[24.3vw] lg:h-[400px]  overflow-x-hidden overflow-y-hidden">
+        <div className="absolute  w-[89.68%] border-x border-[#C7C7C7] h-[700px] lg:h-[400px] xl:h-[700px]  overflow-y-hidden"></div>
 
         <div className="absolute inset-0 flex justify-center mt-[7.667vw] xl:mt-[4.271vw]">
           <div className="relative w-[80.79%] md:w-[85.79%] h-full ">

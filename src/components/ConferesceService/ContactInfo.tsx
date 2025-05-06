@@ -5,7 +5,7 @@ export const ContactInfo = memo(() => {
   const { t } = useTranslation();
   
   return (
-    <div className=" lg:ps-[20px] xl:ps-0 2xl:pb-[49px] xl:pb-[30px] lg:pb-[20px] self-start flex flex-col lg:mt-auto mt-[34px] ">
+    <div className="  xl:ps-0 2xl:pb-[49px] xl:pb-[30px] lg:pb-[20px] self-start flex flex-col lg:mt-auto mt-[34px] ">
       <h1 className="2xl:text-[1.05vw] tracking-[-0.05em] text-[14px] sm:text-[16px] lg:text-[14px] 2xl:leading-[20px] xl:text-[18px] text-[#8C331B] uppercase font-cofo-medium">
         {t("conferenceService.about.contact")}
       </h1>

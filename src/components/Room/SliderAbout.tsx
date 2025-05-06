@@ -31,7 +31,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
           ${
             isConference
               ? "h-full "
-              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[450px] 2xl:h-[27.19vw]"
+              : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[350px] xl:h-[450px] 2xl:h-[27.19vw]"
           }`)}
         >
           <Swiper
@@ -40,7 +40,7 @@ export const SliderAbout: React.FC<AboutSliderProps> = memo(
             ${
               isConference
                 ? "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[520px] 2xl:h-[33vw]"
-                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[450px] 2xl:h-[27.19vw]"
+                : "h-[245px] sm:h-[350px] md:h-[400px] lg:h-[350px] xl:h-[450px] 2xl:h-[27.19vw]"
             }`}
             loop
             slidesPerView={1}

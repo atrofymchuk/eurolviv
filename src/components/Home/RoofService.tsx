@@ -86,7 +86,7 @@ export const RoofService = () => {
               <div
                 className={cn(
                   `flex flex-col items-center    ${
-                    index === 2 ? "" : " 2xl:pb-[3.91vw] xl:pb-[7.74vw]"
+                    index === 2 ? "" : " 2xl:pb-[3.91vw] xl:pb-[7.74vw] lg:pb-[10.74vw]"
                   }`
                 )}
               >

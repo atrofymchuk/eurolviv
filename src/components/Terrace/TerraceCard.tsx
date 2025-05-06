@@ -20,7 +20,7 @@ export const TerraseCard = ({ index, el }: TerraseCardToProps) => {
         loading="lazy"
         src={el}
         alt=""
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover lg:h-[40vw] xl:h-full"
       />
     </div>
   );

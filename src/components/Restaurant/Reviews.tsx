@@ -22,17 +22,17 @@ export const Reviews = ({isTerrasePage = false}: ReviewsToProps) => {
           <span className="font-blessed leading-[70%] text-[16px] xl:text-[36px] 2xl:text-[1.88vw] md:text-[26px] lg:text-[26px] lg:leading-[25.2px] pt-[6px] lg:pt-0 ">
             {t('reviews.about.0')} {t('reviews.about.2')}
           </span>
-          <h1 className="uppercase lg:w-[66.46vw] 2xl:w-[46.46vw]  text-[#242425] 2xl:text-[5.21vw] xl:text-[7.03vw] leading-[94%] lg:leading-[87%] xl:pt-[17px] pt-[6px] lg:text-[84px]
+          <h1 className="uppercase xl:w-[66.46vw] 2xl:w-[46.46vw]  text-[#242425] 2xl:text-[5.21vw] xl:text-[7.03vw] leading-[94%] lg:leading-[91%] xl:pt-[17px] pt-[6px] lg:text-[84px]
            md:text-[48px] text-[32px] tracking-[-0.07em] pb-[24px] lg:pb-0 ">
             {t('reviews.title')} {t('reviews.heading')} <br /> {isEng ? t('reviews.heading3'):t('reviews.heading2')}
           </h1>
-          <div className=" flex items-center lg:flex-row flex-col  space-y-[24px] 2xl:space-x-[4vw] lg:space-x-[80px] lg:mt-[37px]">
+          <div className=" flex items-center lg:flex-row flex-col  space-y-[24px] 2xl:space-x-[4vw] xl:space-x-[80px] lg:mt-[37px]">
             <p className={cn(`text-[#242425] 2xl:text-[0.83vw] xl:text-[1.25vw] md:text-[14px] text-[3.2vw] uppercase  `, {
               "xl:w-[340px]": isCustomWidth && !isEng,
               "xl:w-[300px]": !isCustomWidth && !isEng,
               "w-[250px] ": isCustomMobile && !isEng,
-              "2xl:space-x-[9vw] lg:space-x-[80px]   lg:space-y-0 2xl:w-[17.71vw]":!isEng,
-              "2xl:w-[45%] xl:w-[45%] 2xl:space-x-[9vw] lg:space-x-[80px]   lg:space-y-0  w-[80%]":isEng
+              "2xl:space-x-[9vw] xl:space-x-[80px]   lg:space-y-0 2xl:w-[17.71vw] lg:w-[40.71vw]":!isEng,
+              "2xl:w-[45%] xl:w-[45%] 2xl:space-x-[9vw] xl:space-x-[80px]   lg:space-y-0  w-[80%]":isEng
             })}>
               {t('reviews.desc2.0')} <br className={`${isEng ? '' : 'block'}`}/> {t('reviews.desc2.1')}
             </p>

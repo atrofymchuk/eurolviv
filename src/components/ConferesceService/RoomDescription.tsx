@@ -23,7 +23,7 @@ export const RoomDescription = memo(
       <div className="2xl:pt-[42px] xl:pt-[30px] lg:pt-[30px]   pt-[52px] flex flex-col h-full justify-between">
         <div className="flex flex-col gap-[24px]">
           <p
-            className={`2xl:text-[1.05vw] text-[3.2vw] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[1.05vw] leading-[120.1%] 2xl:tracking-[-0.04em]  h-fit lg:text-[#8C331B] \
+            className={`2xl:text-[1.05vw] text-[3.2vw] sm:text-[12px] md:text-[12px] lg:text-[12px] xl:text-[1.05vw] leading-[120.1%] 2xl:tracking-[-0.04em]  h-fit lg:text-[#8C331B] \
               ${isEng ? "" : " 2xl:w-auto"}
               ${!isEng&&isMobile && index===1 ? "w-[94%]" :""}
               ${!isEng&&isMobile && index===2 ? "w-[105%]" :""}
@@ -41,7 +41,7 @@ export const RoomDescription = memo(
           </p>
 
           <p
-            className={`2xl:text-[1.05vw] text-[3.2vw] sm:text-[14px]  md:text-[14px] lg:text-[14px] xl:text-[1.05vw] leading-[120.1%] 2xl:pb-3 
+            className={`2xl:text-[1.05vw] text-[3.2vw] sm:text-[12px]  md:text-[12px] lg:text-[12px] xl:text-[1.05vw] leading-[120.1%] 2xl:pb-3 
           tracking-[-0.04em]  text-[#444444] h-fit uppercase lg:flex hidden
           ${isEng ? "" : " 2xl:w-auto"}
           ${isOnTop && !isEng ? "xl:w-[85%] 2xl:w-auto" : ""}
@@ -78,7 +78,7 @@ export const RoomDescription = memo(
                 });
               }
             }}
-            className={`text-[14px] 2xl:text-[0.74vw] hidden lg:flex 2xl:w-[10.6vw] 2xl:h-[2.3vw] xl:h-[3vw] items-center justify-center`}
+            className={`text-[14px] 2xl:text-[0.74vw] hidden lg:flex 2xl:w-[10.6vw] 2xl:h-[2.3vw] xl:h-[3vw] lg:h-[3.5vw] items-center justify-center`}
           >
             {t("buttons.conferenceMenu")}
           </ViewMenuButton>

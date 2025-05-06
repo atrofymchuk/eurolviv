@@ -16,11 +16,11 @@ export const Advantages = () => {
 
   return (
     <section className="flex justify-center items-center bg-[#A47762]">
-      <div className={`container mx-auto border-x border-[#C29986] grid grid-cols-1 lg:grid-cols-[33.43%_28.72%_37.85%]  items-center 2xl:h-[35.625vw]  max-w-[89.58%] gap-0 ${isCustomWidth ? "xl:h-[584px]" : "xl:h-[500px]"}`}>
+      <div className={`container mx-auto border-x border-[#C29986] grid grid-cols-1 lg:grid-cols-[33.43%_28.72%_37.85%]  items-center 2xl:h-[35.625vw]  lg:h-[430px] max-w-[89.58%] gap-0 ${isCustomWidth ? "xl:h-[584px]" : "xl:h-[500px]"}`}>
         <div className="h-full  flex md:justify-start sm:justify-center">
           <div className="flex flex-col xl:ps-[21px] ps-[16px] sm:items-center  lg:items-start lg:text-start">
             <h1
-              className={`uppercase text-[8.533vw] md:text-[32px] 2xl:text-[2.5vw] tracking-[0.02em] lg:tracking-[-0.05em] leading-[100%] md:w-2/3 text-[#FFFFFF] pt-[34px] 2xl:pt-[4.479vw] xl:pt-[60px] ${
+              className={`uppercase text-[8.533vw] md:text-[24px] 2xl:text-[2.5vw] tracking-[0.02em] lg:tracking-[-0.05em] leading-[100%] md:w-2/3 text-[#FFFFFF] pt-[34px] 2xl:pt-[4.479vw] xl:pt-[60px] ${
                 isCustomWidth ? "xl:text-[40px]" : "xl:text-[32px]"
               }`}
             >
@@ -66,8 +66,8 @@ export const Advantages = () => {
         <div className="h-full  w-full lg:border-x  pb-[47px] lg:pb-0 border-[#C29986]">
           <div className="flex flex-col ps-[4.27vw] 2xl:ps-[2.34vw] xl:ps-[2.115625vw] sm:items-center md:items-start">
             <h1
-              className={`uppercase text-[8.533vw]  md:text-[32px]  2xl:text-[2.5vw] tracking-[-0.02em] lg:tracking-[-0.05em]
-                 leading-[100%]  md:w-2/3 text-[#FFFFFF] md:pt-[18px] 2xl:pt-[4.479vw] xl:pt-[60px] xl:text-left ${
+              className={`uppercase text-[8.533vw]  md:text-[24px]  2xl:text-[2.5vw] tracking-[-0.02em] lg:tracking-[-0.05em]
+                 leading-[100%]  md:w-2/3 text-[#FFFFFF] md:pt-[34px] 2xl:pt-[4.479vw] xl:pt-[60px] xl:text-left ${
                 isCustomWidth ? "xl:text-[40px]" : "xl:text-[32px]"
               }`}
             >

@@ -77,7 +77,7 @@ export const StorySection = () => {
                       </span>
                     ))}
                 </span>
-                <span className={`hidden lg:block `}>
+                <span className={`hidden lg:block  text-[#242425]`}>
                   {t("about.about.title.1")}
                 </span>
               </h1>
@@ -123,7 +123,7 @@ export const StorySection = () => {
         md:text-base  2xl:text-2xl font-normal tracking-[-0.01em] text-center lg:text-left"
         >
           <p
-            className={`text-[3.2vw] sm:text-sm md:text-[14px] xl:px-[8px_4px] xl:text-[1.09vw]
+            className={`text-[3.2vw] sm:text-sm lg:text-[12px] xl:px-[8px_4px] xl:text-[1.09vw]
             2xl:text-[1.042vw] text-[#252526] p-[15px] pb-[20px] pt-[26px] lg:pt-[18px] 2xl:px-[22px_17px] 
             md:px-3 uppercase font-normal leading-[120%]
             ${isEng ? "xl:w-[102%] w-[98%]" : ""}
@@ -137,7 +137,7 @@ export const StorySection = () => {
           </p>
           <div className="flex border-y border-[#C7C7C7] flex-col mt-auto">
             <p
-              className={` font-cofo-medium p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px]    xl:text-[1.09vw]
+              className={` font-cofo-medium p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px] lg:text-[12px]   xl:text-[1.09vw]
               ${isCustomMobile ? "px-[18px]" : ""}
               ${isEng ? "2xl:w-[95%] w-[90%] mx-auto xl:px-[0px_0px]" : "xl:px-[8px_0px]"}
               ${isCustomSecondaryMobile ? "px-[18px] " : ""}

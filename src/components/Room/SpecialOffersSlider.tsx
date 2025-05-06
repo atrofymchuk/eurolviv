@@ -28,13 +28,12 @@ export const SpecialOffersSlider = forwardRef<
     infinite: true,
     preventDefaultTouchmoveEvent: true,
     swipeToSlide: true,
-    touchThreshold: 10,
     afterChange: (index: number) => {
       setCurrentSlide(index);
     },
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -63,10 +62,11 @@ export const SpecialOffersSlider = forwardRef<
       >
         {specialOffers.map((el, index) => (
           <div
-            key={index}
+            key={index + "special-offer"}
             className={cn(
-              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[444px] xl:h-[37.5vw]
-               2xl:h-[34.79vw] border-t border-[#C7C7C7] relative   ${
+              `border lg: 2xl:p-[1.04vw] md:p-4 xl:p-3 px-[4vw_3.73vw] py-[4vw_3.2vw] h-[113.6vw] md:h-[540px] lg:h-[584px] xl:h-[37.5vw]
+              
+               2xl:h-[35.79vw] border-t border-[#C7C7C7] relative   ${
                  index !== specialOffers.length - 1 ? "border-r-0" : ""
                }`,
               {
@@ -88,7 +88,7 @@ export const SpecialOffersSlider = forwardRef<
                   src={el.src}
                   alt={t(el.title)}
                   className={`w-full h-auto  object-cover  xl:h-[23.44vw]
-                  lg:h-[421px] 2xl:w-[23.13vw] 2xl:h-[22.29vw]  ${el.classes}`}
+                  lg:h-[30vw] lg:w-[30vw] 2xl:w-[60.13vw] 2xl:h-[22.29vw]  ${el.classes}`}
                 />
               </picture>
               <div
@@ -126,7 +126,7 @@ export const SpecialOffersSlider = forwardRef<
 
             <h4
               className="uppercase text-[5.33vw] tracking-[-0.05em] font-cofo-medium 
-            leading-[100%]
+            leading-[100%]  md:w-[300px]
              text-[#252526] md:text-[22px] lg:text-[24px] 2xl:text-[1.25vw] mt-[5.33vw]
               2xl:mt-[1.47vw] xl:mt-[1.25vw] xl:text-[1.41vw]"
             >
@@ -134,8 +134,9 @@ export const SpecialOffersSlider = forwardRef<
             </h4>
             <p
               className={`uppercase text-[2.67vw] pt-[3.47vw] xl:pt-[1.25vw] 2xl:pt-[1.15vw] text-[#8F8F8F] md:text-[14px]
-             lg:text-[12px] 2xl:text-[0.83vw] xl:text-[0.94vw] leading-[108%]  md:w-[300px] lg:w-fit
-             ${!isEng && index === 0 ? "w-[58.4vw]! lg:w-fit!" : ""}
+             lg:text-[12px] 2xl:text-[0.83vw] xl:text-[0.94vw] leading-[108%]  md:w-[300px] xl:w-fit 
+             ${!isEng && index === 0 ? "w-[58.4vw] xl:w-fit" : ""}
+             ${!isEng && index === 3? "2xl:w-[95%] " : ""}
               ${index === 1 ? " xl:w-[102%] " : ""}
 
               ${isEng && index === 1 ? " xl:w-[105%] tracking-[-0.03em]" : ""}

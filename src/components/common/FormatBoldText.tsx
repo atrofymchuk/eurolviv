@@ -33,7 +33,7 @@ export const FormatBoldText = ({
               isEng && descNumber === 2 && i == 2 && "lg:break-all ",
               isEng && descNumber === 2 && i == 3 && "break-all lg:break-words ",
 
-              `text-[3.20vw] uppercase text-[#444444] 2xl:text-[0.94vw] xl:text-[0.96vw] md:leading-[120%] leading-[120%] first-br-visible`
+              `text-[3.20vw] uppercase text-[#444444] 2xl:text-[0.94vw] xl:text-[0.96vw] lg:text-[12px] md:leading-[120%] leading-[120%] first-br-visible`
             )}
           >
             {t(item.text)}{" "}

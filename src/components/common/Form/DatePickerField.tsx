@@ -48,7 +48,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
 
   return (
     <div className="w-full ">
-      <p className="text-white uppercase mb-3 2xl:text-[0.83vw] xl:text-[1.09vw] md:flex hidden">{t(label)}</p>
+      <p className="text-white uppercase mb-3 2xl:text-[0.83vw] xl:text-[1.09vw] lg:text-[14px] md:flex hidden">{t(label)}</p>
       <Controller
         name={name as keyof FormData}
         control={control}
@@ -75,7 +75,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
                 startDate={typeof startDate === "string" ? null : startDate}
                 minDate={new Date()}
                 className={cn(
-                  "w-full ps-[26px] py-[7.5px] 2xl:py-[0.52vw] 2xl:ps-[2.08vw]  xl:ps-[3vw] xl:py-[0.67vw] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] 2xl:text-[0.83vw]",
+                  "w-full ps-[26px] lg:ps-[40px] py-[7.5px] 2xl:py-[0.52vw] 2xl:ps-[2.08vw] lg:text-[14px] xl:ps-[3vw] xl:py-[0.67vw] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] 2xl:text-[0.83vw]",
                   errors[name as keyof FormData] && "border-red-500 border"
                 )}
                 placeholderText={getInputText()}

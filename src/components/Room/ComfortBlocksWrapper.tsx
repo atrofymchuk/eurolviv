@@ -267,7 +267,7 @@ export const ComfortsBlocksWrapper = ({
   return (
     <div 
       ref={wrapperRef}
-      className="relative 2xl:h-[43vw] xl:h-[45.22vw]  overflow-y-auto scrollbar-hide"
+      className="relative 2xl:h-[43vw] xl:h-[45.22vw] lg:h-[48vw]  overflow-y-auto scrollbar-hide"
     >
       <div
         className="h-full relative overflow-y-auto scrollbar-hide"

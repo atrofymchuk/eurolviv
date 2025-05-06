@@ -60,7 +60,7 @@ export default function ContactMeForm() {
     <div className="z-100">
       <form
         onSubmit={handleSubmit}
-        className="w-full lg:w-[329px] xl:w-[25.703vw] 2xl:w-[24.948vw] flex flex-col items-center"
+        className="w-full lg:w-[280px] xl:w-[25.703vw] 2xl:w-[24.948vw] flex flex-col items-center"
       >
         <input
           type="email"

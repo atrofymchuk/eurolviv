@@ -15,13 +15,13 @@ export const MoreInfoFirstCol = ({
     <div className="flex flex-col lg:py-20 2xl:py-[4.17vw] xl:py-[6.25vw] pt-[54px] pb-[28px] md:py-10 2xl:px-[1.09vw_0.89vw] xl:px-[14px_10px] lg:px-[1.09vw_0.78vw]  md:px-[10px_8px] h-full">
       {isShowOtherInfo ? (
         <h1 className={`text-white 2xl:text-[2.5vw] xl:text-[2.8vw] px-[2.67vw] lg:px-0 tracking-[-0.07em] 
-        text-[8.53vw]  leading-[104%] uppercase font-cofo md:pb-[15px] xl:pb-[2.98vw] lg:pb-[20px]  2xl:pb-[2.71vw]
+        text-[8.53vw]  leading-[104%] uppercase font-cofo md:pb-[15px] xl:pb-[2.98vw] lg:pb-[20px]  2xl:pb-[2.71vw] lg:text-[32px]
         ${isShowOtherInfo ? "2xl:w-[75%] w-[95%] ": ""}
         `}>
           {t("room.moreInfo.title2")}
         </h1>
       ) : (
-        <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] 2xl:text-[2.5vw] xl:text-[3.28vw]  leading-[104%] uppercase font-cofo xl:pb-[2.98vw] pb-[20px] hidden md:block">
+        <h1 className="text-white text-[8.53vw] lg:text-[32px] tracking-[-0.07em] 2xl:text-[2.5vw] xl:text-[3.28vw]  leading-[104%] uppercase font-cofo xl:pb-[2.98vw] pb-[20px] hidden md:block">
           {t("room.moreInfo.title")}
         </h1>
       )}

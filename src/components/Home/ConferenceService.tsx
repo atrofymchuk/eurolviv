@@ -45,8 +45,8 @@ export const ConferenceService = () => {
               {t("home.conferenceService.title")}
             </h1>
             <p
-              className={`   uppercase mb-[30px] xl:mb-6 text-[3.2vw] md:text-[16px] lg:text-[18px] xl:mt-[33px] lg:mt-[20px] w-[80%]  xl:w-full
-                 xl:text-[1.05vw]  2xl:text-[1.05vw] text-[#252526] leading-[120%
+              className={`   uppercase mb-[30px] xl:mb-6 text-[3.2vw] md:text-[16px] lg:text-[11px] xl:mt-[33px] lg:mt-[20px] w-[80%]  lg:w-full
+                 xl:text-[1.05vw]  2xl:text-[1.05vw] text-[#252526] leading-[120%]
               z-2 2xl:mt-[62px] lg:whitespace-nowrap`}
             >
               {t("home.conferenceService.desc.0")}

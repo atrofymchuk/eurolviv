@@ -20,15 +20,15 @@ export const BarComponent = () => {
     <div className="mx-auto md:w-[93.23%] 2xl:w-[94%] w-[89.7%] border-x md:border-x-0 border-[#B3B3B3] ">
       <div className="md:border-x  border-[#B3B3B3] xl:pt-[149px]">
         <h4 className="font-cofo-medium text-[#252526] leading-[22.68px] justify-center flex xl:mb-4">
-          <span className="font-blessed   text-center text-[16px] xl:text-[36px]  xl:inline">
+          <span className="font-blessed   text-center text-[16px] xl:text-[36px] lg:text-[26px]  xl:inline">
             {t("terrase.bar.title2")}
           </span>
         </h4>
-        <h2  className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] text-[64px] tracking-[-0.09em]">
+        <h2  className="text-center  uppercase leading-[81%] 2xl:text-[233px] xl:text-[13.52vw] lg:text-[100px] text-[64px] tracking-[-0.09em]">
           <Link to={links.cocktailCard} target="_blank">{t("terrase.bar.title")}</Link>
         </h2>
 
-        <p className={`text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw]   text-[3.20vw]  pt-[22px] lg:pb-[28px]  mx-auto
+        <p className={`text-center mt-2 leading-[120%]  uppercase 2xl:text-[1.04vw] xl:text-[1.41vw]  lg:text-[14px] text-[3.20vw]  pt-[22px] lg:pb-[28px]  mx-auto
           ${isEng ? "xl:w-[40%] 2xl:w-[50%] w-[80%]" : "xl:w-[40%] 2xl:w-[30%] md:w-1/3"}
           `}>
           { isEng ? <> {t("terrase.bar.desc.0")} <br className="hidden lg:block"/> {t("terrase.bar.desc.1")} </> : t("terrase.bar.desc")}
@@ -57,7 +57,7 @@ export const BarComponent = () => {
                   loading="lazy"
                   src={cocktailImg}
                   alt="cocktail"
-                  className=" md:w-[378px]  xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
+                  className=" md:w-[378px]  xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] lg:h-[20.53vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
@@ -67,7 +67,7 @@ export const BarComponent = () => {
                   loading="lazy"
                   src={cocktailImgScnd}
                   alt="cocktail"
-                  className=" md:w-[378px] xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
+                  className=" md:w-[378px] xl:h-[19.38vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] lg:h-[20.73vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
@@ -83,7 +83,7 @@ export const BarComponent = () => {
                   loading="lazy"
                   src={wineImg}
                   alt="cocktail"
-                  className=" md:w-[378px]  xl:h-[19.58vw] 2xl:w-[19.72vw]  2xl:h-[18.13vw] object-cover  "
+                  className=" md:w-[378px]  xl:h-[19.58vw] 2xl:w-[19.72vw] lg:h-[20.73vw] 2xl:h-[18.13vw] object-cover  "
                 />
               </InViewWrapper>
             </div>
@@ -93,7 +93,7 @@ export const BarComponent = () => {
                   loading="lazy"
                   src={wineImgScnd}
                   alt="cocktail"
-                  className=" md:w-[378px] xl:h-[19.58vw] 2xl:h-[18.13vw] 2xl:w-[19.72vw] object-cover  "
+                  className=" md:w-[378px] xl:h-[19.58vw] 2xl:h-[18.13vw] 2xl:w-[19.72vw] object-cover  lg:h-[20.53vw]"
                 />
               </InViewWrapper>
             </div>

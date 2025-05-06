@@ -50,7 +50,7 @@ const isCustomWidth = useCustomWidth(1500, 1700);
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          centerPadding: "10%",
+          centerPadding: "8%",
         },
       },
       {
@@ -94,7 +94,7 @@ const isCustomWidth = useCustomWidth(1500, 1700);
                   {
                     "2xl:w-[26.563vw] 2xl:h-[29.896vw]    lg:w-[350px] lg:h-[400px] md:h-[300px] h-full z-10 scale-[105%] lg:scale-[100%] ":
                       isActive,
-                    "2xl:w-[27.604vw] 2xl:h-[18.385vw]  lg:w-[300px] lg:h-[213px]  h-[154px] z-5 ":
+                    "2xl:w-[27.604vw] 2xl:h-[18.385vw]  lg:w-[260px] lg:h-[213px]  h-[154px] z-5 ":
                       isSide,
                     "2xl:w-[26.771vw] 2xl:h-[16.458vw]   h-[154px] lg:w-[250px] lg:h-[194px] ":
                       isEdge,

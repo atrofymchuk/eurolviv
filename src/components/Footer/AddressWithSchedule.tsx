@@ -41,7 +41,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
             {t("buttons.route")}
           </Link>
         </div>
-          <div className={`${isEng ? "2xl:mt-[2.1vw] xl:mt-[28px]" : "2xl:mt-[3.333vw] xl:mt-[40px]"}`}>
+          <div className={`${isEng ? "2xl:mt-[2.1vw] xl:mt-[28px]" : "2xl:mt-[3.333vw] xl:mt-[40px] lg:mt-[55px]"}`}>
           <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
           </h4>
@@ -70,7 +70,7 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
             <div className="lg:mt-[32px] mt-[19px] xl:mt-[25px] 2xl:mt-[1.4vw] flex gap-x-4 ">
               <Link to={social.hotel.telegram} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <RiTelegram2Fill
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] p-1"
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px] p-1"
                   color="#45525F"
                 />
               </Link>
@@ -78,10 +78,10 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
               <Link to={social.hotel.whatsapp} target="_blank" className="bg-white rounded-full hover:cursor-pointer">
                 <FaWhatsapp
                   color="#45525E"
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]  p-1 "
+                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px]  p-1 "
                 />
               </Link>
-              <Link to={social.hotel.viber} target="_blank" className=" xl:w-[2.5vw] xl:h-[2.5vw] rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px]">
+              <Link to={social.hotel.viber} target="_blank" className=" xl:w-[2.5vw] xl:h-[2.5vw] lg:w-8 lg:h-8 rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw]  w-[28px] h-[28px]">
                 <svg
                   width="26"
                   height="26"
@@ -100,8 +100,8 @@ export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => 
         </div>
         <p
           onClick={()=>openPdf(path)}
-          className=" absolute uppercase underline 2xl:bottom-[-7.2vw] underline-offset-[18%] 2xl:text-[0.830vw] 
-          cursor-pointer xl:text-[0.9vw] lg:text-[12px] lg:tracking-[0.06em] 2xl:translate-x-[0vw] xl:bottom-[-10.5vw]
+          className=" absolute uppercase underline 2xl:bottom-[-7.2vw] underline-offset-[18%] 2xl:text-[0.830vw] lg:-bottom-29
+          cursor-pointer xl:text-[0.9vw] lg:text-[10px] lg:tracking-[0.06em] 2xl:translate-x-[0vw] xl:bottom-[-10.5vw]
          -bottom-34 lg:block hidden"
         >
           {t("footer.publicOffer")}

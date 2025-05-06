@@ -36,7 +36,7 @@ export const Mission = () => {
               {t("about.mission.heading.1")}
             </h1>
             <p
-              className={`uppercase 2xl:w-[41.719vw] mx-auto text-[3.2vw] tracking-[-0.01em]  leading-[126%] md:text-[14px] lg:text-[16px] 
+              className={`uppercase 2xl:w-[41.719vw] lg:w-[80%] mx-auto text-[3.2vw] tracking-[-0.01em]  leading-[126%] md:text-[14px] lg:text-[16px] 
               2xl:text-[0.938vw] lg:pt-[29px] pt-[47px] xl:px-0  ${isEng ? "w-[90%]" : "w-[95%]"}
                ${
                  isCustomWidth
@@ -47,7 +47,7 @@ export const Mission = () => {
               {t("about.mission.desc.0")}
             </p>
             <p
-              className={`uppercase 2xl:w-[40.719vw] mx-auto text-[3.2vw] tracking-[-0.01em] leading-[126%] ${isEng ? "w-[86%]" : "w-[95%]"}
+              className={`uppercase 2xl:w-[40.719vw] mx-auto lg:w-[80%] text-[3.2vw] tracking-[-0.01em] leading-[126%] ${isEng ? "w-[86%]" : "w-[95%]"}
               md:text-[14px] lg:text-[16px] 2xl:text-[0.938vw] pt-5  xl:pb-[20px] lg:pb-3 pb-[37px] xl:px-0 
               ${
                 isCustomWidth

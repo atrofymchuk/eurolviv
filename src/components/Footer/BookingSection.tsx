@@ -14,19 +14,52 @@ export const BookingSection = ({
   openPdf: (path: string) => void;
   pdfDocuments: { pathPublicOffer: string; pathPrivacyPolicy: string };
 }) => {
-  const isCustomWidth = useCustomWidth(1350, 1550)
+  const isCustomWidth = useCustomWidth(1350, 1550);
   const { t } = useTranslation();
   const isEng = useIsEnglish();
+
+  const numbers = [
+    {
+      href: "tel:+380322423160",
+      number: "+38 (032) 242-31-60",
+    },
+    {
+      href: "tel:+380932423160",
+      number: "+38 (093) 242-31-60",
+    },
+    {
+      href: "tel:+380933483112",
+      number: "+38 (093) 348-31-12",
+    },
+  ];
+
+  const numbersRestaurant = [
+    {
+      href: "tel:+380732424002",
+      number: "+38 (073) 242-40-02",
+    },
+    {
+      href: "tel:+380933483114",
+      number: "+38 (093) 348-31-14",
+    },
+  ];
+
   return (
     <div
-      className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] h-[200px] lg:border-e  [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
+      className="gap-y-3 flex flex-col 2xl:h-[23.777vw] xl:h-[28.677vw] h-[200px] lg:border-e lg:h-full lg:pb-1 xl:pb-0 [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1] 
      pe-4 order-4 lg:order-3 lg:px-3 2xl-px-0 lg:pt-[17px] pt-[34px] lg:w-[25.02%] 2xl:px-[3.28vw_4.79vw] xl:px-[2.4vw_1.5vw]"
     >
       <div className="h-full flex flex-col ">
         <div>
-          <h4 className={`2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo mb-0 leading-[1.28] uppercase 
-          ${isEng ? "2xl:w-[11.281vw] xl:w-[13.703vw] w-[160px]" : " 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px]"}
-            text-[12px] font-cofo-medium `}>
+          <h4
+            className={`2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo mb-0 leading-[1.28] uppercase 
+          ${
+            isEng
+              ? "2xl:w-[11.281vw] xl:w-[13.703vw] w-[160px]"
+              : " 2xl:w-[13.281vw] xl:w-[15.703vw] w-[160px]"
+          }
+            text-[12px] font-cofo-medium `}
+          >
             {t("footer.booking")}
           </h4>
 
@@ -35,47 +68,43 @@ export const BookingSection = ({
           </p>
 
           <ul className="lg:gap-y-[7px] 2xl:gap-y-[0.36vw] gap-y-[7px] underline lg:no-underline underline-offset-2  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-            <li>
-              <a href="tel:+380322423160" className="hover:underline">
-                +38 (032) 242-31-60
-              </a>
-            </li>
-            <li>
-              <a href="tel:+380932423160" className="hover:underline">
-                +38 (093) 242-31-60
-              </a>
-            </li>
-            <li>
-              <a href="tel:+380933483112" className="hover:underline">
-                +38 (093) 348-31-12
-              </a>
-            </li>
+            {numbers.map((el, index) => (
+              <li key={index}>
+                <a href={el.href} className="hover:underline">
+                  {el.number}
+                </a>
+              </li>
+            ))}
           </ul>
-          <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[10px] 2xl:mt-[0.52vw]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%]
-           underline font-cofo-medium leading-[1.28] ">
+          <p
+            className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[12px] text-[12px] lg:mt-[10px] 2xl:mt-[0.52vw]  mt-[18px] lg:mb-0 lg:m-0 font-cofo uppercase decoration-[5%]
+           underline font-cofo-medium leading-[1.28] "
+          >
             <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline">
               info@eurohotel.lviv.ua
             </a>
           </p>
-          <div className={cn("2xl:mt-[29px] xl:mt-[29px] mt-8 mb-0", isCustomWidth && "xl:mt-[25px]!")}>
+          <div
+            className={cn(
+              "2xl:mt-[29px] xl:mt-[29px] mt-8 mb-0",
+              isCustomWidth && "xl:mt-[25px]!"
+            )}
+          >
             <p className="uppercase 2xl:mt-[1.51vw]  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo-medium text-[12px] mb-[13px] lg:mb-[21px] 2xl:mb-[1.09vw] leading-[1.28]">
               {t("contacts.info.restaurand/terrase")}
-            </p>    
+            </p>
 
             <ul className="lg:gap-y-[7px] 2xl:gap-y-[0.36vw] gap-y-2 underline lg:no-underline underline-offset-2 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase  text-[12px] ">
-              <li>
-                <a href="tel:+380732424002" className="hover:underline">
-                  +38 (073) 242-40-02
-                </a>
-              </li>
-              <li>
-                <a href="tel:+380933483114" className="hover:underline">
-                  +38 (093) 348-31-14
-                </a>
-              </li>
+              {numbersRestaurant.map((el, index) => (
+                <li key={index}>
+                  <a href={el.href} className="hover:underline">
+                    {el.number}
+                  </a>
+                </li>
+              ))}
             </ul>
             <div className="lg:mt-[10px] 2xl:mt-[10px] xl:mt-[15px]  mt-0 flex flex-col">
-              <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
+              <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[12px] font-cofo uppercase decoration-[5%] underline font-cofo-medium lg:mt-0 mt-[21px] text-[12px]">
                 <a
                   href="mailto:restaurant@eurohotel.lviv.ua"
                   className="hover:underline"
@@ -92,43 +121,44 @@ export const BookingSection = ({
             to={social.restaurant.instagram}
             target="_blank"
             className={cn(
-               `xl:w-[2.5vw] xl:h-[2.5vw] rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
+              `xl:w-[2.5vw] xl:h-[2.5vw] rounded-full hover:cursor-pointer lg:w-8 lg:h-8  flex items-center justify-center bg-[#8C331B]
+               lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <FaInstagram
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
+              className="xl:w-[26px] xl:h-[26px] w-[20px] h-[20px] lg:w-8 lg:h-8 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.telegram}
             target="_blank"
             className={cn(
-              `xl:w-[32px] xl:h-[32px]  rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
+              `xl:w-[32px] xl:h-[32px] lg:w-8 lg:h-8 rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <RiTelegram2Fill
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
+              className="xl:w-[26px] xl:h-[26px] w-[20px] h-[20px] lg:w-8 lg:h-8 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.whatsapp}
             target="_blank"
             className={cn(
-              `xl:w-[2.5vw] xl:h-[2.5vw]  rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
+              `xl:w-[2.5vw] xl:h-[2.5vw] lg:w-8 lg:h-8 rounded-full hover:cursor-pointer flex items-center justify-center bg-[#8C331B] lg:p-1.5 p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <FaWhatsapp
               color="white"
-              className="lg:w-[26px] lg:h-[26px] w-[20px] h-[20px] 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
+              className="xl:w-[26px] xl:h-[26px] w-[20px] h-[20px] lg:w-8 lg:h-8 2xl:w-[1.3vw] 2xl:h-[1.3vw]"
             />
           </Link>
           <Link
             to={social.restaurant.viber}
             target="_blank"
             className={cn(
-              `xl:w-[2.5vw] xl:h-[2.5vw]  rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[36px] lg:h-[36px] w-[28px] h-[28px] 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
+              `xl:w-[2.5vw] xl:h-[2.5vw]   rounded-full hover:cursor-pointer bg-[#8C331B] p-1.5 flex text-center items-center lg:w-[32px] lg:h-[32px] w-[28px] h-[28px] 2xl:w-[1.93vw] 2xl:h-[1.93vw]`
             )}
           >
             <svg

@@ -15,17 +15,17 @@ export const AboutRestaurant = () => {
         <div className="border-e md:border-b border-[#B3B3B3] lg:h-[53px]"></div>
         <div
           className="border-x md:border-b border-[#B3B3B3] flex flex-col items-center 2xl:pt-[54px]
-         xl:pt-[38px] 2xl:pb-[3.125vw] xl:pb-[40px] md:text-start text-center"
+         xl:pt-[38px] 2xl:pb-[3.125vw] xl:pb-[40px] lg:pt-[30px] md:text-start text-center"
         >
           <div
-            className={`2xl:w-[33.07vw]  w-[299px] lg:w-[406px] xl:w-[34.07vw]`}
+            className={`2xl:w-[33.07vw]  w-[299px] lg:w-[356px] xl:w-[34.07vw]`}
           >
             <p className="font-blessed  leading-[70%] 2xl:text-[1.875vw] xl:text-[28px] lg:text-[24px] md:text-[18px]  text-[#242425] text-[16px] lg:pt-0 pt-[33px]">
               {t("restaurant.about.title")}
             </p>
             <div className="md:flex md:items-center md:gap-2 pt-[8px] xl:pt-0 2xl:pt-[8px] ">
               <h1
-                className={`uppercase tracking-[-0.07em] leading-[81%]  text-[#242425] text-[17.07vw] 2xl:text-[5.21vw] 
+                className={`uppercase tracking-[-0.07em] leading-[81%]  text-[#242425] text-[17.07vw] 2xl:text-[5.21vw] lg:text-[6.2vw]
                   xl:text-[6.719vw] xl:pt-2
                 `}
               >
@@ -46,7 +46,7 @@ export const AboutRestaurant = () => {
               }`}
             >
               <p
-                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw] lg:text-[14px] md:text-[12px] text-[12px] 
+                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw] xl:text-[14px]  lg:text-[14px] md:text-[12px] text-[12px] 
               
 
                   ${isEng ? "xl:w-[100%]" : ""}
@@ -61,7 +61,7 @@ export const AboutRestaurant = () => {
                 {t("restaurant.about.desc.first.2")}
               </p>
               <p
-                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]  lg:text-[14px] md:text-[12px] text-[12px]
+                className={`leading-[120%] uppercase text-[#252526] 2xl:text-[0.9375vw]   xl:text-[14px] lg:text-[14px] md:text-[12px] text-[12px]
                   ${isEng ? "xl:w-[98%] 2xl:w-[97%]" : "w-[98%]"}
                   
                  tracking-[-0.02em] xl:leading-[120%]
@@ -118,7 +118,7 @@ export const AboutRestaurant = () => {
             <div
               className={`md:border-e border-[#B3B3B3] border-b 2xl:px-[20px] w-full flex items-center justify-center lg:py-[14px_19px] 2xl:py-[14px_19px]   pt-[10px] pb-[13px]  md:px-2 px-[10px_3px] 
                 
-                  lg:px-[20px] xl:py-[14px_19px]
+                   xl:py-[14px_19px]
               }`}
             >
               <img
@@ -151,7 +151,7 @@ export const AboutRestaurant = () => {
               loading="lazy"
               src={aboutImageTrd}
               alt=""
-              className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[14.321vw] 
+              className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[17.321vw] lg:h-[29vw]
                 
               `}
             />

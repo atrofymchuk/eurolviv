@@ -28,7 +28,7 @@ export const Menu = () => {
             </span>
             <h1
               className={cn(
-                `uppercase 2xl:text-[3.3373vw] lg:text-[54px]  leading-[94%] text-[8.53vw] mt-[9px]  tracking-[-0.075em] md:whitespace-nowrap`,
+                `uppercase 2xl:text-[3.3373vw] lg:text-[44px]  leading-[94%] text-[8.53vw] mt-[9px]  tracking-[-0.075em] md:whitespace-nowrap`,
                 {
                   "xl:text-[51px]": isCustomWidth,
                   "xl:text-[42px]": !isCustomWidth,

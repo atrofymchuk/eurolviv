@@ -64,7 +64,7 @@ export const Footer = () => {
       <footer className="relative z-20 flex flex-col lg:flex-row lg:items-start  lg:justify-center text-white pt-[53px] lg:pt-[133px] py-[47px]">
         <div className="relative w-full pl-4 lg:pl-0 z-30">
           <div className="flex flex-col lg:flex-row lg:justify-between w-full">
-            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col 2xl:px-[3.75vw_3.49vw] xl:px-[2.75vw_1.5vw]  2xl:h-[23.777vw] xl:h-[28.677vw] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
+            <div className="relative lg:order-1 order-2 lg:w-[21.9%] lg:pt-[17px] flex flex-col 2xl:px-[3.75vw_3.49vw] xl:px-[2.75vw_1.5vw] lg:px-[16px_0] 2xl:h-[23.777vw] xl:h-[28.677vw] lg:border-e [border-image:linear-gradient(180deg,#242425_0%,#6D7984_97.5%)_1]">
               <div className="flex flex-col h-full justify-between  lg:mt-0 mt-[35px] ">
                 <div className="lg:flex lg:flex-col justify-between xl:justify-start h-full grid grid-cols-2 lg:grid-cols-1">
                   <div className="space-y-3 lg:w-full w-[180px] 2xl:max-h-[25.677vw]">
@@ -141,7 +141,7 @@ export const Footer = () => {
                           target="_blank"
                           className="rounded-full hover:cursor-pointer"
                         >
-                          <FaFacebook className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]" />
+                          <FaFacebook className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]" />
                         </Link>
                         <Link
                           to={social.hotel.instagram}
@@ -154,7 +154,7 @@ export const Footer = () => {
                             alt="instagram"
                             width="37"
                             height="37"
-                            className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[37px] lg:h-[37px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]"
+                            className="2xl:w-[1.93vw] 2xl:h-[1.93vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px] xl:w-[2.5vw] xl:h-[2.5vw]"
                           />
                         </Link>
                       </div>
@@ -165,7 +165,7 @@ export const Footer = () => {
               <p
                 className="absolute uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%]
                  2xl:text-[0.833vw] xl:text-[12px] 2xl:bottom-[-9vw] xl:bottom-[-10.6vw]
-              lg:text-[12px] lg:tracking-[0.06em] lg:-bottom-34 lg:block hidden"
+              lg:text-[10px] lg:tracking-[0.06em] lg:-bottom-30 lg:block hidden"
               >
                 <Link to={pdfDocuments.pathPrivacyPolicy} target="_blank">
                   {t("footer.privacyPolicy")}
@@ -185,8 +185,8 @@ export const Footer = () => {
                 <div>
                   <div className="flex flex-col items-center md:items-start">
                     <h4
-                      className={`text-lg font-cofo-medium 2xl:text-[1.25vw] text-[5.33vw ] xl:text-[1.56vw] leading-[108.6%] font-cofo px-4 md:px-0 tracking-[-0.05em]
-                          ${isEng ? "2xl:w-[12vw] xl:w-[16.5vw] w-[80%]" : "   lg:max-w-[420px] 2xl:w-[18.177vw] w-[315px]"}
+                      className={`text-lg font-cofo-medium 2xl:text-[1.25vw] lg:text-[18px] text-[5.33vw] xl:text-[1.56vw] leading-[108.6%] font-cofo px-4 md:px-0 tracking-[-0.05em]
+                          ${isEng ? "2xl:w-[12vw] xl:w-[16.5vw]  w-[80%]" : "   xl:max-w-[420px] lg:w-[240px] 2xl:w-[18.177vw] w-[315px]"}
                   lg:text-start text-center `}
                     >
                       {t("footer.getNews")}

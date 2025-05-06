@@ -19,13 +19,13 @@ export const TerraseHeader = () => {
         playsInline
       />
 
-      <h4 className="font-cofo-medium text-[#FFFFFF] leading-[22.68px]  underline text-sm decoration-transparent items-center xl:mb-4">
+      <h4 className="font-cofo-medium text-[#FFFFFF] leading-[22.68px]  underline text-sm decoration-transparent items-center xl:mb-4 lg:mb-4">
         <span className="font-blessed  block text-center text-[14px] xl:text-3xl ml-2 xl:inline">
           {t("terrase.header.title")}
         </span>
       </h4>
       <div className="flex flex-col items-center">
-        <h1 className="uppercase font-cofo xl:text-[198px] text-[64px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.09em] text-center underline decoration-transparent ">
+        <h1 className="uppercase font-cofo xl:text-[198px] text-[64px] lg:text-[100px] font-normal text-[#FFFFFF] xl:leading-[154.83px] leading-[52.13px] tracking-[-0.09em] text-center underline decoration-transparent ">
           {t("terrase.header.title2")}
         </h1>
 

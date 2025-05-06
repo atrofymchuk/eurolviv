@@ -111,7 +111,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
     <div className="relative flex justify-center lg:ms-[71px] ms-[calc(5%)]">
       {currentSlide > 0 && (
         <button
-          className="w-[35px] h-[35px]  lg:w-[60px] lg:h-[60px] flex items-center justify-center 
+          className="w-[35px] h-[35px]  lg:w-[40px] lg:h-[40px] xl:w-[60px] xl:h-[60px] flex items-center justify-center 
                      left-5 lg:left-5 z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={handlePrevClick}
@@ -150,7 +150,7 @@ export const RoomSlider = memo(({ images }: RoomSliderProps) => {
 
       {showNextButton && (
         <button
-          className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] 2xl:right-[6vw] flex items-center justify-center 
+          className="w-[35px] h-[35px] xl:w-[60px] xl:h-[60px] lg:w-[40px] lg:h-[40px] 2xl:right-[6vw] flex items-center justify-center 
                      right-[17vw] lg:right-[12vw] z-10 text-[#8C331B] bg-white absolute top-1/2 
                      transform -translate-y-1/2 rounded-full border border-white transition"
           onClick={handleNextClick}

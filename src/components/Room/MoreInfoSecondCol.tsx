@@ -35,7 +35,7 @@ export const MoreInfoSecondCol = ({
       > 
         <h1
           className={cn(
-            ` text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[2.8vw] 2xl:text-[2.52vw] leading-[104%] uppercase `,
+            ` text-white text-[8.53vw] lg:text-[32px] tracking-[-0.07em] xl:text-[2.8vw] 2xl:text-[2.52vw] leading-[104%] uppercase `,
             {
               "block md:hidden xl:pb-[2.98vw] lg:pb-[20px] md:pb-[15px] pt-[54px] 2xl:pb-[2.71vw]":
                 !isShowOtherInfo,
@@ -57,7 +57,7 @@ export const MoreInfoSecondCol = ({
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw] w-[88%]
+          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw] w-[88%] lg:text-[32px]
            leading-[104%] uppercase  md:hidden block px-[2.67vw] lg:px-5 mt-[42px]">
             {t("room.moreInfo.title")}
           </h1>
@@ -107,7 +107,7 @@ export const MoreInfoSecondCol = ({
         <div className="mt-auto">
           <p className={`text-white text-[4.27vw]  2xl:text-[1.05vw] 2xl:gap-[0.42vw]
           ${isEng ? "2xl:w-[95%]" : "w-[102%]"}
-          xl:text-[1.09vw] md:text-[12px] lg:text-[14px] uppercase leading-[120%] md:flex hidden gap-1`}>
+          xl:text-[1.09vw] md:text-[12px] lg:text-[12px] uppercase leading-[120%] md:flex hidden gap-1`}>
             <img
               loading="lazy"
               src={parking}

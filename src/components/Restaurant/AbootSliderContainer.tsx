@@ -44,7 +44,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
     >
       <div className="absolute w-full lg:h-[660px] h-[460px] z-2 flex items-end justify-center ">
         <div
-          className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw]  h-[470px]`, {
+          className={cn(`absolute  xl:h-[50vw] 2xl:h-[46.15vw] lg:h-[1000px] h-[470px]`, {
             
             "2xl:w-[93.1%] xl:w-[93.1%] lg:w-[93.1%] md:w-[93.1%] w-[89.05%]": !isTerrase,
             "2xl:w-[93.23%] xl:w-[93.23%] lg:w-[93.25%] md:w-[93.25%] w-[89.7%]": isTerrase,
@@ -65,7 +65,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
           to={links.bookTable}
           target="_blank"
           className={cn(`2xl:text-[.73vw] lg:text-[14px] 2xl:mt-[38px]  font-cofo-medium text-center flex items-center justify-center
-           bg-[#8C331B] border border-[#8C331B] hover:text-[#8C331B] w-[160px] h-[40px] 2xl:w-[10.1vw] 2xl:h-[2.3vw] 
+           bg-[#8C331B] border border-[#8C331B] hover:text-[#8C331B] w-[160px] h-[40px] lg:mb-10 2xl:w-[10.1vw] 2xl:h-[2.3vw] 
         uppercase mt-[24px] mb-[10px] hover:bg-[#FFFFFF] text-[#FFFFFF] hover:cursor-pointer  rounded-4xl text-[12px]`, {
           "xl:w-[12.1vw] xl:h-[2.5vw]": isCustomWidth,
           "xl:w-[14.2vw] xl:h-[2.9vw]": !isCustomWidth,

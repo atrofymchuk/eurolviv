@@ -45,7 +45,7 @@ export const Dishes = ({
             </span>
           </h4>
           <h1
-            className={`text-center  uppercase leading-[81%]   tracking-[-0.09em] xl:text-[160px] 2xl:text-[233px] ${
+            className={`text-center  uppercase leading-[81%]   tracking-[-0.09em] xl:text-[160px] 2xl:text-[233px] lg:text-[100px] ${
               content.isMenu ? "text-[17.07vw]" : "text-[8.53vw]"
             }`}
           >
@@ -53,13 +53,13 @@ export const Dishes = ({
           </h1>
           {content.titleTwo && (
             <h1
-              className={`text-center  uppercase leading-[81%] xl:text-[48px]  tracking-[-0.09em] lg:text-[36px] text-[32px] lg:pt-[29px] lg:pb-[19px]`}
+              className={`text-center  uppercase leading-[81%] xl:text-[48px]   tracking-[-0.09em] lg:text-[36px] text-[32px] lg:pt-[29px] lg:pb-[19px]`}
             >
               {t(content.titleTwo)}
             </h1>
           )}
           <p
-            className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] 
+            className={`text-center leading-[120%] uppercase  xl:text-[1.25vw] 2xl:text-[1.04vw] lg:text-[14px]
           text-[3.20vw] lg:pt-[18px] 2xl:pt-[0.94vw] pt-[22px] lg:pb-[30px] 2xl:pb-[1.56vw] pb-[22px]  mx-auto
           
           ${
