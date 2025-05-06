@@ -201,7 +201,7 @@ export const SpecialOffersModal = () => {
               </a>
             </p>
             </div>
-            {!isMobile&& isPhotosession && <div className="2xl:w-[57%] xl:w-[58%] flex flex-col justify-center">
+            {!isMobile&& isPhotosession && <div className={` flex flex-col justify-center ${isEng ? "2xl:w-[57%] xl:w-[58%]" : "2xl:w-[41%] xl:w-[46%]"}`}>
 
             <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.09vw] 2xl:text-[0.83vw] ">
               {t(data.contactDesc || "")}
