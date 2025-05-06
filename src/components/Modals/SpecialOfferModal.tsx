@@ -104,9 +104,22 @@ export const SpecialOffersModal = () => {
             <div className="flex flex-col items-center justify-center  md:mt-auto  gap-y-[20px]">
               <h1
                 className={cn(
-                  `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] w-[90%] ${
-                    isBusiness && "2xl:w-[50%] xl:w-[50%] "
-                  }`
+                  `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] 
+                  ${isEng && isMilitary ? "w-[50%]":"lg:w-auto w-[90%] "}
+                  ${
+                    !isEng && isBusiness && "2xl:w-[50%] xl:w-[50%] "
+                  }
+                  ${
+                    isEng &&( isBusiness || isPet || isPhotosession || isNewlyweeds ) && "2xl:w-[40%] xl:w-[50%] "
+                  }
+                  ${
+                    !isEng &&( isPet || isNewlyweeds ) && "2xl:w-[70%] xl:w-[80%] "
+                  }
+               
+                  
+                  
+                  
+                  `
                 )}
               >
                 {t(data.title)}
@@ -114,38 +127,48 @@ export const SpecialOffersModal = () => {
               <p
                 className={`
                 uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] xl:text-[1.25vw] 2xl:text-[0.94vw] leading-[15px] md:leading-[22px] 
-                ${isMilitary && "2xl:w-[58%] xl:w-[67%] w-[97%]"}
-                ${isBusiness && "2xl:w-[58%] xl:w-[65%] w-[93%]"}
-                ${isPet && "2xl:w-[58%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isPhotosession && "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isNewlyweeds && "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%] "}
+                ${!isEng && isMilitary && "2xl:w-[58%] xl:w-[67%] w-[97%]"}
+                ${isEng && isMilitary && "2xl:w-[60%] xl:w-[67%] w-[97%]"}
+                ${!isEng && isBusiness && "2xl:w-[58%] xl:w-[65%] w-[93%]"}
+                ${isEng && isBusiness && "2xl:w-[58%] xl:w-[65%] w-[100%]"}
+                ${!isEng && isPet && "2xl:w-[58%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isEng && isPet && "2xl:w-[58%] xl:w-[66%] w-[97.5%] space-y-2"}
+                ${!isEng && isPhotosession && "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isEng && isPhotosession && "2xl:w-[76%] xl:w-[77%] w-[98%] space-y-2"}
+                ${!isEng && isNewlyweeds && "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isEng && isNewlyweeds && "2xl:w-[90%] xl:w-[66%] w-[100%] space-y-2"}
+                ${isEng && isNewlyweeds && "2xl:w-[68%] xl:w-[66%] w-[100%] space-y-2"}
+                ${!isEng && isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%] "}
+                ${isEng && isBirthday && "2xl:w-[100%] xl:w-[100%] w-[93.8%] "}
                 `}
               >
                 {isPet ? t(data.desc[0]) : t(data.desc)}
 
                 <span
-                  className={`${isPet && "mt-2 block lg:inline"} 
-                ${isPhotosession || (isBirthday && " block lg:block")}
+                  className={` ${isPet && "mt-2 block lg:inline"} 
+                ${(isPhotosession || isBirthday) && " block lg:block"}
+                ${isEng && isPhotosession && "inline! lg:block"}
                 ${
-                  isNewlyweeds &&
+                  !isEng&&isNewlyweeds &&
                   " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"
+                }
+                ${
+                  isEng && isNewlyweeds &&
+                  " 2xl:w-[100%] block lg:block  xl:w-[100%] w-[90%] mx-auto"
                 }
                 `}
                 >
-                  {isPet ||
-                    isPhotosession ||
-                    isNewlyweeds ||
-                    (isBirthday && t(data.desc[1]))}
+                  {(isPet ||isPhotosession ||isNewlyweeds || isBirthday) && t(data.desc[1])}
                 </span>
               </p>
               {isPetOffer && (
                 <button
                   onClick={() => handleOpenPdf(pdfDocuments.pathPublicOffer)}
                   className={cn(
-                    `bg-[#FFFFFF] lg:w-[245px] lg:h-[46px] text-[12px] rounded-full uppercase w-[181px] h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`,
+                    `bg-[#FFFFFF]  lg:h-[46px] text-[12px] rounded-full uppercase  h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`,
                     {
-                      "lg:w-[280px]": isEng,
+                      "lg:w-[280px] w-[200px]": isEng,
+                      "w-[181px] lg:w-[245px]": !isEng
                     }
                   )}
                 >

@@ -1065,7 +1065,7 @@
                   },
                   "petFriendly":{
                     "title": "Travel with Your Pet",
-                    "desc": "Our package is designed to make sure your furry friend feels right at home. We provide comfortable conditions for staying with pets, including special amenities and gifts for your four-legged companions.",
+                    "desc": ["Our package is designed to make sure your furry friend feels right at home."," We provide comfortable conditions for staying with pets, including special amenities and gifts for your four-legged companions."],
                     "cardDesc": "Our package is designed to make your pet feel at home.",
                     "offer": "Pet accommodation rules",
                     "details": [
@@ -1082,7 +1082,7 @@
                   },
                   "photoSession":{
                     "title": "Photoshoot",
-                    "desc": "Looking for a stylish location for stunning photos? Eurohotel invites you to enjoy a unique opportunity and capture your photos in an elegant setting.",
+                    "desc": ["Looking for a stylish location for stunning photos? Eurohotel ","invites you to enjoy a unique opportunity and capture your photos in an elegant setting."],
                     "cardDesc": "Looking for a stylish location for the best photos? Eurohotel invites you to take advantage of a unique opportunity",
                     "offer": "Photoshoot",
                     "details": [
@@ -1100,7 +1100,7 @@
                   },
                   "newlyweds":{
                     "title": "A Gift for Newlyweds",
-                    "desc": "The perfect start to your life together! Indulge in a memorable retreat after your most special celebration. Let the sweetest memories stay with you forever!",
+                    "desc": ["The perfect start to your life together! Indulge in a memorable retreat after your most special celebration.", " Let the sweetest memories stay with you forever!"],
                     "cardDesc": "Your perfect start to your life together! Treat yourself to an unforgettable vacation after the most important day of celebration ",
                     "offer": "A Gift for Newlyweds",
                     "details": [
@@ -1118,7 +1118,7 @@
                   },
                   "birthday":{
                     "title": "Birthday Celebrations",
-                    "desc": "Celebrate your special day in the cozy ambiance of Eurohotel!We’ve got a special surprise to make your celebration even more memorable.",
+                    "desc": ["Celebrate your special day in the cozy ambiance of Eurohotel!", " We’ve got a special surprise to make your celebration even more memorable."],
                     "cardDesc": "Celebrate your special day in the cozy atmosphere of Eurohotel! ",
                     "offer": "-20% on your birthday",
                     "discount": "-20%",

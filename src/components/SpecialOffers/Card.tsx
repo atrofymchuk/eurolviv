@@ -104,7 +104,6 @@ export const Card = ({
       <div className="md:mt-auto pt-[23px] flex lg:hidden ps-3.25 pb-5">
         <button
           onClick={(e) => {
-            console.log(url, '2')
             e.preventDefault();
             e.stopPropagation();
             handleCardClick(url);
