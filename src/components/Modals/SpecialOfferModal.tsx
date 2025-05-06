@@ -12,6 +12,33 @@ import { useCustomWidth } from "../Hooks/useCustomWidth";
 
 Modal.setAppElement("#root");
 
+const getDescriptionClassNames = (
+  isEng: boolean,
+  isMilitary: boolean | undefined,
+  isBusiness: boolean | undefined,
+  isPet: boolean | undefined,
+  isPhotosession: boolean | undefined,
+  isNewlyweeds: boolean | undefined,
+  isBirthday: boolean | undefined
+) => {
+  return `
+  uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] xl:text-[1.25vw] 2xl:text-[0.94vw] leading-[15px] md:leading-[22px] 
+  ${!isEng && isMilitary ? "2xl:w-[58%] xl:w-[67%] w-[97%]" : ""}
+  ${isEng && isMilitary ? "2xl:w-[60%] xl:w-[67%] w-[97%]" : ""}
+  ${!isEng && isBusiness ? "2xl:w-[58%] xl:w-[65%] w-[93%]" : ""}
+  ${isEng && isBusiness ? "2xl:w-[58%] xl:w-[65%] w-[100%]" : ""}
+  ${!isEng && isPet ? "2xl:w-[58%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${isEng && isPet ? "2xl:w-[58%] xl:w-[66%] w-[97.5%] space-y-2" : ""}
+  ${!isEng && isPhotosession ? "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${isEng && isPhotosession ? "2xl:w-[76%] xl:w-[77%] w-[98%] space-y-2" : ""}
+  ${!isEng && isNewlyweeds ? "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${isEng && isNewlyweeds ? "2xl:w-[90%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${isEng && isNewlyweeds ? "2xl:w-[68%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${!isEng && isBirthday ? "2xl:w-[85%] xl:w-[80%] w-[93.8%] " : ""}
+  ${isEng && isBirthday ? "2xl:w-[100%] xl:w-[100%] w-[93.8%] " : ""}
+  `;
+};
+
 export const SpecialOffersModal = () => {
   const { onCloseGlobalModal, isOpenSpecialOfferModal, url } = useModalStore();
   const { getSpecialOffer } = useSpecialOffersStore();
@@ -64,6 +91,17 @@ export const SpecialOffersModal = () => {
     return null;
   }
 
+  const phones = [
+    {
+      href: "tel:+380732424002",
+      text: "+38 (073) 242 40 02",
+    },
+    {
+      href: "tel:+380932424002",
+      text: "+38 (093) 242 40 02",
+    },
+  ];
+
   return (
     <Modal
       isOpen={isOpenSpecialOfferModal}
@@ -105,60 +143,55 @@ export const SpecialOffersModal = () => {
               <h1
                 className={cn(
                   `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] 
-                  ${isEng && isMilitary ? "w-[50%]":"lg:w-auto w-[90%] "}
+                  ${isEng && isMilitary ? "w-[50%]" : "lg:w-auto w-[90%] "}
+                  ${!isEng && isBusiness ? "2xl:w-[50%] xl:w-[50%] " : ""}
                   ${
-                    !isEng && isBusiness && "2xl:w-[50%] xl:w-[50%] "
+                    isEng &&
+                    (isBusiness || isPet || isPhotosession || isNewlyweeds)
+                      ? "2xl:w-[40%] xl:w-[50%]"
+                      : ""
                   }
                   ${
-                    isEng &&( isBusiness || isPet || isPhotosession || isNewlyweeds ) && "2xl:w-[40%] xl:w-[50%] "
+                    !isEng && (isPet || isNewlyweeds)
+                      ? "2xl:w-[70%] xl:w-[80%] "
+                      : ""
                   }
-                  ${
-                    !isEng &&( isPet || isNewlyweeds ) && "2xl:w-[70%] xl:w-[80%] "
-                  }
-               
-                  
-                  
-                  
                   `
                 )}
               >
                 {t(data.title)}
               </h1>
               <p
-                className={`
-                uppercase md:w-3/5 text-white text-[3.2vw] md:text-[16px] xl:text-[1.25vw] 2xl:text-[0.94vw] leading-[15px] md:leading-[22px] 
-                ${!isEng && isMilitary && "2xl:w-[58%] xl:w-[67%] w-[97%]"}
-                ${isEng && isMilitary && "2xl:w-[60%] xl:w-[67%] w-[97%]"}
-                ${!isEng && isBusiness && "2xl:w-[58%] xl:w-[65%] w-[93%]"}
-                ${isEng && isBusiness && "2xl:w-[58%] xl:w-[65%] w-[100%]"}
-                ${!isEng && isPet && "2xl:w-[58%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isEng && isPet && "2xl:w-[58%] xl:w-[66%] w-[97.5%] space-y-2"}
-                ${!isEng && isPhotosession && "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isEng && isPhotosession && "2xl:w-[76%] xl:w-[77%] w-[98%] space-y-2"}
-                ${!isEng && isNewlyweeds && "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isEng && isNewlyweeds && "2xl:w-[90%] xl:w-[66%] w-[100%] space-y-2"}
-                ${isEng && isNewlyweeds && "2xl:w-[68%] xl:w-[66%] w-[100%] space-y-2"}
-                ${!isEng && isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%] "}
-                ${isEng && isBirthday && "2xl:w-[100%] xl:w-[100%] w-[93.8%] "}
-                `}
+                className={getDescriptionClassNames(
+                  isEng,
+                  isMilitary,
+                  isBusiness,
+                  isPet,
+                  isPhotosession,
+                  isNewlyweeds,
+                  isBirthday
+                )}
               >
                 {isPet ? t(data.desc[0]) : t(data.desc)}
 
                 <span
                   className={` ${isPet && "mt-2 block lg:inline"} 
                 ${(isPhotosession || isBirthday) && " block lg:block"}
-                ${isEng && isPhotosession && "inline! lg:block"}
+                ${isEng && isPhotosession ? "inline! lg:block" : ""}
                 ${
-                  !isEng&&isNewlyweeds &&
-                  " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"
+                  !isEng && isNewlyweeds
+                    ? " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"
+                    : ""
                 }
                 ${
-                  isEng && isNewlyweeds &&
-                  " 2xl:w-[100%] block lg:block  xl:w-[100%] w-[90%] mx-auto"
+                  isEng && isNewlyweeds
+                    ? " 2xl:w-[100%] block lg:block  xl:w-[100%] w-[90%] mx-auto"
+                    : ""
                 }
                 `}
                 >
-                  {(isPet ||isPhotosession ||isNewlyweeds || isBirthday) && t(data.desc[1])}
+                  {(isPet || isPhotosession || isNewlyweeds || isBirthday) &&
+                    t(data.desc[1])}
                 </span>
               </p>
               {isPetOffer && (
@@ -168,7 +201,7 @@ export const SpecialOffersModal = () => {
                     `bg-[#FFFFFF]  lg:h-[46px] text-[12px] rounded-full uppercase  h-[37px] text-[#A47762] font-cofo-medium lg:text-[16px]`,
                     {
                       "lg:w-[280px] w-[200px]": isEng,
-                      "w-[181px] lg:w-[245px]": !isEng
+                      "w-[181px] lg:w-[245px]": !isEng,
                     }
                   )}
                 >
@@ -201,35 +234,40 @@ export const SpecialOffersModal = () => {
             </h1>
           </div>
 
-          <div className="flex  md:justify-between justify-start px-4  col-span-2 md:col-span-1 mx-auto  ">
+          <div className="flex  md:justify-between justify-start px-4  col-span-2 md:col-span-1 mx-auto lg:mx-0 ">
             <div className="flex flex-col xl:py-[27px] pb-[27px]">
               <ul className="space-y-1 lg:space-y-2 ">
-                <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw]">
-                  <a href="tel:+380732424002" className="hover:underline">
-                    +38 (073) 242 40 02
-                  </a>
-                </li>
-                <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw]">
-                  <a href="tel:+380932424002" className="hover:underline">
-                    +38 (093) 242 40 02
-                  </a>
-                </li>
+                {phones.map((phone, index) => (
+                  <li
+                    key={index}
+                    className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw]"
+                  >
+                    <a href={phone.href} className="hover:underline">
+                      {phone.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
-            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw] pt-2 2xl:pt-4">
-              <a
-                href="mailto:info@eurohotel.lviv.ua"
-                className="hover:underline"
-              >
-                info@eurohotel.lviv.ua
-              </a>
-            </p>
+              <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw] pt-2 2xl:pt-4">
+                <a
+                  href="mailto:info@eurohotel.lviv.ua"
+                  className="hover:underline"
+                >
+                  info@eurohotel.lviv.ua
+                </a>
+              </p>
             </div>
-            {!isMobile&& isPhotosession && <div className={` flex flex-col justify-center ${isEng ? "2xl:w-[57%] xl:w-[58%]" : "2xl:w-[41%] xl:w-[46%]"}`}>
-
-            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.09vw] 2xl:text-[0.83vw] ">
-              {t(data.contactDesc || "")}
-            </p>
-            </div>}
+            {!isMobile && isPhotosession && (
+              <div
+                className={` flex flex-col justify-center ${
+                  isEng ? "2xl:w-[57%] xl:w-[58%]" : "2xl:w-[41%] xl:w-[46%]"
+                }`}
+              >
+                <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.09vw] 2xl:text-[0.83vw] ">
+                  {t(data.contactDesc || "")}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
