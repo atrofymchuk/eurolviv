@@ -11,6 +11,7 @@ export type SpecialOffers = {
   desc: string | string[];
   cardDesc: string;
   offer: string;
+  contactDesc?:string;
   classes: string;
   discount?: string;
   details: string[];

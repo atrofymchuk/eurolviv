@@ -106,6 +106,7 @@ export const initialSpecialsOfferState: SpecialOffers[] = [
     cardDesc: "specialOffersState.photoSession.cardDesc",
     offer: "specialOffersState.photoSession.offer",
     classes: "object-[50%_0%]",
+    contactDesc:"specialOffersState.photoSession.contactDesc",
     details: [
       "specialOffersState.photoSession.details.0",
       "specialOffersState.photoSession.details.1",

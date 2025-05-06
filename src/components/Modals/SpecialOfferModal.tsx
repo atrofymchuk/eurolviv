@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "./OfferDetailsColumn";
 import { InViewWrapper } from "../utils/InViewWrapper";
 import cn from "classnames";
+import { useCustomWidth } from "../Hooks/useCustomWidth";
 
 Modal.setAppElement("#root");
 
@@ -16,16 +17,17 @@ export const SpecialOffersModal = () => {
   const { getSpecialOffer } = useSpecialOffersStore();
   const { t, i18n } = useTranslation();
 
-  const isPetOffer = url?.includes("pet");
   const isEng = i18n.language === "en";
+
+  const isMobile = useCustomWidth(300, 800);
+
+  const isPetOffer = url?.includes("pet");
   const isMilitary = url?.includes("military");
   const isBusiness = url?.includes("business");
   const isPet = url?.includes("pet");
   const isPhotosession = url?.includes("photo");
   const isNewlyweeds = url?.includes("newly");
   const isBirthday = url?.includes("birthday");
-
-
 
   useEffect(() => {
     if (isOpenSpecialOfferModal) {
@@ -71,13 +73,13 @@ export const SpecialOffersModal = () => {
     >
       <div
         className="bg-white md:w-[76.51%] 2xl:w-[76.51%] xl:w-[90%] w-[89.4%] max-h-[95vh] relative flex flex-col 
-       pt-[35px] md:pt-[25px] 2xl:pt-[3.06vh] md:p-[25px] p-[22px] items-center overflow-auto"
+       pt-[22px] md:pt-[25px] 2xl:pt-[3.06vh] md:p-[25px] p-[22px] items-center overflow-auto"
       >
         <button
-          className="absolute top-[1.11vh] right-[1.11vh] text-3xl hover:cursor-pointer z-10"
+          className="absolute 2xl:top-[0.7vh] 2xl:right-[.1vh] xl:top-[.1vh] xl:right-[.3vh] top-[.2vh] right-[.2vh] text-3xl hover:cursor-pointer z-10"
           onClick={handleCloseModal}
         >
-          <IoClose color="#8C331B" className="w-[20px] h-[20px]" />
+          <IoClose color="#8C331B" className="w-[26px] h-[26px]" />
         </button>
 
         <div className="relative w-full">
@@ -103,7 +105,7 @@ export const SpecialOffersModal = () => {
               <h1
                 className={cn(
                   `uppercase text-white text-[8.53vw] lg:text-[70px] leading-[97%] tracking-[-0.07em] w-[90%] ${
-                  isBusiness && "2xl:w-[50%] xl:w-[50%] "
+                    isBusiness && "2xl:w-[50%] xl:w-[50%] "
                   }`
                 )}
               >
@@ -120,14 +122,21 @@ export const SpecialOffersModal = () => {
                 ${isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%] "}
                 `}
               >
-                {isPet ? t(data.desc[0])  : t(data.desc)}
-              
-                <span className={`${isPet  && "mt-2 block lg:inline"} 
-                ${isPhotosession || isBirthday && " block lg:block"}
-                ${isNewlyweeds && " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"}
-                `}>
+                {isPet ? t(data.desc[0]) : t(data.desc)}
 
-                {isPet || isPhotosession || isNewlyweeds || isBirthday && t(data.desc[1])}
+                <span
+                  className={`${isPet && "mt-2 block lg:inline"} 
+                ${isPhotosession || (isBirthday && " block lg:block")}
+                ${
+                  isNewlyweeds &&
+                  " block lg:block 2xl:w-[65%] xl:w-[80%] mx-auto w-[90%]"
+                }
+                `}
+                >
+                  {isPet ||
+                    isPhotosession ||
+                    isNewlyweeds ||
+                    (isBirthday && t(data.desc[1]))}
                 </span>
               </p>
               {isPetOffer && (
@@ -162,26 +171,28 @@ export const SpecialOffersModal = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526] py-[27px]">
-          <div className="flex flex-col justify-center  px-4 col-span-2 md:col-span-1  ">
+        <div className="grid grid-cols-2  text-center md:text-start w-full bg-[#252526] ">
+          <div className="flex flex-col justify-center  px-4 col-span-2 md:col-span-1  xl:py-[27px]  py-[27px_19px] lg:border-e border-[#3D3D3D]">
             <h1 className="text-[24px] lg:text-[48px] text-white uppercase md:ps-6">
               {t("specialOfferModal.contacts.title")}
             </h1>
           </div>
-          <div className="flex flex-col md:justify-center justify-start px-4 pt-4 col-span-2 md:col-span-1 ">
-            <ul className="space-y-1 lg:space-y-2 ">
-              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw]">
-                <a href="tel:+380732424002" className="hover:underline">
-                  +38 (073) 242 40 02
-                </a>
-              </li>
-              <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw]">
-                <a href="tel:+380932424002" className="hover:underline">
-                  +38 (093) 242 40 02
-                </a>
-              </li>
-            </ul>
-            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] 2xl:text-[0.94vw] pt-2 lg:pt-4">
+
+          <div className="flex  md:justify-between justify-start px-4  col-span-2 md:col-span-1 mx-auto  ">
+            <div className="flex flex-col xl:py-[27px] pb-[27px]">
+              <ul className="space-y-1 lg:space-y-2 ">
+                <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw]">
+                  <a href="tel:+380732424002" className="hover:underline">
+                    +38 (073) 242 40 02
+                  </a>
+                </li>
+                <li className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw]">
+                  <a href="tel:+380932424002" className="hover:underline">
+                    +38 (093) 242 40 02
+                  </a>
+                </li>
+              </ul>
+            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.17vw] 2xl:text-[0.94vw] pt-2 2xl:pt-4">
               <a
                 href="mailto:info@eurohotel.lviv.ua"
                 className="hover:underline"
@@ -189,6 +200,13 @@ export const SpecialOffersModal = () => {
                 info@eurohotel.lviv.ua
               </a>
             </p>
+            </div>
+            {!isMobile&& isPhotosession && <div className="2xl:w-[57%] xl:w-[58%] flex flex-col justify-center">
+
+            <p className="uppercase text-white font-medium text-[12px] lg:text-[18px] xl:text-[1.09vw] 2xl:text-[0.83vw] ">
+              {t(data.contactDesc || "")}
+            </p>
+            </div>}
           </div>
         </div>
       </div>
