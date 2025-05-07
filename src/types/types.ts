@@ -148,7 +148,6 @@ export type RoomsItitialState = {
 
 export interface ModalStore {
   isOpenOrder: boolean;
-  isOpenMenuModal: boolean;
   isOpenSpecialOfferModal: boolean;
   activeModal: string | null;
   url: string | null;
@@ -200,16 +199,7 @@ export interface AboutSliderProps {
   swiperImagesStyle?: string;
 }
 
-export interface MenuInitialState {
-  menuItems: MenuItem[];
-}
 
-export interface MenuItem {
-  title: string;
-  previewImage: string;
-  ingredients: string[];
-  grams: string;
-}
 
 export interface PagesInfo {
   hotelInfo: { icon: string; text: string }[];
