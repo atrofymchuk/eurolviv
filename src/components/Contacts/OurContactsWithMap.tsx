@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { ContactList } from "./ContactsList";
-import MapImg from "./MapImg";
-import { social } from "../../Constants/Social";
+import { ContactList } from "@/components/Contacts/ContactsList";
+import MapImg from "@/components/Contacts/MapImg";
+import { social } from "@/Constants/Social";
 export const OurContactsWithMap = () => {
   const { t } = useTranslation();
 

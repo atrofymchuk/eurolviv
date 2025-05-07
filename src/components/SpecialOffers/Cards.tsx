@@ -1,7 +1,8 @@
-import { useModalStore } from "../../store/useModalStore";
-import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
-import { Card } from "./Card";
+import { useModalStore } from "@/store/useModalStore";
+import { useSpecialOffersStore } from "@/store/useSpecialOffersStore";
+import { Card } from "@/components/SpecialOffers/Card";
 import cn from "classnames";
+
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
   const { onOpenModal } = useModalStore();

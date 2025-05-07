@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { usePageStore } from "../store/usePageStorage";
+import { usePageStore } from "@/store/usePageStorage";
 
 type InfinityScrollPageProps = {
   pageKey: string;

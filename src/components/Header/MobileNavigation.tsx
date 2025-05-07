@@ -1,14 +1,14 @@
 import cn from "classnames";
-import { NavLinks } from "./NavLinks";
-import { ChangeLangButton } from "./ChangeLangButton";
-import { Room } from "../../types/types";
+import { NavLinks } from "@/components/Header/NavLinks";
+import { ChangeLangButton } from "@/components/Header/ChangeLangButton";
+import { Room } from "@/types/types";
 import { useTranslation } from "react-i18next";
-import { Logo } from "./Logo";
+import { Logo } from "@/components/Header/Logo";
 import { IoClose } from "react-icons/io5";
-import { BookLink } from "../Buttons/BookLink";
-import { SocialIcons } from "./SocialIcons";
+import { BookLink } from "@/components/Buttons/BookLink";
+import { SocialIcons } from "@/components/Header/SocialIcons";
 import { useEffect } from "react";
-import logoSideBar from "../../assets/logo.svg";
+import logoSideBar from "@/assets/logo.svg";
 
 
 type MobileNavigationProps = {

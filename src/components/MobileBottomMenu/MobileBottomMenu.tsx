@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { map } from "../../Constants/map";
+import { map } from "@/Constants/map";
 import {
   calendarBooking,
   menu,
   callUs,
   locationWhite,
-} from "../../store/exportsIcons";
-import { links } from "../../Constants/Links";
-import { useModalStore } from "../../store/useModalStore";
+} from "@/store/exportsIcons";
+import { links } from "@/Constants/Links";
+import { useModalStore } from "@/store/useModalStore";
+
 export const MobileBottomMenu = () => {
   const { t } = useTranslation();
   const { onOpenModal } = useModalStore();

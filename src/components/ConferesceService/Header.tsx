@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { headerConference,  headerMobile } from "../../store/exportsImg";
-import { PageHeader } from "../common/HeaderPage/PageHeader";
-import { useModalStore } from "../../store/useModalStore";
+import { headerConference,  headerMobile } from "@/store/exportsImg";
+import { PageHeader } from "@/components/common/HeaderPage/PageHeader";
+import { useModalStore } from "@/store/useModalStore";
 
 export const Header = () => {
   const { t } = useTranslation();

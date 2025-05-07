@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { SpecialOffersSlider } from "./SpecialOffersSlider";
+import { SpecialOffersSlider } from "@/components/Room/SpecialOffersSlider";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";

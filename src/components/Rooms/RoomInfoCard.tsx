@@ -1,10 +1,10 @@
-import { Room } from "../../types/types";
-import { square, guest } from "../../store/exportsIcons";
+import { Room } from "@/types/types";
+import { square, guest } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 type RoomInfoCard = {
   room: Room;
   length: number;

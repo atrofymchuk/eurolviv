@@ -1,7 +1,7 @@
-import { useRoomStore } from "../../store/useRoomsStore";
-import { RoomInfoCard } from "./RoomInfoCard";
+import { useRoomStore } from "@/store/useRoomsStore";
+import { RoomInfoCard } from "@/components/Rooms/RoomInfoCard";
 import { useTranslation } from "react-i18next";
-import { BookLink } from "../Buttons/BookLink";
+import { BookLink } from "@/components/Buttons/BookLink";
 import cn from "classnames";
 export const RoomsInfo = () => {
   const { rooms } = useRoomStore();

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import ruffLogo from "../../assets/icons/ruffLogo.svg";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-import { links } from "../../Constants/Links";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import ruffLogo from "@/assets/icons/ruffLogo.svg";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
+import { links } from "@/Constants/Links";
 export const RoofService = () => {
   const { t } = useTranslation();
   const { suggestion } = usePagesInfoStore();

@@ -1,5 +1,5 @@
 import { CiGlobe } from "react-icons/ci";
-import i18n from "../../i18n";
+import i18n from "@/i18n";
 import cn from "classnames";
 
 type changeLanguageToProps = {

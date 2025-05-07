@@ -1,7 +1,7 @@
 
 import { useTranslation } from "react-i18next";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-import { ConceptCasd } from "./ConceptCasd";  
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
+import { ConceptCasd } from "@/components/About/ConceptCasd";  
 export const Concepts = () => {
   const { t } = useTranslation();
   const { concepts } = usePagesInfoStore();

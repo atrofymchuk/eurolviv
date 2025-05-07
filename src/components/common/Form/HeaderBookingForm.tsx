@@ -3,12 +3,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 
-import "../HeaderPage/styles.css";
-import { DatePickerField } from "./DatePickerField";
-import { GuestsSelect } from "./GuestsSelect";
-import { BookButton } from "./BookButton";
-import { FormData } from "../../../types/headerTypes";
-import { formSchema } from "../../../schemas/bookRoom";
+import "@/components/common/HeaderPage/styles.css";
+import { DatePickerField } from "@/components/common/Form/DatePickerField";
+import { GuestsSelect } from "@/components/common/Form/GuestsSelect";
+import { BookButton } from "@/components/common/Form/BookButton";
+import { FormData } from "@/types/headerTypes";
+import { formSchema } from "@/schemas/bookRoom";
 import { useTranslation } from "react-i18next";
 
 export const HeaderBookingForm = () => {

@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { weddingFst, weddingScd, weddingTrd } from "../../store/exportsImg";
-import { ViewMenuButton } from "../Buttons/ViewMenu";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { weddingFst, weddingScd, weddingTrd } from "@/store/exportsImg";
+import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const Celebration = () => {
   const { t } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);

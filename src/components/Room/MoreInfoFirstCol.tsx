@@ -1,7 +1,7 @@
-import { parking } from "../../store/exportsIcons";
-import { coffeeRoom } from "../../store/exportsImg";
+import { parking } from "@/store/exportsIcons";
+import { coffeeRoom } from "@/store/exportsImg";
 import { useTranslation } from "react-i18next";
-import { BookLink } from "../Buttons/BookLink";
+import { BookLink } from "@/components/Buttons/BookLink";
 
 export const MoreInfoFirstCol = ({
   isShowOtherInfo,

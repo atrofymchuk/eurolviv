@@ -1,5 +1,5 @@
-import { InViewWrapper } from "../../utils/InViewWrapper";
-import { HeaderBackgroundProps } from "../../../types/headerTypes";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { HeaderBackgroundProps } from "@/types/headerTypes";
 import cn from "classnames";
 
 export const HeaderBackground: React.FC<HeaderBackgroundProps> = ({

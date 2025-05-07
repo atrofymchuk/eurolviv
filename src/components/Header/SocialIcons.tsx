@@ -1,7 +1,7 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { social } from "../../Constants/Social";
+import { social } from "@/Constants/Social";
 import cn from "classnames";
 
 type SocialIconsProps = {

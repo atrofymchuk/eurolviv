@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 import cn from "classnames";
 import { Link } from "react-router-dom";
-import { social } from "../../Constants/Social";
+import { social } from "@/Constants/Social";
 
 type HeaderSocialToProps = {
   styles: string;

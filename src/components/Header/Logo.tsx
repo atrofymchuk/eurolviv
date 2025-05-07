@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 type LogoProps = {
   logo: string;
   iconLogoStyle: string;

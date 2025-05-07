@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { useModalStore } from "../../store/useModalStore";
+import { useModalStore } from "@/store/useModalStore";
 
 export const ViewMenuButton = ({className}: {className?: string}) => {
   const { onOpenModal } = useModalStore();

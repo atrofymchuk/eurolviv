@@ -1,11 +1,11 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
-import ContactUsForm from "./ContactUsForm";
-import { OurContactsWithMap } from "./OurContactsWithMap";
-import { ContactUs } from "./ContactUs";
+import ContactUsForm from "@/components/Contacts/ContactUsForm";
+import { OurContactsWithMap } from "@/components/Contacts/OurContactsWithMap";
+import { ContactUs } from "@/components/Contacts/ContactUs";
 import { Link } from "react-router-dom";
-import { social } from "../../Constants/Social";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { social } from "@/Constants/Social";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const Info = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();
@@ -48,7 +48,7 @@ export const Info = () => {
                 {t("contacts.info.contactUs")}
               </p>
             </div>
-            <div className="flex flex-col lg:mt-11 2xl:mt-[2.29vw] mt-6 mb-6.5 space-y-3 lg:mb-[53px] items-center md:items-start">
+            <div className="flex flex-col lg:mt-11 2xl:mt-[1.4vw] mt-6 mb-6.5 space-y-3 lg:mb-[53px] items-center md:items-start">
               <h4 className="text-[3.2vw] md:text-[14px] 2xl:text-[0.83vw] text-[#6B6B6B] font-cofo uppercase ">
                 {t("contacts.info.socialMedia")}
               </h4>
@@ -83,11 +83,19 @@ export const Info = () => {
               <h1
                 className={` uppercase 
               leading-[82%] lg:tracking-[-0.04em] 
-                text-[8.53vw]  lg:text-[48px]  2xl:text-[5.21vw] md:font-cofo-medium tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] ${isEng ? "xl:text-[5.78vw]" : "xl:text-[5vw]"}`}
+                text-[8.53vw]  lg:text-[48px]  2xl:text-[5.21vw] md:font-cofo-medium tracking-[-0.07em] xl:w-[90%] 2xl:w-[29.53vw] ${
+                  isEng ? "xl:text-[5.78vw]" : "xl:text-[5vw]"
+                }`}
               >
                 {t("contacts.info.headingContactUs")}
               </h1>
-              <div className={`${isEng ? "lg:mt-[39px] 2xl:mt-[2.6vw] mt-[25px]" : "lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px]"} lg:space-y-7 space-y-2.5 mx-[5.23vw] lg:mx-0`}>
+              <div
+                className={`${
+                  isEng
+                    ? "lg:mt-[39px] 2xl:mt-[2.6vw] mt-[25px]"
+                    : "lg:mt-[39px] 2xl:mt-[2.03vw] mt-[25px]"
+                } lg:space-y-7 space-y-2.5 mx-[5.23vw] lg:mx-0`}
+              >
                 <p
                   className="font-cofo-medium uppercase 
                   text-[#8C331B] text-[3.2vw] md:text-[14px] lg:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw]"
@@ -97,7 +105,9 @@ export const Info = () => {
                 <p
                   className={` uppercase 
                 text-[#252526] lg:text-[14px] md:text-[14px] xl:text-[1.09vw] 2xl:text-[1.04vw] mx-auto lg:mx-0  2xl:w-[95%]
-                text-[3.2vw] ${isEng ? "w-[90%] mx-auto lg:mx-0"  : "xl:w-[97%] w-[95%] "}
+                text-[3.2vw] ${
+                  isEng ? "w-[90%] mx-auto lg:mx-0" : "xl:w-[97%] w-[95%] "
+                }
                 `}
                 >
                   {t("contacts.info.review")}

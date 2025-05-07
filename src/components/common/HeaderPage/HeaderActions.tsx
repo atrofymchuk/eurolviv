@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { BookLink } from "../../Buttons/BookLink";
-import { HeaderActionsProps } from "../../../types/headerTypes";
+import { BookLink } from "@/components/Buttons/BookLink";
+import { HeaderActionsProps } from "@/types/headerTypes";
 
 export const HeaderActions: React.FC<HeaderActionsProps> = ({
   showBookButton,

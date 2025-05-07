@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-import { LocationInfo } from "./LocationInfo";
-import { MapSection } from "./MapSection";
-import { InfrastructureSection } from "./InfrastructureSection";
-import { PlacesNearbySection } from "./PlacesNearlySection";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
+import { LocationInfo } from "@/components/About/LocationInfo";
+import { MapSection } from "@/components/About/MapSection";
+import { InfrastructureSection } from "@/components/About/InfrastructureSection";
+import { PlacesNearbySection } from "@/components/About/PlacesNearlySection";
 
 export const WhereWeAre = () => {
   const { t, i18n } = useTranslation();

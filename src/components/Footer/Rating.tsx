@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { visa, mastercard, rating } from "../../store/exportsIcons";
+import { visa, mastercard, rating } from "@/store/exportsIcons";
 import { useTranslation } from "react-i18next";
 export const Rating = ({
   openPdf,

@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { SliderAbout } from "./SliderAbout";
-import { RoomAbout } from "../../types/types";
+import { SliderAbout } from "@/components/Room/SliderAbout";
+import { RoomAbout } from "@/types/types";
 import { memo } from "react";
-import { guestBrown, houseBrown, squareBrown } from "../../store/exportsIcons";
-import { AboutRoomTitle } from "./AboutRoomTitle";
-import { BookLink } from "../Buttons/BookLink";
+import { guestBrown, houseBrown, squareBrown } from "@/store/exportsIcons";
+import { AboutRoomTitle } from "@/components/Room/AboutRoomTitle";
+import { BookLink } from "@/components/Buttons/BookLink";
 
 type RoomAboutToProps = {
   about?: RoomAbout;

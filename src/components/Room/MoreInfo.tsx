@@ -1,7 +1,7 @@
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-import { MoreInfoFirstCol } from "./MoreInfoFirstCol";
-import { MoreInfoSecondCol } from "./MoreInfoSecondCol";
-import { MoreInfoThirdCol } from "./MoreInfoThirdCol";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
+import { MoreInfoFirstCol } from "@/components/Room/MoreInfoFirstCol";
+import { MoreInfoSecondCol } from "@/components/Room/MoreInfoSecondCol";
+import { MoreInfoThirdCol } from "@/components/Room/MoreInfoThirdCol";
 import { useParams } from "react-router-dom";
 import cn from "classnames";
 

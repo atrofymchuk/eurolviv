@@ -1,12 +1,12 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
-import { Rating } from "./Rating";
+import { Rating } from "@/components/Footer/Rating";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Link } from "react-router-dom";
-import { social } from "../../Constants/Social";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { social } from "@/Constants/Social";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const BookingSection = ({
   openPdf,
   pdfDocuments,

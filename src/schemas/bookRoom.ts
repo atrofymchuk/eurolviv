@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { FormData } from "../types/headerTypes";
+import { FormData } from "@/types/headerTypes";
 
 export const formSchema = yup.object().shape({
   checkIn: yup.date().required("validation.checkIn"),

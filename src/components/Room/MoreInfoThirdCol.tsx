@@ -1,4 +1,4 @@
-import { dogRoom } from "../../store/exportsImg";
+import { dogRoom } from "@/store/exportsImg";
 import cn  from "classnames";
 
 export const MoreInfoThirdCol = ({

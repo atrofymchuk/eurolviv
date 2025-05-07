@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FormInput } from "./FormInput";
-import { schema } from "../../schemas/contactUs";
+import { FormInput } from "@/components/Contacts/FormInput";
+import { schema } from "@/schemas/contactUs";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 interface FormData {

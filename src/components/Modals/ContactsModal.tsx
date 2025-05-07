@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { IoClose } from "react-icons/io5";
-import { useModalStore } from "../../store/useModalStore";
-import { callUs } from "../../store/exportsIcons";
+import { useModalStore } from "@/store/useModalStore";
+import { callUs } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
 
 export const ContactsModal = () => {

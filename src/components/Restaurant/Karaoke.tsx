@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { karaokeFst, karaokeScd } from "../../store/exportsImg";
+import { karaokeFst, karaokeScd } from "@/store/exportsImg";
 import cn from "classnames";
-import { useCustomWidth } from "../../components/Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 export const Karaoke = () => {
   const { t, i18n } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);

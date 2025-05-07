@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchTranslation } from "../../utils/cacheTranslations";
+import { fetchTranslation } from "@/utils/cacheTranslations";
 import i18n from "i18next";
 
 const useCachedTranslation = (lang: string) => {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { ViewMenuButton } from "../Buttons/ViewMenu";
+import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
 
 type ConferenceMenuMobileCardToProps = {
   img: string;

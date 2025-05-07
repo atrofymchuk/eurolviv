@@ -1,11 +1,10 @@
-import { TerraseCard } from "./TerraceCard";
-import { TerraseT } from "../../types/types";
+import { TerraseCard } from "@/components/Terrace/TerraceCard";
+import { TerraseT } from "@/types/types";
 import { useTranslation } from "react-i18next";
-import { FormatBoldText } from "../common/FormatBoldText";
-import { AbootSliderContainer } from "../Restaurant/AbootSliderContainer";
+import { FormatBoldText } from "@/components/common/FormatBoldText";
+import { AbootSliderContainer } from "@/components/Restaurant/AbootSliderContainer";
 import cn from "classnames";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
-
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 type TerraseToProps = {
   terase: TerraseT;
   index: number;

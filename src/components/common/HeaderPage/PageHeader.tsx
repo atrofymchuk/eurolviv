@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { HeaderBackground } from "./HeaderBackground";
-import { HeaderTitle } from "./HeaderTitle";
-import { HeaderNavLink } from "./HeaderNavLink";
-import { HeaderActions } from "./HeaderActions";
-import { HeaderRoomInfo } from "./HeaderRoomInfo";
-import { HeaderDescription } from "./HeaderDescription";
-import { PageHeaderProps } from "../../../types/headerTypes";
+import { HeaderBackground } from "@/components/common/HeaderPage/HeaderBackground";
+import { HeaderTitle } from "@/components/common/HeaderPage/HeaderTitle";
+import { HeaderNavLink } from "@/components/common/HeaderPage/HeaderNavLink";
+import { HeaderActions } from "@/components/common/HeaderPage/HeaderActions";
+import { HeaderRoomInfo } from "@/components/common/HeaderPage/HeaderRoomInfo";
+import { HeaderDescription } from "@/components/common/HeaderPage/HeaderDescription";
+import { PageHeaderProps } from "@/types/headerTypes";
 import cn from "classnames";
-import { processTitle } from "../../../utils/ProccessTitle";
+import { processTitle } from "@/utils/ProccessTitle";
 
 
 export const PageHeader: React.FC<PageHeaderProps> = ({

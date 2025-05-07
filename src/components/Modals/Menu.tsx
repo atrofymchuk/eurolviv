@@ -1,6 +1,6 @@
 import { IoClose } from "react-icons/io5";
-import { useMenuStore } from "../../store/useMenuStore";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { useMenuStore } from "@/store/useMenuStore";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 export default function ModalMenu({ onCloseGlobalModal }: { onCloseGlobalModal: () => void }) {
   const { menuItems } = useMenuStore();

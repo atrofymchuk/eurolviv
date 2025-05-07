@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { restaurantMobile, terasseHomeMobile } from "../../store/exportsImg";
+import { restaurantMobile, terasseHomeMobile } from "@/store/exportsImg";
 import { Link } from "react-router-dom";
 export const RoofServiceMobile = () => {
   const { t } = useTranslation();

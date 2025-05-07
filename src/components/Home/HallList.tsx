@@ -1,4 +1,4 @@
-import { HallCard } from "./HallCard";
+import { HallCard } from "@/components/Home/HallCard";
 import './HallList.css'
 type HallListProps = {
     halls: {

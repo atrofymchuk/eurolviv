@@ -1,5 +1,5 @@
-import { TerrasesInitialState } from "../types/types";
-import * as imgs from "./exportsImg";
+import { TerrasesInitialState } from "@/types/types";
+import * as imgs from "@/store/exportsImg";
 
 export const initialTerraseState: TerrasesInitialState = {
   terases: [

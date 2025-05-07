@@ -1,12 +1,12 @@
-import "./Advantages.css";
+import "@/components/About/Advantages.css";
 
-import { advantages } from "../../store/exportsImg";
+import { advantages } from "@/store/exportsImg";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
-import { BookLink } from "../Buttons/BookLink";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
+import { BookLink } from "@/components/Buttons/BookLink";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const Advantages = () => {
   const { t } = useTranslation();
   const { hotelInfo, services } = usePagesInfoStore();

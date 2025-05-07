@@ -2,13 +2,13 @@ import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
 import { useEffect } from "react";
 
-import { useModalStore } from "../../store/useModalStore";
-import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
+import { useModalStore } from "@/store/useModalStore";
+import { useSpecialOffersStore } from "@/store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
-import { OfferDetailsColumn } from "./OfferDetailsColumn";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { OfferDetailsColumn } from "@/components/Modals/OfferDetailsColumn";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 
 Modal.setAppElement("#root");
 
@@ -32,8 +32,7 @@ const getDescriptionClassNames = (
   ${!isEng && isPhotosession ? "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2" : ""}
   ${isEng && isPhotosession ? "2xl:w-[76%] xl:w-[77%] w-[98%] space-y-2" : ""}
   ${!isEng && isNewlyweeds ? "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2" : ""}
-  ${isEng && isNewlyweeds ? "2xl:w-[90%] xl:w-[66%] w-[100%] space-y-2" : ""}
-  ${isEng && isNewlyweeds ? "2xl:w-[68%] xl:w-[66%] w-[100%] space-y-2" : ""}
+  ${isEng && isNewlyweeds ? "2xl:w-[70%] xl:w-[66%] w-[100%] space-y-2" : ""}
   ${!isEng && isBirthday ? "2xl:w-[85%] xl:w-[80%] w-[93.8%] " : ""}
   ${isEng && isBirthday ? "2xl:w-[100%] xl:w-[100%] w-[93.8%] " : ""}
   `;

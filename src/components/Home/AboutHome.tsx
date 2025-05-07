@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { previewImg } from "../../store/exportsImg";
+import { previewImg } from "@/store/exportsImg";
 import cn from "classnames";
-import "./roomsSlider.css";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import "@/components/Home/roomsSlider.css";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 
 export const AboutHome = () => {
   const { t } = useTranslation();

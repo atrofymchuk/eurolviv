@@ -47,7 +47,7 @@ export const ContactList = ({
         </div>
         <p
           className={cn(
-            "text-[3.2vw] lg:text-[14px] pt-[12px] font-cofo-medium uppercase lg:pb-0 xl:text-[1.09vw] 2xl:text-[1.04vw] ",
+            "text-[3.2vw] lg:text-[14px] pt-[12px] 2xl:pt-[22px] xl:pt-[18px] font-cofo-medium uppercase lg:pb-0 xl:text-[1.09vw] 2xl:text-[1.04vw] ",
             { "pb-[24px] mt-auto": !instagramLink }
           )}
         >

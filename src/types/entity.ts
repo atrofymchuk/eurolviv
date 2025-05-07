@@ -1,4 +1,4 @@
-import { Icon } from "./types";
+import { Icon } from "@/types/types";
 
 export type ComfortsBlockToProps = {
     title: string;

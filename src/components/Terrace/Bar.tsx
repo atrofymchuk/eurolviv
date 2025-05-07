@@ -4,12 +4,12 @@ import {
   cocktailImgScnd,
   wineImg,
   wineImgScnd,
-} from "../../store/exportsImg";
+} from "@/store/exportsImg";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { links } from "../../Constants/Links";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { links } from "@/Constants/Links";
 import { Link } from "react-router-dom";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const BarComponent = () => {
   const { t } = useTranslation();
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { map } from "../../Constants/map";
+import { map } from "@/Constants/map";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 export const RouteButton = ({ className }: { className?: string }) => {

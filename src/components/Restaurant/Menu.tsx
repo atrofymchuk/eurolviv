@@ -1,10 +1,11 @@
-import { MenuPC } from "./MenuPC";
-import { MenuSmallWidth } from "./MenuSmallWidth";
+import { MenuPC } from "@/components/Restaurant/MenuPC";
+import { MenuSmallWidth } from "@/components/Restaurant/MenuSmallWidth";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 import { Link } from "react-router-dom";
-import { links } from "../../Constants/Links";
+import { links } from "@/Constants/Links";
+
 export const Menu = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";

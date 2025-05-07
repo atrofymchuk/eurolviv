@@ -1,9 +1,10 @@
-import { IconsState, Room } from "../../types/types";
-import { ComfortsBlock } from "./ComfotsBlock";
+import { IconsState, Room } from "@/types/types";
+import { ComfortsBlock } from "@/components/Room/ComfotsBlock";
 import { useTranslation } from "react-i18next";
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import "./styles.css";
+import "@/components/Room/styles.css";
+
 type ComfortsBlockToProps = {
   icons?: IconsState;
   room?: Room;

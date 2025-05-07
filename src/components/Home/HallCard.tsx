@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
-import { square, guest } from "../../store/exportsIcons";
+import { square, guest } from "@/store/exportsIcons";
 import cn from "classnames";
 import { useState } from "react";
 

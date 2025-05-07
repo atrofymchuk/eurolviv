@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { About } from "../components/Room/About";
-import { ComfortsBlocksWrapper } from "../components/Room/ComfortBlocksWrapper";
-import { Header } from "../components/Room/Header";
-import { SpecialOffers } from "../components/Room/SpecialOffers";
-import { useRoomStore } from "../store/useRoomsStore";
-import { Suggestion } from "../components/Room/Suggestion";
-import { MoreInfo } from "../components/Room/MoreInfo";
-import { usePageStore } from "../store/usePageStorage";
+import { About } from "@/components/Room/About";
+import { ComfortsBlocksWrapper } from "@/components/Room/ComfortBlocksWrapper";
+import { Header } from "@/components/Room/Header";
+import { SpecialOffers } from "@/components/Room/SpecialOffers";
+import { useRoomStore } from "@/store/useRoomsStore";
+import { Suggestion } from "@/components/Room/Suggestion";
+import { MoreInfo } from "@/components/Room/MoreInfo";
+import { usePageStore } from "@/store/usePageStorage";
 
 export const Room = () => {
   const { roomType } = useParams();

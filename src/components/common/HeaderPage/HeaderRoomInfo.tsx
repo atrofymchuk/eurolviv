@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { HeaderRoomInfoProps } from "../../../types/headerTypes";
+import { HeaderRoomInfoProps } from "@/types/headerTypes";
 
 export const HeaderRoomInfo: React.FC<HeaderRoomInfoProps> = ({ roomInfo }) => {
   const { t } = useTranslation();

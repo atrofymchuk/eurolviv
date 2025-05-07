@@ -1,7 +1,7 @@
-import * as icons from "./exportsIcons";
-import * as imgs from "./exportsImg";
+import * as icons from "@/store/exportsIcons";
+import * as imgs from "@/store/exportsImg";
 
-import { RoomsState } from "../types/types";
+import { RoomsState } from "@/types/types";
 
 export const initialRoomsState: RoomsState = {
   rooms: [

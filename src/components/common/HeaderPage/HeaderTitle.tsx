@@ -1,4 +1,4 @@
-import { HeaderTitleProps } from "../../../types/headerTypes";
+import { HeaderTitleProps } from "@/types/headerTypes";
 import cn from "classnames";
 import { useLocation } from "react-router-dom";
 

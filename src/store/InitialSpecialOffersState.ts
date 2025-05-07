@@ -1,4 +1,4 @@
-import { SpecialOffers } from "../types/types";
+import { SpecialOffers } from "@/types/types";
 
 import {
   military,
@@ -25,7 +25,7 @@ import {
   modalPetMobile,
   modalPhotosession,
   modalPhotosessionMobile
-} from "./exportsImg";
+} from "@/store/exportsImg";
 export const initialSpecialsOfferState: SpecialOffers[] = [
   {
     src: military,

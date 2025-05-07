@@ -1,4 +1,4 @@
-import { mastercard, visa, rating } from "../../store/exportsIcons";
+import { mastercard, visa, rating } from "@/store/exportsIcons";
 
 export const RatingMobile = () => {
   return (

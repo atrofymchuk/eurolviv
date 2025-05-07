@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import RoomsSlider from "./RoomsSlider";
+import RoomsSlider from "@/components/Home/RoomsSlider";
 import { useRef } from "react";
 import type Slider from "react-slick";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
-import { useRoomStore } from "../../store/useRoomsStore";
+import { useRoomStore } from "@/store/useRoomsStore";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);

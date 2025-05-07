@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { SuggestionT } from "../../types/types";
+import { SuggestionT } from "@/types/types";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 import { useLocation } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { HeaderButtons } from "../Buttons/Ruff/HeaderButtons";
-import terraceHeader from "../../assets/Terrase/header.mp4";
+import { HeaderButtons } from "@/components/Buttons/Ruff/HeaderButtons";
+import terraceHeader from "@/assets/Terrase/header.mp4";
 
 export const TerraseHeader = () => {
   const { t } = useTranslation();

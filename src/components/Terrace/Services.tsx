@@ -1,4 +1,4 @@
-import { Dishes } from "./Dishes";
+import { Dishes } from "@/components/Terrace/Dishes";
 import {
   tableThree,
   table,
@@ -9,7 +9,7 @@ tableFrh,
   pasta,
   pie,
   steak,
-} from "../../store/exportsImg";
+} from "@/store/exportsImg";
 
 export const Services = () => {
   const menuContent = {

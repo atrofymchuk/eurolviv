@@ -7,11 +7,11 @@ import {
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
-import { Room } from "../../types/types";
-import { Logo } from "./Logo";
-import { MobileMenuButton, MobileBookingButton } from "./MobileMenu";
-import { DesktopNavigation } from "./DesktopNavigation";
-import { MobileNavigation } from "./MobileNavigation";
+import { Room } from "@/types/types";
+import { Logo } from "@/components/Header/Logo";  
+import { MobileMenuButton, MobileBookingButton } from "@/components/Header/MobileMenu";
+import { DesktopNavigation } from "@/components/Header/DesktopNavigation";
+import { MobileNavigation } from "@/components/Header/MobileNavigation";
 
 type HeaderNavProps = {
   scrolled: boolean;

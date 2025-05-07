@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import * as Components from "./exportComponents";
+import * as Components from "@/store/exportComponents";
 
 interface PageStore {
   sections: Record<string, React.FC[]>;

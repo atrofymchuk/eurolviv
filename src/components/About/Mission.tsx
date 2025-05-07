@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import ImageSlider from "./Slider";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import ImageSlider from "@/components/About/Slider";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const Mission = () => {
   const { t } = useTranslation();
   const isCustomWidth = useCustomWidth(1500, 1700);

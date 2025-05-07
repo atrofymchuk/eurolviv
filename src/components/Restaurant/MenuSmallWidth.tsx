@@ -1,5 +1,5 @@
-import { coffe, meat, spagetti } from "../../store/exportsImg";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { coffe, meat, spagetti } from "@/store/exportsImg";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 type MenuSmallWidthToProps = {
   className: string;

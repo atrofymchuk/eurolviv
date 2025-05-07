@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
-import ruffLogo from "../../assets/ruffLogo.svg";
-import defaultLogo from "../../assets/logo.svg";
-import terraseLogo from "../../assets/terraseLogo.svg";
+import ruffLogo from "@/assets/ruffLogo.svg";
+import defaultLogo from "@/assets/logo.svg";
+import terraseLogo from "@/assets/terraseLogo.svg";
 
 const useNavbarStyles = () => {
   const location = useLocation();

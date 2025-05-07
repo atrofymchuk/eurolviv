@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { ContactInfo } from "./ContactInfo";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
-import { ViewMenuButton } from "../Buttons/ViewMenu";
+import { ContactInfo } from "@/components/ConferesceService/ContactInfo";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
 
 type RoomDescriptionProps = {
   pOne: string;

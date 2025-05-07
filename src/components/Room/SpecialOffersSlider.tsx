@@ -1,12 +1,12 @@
 import Slider from "react-slick";
-import { useSpecialOffersStore } from "../../store/useSpecialOffersStore";
+import { useSpecialOffersStore } from "@/store/useSpecialOffersStore";
 import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { forwardRef, useState } from "react";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useModalStore } from "../../store/useModalStore";
+import { useModalStore } from "@/store/useModalStore";
 type SpecialOffersSliderToProps = {
   ref: Slider | null;
   isHome: boolean;

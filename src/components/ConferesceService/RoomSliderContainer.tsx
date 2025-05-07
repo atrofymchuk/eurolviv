@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RoomSlider } from "./RoomSlider";
+import { RoomSlider } from "@/components/ConferesceService/RoomSlider";
 import { useTranslation } from "react-i18next";
 
 interface RoomSliderProps {

@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { useMemo } from "react";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 type CardToProps = {
   src: string;
   title: string;

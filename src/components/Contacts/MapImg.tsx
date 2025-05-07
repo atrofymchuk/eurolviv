@@ -1,6 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
-import { RouteButton } from "../Buttons/RouteButton";
+import { RouteButton } from "@/components/Buttons/RouteButton";
 export default function MapImg() {
   const { t } = useTranslation();
   return (

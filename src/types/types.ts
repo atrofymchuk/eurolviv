@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { ConferenceService } from "../pages/ConferenceService";
+import { ConferenceService } from "@/pages/ConferenceService";
 
 export type SpecialOffers = {
   src: string;

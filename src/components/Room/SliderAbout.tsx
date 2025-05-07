@@ -4,9 +4,9 @@ import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { AboutSliderProps } from "../../types/types";
+import { AboutSliderProps } from "@/types/types";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 
 export const SliderAbout: React.FC<AboutSliderProps> = memo(

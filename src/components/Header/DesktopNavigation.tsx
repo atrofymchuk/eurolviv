@@ -1,7 +1,8 @@
-import { NavLinks } from "./NavLinks";
-import { Room } from "../../types/types";
+import { NavLinks } from "@/components/Header/NavLinks";
+import { Room } from "@/types/types";
 import cn from "classnames";
-import {useIsEnglish} from "../Hooks/useIsEnglish";
+import {useIsEnglish} from "@/components/hooks/useIsEnglish";
+
 type DesktopNavigationProps = {
   navLinks: Array<{ path: string; label: string }>;
   isActiveLink: (path: string) => string;

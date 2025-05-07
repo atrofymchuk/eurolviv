@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import cn from "classnames";
-import { NavListHeader } from "../Header/NavListHeader";
+import { NavListHeader } from "@/components/Header/NavListHeader";
 
 type DropdownItem = {
   key: string;

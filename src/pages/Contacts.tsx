@@ -1,7 +1,7 @@
 
-import { Header } from "../components/Contacts/Header";
-import { Info } from "../components/Contacts/Info";
-import { Location } from "../components/Contacts/Location";
+import { Header } from "@/components/Contacts/Header";
+import { Info } from "@/components/Contacts/Info";
+import { Location } from "@/components/Contacts/Location";
 
 
 export const Contacts = () => {

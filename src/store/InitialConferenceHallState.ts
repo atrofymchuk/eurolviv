@@ -1,6 +1,6 @@
-import { ConferenceServiceState } from "../types/types";
-import * as imgs from "./exportsImg";
-import * as icons from "./exportsIcons";
+import { ConferenceServiceState } from "@/types/types";
+import * as imgs from "@/store/exportsImg";
+import * as icons from "@/store/exportsIcons";
 
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [

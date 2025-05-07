@@ -1,9 +1,9 @@
 import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { ComfortsBlockToProps } from "../../types/entity";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { ComfortsBlockToProps } from "@/types/entity";
 import cn from "classnames";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 const removeParentheses = (text: string, isMobile: boolean) => {
   if (!isMobile) return text;
   return text.replace(/[()]/g, "").trim();

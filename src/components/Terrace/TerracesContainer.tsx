@@ -1,5 +1,5 @@
-import { useRoomStore } from "../../store/useRoomsStore";
-import { Terrase } from "./Terace";
+import { useRoomStore } from "@/store/useRoomsStore";
+import { Terrase } from "@/components/Terrace/Terace";
 import { useEffect } from "react";
 
 export const TerrasesContainer = () => {

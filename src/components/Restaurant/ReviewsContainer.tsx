@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { Reviews } from "./Reviews";
-import { ReviewSlider } from "./ReviewSlider";
+import { Reviews } from "@/components/Restaurant/Reviews";
+import { ReviewSlider } from "@/components/Restaurant/ReviewSlider";
 import Slider from "react-slick";
-import { Navigation } from "./Navigation";
+import { Navigation } from "@/components/Restaurant/Navigation";
 
 
 export const ReviewsContainer = () => {

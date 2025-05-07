@@ -3,8 +3,9 @@ import {
   aboutImageFst,
   aboutImageScd,
   aboutImageTrd,
-} from "../../store/exportsImg";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+} from "@/store/exportsImg";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+
 export const AboutRestaurant = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();

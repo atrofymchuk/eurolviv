@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { parking } from "../../store/exportsIcons";
-import { dogRoom } from "../../store/exportsImg";
-import { BookLink } from "../Buttons/BookLink";
+import { parking } from "@/store/exportsIcons";
+import { dogRoom } from "@/store/exportsImg";
+import { BookLink } from "@/components/Buttons/BookLink";
 import cn from "classnames";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
-
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const MoreInfoSecondCol = ({
   availableService,
   isShowOtherInfo,

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { ModalStore } from "../types/types";
+import { ModalStore } from "@/types/types";
 
 export const useModalStore = create<ModalStore>((set) => ({
   isOpenOrder: false,

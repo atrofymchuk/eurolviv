@@ -1,11 +1,11 @@
 import { FaWhatsapp } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
-import { navigate } from "../../store/exportsIcons";
+import { navigate } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
-import { map } from "../../Constants/map";
-import { social } from "../../Constants/Social";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { map } from "@/Constants/map";
+import { social } from "@/Constants/Social";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 
 export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => void, path: string}) => {
   const { t } = useTranslation();

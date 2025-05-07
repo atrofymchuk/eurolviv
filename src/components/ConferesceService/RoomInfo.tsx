@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { floor, squareBrown, guestBrown } from "../../store/exportsIcons";
+import { floor, squareBrown, guestBrown } from "@/store/exportsIcons";
 import { memo } from "react";
 
 type RoomInfoToProps = {

@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import { eurohotelAlert } from "../../store/exportsImg";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
-
+import { eurohotelAlert } from "@/store/exportsImg";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 interface PromoAlertProps {
   delay?: number;
   image?: string;

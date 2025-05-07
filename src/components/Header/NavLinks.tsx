@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useCallback, useMemo } from "react";
 import cn from "classnames";
-import { Room } from "../../types/types";
+import { Room } from "@/types/types";
 import { IoIosArrowDown } from "react-icons/io";
-import { useDropdownMenu } from "../Hooks/useDropdownMenu";
-import { renderDropdownMenu } from "../utils/renderDropdownMenu";
+import { useDropdownMenu } from "@/components/hooks/useDropdownMenu";
+import { renderDropdownMenu } from "@/components/utils/renderDropdownMenu";
 
 type NavLinksProps = {
   navLinks: Array<{ path: string; label: string }>;

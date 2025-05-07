@@ -2,12 +2,12 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import { Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { calendarBooking } from "../../../store/exportsIcons";
-import { DatePickerFieldProps } from "../../../types/headerTypes";
+import { calendarBooking } from "@/store/exportsIcons";
+import { DatePickerFieldProps } from "@/types/headerTypes";
 import { useState, useRef } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import { FormData } from "../../../types/headerTypes";
-import "./datePickerStyles.css";
+import { FormData } from "@/types/headerTypes";
+import "@/components/common/Form/datePickerStyles.css";
 import { uk, enUS } from "date-fns/locale";
 
 

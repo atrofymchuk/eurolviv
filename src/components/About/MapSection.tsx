@@ -1,5 +1,5 @@
-import { InViewWrapper } from "../utils/InViewWrapper";
-import MapComponent from "./Map";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import MapComponent from "@/components/About/Map";
 
 export const MapSection = () => {
   return (

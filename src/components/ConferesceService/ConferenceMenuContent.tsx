@@ -1,7 +1,7 @@
-import { ConferenceMenuCard } from "./ConferenceMenuCard";
-import { ConferenceMenuMobileCard } from "./ConferenceMenuMobile";
+import { ConferenceMenuCard } from "@/components/ConferesceService/ConferenceMenuCard";
+import { ConferenceMenuMobileCard } from "@/components/ConferesceService/ConferenceMenuMobile";
 import { useTranslation } from "react-i18next";
-import { food, sandwich, coffee } from "../../store/exportsImg";
+import { food, sandwich, coffee } from "@/store/exportsImg";
 import { useMemo } from "react";
 
 export const ConferenceMenuContent = () => {

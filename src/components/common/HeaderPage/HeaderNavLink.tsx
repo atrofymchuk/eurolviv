@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
-import { HeaderNavLinkProps } from "../../../types/headerTypes";
+import { HeaderNavLinkProps } from "@/types/headerTypes";
 
 export const HeaderNavLink: React.FC<HeaderNavLinkProps> = ({ to, text }) => {
   return (

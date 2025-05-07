@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import ReviewSlider from "./ReviewSlider";
+import ReviewSlider from "@/components/About/ReviewSlider";
 import Slider from "react-slick";
 import { CgArrowLeft, CgArrowRight } from "react-icons/cg";
 
 import { useTranslation } from "react-i18next";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { Link } from "react-router-dom";
 import cn from "classnames";
 export const Rewies = () => {

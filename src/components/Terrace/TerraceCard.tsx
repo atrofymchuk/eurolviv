@@ -1,4 +1,5 @@
 import cn from "classnames";
+
 type TerraseCardToProps = {
   index: number;
   el: string;

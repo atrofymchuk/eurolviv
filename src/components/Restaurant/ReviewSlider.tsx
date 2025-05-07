@@ -1,9 +1,10 @@
 import Slider from "react-slick";
-import { ReviewSliderCard } from "./ReviewSliderCard";
+import { ReviewSliderCard } from "@/components/Restaurant/ReviewSliderCard";
 import { forwardRef } from "react";
-import { usePagesInfoStore } from "../../store/usePagesInfoStore";
+import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+
 export const ReviewSlider = forwardRef<Slider>((_, ref) => {
   const { restaurantReviews } = usePagesInfoStore();
   const isCustomWidth = useCustomWidth(389, 410)

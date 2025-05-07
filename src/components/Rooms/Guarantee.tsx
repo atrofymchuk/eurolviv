@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { eurohotel } from "../../store/exportsImg";
-  import { useIsEnglish } from "../Hooks/useIsEnglish";
-import { Link } from "react-router-dom";
+import { eurohotel } from "@/store/exportsImg";
+  import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+  import { Link } from "react-router-dom";
 export const Guarantee = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();

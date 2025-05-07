@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
-import { guest, square } from "../../store/exportsIcons";
+import { guest, square } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
 
 type Hall = {

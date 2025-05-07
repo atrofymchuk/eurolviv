@@ -1,4 +1,4 @@
-import * as icons from "./exportsIcons";
+import * as icons from "@/store/exportsIcons";
 import {
   roomLux,
   terasse,
@@ -15,8 +15,8 @@ import {
   reviewFve,
   restaurantPC,
   karaokePC,
-} from "./exportsImg";
-import { Reviews } from "../types/types";
+} from "@/store/exportsImg";
+import { Reviews } from "@/types/types";
 
 export const cards = [
   {

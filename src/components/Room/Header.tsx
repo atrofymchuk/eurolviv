@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { PageHeader } from "../common/HeaderPage/PageHeader";
-import { RoomHeader } from "../../types/types";
+import { PageHeader } from "@/components/common/HeaderPage/PageHeader";
+import { RoomHeader } from "@/types/types";
 
 interface RoomHeaderToProps {
   header?: RoomHeader;

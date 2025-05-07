@@ -1,4 +1,4 @@
-import { PromoAlert } from "../PromoAlert";
-import { BookDirectAlert } from "../BookDirectAlert";
+import { PromoAlert } from "@/components/common/PromoAlert";
+import { BookDirectAlert } from "@/components/common/BookDirectAlert";
 
 export { PromoAlert, BookDirectAlert }; 

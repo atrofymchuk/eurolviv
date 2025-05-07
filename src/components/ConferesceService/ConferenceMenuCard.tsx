@@ -1,4 +1,4 @@
-import { ViewMenuButton } from "../Buttons/ViewMenu";
+import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
 import { useTranslation } from "react-i18next";
 
 type ConferenceMenuCardToProps = {

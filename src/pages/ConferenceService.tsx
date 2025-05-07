@@ -1,10 +1,10 @@
-import { About } from "../components/ConferesceService/About";
-import { ConferenceMenu } from "../components/ConferesceService/ConferenceMenu";
-import { ConferenceMenuContent } from "../components/ConferesceService/ConferenceMenuContent";
-import { Equipment } from "../components/ConferesceService/Equipment";
-import { Header } from "../components/ConferesceService/Header";
-import { RoomSliderContainer } from "../components/ConferesceService/RoomSliderContainer";
-import { useRoomStore } from "../store/useRoomsStore";
+import { About } from "@/components/ConferesceService/About";
+import { ConferenceMenu } from "@/components/ConferesceService/ConferenceMenu";
+import { ConferenceMenuContent } from "@/components/ConferesceService/ConferenceMenuContent";
+import { Equipment } from "@/components/ConferesceService/Equipment";
+import { Header } from "@/components/ConferesceService/Header";
+import { RoomSliderContainer } from "@/components/ConferesceService/RoomSliderContainer";
+import { useRoomStore } from "@/store/useRoomsStore";
 import cn from "classnames";
 
 export const ConferenceService = () => {

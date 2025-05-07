@@ -1,14 +1,14 @@
-import AboutSlider from "./AboutSlider";
+import AboutSlider from "@/components/Restaurant/AboutSlider";
 import { useTranslation } from "react-i18next";
 import {
   aboutRestaurant,
   aboutRestaurantScd,
   aboutRestaurantTrd,
-} from "../../store/exportsImg";
+} from "@/store/exportsImg";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 import { Link } from "react-router-dom";
-import { links } from "../../Constants/Links";
+import { links } from "@/Constants/Links";
 
 interface AbootSliderContainerProps {
   slides?: string[];

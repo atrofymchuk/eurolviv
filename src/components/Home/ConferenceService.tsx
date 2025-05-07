@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { useRoomStore } from "../../store/useRoomsStore";
-import { HallList } from "./HallList";
+import { useRoomStore } from "@/store/useRoomsStore";
+import { HallList } from "@/components/Home/HallList";
 import { useTranslation } from "react-i18next";
-import { ConferenceServiceSlider } from "./ConferenceServiceSlider";
+import { ConferenceServiceSlider } from "@/components/Home/ConferenceServiceSlider";
 import cn from "classnames";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
-
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 export const ConferenceService = () => {
   const { t } = useTranslation();
   const { halls } = useRoomStore();

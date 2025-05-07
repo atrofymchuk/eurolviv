@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { HeaderDescriptionProps } from "../../../types/headerTypes";
+import { HeaderDescriptionProps } from "@/types/headerTypes";
 
 const formatTextWithLineBreaks = (text: string): string => {
   return text

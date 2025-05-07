@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 import { Link } from "react-router-dom";
-import { links } from "../../Constants/Links";
-import { useIsEnglish } from "../Hooks/useIsEnglish";
+import { links } from "@/Constants/Links";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish";
 type ReviewsToProps = {
   isTerrasePage?:boolean
 }

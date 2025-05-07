@@ -1,11 +1,11 @@
-import { SliderAbout } from "../Room/SliderAbout";
-import { ConferenceService } from "../../types/types";
-import { RoomInfo } from "./RoomInfo";
+import { SliderAbout } from "@/components/Room/SliderAbout";
+import { ConferenceService } from "@/types/types";
+import { RoomInfo } from "@/components/ConferesceService/RoomInfo";
 import { memo } from "react";
 import cn from "classnames";
-import { GridBorders } from "./GridBorders";
-import { RoomTitle } from "./RoomTitle";
-import { RoomDescription } from "./RoomDescription";
+import { GridBorders } from "@/components/ConferesceService/GridBorders";
+import { RoomTitle } from "@/components/ConferesceService/RoomTitle";
+import { RoomDescription } from "@/components/ConferesceService/RoomDescription";
 type AboutToProps = {
   item: ConferenceService;
   isOnTop: boolean;

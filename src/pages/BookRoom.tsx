@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { OnLoadingSpin } from "../components/utils/OnLoadingSpin";
+import { OnLoadingSpin } from "@/components/utils/OnLoadingSpin";
 
 const Booking = () => {
   const [isLoading, setIsLoading] = useState(true);

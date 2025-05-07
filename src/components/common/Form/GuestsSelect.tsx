@@ -1,7 +1,7 @@
 import { Control, Controller, FieldErrors } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { FormData } from "../../../types/headerTypes";
+import { FormData } from "@/types/headerTypes";
 
 interface GuestsSelectProps {
   control: Control<FormData>;

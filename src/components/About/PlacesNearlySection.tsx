@@ -1,5 +1,5 @@
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { hotel } from "../../store/exportsImg";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { hotel } from "@/store/exportsImg";
 import { TFunction } from "i18next";
 import { i18n } from "i18next";
 import cn from "classnames";

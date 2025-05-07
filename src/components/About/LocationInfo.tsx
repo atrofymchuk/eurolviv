@@ -1,9 +1,10 @@
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { navigate } from "../../store/exportsIcons";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { navigate } from "@/store/exportsIcons";
 import { TFunction } from "i18next";
-import { RouteButton } from "../Buttons/RouteButton";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import { useIsEnglish } from "../Hooks/useIsEnglish"; 
+import { RouteButton } from "@/components/Buttons/RouteButton";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useIsEnglish } from "@/components/hooks/useIsEnglish"; 
+
 export const LocationInfo = ({ t }: { t: TFunction }) => {
 
   const isSpecialWidth = useCustomWidth(1500, 1700);

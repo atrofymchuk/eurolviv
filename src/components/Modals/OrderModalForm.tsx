@@ -1,8 +1,8 @@
 import { UseFormGetValues, UseFormRegister } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { FormData } from "./OrderModal";
+import { FormData } from "@/components/Modals/OrderModal";
 import { useState, useRef, useEffect } from "react";
-import './orderModal.css'
+import '@/components/Modals/orderModal.css'
 
 export default function OrderModalForm({
   register,

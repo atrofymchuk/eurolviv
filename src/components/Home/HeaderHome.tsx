@@ -1,7 +1,7 @@
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { headerHome, headerHomeMobile } from "../../store/exportsImg";
-import { HeaderBookingForm } from "../common/Form/HeaderBookingForm";
-import { RoofServiceMobile } from "./RoofServiceMobile";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { headerHome, headerHomeMobile } from "@/store/exportsImg";
+import { HeaderBookingForm } from "@/components/common/Form/HeaderBookingForm";
+import { RoofServiceMobile } from "@/components/Home/RoofServiceMobile";
 import { useTranslation } from "react-i18next";
 export const HeaderHome = () => {
   const {t} = useTranslation();

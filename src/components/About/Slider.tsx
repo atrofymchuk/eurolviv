@@ -9,12 +9,12 @@ import {
   luxTwoRoomsPreview,
   champagneAboutSlider,
   bedroomAboutSlider,
-} from "../../store/exportsImg";
+  } from "@/store/exportsImg";
 
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
   const slides = [
   mirrorAboutSlider,
   champagneAboutSlider,

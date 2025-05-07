@@ -1,21 +1,21 @@
-import "./Footer.css";
+import "@/components/Footer/Footer.css";
 
 import { FaFacebook } from "react-icons/fa6";
-import { instagram } from "../../store/exportsIcons";
+import { instagram } from "@/store/exportsIcons";
 import { useTranslation } from "react-i18next";
-import { RatingMobile } from "./RatingMobile";
-import { BookingSection } from "./BookingSection";
-import { BottomText } from "./BottomText";
-import { AddressWithSchedule } from "./AddressWithSchedule";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { footer } from "../../store/exportsImg";
+import { RatingMobile } from "@/components/Footer/RatingMobile";
+import { BookingSection } from "@/components/Footer/BookingSection";
+import { BottomText } from "@/components/Footer/BottomText";
+import { AddressWithSchedule } from "@/components/Footer/AddressWithSchedule";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { footer } from "@/store/exportsImg";
 import { Link } from "react-router-dom";
-import { social } from "../../Constants/Social";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
-import ContactMeForm from "./ContactMeForm";
+import { social } from "@/Constants/Social";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import ContactMeForm from "@/components/Footer/ContactMeForm";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import { useModalStore } from "../../store/useModalStore";
+import { useModalStore } from "@/store/useModalStore";
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";

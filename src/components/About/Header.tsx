@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { headerAbout } from "../../store/exportsImg";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { BookLink } from "../Buttons/BookLink";
+import { headerAbout } from "@/store/exportsImg";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { BookLink } from "@/components/Buttons/BookLink";
 
 export const AboutHeader = () => {
   const { t,i18n } = useTranslation();

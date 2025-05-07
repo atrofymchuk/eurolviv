@@ -1,4 +1,4 @@
-import { links } from "../../../Constants/Links";
+import { links } from "@/Constants/Links";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

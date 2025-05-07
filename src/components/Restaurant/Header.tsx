@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { headerRestaurant } from "../../store/exportsImg";
-import { HeaderButtons } from "../Buttons/Ruff/HeaderButtons";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { headerRestaurant } from "@/store/exportsImg";
+import { HeaderButtons } from "@/components/Buttons/Ruff/HeaderButtons";
 export const RestaurantHeader = () => {
   const { t } = useTranslation();
   return (

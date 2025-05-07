@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import burgerMenu from "../../assets/icons/burgerMenu.svg";
+import burgerMenu from "@/assets/icons/burgerMenu.svg";
 import { Link } from "react-router-dom";
-import { ChangeLangButton } from "./ChangeLangButton";
+import { ChangeLangButton } from "@/components/Header/ChangeLangButton";
 
 type MobileMenuButtonProps = {
   toggleMenu: () => void;

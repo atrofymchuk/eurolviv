@@ -1,10 +1,10 @@
 
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { InViewWrapper } from "../utils/InViewWrapper";
-import { mapContacts } from "../../store/exportsImg";
-import { RouteButton } from "../Buttons/RouteButton";
-import { location } from "../../store/exportsIcons";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { mapContacts } from "@/store/exportsImg";
+import { RouteButton } from "@/components/Buttons/RouteButton";
+import { location } from "@/store/exportsIcons";
 export const Location = () => {
   const { t } = useTranslation();
   return (
@@ -18,7 +18,7 @@ export const Location = () => {
           <img loading="lazy" src={location} alt="location" className="2xl:w-[0.94vw] 2xl:h-[0.94vw] lg:w-[18px] lg:h-[18px] md:w-[16px] md:h-[16px] " />
           {t("contacts.info.addressDesc")}
         </p>
-        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] 2xl:w-[10.26vw] 2xl:h-[2.03vw] 2xl:text-[0.73vw] lg:w-[197px] w-[178px] text-center flex items-center justify-center" />
+        <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] 2xl:w-[7.26vw]! 2xl:h-[2.03vw] 2xl:text-[0.73vw] lg:w-[197px] w-[178px] text-center flex items-center justify-center" />
       </div>
 
       <div className="relative w-full lg:h-full h-[332px] mt-[18px]">

@@ -1,7 +1,7 @@
   import Modal from "react-modal";
-  import ModalMenu from "./Menu";
-  import OrderModal from "./OrderModal";
-  import { useModalStore } from "../../store/useModalStore";
+  import ModalMenu from "@/components/Modals/Menu";
+  import OrderModal from "@/components/Modals/OrderModal";
+  import { useModalStore } from "@/store/useModalStore";
   Modal.setAppElement("#root");
 
 

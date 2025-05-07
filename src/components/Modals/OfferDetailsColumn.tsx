@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { list } from "../../store/exportsIcons";
-import i18n from "../../i18n";
+import { list } from "@/store/exportsIcons";
+import i18n from "@/i18n";
 
 type OfferDetailsColumnToProps = {
     title:string

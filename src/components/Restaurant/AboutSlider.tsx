@@ -2,10 +2,10 @@ import { useState, useRef, useCallback } from "react";
 import Slider from "react-slick";
 import cn from "classnames";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-import { InViewWrapper } from "../utils/InViewWrapper";
+import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useCustomWidth } from "../Hooks/useCustomWidth";
+import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 interface AboutSliderProps {
   slides: string[];
 }

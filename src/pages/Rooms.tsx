@@ -1,6 +1,6 @@
-import { Guarantee } from "../components/Rooms/Guarantee"
-import { Header } from "../components/Rooms/Header"
-import { RoomsInfo } from "../components/Rooms/RoomsInfo"
+import { Guarantee } from "@/components/Rooms/Guarantee"
+import { Header } from "@/components/Rooms/Header"
+import { RoomsInfo } from "@/components/Rooms/RoomsInfo"
 
 
 export const Rooms = ()=>{
