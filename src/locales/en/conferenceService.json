@@ -1,0 +1,32 @@
+{
+    "conferenceService":{
+    "header":{
+        "title":"CONFERENCE SERVICES",
+        "desc":"Business meetings that spark new possibilities"
+    }    ,
+    "about":{
+        "area":"Area",
+        "roomFloor":"Floor",
+        "capacity":"Capacity",
+        "contact":"contacts"
+    },
+    "equipment":{
+        "title":["included", "equipment:"],
+        "price":"Rates:",
+        "day":"full day",
+        "hour":"hourly"
+    },
+    "conferenceMenu":{
+        "title":"Add flavor to your event", 
+        "desc":"EVENT CATERING MENU",
+        "menu":{
+            "title":"LUNCHES AND DINNERS",
+            "title1":"BUFFET",
+            "title2":"COFFEE BREAKS"
+        }
+    
+        
+    }
+    
+    }
+}

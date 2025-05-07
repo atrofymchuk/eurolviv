@@ -1,0 +1,79 @@
+{
+    "about":{
+        "header":{
+            "desc":["The place filled with warmth. The city that uplifts. ", "Eurohotel is your gateway to unforgettable experiences in Lviv."]
+        },
+        "about":{
+            "title":["EUROHOTEL- ","A LEGACY OF HOSPITALITY"],
+            "year":"1973 ",
+            "desc":["Located in the heart of Lviv, Eurohotel blends timeless ","tradition with modern elegance."],
+            "photoDesc":["The hotel’s story began in ", "when it first opened its doors and quickly became a symbol of its era. Over the years, it has hosted stars from the iconic film D'Artagnan and the Three Musketeers, welcomed creative minds, and set the stage for new traditions.", "After a major renovation in 2007, Eurohotel began a new chapter. Today, it offers guests the charm of the old city with top-tier European service."]
+        },
+        "advantages":{
+            "title":"HOTEL INFORMATION",
+            "title2":"SERVICES & AMENITIES",
+            "services":["Rooms: 100","Accessible rooms for guests with disabilities","pet-friendly","Public parking nearby","Conference halls","Restaurant","Karaoke lounge","Rooftop summer terrace"],
+            "servises2":["24/7 front desk","24/7 room service","Transfer","Breakfast","Air conditioning","Free Wi-Fi","Laundry service","Ironing service"]
+        },
+        "mission":{
+            "title":"MISSION",
+            "heading":["ELEGANCE, REDEFINED",""],
+            "desc":["At Eurohotel, we’ve created a space where the dynamic rhythm of modern business blends seamlessly with the timeless charm of old Lviv.",
+              "We believe in hospitality that speaks directly to the heart and service that anticipates your every need.","We are created to fall in love with Lviv, and our greatest reward is welcoming guests who return to us again and again",
+              "We are here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."],
+              "desc2":["We’re here to inspire your love for Lviv, and our greatest reward is welcoming back guests who return to us again and again."],
+              "desc2PC":["We’re here to inspire your love for Lviv, and our greatest"," reward is welcoming back guests who return to us again and again."]
+        },
+        "concepts":{
+            "title":"PERFECTION",
+            "heading":["IN EVERY DETAIL"],
+            "desc":"of our concept",
+            "frstCard":{
+                "title":["Comfort without ", "compromise"],
+                "desc":["Style, comfort, and attention to detail"," define each room. Here, time seems to slow down, offering a moment of peace amid the city’s hustle and bustle and filling every moment with harmony."]
+            },
+            "secondCard":{
+                "title":["Inspiring,", "views"],
+                "desc":["The panoramic RUFF restaurant and terrace reveal the city in a whole new light. Here, under the Lviv sky, local flavors take on a modern twist, and the cityscape becomes the perfect backdrop for your relaxation."]
+            },
+            "thirdCard":{
+                "title":["Time for", " business?"],
+                "desc":["This is where fresh ideas take shape."," Our conference halls are designed"," with care and paired with impeccable service," , " so you can focus on what truly matters. Hold your meetings in Lviv’s welcoming spirit."]
+            },
+            "fourthCard":{
+                "title":["Evening ", "vibes"],
+                "desc":["Our stylish karaoke lounge","is where every night buzzes with energy."," Beating with the rhythm of the city, it welcomes you to embrace the moment. It’s a place where music brings people together, and memories last a lifetime."]
+            }   
+        },
+        "whereWeAre":{
+            "title":"LOCATION",
+            "desc":["6A Tershakovtsiv Str., Lviv, 79005, Ukraine","The heart of the city", " - the historic center of Lviv—is just a step away from our hotel.","Our guests rate our location highly with a score of 9.2."],
+            "rating":"Our guests rate our location highly with a score of 9.2.",
+            "infrastructureTitle":"INFRASTRUCTURE",
+            "placesTitle":"Hotel surroundings",
+            "infrastructureDesc":"Conveniently located near major attractions, cultural landmarks, restaurants, and shops.",
+            "whatIsClose":"nearby",
+            "places":{
+                "heading":"Major attractions",
+                "title":["Johann Georg Pinsel Sculpture Museum", "800 m"],
+                "title2":["Lychakiv Cemetery Museum-Reserve", "1.1 km"],
+                "title3":["Halytska Square & St. Andrew’s Church", "1 km"],
+                "title4":["Mars Field Military Cemetery", "1.3 km"],
+                "title5":["Church of the Holy Eucharist", "1.3 km"],
+                "title6":["Lviv Historical Museum", "1.1 km"],
+                "title7":["Rynok Square", "1.2 km"],
+                "title8":["Lviv Opera House", "1.7 km"]            
+            },
+            "infrastructure":{
+                "title":["Nova Poshta Branch #31", "150 m"],
+                "title2":["Supermarket", "130 m"],
+                "title3":["Pharmacy", "170 m"],
+                "title4":["Dental clinic", "30 m"],
+                "title5":["Dental clinic", "120 m"],
+                "title6":["Lviv National University of Veterinary Medicine and Biotechnologies", "290 m"],
+                "title7":["Danylo Halytsky Lviv National Medical University", "750 m"],
+                "title8":["Roksolana Shopping Mall", "800 m"]
+            }
+        }
+    }
+}

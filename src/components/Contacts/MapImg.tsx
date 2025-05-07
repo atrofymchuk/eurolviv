@@ -13,7 +13,7 @@ export default function MapImg() {
         <CiLocationOn color="black" className="xl:w-[18px] xl:h-[18px] 2xl:w-[0.94vw] 2xl:h-[0.94vw] md:w-[16px] md:h-[16px] lg:w-[24px] lg:h-[24px]" />
         {t("contacts.info.addressDesc")}
       </p>
-      <RouteButton className="mb-[25px] 2xl:text-[0.73vw] xl:text-[0.78vw]! xl:px-0! lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] lg:w-[197px] 2xl:w-[10.26vw] 2xl:h-[2.03vw]
+      <RouteButton className="mb-[25px] 2xl:text-[0.73vw] xl:text-[0.78vw]! xl:px-0! lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] lg:w-[197px] 2xl:w-[10.26vw]! 2xl:h-[2.03vw]
        text-[0.94vw] w-[178px] xl:w-[12.26vw]! xl:h-[3vw] text-center flex items-center justify-center" />
     </div>
   );

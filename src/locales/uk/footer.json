@@ -1,0 +1,23 @@
+{
+    "footer":{
+    "about":"ГОЛОВНА СТОРІНКА",
+    "rooms":"Номери",
+    "conferenceServices":"Конференц-сервіс",
+    "restaurant":"Ресторан ruff",
+    "terrace":"Тераса ruff",
+    "specialOffers":"Спеціальні пропозиції",
+    "contacts":"Контакти",
+    "socialMedia":"Ми в соціальних мережах",
+    "privacyPolicy":"політика конфіденційності",
+    "publicOffer":"Публічна оферта",
+    "address":"АДРЕСА",
+    "addressDesc":"Львів, вул. Тершаковців, 6А",
+    "reception":"рецепція",
+    "booking":"відділ бронювання та конференц-сервісу",
+    "bookingTime":"будні з 9:00 до 18:00",
+    "receptionTime":"Цілодобово",
+    "getNews":"ДІЗНАВАЙТЕСЬ ПРО НАЙВИГІДНІШІ ПРОПОЗИЦІЇ ПЕРШИМИ",
+    "email":"Введіть свій email",
+    "messageData":"Email для підписки на новини"
+}
+}

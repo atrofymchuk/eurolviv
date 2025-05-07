@@ -1,0 +1,506 @@
+{
+    "roomsState":{
+        "standartSingle":{
+            "title":"STANDART single",
+            "desc":"The perfect choice for a business trip",
+            "header":{
+                "title":"STANDART ",
+                "size":"single",
+                "description":"The perfect choice for a business trip",
+                "view":"courtyard view"
+            },
+            "about":{
+                "pOne":"The single room is an excellent choice for business trips. Its stylish design and thoughtful layout provide comfort for both productive work and relaxation.",
+                "pTwo":"The minimalist and cozy room offers tranquility and privacy. The windows overlook the hotel’s inner courtyard. Every detail is designed to help you work efficiently and unwind effortlessly.",
+                "bedText":"single bed (90*190 cm)"
+            },
+            "icons":{
+                "ammentiesInRoom":{
+                    "bed":"Single bed (90×190 cm)",
+                    "table":"work desk",
+                    "carpet":"carpet",
+                    "minibar":"minibar",
+                    "safe":"safe",
+                    "kettle":"electric kettle",
+                    "condition":"air conditioner",
+                    "tv":"43 LCD TV",
+                    "phone":"telephone",
+                    "wifi":"WI-fi"
+                },
+                "bathRoom":{
+                    "shower":"shower",
+                    "wc":"toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"hairdryer",
+                    "towels":"towels",
+                    "bathRobe":"bathrobes",
+                    "slippers":"slippers",
+                    "cosmetic":"hotel cosmetic"
+                }
+            },
+            "suggestion":[
+             {   "title":"STANDARd",
+                "size":"DOUBLE",
+                "desc":"Comfort and convenience for your stay"
+            },{
+                "title":"STANDARd",
+                "size":"double with balcony",
+                "desc":"Urban energy outside, peaceful comfort inside"
+            }
+            ]
+        },
+        "standartBigbed":{
+            "title":"STANDART DOUBLE",
+            "desc":"Comfort and convenience for your stay",
+            "header":{
+                "title":"STANDART ",
+                "size":"DOUBLE",
+                "description":"Comfort and convenience for your stay",
+                "view":"courtyard view"
+            },
+            "about":{
+                "pOne":"A modern yet elegant room, ideal for both work and leisure. It features a cozy double bed and a functional workspace.",
+                "pTwo":"This room is a perfect choice for single occupancy during a business trip and a romantic getaway. The windows overlook the hotel’s inner courtyard.",
+                "bedText":"двоспальне ліжко (160*200 см)"
+            },
+            "icons":{
+                "ammentiesInRoom":{
+                    "bed":"Double bed (160×200 cm)",
+                    "table":"work desk",
+                    "carpet":"carpet",
+                    "minibar":"minibar",
+                    "safe":"safe",
+                    "kettle":"electric kettle",
+                    "airConditioner":"air conditioner",
+                    "tv":"43\" LCD TV",
+                    "phone":"telephone",
+                    "wifi":"WI-fi"
+
+                },
+                "bathRoom":{
+                    "shower":"shower",
+                    "wc":"toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"hairdryer",
+                    "towels":"towels",
+                    "bathRobe":"bathrobes",
+                    "slippers":"slippers",
+                    "cosmetic":"hotel cosmetic"
+                }
+            },
+            "suggestion":[
+                {
+                    "title":"STANDART ",
+                    "size":"SINGLE",
+                    "desc":"The perfect choice for a business trip"
+                },
+                {
+                    "title":"стандарт",
+                    "size":"double with balcony",
+                    "desc":"Urban energy outside, peaceful comfort inside"
+                }
+            ]
+        },
+        "standartTwoBed":{
+            "title":"STANDART  TWIN",
+            "desc":"Quiet and comfort in the city’s business core",
+            "header":{
+                    "title":"STANDART ",
+                    "size":"TWIN",
+                    "description":"Quiet and comfort in the city’s business core",
+                    "view":"courtyard view"
+                },
+                "about":{
+                    "pOne":"A room designed for the perfect balance between work and relaxation. Its spacious and cozy atmosphere allows you to focus on important tasks while still finding time to unwind.",
+                    "pTwo":"An excellent choice for colleagues on a business trip or friends traveling together. The windows overlook the hotel’s inner courtyard, offering a sense of privacy and tranquility.",
+                    "bedText":"два односпальні ліжка (90*190 см)"
+                },
+                "icons":{
+                    "ammentiesInRoom":{
+                        "bed":"Two single beds (90×190 cm)",
+                        "table":"work desk",
+                        "carpet":"carpet",
+                        "minibar":"minibar",
+                        "safe":"safe",
+                        "kettle":"electric kettle",
+                        "condition":"air conditioner",
+                        "tv":"43\" LCD TV",
+                        "phone":"telephone",
+                        "wifi":"WI-fi"
+    
+                    },
+                    "bathRoom":{
+                        "shower":"shower",
+                        "wc":"toilet",
+                        "showerGigi":"Bidet shower",
+                        "hairDryer":"hairdryer",
+                        "towels":"towels",
+                        "bathRobe":"bathrobes",
+                        "slippers":"slippers",
+                        "cosmetic":"hotel cosmetic"
+                    }
+                },
+                "suggestion":[
+                    {
+                        "title":"STANDARd",
+                        "size":"DOUBLE",
+                        "desc":"Comfort and convenience for your stay"
+                    },
+                    {
+                        "title":"STANDART TWIN ",
+                        "size":"with balcony",
+                        "desc":"Experience the harmony between style and comfort"
+                    }
+                ]
+            },
+            "standartBigBedBalcony": {
+                "title": "STANDART double with balcony",
+                "desc": "Urban energy outside, peaceful comfort inside",
+                "header": {
+                  "title": "STANDART",
+                  "size": "double with balcony",
+                  "description": "Urban energy outside, peaceful comfort inside",
+                  "view": "street view"
+                },
+                "about": {
+                  "pOne": "A cozy room with a balcony offering a beautiful view of the Holy Trinity Church. The room features a comfortable double bed and a well-designed workspace for your convenience.",
+                  "pTwo": "The modern interior and stunning city panorama will create memorable experiences, while the central location in Lviv ensures easy access to major attractions.",
+                  "bedText": "двоспальне ліжко (160*200 см)"
+                },
+                "icons": {
+                  "ammentiesInRoom": {
+                    "bed": "Double bed (160×200 cm)",
+                    "balcony": "balcony",    
+                    "table": "work desk",
+                    "carpet": "carpet",
+                    "minibar": "minibar",
+                    "safe": "safe",
+                    "kettle": "electric kettle",
+                    "condition": "air conditioner",
+                    "tv": "43\" LCD TV",
+                    "phone": "telephone",
+                    "wifi": "WI-fi"
+                  },
+                  "bathRoom": {
+                    "shower": "shower",
+                    "wc": "toilet",
+                    "showerGigi": "Bidet shower",
+                    "hairDryer": "hairdryer",
+                    "towels": "towels",
+                    "bathRobe": "bathrobes",
+                    "slippers": "slippers",
+                    "cosmetic": "hotel cosmetic"
+                  }
+                },
+                "suggestion": [
+                  {
+                    "title": "JUNIOR SUITE",
+                    "size": "",
+                    "desc": "A room where every detail matters"
+                  },
+                  {
+                    "title": "Suite",
+                    "size": "",
+                    "desc": "Comfort that welcomes you in the center of Lviv"
+                  }
+                ]
+              },
+              "semiLux": {
+                "title": "JUNIOR SUITE",
+                "desc": "A room where every detail matters",
+                "header": {
+                  "title": "JUNIOR SUITE",
+                  "description": "A room where every detail matters",
+                  "view": "courtyard view"
+                },
+                "about": {
+                  "pOne": "A spacious and cozy room with a comfortable double bed and a sofa that provides 2 additional sleeping spaces for guests traveling with their family.",
+                  "pTwo": "The blend of elegance and functionality makes this room the perfect choice for any trip. The windows overlook the quiet inner courtyard of the hotel.",
+                  "bedText": "двоспальне ліжко (160*200 см) / 2 односпальні ліжка (90*190 см)"
+                },
+                "icons": {
+                  "ammentiesInRoom": {
+                    "bed": "Double bed (160×200 cm) / Two single beds (90×190 cm) ",
+                    "sofa": "Sofa bed",
+                    "table": "work desk",
+                    "carpet": "Carpet",
+                    "minibar": "Minibar",
+                    "safe": "Safe",
+                    "kettle": "Electric kettle",
+                    "condition": "Air conditioner",
+                    "tv": "52\" LCD TV",
+                    "phone": "Telephone",
+                    "wifi": "Wi-Fi"
+                  },
+                  "bathRoom": {
+                    "shower": "Shower",
+                    "wc": "Toilet",
+                    "showerGigi": "Bidet shower",
+                    "hairDryer": "Hairdryer",
+                    "towels": "Towels",
+                    "bathRobe": "Bathrobes",
+                    "slippers": "Slippers",
+                    "cosmetic": "Hotel cosmetic"
+                  }
+                },
+                "suggestion": [
+                  {
+                    "title": "DELUXE SUITE",
+                    "size": "elegant",
+                    "desc": "Comfort and service at a European level"
+                  },
+                  {
+                    "title": "Suite",
+                    "size": "",
+                    "desc": "Comfort that welcomes you in the center of Lviv"
+                  }
+                ]
+              },
+              "standartTwoBedBalcony": {
+                "type": "standart-two-bed-balcony",
+                "title": "STANDART TWIN with balcony",
+                "desc": "Experience the harmony between style and comfort",
+                "header": {
+                  "title": "STANDART TWIN",
+                  "size": "with balcony",
+                  "description": "Experience the harmony between style and comfort",
+                  "view": "street view"
+                },
+                "about": {
+                  "pOne": "A comfortable room with a balcony showcasing the charm of the Holy Trinity Church. It features two separate beds, a workspace, and everything you need for a pleasant stay.",
+                  "pTwo": "The interior blends elegance with modern style, while the central location in Lviv makes it easy to reach the city’s most famous landmarks.",
+                  "rooms": 1,
+              
+                  "bedText": "Односпальне ліжко (90*190 см)"
+                },
+                "icons": {
+                  "ammentiesInRoom": {
+                    "bed":"Two single beds (90×190 cm)",
+                    "balcony":"Balcony",
+                    "table":"work desk",
+                    "carpet":"Carpet",
+                    "minibar":"Minibar",
+                    "safe":"Safe",
+                    "kettle":"Electric kettle",
+                    "condition":"Air conditioner",
+                    "tv":"43\" LCD TV",
+                    "phone":"Telephone",
+                    "wifi":"Wi-Fi"
+                  },
+                  "bathRoom": {
+                    "shower":"Shower",
+                    "wc":"Toilet",
+                    "showerGigi":"Bidet shower",
+                    "hairDryer":"Hairdryer",
+                    "towels":"Towels",
+                    "bathRobe":"Bathrobes",
+                    "slippers":"Slippers",
+                    "cosmetic":"Hotel cosmetic" 
+                  }
+                },
+                "suggestion": [
+                  {
+                    "title": "JUNIOR SUITE",
+                    "size": "",
+                    "desc": "A room where every detail matters"
+                  },
+                  {
+                    "title": "Suite",
+                    "size": "",
+                    "desc": "Comfort that welcomes you in the center of Lviv"
+                  }
+                ]
+              },
+              "luxTwoRooms": {
+                "type": "lux-two-rooms",
+                "title": "Suite",
+                "desc": "Comfort that welcomes you in the center of Lviv",
+                "header": {
+                    "previewImage": "luxTwoRoomsPreview",
+                    "title": "Suite",
+                  "description": "Comfort that welcomes you in the center of Lvivh",
+                  "view": "на вулицю"
+                },
+                "about": {
+                  "pOne": "A spacious two-room suite with a balcony, a cozy workspace, and a relaxing lounge area—perfect for those who value comfort at its finest.",
+                  "pTwo": "The sofa with a bed function allows for family accommodation or transforms the room into a cozy space to recharge after business meetings."
+                },
+                "icons":{
+                    "ammentiesInRoom":{
+                    "sofa":"Sofa bed",
+                    "armChair":"Armchair",
+                    "balcony":"Balcony",
+                    "carpet":"Carpet",
+                    "table":"work desk",
+                    "wardrobe":"Walk-in wardrobe",
+                    "condition":"Air conditioner",
+                    "tv":"52\" LCD TV",
+                    "minibar":"Minibar",
+                    "kettle":"Electric kettle",
+                    "teakit":"Tea set",
+                    "phone":"Telephone",
+                    "wifi":"Wi-Fi",
+                    "safe":"Safe"
+                    },
+                    "bedRoom":{
+                        "bed":"Extra-wide bed (180x200 cm)",
+                        "balcony":"Balcony",
+                        "carpet":"Carpet",
+                        "condition":"Air conditioner",
+                        "tv":"52\" LCD TV",
+                        "phone":"Telephone",
+                        "wifi":"Wi-Fi"
+                    },
+                    "bathRoom":{
+                        "shower":"Shower/Bathtub",
+                        "wc":"Toilet",
+                        "showerGigi":"Bidet shower",
+                        "hairDryer":"Hairdryer",
+                        "towels":"Towels",
+                        "bathRobe":"Bathrobes",
+                        "slippers":"Slippers",
+                        "cosmetic":"Hotel cosmetic"
+                    }
+                },
+                "suggestion":[
+                    {
+                        "title":"JUNIOR SUITE",
+                        "size":"",
+                        "desc":"A room where every detail matters"
+                    },
+                    {
+                        "title":"DELUXE SUITE",
+                        "size":"IMPERIAL",
+                        "desc":"For guests who value unparalleled luxury"
+                    }
+                ]
+              },
+              "luxImperial": {
+                  "type": "lux-imperial",
+                  "title": "DELUXE SUITE imperial",
+                  "desc": "For guests who value unparalleled luxury",
+                  "header": {
+                    "title": "DELUXE SUITE ",
+                    "size": "imperial",
+                    "description": "For guests who value unparalleled luxury",
+                    "view": "street view"
+                  },
+                  "about": {
+                    "pOne": "An elegant two-room suite with a balcony, designed for true connoisseurs of luxurious relaxation. Every detail here ensures an unforgettable stay.",
+                    "pTwo": "A spacious bedroom with a refined, comfortable bed, a sophisticated bathroom, and a cozy living room—perfect for memorable occasions and special moments."
+                  },
+                  "icons": {
+                    "ammentiesInRoom": {
+                      "sofa": "Relaxation area",
+                      "balcony": "Balcony",
+                      "carpet": "Carpet",
+                      "table": "Work desk",
+                      "condition": "Air conditioner",
+                      "tv": "52\" LCD TV",
+                      "minibar": "Minibar",
+                      "kettle": "Electric kettle",
+                      "teakit": "Tea set",
+                      "phone": "Telephone",
+                      "wifi": "Wi-Fi",
+                      "safe": "Safe"
+                    },
+                    "bedRoom": {
+                      "bed": "Round bed",
+                      "balcony": "2 Balconies",
+                      "carpet": "Carpet",
+                      "wardrobe": "Walk-in wardrobe",
+                      "condition": "Air conditioner",
+                      "tv": "LCD TV",
+                      "wifi": "Wi-Fi",
+                      "phone": "Telephone"
+                    },
+                    "bathRoom": {
+                      "shower": "Bathtub",
+                      "wc": "toilet",
+                      "showerGigi": "Bidet shower",
+                      "hairDryer": "hairdryer",
+                      "towels": "towels",
+                      "bathRobe": "bathrobes",
+                      "slippers": "slippers",
+                      "cosmetic": "hotel cosmetic"
+                    }
+                  },
+                  "suggestion": [
+                    {
+                      "title": "DELUXE SUITE",
+                      "size": "elegant",
+                      "desc": "Comfort and service at a European level"
+                    },
+                    {
+                      "title": "Suite",
+                      "size": "",
+                      "desc": "Comfort that welcomes you in the center of Lviv"
+                    }
+                  ]
+                },
+                "luxElegant": {
+                    "type": "lux-elegant",
+                    "title": "DELUXE SUITE elegant",
+                    "desc": "Comfort and service at a European level",
+                    "header": {
+                      "title": "DELUXE SUITE ",
+                      "size": "elegant",
+                      "description": "Comfort and service at a European level",
+                      "view": "street view"
+                    },
+                    "about": {
+                      "pOne": "A spacious two-room suite filled with warm hues, offering an atmosphere of coziness and elegant luxury. Every moment here feels like a small celebration for the soul.",
+                      "pTwo": "Unique interior elements and exquisite furniture create a special ambiance of comfort and style. The rooms offer a stunning view, while the balcony adds extra space for relaxation and inspiration.",
+                      "bedText": "односпальне ліжко (90*190 см)"
+                    },
+                    "icons": {
+                      "ammentiesInRoom": {
+                        "sofa": "Relaxation area",
+                        "balcony": "Balcony",
+                        "carpet": "Carpet",
+                        "condition": "Air conditioner",
+                        "tv": "55\" LCD TV",
+                        "minibar": "Minibar",
+                        "kettle": "Electric kettle",
+                        "teakit": "Tea set",
+                        "phone": "Telephone",
+                        "wifi": "Wi-Fi",
+                        "safe": "Safe"
+                      },
+                      "bedRoom": {
+                        "bed": "Extra-wide bed (180x200 cm)",
+                        "balcony": "2 Balconies",
+                        "carpet": "Carpet",
+                        "wardrobe": "Walk-in wardrobe",
+                        "condition": "Air conditioner",
+                        "tv": "43\" LCD TV",
+                        "wifi": "Wi-Fi",
+                        "phone": "Telephone"
+                      },
+                      "bathRoom": {
+                        "shower": "Bathtub",
+                        "wc": "Toilet",
+                        "showerGigi": "Bidet shower",
+                        "hairDryer": "Hairdryer",
+                        "towels": "Towels",
+                        "bathRobe": "Bathrobes",
+                        "slippers": "Slippers",
+                        "cosmetic": "Hotel cosmetic"
+                      }
+                    },
+                    "suggestion": [
+                      {
+                        "title": "DELUXE SUITE",
+                        "size": "imperial",
+                        "desc": "For guests who value unparalleled luxury"
+                      },
+                      {
+                        "title": "Suite",
+                        "size": "",
+                        "desc": "Comfort that welcomes you in the center of Lviv"
+                      }
+                    ]
+                  }
+                  
+                }
+}

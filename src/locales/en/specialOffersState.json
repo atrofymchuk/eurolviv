@@ -1,0 +1,107 @@
+{
+    "specialOffersState":{
+        "modalTitle":"отримайте додаткову знижку",
+          "tarifForMilitary":{
+              "title": "Military Rate",
+              "desc": "Our heartfelt thanks go to our military, whose courage enables us to keep doing what we do best: offering warm hospitality.",
+              "cardDesc": "We are sincerely grateful to our military for the opportunity to continue working.",
+              "cardDescMobile": "We are sincerely grateful to our military for the opportunity to continue working",
+              "offer": "-20% off accommodation for military personnel",
+              "details": [
+                "Discount available for service members of the Ukrainian Armed Forces, National Guard, border guards, Security Service of Ukraine members, veterans, and participants of ATO/JFO",
+                "20% off the standard rate",
+                "To receive the discount, a valid military ID or combatant certificate must be presented upon check-in"
+              ],
+              "conditions": [
+                "This rate applies for direct bookings via phone or at the reception, only for individual guests",
+                "Discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room"
+              ]
+            },
+            "businessTarifDay":{
+              "title": "Business Daytime Rate",
+              "desc": "Looking for a short stopover for business or inspiration? Choose our business daytime rate with a 50% discount on accommodation and enjoy comfort, coziness, and convenience in the heart of Lviv.",
+              "cardDesc": "A short stopover for business or inspiration? Choose our daily business rate with 50% off",
+              "offer": "-50% off the business daytime rate",
+              "details": [
+                "Accommodation in Standard and Standard with Balcony rooms for up to 8 hours, between 06:00 and 18:00 on the same day",
+                "50% off the accommodation price from the basic rate",
+                "Breakfast not included in the accommodation cost"
+              ],
+              "conditions": [
+                "Available for direct bookings by phone or at the reception for individual guests only",
+                "This discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room",
+                "This offer may not be available on holidays or during high occupancy periods"
+              ]
+            },
+            "petFriendly":{
+              "title": "Travel with Your Pet",
+              "desc": ["Our package is designed to make sure your furry friend feels right at home."," We provide comfortable conditions for staying with pets, including special amenities and gifts for your four-legged companions."],
+              "cardDesc": "Our package is designed to make your pet feel at home.",
+              "offer": "Pet accommodation rules",
+              "details": [
+                "Your pet will be welcomed with a cozy bed, food and water bowls, and essential items in the room",
+                "A complimentary treat and toy for your pet from our partner",
+                "You can bring up to two pets with you in the room",
+                "Accommodation fee: 500 UAH per pet, per day"
+              ],
+              "conditions": [
+                "Accommodation is available for small dog breeds up to 10 kg",
+                "A valid veterinary passport with up-to-date vaccinations is required",
+                "This offer is available for direct bookings by phone or at the reception for individual guests only"
+              ]
+            },
+            "photoSession":{
+              "title": "Photoshoot",
+              "desc": ["Looking for a stylish location for stunning photos? Eurohotel ","invites you to enjoy a unique opportunity and capture your photos in an elegant setting."],
+              "cardDesc": "Looking for a stylish location for the best photos? Eurohotel invites you to take advantage of a unique opportunity",
+              "offer": "Photoshoot",
+              "details": [
+                "3,000 UAH — photoshoot in a Suite Room, up to 3 hour",
+                "4,000 UAH — photoshoot in a Deluxe Suite Room, up to 3 hours",
+                "Included in the price: room for the photoshoot for up to 3 hours and access to the hotel lobby for additional photo opportunities"
+              ],
+              "contactDesc":"*Photoshoots in the RUFF restaurant or on the terrace are available by special arrangement and will be tailored to your preferences",
+              "conditions": [
+                "Advance booking required, at least 3 days before the photoshoot date",
+                "Payment is due at the time of booking confirmation",
+                "Cancellations made less than 24 hours in advance are non-refundable",
+                "For photoshoots lasting more than 3 hours, the full room rate is charged"
+              ]
+            },
+            "newlyweds":{
+              "title": "A Gift for Newlyweds",
+              "desc": ["The perfect start to your life together! Indulge in a memorable retreat after your most special celebration.", " Let the sweetest memories stay with you forever!"],
+              "cardDesc": "Your perfect start to your life together! Treat yourself to an unforgettable vacation after the most important day of celebration ",
+              "offer": "A Gift for Newlyweds",
+              "details": [
+                "Complimentary stay in a Junior Suite or Suite (subject to availability)",
+                "A special gift from the hotel—a bottle of sparkling wine and a sweet treat",
+                "Late check-out (provided a room is available on the departure day)",
+                "A future bonus—15% off your stay when celebrating your first anniversary at the hotel"
+              ],
+              "conditions": [
+                "Complimentary stay is available when hosting a wedding reception at RUFF restaurant",
+                "Room reservation must be confirmed at least 7 days before the wedding date",
+                "The 15% anniversary discount applies to a stay during the first wedding anniversary and is available only for direct bookings through the hotel",
+                "The discount cannot be combined with other promotions or special offers and does not apply to extra beds in the room"
+              ]
+            },
+            "birthday":{
+              "title": "Birthday Celebrations",
+              "desc": ["Celebrate your special day in the cozy ambiance of Eurohotel!", " We’ve got a special surprise to make your celebration even more memorable."],
+              "cardDesc": "Celebrate your special day in the cozy atmosphere of Eurohotel! ",
+              "offer": "-20% on your birthday",
+              "discount": "-20%",
+              "details": [
+                "20% off the base rate for any room on your birthday",
+                "A special gift from the hotel for the birthday guest"
+              ],
+              "conditions": [
+                "The offer is valid only on your birthday",
+                "The discount cannot be combined with other promotions or special offers",
+                "Available for direct bookings via phone or at the reception desk only"
+              ]
+
+            }
+      }
+}

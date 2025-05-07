@@ -1,0 +1,24 @@
+{
+    "terasesState": {
+        "mainTerrase":{
+          "title": "Main Terrace",
+          "desc": ["The main RUFF terrace "," seats 152 guests "," and "," boasts a 360-degree city view."," A sleekbar, live music every weekend, and DJ sets bring the space to life with energy and buzz. But the real star? Those stunning sunsets!"],
+          "descTwo":["With a ","pergola and panoramic windows, ","it’s a delight whether bathed in gentle", "sunshineor serenaded by rain. Cocktails taste like freedom, and evenings fly by in a flash withmusic and the glow of city lights."],
+          "descTree":["The terrace has a vibe all its own, with  ","refined dishes, signature cocktails - ","it’s nowonder you’ll want to keep coming back!"],
+      "hookan":""
+
+        },
+        "upperTerrase":{
+          "title": "Upper Terrace",
+          "desc": ["The upper terrace sits atop Eurohotel’s "," roof with 45 seats and a stunning city vista."],
+          "descTwo": ["By day, you can watch the city for hours, by night, it’s all about go od company ","under a starry sky."],
+          "descThree":["A flawless setting for special moments"," with close company— think warm get-togethersor private parties beneath the stars."]
+        },
+        "lowerTerrase":{
+          "title": "Lower Terrace",
+          "desc": ["The lower terrace is "," Eurohotel's cozy outdoor nook."," Offering"," 23 seats with a view of Lviv High Castle, "," it blends soft design, smart lighting, and the faint rustle of the wind—every touch adds to the relaxed, inviting feel."],
+          "descTwo": ["A great pick ","for small groups ","looking to soak in the moment and the ", "old city's charm."],
+          "descThree":["Celebrate life and savor moments ", "Lviv's unforgettable sky!"]
+        }
+      }
+}

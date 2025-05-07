@@ -1,0 +1,16 @@
+{
+    "specialOffers":{
+        "title":"SPECIAL",
+        "desc":"Choose the best for your stay—comfortable rooms, great rates, special bonuses, and unforgettable experiences await you in the heart of Lviv.",
+        "desc2":"OFFERS",
+        "pet":"Pet accommodation rules",
+        "card":{
+            "title":["Offer details", "Terms & conditions"]
+        }
+    },
+    "specialOfferModal":{
+        "contacts":{
+            "title":"contacts"
+        }
+    }
+}

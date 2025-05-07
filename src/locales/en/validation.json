@@ -1,0 +1,20 @@
+{
+    "validation":{
+        "name":"Name is required",
+        "email":"Email is required",
+        "emailInvalid":"Email is not valid",
+        "message":"Message is required",
+        "success":"Message sent successfully",
+        "nameShort":"Name is too short",
+        "contactUsSuccsses":"Message sent successfully",
+        "contactUsError":"Message not sent",
+        "checkOutAfterCheckIn":"Check-out date cannot be earlier than check-in date",
+        "genericError":"Something went wrong",
+        "checkIn":"Select check-in date",
+        "checkOut":"Select check-out date",
+        "guests":"Select number of guests",
+
+        "emailSuccsess":"Success! We will contact you soon"
+
+      }
+}

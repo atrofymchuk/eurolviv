@@ -1,0 +1,25 @@
+{
+    "buttons":{
+              "restaurantMenu":"menu",
+                "send":"SEND",
+                "sending":"sending...",
+            "celebrationMenu":"Banquet menu",
+            "view":"view",
+            "menu":"view menu",
+            "bookTable":"Book a table",
+            "viewMenu":"Event catering menu",
+            "viewMenuButton":"View menu",
+            "details":"learn more",
+            "viewRooms":"View rooms",
+            "viewHalls":"View venues"  ,
+            "seeMore":"see more",
+            "viewRoom":"View details"  ,
+            "book":"Book now",
+            "conferenceMenu":"Event catering menu",
+            "order":"book an event",
+            "bookRoom":"Book a room",
+            "bookRoomArr":["book"," now"],
+            "route":"Get directions",
+            "agree":"Agree"
+            }
+}

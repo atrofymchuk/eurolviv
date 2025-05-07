@@ -1,0 +1,15 @@
+{
+    "reviews":{
+        "title":"reviews",
+        "desc":"100 rooms where every detail adds to a unique aesthetic. From standard rooms to suites—service excellence, always.",
+        "heading":"from ",
+        "heading2":"reviews",
+        "heading3":"our guests",
+        "review":"guest",
+        "reviewAbout":"guest",
+        "about":["About", "the", "restaurant"],
+        "ukraine":"Ukraine",
+        "poland":"Polska",
+        "desc2":["The story of our restaurant is shaped by your experiences.","Thank you for sharing them with us."]
+}
+}

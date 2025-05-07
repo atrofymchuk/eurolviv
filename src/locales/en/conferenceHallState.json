@@ -1,0 +1,62 @@
+{
+    "conferenceHallState":{
+        "smallHall":{
+            "title":"Small  ",
+            "desc":"Conference Hall",
+            "capacity":"up to 40 people",
+            "about":{
+                "pOne":"Designed for productivity and seamless communication, this functional yet cozy space features a stylish interior, two plasma screens, and well-planned lighting—ideal for training sessions, meetings, and board discussions.",
+                "pTwo":"Located next to the Grand Conference Hall and lounge area, this setup offers added flexibility for event planning, group breakouts, and parallel team sessions.",
+                "pMobile":"Located next to the Grand Conference Hall and lounge area, this setup offers added flexibility for event planning, group breakouts, and parallel team sessions."
+              },
+            "icons":{
+                "screen":"2 plasma screens",
+                "soundSystem":"Sound system",
+                "notebook":"Laptop",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote",
+                "flipchart":"Flipchart"
+            }
+        },
+        "bigHall":{
+            "title":"Grand ",
+            "desc":"Conference Hall",
+            "capacity":"up to 100 people",
+            "about":{
+                "pOne":"A sophisticated space with a classic design that blends elegance, coziness, and modern functionality. Perfectly suited for hosting everything from private business meetings to large conferences and presentations in the heart of Lviv.",
+                "pTwo":"Flexible seating arrangements allow you to tailor the setup to your event’s needs, while the lounge area next door ensures smooth and professional catering for coffee breaks.",
+                "pMobile":"A sophisticated space with a classic design that blends elegance, coziness, and modern functionality. Perfectly suited for hosting everything from private business meetings to large conferences and presentations in the heart of Lviv."
+              },
+            "icons":{
+                "projector":"Projector",
+                "screen":"Screen",
+                "soundSystem":"Sound system",
+                "notebook":"Laptop",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote",
+                "flipchart":"Flipchart",
+                "microphone":"2 microphones"
+    
+            }
+        },
+        "launge":{
+            "title":"Conference ",
+            "desc":"Lounge",
+            "capacity":"up to 30 people",
+            "about":{
+                "pOne":"This cozy lounge on the first floor is the perfect setting for small business meetings, negotiations, or workshops. It’s an ideal space to gather your team for a recap in a comfortable, informal atmosphere.",
+                "pTwo":"The elegant interior and convenient location next to two other conference rooms create the perfect conditions for productive work and seamless coffee breaks.",
+                "pMobile":"This cozy lounge on the first floor is the perfect setting for small business meetings, negotiations, or workshops. It’s an ideal space to gather your team for a recap in a comfortable, informal atmosphere."
+              },
+            "icons":{
+                "projector":"Portable projector",
+                "notebook":"Laptop",
+                "screen":"Portable screen",
+                "flipchart":"Flipchart",
+                "paper":"Paper pad",
+                "presenter":"Presenter remote"
+            }
+        }
+        
+    }
+}

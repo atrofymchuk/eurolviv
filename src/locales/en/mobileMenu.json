@@ -1,0 +1,9 @@
+{
+    "phoneBottomMenu":{
+              "callUs":"Call Us",
+              "route":"directions",
+              "book":"book a table",
+              "menu":"Menu"
+              
+            }
+}

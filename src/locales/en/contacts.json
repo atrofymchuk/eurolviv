@@ -1,0 +1,42 @@
+{
+    "contacts":{
+        "header":{
+            "desc":"",
+            "title":"CONTACTS"
+        },
+        "info":{
+            "title":"HOW TO FIND US?",
+            "desc":"Looking for the perfect place for relaxation, business, or special events in Lviv?",
+            "contactUs":"We’re here for you—reach out however you prefer.",
+            "socialMedia":"We are on social media",
+            "reception":"Reception",
+            "booking":"Booking & Conference Services",
+            "bookingDesc":"Weekdays from 09:00 to 18:00",
+            "receptionPhone":"24/7",
+            "book":"відділ бронювання",
+            "restaurand/terrase":"Restaurant/Terrace",
+            "address":"Address:",
+            "addressDesc":"6A Tershakovtsiv Str., Lviv, 79005, Ukraine",
+            "contactWithUs":"Зв'яжіться з нами будь-яким зручним способом",
+            "contactWithUsDesc":"We value your feedback!",
+            "headingContactUs":"CONTACT US",
+            "review":"If you’d like to leave a review or share your experience with us, please write to us.",
+            "writeUs":"WRITE TO US",
+            "name":"Your name",
+            "email":"Your email",
+            "message":"Your message",
+            "send":"SEND",
+            "partners":"PARTNERSHIPS",
+            "partnersText":["We are open to collaboration on new exciting projects. Send us your proposal at ", "info@eurohotel.lviv.ua",", and we will get back to you."],
+            "career":"CAREERS",
+            "careerText":["If you love creating a warm and welcoming atmosphere, we’d love to have you on our team! Send your CV to ","info@eurohotel.lviv.ua"," and become part of our hospitality family."]
+         
+        },
+        "location":{
+            "locationTitle":"LOCATION",
+            "eurohotel":"EUROHOTEL",
+            "contactUs":"CONTACT US"
+            
+        }
+        }
+}

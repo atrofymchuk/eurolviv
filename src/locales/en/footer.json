@@ -1,0 +1,25 @@
+{
+    "footer":{
+        "about":"Home",
+        "rooms":"Rooms",
+        "conferenceServices":"",
+        "restaurant":"Restaurant ruff",
+        "terrace":"Terrace ruff",
+        "specialOffers":"Special Offers",
+        "contacts":"Контакти",
+        "socialMedia":"We are on social media",
+        "privacyPolicy":"Privacy Policy",
+        "publicOffer":"Public Offer",
+        "address":"Address:",
+        "addressDesc":"6A Tershakovtsiv Str., Lviv, 79005, Ukraine",
+        "reception":"Reception",
+        "booking":"Booking & Conference Services",
+        "bookingTime":"Weekdays from 09:00 to 18:00",
+        "receptionTime":"24/7",
+        "getNews":"STAY UPDATED WITH THE BEST OFFERS",
+        "email":"Enter your email",
+        "messageData":"Email for newsletter subscription"
+    
+        
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "orderModal":{
+        "title":["order an ","event"],
+        "date":"Event Date",
+        "contactPerson":"CONTACT PERSON",
+        "phone":"PHONE NUMBER",
+        "email":"EMAIL",
+        "guests":"Number of Guests",
+        "needRooms":"Need Rooms",
+        "send":"SEND",
+        "placeholder":"PHONE NUMBER",
+        "isGuestRooms":"Do you need hotel rooms for guests? ",
+        "errors":{
+            "tel":"Enter phone number",
+            "tel2":"Invalid phone number",
+            "email":"Enter email",
+            "email2":"Invalid email",
+            "name":"Enter contact person",
+            "date":"Select date",
+            "name2":"Name cannot be empty",
+            "guests":"Select number of guests",
+            "needRooms":"Select number of rooms"
+        },
+        "toast":{
+            "success":"Form sent successfully",
+            "error":"Something went wrong, please try again",
+            "errorDate":"Select a valid date"
+        },
+        "letter":{
+            "subject":"Order a hall from the site",
+            "body":{
+                "name":"Name: ",
+                "phone":"Phone: ",
+                "email":"Email: ",
+                "date":"Date: ",
+                "guests":"Number of guests: ",
+                "needRooms":"Need rooms: ",
+                "yes":"Yes",
+                "no":"No"
+            }
+        }
+    }
+}

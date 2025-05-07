@@ -1,0 +1,52 @@
+{
+    "rooms":{
+        "rooms":"rooms",
+        "header":{
+            "title":"rooms",
+            "desc":"We value your trust and do our best to make your stay a warm and unforgettable experience."
+        },
+        "about":{
+            "heading":["100 ROOMS"," EACH CAREFULLY" ," DESIGNED TO THE SMALLEST " ,"DETAIL"],
+            "desc":"Book directly on our website and get the best price guaranteed right now",
+            "area":"area",
+            "guests":"guests"
+        },
+        "guarantee":{
+            "heading":["BEST PRICE GUARANTEE","WHEN BOOKING"],
+            "headingMobile":["BEST PRICE", " GUARANTEE", " WHEN BOOKING"],
+            "imgHeading":"Book directly—get more!",
+            "list":["We guarantee the best rate when you book directly with us."," If you find a better offer within 24 hours of booking, we will match the price or offer even better conditions or exclusive bonuses.","Choose direct booking, save more, and enjoy extra privileges!"],
+            "onOurSite":"ON OUR WEBSITE"
+        }
+        
+
+    },
+    "room":{
+        "header":{
+            "count":"Quantity of rooms",
+            "view":"view",
+            "arriveTime":"check-in time",
+            "leaveTime":"check-out time"
+        },
+        "about":{
+            "area":"area",
+            "count":"rooms",
+            "guests":"guests"
+        },
+        "comfortBlock":{
+            "title":"Living room amenities",
+            "title2":"Bedroom amenities",
+            "title3":"Bathroom",
+            "title4":"Room Amenities"
+        },
+        "moreInfo":{
+            "title":"Available paid services",
+            "title2":"Extra bed",
+            "parking":"City parking is located opposite the hotel.Reservation of parking spots is not required.",
+            "amenties":["Sleeping area on the sofa","Children’s bed available","Children under 6 years old stay free","Children over 6 years old – 700 UAH/night",
+            "Breakfast included","Max. 2 persons"],
+            "availableService":["Laundry","Ironing","24-hour room service","pet-friendly"]
+        },
+        "roomNavigation":"Rooms"
+    }
+}
