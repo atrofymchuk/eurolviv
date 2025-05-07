@@ -14,9 +14,7 @@
       "@/pages/*": ["./src/pages/*"],
       "@/store/*": ["./src/store/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/components/hooks/*"],
       "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
       "@/constants/*": ["./constants/*"],
     },
 
