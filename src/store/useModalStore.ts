@@ -10,9 +10,7 @@ export const useModalStore = create<ModalStore>((set) => ({
   onOpenModal: (modal: string, url?: string) => {
     if (modal === "order") {
       set({ isOpenOrder: true, activeModal: modal });
-    } else if (modal === "menu") {
-      set({ isOpenMenuModal: true, activeModal: modal });
-    } else if (modal === "contacts") {
+    }  else if (modal === "contacts") {
       set({ activeModal: modal });
     } else {
       set({ isOpenSpecialOfferModal: true, activeModal: modal, url});
