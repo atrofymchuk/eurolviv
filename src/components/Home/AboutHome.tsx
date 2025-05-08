@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { previewImg } from "@/store/exportsImg";
 import cn from "classnames";
 import "@/components/Home/roomsSlider.css";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 
 export const AboutHome = () => {
   const { t } = useTranslation();

@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import OrderModalForm from "@/components/Modals/OrderModalForm";
 import { validationSchema } from "@/schemas/orderHall";
 import emailjs from "emailjs-com"; 
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { uk, enUS } from "date-fns/locale";
 Modal.setAppElement("#root");
 

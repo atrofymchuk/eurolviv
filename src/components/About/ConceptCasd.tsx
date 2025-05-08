@@ -3,8 +3,8 @@ import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { useTranslation } from "react-i18next";
 import { DetailsLink } from "@/components/Buttons/DetailsLink";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const ConceptCasd = ({
   title,
   img,

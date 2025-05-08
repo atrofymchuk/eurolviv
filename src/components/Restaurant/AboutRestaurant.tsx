@@ -4,7 +4,7 @@ import {
   aboutImageScd,
   aboutImageTrd,
 } from "@/store/exportsImg";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 
 export const AboutRestaurant = () => {
   const { t } = useTranslation();

@@ -5,7 +5,7 @@ import { navigate } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";
 import { map } from "@/Constants/map";
 import { social } from "@/Constants/Social";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 
 export const AddressWithSchedule = ({openPdf, path}:{openPdf: (path: string) => void, path: string}) => {
   const { t } = useTranslation();

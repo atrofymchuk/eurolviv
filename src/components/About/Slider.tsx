@@ -14,7 +14,7 @@ import {
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
   const slides = [
   mirrorAboutSlider,
   champagneAboutSlider,

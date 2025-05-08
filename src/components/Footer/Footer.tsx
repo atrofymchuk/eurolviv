@@ -11,7 +11,7 @@ import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { footer } from "@/store/exportsImg";
 import { Link } from "react-router-dom";
 import { social } from "@/Constants/Social";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 import ContactMeForm from "@/components/Footer/ContactMeForm";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";

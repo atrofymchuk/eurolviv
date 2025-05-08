@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { hotelContacts } from "@/store/exportsImg";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const ContactUs = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();

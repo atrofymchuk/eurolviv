@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useRoomStore } from "@/store/useRoomsStore";
 import { HeaderSocial } from "@/components/Header/HeaderSocial";
-import useNavbarStyles from "@/components/hooks/useHeaderStyle";
+import useNavbarStyles from "@/hooks/useHeaderStyle";
 import { HeaderNav } from "@/components/Header/HeaderNav";
 import { useTranslation } from "react-i18next";
 import { ChangeLangButton } from "@/components/Header/ChangeLangButton";
-import useLanguage from "@/components/hooks/useLanguage";
+import useLanguage from "@/hooks/useLanguage";
 import { Link } from "react-router-dom";
 import { RiArrowDownSLine } from "react-icons/ri";
 import cn from "classnames";

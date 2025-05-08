@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { ComfortsBlockToProps } from "@/types/entity";
 import cn from "classnames";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 const removeParentheses = (text: string, isMobile: boolean) => {
   if (!isMobile) return text;
   return text.replace(/[()]/g, "").trim();

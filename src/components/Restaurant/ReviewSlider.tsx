@@ -3,7 +3,7 @@ import { ReviewSliderCard } from "@/components/Restaurant/ReviewSliderCard";
 import { forwardRef } from "react";
 import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 
 export const ReviewSlider = forwardRef<Slider>((_, ref) => {
   const { restaurantReviews } = usePagesInfoStore();

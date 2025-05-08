@@ -4,7 +4,7 @@ import { HallList } from "@/components/Home/HallList";
 import { useTranslation } from "react-i18next";
 import { ConferenceServiceSlider } from "@/components/Home/ConferenceServiceSlider";
 import cn from "classnames";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const ConferenceService = () => {
   const { t } = useTranslation();
   const { halls } = useRoomStore();

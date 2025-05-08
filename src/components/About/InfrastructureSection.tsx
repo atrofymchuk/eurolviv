@@ -1,8 +1,8 @@
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { hotel } from "@/store/exportsImg";
 import { TFunction } from "i18next";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 
 export const InfrastructureSection = ({ t }: { t: TFunction }) => {
   const isEng = useIsEnglish();

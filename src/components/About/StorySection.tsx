@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { sectionAbout } from "@/store/exportsImg";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 import cn from "classnames";
 import "@/components/About/story-section-custom.css";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 
 export const StorySection = () => {
   const { t } = useTranslation();

@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { links } from "@/Constants/Links";
 import { Link } from "react-router-dom";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const BarComponent = () => {
   const { t } = useTranslation();
 

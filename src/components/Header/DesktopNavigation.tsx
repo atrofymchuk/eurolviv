@@ -1,6 +1,6 @@
 import { NavLinks } from "@/components/Header/NavLinks";
 import cn from "classnames";
-import {useIsEnglish} from "@/components/hooks/useIsEnglish";
+import {useIsEnglish} from "@/hooks/useIsEnglish";
 
 type DesktopNavigationProps = {
   navLinks: Array<{ path: string; label: string }>;

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { eurohotelAlert } from "@/store/exportsImg";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 interface PromoAlertProps {
   delay?: number;
   image?: string;

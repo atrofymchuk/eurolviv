@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { roomAlert } from "@/store/exportsImg";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { useTranslation } from "react-i18next";
 
 interface BookDirectAlertProps {

@@ -2,8 +2,8 @@ import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { navigate } from "@/store/exportsIcons";
 import { TFunction } from "i18next";
 import { RouteButton } from "@/components/Buttons/RouteButton";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish"; 
+import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { useIsEnglish } from "@/hooks/useIsEnglish"; 
 
 export const LocationInfo = ({ t }: { t: TFunction }) => {
 

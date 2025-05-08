@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { useMemo } from "react";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 type CardToProps = {
   src: string;
   title: string;

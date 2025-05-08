@@ -6,7 +6,7 @@ import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { useTranslation } from "react-i18next";
 import { useRoomStore } from "@/store/useRoomsStore";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 
 export const RoomsHome = () => {
   const sliderRef = useRef<Slider | null>(null);

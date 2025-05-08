@@ -3,7 +3,7 @@ import { parking } from "@/store/exportsIcons";
 import { dogRoom } from "@/store/exportsImg";
 import { BookLink } from "@/components/Buttons/BookLink";
 import cn from "classnames";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const MoreInfoSecondCol = ({
   availableService,
   isShowOtherInfo,

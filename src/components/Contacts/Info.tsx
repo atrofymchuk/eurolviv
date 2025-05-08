@@ -5,7 +5,7 @@ import { OurContactsWithMap } from "@/components/Contacts/OurContactsWithMap";
 import { ContactUs } from "@/components/Contacts/ContactUs";
 import { Link } from "react-router-dom";
 import { social } from "@/Constants/Social";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const Info = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();

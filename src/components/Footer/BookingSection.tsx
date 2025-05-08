@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { social } from "@/Constants/Social";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { numbers, numbersRestaurant } from "@/Constants/Footer";
 
 

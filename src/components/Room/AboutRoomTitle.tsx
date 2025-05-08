@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const AboutRoomTitle = ({ nameRoom }: { nameRoom: string }) => {
   const { t } = useTranslation();
   const isEng = useIsEnglish()

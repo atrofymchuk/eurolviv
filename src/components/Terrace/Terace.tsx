@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FormatBoldText } from "@/components/common/FormatBoldText";
 import { AbootSliderContainer } from "@/components/Restaurant/AbootSliderContainer";
 import cn from "classnames";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 type TerraseToProps = {
   terase: TerraseT;
   index: number;

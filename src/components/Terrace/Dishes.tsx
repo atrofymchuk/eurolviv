@@ -5,7 +5,7 @@ import { SwiperSlider } from "@/components/Terrace/Swiper";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { links } from "@/Constants/Links";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const Dishes = ({
   slides,
   content,

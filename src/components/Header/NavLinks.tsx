@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useCallback, } from "react";
 import cn from "classnames";
 import { IoIosArrowDown } from "react-icons/io";
-import { useDropdownMenu } from "@/components/hooks/useDropdownMenu";
+import { useDropdownMenu } from "@/hooks/useDropdownMenu";
 import { renderDropdownMenu } from "@/components/utils/renderDropdownMenu";
 import { useTranslation } from "react-i18next";
 import { roomsLinksToRender, restaurantLinks } from "@/Constants/Header";

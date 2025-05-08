@@ -1,7 +1,7 @@
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { coffe, meat, spagetti } from "@/store/exportsImg";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 type MenuPCToProps ={
     className:string
 }

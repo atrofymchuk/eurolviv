@@ -1,13 +1,13 @@
 import { forwardRef, useState } from "react";
 import Slider from "react-slick";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import './roomsSlider.css';
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth"
+import { useCustomWidth } from "@/hooks/useCustomWidth"
 import { guestWhite } from "@/store/exportsIcons";
 import { squareWhite } from "@/store/exportsIcons";
 import { Link } from "react-router-dom";

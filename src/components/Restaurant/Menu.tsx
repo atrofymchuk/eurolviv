@@ -2,7 +2,7 @@ import { MenuPC } from "@/components/Restaurant/MenuPC";
 import { MenuSmallWidth } from "@/components/Restaurant/MenuSmallWidth";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 import { Link } from "react-router-dom";
 import { links } from "@/Constants/Links";
 

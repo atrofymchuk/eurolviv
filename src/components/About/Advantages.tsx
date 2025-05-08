@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { BookLink } from "@/components/Buttons/BookLink";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
-import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const Advantages = () => {
   const { t } = useTranslation();
   const { hotelInfo, services } = usePagesInfoStore();

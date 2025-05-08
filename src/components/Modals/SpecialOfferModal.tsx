@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { OfferDetailsColumn } from "@/components/Modals/OfferDetailsColumn";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useCustomWidth } from "@/components/hooks/useCustomWidth";
+import { useCustomWidth } from "@/hooks/useCustomWidth";
 
 Modal.setAppElement("#root");
 
