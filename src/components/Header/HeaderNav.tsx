@@ -1,17 +1,13 @@
-import {
-  Dispatch,
-  memo,
-  SetStateAction,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
-import { useTranslation } from "react-i18next";
+import { Dispatch, memo, SetStateAction, useCallback, useState } from "react";
 import { Room } from "@/types/types";
-import { Logo } from "@/components/Header/Logo";  
-import { MobileMenuButton, MobileBookingButton } from "@/components/Header/MobileMenu";
+import { Logo } from "@/components/Header/Logo";
+import {
+  MobileMenuButton,
+  MobileBookingButton,
+} from "@/components/Header/MobileMenu";
 import { DesktopNavigation } from "@/components/Header/DesktopNavigation";
 import { MobileNavigation } from "@/components/Header/MobileNavigation";
+import { navLinks, navLinksMobile } from "@/Constants/Header";
 
 type HeaderNavProps = {
   scrolled: boolean;
@@ -40,9 +36,7 @@ export const HeaderNav = memo(
   }: HeaderNavProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isShowRestaurant, setIsShowRestaurant] = useState(false);
-
     const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
-    const { t } = useTranslation();
 
     const handleMouseEnterRooms = useCallback(() => {
       setIsShowRooms(true);
@@ -62,47 +56,23 @@ export const HeaderNav = memo(
       setIsShowRestaurant(false);
     }, []);
 
-    const navLinks = useMemo(
-      () => [
-        { path: "/about", label: t("header.about") },
-        { path: "/rooms", label: t("header.rooms") },
-        { path: "/conference-service", label: t("header.conferenceServices") },
-        { path: "/restaurant", label: t("header.restaurant") },
-        { path: "/special-offers", label: t("header.specialOffers") },
-        { path: "/contacts", label: t("header.contacts") },
-      ],
-      [t]
-    );
-    const navLinksMobile = useMemo(
-      () => [
-        { path: "/about", label: t("header.about") },
-        { path: "/rooms", label: t("header.rooms") },
-        { path: "/conference-service", label: t("header.conferenceServices") },
-        { path: "/restaurant", label: t("header.restaurant") },
-        { path: "/terrace", label: t("terrase.header.title2") },
-        { path: "/special-offers", label: t("header.specialOffers") },
-        { path: "/contacts", label: t("header.contacts") },
-      ],
-      [t]
-    );
-
     return (
       <div className="flex relative justify-between  me-0 h-full w-full lg:w-auto">
-         <div className="flex  lg:justify-between justify-center w-full  ">
+        <div className="flex  lg:justify-between justify-center w-full  ">
           <MobileMenuButton
             toggleMenu={toggleMenu}
             scrolled={scrolled}
             pathname={pathname}
             isActiveLink={isActiveLink}
           />
-          
-         <Logo 
-            logo={logo} 
-            iconLogoStyle={iconLogoStyle} 
-            pathname={pathname}
-          />
 
-         <MobileBookingButton scrolled={scrolled} pathname={pathname}  changeLanguage={changeLanguage}/>
+          <Logo logo={logo} iconLogoStyle={iconLogoStyle} pathname={pathname} />
+
+          <MobileBookingButton
+            scrolled={scrolled}
+            pathname={pathname}
+            changeLanguage={changeLanguage}
+          />
 
           <DesktopNavigation
             navLinks={navLinks}
@@ -110,7 +80,6 @@ export const HeaderNav = memo(
             handleMouseEnterRooms={handleMouseEnterRooms}
             handleMouseLeaveRooms={handleMouseLeaveRooms}
             isShowRooms={isShowRooms}
-            rooms={rooms}
             setMenuOpen={setMenuOpen}
             scrolled={scrolled}
             setIsShowRooms={setIsShowRooms}

@@ -1,28 +1,13 @@
 import { ConferenceMenuCard } from "@/components/ConferesceService/ConferenceMenuCard";
 import { ConferenceMenuMobileCard } from "@/components/ConferesceService/ConferenceMenuMobile";
+import { imageArray } from "@/Constants/ConferenceMenu";
 import { useTranslation } from "react-i18next";
-import { food, sandwich, coffee } from "@/store/exportsImg";
-import { useMemo } from "react";
+
+
 
 export const ConferenceMenuContent = () => {
   const { t } = useTranslation();
-  const imageArray = useMemo(
-    () => [
-      {
-        img: food,
-        text: t("conferenceService.conferenceMenu.menu.title"),
-      },
-      {
-        img: sandwich,
-        text: t("conferenceService.conferenceMenu.menu.title1"),
-      },
-      {
-        img: coffee,
-        text: t("conferenceService.conferenceMenu.menu.title2"),
-      },
-    ],
-    [t]
-  );
+  
 
   return (
     <div className="relative flex items-center justify-center w-full" id="menu">
@@ -34,12 +19,12 @@ export const ConferenceMenuContent = () => {
 
       <div className="hidden items-center 2xl:space-x-[24px] xl:space-x-[20px] lg:space-x-[16px] lg:flex px-5 pb-[126px] lg:pb-[100px] w-full justify-center">
         {imageArray.map((el, index) => (
-          <ConferenceMenuCard key={index} img={el.img} text={el.text} />
+          <ConferenceMenuCard key={index} img={el.img} text={t(el.text)} />
         ))}
       </div>
 
       <div className="lg:hidden block w-full">
-        <ConferenceMenuMobileCard img={food} />
+        <ConferenceMenuMobileCard img={imageArray[0].img} />
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { useCallback, useMemo } from "react";
+import { useCallback, } from "react";
 import cn from "classnames";
-import { Room } from "@/types/types";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDropdownMenu } from "@/components/hooks/useDropdownMenu";
 import { renderDropdownMenu } from "@/components/utils/renderDropdownMenu";
+import { useTranslation } from "react-i18next";
+import { roomsLinksToRender, restaurantLinks } from "@/Constants/Header";
 
 type NavLinksProps = {
   navLinks: Array<{ path: string; label: string }>;
@@ -12,7 +13,6 @@ type NavLinksProps = {
   handleMouseEnterRooms: () => void;
   handleMouseLeaveRooms: () => void;
   isShowRooms: boolean;
-  rooms: Room[];
   setMenuOpen: (value: boolean) => void;
   handleMouseEnterRestaurant?: () => void;
   handleMouseLeaveRestaurant?: () => void;
@@ -21,11 +21,7 @@ type NavLinksProps = {
   scrolled: boolean;
 };
 
-type DropdownItem = {
-  key: string;
-  path: string;
-  title: string;
-};
+
 
 export const NavLinks = ({
   navLinks,
@@ -33,7 +29,6 @@ export const NavLinks = ({
   handleMouseEnterRooms,
   handleMouseLeaveRooms,
   isShowRooms,
-  rooms,
   scrolled,
   setMenuOpen,
   handleMouseEnterRestaurant,
@@ -41,32 +36,10 @@ export const NavLinks = ({
   isShowRestaurant = false,
   isMobile = false,
 }: NavLinksProps) => {
-
+  const { t } = useTranslation();
   
-  const roomsLinksToRender = useMemo(() => [
-    {key:rooms[0].type, path:`/rooms/${rooms[0].type}`, title:rooms[0].title},
-    {key:rooms[2].type, path:`/rooms/${rooms[2].type}`, title:rooms[2].title},
-    {key:rooms[1].type, path:`/rooms/${rooms[1].type}`, title:rooms[1].title},
-    {key:rooms[3].type, path:`/rooms/${rooms[3].type}`, title:rooms[3].title},
-    {key:rooms[4].type, path:`/rooms/${rooms[4].type}`, title:rooms[4].title},
-    {key:rooms[5].type, path:`/rooms/${rooms[5].type}`, title:rooms[5].title},
-    {key:rooms[6].type, path:`/rooms/${rooms[6].type}`, title:rooms[6].title},
-    {key:rooms[7].type, path:`/rooms/${rooms[7].type}`, title:rooms[7].title},
-    {key:rooms[8].type, path:`/rooms/${rooms[8].type}`, title:rooms[8].title},
-  ], [rooms]);
 
-  const restaurantLinks = useMemo<DropdownItem[]>(
-    () => [
-      { key: "restaurant", path: "/restaurant", title: "footer.restaurant" },
-      { key: "terrace", path: "/terrace", title: "footer.terrace" },
-      {
-        key: "karaoke",
-        path: "/restaurant#karaoke",
-        title: "restaurant.karaoke.title",
-      },
-    ],
-    []
-  );
+
 
   const { toggleHandle } = useDropdownMenu({
     isShowRooms,
@@ -155,7 +128,7 @@ export const NavLinks = ({
                 }
               }}
             >
-              {label}
+              {t(label)}
             </Link>
             {isMobile && isDropdown && (
               <button onClick={() => toggleHandle(path)} className="ml-2">
@@ -194,7 +167,7 @@ export const NavLinks = ({
         </div>
       );
     });
-  }, [navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, roomsLinksToRender, scrolled, setMenuOpen, restaurantLinks, toggleHandle, handleSmoothScroll]);
+  }, [t, navLinks, isMobile, handleMouseEnterRooms, handleMouseEnterRestaurant, handleMouseLeaveRooms, handleMouseLeaveRestaurant, isActiveLink, isShowRooms, isShowRestaurant, scrolled, setMenuOpen, toggleHandle, handleSmoothScroll]);
 
   return <>{renderNavLinks()}</>;
 };

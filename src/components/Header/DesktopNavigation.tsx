@@ -1,5 +1,4 @@
 import { NavLinks } from "@/components/Header/NavLinks";
-import { Room } from "@/types/types";
 import cn from "classnames";
 import {useIsEnglish} from "@/components/hooks/useIsEnglish";
 
@@ -9,7 +8,6 @@ type DesktopNavigationProps = {
   handleMouseEnterRooms: () => void;
   handleMouseLeaveRooms: () => void;
   isShowRooms: boolean;
-  rooms: Room[];
   scrolled: boolean;
   setMenuOpen: (value: boolean) => void;
   setIsShowRooms: (value: boolean) => void;
@@ -25,7 +23,6 @@ export const DesktopNavigation = ({
   handleMouseEnterRooms,
   handleMouseLeaveRooms,
   isShowRooms,
-  rooms,
   setMenuOpen,
   setIsShowRooms,
   handleMouseEnterRestaurant,
@@ -54,7 +51,6 @@ export const DesktopNavigation = ({
         handleMouseLeaveRooms={handleMouseLeaveRooms}
         isShowRooms={isShowRooms}
         scrolled={scrolled}
-        rooms={rooms}
         setMenuOpen={setMenuOpen}
         handleMouseEnterRestaurant={handleMouseEnterRestaurant}
         handleMouseLeaveRestaurant={handleMouseLeaveRestaurant}

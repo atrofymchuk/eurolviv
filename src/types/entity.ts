@@ -20,3 +20,7 @@ export type ComfortsBlockToProps = {
     headerColor: string;
   };
   
+  export type MenuSection = {
+    titleKey: string;
+    pdfPath: string;
+  };

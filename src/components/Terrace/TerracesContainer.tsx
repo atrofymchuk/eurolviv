@@ -7,10 +7,9 @@ export const TerrasesContainer = () => {
 
   useEffect(() => {
     const preventUnwantedSwipes = (e: TouchEvent) => {
-     
       if (
-        !(e.target as HTMLElement)?.closest('.slider-container') &&
-        !(e.target as HTMLElement)?.closest('.dish-swiper')
+        !(e.target as HTMLElement)?.closest(".slider-container") &&
+        !(e.target as HTMLElement)?.closest(".dish-swiper")
       ) {
         if (e.touches.length === 1) {
           e.stopPropagation();
@@ -19,11 +18,13 @@ export const TerrasesContainer = () => {
     };
 
     if (window.innerWidth <= 768) {
-      document.addEventListener('touchmove', preventUnwantedSwipes, { passive: false });
+      document.addEventListener("touchmove", preventUnwantedSwipes, {
+        passive: false,
+      });
     }
 
     return () => {
-      document.removeEventListener('touchmove', preventUnwantedSwipes);
+      document.removeEventListener("touchmove", preventUnwantedSwipes);
     };
   }, []);
 

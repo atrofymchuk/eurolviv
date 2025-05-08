@@ -1,44 +1,8 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { map } from "@/Constants/map";
-import {
-  calendarBooking,
-  menu,
-  callUs,
-  locationWhite,
-} from "@/store/exportsIcons";
-import { links } from "@/Constants/Links";
-import { useModalStore } from "@/store/useModalStore";
+import { useMenuItems } from "@/Constants/MobileNavigationTabs";
 
 export const MobileBottomMenu = () => {
-  const { t } = useTranslation();
-  const { onOpenModal } = useModalStore();
-
-  const menuItems = [
-    {
-      icon: <img loading="lazy" src={menu} alt="menu" />,
-      label: t("phoneBottomMenu.menu"),
-      path: links.menu,
-      external: true,
-    },
-    {
-      icon: <img loading="lazy" src={calendarBooking} alt="calendar" />,
-      label: t("phoneBottomMenu.book"),
-      path: links.bookTable,
-      external: true,
-    },
-    {
-      icon: <img loading="lazy" src={callUs} alt="call" />,
-      label: t("phoneBottomMenu.callUs"),
-      onClick: () => onOpenModal("contacts"),
-    },
-    {
-      icon: <img loading="lazy" src={locationWhite} alt="location" />,
-      label: t("phoneBottomMenu.route"),
-      path: map.address,
-      external: true,
-    },
-  ];
+  const menuItems = useMenuItems();
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-[#A47762] text-white lg:hidden z-20  border-t-0">

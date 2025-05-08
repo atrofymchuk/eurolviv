@@ -1,34 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
-
+import { menuSections } from "@/Constants/ConferenceMenu";
 type ConferenceMenuMobileCardToProps = {
   img: string;
 };
 
-type MenuSection = {
-  titleKey: string;
-  pdfPath: string;
-};
+
 
 export const ConferenceMenuMobileCard = ({
   img,
 }: ConferenceMenuMobileCardToProps) => {
   const { t } = useTranslation();
 
-  const menuSections: MenuSection[] = [
-    {
-      titleKey: "conferenceService.conferenceMenu.menu.title1",
-      pdfPath: "/documents/Фуршетне меню.pdf",
-    },
-    {
-      titleKey: "conferenceService.conferenceMenu.menu.title",
-      pdfPath: "/documents/Обіди та вечері.pdf",
-    },
-    {
-      titleKey: "conferenceService.conferenceMenu.menu.title2",
-      pdfPath: "/documents/Каво-перерва.pdf",
-    },
-  ];
+  
 
   const handleViewMenuClick = (pdfPath: string) => {
     window.open(pdfPath, "_blank");

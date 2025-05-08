@@ -4,11 +4,11 @@ import { useModalStore } from "@/store/useModalStore";
 Modal.setAppElement("#root");
 
 const BaseModal: React.FC = () => {
-  const { isOpenOrder, isOpenMenuModal, onCloseGlobalModal } = useModalStore();
+  const { isOpenOrder, onCloseGlobalModal } = useModalStore();
 
   return (
     <Modal
-      isOpen={isOpenOrder || isOpenMenuModal}
+      isOpen={isOpenOrder }
       onRequestClose={onCloseGlobalModal}
       className="fixed mx-auto max-w-[90%]  overflow-y-auto w-fit"
       overlayClassName="fixed inset-0 bg-black/49 z-51  flex items-center justify-center min-h-screen"

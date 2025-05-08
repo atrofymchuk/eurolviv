@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import { social } from "@/Constants/Social";
 import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 import { useIsEnglish } from "@/components/hooks/useIsEnglish";
+import { numbers, numbersRestaurant } from "@/Constants/Footer";
+
+
+
 export const BookingSection = ({
   openPdf,
   pdfDocuments,
@@ -18,31 +22,7 @@ export const BookingSection = ({
   const { t } = useTranslation();
   const isEng = useIsEnglish();
 
-  const numbers = [
-    {
-      href: "tel:+380322423160",
-      number: "+38 (032) 242-31-60",
-    },
-    {
-      href: "tel:+380932423160",
-      number: "+38 (093) 242-31-60",
-    },
-    {
-      href: "tel:+380933483112",
-      number: "+38 (093) 348-31-12",
-    },
-  ];
-
-  const numbersRestaurant = [
-    {
-      href: "tel:+380732424002",
-      number: "+38 (073) 242-40-02",
-    },
-    {
-      href: "tel:+380933483114",
-      number: "+38 (093) 348-31-14",
-    },
-  ];
+ 
 
   return (
     <div

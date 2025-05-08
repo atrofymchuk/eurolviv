@@ -10,6 +10,7 @@ import { BookButton } from "@/components/common/Form/BookButton";
 import { FormData } from "@/types/headerTypes";
 import { formSchema } from "@/schemas/bookRoom";
 import { useTranslation } from "react-i18next";
+import { guests, children } from "@/Constants/HeaderBookingForm";
 
 export const HeaderBookingForm = () => {
   const navigate = useNavigate();
@@ -28,21 +29,7 @@ export const HeaderBookingForm = () => {
     },
   });
 
-  const guests = [
-    "home.header.bookingForm.gusts.options.3",
-    "home.header.bookingForm.gusts.options.2",
-    "home.header.bookingForm.gusts.options.1",
-    "home.header.bookingForm.gusts.options.0",
-  ];
-
-  const children = [
-    "home.header.bookingForm.children.options.0",
-    "home.header.bookingForm.children.options.1",
-    "home.header.bookingForm.children.options.2",
-    "home.header.bookingForm.children.options.3",
-    "home.header.bookingForm.children.options.4",
-  ];
-
+  
   const onSubmit = (data: FormData) => {
     navigate("/booking", {
       state: {

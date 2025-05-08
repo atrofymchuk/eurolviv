@@ -1,14 +1,10 @@
 import AboutSlider from "@/components/Restaurant/AboutSlider";
 import { useTranslation } from "react-i18next";
-import {
-  aboutRestaurant,
-  aboutRestaurantScd,
-  aboutRestaurantTrd,
-} from "@/store/exportsImg";
 import cn from "classnames";
 import { useCustomWidth } from "@/components/hooks/useCustomWidth";
 import { Link } from "react-router-dom";
 import { links } from "@/Constants/Links";
+import { imgsArr } from "@/Constants/AboutSliderContainer";
 
 interface AbootSliderContainerProps {
   slides?: string[];
@@ -26,13 +22,7 @@ export const AbootSliderContainer: React.FC<AbootSliderContainerProps> = ({
   
   const imgs = slides
     ? slides
-    : [
-        aboutRestaurant,
-        aboutRestaurantScd,
-        aboutRestaurantTrd,
-        aboutRestaurant,
-        aboutRestaurantScd,
-      ];
+    : imgsArr;
   
 
   return (

@@ -1,22 +1,11 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { restaurantMobile, terasseHomeMobile } from "@/store/exportsImg";
 import { Link } from "react-router-dom";
+import { suggestion } from "@/Constants/RoofService";
+
 export const RoofServiceMobile = () => {
   const { t } = useTranslation();
-  const suggestion = [
-    {
-      title: "footer.restaurant",
-      to: "/restaurant",
-        img: restaurantMobile,
-      },
-    {
-      img: terasseHomeMobile,
-      title: "footer.terrace",
-      to: "/terrace", 
-    },
-    
-  ];
+ 
   return (
     <div className="w-full  justify-center flex lg:hidden">
       <div className="grid w-full grid-cols-2 ">

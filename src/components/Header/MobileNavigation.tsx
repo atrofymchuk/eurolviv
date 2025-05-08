@@ -36,7 +36,6 @@ export const MobileNavigation = ({
   handleMouseEnterRooms,
   handleMouseLeaveRooms,
   isShowRooms,
-  rooms,
   setMenuOpen,
   changeLanguage,
   handleMouseEnterRestaurant,
@@ -103,7 +102,6 @@ export const MobileNavigation = ({
               handleMouseEnterRooms={handleMouseEnterRooms}
               handleMouseLeaveRooms={handleMouseLeaveRooms}
               isShowRooms={isShowRooms}
-              rooms={rooms}
               setMenuOpen={setMenuOpen}
               handleMouseEnterRestaurant={handleMouseEnterRestaurant}
               handleMouseLeaveRestaurant={handleMouseLeaveRestaurant}
