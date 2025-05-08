@@ -46,23 +46,25 @@ self.addEventListener("fetch", (event) => {
     const { request } = fetchEvent;
     if (request.destination === "image" || request.url.endsWith(".svg")) {
         fetchEvent.respondWith((async () => {
-            const cachedData = await getCachedImage(request.url);
-            if (cachedData) {
-                return new Response(cachedData.blob, { headers: { "Content-Type": cachedData.type } });
-            }
+            // Закоментовано кешування
+            // const cachedData = await getCachedImage(request.url);
+            // if (cachedData) {
+            //     return new Response(cachedData.blob, { headers: { "Content-Type": cachedData.type } });
+            // }
             const response = await fetch(request);
             if (!response.ok) return response;
-            const responseClone1 = response.clone();
-            const responseClone2 = response.clone();
-            (async () => {
-                try {
-                    const blob = await responseClone1.blob();
-                    const type = response.headers.get("Content-Type") || "image/webp";
-                    await cacheImage(request.url, blob, type);
-                } catch (error) {
-                    console.error("Error caching image:", error);
-                }
-            })();
+            // Закоментовано кешування
+            // const responseClone1 = response.clone();
+            // const responseClone2 = response.clone();
+            // (async () => {
+            //     try {
+            //         const blob = await responseClone1.blob();
+            //         const type = response.headers.get("Content-Type") || "image/webp";
+            //         await cacheImage(request.url, blob, type);
+            //     } catch (error) {
+            //         console.error("Error caching image:", error);
+            //     }
+            // })();
             return response;
         })());
     }
