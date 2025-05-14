@@ -17,7 +17,7 @@ export const ConferenceMenuCard = ({
       case t("conferenceService.conferenceMenu.menu.title1"):
         return "/documents/Фуршетне меню.pdf";
         case t("conferenceService.conferenceMenu.menu.title"):
-        return "/documents/Бенкетне меню.pdf";
+        return "/documents/Обіди та вечері.pdf";
         case t("conferenceService.conferenceMenu.menu.title2"):
         return "/documents/Каво-перерва.pdf";
       default:
