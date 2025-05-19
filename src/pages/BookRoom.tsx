@@ -26,17 +26,18 @@ const Booking = () => {
       : null;
   };
 
-  const checkInDate = formatDate(checkIn) || "2025-12-10";
-  const checkOutDate = formatDate(checkOut) || "2025-12-20";
+  const checkInDate = formatDate(checkIn);
+  const checkOutDate = formatDate(checkOut);
 
+  const linkToBooking =  checkInDate && checkOutDate ?`https://eurohotellviv.rooms-wizard.com/#!/search1/${checkInDate}/${checkOutDate}///${JSON.stringify(
+          guestsData
+        )}` : "https://eurohotellviv.rooms-wizard.com/";
   return (
     <div className="w-full h-screen flex items-center justify-center bg-white relative">
       {isLoading && <OnLoadingSpin />}
 
       <iframe
-        src={`https://eurohotellviv.rooms-wizard.com/#!/search1/${checkInDate}/${checkOutDate}///${JSON.stringify(
-          guestsData
-        )}`}
+        src={linkToBooking}
         className="w-full max-w-screen h-screen border-none"
         allowTransparency={true}
         title="Booking"
