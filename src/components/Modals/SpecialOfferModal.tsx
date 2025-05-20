@@ -69,8 +69,8 @@ export const SpecialOffersModal = () => {
 
   const pdfDocuments = {
     pathPublicOffer: isEng
-      ? "/Pet Accommodation Rules.pdf"
-      : "/Правила_проживання_гостей_з_домашніми_тваринами.pdf",
+      ? "/Pet_Accommodation_Rules.pdf"
+      : "/Pet_Accommodation_Rules_ua.pdf",
   };
 
   const handleOpenPdf = (path: string) => {

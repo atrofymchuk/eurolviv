@@ -9,11 +9,11 @@ export const Agreement = ({ handleAgree }: { handleAgree: () => void }) => {
 
   const pdfDocuments = {
     pathPublicOffer: isEng
-      ? "/documents/Public offer agreement.pdf"
-      : "/documents/Договір публічної оферти .pdf",
+      ? "/documents/Public_Offer_Agreement.pdf"
+      : "/documents/Public_Offer_ua.pdf",
     pathPrivacyPolicy: isEng
-      ? "/documents/Privacy Policy.pdf"
-      : "/documents/Політика конфіденційності.pdf",
+      ? "/documents/Privacy_Policy.pdf"
+      : "/documents/Privacy_Policy_ua.pdf",
   };
 
   return (

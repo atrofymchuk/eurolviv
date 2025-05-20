@@ -19,14 +19,14 @@ export const imageArray = [
   export const menuSections: MenuSection[] = [
     {
       titleKey: "conferenceService.conferenceMenu.menu.title1",
-      pdfPath: "/documents/Фуршетне меню.pdf",
+      pdfPath: "/documents/Buffet_Menu.pdf",
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title",
-      pdfPath: "/documents/Обіди та вечері.pdf",
+      pdfPath: "/documents/Lunches_and_Dishes.pdf",
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title2",
-      pdfPath: "/documents/Каво-перерва.pdf",
+      pdfPath: "/documents/Coffee_Break.pdf",
     },
   ];
