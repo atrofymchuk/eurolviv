@@ -4,6 +4,7 @@
           "route":"Маршрут",
           "book":"Забронювати стіл",
           "menu":"Меню",
-          "restaurant/terrace":"Ресторан/Терраса"
+          "restaurant/terrace":"Ресторан/Тераса",
+          "reception":"Рецепція"
         }
 }

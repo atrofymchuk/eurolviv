@@ -4,6 +4,7 @@
               "route":"directions",
               "book":"book a table",
               "menu":"Menu",
-              "restaurant/terrace":"Restaurant/Terrace" 
+              "restaurant/terrace":"Restaurant/Terrace",
+              "reception":"Reception"
             }
 }

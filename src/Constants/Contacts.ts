@@ -2,7 +2,7 @@ import { callUs } from "@/store/exportsIcons";
 
 export const contacts = [
   {
-    title: "home.roofService.restaurant.title",
+    title: "phoneBottomMenu.reception",
     subtitle: "contacts.info.receptionPhone",
     phone: "+ 38 (073) 242 40 02",
     icon: callUs,

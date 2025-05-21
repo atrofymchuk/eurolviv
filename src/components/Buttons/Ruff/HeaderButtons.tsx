@@ -10,7 +10,7 @@ export const HeaderButtons = () => {
         to={links.menu}
         target="_blank"
         className="font-cofo-medium uppercase text-white bg-[#8C331B] text-[12px] md:text-[13px] lg:text-[14px]  lg:w-[184px]
-   hover:cursor-pointer  md:py-[10.5px] px-[70px] py-[11px] rounded-full text-md hover:text-[#8C331B] hover:bg-white"
+   hover:cursor-pointer  md:py-[10.5px] text-center py-[11px] rounded-full text-md hover:text-[#8C331B] hover:bg-white"
       >
         {t("restaurant.menu.menu")}
       </Link>
