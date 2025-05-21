@@ -20,6 +20,7 @@ import { BookDirectAlert } from "@/components/common/BookDirectAlert";
 import { Restaurant } from "@/pages/Restaurant";
 import { Agreement } from "@/components/common/Agreement/Agreement";
 import { usePageStore } from "@/store/usePageStorage";
+import { Home } from "./pages/Home";
 export const Layout = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,7 +71,7 @@ export const Layout = () => {
             path="/rooms"
             element={<InfinityScrollPage pageKey="rooms" />}
           />
-          <Route path="/" element={<InfinityScrollPage pageKey="home" />} />
+          <Route path="/" element={<Home />} />
           <Route path="/rooms/:roomType" element={<Room />} />
           <Route
             path="/contacts"
