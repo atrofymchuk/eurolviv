@@ -71,7 +71,6 @@ export const Karaoke = () => {
 
         <div className="h-fit flex items-center justify-center md:border-x border-[#B3B3B3] border-y md:border-y-0  py-[19px_24px] px-[18px_17px] lg:h-full md:px-2 lg:px-4.5 xl:py-3.5 2xl:py-[19px_25px] 2xl:px-[19px_20px]">
           <img
-            loading="lazy"
             src={karaokeFst}
             alt="karaoke"
             className={`w-full h-full max-h-[325px] md:max-h-full  2xl:max-h-[26.93vw] object-cover ${
@@ -81,7 +80,6 @@ export const Karaoke = () => {
         </div>
         <div className="h-fit flex items-center justify-center md:my-auto border-[#B3B3B3] border-y md:border-y-0 border-t-0  py-[19px] px-[18px_16px]  lg:h-full md:px-2 lg:px-4.5 xl:py-3.5 2xl:py-[18px_25px]  2xl:px-[19px_25px]">
           <img
-            loading="lazy"
             src={karaokeScd}
             alt="karaoke"
             className={`w-full lg:h-full   max-h-[325px] md:h-full h-[325px]  2xl:max-h-[26.93vw] object-cover ${

@@ -14,10 +14,12 @@ export const MoreInfoFirstCol = ({
   return (
     <div className="flex flex-col lg:py-20 2xl:py-[4.17vw] xl:py-[6.25vw] pt-[54px] pb-[28px] md:py-10 2xl:px-[1.09vw_0.89vw] xl:px-[14px_10px] lg:px-[1.09vw_0.78vw]  md:px-[10px_8px] h-full">
       {isShowOtherInfo ? (
-        <h1 className={`text-white 2xl:text-[2.5vw] xl:text-[2.8vw] px-[2.67vw] lg:px-0 tracking-[-0.07em] 
+        <h1
+          className={`text-white 2xl:text-[2.5vw] xl:text-[2.8vw] px-[2.67vw] lg:px-0 tracking-[-0.07em] 
         text-[8.53vw]  leading-[104%] uppercase font-cofo md:pb-[15px] xl:pb-[2.98vw] lg:pb-[20px]  2xl:pb-[2.71vw] lg:text-[32px]
-        ${isShowOtherInfo ? "2xl:w-[75%] w-[95%] ": ""}
-        `}>
+        ${isShowOtherInfo ? "2xl:w-[75%] w-[95%] " : ""}
+        `}
+        >
           {t("room.moreInfo.title2")}
         </h1>
       ) : (
@@ -34,7 +36,7 @@ export const MoreInfoFirstCol = ({
                 className="text-white text-[3.73vw] md:text-[14px] lg:text-[14px]
                  xl:text-[1.09vw] 2xl:text-[1.05vw] uppercase gap-x-[0.8vw] items-center  flex"
               >
-                <img loading="lazy"
+                <img
                   src={item.src}
                   alt={t(item.text)}
                   className="2xl:w-[1.88vw] 2xl:h-[1.88vw] lg:w-7 lg:h-7 md:w-6 md:h-6 w-6 h-6"
@@ -45,16 +47,18 @@ export const MoreInfoFirstCol = ({
           </ul>
         </div>
       ) : (
-        <img loading="lazy"
+        <img
           src={coffeeRoom}
           alt="dog"
           className="w-full 2xl:h-[26.67vw] xl:h-[28.98vw] lg:h-[300px] md:h-[250px] h-[69.87vw] px-[2.93vw_2.13vw] md:px-0  object-cover md:object-bottom object-[20%_80%]  "
         />
       )}
-      <p className={`text-white text-[3.73vw]  2xl:text-[1.05vw] xl:text-[1.09vw] md:text-[14px] gap-[1.07vw] px-[2.67vw_1.6vw] lg:text-[14px] uppercase mt-[32px]  
+      <p
+        className={`text-white text-[3.73vw]  2xl:text-[1.05vw] xl:text-[1.09vw] md:text-[14px] gap-[1.07vw] px-[2.67vw_1.6vw] lg:text-[14px] uppercase mt-[32px]  
        md:px-0 flex md:hidden xl:ps-5
-         ${isShowOtherInfo ? "xl:ps-0 " : "w-[95%] lg:w-auto"}`}>
-        <img loading="lazy" src={parking} alt="parking" className="w-6 h-6" />
+         ${isShowOtherInfo ? "xl:ps-0 " : "w-[95%] lg:w-auto"}`}
+      >
+        <img src={parking} alt="parking" className="w-6 h-6" />
         {t("room.moreInfo.parking")}
       </p>
       {isShowOtherInfo && (

@@ -13,12 +13,12 @@ export const ConferenceMenuCard = ({
   const { t } = useTranslation();
 
   const getPdfPath = (text: string) => {
-    switch(text) {
+    switch (text) {
       case t("conferenceService.conferenceMenu.menu.title1"):
         return "/documents/Buffet_Menu.pdf";
-        case t("conferenceService.conferenceMenu.menu.title"):
+      case t("conferenceService.conferenceMenu.menu.title"):
         return "/documents/Lunches_and_Dishes.pdf";
-        case t("conferenceService.conferenceMenu.menu.title2"):
+      case t("conferenceService.conferenceMenu.menu.title2"):
         return "/documents/Coffee_Break.pdf";
       default:
         return "";
@@ -28,14 +28,13 @@ export const ConferenceMenuCard = ({
   const handleViewMenuClick = () => {
     const pdfPath = getPdfPath(text);
     if (pdfPath) {
-      window.open(pdfPath, '_blank');
+      window.open(pdfPath, "_blank");
     }
   };
 
   return (
     <div className="flex flex-col items-center ">
       <img
-        loading="lazy"
         src={img}
         alt=""
         className="object-cover

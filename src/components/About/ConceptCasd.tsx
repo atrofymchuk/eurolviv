@@ -11,7 +11,7 @@ export const ConceptCasd = ({
   alt,
   text,
   index,
-  to
+  to,
 }: {
   title: string[];
   img: string;
@@ -26,7 +26,6 @@ export const ConceptCasd = ({
   const isSpecialMobileWidth = useCustomWidth(421, 450);
   const isUltraHD = useCustomWidth(2000, 3000);
   const isEng = useIsEnglish();
-
 
   return (
     <div
@@ -43,32 +42,34 @@ export const ConceptCasd = ({
           } ${index === concepts.length - 1 ? "border-b-0 md:border-b" : ""}`)}
     >
       <div
-        className={`text-center flex flex-col items-center  px-[29px]  lg:h-[600px] xl:px-[0] py-[41px_28px] lg:py-[47px_38px]  ${isUltraHD ? "2xl:h-[26.156vw]" : "2xl:h-[30.5vw]"}
+        className={`text-center flex flex-col items-center  px-[29px]  lg:h-[600px] xl:px-[0] py-[41px_28px] lg:py-[47px_38px]  ${
+          isUltraHD ? "2xl:h-[26.156vw]" : "2xl:h-[30.5vw]"
+        }
           ${isSpecialMobileWidth ? " h-[122.667vw]" : "h-[124.667vw]"}
          ${isSpecialWidth ? "xl:h-[520px]" : "xl:h-[460px]"}`}
       >
-        <div className={`
+        <div
+          className={`
           ${index === 2 ? "*:inline lg:*:block w-[50%]" : ""}
-          ${!isEng && index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}>
-
-        <h1
-          className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] lg:text-[32px] tracking-[-0.07em] font-cofo-medium ${
-            isSpecialWidth ? "xl:text-[28px] " : "xl:text-[24px]"
-          }`}
+          ${!isEng && index === 2 ? "*:inline lg:*:block w-[90%]" : ""}`}
         >
-          {t(title[0])}
-        </h1>
-        <h1
-          className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] lg:text-[32px] tracking-[-0.07em] font-cofo-medium ${
-            isSpecialWidth ? "xl:text-[28px]" : "xl:text-[24px]"
-          }`}
+          <h1
+            className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] lg:text-[32px] tracking-[-0.07em] font-cofo-medium ${
+              isSpecialWidth ? "xl:text-[28px] " : "xl:text-[24px]"
+            }`}
           >
-          {t(title[1])}
-        </h1>
-          </div>
+            {t(title[0])}
+          </h1>
+          <h1
+            className={`uppercase text-[5.333vw] 2xl:text-[1.563vw] leading-[101%] lg:text-[32px] tracking-[-0.07em] font-cofo-medium ${
+              isSpecialWidth ? "xl:text-[28px]" : "xl:text-[24px]"
+            }`}
+          >
+            {t(title[1])}
+          </h1>
+        </div>
         <InViewWrapper>
           <img
-            loading="lazy"
             src={img}
             alt={alt}
             className="w-[53.33vw] h-[50.93vw] lg:w-[300px] lg:h-[280px] xl:w-[12vw] xl:h-[12vw] 2xl:w-[10.417vw] 2xl:h-[9.948vw] object-cover 2xl:mt-[22px] 2xl:mb-[25px] my-4"
@@ -91,16 +92,28 @@ export const ConceptCasd = ({
             const translatedText = t(textItem);
             return (
               <div
-                className={`mx-auto   ${index === 3 && !isEng ? "inline xl:block" : ""}
-                ${index === 2 || index === 3 && isEng ? "xl:inline " : ""}
+                className={`mx-auto   ${
+                  index === 3 && !isEng ? "inline xl:block" : ""
+                }
+                ${index === 2 || (index === 3 && isEng) ? "xl:inline " : ""}
 
                 ${
-                  !isSpecialMobileWidth && index === 1 ? "w-[95.5%] lg:w-full" : ""
+                  !isSpecialMobileWidth && index === 1
+                    ? "w-[95.5%] lg:w-full"
+                    : ""
                 } ${isSpecialMobileWidth && index === 1 ? "w-[93%]" : ""}
-                ${isEng && index === 0? "2xl:w-[87%] xl:w-[89%] w inline lg:block" : ""}
-                ${isEng && index === 1? "2xl:w-[93%] xl:w-[95%] " : ""}
-                ${isEng && index === 2? "2xl:w-[95%] xl:w-[90%] inline xl:block" : ""}
-                ${isEng && index === 3? "inline xl:block" : ""}
+                ${
+                  isEng && index === 0
+                    ? "2xl:w-[87%] xl:w-[89%] w inline lg:block"
+                    : ""
+                }
+                ${isEng && index === 1 ? "2xl:w-[93%] xl:w-[95%] " : ""}
+                ${
+                  isEng && index === 2
+                    ? "2xl:w-[95%] xl:w-[90%] inline xl:block"
+                    : ""
+                }
+                ${isEng && index === 3 ? "inline xl:block" : ""}
                 
                 `}
                 key={i}
@@ -114,7 +127,6 @@ export const ConceptCasd = ({
           <DetailsLink
             to={to}
             className={`2xl:text-[0.833vw] 2xl:h-[46px] 2xl:w-[170px]  w-[141px] h-[40px] flex 2xl:px-0! items-center justify-center ${
-              
               isSpecialWidth ? "xl:text-[.9vw]" : "xl:text-[0.9vw]"
             }`}
           >

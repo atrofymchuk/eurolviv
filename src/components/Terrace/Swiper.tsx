@@ -56,7 +56,6 @@ export const SwiperSlider = ({
                  md:h-[300px] 2xl:h-[27.14vw] lg:w-[350px] md:w-[300px] "
             >
               <img
-                loading="lazy"
                 src={slide}
                 alt={slide}
                 className="w-full h-full object-cover"

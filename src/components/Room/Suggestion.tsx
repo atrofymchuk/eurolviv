@@ -25,8 +25,10 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
           const isLuxSuggestion = type.includes("lux") || false;
           const isLuxElegant = type === "lux-elegant" || false;
           const isLuxTwoRoom = type === "lux-two-rooms" || false;
-          const isStandartBigBedBalcony = type === "standart-big-bed-balcony" || false;
-          const isStandartTwoBedBalcony = type === "standart-two-bed-balcony" || false;
+          const isStandartBigBedBalcony =
+            type === "standart-big-bed-balcony" || false;
+          const isStandartTwoBedBalcony =
+            type === "standart-two-bed-balcony" || false;
 
           return (
             <div
@@ -37,7 +39,6 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                 <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#252526] to-transparent"></div>
                 <InViewWrapper>
                   <img
-                    loading="lazy"
                     src={img}
                     alt={type}
                     className="lg:w-full w-full lg:h-[654px] xl:h-[34.58vw] object-cover h-[69.33vw]"
@@ -54,7 +55,7 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                  md:text-[80px] text-[32px] md:leading-[90%]  uppercase leading-[28px] lg:mt-20
                  xl:mt-[-0.5vw]
                  2xl:mt-[4.17vw] lg:min-h-[162px] 2xl:min-h-[9.43vw] flex items-end"
-                > 
+                >
                   {t(title)}
                 </h1>
                 {size && (
@@ -82,7 +83,11 @@ export const Suggestion = ({ suggestion }: SuggestionToProps) => {
                 ${isLuxElegant ? "w-[95%]! xl:w-[51%]! 2xl:w-[43%]!" : ""} 
                 ${isLuxTwoRoom ? "w-[100%]! xl:w-[50%]! 2xl:w-[40%]!" : ""} 
                 ${isStandartBigBedBalcony ? "w-[80%]!" : ""}
-                ${isStandartTwoBedBalcony ? "2xl:w-[45%]! xl:w-[55%]! w-[78%]!" : ""}
+                ${
+                  isStandartTwoBedBalcony
+                    ? "2xl:w-[45%]! xl:w-[55%]! w-[78%]!"
+                    : ""
+                }
                  `}
                 >
                   {t(desc)}

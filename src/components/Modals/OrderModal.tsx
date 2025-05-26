@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 import OrderModalForm from "@/components/Modals/OrderModalForm";
 import { validationSchema } from "@/schemas/orderHall";
-import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
 import { uk, enUS } from "date-fns/locale";
 Modal.setAppElement("#root");
@@ -25,15 +25,13 @@ export interface FormData {
   needRooms?: boolean;
 }
 
-
-
 const OrderModal = ({
   onCloseGlobalModal,
 }: {
   onCloseGlobalModal: () => void;
 }) => {
   const { t, i18n } = useTranslation();
-  const isEng = useIsEnglish()
+  const isEng = useIsEnglish();
   const {
     control,
     register,
@@ -54,7 +52,7 @@ const OrderModal = ({
   } else {
     registerLocale("en", enUS);
   }
-  
+
   const onSubmit: SubmitHandler<FormData> = useCallback(
     (data) => {
       setIsLoading(true);
@@ -67,13 +65,13 @@ const OrderModal = ({
         user_needRooms: data.needRooms ? "Так" : "Ні",
         user_isEng: isEng ? "Так" : "Ні",
       };
-  
+
       emailjs
         .send(
-          "service_giyw17p", 
-          "template_a3t0f14", 
+          "service_giyw17p",
+          "template_a3t0f14",
           templateParams,
-          "0A61tJFFXJIR6r1M1" 
+          "0A61tJFFXJIR6r1M1"
         )
         .then(() => {
           toast.success(t("orderModal.toast.success"));
@@ -90,7 +88,7 @@ const OrderModal = ({
           setIsLoading(false);
         });
     },
-    [t, reset, onCloseGlobalModal,isEng]
+    [t, reset, onCloseGlobalModal, isEng]
   );
 
   return (
@@ -130,7 +128,6 @@ const OrderModal = ({
             </label>
             <div className="bg-[#A47762] rounded-full p-2 w-fit mb-[6px] lg:mb-[0px]">
               <img
-                loading="lazy"
                 className="text-xl cursor-pointer"
                 src={calendar}
                 onClick={() => setIsDatePickerOpen(!isDatePickerOpen)}
@@ -152,10 +149,10 @@ const OrderModal = ({
                     disabledKeyboardNavigation={false}
                     onKeyDown={(e) => {
                       e.preventDefault();
-                  }}
+                    }}
                     onChange={(date) => {
                       field.onChange(date);
-                      
+
                       setIsDatePickerOpen(false);
                     }}
                     minDate={new Date(new Date().setDate(new Date().getDate()))}
@@ -168,7 +165,11 @@ const OrderModal = ({
           )}
         </div>
 
-        <OrderModalForm register={register} isLoading={isLoading} getValues={getValues} />
+        <OrderModalForm
+          register={register}
+          isLoading={isLoading}
+          getValues={getValues}
+        />
       </form>
 
       <ToastContainer

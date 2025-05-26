@@ -35,7 +35,6 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
     >
       <InViewWrapper>
         <img
-          loading="lazy"
           src={hall.previewImage}
           alt={hall.title}
           className={cn(
@@ -63,13 +62,13 @@ export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
         )}
       >
         <div className={`flex items-center space-x-1 justify-center `}>
-          <img loading="lazy" src={square} alt="areaico" className="w-4 h-4" />
+          <img src={square} alt="areaico" className="w-4 h-4" />
           <p className="uppercase text-sm sm:text-xs md:text-[12px] lg:text-lg 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[#252526]">
             {t("home.conferenceService.area")}: {hall.area}
           </p>
         </div>
         <div className="flex items-center justify-center space-x-1">
-          <img loading="lazy" src={guest} alt="guestico" className="w-4 h-4" />
+          <img src={guest} alt="guestico" className="w-4 h-4" />
           <p className="uppercase text-sm sm:text-xs md:text-[12px] lg:text-lg 2xl:text-[16px] xl:text-[14px] lg:text-[14px] text-[#252526]">
             {t("home.conferenceService.capacity")}:{" "}
             {isEng ? t(hall.capacity) : t(hall.capacity).slice(0, -2) + "."}

@@ -30,22 +30,30 @@ export const Celebration = () => {
             <p
               className={`text-[#252526] 2 md:text-[14px] 2xl:text-[0.94vw] xl:text-[1.25vw] uppercase  lg:text-[16px]
                     lg:leading-[120%] text-[3.2vw] 
-                    ${isEng? "2xl:w-[156%] xl:w-[210%] w-[96%]" : "w-[95%] 2xl:w-[35.52vw] xl:w-[180%] lg:w-[520px] md:w-[420px]"}
+                    ${
+                      isEng
+                        ? "2xl:w-[156%] xl:w-[210%] w-[96%]"
+                        : "w-[95%] 2xl:w-[35.52vw] xl:w-[180%] lg:w-[520px] md:w-[420px]"
+                    }
                     `}
             >
               {t("restaurant.celebration.desc.0")}
             </p>
             <p
               className={`text-[#252526]   md:text-[14px] 2xl:text-[0.94vw] uppercase xl:text-[1.25vw] lg:text-[16px]  lg:leading-[120%] text-[3.2vw]
-                ${isEng ? "2xl:w-[156%] xl:w-[205%] w-[95%]" : "2xl:w-[37.6vw] lg:w-[550px] xl:w-[180%] md:w-[420px] w-[90%]"}
+                ${
+                  isEng
+                    ? "2xl:w-[156%] xl:w-[205%] w-[95%]"
+                    : "2xl:w-[37.6vw] lg:w-[550px] xl:w-[180%] md:w-[420px] w-[90%]"
+                }
               
             `}
             >
               {t("restaurant.celebration.desc.1")}
             </p>
           </div>
-          <ViewMenuButton 
-            onClick={() => window.open('/documents/Banquet_Menu.pdf', '_blank')}
+          <ViewMenuButton
+            onClick={() => window.open("/documents/Banquet_Menu.pdf", "_blank")}
             className="uppercase cursor-pointer lg:text-[14px] lg:w-[175px] 2xl:w-[9.1vw] 2xl:h-[2.29vw] 2xl:text-[0.73vw]
              text-[12px] font-cofo-medium bg-[#8C331B] h-[40px]
              lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B]
@@ -63,7 +71,6 @@ export const Celebration = () => {
           }`}
         >
           <img
-            loading="lazy"
             src={weddingFst}
             alt=""
             className="w-full md:h-full   h-[310px]  2xl:max-h-[620px] xl:max-h-[510px] lg:max-h-[460px] object-cover"
@@ -75,7 +82,6 @@ export const Celebration = () => {
           } `}
         >
           <img
-            loading="lazy"
             src={weddingScd}
             alt=""
             className="w-full md:h-full    2xl:max-h-[620px]  xl:max-h-[520px] lg:max-h-[460px] h-[392px] object-cover"
@@ -87,7 +93,6 @@ export const Celebration = () => {
           }`}
         >
           <img
-            loading="lazy"
             src={weddingTrd}
             alt=""
             className="w-full md:h-full  2xl:max-h-[620px]  xl:max-h-[510px] lg:max-h-[460px] max-h-[316px] object-cover"

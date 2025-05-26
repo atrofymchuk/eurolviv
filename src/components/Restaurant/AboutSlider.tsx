@@ -15,12 +15,12 @@ function AboutSlider({ slides }: AboutSliderProps) {
   const sliderRef = useRef<Slider | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  const isCustomWidth = useCustomWidth(1500, 1700)
+  const isCustomWidth = useCustomWidth(1500, 1700);
   const minSwipeDistance = 100;
   const [isSwiping, setIsSwiping] = useState(false);
 
   const onTouchStart = (e: React.TouchEvent) => {
-    if (e.currentTarget.classList.contains('slider-container')) {
+    if (e.currentTarget.classList.contains("slider-container")) {
       setTouchEnd(null);
       setTouchStart(e.targetTouches[0].clientX);
       setIsSwiping(true);
@@ -45,7 +45,7 @@ function AboutSlider({ slides }: AboutSliderProps) {
         sliderRef.current?.slickPrev();
       }
     }
-    
+
     setTouchStart(null);
     setTouchEnd(null);
     setIsSwiping(false);
@@ -84,9 +84,8 @@ function AboutSlider({ slides }: AboutSliderProps) {
     ],
   };
 
-
   return (
-    <div 
+    <div
       className="slider-container relative w-full overflow-hidden max-w-screen"
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
@@ -116,11 +115,15 @@ function AboutSlider({ slides }: AboutSliderProps) {
                 className="px-[3.5px] xl:px-[12px] 2xl:px-[17.5px] transition-all duration-300 slick-slide relative flex justify-center"
               >
                 <InViewWrapper>
-                  <img loading="lazy"
+                  <img
                     src={el}
                     alt={`slide_${index}`}
                     className={`object-cover -z-10 2xl:w-[64vw] 2xl:h-[35.1vw]  lg:w-[800px] lg:h-[450px] md:w-[500px] md:h-[350px] w-[71.5vw] h-[50vw] mx-auto transition-all duration-300 \
-                      ${isCustomWidth ? "xl:w-[65vw] xl:h-[37vw]" : "xl:w-[65vw] xl:h-[35vw]" }`}
+                      ${
+                        isCustomWidth
+                          ? "xl:w-[65vw] xl:h-[37vw]"
+                          : "xl:w-[65vw] xl:h-[35vw]"
+                      }`}
                   />
                 </InViewWrapper>
                 <div

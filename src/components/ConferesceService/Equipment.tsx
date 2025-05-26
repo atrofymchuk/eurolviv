@@ -13,7 +13,6 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
     <div className="flex  bg-[#F2EFEC] justify-center flex-1 2xl:h-[231px 2xl:h-[12vw] w-full">
       <div className="grid grid-cols-1  py-[41px] lg:py-0 lg:grid-cols-[20.58%_42.9%_35%] lg:w-full w-[79.1%]   border-[#C7C7C7] border-x lg:border-x-0  box-border">
         <div className="border-[#C7C7C7] flex items-center 2xl:ps-[3.7vw] xl:ps-[3.1vw] ps-[10px] md:ps-[20px] md:p-6 lg:pb-8 ">
-       
           <h1 className="pb-[10px] md:font-cofo-medium uppercase text-[24px] sm:text-[24px] md:text-[32px] lg:text-[24px] xl:text-[2.3vw]  2xl:text-[2.1vw] leading-[100%] tracking-[-0.05em] text-[#8C331B]  ">
             {t("conferenceService.equipment.title.0")} <br />
             {t("conferenceService.equipment.title.1")}
@@ -29,7 +28,6 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
                 >
                   <div className="flex items-center gap-x-2.5 gap-y-[3px]">
                     <img
-                      loading="lazy"
                       src={icon.src}
                       alt={icon.text}
                       className="w-[22px] h-[22px]  md:w-[22px] md:h-[22px] lg:w-4 lg:h-4 xl:w-[1.7vw] xl:h-[1.7vw]  2xl:w-[1.6vw] 2xl:h-[1.6vw]"
@@ -45,10 +43,12 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
               {icons
                 .slice(icons.length / 2, icons.length)
                 .map((icon, index) => (
-                  <div key={index} className="flex items-center gap-x-2.5 gap-y-[3px]">
+                  <div
+                    key={index}
+                    className="flex items-center gap-x-2.5 gap-y-[3px]"
+                  >
                     <div className="flex items-center gap-x-[14px] gap-y-[3px]">
                       <img
-                        loading="lazy"
                         src={icon.src}
                         alt={icon.text}
                         className="w-[22px] h-[22px]  md:w-[22px] md:h-[22px] lg:w-4 lg:h-4 xl:w-[1.7vw] xl:h-[1.7vw]  2xl:w-[1.6vw] 2xl:h-[1.6vw]"

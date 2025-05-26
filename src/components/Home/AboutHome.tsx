@@ -168,7 +168,7 @@ export const AboutHome = () => {
           xl:h-[31.77vw] xl:pe-[1.67vw]
           2xl:h-[37.5vw] 2xl:pe-[2.71vw]"
         >
-          <img loading="lazy" src={previewImg} alt="" className="z-1" />
+          <img src={previewImg} alt="" className="z-1" />
         </div>
         <div className="relavive md:hidden">
           <hr className="w-screen absolute left-0 border-[#C7C7C7]  text-black bg-black lg:hidden" />
@@ -258,7 +258,7 @@ export const AboutHome = () => {
                 </h1>
                 <h1
                   className={cn(
-                    "md:whitespace-nowrap uppercase md:font-cofo-medium leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[4vw] xl:text-[5.4vw] 2xl:text-[5.21vw]",
+                    "md:whitespace-nowrap uppercase md:font-cofo-medium leading-[84%] tracking-[-0.07em] lg:tracking-[-0.1em] text-[#242425] text-[8.53vw] inline sm:text-[4.17vw] md:text-[3.12vw] md:block lg:text-[4vw] xl:text-[5.4vw] 2xl:text-[5.21vw]"
                   )}
                 >
                   {t("home.about.quality.3")}

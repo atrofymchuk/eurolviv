@@ -28,13 +28,18 @@ export const RoofService = () => {
                 className={`${
                   index === 2 ? " " : ""
                 } absolute inset-0 bg-gradient-to-b
-                 ${index === 2 ? "from-[#252526] to-[#25252659] bg-[#000000]/10" : "from-[#25252620] to-[#25252659] bg-[#000000]/5"}`}
+                 ${
+                   index === 2
+                     ? "from-[#252526] to-[#25252659] bg-[#000000]/10"
+                     : "from-[#25252620] to-[#25252659] bg-[#000000]/5"
+                 }`}
               ></div>
               <img
-                loading="lazy"
                 src={item.img}
                 alt={item.url}
-                className={`w-full overflow-hidden h-full object-cover ${index === 1 ? " 2xl:scale-108" : ""}`}
+                className={`w-full overflow-hidden h-full object-cover ${
+                  index === 1 ? " 2xl:scale-108" : ""
+                }`}
               />
             </div>
 
@@ -45,7 +50,9 @@ export const RoofService = () => {
             <div
               className={cn(
                 `absolute inset-0 flex flex-col items-center text-center mt-[123px]  text-white z-2  ${
-                  index === 2 ? "2xl:mt-[15.79vw] xl:mt-[15.63vw] lg:mt-[123px]" : "justify-between"
+                  index === 2
+                    ? "2xl:mt-[15.79vw] xl:mt-[15.63vw] lg:mt-[123px]"
+                    : "justify-between"
                 }`
               )}
             >
@@ -54,7 +61,6 @@ export const RoofService = () => {
                   <div className="flex justify-center w-full">
                     <InViewWrapper>
                       <img
-                        loading="lazy"
                         src={ruffLogo}
                         alt=""
                         className="w-[135px] h-[18px]"
@@ -86,7 +92,9 @@ export const RoofService = () => {
               <div
                 className={cn(
                   `flex flex-col items-center    ${
-                    index === 2 ? "" : " 2xl:pb-[3.91vw] xl:pb-[7.74vw] lg:pb-[10.74vw]"
+                    index === 2
+                      ? ""
+                      : " 2xl:pb-[3.91vw] xl:pb-[7.74vw] lg:pb-[10.74vw]"
                   }`
                 )}
               >

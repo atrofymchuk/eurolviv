@@ -9,7 +9,7 @@ export const RestaurantHeader = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#252526] via-transparent to-[#25252600] z-[-9]"></div>
       <div className="absolute inset-0 bg-[#25252659] z-[-9]"></div>
       <InViewWrapper>
-        <img loading="lazy"
+        <img
           src={headerRestaurant}
           alt="headerImg"
           className="lg:h-[1157px] absolute inset-0 w-full h-full object-cover  z-[-10]"

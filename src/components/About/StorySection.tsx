@@ -65,8 +65,7 @@ export const StorySection = () => {
                   }`}
                 >
                   <span className={`${isEng ? "inline" : "hidden"}`}>
-
-                  {wrd[0] + " "}
+                    {wrd[0] + " "}
                   </span>
 
                   {t("about.about.title.1")
@@ -109,7 +108,6 @@ export const StorySection = () => {
         <div className=" flex justify-center items-center w-full border-[#C7C7C7] border-b md:p-4 p-3">
           <InViewWrapper>
             <img
-              loading="lazy"
               src={sectionAbout}
               alt="Reception"
               className={`w-full 2xl:max-h-[28.281vw]  max-h-[36.27vw] object-cover object-[0%_35%] ${
@@ -140,7 +138,11 @@ export const StorySection = () => {
             <p
               className={` font-cofo-medium p-[15px] pb-[20px]  2xl:px-[24px_14px] xl:pt-[20px] lg:text-[12px]   xl:text-[1.09vw]
               ${isCustomMobile ? "px-[18px]" : ""}
-              ${isEng ? "2xl:w-[95%] w-[90%] mx-auto xl:px-[0px_0px]" : "xl:px-[8px_0px]"}
+              ${
+                isEng
+                  ? "2xl:w-[95%] w-[90%] mx-auto xl:px-[0px_0px]"
+                  : "xl:px-[8px_0px]"
+              }
               ${isCustomSecondaryMobile ? "px-[18px] " : ""}
                text-[3.2vw]  pt-[26px]   2xl:text-[1.042vw] mt-auto leading-[120%] tracking-[-0.01em] uppercase text-[#8C331B] `}
             >

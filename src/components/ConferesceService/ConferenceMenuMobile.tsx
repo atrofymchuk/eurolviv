@@ -5,14 +5,10 @@ type ConferenceMenuMobileCardToProps = {
   img: string;
 };
 
-
-
 export const ConferenceMenuMobileCard = ({
   img,
 }: ConferenceMenuMobileCardToProps) => {
   const { t } = useTranslation();
-
-  
 
   const handleViewMenuClick = (pdfPath: string) => {
     window.open(pdfPath, "_blank");
@@ -21,7 +17,6 @@ export const ConferenceMenuMobileCard = ({
   return (
     <div className="flex flex-col items-center relative w-full">
       <img
-        loading="lazy"
         src={img}
         alt=""
         className="w-full h-[432px] sm:h-[500px] md:h-[600px] object-cover"

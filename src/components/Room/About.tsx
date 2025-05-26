@@ -57,7 +57,7 @@ export const About = memo(
           <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:border-x-0 border-b md:border-b-0  md:border-e  w-full md:min-h-auto min-h-[29.07vw] border-[#C7C7C7] order-3 md:order-none" />
           <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:hidden md:border-x-0 md:border-e w-full h-full border-[#C7C7C7] order-5 md:order-none" />
           <div className="2xl:h-[109px] xl:h-[109px] lg:h-[109px] border-x md:border-x-0 md:border-e  w-full h-full border-[#C7C7C7] order-6 md:order-none " />
-          
+
           <div
             className=" h-full border-t 2xl:h-[12.57vw] xl:h-[12.5vw]  md:border-e border-b md:border-b-0 border-[#C7C7C7] 
             flex flex-col justify-end md:justify-center  p-2.5 pb-[16px] 2xl:p-0
@@ -67,7 +67,6 @@ export const About = memo(
               <div className="2xl:space-y-[0.31vw] 2xl:pb-[2.5vw] lg:pb-[1.4rem] xl:pb-[1.72vw]  items-center   ">
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw]  text-[3.2vw] items-center    ">
                   <img
-                    loading="lazy"
                     src={houseBrown}
                     alt="houseicon"
                     className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -77,7 +76,6 @@ export const About = memo(
                 </p>
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw] text-[12px] items-center ">
                   <img
-                    loading="lazy"
                     src={squareBrown}
                     alt="houseicon"
                     className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -87,7 +85,6 @@ export const About = memo(
                 </p>
                 <p className="flex uppercase 2xl:text-[1.04vw] lg:text-[12px] xl:text-[1.09vw] text-[12px] items-center">
                   <img
-                    loading="lazy"
                     src={guestBrown}
                     alt="houseicon"
                     className="pe-2.5 lg:w-[20px] lg:h-[20px] xl:w-[24px] xl:h-[24px] 2xl:w-[26px] 2xl:h-[26px] "
@@ -162,7 +159,11 @@ export const About = memo(
               ${isStandartBigBedBalcony ? "xl:w-[100%]!   w-[90%]!" : ""}
               ${isStandartTwoBedBalcony ? "w-[90%]! xl:w-[105%]!" : ""}
               ${isLuxImperial ? "xl:w-[102%]! " : ""}
-              ${isSemiLux ? "2xl:w-[102%] w-[90%] xl:w-[102%]!" : "2xl:w-[102%] w-[90%]"}
+              ${
+                isSemiLux
+                  ? "2xl:w-[102%] w-[90%] xl:w-[102%]!"
+                  : "2xl:w-[102%] w-[90%]"
+              }
               text-[#444444] uppercase`}
               >
                 {t(pTwo)}

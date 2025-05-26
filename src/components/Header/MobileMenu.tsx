@@ -22,17 +22,21 @@ export const MobileMenuButton = ({
   return (
     <div className="lg:hidden w-[33vw] items-center justify-center flex">
       <button
-        className={cn(` text-white text-2xl flex items-center gap-2 w-full ms-[6.4vw]`)}
+        className={cn(
+          ` text-white text-2xl flex items-center gap-2 w-full ms-[6.4vw]`
+        )}
         onClick={toggleMenu}
       >
-        <img loading="lazy"
+        <img
           src={burgerMenu}
           alt="menu"
           className={cn(
             pathname === "/contacts" || scrolled ? "filter-invert-gray" : ""
           )}
         />
-        <span className={cn(`uppercase text-[12px] ${isActiveLink("/contacts")}`)}>
+        <span
+          className={cn(`uppercase text-[12px] ${isActiveLink("/contacts")}`)}
+        >
           {t("header.menu")}
         </span>
       </button>
@@ -70,11 +74,11 @@ export const MobileBookingButton = ({
             {
               "text-white": !scrolled,
               "text-black": scrolled,
-              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100": !scrolled  
+              "pointer-events-none lg:pointer-events-auto opacity-0 lg:opacity-100":
+                !scrolled,
             }
           )}
           aria-disabled={!scrolled}
-      
         >
           {t("buttons.bookRoomArr.0")}
           <span className="hidden lg:inline">{t("buttons.bookRoomArr.1")}</span>

@@ -44,7 +44,6 @@ export const Card = ({
         <div className="p-3 pb-0 md:p-0">
           <InViewWrapper>
             <img
-              loading="lazy"
               src={src}
               alt={translatedTexts.title}
               className={cn(

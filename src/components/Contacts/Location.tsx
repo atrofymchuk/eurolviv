@@ -1,4 +1,3 @@
-
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
@@ -13,9 +12,15 @@ export const Location = () => {
         <h1 className="font-cofo uppercase lg:tracking-[-0.04em] 2xl:text-[5.21vw] text-[8.53vw] tracking-[-0.05em] leading-[80%]  text-[#252526]">
           {t("contacts.location.locationTitle")}
         </h1>
-        <p className="flex items-center text-[3.2vw] font-cofo-medium uppercase underline  underline-offset-[22%] lg:text-[18px] 
-        2xl:text-[0.94vw] lg:ps-[4px] lg:mt-[22px] mt-[11.5px] decoration-[6.5%]">
-          <img loading="lazy" src={location} alt="location" className="2xl:w-[0.94vw] 2xl:h-[0.94vw] lg:w-[18px] lg:h-[18px] md:w-[16px] md:h-[16px] " />
+        <p
+          className="flex items-center text-[3.2vw] font-cofo-medium uppercase underline  underline-offset-[22%] lg:text-[18px] 
+        2xl:text-[0.94vw] lg:ps-[4px] lg:mt-[22px] mt-[11.5px] decoration-[6.5%]"
+        >
+          <img
+            src={location}
+            alt="location"
+            className="2xl:w-[0.94vw] 2xl:h-[0.94vw] lg:w-[18px] lg:h-[18px] md:w-[16px] md:h-[16px] "
+          />
           {t("contacts.info.addressDesc")}
         </p>
         <RouteButton className="mb-[25px] lg:mb-0 mt-[19px] lg:mt-[21px] 2xl:mt-[1.09vw] 2xl:w-[10.26vw]! 2xl:h-[2.03vw] 2xl:text-[0.73vw] lg:w-[197px] w-[178px] text-center flex items-center justify-center" />
@@ -31,7 +36,7 @@ export const Location = () => {
           </p>
         </div>
         <InViewWrapper>
-          <img loading="lazy"
+          <img
             src={mapContacts}
             alt="map"
             className="w-full h-full object-cover object-center grayscale"

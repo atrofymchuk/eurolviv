@@ -45,7 +45,6 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
         {mapArray.map((hall, index) => (
           <div key={index} className="pe-[13px]">
             <img
-              loading="lazy"
               src={hall.previewImage}
               alt={hall.title}
               className="w-[69vw] h-[46vw]"
@@ -55,23 +54,13 @@ export const ConferenceServiceSlider = ({ halls }: HallSliderProps) => {
             </h4>
             <div className="flex flex-col items-center justify-center mt-[11px] gap-y-[6px]">
               <p className="text-center uppercase flex items-center space-x-[3px] text-[12px] ">
-                <img
-                  loading="lazy"
-                  src={square}
-                  alt=""
-                  className="w-[14px] h-[14px]"
-                />
+                <img src={square} alt="" className="w-[14px] h-[14px]" />
                 <span>
                   {t("home.conferenceService.area")}: {hall.area}
                 </span>
               </p>
               <p className="text-center uppercase flex items-center space-x-[3px] text-[12px] ">
-                <img
-                  loading="lazy"
-                  src={guest}
-                  alt=""
-                  className="w-[14px] h-[14px]"
-                />
+                <img src={guest} alt="" className="w-[14px] h-[14px]" />
                 <span>
                   {t("home.conferenceService.capacity")}:{" "}
                   {isEng

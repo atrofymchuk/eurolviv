@@ -12,7 +12,7 @@ export const MoreInfoSecondCol = ({
   isShowOtherInfo: boolean;
 }) => {
   const { t } = useTranslation();
-  const isEng = useIsEnglish()
+  const isEng = useIsEnglish();
   return (
     <div
       className={cn(
@@ -31,7 +31,7 @@ export const MoreInfoSecondCol = ({
               : "ps-[10px] 2xl:h-[26vw] lg:h-[300px] xl:h-[28.88vw] md:h-[250px] "
           }`
         )}
-      > 
+      >
         <h1
           className={cn(
             ` text-white text-[8.53vw] lg:text-[32px] tracking-[-0.07em] xl:text-[2.8vw] 2xl:text-[2.52vw] leading-[104%] uppercase `,
@@ -48,7 +48,6 @@ export const MoreInfoSecondCol = ({
 
         {isShowOtherInfo && (
           <img
-            loading="lazy"
             src={dogRoom}
             alt="imageOverlay"
             className="w-full  object-cover px-[2.67vw_1.6vw] md:hidden h-[69.87vw] "
@@ -56,8 +55,10 @@ export const MoreInfoSecondCol = ({
         )}
 
         {isShowOtherInfo && (
-          <h1 className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw] w-[88%] lg:text-[32px]
-           leading-[104%] uppercase  md:hidden block px-[2.67vw] lg:px-5 mt-[42px]">
+          <h1
+            className="text-white text-[8.53vw]  tracking-[-0.07em] xl:text-[3.75vw] 2xl:text-[2.5vw] w-[88%] lg:text-[32px]
+           leading-[104%] uppercase  md:hidden block px-[2.67vw] lg:px-5 mt-[42px]"
+          >
             {t("room.moreInfo.title")}
           </h1>
         )}
@@ -77,7 +78,6 @@ export const MoreInfoSecondCol = ({
               )}
             >
               <img
-                loading="lazy"
                 src={item.src}
                 alt={t(item.text)}
                 className="2xl:w-[1.88vw] 2xl:h-[1.88vw] xl:w-[2.2vw] xl:h-[2.2vw] lg:w-6 lg:h-6 md:w-5 md:h-5 w-6 h-6"
@@ -104,11 +104,12 @@ export const MoreInfoSecondCol = ({
           </BookLink>
         )}
         <div className="mt-auto">
-          <p className={`text-white text-[4.27vw]  2xl:text-[1.05vw] 2xl:gap-[0.42vw]
+          <p
+            className={`text-white text-[4.27vw]  2xl:text-[1.05vw] 2xl:gap-[0.42vw]
           ${isEng ? "2xl:w-[95%]" : "w-[102%]"}
-          xl:text-[1.09vw] md:text-[12px] lg:text-[12px] uppercase leading-[120%] md:flex hidden gap-1`}>
+          xl:text-[1.09vw] md:text-[12px] lg:text-[12px] uppercase leading-[120%] md:flex hidden gap-1`}
+          >
             <img
-              loading="lazy"
               src={parking}
               alt="parking"
               className="2xl:w-[1.88vw] 2xl:h-[1.88vw]  xl:w-[2.2vw] xl:h-[2.2vw] lg:w-6 lg:h-6 md:w-6 md:h-6 w-6 h-6"

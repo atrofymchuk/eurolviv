@@ -50,7 +50,6 @@ export const ContactUs = () => {
         <div className=" lg:mt-[60px] 2xl:mt-[3.13vw] lg:mb-10 mt-[40px] px-[16px] md:px-0">
           <InViewWrapper>
             <img
-              loading="lazy"
               src={hotelContacts}
               alt="hotel"
               className="w- lobject-cover "

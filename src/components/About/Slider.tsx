@@ -9,13 +9,13 @@ import {
   luxTwoRoomsPreview,
   champagneAboutSlider,
   bedroomAboutSlider,
-  } from "@/store/exportsImg";
+} from "@/store/exportsImg";
 
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
 import { useCustomWidth } from "@/hooks/useCustomWidth";
-  const slides = [
+const slides = [
   mirrorAboutSlider,
   champagneAboutSlider,
   bedroomAboutSlider,
@@ -24,7 +24,7 @@ import { useCustomWidth } from "@/hooks/useCustomWidth";
 
 const ImageSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-const isCustomWidth = useCustomWidth(1500, 1700);
+  const isCustomWidth = useCustomWidth(1500, 1700);
   const settings = {
     infinite: true,
     centerMode: true,
@@ -86,7 +86,6 @@ const isCustomWidth = useCustomWidth(1500, 1700);
           return (
             <InViewWrapper key={index}>
               <img
-                loading="lazy"
                 src={image}
                 alt={`slide_${index}`}
                 className={cn(
@@ -98,14 +97,13 @@ const isCustomWidth = useCustomWidth(1500, 1700);
                       isSide,
                     "2xl:w-[26.771vw] 2xl:h-[16.458vw]   h-[154px] lg:w-[250px] lg:h-[194px] ":
                       isEdge,
-                      "xl:w-[40vw] xl:h-[500px]":isActive && isCustomWidth,
-                      "xl:w-[37vw] xl:h-[410px]":isActive && !isCustomWidth,
-                      "xl:w-[26.469vw] xl:h-[283px]":isSide && isCustomWidth,
-                      "xl:w-[26.469vw] xl:h-[253px]":isSide && !isCustomWidth,
-                      "xl:w-[27.469vw] xl:h-[246px]":isEdge && isCustomWidth,
-                      "xl:w-[27.469vw] xl:h-[216px]":isEdge && !isCustomWidth,
-
-                    }
+                    "xl:w-[40vw] xl:h-[500px]": isActive && isCustomWidth,
+                    "xl:w-[37vw] xl:h-[410px]": isActive && !isCustomWidth,
+                    "xl:w-[26.469vw] xl:h-[283px]": isSide && isCustomWidth,
+                    "xl:w-[26.469vw] xl:h-[253px]": isSide && !isCustomWidth,
+                    "xl:w-[27.469vw] xl:h-[246px]": isEdge && isCustomWidth,
+                    "xl:w-[27.469vw] xl:h-[216px]": isEdge && !isCustomWidth,
+                  }
                 )}
               />
             </InViewWrapper>
@@ -116,20 +114,22 @@ const isCustomWidth = useCustomWidth(1500, 1700);
       <button
         className={`xl:absolute left-40 -bottom-20  2xl:bottom-[-0.5vw]  2xl:left-[8.5vw] xl:bottom-[0vw] xl:left-[8.7vw]
           xl:flex  items-center justify-center text-[#8C331B]  hidden border-[#8C331B] 2xl:w-[3.229vw] 2xl:h-[3.229vw] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B]
-           hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}  
+           hover:cursor-pointer hover:text-white transition ${
+             isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"
+           }`}
         onClick={() => slideRef.current?.slickPrev()}
       >
         <HiArrowLongLeft className="2xl:w-[32px] 2xl:h-[32px] xl:w-[26px] xl:h-[26px] w-[22px] h-[22px]" />
       </button>
-      <button 
+      <button
         className={`xl:absolute right-40 -bottom-20 2xl:bottom-[-0.5vw] xl:flex 2xl:right-[8.5vw]  xl:right-[8.7vw]
            items-center justify-center text-[#8C331B] hidden border-[#8C331B] 2xl:w-[3.229vw] 2xl:h-[3.229vw] w-[42px] h-[42px] bg-white p-0 rounded-full border z-20 hover:bg-[#8C331B] 
-         hover:cursor-pointer hover:text-white transition ${isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"}`}
+         hover:cursor-pointer hover:text-white transition ${
+           isCustomWidth ? "xl:bottom-[2vw]" : "xl:bottom-[0vw]"
+         }`}
         onClick={() => slideRef.current?.slickNext()}
       >
-        <HiArrowLongRight
-          className="2xl:w-[32px] 2xl:h-[32px] xl:w-[26px] xl:h-[26px] w-[22px] h-[22px]"
-        />
+        <HiArrowLongRight className="2xl:w-[32px] 2xl:h-[32px] xl:w-[26px] xl:h-[26px] w-[22px] h-[22px]" />
       </button>
     </div>
   );

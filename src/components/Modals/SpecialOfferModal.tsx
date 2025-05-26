@@ -130,7 +130,6 @@ export const SpecialOffersModal = () => {
                 className={`w-full h-auto object-cover xl:h-[33.44vw]
                 lg:h-[421px] 2xl:w-full 2xl:h-[50.83vh]`}
                 alt={t(data.title) || ""}
-                loading="lazy"
               />
             </picture>
           </InViewWrapper>

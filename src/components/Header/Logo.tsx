@@ -25,17 +25,17 @@ export const Logo = ({
     <Link
       to="/"
       className={cn(
-          " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]   lg:ms-0",
+        " items-center justify-center flex w-[33vw] h-full  2xl:w-fit xl:w-[110px] lg:w-[80px]   lg:ms-0",
         className,
         {
-        " xl:me-[3vw] 2xl:me-[3.02vw]"  : isRestaurant,
-        "2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw]": !isRestaurant,
+          " xl:me-[3vw] 2xl:me-[3.02vw]": isRestaurant,
+          "2xl:me-[1.93vw] xl:me-[2vw] lg:me-[1.17vw]": !isRestaurant,
         }
       )}
       onClick={onClick}
     >
       <InViewWrapper>
-        <img loading="lazy"
+        <img
           src={logo}
           alt="logo"
           className={cn(

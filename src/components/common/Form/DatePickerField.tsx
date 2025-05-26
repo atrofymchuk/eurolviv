@@ -10,15 +10,13 @@ import { FormData } from "@/types/headerTypes";
 import "@/components/common/Form/datePickerStyles.css";
 import { uk, enUS } from "date-fns/locale";
 
-
-
 export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   name,
   control,
   errors,
   label,
   placeholderKey,
-  classNameCalendar
+  classNameCalendar,
 }) => {
   const { t, i18n } = useTranslation();
   const width = window.innerWidth;
@@ -35,8 +33,6 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
   } else {
     registerLocale("en", enUS);
   }
-  
-
 
   const datePickerRef = useRef<DatePicker | null>(null);
 
@@ -48,7 +44,9 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
 
   return (
     <div className="w-full ">
-      <p className="text-white uppercase mb-3 2xl:text-[0.83vw] xl:text-[1.09vw] lg:text-[14px] md:flex hidden">{t(label)}</p>
+      <p className="text-white uppercase mb-3 2xl:text-[0.83vw] xl:text-[1.09vw] lg:text-[14px] md:flex hidden">
+        {t(label)}
+      </p>
       <Controller
         name={name as keyof FormData}
         control={control}
@@ -57,13 +55,12 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
             <div className="relative w-full controller-wrapper">
               <DatePicker
                 ref={datePickerRef}
-            disabledKeyboardNavigation={false}
-            onKeyDown={(e) => {
-              e.preventDefault();
-          }}
-          
-                onInputClick={()=>{
-                  handleIconClick()
+                disabledKeyboardNavigation={false}
+                onKeyDown={(e) => {
+                  e.preventDefault();
+                }}
+                onInputClick={() => {
+                  handleIconClick();
                 }}
                 locale={i18n.language}
                 calendarClassName={classNameCalendar}
@@ -80,7 +77,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
                 )}
                 placeholderText={getInputText()}
               />
-              <img loading="lazy"
+              <img
                 src={calendarBooking}
                 alt="calendar"
                 className="absolute lg:left-3 left-2 top-1/2 transform -translate-y-1/2 2xl:w-[1vw] 2xl:h-[1vw] lg:w-[19px] lg:h-[19px] w-[3.2vw] h-[3.2vw] cursor-pointer"
@@ -90,7 +87,10 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
                 className="bg-white rounded-full lg:p-[7px] p-[2px] absolute lg:right-2 right-1.25 top-1/2 transform -translate-y-1/2 cursor-pointer"
                 onClick={handleIconClick}
               >
-                <FiChevronDown className="2xl:w-[0.94vw] 2xl:h-[0.94vw] xl:w-[0.69vw] xl:h-[0.69vw] lg:w-[12px] lg:h-[12px] w-[4.27vw] h-[4.27vw]" color="#3D3D3D" />
+                <FiChevronDown
+                  className="2xl:w-[0.94vw] 2xl:h-[0.94vw] xl:w-[0.69vw] xl:h-[0.69vw] lg:w-[12px] lg:h-[12px] w-[4.27vw] h-[4.27vw]"
+                  color="#3D3D3D"
+                />
               </span>
             </div>
             {errors[name as keyof FormData] && (

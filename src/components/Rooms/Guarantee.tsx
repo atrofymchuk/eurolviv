@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { eurohotel } from "@/store/exportsImg";
-  import { useIsEnglish } from "@/hooks/useIsEnglish";
-  import { Link } from "react-router-dom";
+import { useIsEnglish } from "@/hooks/useIsEnglish";
+import { Link } from "react-router-dom";
 export const Guarantee = () => {
   const { t } = useTranslation();
   const isEng = useIsEnglish();
@@ -75,7 +75,6 @@ export const Guarantee = () => {
         <div className="relative grid md:grid-cols-[56.88%_44.12%]   grid-cols-[1fr] 2xl:justify-normal xl:justify-center justify-center w-full ">
           <div className="  border-[#C7C7C7] 2xl:border-0 px-[14px] md:px-0">
             <img
-              loading="lazy"
               src={eurohotel}
               alt="eurohotel"
               className="w-full h-full object-cover 2xl:object-[90%_50%] "
@@ -126,7 +125,11 @@ export const Guarantee = () => {
                 <h1
                   className={`uppercase text-[#242425] 2xl:text-[5.21vw] xl:text-[70px] text-[8.53vw] 2xl:leading-[94%] 
                    lg:text-[5.27vw] leading-[91%] 2xl:tracking-[-0.04em] tracking-[-0.07em] 2xl:w-[35.47vw] xl:w-[500px] md:font-cofo-medium
-                   ${isEng ? "mx-auto text-center md:text-left 2xl:mb-[1.56vw] xl:mb-[1vw]" : " "}`}
+                   ${
+                     isEng
+                       ? "mx-auto text-center md:text-left 2xl:mb-[1.56vw] xl:mb-[1vw]"
+                       : " "
+                   }`}
                 >
                   {t("rooms.guarantee.onOurSite")}
                 </h1>

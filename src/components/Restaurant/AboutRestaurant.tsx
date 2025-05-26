@@ -123,7 +123,6 @@ export const AboutRestaurant = () => {
               }`}
             >
               <img
-                loading="lazy"
                 src={aboutImageFst}
                 alt=""
                 className=" w-full h-full object-cover"
@@ -136,7 +135,6 @@ export const AboutRestaurant = () => {
               }`}
             >
               <img
-                loading="lazy"
                 src={aboutImageScd}
                 alt=""
                 className=" w-full h-full object-cover"
@@ -149,7 +147,6 @@ export const AboutRestaurant = () => {
             `}
           >
             <img
-              loading="lazy"
               src={aboutImageTrd}
               alt=""
               className={` w-full h-full  object-cover 2xl:h-[15.208vw] xl:h-[17.321vw] lg:h-[29vw]
@@ -167,7 +164,11 @@ export const AboutRestaurant = () => {
             </p>
 
             <p className="uppercase text-[#252526] 2xl:text-[0.9375vw] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[12px]  w-[100%] ">
-              <span className={`${isEng ? 'font-cofo-medium' : 'lg:font-cofo-medium'}`}>
+              <span
+                className={`${
+                  isEng ? "font-cofo-medium" : "lg:font-cofo-medium"
+                }`}
+              >
                 {t("restaurant.about.desc.fourh.0")}
               </span>
               <span className="">{t("restaurant.about.desc.fourh.1")}</span>

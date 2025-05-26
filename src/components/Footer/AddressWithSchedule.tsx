@@ -34,7 +34,6 @@ export const AddressWithSchedule = ({
             flex gap-x-[7px] leading-[1.28] font-cofo-medium items-center 2xl:text-[0.938vw] xl:text-[1.09vw] gap-1 lg:text-[12px] text-[12px] font-cofo uppercase underline lg:mt-[15px] 2xl:mt-[0.781vw] underline-offset-4  lg:ps-[0px] mt-3 decoration-[6.5%]`}
           >
             <img
-              loading="lazy"
               src={navigate}
               className="filter-invert-white"
               alt="location"

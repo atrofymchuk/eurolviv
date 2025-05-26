@@ -13,7 +13,6 @@ export const Rating = ({
     <div className="lg:hidden block mt-[61px] h-full">
       <div className="flex items-center">
         <img
-          loading="lazy"
           src={rating}
           alt="rating"
           width={42}
@@ -31,8 +30,8 @@ export const Rating = ({
       </div>
 
       <div className="flex mt-6 space-x-3">
-        <img loading="lazy" src={visa} alt="Visa" className="h-6" />
-        <img loading="lazy" src={mastercard} alt="Mastercard" className="h-6" />
+        <img src={visa} alt="Visa" className="h-6" />
+        <img src={mastercard} alt="Mastercard" className="h-6" />
       </div>
       <div className="flex justify-between mt-[65px] px-[1.27vw] lg:px-0">
         <p className=" uppercase underline cursor-pointer lg:leading-[20px] underline-offset-[18%] text-[12px] lg:tracking-[0.06em] ">

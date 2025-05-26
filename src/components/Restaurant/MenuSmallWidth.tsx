@@ -13,18 +13,18 @@ export const MenuSmallWidth = ({ className }: MenuSmallWidthToProps) => {
       )}
     >
       <InViewWrapper>
-        <img loading="lazy"
+        <img
           src={coffe}
           alt=""
           className="w-[25.07vw] h-[37.87vw] sm:w-[162px] sm:h-[186px]  object-cover"
         />
-        <img loading="lazy"
+        <img
           src={spagetti}
           alt=""
           className="w-[28.27vw] h-[37.87vw] sm:w-[182px] sm:h-[186px]  object-cover"
         />
 
-        <img loading="lazy"
+        <img
           src={meat}
           alt=""
           className="w-[25.07vw] h-[37.87vw] sm:w-[162px] sm:h-[186px]  object-cover"
