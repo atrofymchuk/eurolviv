@@ -8,13 +8,15 @@ type HeaderSocialToProps = {
   styles: string;
 };
 
-export const  HeaderSocial = ({ styles }: HeaderSocialToProps) => {
+export const HeaderSocial = ({ styles }: HeaderSocialToProps) => {
   return (
     <div className=" lg:flex hidden  space-x-[0.49vw]  2xl:pt-[1.15vw] xl:pt-[0.94vw] 2xl:me-[2.19vw] xl:me-[1.56vw] lg:me-[1.17vw]">
       <Link
         to={social.hotel.telegram}
         target="_blank"
-        className={cn(`2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles}`)}
+        className={cn(
+          `2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles}`
+        )}
       >
         <RiTelegram2Fill className="2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1" />
       </Link>
@@ -22,18 +24,20 @@ export const  HeaderSocial = ({ styles }: HeaderSocialToProps) => {
       <Link
         to={social.hotel.whatsapp}
         target="_blank"
-        className={cn(`2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles} `)}
+        className={cn(
+          `2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] rounded-full ${styles} `
+        )}
       >
         <FaWhatsapp className="2xl:w-[1.98vw] 2xl:h-[1.98vw] xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1 " />
       </Link>
       <Link
-        to={social.hotel.viber}
-         target="_blank"
+        to={social.restaurant.viber}
+        target="_blank"
         className={cn(
           `2xl:w-[1.98vw] 2xl:h-[1.98vw] rounded-full xl:w-[2.03vw] xl:h-[2.03vw] lg:w-[2.34vw] lg:h-[2.34vw] p-1 px-1.5 xl:px-[0.4vw] 2xl:px-[0.3vw] flex text-center items-end ${styles}`
         )}
       >
-        <svg  
+        <svg
           viewBox="0 0 24 26"
           className="2xl:p-[0.1vw] xl:p-[0.0vw] lg:p-[0.0vw]"
           fill="currentColor"
