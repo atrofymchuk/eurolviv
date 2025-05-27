@@ -1,0 +1,50 @@
+name: Manual Deploy via rsync
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: website
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Create .htaccess for SPA routing
+      run: |
+        cat <<EOF > dist/.htaccess
+        <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]
+        </IfModule>
+        EOF
+
+    - name: Deploy to hosting via rsync
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+        rsync -avz --delete \
+          -e "ssh -p ${{ secrets.DEPLOY_PORT }}" \
+          ./dist/ \
+          ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/home/eurohot/eurohotel.lviv.ua/www/
