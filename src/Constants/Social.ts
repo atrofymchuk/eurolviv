@@ -8,7 +8,7 @@ export const social = {
     facebook: "https://www.facebook.com/eurohotel.lviv",
   },
   restaurant: {
-    instagram: "https://www.instagram.com/ruff.lviv?igsh=MWg0OHV1enBreWdh",
+    instagram: "https://www.instagram.com/roof.rest.lviv?igsh=MWg0OHV1enBreWdh",
     telegram: "https://t.me/+380933483114",
     whatsapp: "https://wa.me/380933483114",
     viber: "https://msng.link/o/?380933483114=vi",
