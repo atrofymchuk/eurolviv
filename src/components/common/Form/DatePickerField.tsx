@@ -52,7 +52,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
         control={control}
         render={({ field }) => (
           <div className="relative w-full">
-            <div className="relative w-full controller-wrapper">
+            <div className="relative w-full controller-wrapper rounded-xl">
               <DatePicker
                 ref={datePickerRef}
                 disabledKeyboardNavigation={true}
@@ -72,7 +72,7 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
                 startDate={typeof startDate === "string" ? null : startDate}
                 minDate={new Date()}
                 className={cn(
-                  "w-full ps-[26px] lg:ps-[40px] py-[7.5px] 2xl:py-[0.52vw] 2xl:ps-[2.08vw] lg:text-[14px] xl:ps-[3vw] xl:py-[0.67vw] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] 2xl:text-[0.83vw]",
+                  "w-full min-h-9 ps-[26px] pe-10 lg:ps-[40px] lg:pe-10 py-[7.5px] 2xl:py-[0.52vw] 2xl:ps-[2.08vw] lg:text-[14px] xl:ps-[3vw] xl:py-[0.67vw] rounded-xl bg-white/20 text-white placeholder-white/70 outline-none text-[10px] 2xl:text-[0.83vw]",
                   errors[name as keyof FormData] && "border-red-500 border"
                 )}
                 placeholderText={getInputText()}
@@ -80,15 +80,15 @@ export const DatePickerField: React.FC<DatePickerFieldProps> = ({
               <img
                 src={calendarBooking}
                 alt="calendar"
-                className="absolute lg:left-3 left-2 top-1/2 transform -translate-y-1/2 2xl:w-[1vw] 2xl:h-[1vw] lg:w-[19px] lg:h-[19px] w-[3.2vw] h-[3.2vw] cursor-pointer"
+                className="absolute lg:left-3 left-2 top-1/2 -translate-y-1/2 w-4 h-4 lg:w-[18px] lg:h-[18px] 2xl:w-[1vw] 2xl:h-[1vw] max-w-[20px] max-h-[20px] cursor-pointer object-contain"
                 onClick={handleIconClick}
               />
               <span
-                className="bg-white rounded-full lg:p-[7px] p-[2px] absolute lg:right-2 right-1.25 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                className="bg-white rounded-full p-1 lg:p-1.5 absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer shrink-0 flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7"
                 onClick={handleIconClick}
               >
                 <FiChevronDown
-                  className="2xl:w-[0.94vw] 2xl:h-[0.94vw] xl:w-[0.69vw] xl:h-[0.69vw] lg:w-[12px] lg:h-[12px] w-[4.27vw] h-[4.27vw]"
+                  className="w-3 h-3 lg:w-3.5 lg:h-3.5 2xl:w-[0.94vw] 2xl:h-[0.94vw] 2xl:max-w-[14px] 2xl:max-h-[14px] shrink-0"
                   color="#3D3D3D"
                 />
               </span>
