@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
-
+:root {
+  --header-height: 25.33vw;
+}
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 9.08vw;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --header-height: 6.93vw;
+  }
+}
 
 .swiper { position: unset !important; }
 
