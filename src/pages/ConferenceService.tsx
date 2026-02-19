@@ -4,7 +4,6 @@ import { ConferenceMenuContent } from "@/components/ConferesceService/Conference
 import { Equipment } from "@/components/ConferesceService/Equipment";
 import { Header } from "@/components/ConferesceService/Header";
 import { RoomSliderContainer } from "@/components/ConferesceService/RoomSliderContainer";
-import { UpdateNotificationBanner } from "@/components/ConferesceService/UpdateNotificationBanner";
 import { useLockScroll } from "../hooks/useLockScroll";
 
 import { useRoomStore } from "@/store/useRoomsStore";
@@ -14,7 +13,6 @@ export const ConferenceService = () => {
   useLockScroll(document.body, true);
   const { halls } = useRoomStore();
   const anchorId = ["big-hall", "small-hall", "launge-hall"];
-  const isBannerVisible = true;
 
 
   const sections = halls.flatMap((el, index) => [
@@ -38,7 +36,6 @@ export const ConferenceService = () => {
 
   return (
     <div className="overflow-y-hidden">
-      <UpdateNotificationBanner isVisible={isBannerVisible} />
       <Header />
       {sections.map((Component, index) => (
         <div key={index} id={`section-${index}`}>
