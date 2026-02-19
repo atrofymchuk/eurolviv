@@ -10,7 +10,7 @@ import { useRoomStore } from "@/store/useRoomsStore";
 import cn from "classnames";
 
 export const ConferenceService = () => {
-  useLockScroll(document.body, true);
+  useLockScroll(document.body, false);
   const { halls } = useRoomStore();
   const anchorId = ["big-hall", "small-hall", "launge-hall"];
 
