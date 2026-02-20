@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
-import ruffLogo from "@/assets/icons/ruffLogo.svg";
+import { RoofWordmark } from "@/components/common/RoofWordmark";
 import { usePagesInfoStore } from "@/store/usePagesInfoStore";
 import { links } from "@/Constants/Links";
 export const RoofService = () => {
@@ -60,11 +60,7 @@ export const RoofService = () => {
                 <div>
                   <div className="flex justify-center w-full">
                     <InViewWrapper>
-                      <img
-                        src={ruffLogo}
-                        alt=""
-                        className="w-[135px] h-[18px]"
-                      />
+                      <RoofWordmark className="text-white text-[22px] lg:text-[24px] 2xl:text-[26px]" />
                     </InViewWrapper>
                   </div>
                   <h1
