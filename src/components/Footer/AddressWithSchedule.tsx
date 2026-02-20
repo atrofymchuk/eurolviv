@@ -78,19 +78,14 @@ export const AddressWithSchedule = ({
             </li>
           </ul>
           <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[15px] 2xl:mt-[0.78vw]  mt-[20px]  ">
-            <p className="2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[12px] text-[12px] font-cofo uppercase decoration-[5%] underline   font-cofo-medium">
-              <a href="mailto:reception@eurohotel.lviv.ua">
-                reception@eurohotel.lviv.ua
-              </a>
-            </p>
-            <div className="lg:mt-[32px] mt-[19px] xl:mt-[25px] 2xl:mt-[1.4vw] flex gap-x-4 ">
+            <div className="lg:mt-[52px] mt-[40px] xl:mt-[44px] 2xl:mt-[2.5vw] flex gap-x-4 ">
               <Link
                 to={social.hotel.telegram}
                 target="_blank"
-                className="bg-white rounded-full hover:cursor-pointer"
+                className="bg-white rounded-full hover:cursor-pointer flex items-center justify-center p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px]"
               >
                 <RiTelegram2Fill
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px] p-1"
+                  className="w-full h-full"
                   color="#45525F"
                 />
               </Link>
@@ -98,21 +93,20 @@ export const AddressWithSchedule = ({
               <Link
                 to={social.hotel.whatsapp}
                 target="_blank"
-                className="bg-white rounded-full hover:cursor-pointer"
+                className="bg-white rounded-full hover:cursor-pointer flex items-center justify-center p-1 2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px]"
               >
                 <FaWhatsapp
                   color="#45525E"
-                  className="2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px]  p-1 "
+                  className="w-full h-full"
                 />
               </Link>
               <Link
                 to={social.hotel.viber}
                 target="_blank"
-                className=" xl:w-[2.5vw] xl:h-[2.5vw] lg:w-8 lg:h-8 rounded-full text-[#495560] bg-white p-1 px-1.5 flex text-center items-center 2xl:w-[1.93vw] 2xl:h-[1.93vw]  w-[28px] h-[28px]"
+                className="bg-white rounded-full hover:cursor-pointer flex items-center justify-center p-1 text-[#495560] 2xl:w-[1.93vw] 2xl:h-[1.93vw] xl:w-[2.5vw] xl:h-[2.5vw] lg:w-[32px] lg:h-[32px] w-[28px] h-[28px]"
               >
                 <svg
-                  width="26"
-                  height="26"
+                  className="w-full h-full"
                   viewBox="0 0 24 26"
                   fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
