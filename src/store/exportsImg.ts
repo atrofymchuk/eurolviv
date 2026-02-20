@@ -64,6 +64,10 @@ export { default as standartBedRoomTwo } from "@/assets/Rooms/StandartSingle/bed
 export { default as bigHall } from "@/assets/ConferenceService/BigHall.webp";
 export { default as bigHallTheathre } from "@/assets/ConferenceService/BigHallTheathre.webp";
 export { default as hallH } from "@/assets/ConferenceService/hallH.webp";
+export { default as bigHallGallery1 } from "@/assets/ConferenceService/BigHall/BigHall_1.webp";
+export { default as bigHallGallery2 } from "@/assets/ConferenceService/BigHall/BigHall_2.webp";
+export { default as bigHallGallery3 } from "@/assets/ConferenceService/BigHall/BigHall_3.webp";
+export { default as bigHallGallery4 } from "@/assets/ConferenceService/BigHall/BigHall_4.webp";
 export { default as pLetterImg } from "@/assets/ConferenceService/pLetterImg.webp";
 export { default as negotiationTableBig } from "@/assets/ConferenceService/negotiationTableBig.webp";
 
@@ -78,11 +82,19 @@ export { default as theathreMax30 } from "@/assets/ConferenceService/uaHall/thea
 
 
 export { default as smallHallPreview } from "@/assets/ConferenceService/smallHallPreview.webp";
+export { default as smallHallGallery1 } from "@/assets/ConferenceService/SmallHall/SmallHall_1.webp";
+export { default as smallHallGallery2 } from "@/assets/ConferenceService/SmallHall/SmallHall_2.webp";
+export { default as smallHallGallery3 } from "@/assets/ConferenceService/SmallHall/SmallHall_3.webp";
+export { default as smallHallGallery4 } from "@/assets/ConferenceService/SmallHall/SmallHall_4.webp";
 export { default as pLetterSmall } from "@/assets/ConferenceService/pLetterSmall.webp";
 export { default as theathreSmall } from "@/assets/ConferenceService/theathreSmall.webp";
 export { default as negotiationTableSmall } from "@/assets/ConferenceService/negotiationTableSmall.webp";
 
 export { default as laungePreview } from "@/assets/ConferenceService/laungePreview.webp";
+export { default as laungeGallery1 } from "@/assets/ConferenceService/LaungeHall/LaungeHall_1.webp";
+export { default as laungeGallery2 } from "@/assets/ConferenceService/LaungeHall/LaungeHall_2.webp";
+export { default as laungeGallery3 } from "@/assets/ConferenceService/LaungeHall/LaungeHall_3.webp";
+export { default as laungeGallery4 } from "@/assets/ConferenceService/LaungeHall/LaungeHall_4.webp";
 export { default as laungeTheatre } from "@/assets/ConferenceService/laungeTheatre.webp";
 export { default as negotiationTableLaunge } from "@/assets/ConferenceService/negotiationTableLaunge.webp";
 
@@ -149,7 +161,10 @@ export { default as aboutImageTrd } from "@/assets/Restaurant/about3.webp";
 export { default as food } from "@/assets/ConferenceService/Menu/food.webp";
 export { default as sandwich } from "@/assets/ConferenceService/Menu/sandwich.webp";
 export { default as coffee } from "@/assets/ConferenceService/Menu/coffee.webp";
-export { default as headerConference } from "@/assets/ConferenceService/hallH.webp";
+export { default as conferencePreview1 } from "@/assets/ConferenceService/1.webp";
+export { default as conferencePreview2 } from "@/assets/ConferenceService/2.webp";
+export { default as conferencePreview3 } from "@/assets/ConferenceService/3.webp";
+export { default as headerConference } from "@/assets/ConferenceService/4.webp";
 export { default as headerConferenceMobile } from "@/assets/ConferenceService/hallPhone.webp";
 export { default as headerMobile } from "@/assets/ConferenceService/headerMobile.webp";
 

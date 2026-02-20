@@ -1,17 +1,21 @@
 import { memo } from "react";
+import cn from "classnames";
 import { Icon } from "@/types/types";
 import { useTranslation } from "react-i18next";
 
 type EquipmentToProps = {
   icons: Icon[];
-  price: { hour: number; day: number };
+  price: { hour: number; day: number } | null;
 };
 
 export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
   const { t } = useTranslation();
   return (
     <div className="flex  bg-[#F2EFEC] justify-center flex-1 2xl:h-[231px 2xl:h-[12vw] w-full">
-      <div className="grid grid-cols-1  py-[41px] lg:py-0 lg:grid-cols-[20.58%_42.9%_35%] lg:w-full w-[79.1%]   border-[#C7C7C7] border-x lg:border-x-0  box-border">
+      <div className={cn(
+        "grid grid-cols-1 py-[41px] lg:py-0 w-[79.1%] border-[#C7C7C7] border-x lg:border-x-0 box-border",
+        price ? "lg:grid-cols-[20.58%_42.9%_35%] lg:w-full" : "lg:grid-cols-[20.58%_79.42%] lg:w-full"
+      )}>
         <div className="border-[#C7C7C7] flex items-center 2xl:ps-[3.7vw] xl:ps-[3.1vw] ps-[10px] md:ps-[20px] md:p-6 lg:pb-8 ">
           <h1 className="pb-[10px] md:font-cofo-medium uppercase text-[24px] sm:text-[24px] md:text-[32px] lg:text-[24px] xl:text-[2.3vw]  2xl:text-[2.1vw] leading-[100%] tracking-[-0.05em] text-[#8C331B]  ">
             {t("conferenceService.equipment.title.0")} <br />
@@ -63,25 +67,27 @@ export const Equipment = memo(({ icons, price }: EquipmentToProps) => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:ps-[36px] 2xl:ps-[42px] pt-[50px]  lg:pt-[20px] xl:pt-[30px] 2xl:pt-[42px] xl:pb-[40px]   lg:col-span-1  ps-[10px] md:ps-[20px]">
-          <h2 className="uppercase text-[#8C331B] text-[24px] md:text-[16px] lg:text-[20px] xl:text-[30x] 2xl:text-[1.67vw]  leading-[100%] md:font-cofo-medium ">
-            {t("conferenceService.equipment.price")}
-          </h2>
-          <div className="gap-y-[3px] mt-[15px]  2xl:mt-[27px] ">
-            <p className="text-[#8C331B] text-[14px] sm:text-[18px] md:text-[24px] lg:text-[18px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
-              {price.day} UAH &nbsp;
-              <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
-                /{t("conferenceService.equipment.day")}
-              </span>
-            </p>
-            <p className="text-[#8C331B] text-[14px]  md:text-[24px] lg:text-[18px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
-              {price.hour} UAH &nbsp;
-              <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
-                /{t("conferenceService.equipment.hour")}
-              </span>
-            </p>
+        {price && (
+          <div className="flex flex-col xl:ps-[36px] 2xl:ps-[42px] pt-[50px]  lg:pt-[20px] xl:pt-[30px] 2xl:pt-[42px] xl:pb-[40px]   lg:col-span-1  ps-[10px] md:ps-[20px]">
+            <h2 className="uppercase text-[#8C331B] text-[24px] md:text-[16px] lg:text-[20px] xl:text-[30x] 2xl:text-[1.67vw]  leading-[100%] md:font-cofo-medium ">
+              {t("conferenceService.equipment.price")}
+            </h2>
+            <div className="gap-y-[3px] mt-[15px]  2xl:mt-[27px] ">
+              <p className="text-[#8C331B] text-[14px] sm:text-[18px] md:text-[24px] lg:text-[18px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
+                {price.day} UAH &nbsp;
+                <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
+                  /{t("conferenceService.equipment.day")}
+                </span>
+              </p>
+              <p className="text-[#8C331B] text-[14px]  md:text-[24px] lg:text-[18px] 2xl:text-[1.67vw] xl:text-[28px] leading-tight">
+                {price.hour} UAH &nbsp;
+                <span className="text-[#383838] font-normal uppercase text-[14px]  md:text-[18px] 2xl:text-[1.67vw] xl:text-[28px]">
+                  /{t("conferenceService.equipment.hour")}
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import * as icons from "@/store/exportsIcons";
 export const initialCoferenceHallState: ConferenceServiceState = {
   halls: [
     {
-      previewImage: imgs.bigHall,
+      previewImage: imgs.conferencePreview2,
       title: "conferenceHallState.bigHall.title",
       size: "conferenceHallState.bigHall.desc",
       area: "120M²",
@@ -16,22 +16,16 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.bigHall.about.pTwo",
         pMobile: "conferenceHallState.bigHall.about.pMobile",
       },
-      price: { hour: 1000, day: 5000 },
-      swiperImages: [imgs.bigHall, imgs.bigHallTheathre, imgs.hallH],
+      price: null,
+      swiperImages: [imgs.bigHallGallery1, imgs.bigHallGallery2, imgs.bigHallGallery3],
       showcaseSwiperImages: [
-        imgs.pLetterImg,
-        imgs.hallH,
-        imgs.bigHallTheathre,
-        imgs.negotiationTableBig,
+        imgs.bigHallGallery2,
+        imgs.bigHallGallery1,
+        imgs.bigHallGallery3,
       ],
       viewShowcaseSwiperImages: {
-        ua: [
-          imgs.pLetter,
-          imgs.classRoom,
-          imgs.theathre,
-          imgs.negotiationTable,
-        ],
-        eng: [imgs.uShape40max, imgs.class40max, imgs.theater, imgs.board40max],
+        ua: [imgs.pLetter, imgs.classRoom, imgs.theathre],
+        eng: [imgs.uShape40max, imgs.class40max, imgs.theater],
       },
 
       icons: [
@@ -61,11 +55,27 @@ export const initialCoferenceHallState: ConferenceServiceState = {
           src: icons.microphone,
           text: "conferenceHallState.bigHall.icons.microphone",
         },
+        {
+          src: icons.flipchart,
+          text: "conferenceHallState.bigHall.icons.interactiveBoard",
+        },
+        {
+          src: icons.camera,
+          text: "conferenceHallState.bigHall.icons.videoConferenceCamera",
+        },
+        {
+          src: icons.tablet,
+          text: "conferenceHallState.bigHall.icons.tablet",
+        },
+        {
+          src: icons.screen,
+          text: "conferenceHallState.bigHall.icons.twoDisplays65",
+        },
       ],
     },
 
     {
-      previewImage: imgs.smallHallPreview,
+      previewImage: imgs.conferencePreview1,
       title: "conferenceHallState.smallHall.title",
       size: "conferenceHallState.smallHall.desc",
       area: "75M²",
@@ -76,17 +86,17 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.smallHall.about.pTwo",
         pMobile: "conferenceHallState.smallHall.about.pMobile",
       },
-      price: { hour: 1000, day: 5000 },
+      price: null,
       swiperImages: [
-        imgs.smallHallPreview,
-        imgs.pLetterSmall,
-        imgs.theathreSmall,
-        imgs.negotiationTableSmall,
+        imgs.smallHallGallery1,
+        imgs.smallHallGallery2,
+        imgs.smallHallGallery3,
+        imgs.smallHallGallery4,
       ],
       showcaseSwiperImages: [
-        imgs.pLetterSmall,
-        imgs.theathreSmall,
-        imgs.negotiationTableSmall,
+        imgs.smallHallGallery1,
+        imgs.smallHallGallery2,
+        imgs.smallHallGallery4,
       ],
       viewShowcaseSwiperImages: {
         ua: [imgs.pMax20, imgs.theathreMax30, imgs.negotiationTableMax25],
@@ -120,7 +130,7 @@ export const initialCoferenceHallState: ConferenceServiceState = {
     },
 
     {
-      previewImage: imgs.laungePreview,
+      previewImage: imgs.conferencePreview3,
       title: "conferenceHallState.launge.title",
       size: "conferenceHallState.launge.desc",
       area: "45M²",
@@ -131,16 +141,21 @@ export const initialCoferenceHallState: ConferenceServiceState = {
         pTwo: "conferenceHallState.launge.about.pTwo",
         pMobile: "conferenceHallState.launge.about.pMobile",
       },
-      price: { hour: 800, day: 3000 },
+      price: null,
       swiperImages: [
-        imgs.laungePreview,
-        imgs.laungeTheatre,
-        imgs.negotiationTableLaunge,
+        imgs.laungeGallery1,
+        imgs.laungeGallery2,
+        imgs.laungeGallery3,
+        imgs.laungeGallery4,
       ],
-      showcaseSwiperImages: [imgs.laungeTheatre, imgs.negotiationTableLaunge],
+      showcaseSwiperImages: [
+        imgs.laungeGallery2,
+        imgs.laungeGallery3,
+        imgs.laungeGallery1,
+      ],
       viewShowcaseSwiperImages: {
-        ua: [imgs.theathreMax30, imgs.negotiationTableMax20],
-        eng: [imgs.theater30max, imgs.board20max],
+        ua: [imgs.classRoom, imgs.theathreMax30, imgs.negotiationTableMax20],
+        eng: [imgs.class, imgs.theater30max, imgs.board20max],
       },
       icons: [
         {

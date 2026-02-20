@@ -59,7 +59,7 @@ export type ConferenceService = {
   price: {
     hour: number;
     day: number;
-  };
+  } | null;
   about: {
     pOne: string;
     pTwo: string;
