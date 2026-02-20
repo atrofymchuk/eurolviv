@@ -23,7 +23,7 @@ export const imageArray = [
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title",
-      pdfPath: "/documents/Lunches_and_Dishes.pdf",
+      pdfPath: "/documents/Business_lunch.pdf",
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title2",

@@ -45,6 +45,8 @@ export  { default as notebook} from "@/assets/icons/ConferenceService/notebook.s
 export  { default as paper} from "@/assets/icons/ConferenceService/paper.svg";
 export  { default as soundSystem} from "@/assets/icons/ConferenceService/soundsystem.svg";
 export  { default as flipchart} from "@/assets/icons/ConferenceService/flipchart.svg";
+export  { default as camera} from "@/assets/icons/ConferenceService/camera.svg";
+export  { default as tablet} from "@/assets/icons/ConferenceService/tablet.svg";
 
 export  { default as door} from "@/assets/icons/About/door.svg";
 export  { default as restaurant} from "@/assets/icons/About/restaurant.svg";

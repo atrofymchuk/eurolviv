@@ -36,7 +36,11 @@
             "paper":"блок паперу",
             "presenter":"презентер",
             "flipchart":"фліпчарт",
-            "microphone":"2 мікрофони"
+            "microphone":"2 мікрофони",
+            "interactiveBoard":"інтерактивна дошка",
+            "videoConferenceCamera":"камера для відеоконференцій",
+            "tablet":"планшет",
+            "twoDisplays65":"2 дисплеї 65\""
 
         }
     },

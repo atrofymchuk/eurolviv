@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { RoofWordmark } from "@/components/common/RoofWordmark";
 type LogoProps = {
   logo: string;
   iconLogoStyle: string;
@@ -21,6 +22,7 @@ export const Logo = ({
   pathname,
 }: LogoProps) => {
   const isRestaurant = pathname === "/terrace" || pathname === "/restaurant";
+  const isRoofRestaurant = pathname === "/restaurant";
   return (
     <Link
       to="/"
@@ -35,21 +37,30 @@ export const Logo = ({
       onClick={onClick}
     >
       <InViewWrapper>
-        <img
-          src={logo}
-          alt="logo"
-          className={cn(
-            "duration-300",
-            {
-              [`${iconLogoStyle} w-[18.13vw] h-[10.67vw] xl:w-[7.81vw] 2xl:h-[4.3vw] 2xl:w-[8vw]  xl:h-[5.47vw] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`]:
-                !isMobile,
-              "w-[99px] h-[54px] filter invert": isMobile,
-              "2xl:h-[91px]": pathname === "/terrace",
-              "2xl:h-[71px] 2xl:w-[129px]": pathname === "/restaurant",
-            },
-            iconClassName
-          )}
-        />
+        {isRoofRestaurant ? (
+          <RoofWordmark
+            className={cn(
+              "text-[#252526]",
+              iconLogoStyle,
+              "text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px]"
+            )}
+          />
+        ) : (
+          <img
+            src={logo}
+            alt="logo"
+            className={cn(
+              "duration-300",
+              {
+                [`${iconLogoStyle} w-[18.13vw] h-[10.67vw] xl:w-[7.81vw] 2xl:h-[4.3vw] 2xl:w-[8vw]  xl:h-[5.47vw] lg:w-[100px] lg:h-[60px] md:w-[80px] md:h-[48px]`]:
+                  !isMobile,
+                "w-[99px] h-[54px] filter invert": isMobile,
+                "2xl:h-[91px]": pathname === "/terrace",
+              },
+              iconClassName
+            )}
+          />
+        )}
       </InViewWrapper>
     </Link>
   );

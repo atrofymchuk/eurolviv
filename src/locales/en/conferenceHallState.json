@@ -35,8 +35,11 @@
                 "paper":"Paper pad",
                 "presenter":"Presenter remote",
                 "flipchart":"Flipchart",
-                "microphone":"2 microphones"
-    
+                "microphone":"2 microphones",
+                "interactiveBoard":"Interactive whiteboard",
+                "videoConferenceCamera":"Video conference camera",
+                "tablet":"Tablet",
+                "twoDisplays65":"2 displays 65\""
             }
         },
         "launge":{
