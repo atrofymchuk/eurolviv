@@ -5,10 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ConferenceServiceSlider } from "@/components/Home/ConferenceServiceSlider";
 import cn from "classnames";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
-import { useState } from "react";
-import { UpdateNotificationBanner } from "../ConferesceService/UpdateNotificationBanner";
 export const ConferenceService = () => {
-  const [isBannerVisible, setIsBannerVisible] = useState(false);
   const { t } = useTranslation();
   const { halls } = useRoomStore();
   const isEng = useIsEnglish();
@@ -67,13 +64,12 @@ export const ConferenceService = () => {
           <div className=""></div>
         </div>
         <div className="h-full hidden md:block">
-          <HallList halls={hallsForList} isEng={isEng} setIsBannerVisible={setIsBannerVisible} />
+          <HallList halls={hallsForList} isEng={isEng} />
         </div>
       </div>
       <div className="h-full block md:hidden max-w-screen mt-[46px] mb-[75px]">
         <ConferenceServiceSlider halls={halls} />
       </div>
-      <UpdateNotificationBanner isVisible={isBannerVisible} onClose={() => setIsBannerVisible(false)} />
     </div>
   );
 };

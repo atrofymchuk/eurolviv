@@ -52,11 +52,10 @@ export const AddressWithSchedule = ({
           </Link>
         </div>
         <div
-          className={`${
-            isEng
-              ? "2xl:mt-[2.1vw] xl:mt-[28px]"
-              : "2xl:mt-[3.333vw] xl:mt-[40px] lg:mt-[55px]"
-          }`}
+          className={`${isEng
+            ? "2xl:mt-[2.1vw] xl:mt-[28px]"
+            : "2xl:mt-[3.333vw] xl:mt-[40px] lg:mt-[55px]"
+            }`}
         >
           <h4 className=" text-[12px] font-cofo-medium uppercase  2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] m-0 lg:mt-auto mt-[44px] font-cofo  leading-[1.28]">
             {t("footer.reception")}
@@ -78,7 +77,10 @@ export const AddressWithSchedule = ({
             </li>
           </ul>
           <div className="flex flex-col gap-x-3 2xl:text-[0.938vw] xl:text-[1.09vw] lg:text-[14px] text-[12px] lg:mt-[15px] 2xl:mt-[0.78vw]  mt-[20px]  ">
-            <div className="lg:mt-[52px] mt-[40px] xl:mt-[44px] 2xl:mt-[2.5vw] flex gap-x-4 ">
+            <a href="mailto:info@eurohotel.lviv.ua" className="hover:underline font-cofo uppercase underline underline-offset-2 decoration-[5%]">
+              info@eurohotel.lviv.ua
+            </a>
+            <div className="lg:mt-[20px] mt-[15px] xl:mt-[20px] 2xl:mt-[1vw] flex gap-x-4 ">
               <Link
                 to={social.hotel.telegram}
                 target="_blank"
