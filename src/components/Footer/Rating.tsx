@@ -24,7 +24,7 @@ export const Rating = ({
             Booking.com
           </p>
           <p className="2xl:text-[0.938vw] lg:text-[18px] text-[#D6D5D5] text-[12px] font-cofo uppercase">
-            Traveller Review Awards 2024
+            Traveller Review Awards 2026
           </p>
         </div>
       </div>

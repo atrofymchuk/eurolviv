@@ -12,7 +12,7 @@ export const RatingMobile = () => {
         Booking.com
       </p>
       <p className="2xl:mt-[0.313vw] xl:mt-[6px] mt-[6px] 2xl:text-[0.833vw] xl:text-[1.09vw] lg:text-[14px] text-[#D6D5D5] font-cofo uppercase leading-[1.28]">
-        Traveller Review Awards 2024
+        Traveller Review Awards 2026
       </p>
 
       <div className="flex space-x-4 2xl:mt-11.75 xl:mt-[30px] mt-[35px]">
