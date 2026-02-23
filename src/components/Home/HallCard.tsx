@@ -1,4 +1,5 @@
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { square, guest } from "@/store/exportsIcons";
 import cn from "classnames";
@@ -14,22 +15,20 @@ type HallCardProps = {
   };
   index: number;
   isEng: boolean;
-  setIsBannerVisible: (isBannerVisible: boolean) => void;
 };
 
-export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardProps) => {
+export const HallCard = ({ hall, index, isEng }: HallCardProps) => {
   const { t } = useTranslation();
   const [onHover, setOnHover] = useState<number | null>(null);
 
-  // const anchorId = ["small-hall", "big-hall", "launge-hall"];
+  const anchorId = ["small-hall", "big-hall", "launge-hall"];
 
   return (
     <div
       onMouseEnter={() => setOnHover(index)}
       onMouseLeave={() => setOnHover(null)}
       className={`flex flex-col items-center justify-center w-fit h-fit 
-        ${
-          onHover === index ? "scale-105" : "scale-100"
+        ${onHover === index ? "scale-105" : "scale-100"
         } transition-all duration-300 ease-in-out
         ${index !== 1 ? "-translate-y-6" : "pb-20"} `}
     >
@@ -46,18 +45,16 @@ export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardPro
       </InViewWrapper>
       <h4
         className={`uppercase text-[18px] md:text-[22px] font-cofo-medium lg:text-[18px] 2xl:text-[24px] xl:text-[22px] leading-[28px] tracking-[-0.05em] text-center 
-        ${
-          index !== 1
+        ${index !== 1
             ? "2xl:mt-[20px] xl:mt-[14px]  px-2 xl:mb-[12px] lg:mb-[8px] lg:mt-[12px] mt-[10px] mb-[8px]"
             : "2xl:mt-[25px] xl:mt-[20px] mb-[10px]   px-2 xl:mb-[13px] mt-[10px]"
-        } }`}
+          } }`}
       >
         {t(hall.title)} {t(hall.size)}
       </h4>
       <div
         className={cn(
-          `flex flex-col items-center justify-center ${
-            index !== 1 ? "space-y-[3px]" : "space-y-[1px]"
+          `flex flex-col items-center justify-center ${index !== 1 ? "space-y-[3px]" : "space-y-[1px]"
           }`
         )}
       >
@@ -77,8 +74,7 @@ export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardPro
         {
           <div
             className={cn(
-              `text-center items-center justify-center ${
-                index === 1 ? "pt-[37px]" : "pt-[25px]"
+              `text-center items-center justify-center ${index === 1 ? "pt-[37px]" : "pt-[25px]"
               } relative transition-opacity duration-300 ease-in-out`,
               {
                 "flex opacity-100": onHover === index,
@@ -86,9 +82,8 @@ export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardPro
               }
             )}
           >
-            <button
-              // to={`/conference-service#${anchorId[index]}`}
-              onClick={() => setIsBannerVisible(true)}
+            <Link
+              to={`/conference-service#${anchorId[index]}`}
               className={`w-fit xl:py-[10px] font-cofo-medium flex 
                 justify-center items-center px-5 py-2 text-[#8c331b]
                 border-[#8C331B] border rounded-full uppercase 2xl:w-[8.72vw] 2xl:h-[2.4vw] 2xl:text-[.84vw]
@@ -97,7 +92,7 @@ export const HallCard = ({ hall, index, isEng, setIsBannerVisible }: HallCardPro
                 hover:shadow-lg hover:scale-105 hover:-translate-y-1`}
             >
               {t("buttons.details")}
-            </button>
+            </Link>
           </div>
         }
       </div>
