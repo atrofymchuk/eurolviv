@@ -1,8 +1,15 @@
-import {
-  getLocaleFromPath,
-  stripLocalePrefix,
-  type SiteLocale,
-} from "../utils/localeRouting";
+type SiteLocale = "uk" | "en";
+
+const getLocaleFromPath = (pathname: string): SiteLocale => {
+  if (pathname === "/en" || pathname.startsWith("/en/")) return "en";
+  return "uk";
+};
+
+const stripLocalePrefix = (pathname: string): string => {
+  if (pathname === "/en") return "/";
+  if (pathname.startsWith("/en/")) return pathname.slice(3) || "/";
+  return pathname || "/";
+};
 
 type SeoMeta = {
   title: string;
