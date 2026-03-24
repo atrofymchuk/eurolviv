@@ -22,6 +22,7 @@ import { Agreement } from "@/components/common/Agreement/Agreement";
 import { usePageStore } from "@/store/usePageStorage";
 import { Home } from "./pages/Home";
 import { stripLocalePrefix } from "@/utils/localeRouting";
+import { PageSeo } from "@/components/common/Seo/PageSeo";
 export const Layout = () => {
   const location = useLocation();
   const normalizedPathname = stripLocalePrefix(location.pathname);
@@ -62,6 +63,7 @@ export const Layout = () => {
       {!isBookingPage && (
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
+      <PageSeo pathname={location.pathname} />
       <ScrollToTop />
       <div className="relative lg:pb-0 pb-[60px]  ">
         <Routes>
