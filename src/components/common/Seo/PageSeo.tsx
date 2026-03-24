@@ -5,14 +5,26 @@ type PageSeoProps = {
   pathname: string;
 };
 
+const CANONICAL_BASE_URL = "https://eurohotel.lviv.ua";
+
+const getCanonicalPath = (pathname: string): string => {
+  if (!pathname) return "/";
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return pathname.slice(0, -1);
+  }
+  return pathname;
+};
+
 export const PageSeo = ({ pathname }: PageSeoProps) => {
   const seo = getSeoMeta(pathname);
+  const canonicalUrl = `${CANONICAL_BASE_URL}${getCanonicalPath(pathname)}`;
 
   return (
     <>
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <h1
         style={{
