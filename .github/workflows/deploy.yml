@@ -46,11 +46,6 @@ jobs:
         </IfModule>
         EOF
         
-    - name: Generate sitemap
-      run: |
-        chmod +x ./scripts/generate-sitemap.sh
-        ./scripts/generate-sitemap.sh
-        
     - name: Prepare SSH
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
