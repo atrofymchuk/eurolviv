@@ -72,7 +72,7 @@ export { default as pLetterImg } from "@/assets/ConferenceService/pLetterImg.web
 export { default as negotiationTableBig } from "@/assets/ConferenceService/negotiationTableBig.webp";
 
 export { default as pLetter } from "@/assets/ConferenceService/uaHall/pLetter.webp";
-export { default as classRoom } from "@/assets/ConferenceService/uaHall/class.webp";
+export { default as classRoom } from "@/assets/ConferenceService/uaHall/class20.webp";
 export { default as theathre } from "@/assets/ConferenceService/uaHall/theathre.webp";
 export { default as negotiationTable } from "@/assets/ConferenceService/uaHall/negotiationTable.webp";
 export { default as negotiationTableMax20 } from "@/assets/ConferenceService/uaHall/negotiationTableMax20.webp";
@@ -170,7 +170,7 @@ export { default as headerMobile } from "@/assets/ConferenceService/headerMobile
 
 export { default as uShape } from "@/assets/ConferenceService/engHall/ushape.webp";
 export { default as board } from "@/assets/ConferenceService/engHall/board.webp";
-export { default as class } from "@/assets/ConferenceService/engHall/class.webp";
+export { default as class } from "@/assets/ConferenceService/engHall/class20.webp";
 export { default as theater } from "@/assets/ConferenceService/engHall/theater.webp";
 export { default as uShape40max } from "@/assets/ConferenceService/engHall/uShpeMax40.webp";
 export { default as class40max } from "@/assets/ConferenceService/engHall/class40Max.webp";
