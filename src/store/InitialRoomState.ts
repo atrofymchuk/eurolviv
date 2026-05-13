@@ -25,7 +25,7 @@ export const initialRoomsState: RoomsState = {
       about: {
         pOne: "roomsState.standartSingle.about.pOne",
         pTwo: "roomsState.standartSingle.about.pTwo",
-        rooms: 2,
+        rooms: 1,
         swiperImagesStyle: "object-[100%_40%]",
         swiperImages: [
           imgs.standartSingleSliderFst,
