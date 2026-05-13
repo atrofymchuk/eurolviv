@@ -12,7 +12,7 @@ export const OurContactsWithMap = () => {
           title={t("contacts.info.reception")}
           subtitle={t("contacts.info.receptionPhone")}
           phones={["+38 (073) 242-40-02", "+38 (093) 242-40-02"]}
-          email="reception@eurohotel.lviv.ua"
+          email="info@eurohotel.lviv.ua"
           className="pt-[18px] md:pt-0"
         />
 
