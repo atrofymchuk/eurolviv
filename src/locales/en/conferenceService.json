@@ -35,6 +35,40 @@
             "phone1": "+ 38 (093) 242 31 60",
             "phone2": "+ 38 (093) 348 31 12",
             "email": "info@eurohotel.lviv.ua"
+        },
+        "seoText": {
+            "title": "Conference Services in Lviv",
+            "welcome": {
+                "heading": "A Conference Hall in the Center of Lviv for Events of Any Format",
+                "p1": "Eurohotel helps you host an event in the center of Lviv so that guests can arrive easily, organizers can prepare the program calmly, and participants can spend the day comfortably. The hotel conference hall is suitable for business meetings, presentations, training sessions, seminars, or business events with guest accommodation.",
+                "p2": "Everything you need for your event is available: reception, a comfortable venue, restaurant service, breakfasts, coffee breaks, and 100 rooms for out-of-town guests. This conference hall is convenient when it is important to bring people together in one place and run the event according to plan."
+            },
+            "space": {
+                "heading": "A Space for Conferences, Seminars, and Business Meetings",
+                "p1": "Eurohotel offers conference halls for different types of events: conferences, training sessions, presentations, seminars, negotiations, and business meetings. The spaces are suitable for businesses, companies, teams, partner events, and training programs for up to 100 people.",
+                "hallsTitle": "Our halls:",
+                "halls": {
+                    "launge": {
+                        "title": "Conference lounge, 45 m² — up to 30 guests",
+                        "desc": "Ideal for negotiations, strategy sessions, intimate training sessions, and business meetings."
+                    },
+                    "small": {
+                        "title": "Small hall, 75 m² — up to 40 guests",
+                        "desc": "Suitable for seminars, presentations, team training, and corporate events."
+                    },
+                    "big": {
+                        "title": "Large hall, 120 m² — up to 100 guests",
+                        "desc": "Optimal for large-scale conferences, business programs, presentations, and full-day events."
+                    }
+                },
+                "p2": "The conference halls are equipped for modern events, offer flexible seating formats, and provide access to restaurant service. The Eurohotel team helps prepare the space, arrange coffee breaks, lunches, and organizational details so participants can enter the hall and move straight into the program.",
+                "p3": "Each conference hall can be adapted to the event format: from a short meeting with partners to a full day with presentations, breaks, lunch, and an evening continuation at the ROOF restaurant. The hotel conference service offers a simple solution for companies that want to combine a work program, comfort, and service in one location."
+            },
+            "booking": {
+                "heading": "Book a Conference Hall for Your Event",
+                "p1": "The conference hall at Eurohotel helps combine a business program with the vibrant rhythm of Lviv: after presentations, training sessions, or negotiations, guests can step into the city center, dine at ROOF, or stay in the city for a few more hours. This format adds more impressions to the event and makes the day more enjoyable for participants.",
+                "p2": "Book a conference hall at Eurohotel and host an event that guests will remember for more than just the program."
+            }
         }
     }
 }

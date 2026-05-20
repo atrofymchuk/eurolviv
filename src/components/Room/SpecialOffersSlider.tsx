@@ -6,7 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { forwardRef, useState } from "react";
 import { InViewWrapper } from "@/components/utils/InViewWrapper";
 import cn from "classnames";
-import { useModalStore } from "@/store/useModalStore";
+import { Link } from "react-router-dom";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 type SpecialOffersSliderToProps = {
   ref: Slider | null;
   isHome: boolean;
@@ -19,7 +20,6 @@ export const SpecialOffersSlider = forwardRef<
   const [currentSlide, setCurrentSlide] = useState(0);
   const { specialOffers } = useSpecialOffersStore();
   const { t, i18n } = useTranslation();
-  const { onOpenModal } = useModalStore();
   const settings = {
     speed: 800,
     slidesToShow: 4,
@@ -53,6 +53,7 @@ export const SpecialOffersSlider = forwardRef<
   };
 
   const isEng = i18n.language === "en";
+  const locale = i18n.language === "en" ? "en" : "uk";
   return (
     <div className="relative">
       <Slider
@@ -151,16 +152,12 @@ export const SpecialOffersSlider = forwardRef<
               {t(el.cardDesc)}
             </p>
             <div className="flex flex-col text-start w-full 2xl:mb-1 xl:mb-2  mt-auto">
-              <button
-                onClick={() => onOpenModal('specialOffer', el.url)}
-                className="mt-auto inline-flex items-center justify-center font-cofo-medium border border-[#8C331B]
-                 text-[#8C331B] px-5.75 py-2.5 xl:px-7.25 xl:py-3 rounded-full uppercase w-fit
-                text-[3.2vw] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.83vw] xl:w-[11vw] xl:h-[2.8vw]
-                 hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition-colors duration-300 
-                 lg:w-[170px] 2xl:w-[8.85vw] 2xl:h-[2.4vw] lg:h-[46px]"
+              <Link
+                to={buildLocalizedPath(`/special-offers/${el.url}`, locale)}
+                className="mt-auto inline-flex w-fit items-center justify-center rounded-full border border-[#8C331B] px-5.75 py-2.5 font-cofo-medium uppercase text-[#8C331B] text-[3.2vw] transition-colors duration-300 hover:bg-[#8C331B] hover:text-white md:text-[14px] lg:h-[46px] lg:w-[170px] xl:h-[2.8vw] xl:w-[11vw] xl:px-7.25 xl:py-3 xl:text-[0.94vw] 2xl:h-[2.4vw] 2xl:w-[8.85vw] 2xl:text-[0.83vw]"
               >
                 {t("buttons.details")}
-              </button>
+              </Link>
             </div>
           </div>
         ))}

@@ -4,6 +4,7 @@
   import { RoofService } from "@/components/Home/RoofService";
   import { RoomsHome } from "@/components/Home/Rooms";
   import { SpecialOffers } from "@/components/Room/SpecialOffers";
+  import { HomeSeoText } from "@/components/Home/HomeSeoText";
 
   export const Home = () => {
     return <div className="overflow-x-hidden">
@@ -13,5 +14,6 @@
     <ConferenceService />
     <RoofService />
     <SpecialOffers />
+    <HomeSeoText />
     </div>;
   };

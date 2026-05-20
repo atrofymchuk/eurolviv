@@ -7,6 +7,7 @@ import { RoomSliderContainer } from "@/components/ConferesceService/RoomSliderCo
 import { useLockScroll } from "../hooks/useLockScroll";
 
 import { useRoomStore } from "@/store/useRoomsStore";
+import { ConferenceSeoText } from "@/components/ConferesceService/ConferenceSeoText";
 import cn from "classnames";
 
 export const ConferenceService = () => {
@@ -42,6 +43,7 @@ export const ConferenceService = () => {
           {Component}
         </div>
       ))}
+      <ConferenceSeoText />
     </div>
   );
 };
