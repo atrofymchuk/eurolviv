@@ -43,6 +43,8 @@ const HALL_CARDS = [
 const bodyTextClass =
   "text-[13px] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.9vw] leading-[150%] tracking-[-0.02em] text-[#3D3D3D]";
 
+const gridLineClass = "border-[#C7C7C7]/70";
+
 export const ConferenceSeoText = () => {
   const { t, i18n } = useTranslation();
   const { onOpenModal } = useModalStore();
@@ -55,14 +57,17 @@ export const ConferenceSeoText = () => {
       className="relative w-full overflow-hidden bg-[#EDE8E5]"
       aria-labelledby="conference-seo-text-title"
     >
-      <div className="pointer-events-none absolute inset-0 hidden lg:grid lg:grid-cols-[20.5%_42.9%_35%]">
-        <div className="border-e border-[#C7C7C7]/70" />
-        <div className="border-x border-[#C7C7C7]/70" />
-        <div className="border-s border-[#C7C7C7]/70" />
+      <div
+        className="pointer-events-none absolute inset-0 z-0 hidden lg:block"
+        aria-hidden
+      >
+        <div className="absolute inset-y-0 left-[20.5%] w-px -translate-x-1/2 bg-[#C7C7C7]/70" />
+        <div className="absolute inset-y-0 left-[63.4%] w-px -translate-x-1/2 bg-[#C7C7C7]/70" />
       </div>
 
-      <div className="relative mx-auto w-[89.58%]">
-        <div className="border-x border-[#C7C7C7]">
+      <div className="relative z-10 mx-auto w-[89.58%]">
+        <div className={cn("relative border-x", gridLineClass)}>
+          <div className="relative">
           <header className="border-b border-[#C7C7C7] px-[20px] py-[40px] lg:px-[28px] lg:py-[56px] xl:px-[36px] xl:py-[64px]">
             <p className="text-[12px] font-cofo-medium uppercase tracking-[0.14em] text-[#A47762] md:text-[13px] xl:text-[0.82vw]">
               eurohotel · lviv
@@ -70,54 +75,42 @@ export const ConferenceSeoText = () => {
             <h2
               id="conference-seo-text-title"
               className={cn(
-                "mt-[16px] max-w-[16ch] uppercase leading-[86%] tracking-[-0.07em] text-[#252526]",
+                "mt-[16px] flex flex-col uppercase leading-[86%] tracking-[-0.07em] text-[#252526]",
                 {
-                  "text-[32px] md:text-[48px] lg:text-[64px] xl:text-[5vw]": !isEng,
-                  "text-[28px] md:text-[44px] lg:text-[56px] xl:text-[4.6vw]": isEng,
+                  "max-w-[16ch] text-[32px] md:text-[48px] lg:text-[64px] xl:text-[5vw]":
+                    !isEng,
+                  "max-w-[18ch] text-[28px] md:text-[44px] lg:text-[56px] xl:text-[4.6vw]":
+                    isEng,
                 }
               )}
             >
-              {t("conferenceService.seoText.title")}
+              <span>{t("conferenceService.seoText.titleLine1")}</span>
+              <span>{t("conferenceService.seoText.titleLine2")}</span>
             </h2>
           </header>
 
           <article className="border-b border-[#C7C7C7] bg-[#FFFCFA] px-[20px] py-[32px] lg:px-[36px] lg:py-[44px]">
-            <div className="flex gap-[14px] lg:gap-[18px]">
-              <span
-                className="mt-[4px] shrink-0 font-cofo-medium text-[12px] uppercase tracking-[-0.04em] text-[#A47762] md:text-[13px]"
-                aria-hidden
-              >
-                01
-              </span>
-              <div className="min-w-0 flex-1">
-                <h3 className="font-cofo-medium uppercase leading-[115%] tracking-[-0.04em] text-[#8C331B] text-[17px] md:text-[20px] xl:text-[1.35vw]">
-                  {t("conferenceService.seoText.welcome.heading")}
-                </h3>
-                <div className="mt-[14px] flex flex-col gap-[12px] lg:gap-[14px]">
-                  <p className={bodyTextClass}>
-                    {t("conferenceService.seoText.welcome.p1")}
-                  </p>
-                  <p className={bodyTextClass}>
-                    {t("conferenceService.seoText.welcome.p2")}
-                  </p>
-                </div>
+            <div className="min-w-0">
+              <h3 className="font-cofo-medium uppercase leading-[115%] tracking-[-0.04em] text-[#8C331B] text-[17px] md:text-[20px] xl:text-[1.35vw]">
+                {t("conferenceService.seoText.welcome.heading")}
+              </h3>
+              <div className="mt-[14px] flex flex-col gap-[12px] lg:gap-[14px]">
+                <p className={bodyTextClass}>
+                  {t("conferenceService.seoText.welcome.p1")}
+                </p>
+                <p className={bodyTextClass}>
+                  {t("conferenceService.seoText.welcome.p2")}
+                </p>
               </div>
             </div>
           </article>
 
           <article className="px-[20px] py-[32px] lg:px-[36px] lg:py-[44px]">
-            <div className="flex gap-[14px] lg:gap-[18px]">
-              <span
-                className="mt-[4px] shrink-0 font-cofo-medium text-[12px] uppercase tracking-[-0.04em] text-[#A47762] md:text-[13px]"
-                aria-hidden
-              >
-                02
-              </span>
-              <div className="min-w-0 flex-1">
-                <h3 className="font-cofo-medium uppercase leading-[115%] tracking-[-0.04em] text-[#8C331B] text-[17px] md:text-[20px] xl:text-[1.35vw]">
-                  {t("conferenceService.seoText.space.heading")}
-                </h3>
-                <div className="mt-[14px] flex flex-col gap-[12px] lg:gap-[16px]">
+            <div className="min-w-0">
+              <h3 className="font-cofo-medium uppercase leading-[115%] tracking-[-0.04em] text-[#8C331B] text-[17px] md:text-[20px] xl:text-[1.35vw]">
+                {t("conferenceService.seoText.space.heading")}
+              </h3>
+              <div className="mt-[14px] flex flex-col gap-[12px] lg:gap-[16px]">
                   <p className={bodyTextClass}>
                     {t("conferenceService.seoText.space.p1")}
                   </p>
@@ -186,21 +179,20 @@ export const ConferenceSeoText = () => {
                     {t("conferenceService.seoText.space.p3")}
                   </p>
                 </div>
-              </div>
             </div>
           </article>
 
-          <div className="border-t border-[#C7C7C7] bg-[#252526] px-[20px] py-[36px] text-white lg:px-[36px] lg:py-[48px]">
+          <div className="border-t border-[#C29986] bg-[#A47762] px-[20px] py-[36px] text-[#EDE8E5] lg:px-[36px] lg:py-[48px]">
             <div className="grid gap-[24px] lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-[32px]">
               <div>
-                <h3 className="max-w-[24ch] font-cofo-medium uppercase leading-[110%] tracking-[-0.05em] text-[22px] md:text-[26px] xl:text-[1.75vw]">
+                <h3 className="max-w-[24ch] font-cofo-medium uppercase leading-[110%] tracking-[-0.05em] text-[22px] text-[#EDE8E5] md:text-[26px] xl:text-[1.75vw]">
                   {t("conferenceService.seoText.booking.heading")}
                 </h3>
                 <div className="mt-[16px] grid gap-[12px] lg:grid-cols-2 lg:gap-[20px]">
-                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#FFFFFF] md:text-[14px] xl:text-[0.94vw]">
+                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#EDE8E5] md:text-[14px] xl:text-[0.94vw]">
                     {t("conferenceService.seoText.booking.p1")}
                   </p>
-                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#D9C6BE] md:text-[14px] xl:text-[0.94vw]">
+                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#E9E9E9] md:text-[14px] xl:text-[0.94vw]">
                     {t("conferenceService.seoText.booking.p2")}
                   </p>
                 </div>
@@ -209,11 +201,12 @@ export const ConferenceSeoText = () => {
               <button
                 type="button"
                 onClick={() => onOpenModal("order")}
-                className="inline-flex h-[46px] min-w-[200px] items-center justify-center self-start rounded-full border border-white bg-[#8C331B] px-[24px] text-[12px] font-cofo-medium uppercase tracking-[-0.02em] text-white transition-colors duration-300 hover:bg-white hover:text-[#252526] lg:self-end md:text-[14px] xl:h-[2.4vw] xl:min-w-[10.42vw] xl:text-[0.83vw]"
+                className="inline-flex h-[46px] min-w-[200px] items-center justify-center self-start rounded-full border border-[#EDE8E5] bg-[#EDE8E5] px-[24px] text-[12px] font-cofo-medium uppercase tracking-[-0.02em] text-[#242425] transition-colors duration-300 hover:bg-[#252526] hover:text-[#EDE8E5] lg:self-end md:text-[14px] xl:h-[2.4vw] xl:min-w-[10.42vw] xl:text-[0.83vw]"
               >
                 {t("buttons.order")}
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
