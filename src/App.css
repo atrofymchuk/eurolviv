@@ -94,6 +94,10 @@
   overflow-y: hidden !important;
 }
 
+.special-offers-slider--home > .slick-list > .slick-track {
+  align-items: flex-start !important;
+}
+
 @media(max-width:1024px){
 
   .img > .slick-list >.slick-track>.slick-slide > div {
