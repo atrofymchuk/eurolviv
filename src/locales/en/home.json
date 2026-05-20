@@ -60,6 +60,49 @@
         },
         "specialOffers":{
             "title":"SPECIAL OFFERS"     
+        },
+        "seoText":{
+            "title":"Hotel in the Center of Lviv",
+            "welcome":{
+                "heading":"Welcome to Our Hotel in the Center of Lviv",
+                "p1":"Eurohotel is a city hotel in Lviv for tourism, business trips, corporate events, and short weekend getaways. Everything you need is in one place: 100 comfortable rooms, breakfast, the ROOF restaurant, conference services, and 24-hour reception.",
+                "p2":"The hotel's convenient location in Lviv lets you hold important meetings during the day, stroll through the historic city center, dine with a panoramic city view, and return to a cozy room at an unhurried pace.",
+                "p3":"You can book the hotel on the website in just a few steps — choose your dates, room category, and additional services, and we will prepare everything for your visit."
+            },
+            "atmosphere":{
+                "heading":"Cozy Atmosphere and the Architecture of Historic Lviv",
+                "p1":"Eurohotel is located at 6A Tershakovtsiv Street — in a quiet area near the city center. Rynok Square, the Arsenal Museum, churches, cafés, and city landmarks are within easy walking distance. It is a hotel in Lviv for tourists, business guests, and anyone who wants to feel the atmosphere of the historic center without long commutes.",
+                "p2":"The building blends harmoniously with the architecture of a picturesque neighborhood. The hotel interior combines coziness, modern comfort, and thoughtful amenities for rest, work, and short stays."
+            },
+            "rooms":{
+                "heading":"Comfortable Rooms",
+                "intro":"Eurohotel offers 100 rooms for different types of trips:",
+                "types":{
+                    "standardSingle":"standard single rooms",
+                    "standardDouble":"double rooms",
+                    "twin":"twin rooms",
+                    "semiLux":"junior suites",
+                    "lux":"suites"
+                },
+                "afterList":"This range is convenient for solo guests, couples, families, employees on business trips, and event participants.",
+                "p2":"Rooms are equipped with everything needed for a comfortable stay: a cozy bed, a work area, Wi-Fi, TV, safe, bathroom, and space for personal belongings. Guests can also use additional services, 24-hour reception, room service, transfer, and parking.",
+                "p3":"Current hotel prices in Lviv depend on dates, room category, and booking conditions."
+            },
+            "conference":{
+                "heading":"Conference Hall for Events and Business Meetings",
+                "p1":"As a business hotel in Lviv, Eurohotel hosts conferences, training sessions, presentations, negotiations, and corporate meetings. Conference spaces feature modern technical equipment, flexible seating formats, and access to restaurant service.",
+                "p2":"A hotel in the center of Lviv makes arrival and check-in easier for guests. A large room inventory allows event participants to stay close to the venue. It is a practical format for teams, partners, and event organizers."
+            },
+            "roof":{
+                "heading":"ROOF Restaurant and Other Services",
+                "p1":"ROOF is an atmospheric restaurant with a terrace offering panoramic views of Lviv. The menu features Ukrainian and European cuisine, cocktails, and drinks from the bar menu. Friendly staff help guests feel at ease from the first moment.",
+                "p2":"If you are looking for a hotel in Lviv with breakfast, Eurohotel and the ROOF restaurant offer a delicious start to the day, convenient service, and a space for dinner, business meetings, or special occasions."
+            },
+            "booking":{
+                "heading":"Book a Room at Eurohotel and Fall in Love with Lviv",
+                "p1":"Eurohotel is a hotel in Lviv with a cozy central location, 100 rooms in different categories, the panoramic ROOF restaurant, conference services, and attentive hospitality.",
+                "p2":"Book a room at Eurohotel and leave time to discover Lviv at a comfortable pace."
+            }
         }
     }
 }
