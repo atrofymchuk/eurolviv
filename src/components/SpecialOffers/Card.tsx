@@ -9,8 +9,6 @@ type CardToProps = {
   desc: string;
   classes: string;
   offer: string;
-  url: string;
-  handleCardClick: (url: string) => void;
   index: number;
 };
 
@@ -20,9 +18,7 @@ export const Card = ({
   title,
   desc,
   classes,
-  url,
   offer,
-  handleCardClick,
 }: CardToProps) => {
   const { t, i18n } = useTranslation();
   const isMobileWidth = useCustomWidth(350, 450);
@@ -101,18 +97,11 @@ export const Card = ({
       </p>
 
       <div className="md:mt-auto pt-[23px] flex lg:hidden ps-3.25 pb-5">
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            handleCardClick(url);
-          }}
-          className="font-cofo-medium border border-[#8C331B] text-[#8C331B] px-7.75 py-2.5 rounded-full uppercase 
-              text-[2.67vw] sm:text-[12px] md:text-[14px]  inline-block w-[34.67vw] h-[9.87vw] lg:w-auto lg:h-auto
-              hover:cursor-pointer hover:bg-[#8C331B] hover:text-white transition duration-300 ease-in-out"
+        <span
+          className="inline-block h-[9.87vw] w-[34.67vw] rounded-full border border-[#8C331B] px-7.75 py-2.5 font-cofo-medium uppercase text-[#8C331B] text-[2.67vw] sm:text-[12px] md:h-auto md:w-auto md:text-[14px] lg:w-auto lg:h-auto"
         >
           {translatedTexts.details}
-        </button>
+        </span>
       </div>
     </div>
   );

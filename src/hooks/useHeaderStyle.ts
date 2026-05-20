@@ -9,18 +9,22 @@ import terraseLogo from "@/assets/terraseLogo.svg";
 const useNavbarStyles = () => {
   const location = useLocation();
   const normalizedPathname = stripLocalePrefix(location.pathname);
+  const isSpecialOfferLanding = /^\/special-offers\/[^/]+$/.test(
+    normalizedPathname
+  );
   const [scrolled, setScrolled] = useState(false);
   const [isShowRooms, setIsShowRooms] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const isHeaderScrolled = scrolled || isSpecialOfferLanding;
 
   function isActiveLink(path: string) {
     const isActive = normalizedPathname === path;
@@ -32,21 +36,21 @@ const useNavbarStyles = () => {
     }
 
     if (isActive) {
-      return scrolled ? "text-[#252526]" : "text-[#FFFFFF]";
-    } else {
-      return scrolled
-        ? "text-[#252526]/62 hover:text-[#252526]"
-        : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
+      return isHeaderScrolled ? "text-[#252526]" : "text-[#FFFFFF]";
     }
+
+    return isHeaderScrolled
+      ? "text-[#252526]/62 hover:text-[#252526]"
+      : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
   }
 
   const { styles, iconLogoStyle, rightMenu, logo } = useMemo(() => {
     let logo = defaultLogo;
-    let iconLogoStyle = scrolled ? "filter invert" : "";
-    let rightMenu = scrolled
+    let iconLogoStyle = isHeaderScrolled ? "filter invert" : "";
+    let rightMenu = isHeaderScrolled
       ? "text-[#252526]"
       : "text-[#FFFFFF]/62 hover:text-[#FFFFFF]";
-    let styles = scrolled
+    let styles = isHeaderScrolled
       ? "bg-[#252526] text-white"
       : "bg-white text-[#8C331B]";
 
@@ -59,24 +63,28 @@ const useNavbarStyles = () => {
       } else {
         logo = ruffLogo;
       }
-      styles = scrolled ? "bg-[#252526] text-white" : "bg-white text-[#8C331B]";
-      iconLogoStyle = scrolled ? "" : "invert";
-      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
+      styles = isHeaderScrolled
+        ? "bg-[#252526] text-white"
+        : "bg-white text-[#8C331B]";
+      iconLogoStyle = isHeaderScrolled ? "" : "invert";
+      rightMenu = isHeaderScrolled ? "text-[#252526]/62" : "text-[#FFFFFF]";
     } else if (normalizedPathname === "/contacts") {
-      styles = scrolled ? "bg-[#252526] text-white" : "bg-[#8C331B] text-white";
+      styles = isHeaderScrolled
+        ? "bg-[#252526] text-white"
+        : "bg-[#8C331B] text-white";
       iconLogoStyle = "filter invert";
-      rightMenu = scrolled ? "text-[#252526]/62" : "text-[#252526]";
+      rightMenu = isHeaderScrolled ? "text-[#252526]/62" : "text-[#252526]";
     }
 
     return { styles, iconLogoStyle, rightMenu, logo };
-  }, [normalizedPathname, scrolled]);
+  }, [normalizedPathname, isHeaderScrolled]);
 
   return {
     styles,
     iconLogoStyle,
     logo,
     rightMenu,
-    scrolled,
+    scrolled: isHeaderScrolled,
     isShowRooms,
     setIsShowRooms,
     isActiveLink,
