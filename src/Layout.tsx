@@ -21,6 +21,7 @@ import { Restaurant } from "@/pages/Restaurant";
 import { Agreement } from "@/components/common/Agreement/Agreement";
 import { usePageStore } from "@/store/usePageStorage";
 import { Home } from "./pages/Home";
+import { SpecialOfferLanding } from "./pages/SpecialOfferLanding";
 import { stripLocalePrefix } from "@/utils/localeRouting";
 import { PageSeo } from "@/components/common/Seo/PageSeo";
 export const Layout = () => {
@@ -45,6 +46,9 @@ export const Layout = () => {
   const isBookingPage = normalizedPathname === "/booking";
   const isRoomPage = /^\/rooms\/[^/]+$/.test(normalizedPathname);
   const isRoomsPage = normalizedPathname === "/rooms";
+  const isSpecialOfferLandingPage = /^\/special-offers\/[^/]+$/.test(
+    normalizedPathname
+  );
   const isMobile = window.innerWidth < 768;
 
 
@@ -107,21 +111,10 @@ export const Layout = () => {
             path="/en/special-offers"
             element={<InfinityScrollPage pageKey="specialOffers" />}
           />
-          <Route
-            path="/special-offers/:offer"
-            element={
-              <>
-                <InfinityScrollPage pageKey="specialOffers" />
-              </>
-            }
-          />
+          <Route path="/special-offers/:offer" element={<SpecialOfferLanding />} />
           <Route
             path="/en/special-offers/:offer"
-            element={
-              <>
-                <InfinityScrollPage pageKey="specialOffers" />
-              </>
-            }
+            element={<SpecialOfferLanding />}
           />
           <Route
             path="/terrace"
@@ -143,7 +136,7 @@ export const Layout = () => {
             <BookDirectAlert delay={15000} />
           </>
         }
-        {url && <SpecialOffersModal />}
+        {url && !isSpecialOfferLandingPage && <SpecialOffersModal />}
         {!isAcceptedAgreement && <Agreement handleAgree={handleAgree} />}
       </div>
     </>

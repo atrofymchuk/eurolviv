@@ -1,17 +1,14 @@
-import { useModalStore } from "@/store/useModalStore";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useSpecialOffersStore } from "@/store/useSpecialOffersStore";
 import { Card } from "@/components/SpecialOffers/Card";
+import { buildLocalizedPath } from "@/utils/localeRouting";
 import cn from "classnames";
 
 export const Cards = () => {
   const { specialOffers } = useSpecialOffersStore();
-  const { onOpenModal } = useModalStore();
-
-  const handleCardClick = (url: string) => {
-    onOpenModal("specialOffer", url);
-
-  };
-
+  const { i18n } = useTranslation();
+  const locale = i18n.language === "en" ? "en" : "uk";
 
   return (
     <div className="flex items-center justify-center  md:pb-[82px] ">
@@ -41,9 +38,9 @@ export const Cards = () => {
                 ${index === specialOffers.length - 1 ? "border-b border-s-0! " : ""}
               `)}
             >
-              <button
-                onClick={() => onOpenModal('specialOffer', el.url)}
-                className="w-full 2xl:p-[1.04vw] xl:p-[0.94vw] lg:p-[1.17vw] flex text-start flex-col hover:cursor-pointer 2xl:h-[36.42vw] xl:h-[38.06vw] lg:h-[39.99vw] md:h-[520px] "
+              <Link
+                to={buildLocalizedPath(`/special-offers/${el.url}`, locale)}
+                className="flex w-full flex-col text-start hover:cursor-pointer 2xl:h-[36.42vw] 2xl:p-[1.04vw] xl:h-[38.06vw] xl:p-[0.94vw] lg:h-[39.99vw] lg:p-[1.17vw] md:h-[520px]"
               >
                 <Card
                   src={el.src}
@@ -51,11 +48,9 @@ export const Cards = () => {
                   desc={el.cardDesc}
                   title={el.title}
                   offer={el.offer}
-                  url={el.url}
-                  handleCardClick={handleCardClick}
                   index={index}
                 />
-              </button>
+              </Link>
             </div>
           );
         })}

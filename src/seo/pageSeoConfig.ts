@@ -1,3 +1,5 @@
+import { getSpecialOfferSeoMeta } from "@/seo/specialOfferSeoConfig";
+
 type SiteLocale = "uk" | "en";
 
 const getLocaleFromPath = (pathname: string): SiteLocale => {
@@ -253,5 +255,12 @@ export const getSeoMeta = (pathname: string): SeoMeta => {
   const pageMeta = seoConfig[locale][normalizedPath];
 
   if (pageMeta) return pageMeta;
+
+  const specialOfferMatch = normalizedPath.match(/^\/special-offers\/([^/]+)$/);
+  if (specialOfferMatch) {
+    const offerMeta = getSpecialOfferSeoMeta(locale, specialOfferMatch[1]);
+    if (offerMeta) return offerMeta;
+  }
+
   return fallbackSeo;
 };
