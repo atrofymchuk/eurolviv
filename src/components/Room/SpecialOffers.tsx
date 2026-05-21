@@ -48,23 +48,28 @@ export const SpecialOffers = () => {
               </h1>
             </div>
 
-            <div className="flex overflow-hidden h-[120vw] sm:h-[500px] md:h-[600px] lg:h-[670px] 2xl:h-[36vw] w-screen flex-col z-50 relative">
+            <div
+              className={cn(
+                "relative z-50 flex w-screen flex-col overflow-hidden",
+                isHome
+                  ? "h-[113.6vw] sm:h-[500px] md:h-[540px] lg:h-[584px] xl:h-[37.5vw] 2xl:h-[35.79vw]"
+                  : "h-[120vw] sm:h-[500px] md:h-[600px] lg:h-[670px] 2xl:h-[36vw]"
+              )}
+            >
               <div className="flex overflow-y-hidden overflow-x-hidden w-full">
                 <SpecialOffersSlider ref={sliderRef} isHome={isHome} />
               </div>
             </div>
           </div>
           <div
-            className={cn(
-              ` justify-between gap-4 my-[24px] xl:my-[42px] hidden lg:flex`,
-              {
-                "lg:hidden": !isHome,
-              }
-            )}
+            className={cn("hidden w-full items-center justify-between lg:flex", {
+              "lg:hidden": !isHome,
+              "py-[18px] xl:py-[22px]": isHome,
+              "my-[24px] gap-4 xl:my-[42px]": !isHome,
+            })}
           >
             <button
-              className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                    text-[#8C331B] bg-white rounded-full border border-[#8C331B] transition hover:bg-[#8C331B] hover:text-white"
+              className="flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full border border-[#8C331B] bg-white text-[#8C331B] transition hover:bg-[#8C331B] hover:text-white lg:h-[60px] lg:w-[60px]"
               onClick={() => {
                 if (
                   sliderRef.current &&
@@ -80,8 +85,7 @@ export const SpecialOffers = () => {
               <IoIosArrowRoundBack className="w-3/4 h-3/4" />
             </button>
             <button
-              className="w-[35px] h-[35px] lg:w-[60px] lg:h-[60px] flex items-center justify-center 
-                    hover:text-[#8C331B] hover:bg-white rounded-full border border-[#8C331B] transition bg-[#8C331B] text-white"
+              className="flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full border border-[#8C331B] bg-[#8C331B] text-white transition hover:bg-white hover:text-[#8C331B] lg:h-[60px] lg:w-[60px]"
               onClick={() => {
                 if (
                   sliderRef.current &&
@@ -98,16 +102,11 @@ export const SpecialOffers = () => {
             </button>
           </div>
           <div
-            className={cn(
-              `h-[50px] lg:h-[75px] `,
-              {
-                "h-[45px]": !isHome,
-              },
-              {
-                "sm:hidden md:block lg:hidden": isHome,
-              }
-            )}
-          ></div>
+            className={cn("h-[50px]", {
+              "h-[45px]": !isHome,
+              "sm:hidden md:block lg:hidden": isHome,
+            })}
+          />
         </div>
       </div>
     </div>

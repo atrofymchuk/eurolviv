@@ -59,7 +59,7 @@ export const SpecialOffersSlider = forwardRef<
       <Slider
         {...settings}
         ref={ref}
-        className="special-offers-slider w-screen"
+        className={cn("special-offers-slider w-screen", isHome && "special-offers-slider--home")}
       >
         {specialOffers.map((el, index) => (
           <div
