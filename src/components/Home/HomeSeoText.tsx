@@ -9,12 +9,12 @@ const ROOM_TYPE_LINKS = [
     slug: "standart-single",
   },
   {
-    labelKey: "home.seoText.rooms.types.standardDouble",
+    labelKey: "home.seoText.rooms.types.standard",
     slug: "standart-big-bed",
   },
   {
-    labelKey: "home.seoText.rooms.types.twin",
-    slug: "standart-two-bed",
+    labelKey: "home.seoText.rooms.types.standardBalcony",
+    slug: "standart-two-bed-balcony",
   },
   {
     labelKey: "home.seoText.rooms.types.semiLux",
@@ -69,9 +69,13 @@ const CONTENT_SECTIONS: ContentSection[] = [
 ];
 
 const bodyTextClass =
-  "text-[13px] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.9vw] leading-[150%] tracking-[-0.02em] text-[#3D3D3D]";
+  "text-justify text-[13px] md:text-[14px] xl:text-[0.94vw] 2xl:text-[0.9vw] leading-[150%] tracking-[-0.02em] text-[#3D3D3D]";
 
-const gridLineClass = "border-[#C7C7C7]/70";
+const contentWrapClass =
+  "relative mx-auto w-[89.05%] max-w-full md:w-[91.06%] px-[20px] lg:px-[28px] xl:px-[36px]";
+
+const insetBlockClass =
+  "-mx-[20px] px-[24px] lg:-mx-[28px] lg:px-[32px] xl:-mx-[36px] xl:px-[40px]";
 
 export const HomeSeoText = () => {
   const { t, i18n } = useTranslation();
@@ -83,18 +87,9 @@ export const HomeSeoText = () => {
       className="relative w-full overflow-hidden bg-[#EDE8E5]"
       aria-labelledby="home-seo-text-title"
     >
-      <div className="relative mx-auto w-[89.05%] md:w-[91.06%]">
-        <div className={cn("relative border-x", gridLineClass)}>
-          <div
-            className="pointer-events-none absolute inset-0 z-0 hidden lg:block"
-            aria-hidden
-          >
-            <div className="absolute inset-y-0 left-[29.7%] w-px -translate-x-1/2 bg-[#C7C7C7]/70" />
-            <div className="absolute inset-y-0 left-[70.3%] w-px -translate-x-1/2 bg-[#C7C7C7]/70" />
-          </div>
-
-          <div className="relative z-10">
-          <header className="border-b border-[#C7C7C7] px-[20px] py-[40px] lg:px-[28px] lg:py-[56px] xl:px-[36px] xl:py-[64px]">
+      <div className={contentWrapClass}>
+        <div className="relative w-full">
+          <header className="py-[40px] lg:py-[56px] xl:py-[64px]">
             <p className="text-[12px] font-cofo-medium uppercase tracking-[0.14em] text-[#A47762] md:text-[13px] xl:text-[0.82vw]">
               eurohotel · lviv
             </p>
@@ -112,26 +107,22 @@ export const HomeSeoText = () => {
             </h2>
           </header>
 
-          <div className="grid lg:grid-cols-2">
-            {CONTENT_SECTIONS.map((section, index) => (
+          <div className="grid gap-y-[32px] lg:grid-cols-2 lg:gap-x-[24px] xl:gap-x-[32px]">
+            {CONTENT_SECTIONS.map((section) => (
               <article
                 key={section.headingKey}
                 className={cn(
-                  "border-[#C7C7C7] px-[20px] py-[32px] lg:px-[28px] lg:py-[40px] xl:px-[36px]",
-                  {
-                    "border-b bg-[#FFFCFA] lg:col-span-2": section.featured,
-                    "border-b lg:border-e":
-                      !section.featured && (index === 1 || index === 3),
-                    "border-b": !section.featured && (index === 2 || index === 4),
-                  }
+                  "min-w-0 py-[32px] lg:py-[40px]",
+                  section.featured && "bg-[#FFFCFA] lg:col-span-2",
+                  section.featured && insetBlockClass
                 )}
               >
-                <div className="min-w-0">
+                <div>
                     <h3 className="font-cofo-medium uppercase leading-[115%] tracking-[-0.04em] text-[#8C331B] text-[17px] md:text-[19px] lg:text-[20px] xl:text-[1.35vw]">
                       {t(section.headingKey)}
                     </h3>
 
-                    <div className="mt-[14px] flex flex-col gap-[12px] lg:mt-[16px] lg:gap-[14px]">
+                    <div className="mt-[18px] flex flex-col gap-[14px] lg:mt-[20px] lg:gap-[16px]">
                       {section.roomList && (
                         <>
                           <p className={bodyTextClass}>
@@ -169,17 +160,22 @@ export const HomeSeoText = () => {
             ))}
           </div>
 
-          <div className="border-t border-[#C29986] bg-[#A47762] px-[20px] py-[36px] text-[#EDE8E5] lg:px-[36px] lg:py-[48px]">
-            <div className="grid gap-[24px] lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-[32px]">
-              <div>
+          <div
+            className={cn(
+              "mt-[32px] bg-[#A47762] py-[40px] text-[#EDE8E5] lg:mt-[40px] lg:py-[52px]",
+              insetBlockClass
+            )}
+          >
+            <div className="grid gap-[28px] lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-x-[40px]">
+              <div className="min-w-0">
                 <h3 className="max-w-[22ch] font-cofo-medium uppercase leading-[110%] tracking-[-0.05em] text-[22px] text-[#EDE8E5] md:text-[26px] xl:text-[1.75vw]">
                   {t("home.seoText.booking.heading")}
                 </h3>
-                <div className="mt-[16px] grid gap-[12px] lg:grid-cols-2 lg:gap-[20px]">
-                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#EDE8E5] md:text-[14px] xl:text-[0.94vw]">
+                <div className="mt-[20px] grid gap-y-[14px] gap-x-[24px] lg:mt-[24px] lg:grid-cols-2 xl:gap-x-[32px]">
+                  <p className="text-justify text-[13px] leading-[150%] tracking-[-0.02em] text-[#EDE8E5] md:text-[14px] xl:text-[0.94vw]">
                     {t("home.seoText.booking.p1")}
                   </p>
-                  <p className="text-[13px] leading-[150%] tracking-[-0.02em] text-[#E9E9E9] md:text-[14px] xl:text-[0.94vw]">
+                  <p className="text-justify text-[13px] leading-[150%] tracking-[-0.02em] text-[#E9E9E9] md:text-[14px] xl:text-[0.94vw]">
                     {t("home.seoText.booking.p2")}
                   </p>
                 </div>
@@ -192,7 +188,6 @@ export const HomeSeoText = () => {
                 {t("buttons.bookRoom")}
               </Link>
             </div>
-          </div>
           </div>
         </div>
       </div>
