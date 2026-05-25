@@ -78,11 +78,11 @@
                 "heading":"Comfortable Rooms",
                 "intro":"Eurohotel offers 100 rooms for different types of trips:",
                 "types":{
-                    "standardSingle":"standard single rooms",
-                    "standardDouble":"double rooms",
-                    "twin":"twin rooms",
-                    "semiLux":"junior suites",
-                    "lux":"suites"
+                    "standardSingle":"standard single",
+                    "standard":"standard",
+                    "standardBalcony":"standard with balcony",
+                    "semiLux":"junior suite",
+                    "lux":"suite"
                 },
                 "afterList":"This range is convenient for solo guests, couples, families, employees on business trips, and event participants.",
                 "p2":"Rooms are equipped with everything needed for a comfortable stay: a cozy bed, a work area, Wi-Fi, TV, safe, bathroom, and space for personal belongings. Guests can also use additional services, 24-hour reception, room service, transfer, and parking.",
