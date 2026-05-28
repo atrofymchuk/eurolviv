@@ -31,8 +31,11 @@ const getDescriptionClassNames = (
     isEng && isPet && "2xl:w-[58%] xl:w-[66%] w-[97.5%] space-y-2",
     !isEng && isPhotosession && "2xl:w-[65%] xl:w-[66%] w-[100%] space-y-2",
     isEng && isPhotosession && "2xl:w-[76%] xl:w-[77%] w-[98%] space-y-2",
-    !isEng && isNewlyweeds && "2xl:w-[80%] xl:w-[66%] w-[100%] space-y-2",
-    isEng && isNewlyweeds && "2xl:w-[70%] xl:w-[66%] w-[100%] space-y-2",
+    !isEng && isNewlyweeds &&
+      "mx-auto w-[88%] text-center md:w-[58%] xl:w-[44%] 2xl:w-[40%]",
+    isEng &&
+      isNewlyweeds &&
+      "mx-auto w-[90%] text-center md:w-[60%] xl:w-[46%] 2xl:w-[42%]",
     !isEng && isBirthday && "2xl:w-[85%] xl:w-[80%] w-[93.8%]",
     isEng && isBirthday && "2xl:w-[100%] xl:w-[100%] w-[93.8%]"
   );
