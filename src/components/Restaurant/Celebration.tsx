@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { weddingFst, weddingScd, weddingTrd } from "@/store/exportsImg";
 import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
+import { MENU_DOCUMENTS } from "@/Constants/MenuDocuments";
 import { useCustomWidth } from "@/hooks/useCustomWidth";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const Celebration = () => {
@@ -53,7 +54,7 @@ export const Celebration = () => {
             </p>
           </div>
           <ViewMenuButton
-            onClick={() => window.open("/documents/Banquet_Menu.pdf", "_blank")}
+            onClick={() => window.open(MENU_DOCUMENTS.banquet, "_blank")}
             className="uppercase cursor-pointer lg:text-[14px] lg:w-[175px] 2xl:w-[9.1vw] 2xl:h-[2.29vw] 2xl:text-[0.73vw]
              text-[12px] font-cofo-medium bg-[#8C331B] h-[40px]
              lg:text-white hover:bg-[#FFFFFF] w-[160px] lg:hover:text-[#8C331B] border border-[#8C331B]

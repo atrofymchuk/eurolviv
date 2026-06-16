@@ -5,6 +5,7 @@ import { SwiperSlider } from "@/components/Terrace/Swiper";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import { links } from "@/Constants/Links";
+import { MENU_DOCUMENTS } from "@/Constants/MenuDocuments";
 import { useIsEnglish } from "@/hooks/useIsEnglish";
 export const Dishes = ({
   slides,
@@ -119,9 +120,7 @@ export const Dishes = ({
               </Link>
             ) : (
               <button
-                onClick={() =>
-                  window.open("/documents/Banquet_Menu.pdf", "_blank")
-                }
+                onClick={() => window.open(MENU_DOCUMENTS.banquet, "_blank")}
                 className={`uppercase border-[#8C331B] hover:text-white border text-[#8C331B] 2xl:text-[0.73vw] w-[171px] h-[40px] rounded-full lg:py-[10px] font-cofo-medium text-[12px] hover:cursor-pointer 
                     ${isEng && content.isMenu ? "2xl:w-[122px] xl:w-[122px]" : "2xl:w-[175px] xl:w-[175px] "}`}
               >

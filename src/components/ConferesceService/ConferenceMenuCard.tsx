@@ -1,4 +1,5 @@
 import { ViewMenuButton } from "@/components/Buttons/ViewMenu";
+import { MENU_DOCUMENTS } from "@/Constants/MenuDocuments";
 import { useTranslation } from "react-i18next";
 
 type ConferenceMenuCardToProps = {
@@ -15,11 +16,11 @@ export const ConferenceMenuCard = ({
   const getPdfPath = (text: string) => {
     switch (text) {
       case t("conferenceService.conferenceMenu.menu.title1"):
-        return "/documents/Buffet_Menu.pdf";
+        return MENU_DOCUMENTS.buffet;
       case t("conferenceService.conferenceMenu.menu.title"):
-        return "/documents/Business_lunch.pdf";
+        return MENU_DOCUMENTS.businessLunch;
       case t("conferenceService.conferenceMenu.menu.title2"):
-        return "/documents/Coffee_Break.pdf";
+        return MENU_DOCUMENTS.coffeeBreak;
       default:
         return "";
     }
