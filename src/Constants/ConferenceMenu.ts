@@ -1,5 +1,6 @@
 import { coffee, food, sandwich } from "@/store/exportsImg";
 import { MenuSection } from "@/types/entity";
+import { MENU_DOCUMENTS } from "@/Constants/MenuDocuments";
 
 export const imageArray = [
     {
@@ -19,14 +20,14 @@ export const imageArray = [
   export const menuSections: MenuSection[] = [
     {
       titleKey: "conferenceService.conferenceMenu.menu.title1",
-      pdfPath: "/documents/Buffet_Menu.pdf",
+      pdfPath: MENU_DOCUMENTS.buffet,
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title",
-      pdfPath: "/documents/Business_lunch.pdf",
+      pdfPath: MENU_DOCUMENTS.businessLunch,
     },
     {
       titleKey: "conferenceService.conferenceMenu.menu.title2",
-      pdfPath: "/documents/Coffee_Break.pdf",
+      pdfPath: MENU_DOCUMENTS.coffeeBreak,
     },
   ];
