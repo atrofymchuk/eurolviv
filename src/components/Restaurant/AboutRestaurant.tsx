@@ -32,13 +32,15 @@ export const AboutRestaurant = () => {
               >
                 ROOF
               </h1>
-              <span
-                className={`2xl:text-[3.33vw] lg:tracking-[-0.07em] justify-center pt-[4px] lg:pt-0 
-                  xl:text-[64px] text-[32px] flex  mt-auto  md:justify-start 2xl:ps-1`}
-              >
-                {t("restaurant.about.title2")}
-                <span className="md:inline-flex hidden">&nbsp;-</span>
-              </span>
+              {t("restaurant.about.title2") && (
+                <span
+                  className={`2xl:text-[3.33vw] lg:tracking-[-0.07em] justify-center pt-[4px] lg:pt-0 
+                    xl:text-[64px] text-[32px] flex  mt-auto  md:justify-start 2xl:ps-1`}
+                >
+                  {t("restaurant.about.title2")}
+                  <span className="md:inline-flex hidden">&nbsp;-</span>
+                </span>
+              )}
             </div>
 
             <div
