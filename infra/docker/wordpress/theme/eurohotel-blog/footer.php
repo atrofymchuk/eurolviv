@@ -36,7 +36,7 @@ $year = (int) gmdate('Y');
         <div class="eh-footer__contact">
             <a href="tel:+380732424002">+38 (073) 242 40 02</a>
             <a href="mailto:info@eurohotel.lviv.ua">info@eurohotel.lviv.ua</a>
-            <p>вул. Мечникова, 14, Львів</p>
+            <p>Львів, вул. Тершаковців, 6А</p>
         </div>
     </div>
 
