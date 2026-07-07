@@ -42,7 +42,7 @@ $nav_links = eurohotel_main_nav_links();
             </a>
         </nav>
 
-        <a class="eh-btn eh-btn--outline eh-header__cta" href="<?php echo esc_url($site_url . '/contacts'); ?>">
+        <a class="eh-btn eh-btn--outline eh-header__cta" href="<?php echo esc_url($site_url . '/booking'); ?>">
             Забронювати
         </a>
     </div>
