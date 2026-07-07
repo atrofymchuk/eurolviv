@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /blog/
 Disallow: /*?*
 Disallow: /*&*
 Disallow: /node_modules/
 Disallow: /src/
+Disallow: /blog/wp-admin/
 
 Sitemap: https://eurohotel.lviv.ua/sitemap.xml
+Sitemap: https://eurohotel.lviv.ua/blog/wp-sitemap.xml

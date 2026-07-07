@@ -17,6 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useModalStore } from "@/store/useModalStore";
 import { buildLocalizedPath } from "@/utils/localeRouting";
+import { BLOG_PATH } from "@/Constants/Header";
+
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const isEng = i18n.language === "en";
@@ -114,6 +116,14 @@ export const Footer = () => {
                             ? "roof " + t("terrase.header.title2")
                             : t("footer.terrace")}
                         </Link>
+                      </li>
+                      <li className="font-cofo-medium">
+                        <a
+                          href={BLOG_PATH}
+                          className="lg:hover:underline lg:hover:underline-offset-4 lg:transition-all lg:duration-300"
+                        >
+                          {t("footer.blog")}
+                        </a>
                       </li>
                       <li className="font-cofo-medium">
                         <Link

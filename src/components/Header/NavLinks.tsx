@@ -5,11 +5,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useDropdownMenu } from "@/hooks/useDropdownMenu";
 import { renderDropdownMenu } from "@/components/utils/renderDropdownMenu";
 import { useTranslation } from "react-i18next";
-import { roomsLinksToRender, restaurantLinks } from "@/Constants/Header";
+import { roomsLinksToRender, restaurantLinks, type NavLinkItem } from "@/Constants/Header";
 import { buildLocalizedPath, stripLocalePrefix } from "@/utils/localeRouting";
 
 type NavLinksProps = {
-  navLinks: Array<{ path: string; label: string }>;
+  navLinks: NavLinkItem[];
   isActiveLink: (path: string) => string;
   handleMouseEnterRooms: () => void;
   handleMouseLeaveRooms: () => void;
@@ -87,11 +87,16 @@ export const NavLinks = ({
   }, [getHeaderHeight]);
 
   const renderNavLinks = useCallback(() => {
-    return navLinks.map(({ path, label }) => {
+    return navLinks.map(({ path, label, external }) => {
   
 
       const isDropdown = path === "/rooms" || path === "/restaurant";
       const localizedPath = buildLocalizedPath(path, i18n.language === "en" ? "en" : "uk");
+      const linkClassName = cn(
+        "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw] smooth-scroll lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
+        !isMobile && isActiveLink(path),
+        isMobile && "xl:text-inherit text-[#252526]"
+      );
 
       return (
         <div
@@ -113,25 +118,31 @@ export const NavLinks = ({
           }
         >
           <div className="flex items-center">
-            <Link
-              to={localizedPath}
-              className={cn(
-                "uppercase 2xl:text-[0.83vw] xl:text-[0.94vw] smooth-scroll lg:text-[1.17vw] text-[14px] transition-colors md:font-cofo-medium whitespace-nowrap",
-                !isMobile && isActiveLink(path),
-                isMobile && "xl:text-inherit text-[#252526]"
-              )}
-              onClick={(e) => {
-                if (handleSmoothScroll(path)) {
-                  e.preventDefault();
-                }
-                setMenuOpen(false);
-                if (!isDropdown) {
+            {external ? (
+              <a
+                href={path}
+                className={linkClassName}
+                onClick={() => setMenuOpen(false)}
+              >
+                {t(label)}
+              </a>
+            ) : (
+              <Link
+                to={localizedPath}
+                className={linkClassName}
+                onClick={(e) => {
+                  if (handleSmoothScroll(path)) {
+                    e.preventDefault();
+                  }
                   setMenuOpen(false);
-                }
-              }}
-            >
-              {t(label)}
-            </Link>
+                  if (!isDropdown) {
+                    setMenuOpen(false);
+                  }
+                }}
+              >
+                {t(label)}
+              </Link>
+            )}
             {isMobile && isDropdown && (
               <button onClick={() => toggleHandle(path)} className="ml-2">
                 <IoIosArrowDown

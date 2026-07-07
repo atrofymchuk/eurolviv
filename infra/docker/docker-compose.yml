@@ -1,0 +1,73 @@
+services:
+  web:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile
+    expose:
+      - "80"
+    depends_on:
+      wordpress:
+        condition: service_started
+    restart: unless-stopped
+
+  wordpress:
+    image: wordpress:6.7-php8.2-apache
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wordpress}
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', '${WP_HOME_URL:-https://eurohotel.pp.ua/blog}');
+        define('WP_SITEURL', '${WP_HOME_URL:-https://eurohotel.pp.ua/blog}');
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PREFIX']) && $$_SERVER['HTTP_X_FORWARDED_PREFIX'] !== '') {
+          $$prefix = rtrim($$_SERVER['HTTP_X_FORWARDED_PREFIX'], '/');
+          if (isset($$_SERVER['REQUEST_URI']) && strpos($$_SERVER['REQUEST_URI'], $$prefix) !== 0) {
+            $$_SERVER['REQUEST_URI'] = $$prefix . $$_SERVER['REQUEST_URI'];
+          }
+        }
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+          $$_SERVER['HTTPS'] = 'on';
+        }
+    volumes:
+      - wp_data:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:11
+    environment:
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME:-wordpress}
+      MYSQL_USER: ${WORDPRESS_DB_USER:-wordpress}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  wpcli:
+    profiles: ["tools"]
+    image: wordpress:cli-php8.2
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wordpress}
+    volumes:
+      - wp_data:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  wp_data:
+  db_data:

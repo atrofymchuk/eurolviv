@@ -1,0 +1,7 @@
+# VPS: bind the internal nginx only on localhost for host-level nginx + certbot.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build
+
+services:
+  web:
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:80"

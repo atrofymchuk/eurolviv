@@ -1,0 +1,27 @@
+# Host nginx reverse proxy for Docker stack (web container on 127.0.0.1:8080).
+# Install on VPS:
+#   sudo apt install nginx certbot python3-certbot-nginx
+#   sudo cp eurohotel.pp.ua.conf.example /etc/nginx/sites-available/eurohotel.pp.ua
+#   sudo ln -s /etc/nginx/sites-available/eurohotel.pp.ua /etc/nginx/sites-enabled/
+#   sudo nginx -t && sudo systemctl reload nginx
+#   sudo certbot --nginx -d eurohotel.pp.ua
+#
+# certbot will add SSL listen directives and HTTP→HTTPS redirect automatically.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name eurohotel.pp.ua;
+
+    client_max_body_size 64m;
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 120s;
+    }
+}

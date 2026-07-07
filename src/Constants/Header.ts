@@ -1,18 +1,27 @@
-export const navLinks = [
+export type NavLinkItem = {
+  path: string;
+  label: string;
+  external?: boolean;
+};
+
+export const navLinks: NavLinkItem[] = [
   { path: "/about", label: "header.about" },
   { path: "/rooms", label: "header.rooms" },
   { path: "/conference-service", label: "header.conferenceServices" },
   { path: "/restaurant", label: "header.restaurant" },
   { path: "/special-offers", label: "header.specialOffers" },
+  { path: "/blog", label: "header.blog", external: true },
   { path: "/contacts", label: "header.contacts" },
 ];
-export const navLinksMobile = [
+
+export const navLinksMobile: NavLinkItem[] = [
   { path: "/about", label: "header.about" },
   { path: "/rooms", label: "header.rooms" },
   { path: "/conference-service", label: "header.conferenceServices" },
   { path: "/restaurant", label: "header.restaurant" },
   { path: "/terrace", label: "terrase.header.title2" },
   { path: "/special-offers", label: "header.specialOffers" },
+  { path: "/blog", label: "header.blog", external: true },
   { path: "/contacts", label: "header.contacts" },
 ];
 
@@ -75,3 +84,5 @@ export const restaurantLinks = [
     title: "restaurant.karaoke.title",
   },
 ];
+
+export const BLOG_PATH = "/blog";

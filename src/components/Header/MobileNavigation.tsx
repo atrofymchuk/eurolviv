@@ -10,12 +10,13 @@ import { SocialIcons } from "@/components/Header/SocialIcons";
 import { useEffect } from "react";
 import logoSideBar from "@/assets/logo.svg";
 import { buildLocalizedPath } from "@/utils/localeRouting";
+import type { NavLinkItem } from "@/Constants/Header";
 
 
 type MobileNavigationProps = {
   menuOpen: boolean;
   scrolled: boolean;
-  navLinks: Array<{ path: string; label: string }>;
+  navLinks: NavLinkItem[];
   isActiveLink: (path: string) => string;
   handleMouseEnterRooms: () => void;
   handleMouseLeaveRooms: () => void;

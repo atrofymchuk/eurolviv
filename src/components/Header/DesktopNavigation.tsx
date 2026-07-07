@@ -3,7 +3,7 @@ import cn from "classnames";
 import {useIsEnglish} from "@/hooks/useIsEnglish";
 
 type DesktopNavigationProps = {
-  navLinks: Array<{ path: string; label: string }>;
+  navLinks: import("@/Constants/Header").NavLinkItem[];
   isActiveLink: (path: string) => string;
   handleMouseEnterRooms: () => void;
   handleMouseLeaveRooms: () => void;
