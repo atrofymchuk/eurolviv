@@ -1,39 +1,33 @@
 # Тестове оточення: сайт + WordPress блог
 
-Піднімає:
+Усе працює в Docker:
 
 - React/Vite статичний сайт на `/`
-- WordPress з адмінкою на `/blog/` та `/blog/wp-admin/`
-- HTTPS через **nginx + certbot** на VPS (Docker слухає лише `127.0.0.1:8080`)
+- WordPress на `/blog/` та `/blog/wp-admin/`
+- **edge nginx** на портах 80/443 (reverse proxy)
+- **certbot** у контейнері (Let's Encrypt + auto-renew)
 
 ## Перед запуском на VPS
 
-1. DNS: `A`-запис `eurohotel.pp.ua` → IP вашого сервера
-2. На хості встановлені **nginx** і **certbot**
-3. Скопіюйте `.env` і змініть паролі:
+1. DNS: `A`-запис `eurohotel.pp.ua` → IP сервера
+2. Відкриті порти **80** і **443**
+3. На хості **не потрібен** nginx/certbot — лише Docker
+4. Скопіюйте `.env` і змініть паролі:
 
 ```bash
 cd infra/docker
 cp .env.example .env
 ```
 
-## Запуск на VPS
+## Запуск на VPS (HTTPS)
 
 ```bash
 ./scripts/bootstrap-wordpress.sh
 ```
 
-Docker підніме `web` на `127.0.0.1:8080`. Далі — nginx + SSL на хості:
+Скрипт підніме `db`, `wordpress`, `web`, потім `edge` + certbot і отримає сертифікат.
 
-```bash
-sudo apt install nginx certbot python3-certbot-nginx
-sudo cp ../nginx/eurohotel.pp.ua.conf.example /etc/nginx/sites-available/eurohotel.pp.ua
-sudo ln -s /etc/nginx/sites-available/eurohotel.pp.ua /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d eurohotel.pp.ua
-```
-
-Після налаштування:
+Після запуску:
 
 - Сайт: `https://eurohotel.pp.ua/`
 - Блог: `https://eurohotel.pp.ua/blog/`
@@ -45,7 +39,17 @@ sudo certbot --nginx -d eurohotel.pp.ua
 ./scripts/verify-seo.sh https://eurohotel.pp.ua
 ```
 
-Certbot автоматично оновлює сертифікат (systemd timer / cron).
+### Повторне отримання сертифіката
+
+```bash
+./scripts/init-letsencrypt.sh
+```
+
+Для тесту без лімітів Let's Encrypt:
+
+```env
+CERTBOT_STAGING=1
+```
 
 ## Локальний запуск без HTTPS
 
@@ -67,27 +71,34 @@ WEB_PORT=8080
 
 ## Оновлення URL WordPress
 
-Якщо змінили `WP_HOME_URL` у `.env`:
-
 ```bash
 docker compose --profile tools run --rm wpcli wp option update home "${WP_HOME_URL}"
 docker compose --profile tools run --rm wpcli wp option update siteurl "${WP_HOME_URL}"
-docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build web
+docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build web edge
 ```
 
-## Структура
+## Структура контейнерів
 
 ```text
-infra/
-  nginx/eurohotel.pp.ua.conf.example   # хостовий reverse proxy + certbot
-  docker/
-    docker-compose.yml
-    docker-compose.vps.yml             # 127.0.0.1:8080
-    docker-compose.local.yml           # localhost:8080 для dev
-    nginx/default.conf                 # nginx всередині Docker
-    scripts/
-      bootstrap-wordpress.sh
-      verify-seo.sh
+Internet :443/:80
+    └── edge (nginx + TLS)
+            └── web (nginx: React SPA + /blog proxy)
+                    └── wordpress (+ MariaDB)
+    └── certbot (renew, shared network with edge)
+```
+
+```text
+infra/docker/
+  docker-compose.yml
+  docker-compose.vps.yml          # edge + certbot
+  docker-compose.local.yml        # localhost:8080 для dev
+  nginx/
+    default.conf                  # внутрішній nginx (web)
+    edge/templates/default.conf.template
+  scripts/
+    bootstrap-wordpress.sh
+    init-letsencrypt.sh
+    verify-seo.sh
 ```
 
 ## Production

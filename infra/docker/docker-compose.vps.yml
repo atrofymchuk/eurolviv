@@ -1,7 +1,44 @@
-# VPS: bind the internal nginx only on localhost for host-level nginx + certbot.
+# VPS: public HTTPS via edge nginx + certbot (all in Docker).
 # Usage: docker compose -f docker-compose.yml -f docker-compose.vps.yml up -d --build
 
 services:
-  web:
+  edge:
+    image: nginx:1.27-alpine
     ports:
-      - "127.0.0.1:${WEB_PORT:-8080}:80"
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./nginx/edge/templates:/etc/nginx/templates:ro
+      - ./nginx/edge/tls:/etc/nginx/ssl:ro
+      - certbot_conf:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    depends_on:
+      web:
+        condition: service_started
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot:latest
+    network_mode: service:edge
+    pid: service:edge
+    volumes:
+      - certbot_conf:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    entrypoint: /bin/sh
+    command:
+      - -c
+      - |
+        trap exit TERM
+        while :; do
+          certbot renew --webroot -w /var/www/certbot --deploy-hook "nginx -s reload"
+          sleep 12h & wait $$!
+        done
+    depends_on:
+      - edge
+    restart: unless-stopped
+
+volumes:
+  certbot_conf:
+  certbot_www:

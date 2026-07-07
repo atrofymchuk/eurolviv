@@ -7,7 +7,7 @@ if [[ -f "${SCRIPT_DIR}/../.env" ]]; then
   source "${SCRIPT_DIR}/../.env"
 fi
 
-BASE_URL="${1:-${SITE_URL:-https://eurohotel.pp.ua}}"
+BASE_URL="${1:-${SITE_URL}}"
 BLOG_URL="${BASE_URL%/}/blog"
 POST_URL="${BLOG_URL}/welcome-to-eurohotel-blog/"
 
@@ -31,7 +31,7 @@ if [[ "${BASE_URL}" == https://* ]]; then
   http_code="$(curl -s -o /dev/null -w '%{http_code}' "http://${BASE_URL#https://}/")"
   [[ "${http_code}" == "301" || "${http_code}" == "308" ]] \
     && pass "HTTP redirects to HTTPS" \
-    || echo "! HTTP did not redirect (${http_code}); check host nginx + certbot config"
+    || echo "! HTTP did not redirect (${http_code}); check edge nginx config"
 fi
 
 blog_html="$(curl -sL "${curl_args[@]}" "${BLOG_URL}/")"

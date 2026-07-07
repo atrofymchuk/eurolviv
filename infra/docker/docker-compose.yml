@@ -14,12 +14,12 @@ services:
     image: wordpress:6.7-php8.2-apache
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
-      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wordpress}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
       WORDPRESS_CONFIG_EXTRA: |
-        define('WP_HOME', '${WP_HOME_URL:-https://eurohotel.pp.ua/blog}');
-        define('WP_SITEURL', '${WP_HOME_URL:-https://eurohotel.pp.ua/blog}');
+        define('WP_HOME', '${WP_HOME_URL}');
+        define('WP_SITEURL', '${WP_HOME_URL}');
         if (isset($$_SERVER['HTTP_X_FORWARDED_PREFIX']) && $$_SERVER['HTTP_X_FORWARDED_PREFIX'] !== '') {
           $$prefix = rtrim($$_SERVER['HTTP_X_FORWARDED_PREFIX'], '/');
           if (isset($$_SERVER['REQUEST_URI']) && strpos($$_SERVER['REQUEST_URI'], $$prefix) !== 0) {
@@ -39,10 +39,10 @@ services:
   db:
     image: mariadb:11
     environment:
-      MYSQL_DATABASE: ${WORDPRESS_DB_NAME:-wordpress}
-      MYSQL_USER: ${WORDPRESS_DB_USER:-wordpress}
-      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
+      MYSQL_USER: ${WORDPRESS_DB_USER}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
@@ -59,9 +59,9 @@ services:
     user: "33:33"
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
-      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-wordpress}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
     volumes:
       - wp_data:/var/www/html
     depends_on:

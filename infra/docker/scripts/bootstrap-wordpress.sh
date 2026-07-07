@@ -8,12 +8,12 @@ if [[ -f .env ]]; then
   source .env
 fi
 
-SITE_URL="${SITE_URL:-https://eurohotel.pp.ua}"
+SITE_URL="${SITE_URL}"
 WP_HOME_URL="${WP_HOME_URL:-${SITE_URL%/}/blog}"
-WP_ADMIN_USER="${WP_ADMIN_USER:-admin}"
-WP_ADMIN_PASSWORD="${WP_ADMIN_PASSWORD:-admin123}"
-WP_ADMIN_EMAIL="${WP_ADMIN_EMAIL:-info@eurohotel.lviv.ua}"
-ENABLE_HTTPS="${ENABLE_HTTPS:-true}"
+WP_ADMIN_USER="${WP_ADMIN_USER}"
+WP_ADMIN_PASSWORD="${WP_ADMIN_PASSWORD}"
+WP_ADMIN_EMAIL="${WP_ADMIN_EMAIL}"
+ENABLE_HTTPS="${ENABLE_HTTPS}"
 
 compose_args=(docker compose)
 if [[ "${ENABLE_HTTPS}" == "true" ]]; then
@@ -72,14 +72,20 @@ fi
 echo "Starting web proxy..."
 run_compose up -d --build web
 
-echo "Done."
+if [[ "${ENABLE_HTTPS}" == "true" ]]; then
+  echo "Setting up HTTPS (edge nginx + certbot in Docker)..."
+  bash scripts/init-letsencrypt.sh
+else
+  echo "Done (HTTP only)."
+fi
+
+echo ""
 echo "Site:  ${SITE_URL}/"
 echo "Blog:  ${WP_HOME_URL}/"
 echo "Admin: ${WP_HOME_URL}/wp-admin/"
 
 if [[ "${ENABLE_HTTPS}" == "true" ]]; then
   echo ""
-  echo "HTTPS: configure host nginx + certbot (see infra/nginx/eurohotel.pp.ua.conf.example)."
-  echo "Docker web listens on 127.0.0.1:${WEB_PORT:-8080} — ports 80/443 stay free for nginx."
   echo "Ensure DNS A-record for ${DOMAIN:-eurohotel.pp.ua} points to this server."
+  echo "Ports 80 and 443 must be open before requesting the certificate."
 fi
