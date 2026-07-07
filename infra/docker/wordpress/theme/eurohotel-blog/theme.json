@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#A47762", "name": "Primary" },
+        { "slug": "cream", "color": "#EDE8E5", "name": "Cream" },
+        { "slug": "dark", "color": "#242425", "name": "Dark" },
+        { "slug": "accent", "color": "#8C331B", "name": "Accent" },
+        { "slug": "white", "color": "#FFFFFF", "name": "White" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "CoFoSans, sans-serif",
+          "name": "CoFo Sans",
+          "slug": "cofosans"
+        },
+        {
+          "fontFamily": "CoFoSans-Medium, sans-serif",
+          "name": "CoFo Sans Medium",
+          "slug": "cofosans-medium"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1100px"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#FFFFFF",
+      "text": "#242425"
+    },
+    "typography": {
+      "fontFamily": "CoFoSans, sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "link": {
+        "color": { "text": "#A47762" },
+        ":hover": {
+          "color": { "text": "#8C331B" }
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "CoFoSans-Medium, sans-serif",
+          "fontWeight": "500",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.04em"
+        },
+        "color": { "text": "#242425" }
+      },
+      "button": {
+        "color": {
+          "background": "#A47762",
+          "text": "#FFFFFF"
+        },
+        "border": {
+          "radius": "999px"
+        },
+        ":hover": {
+          "color": {
+            "background": "#8C331B",
+            "text": "#FFFFFF"
+          }
+        }
+      }
+    }
+  }
+}

@@ -69,6 +69,9 @@ else
   echo "WordPress installed. Admin: ${WP_ADMIN_USER} / ${WP_ADMIN_PASSWORD}"
 fi
 
+echo "Activating Eurohotel blog theme..."
+run_compose --profile tools run --rm wpcli wp theme activate eurohotel-blog
+
 echo "Starting web proxy..."
 run_compose up -d --build web
 
