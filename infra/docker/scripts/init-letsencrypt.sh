@@ -18,6 +18,10 @@ run_compose() {
   "${compose_args[@]}" "$@"
 }
 
+run_certbot_sh() {
+  run_compose --profile tools run --rm --no-deps --entrypoint /bin/sh certbot-cli "$@"
+}
+
 cert_path="/etc/letsencrypt/live/${DOMAIN}"
 
 if [[ "${STAGING}" == "1" ]]; then
@@ -26,7 +30,7 @@ else
   certbot_args=()
 fi
 
-if run_compose run --rm --no-deps --entrypoint /bin/sh certbot -c "test -f '${cert_path}/fullchain.pem'"; then
+if run_certbot_sh -c "test -f '${cert_path}/fullchain.pem'"; then
   echo "Certificate already exists for ${DOMAIN}."
   run_compose up -d edge certbot
   run_compose exec -T edge nginx -s reload || true
@@ -34,7 +38,7 @@ if run_compose run --rm --no-deps --entrypoint /bin/sh certbot -c "test -f '${ce
 fi
 
 echo "Creating temporary certificate so edge nginx can start..."
-run_compose run --rm --no-deps --entrypoint /bin/sh certbot -c "
+run_certbot_sh -c "
   set -e
   mkdir -p '${cert_path}'
   openssl req -x509 -nodes -newkey rsa:4096 -days 1 \
@@ -47,7 +51,7 @@ echo "Starting edge nginx..."
 run_compose up -d edge
 
 echo "Requesting Let's Encrypt certificate for ${DOMAIN}..."
-run_compose run --rm --no-deps --entrypoint /bin/sh certbot -c "
+run_certbot_sh -c "
   set -e
   rm -Rf '${cert_path}'
   rm -Rf '/etc/letsencrypt/archive/${DOMAIN}' || true

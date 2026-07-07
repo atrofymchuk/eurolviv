@@ -8,7 +8,7 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      DOMAIN: ${DOMAIN}
+      DOMAIN: ${DOMAIN:-eurohotel.pp.ua}
     volumes:
       - ./nginx/edge/templates:/etc/nginx/templates:ro
       - ./nginx/edge/tls:/etc/nginx/ssl:ro
@@ -32,12 +32,20 @@ services:
       - |
         trap exit TERM
         while :; do
-          certbot renew --webroot -w /var/www/certbot --deploy-hook "nginx -s reload"
+          certbot renew --webroot -w /var/www/certbot --deploy-hook "kill -HUP 1"
           sleep 12h & wait $$!
         done
     depends_on:
       - edge
     restart: unless-stopped
+
+  # One-off certbot runs (init/reissue). Must NOT share edge network — edge may not exist yet.
+  certbot-cli:
+    profiles: ["tools"]
+    image: certbot/certbot:latest
+    volumes:
+      - certbot_conf:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
 
 volumes:
   certbot_conf:
