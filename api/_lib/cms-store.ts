@@ -69,16 +69,31 @@ const githubFetch = async (pathname: string, init?: RequestInit) => {
   const token = getToken();
   if (!token) throw new Error("CMS_GITHUB_TOKEN не налаштовано");
 
-  return fetch(`https://api.github.com/repos/${REPO}${pathname}`, {
+  const url = `https://api.github.com/repos/${REPO}${pathname}`;
+  const request = (includeToken: boolean) => fetch(url, {
     ...init,
     headers: {
       Accept: "application/vnd.github+json",
-      Authorization: `Bearer ${token}`,
+      ...(includeToken ? { Authorization: `Bearer ${token}` } : {}),
       "Content-Type": "application/json",
       "X-GitHub-Api-Version": "2022-11-28",
       ...(init?.headers || {}),
     },
   });
+
+  const response = await request(true);
+  const method = init?.method?.toUpperCase() || "GET";
+
+  // Public repositories can still be read when a configured token has expired.
+  // Never retry mutations anonymously: GitHub must reject them explicitly.
+  if (
+    method === "GET" &&
+    (response.status === 401 || response.status === 403)
+  ) {
+    return request(false);
+  }
+
+  return response;
 };
 
 const encodeGithubPath = (filePath: string) =>
