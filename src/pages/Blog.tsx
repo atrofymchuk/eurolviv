@@ -22,7 +22,7 @@ export const Blog = () => {
   return (
     <div className="overflow-x-hidden bg-white pb-[60px] pt-[25.33vw] lg:pb-[80px] lg:pt-[9.18vw] 2xl:pt-[6.93vw]">
       <div className="mx-auto w-[89.58%] border-x border-[#C7C7C7]">
-        <div className="border-b border-[#C7C7C7] px-[20px] py-[40px] text-center lg:px-[40px] lg:py-[60px]">
+        <div className="border-b border-[#C7C7C7] bg-[#EDE8E5] px-[20px] py-[40px] text-center lg:px-[40px] lg:py-[60px]">
           <h2 className="font-cofo text-[40px] uppercase leading-[81%] tracking-[-0.07em] text-[#252526] lg:text-[72px]">
             {t("blog.title")}
           </h2>

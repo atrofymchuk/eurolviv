@@ -64,7 +64,7 @@ export const BlogPost = () => {
             />
           )}
 
-          <div className="prose-blog mt-[32px] max-w-[760px] space-y-[18px] font-cofo text-[16px] leading-[160%] text-[#444444] lg:mt-[40px] lg:text-[18px]">
+          <div className="prose-blog mt-[32px] w-full space-y-[18px] font-cofo text-[16px] leading-[160%] text-[#444444] lg:mt-[40px] lg:text-[18px]">
             <ReactMarkdown
               components={{
                 h1: ({ children }) => (
