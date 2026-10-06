@@ -1,0 +1,82 @@
+name: Security scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      audit_level:
+        description: Minimum npm severity that fails the job
+        type: choice
+        default: moderate
+        options:
+          - low
+          - moderate
+          - high
+          - critical
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    name: Secrets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          version=8.30.1
+          archive="gitleaks_${version}_linux_x64.tar.gz"
+          expected="551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${version}/${archive}" -o "/tmp/${archive}"
+          echo "${expected}  /tmp/${archive}" | sha256sum -c -
+          tar -xzf "/tmp/${archive}" -C /tmp gitleaks
+          sudo install -m 0755 /tmp/gitleaks /usr/local/bin/gitleaks
+          gitleaks version
+
+      - name: Scan repository for secrets
+        run: gitleaks detect --source . --redact --report-format json --report-path gitleaks-report.json
+
+      - name: Upload secret scan report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+          if-no-files-found: ignore
+
+  dependencies:
+    name: npm dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Collect npm audit report
+        run: npm audit --json > npm-audit.json || true
+
+      - name: Upload npm audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit
+          path: npm-audit.json
+          if-no-files-found: ignore
+
+      - name: Fail on vulnerable packages
+        env:
+          AUDIT_LEVEL: ${{ inputs.audit_level || 'moderate' }}
+        run: npm audit --audit-level="$AUDIT_LEVEL"
