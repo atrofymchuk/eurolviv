@@ -43,7 +43,7 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
                 <option
                   key={index + el}
                   className="text-black"
-                  value={!isChild ? index + 1 : index}
+                  value={!isChild ? options.length - index : index}
                 >
                   {t(`${el}`)}
                 </option>

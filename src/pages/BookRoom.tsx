@@ -7,14 +7,8 @@ const Booking = () => {
   const location = useLocation();
   const { checkIn, checkOut, adults, children } = location.state || {};
 
-  const parseGuests = () => {
-    const adultsCount = adults ? parseInt(adults) : 2;
-    const childsCount = children ? parseInt(children) : 0;
-    const childs = childsCount > 0 ? Array(childsCount).fill(6) : [];
-    return [{ childs, adults: adultsCount, childsCount }];
-  };
-
-  const guestsData = parseGuests();
+  const adultsCount = Number.parseInt(adults, 10);
+  const childrenCount = Number.parseInt(children, 10);
   const formatDate = (date: Date | null) => {
     if (!date) return null;
     const d = new Date(date);
@@ -29,9 +23,10 @@ const Booking = () => {
   const checkInDate = formatDate(checkIn);
   const checkOutDate = formatDate(checkOut);
 
-  const linkToBooking =  checkInDate && checkOutDate ?`https://eurohotellviv.rooms-wizard.com/#!/search1/${checkInDate}/${checkOutDate}///${JSON.stringify(
-          guestsData
-        )}` : "https://eurohotellviv.rooms-wizard.com/";
+  const linkToBooking =
+    checkInDate && checkOutDate
+      ? `https://eurohotellviv.rooms-wizard.com/#/search?from=${checkInDate}&to=${checkOutDate}&adults=${Number.isFinite(adultsCount) ? adultsCount : 2}&children=${Number.isFinite(childrenCount) ? childrenCount : 0}`
+      : "https://eurohotellviv.rooms-wizard.com/";
   return (
     <div className="w-full h-screen flex items-center justify-center bg-white relative">
       {isLoading && <OnLoadingSpin />}
