@@ -2,13 +2,14 @@ import { Control, Controller, FieldErrors } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { FormData } from "@/types/headerTypes";
+import { BookingSelectOption } from "@/Constants/HeaderBookingForm";
 
 interface GuestsSelectProps {
   control: Control<FormData>;
   errors: FieldErrors<FormData>;
   fieldName: "adults" | "children";
   optionsPrefix: string;
-  options: string[];
+  options: BookingSelectOption[];
   isChild?: boolean;
 }
 
@@ -17,7 +18,6 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
   errors,
   fieldName,
   options,
-  isChild = false,
 }) => {
   const { t } = useTranslation();
 
@@ -39,13 +39,13 @@ export const GuestsSelect: React.FC<GuestsSelectProps> = ({
                 errors[fieldName] && "border-red-500 border"
               )}
             >
-              {options.map((el, index) => (
+              {options.map((el) => (
                 <option
-                  key={index + el}
+                  key={el.value + el.label}
                   className="text-black"
-                  value={!isChild ? options.length - index : index}
+                  value={el.value}
                 >
-                  {t(`${el}`)}
+                  {t(el.label)}
                 </option>
               ))}
             </select>
