@@ -1,6 +1,6 @@
 ---
 title: "Best rooftop restaurants in Lviv: top 10 venues with a city panorama"
-date: 2026-11-10T19:45:00.000Z
+date: 2026-09-10T19:45:00.000Z
 description: "Find your ideal rooftop terrace venue in Lviv. Visit the best restaurants with incredible city views and enjoy the moment."
 cover: ""
 draft: false
